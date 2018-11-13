@@ -1,0 +1,277 @@
+#+title: Reimaging: Dataset Research
+#+author: Kynan Tan
+
+* dataset research
+** Indexes of datasets
+*** Wiki list
+https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research
+*** Algorithmia Blog
+https://blog.algorithmia.com/machine-learning-datasets-for-data-scientists/
+lists some datasets
+*** Hackernoon Machine Learning Process description
+https://hackernoon.com/a-definitive-guide-to-build-training-data-for-computer-vision-1d1d50b4bf07
+list some datasets and some tools for annotation and labelling (then becomes an advertisement)
+*** Yet Another Computer Vision Index To Datasets (YACVID)
+http://yacvid.hayko.at/
+*** Deep Learning Datasets
+http://deeplearning.net/datasets/
+*** Open Data for Deep Learning
+https://deeplearning4j.org/opendata
+*** Computer Vision Online
+https://computervisiononline.com/
+*** CVonline Image Databases
+http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm
+*** Awesome Computer Vision resources
+https://github.com/jbhuang0604/awesome-computer-vision#datasets
+*** mldata.org
+http://mldata.org/repository/data/
+*** Statistical Datasets
+https://www.mat.univie.ac.at/~neum/statdat.html
+*** Mulan Datasets
+http://mulan.sourceforge.net/datasets-mlc.html
+*** Medical Data for Machine Learning
+https://github.com/beamandrew/medical-data
+*** UC Irvine datasets
+http://archive.ics.uci.edu/ml/index.php
+*** Mighty AI
+https://mty.ai/blog/training-data-for-computer-vision-algorithms-your-options-for-collecting-or-creating-annotated-datasets/
+*** Pew Research Center
+http://www.pewresearch.org/download-datasets/
+*** Open Data Network
+https://www.opendatanetwork.com/
+*** Open Data Stack Exchange
+https://opendata.stackexchange.com/
+*** Data Is Plural - Structured Archive
+https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0
+*** Kaggle databases
+Kaggle hosts machine learning competitions as well as datasets and learning materials for data science and machine learning.
+
+https://www.kaggle.com/datasets
+
+Huge range of datasets, ordered by popularity. Used extensively for testing and learning about data science. Some datasets are duplicates that are hosted elsewhere and mirrored by Kaggle.
+** ImageNet
+http://image-net.org
+*** browse image classes through search/filters
+http://image-net.org/challenges/LSVRC/2015/ui/det.html
+*** description
+
+Overview
+
+Welcome to the ImageNet project! ImageNet is an ongoing research effort to provide researchers around the world an easily accessible image database. On this page, you will find some useful information about the database, the ImageNet community, and the background of this project. Please feel free to contact us if you have comments or questions. We'd love to hear from researchers on ideas to improve ImageNet.
+
+What is ImageNet?
+
+ImageNet is an image dataset organized according to the WordNet hierarchy. Each meaningful concept in WordNet, possibly described by multiple words or word phrases, is called a "synonym set" or "synset". There are more than 100,000 synsets in WordNet, majority of them are nouns (80,000+). In ImageNet, we aim to provide on average 1000 images to illustrate each synset. Images of each concept are quality-controlled and human-annotated. In its completion, we hope ImageNet will offer tens of millions of cleanly sorted images for most of the concepts in the WordNet hierarchy.
+
+Why ImageNet?
+
+The ImageNet project is inspired by a growing sentiment in the image and vision research field  the need for more data. Ever since the birth of the digital era and the availability of web-scale data exchanges, researchers in these fields have been working hard to design more and more sophisticated algorithms to index, retrieve, organize and annotate multimedia data. But good research needs good resource. To tackle these problem in large-scale (think of your growing personal collection of digital images, or videos, or a commercial web search engines database), it would be tremendously helpful to researchers if there exists a large-scale image database. This is the motivation for us to put together ImageNet. We hope it will become a useful resource to our research community, as well as anyone whose research and education would benefit from using a large image database.
+
+Who uses ImageNet?
+
+We envision ImageNet as a useful resource to researchers in the academic world, as well as educators around the world.
+
+Does ImageNet own the images? Can I download the images?
+
+No, ImageNet does not own the copyright of the images. ImageNet only provides thumbnails and URLs of images, in a way similar to what image search engines do. In other words, ImageNet compiles an accurate list of web images for each synset of WordNet. For researchers and educators who wish to use the images for non-commercial research and/or educational purposes, we can provide access through our site under certain conditions and terms. For details click here
+
+** CIFAR-10 and CIFAR-100
+http://www.cs.toronto.edu/~kriz/cifar.html
+The CIFAR-10 and CIFAR-100 are labeled subsets of the 80 million tiny images dataset. They were collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton. 
+
+The CIFAR-10 dataset
+The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
+
+The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class. 
+
+The CIFAR-100 dataset
+This dataset is just like the CIFAR-10, except it has 100 classes containing 600 images each. There are 500 training images and 100 testing images per class. The 100 classes in the CIFAR-100 are grouped into 20 superclasses. Each image comes with a "fine" label (the class to which it belongs) and a "coarse" label (the superclass to which it belongs).
+Here is the list of classes in the CIFAR-100:
+** MNIST
+http://yann.lecun.com/exdb/mnist/
+The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. The digits have been size-normalized and centered in a fixed-size image. 
+
+The original black and white (bilevel) images from NIST were size normalized to fit in a 20x20 pixel box while preserving their aspect ratio. The resulting images contain grey levels as a result of the anti-aliasing technique used by the normalization algorithm. the images were centered in a 28x28 image by computing the center of mass of the pixels, and translating the image so as to position this point at the center of the 28x28 field. 
+** Common Objects in Context (COCO)
+http://cocodataset.org/#home
+
+COCO is a large-scale object detection, segmentation, and captioning dataset. COCO has several features:
+
+- Object segmentation
+- Recognition in context
+- Superpixel stuff segmentation
+- 330K images (>200K labeled)
+- 1.5 million object instances
+- 80 object categories
+- 91 stuff categories
+- 5 captions per image
+- 250,000 people with keypoints
+
+Images labelled with particular objects identified by rectangles or outlines
+** Google Open Image
+https://github.com/openimages/dataset
+Open Images is a dataset of ~9 million URLs to images that have been annotated with image-level labels and bounding boxes spanning thousands of classes.
+
+The annotations are licensed by Google Inc. under CC BY 4.0 license. The contents of this repository are released under an Apache 2 license.
+
+The images are listed as having a CC BY 2.0 license. Note: while we tried to identify images that are licensed under a Creative Commons Attribution license, we make no representations or warranties regarding the license status of each image and you should verify the license for each image yourself.
+
+1.76 million image files
+~18TB of image files
+990MB of annnotations and metadata
+labelled images with bounding boxes for particular object classifications
+
+Can be downloaded following instructions here: https://github.com/cvdfoundation/open-images-dataset
+** Google YouTube8M
+https://research.google.com/youtube8m/
+YouTube-8M is a large-scale labeled video dataset that consists of millions of YouTube video IDs and associated labels from a diverse vocabulary of 4700+ visual entities. It comes with precomputed state-of-the-art audio-visual features from billions of frames and audio segments, designed to fit on a single hard disk. This makes it possible to get started on this dataset by training a baseline video model in less than a day on a single machine! At the same time, the dataset's scale and diversity can enable deep exploration of complex audio-visual models that can take weeks to train even in a distributed fashion.
+
+Our goal is to accelerate research on large-scale video understanding, representation learning, noisy data modeling, transfer learning, and domain adaptation approaches for video. More details about the dataset and initial experiments can be found in our technical report. Some statistics from the latest version of the dataset are included below. 
+
+https://research.google.com/youtube8m/download.html
+
+Download as TensorFlow record files.
+Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
+** CMU Face Images Data Set
+http://archive.ics.uci.edu/ml/datasets/cmu+face+images
+Abstract: This data consists of 640 black and white face images of people taken with varying pose (straight, left, right, up), expression (neutral, happy, sad, angry), eyes (wearing sunglasses or not), and size
+** 11k hands
+https://sites.google.com/view/11khands
+** STL-10
+Subset of ImageNet selected for unsupervised feature learning, deep learning and self-taught learning algorithms. Similar to CIFAR-10
+
+https://cs.stanford.edu/~acoates/stl10/
+The STL-10 dataset is an image recognition dataset for developing unsupervised feature learning, deep learning, self-taught learning algorithms. It is inspired by the CIFAR-10 dataset but with some modifications. In particular, each class has fewer labeled training examples than in CIFAR-10, but a very large set of unlabeled examples is provided to learn image models prior to supervised training. The primary challenge is to make use of the unlabeled data (which comes from a similar but different distribution from the labeled data) to build a useful prior. We also expect that the higher resolution of this dataset (96x96) will make it a challenging benchmark for developing more scalable unsupervised learning methods.
+Overview
+
+- 10 classes: airplane, bird, car, cat, deer, dog, horse, monkey, ship, truck.
+- Images are 96x96 pixels, color.
+- 500 training images (10 pre-defined folds), 800 test images per class.
+- 100000 unlabeled images for unsupervised learning. These examples are extracted from a similar but broader distribution of images. For instance, it contains other types of animals (bears, rabbits, etc.) and vehicles (trains, buses, etc.) in addition to the ones in the labeled set.
+- Images were acquired from labeled examples on ImageNet.
+
+** MIAS
+http://www.mammoimage.org/databases/
+Mammographic Image Analysis Society
+** Danbooru2017
+https://www.gwern.net/Danbooru2017
+Danbooru2017 is a large-scale anime image database with 2.9m+ images annotated with 77.5m+ tags; it can be useful for machine learning purposes such as image recognition and generation. (statistics, NN, anime, shell)
+** NutriNet
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5537777/
+
+Paper Abstract:
+Automatic food image recognition systems are alleviating the process of food-intake estimation and dietary assessment. However, due to the nature of food images, their recognition is a particularly challenging task, which is why traditional approaches in the field have achieved a low classification accuracy. Deep neural networks have outperformed such solutions, and we present a novel approach to the problem of food and drink image detection and recognition that uses a newly-defined deep convolutional neural network architecture, called NutriNet. This architecture was tuned on a recognition dataset containing 225,953 512 512 pixel images of 520 different food and drink items from a broad spectrum of food groups, on which we achieved a classification accuracy of 86.72%, along with an accuracy of 94.47% on a detection dataset containing 130,517 images. We also performed a real-world test on a dataset of self-acquired images, combined with images from Parkinsons disease patients, all taken using a smartphone camera, achieving a top-five accuracy of 55%, which is an encouraging result for real-world images. Additionally, we tested NutriNet on the University of Milano-Bicocca 2016 (UNIMIB2016) food image dataset, on which we improved upon the provided baseline recognition result. An online training component was implemented to continually fine-tune the food and drink recognition model on new images. The model is being used in practice as part of a mobile app for the dietary assessment of Parkinsons disease patients.
+
+** Caltech 101 / 256 / Silhouettes
+- 101 (circa. 2003)
+Description
+
+Pictures of objects belonging to 101 categories. About 40 to 800 images per category. Most categories have about 50 images. Collected in September 2003 by Fei-Fei Li, Marco Andreetto, and Marc 'Aurelio Ranzato.  The size of each image is roughly 300 x 200 pixels.
+We have carefully clicked outlines of each object in these pictures, these are included under the 'Annotations.tar'. There is also a matlab script to view the annotaitons, 'show_annotations.m'.
+How to use the dataset
+
+If you are using the Caltech 101 dataset for testing your recognition algorithm you should try and make your results comparable to the results of others. We suggest training and testing on fixed number of pictures and repeating the experiment with different random selections of pictures in order to obtain error bars. Popular number of training images: 1, 3, 5, 10, 15, 20, 30. Popular numbers of testing images: 20, 30. See also the discussion below.
+When you report your results please keep track of which images you used and which were misclassified. We will soon publish a more detailed experimental protocol that allows you to report those details. See the Discussion section for more details.
+
+-256 (circa. 2006)
+Collection of all 30607 images
+256 Object Categories + Clutter
+At least 80 images per category
+
+** Visual Dictionary
+http://groups.csail.mit.edu/vision/TinyImages/
+80 million tiny images
+
+This is the dataset which CIFAR is taken from.
+
+http://horatio.cs.nyu.edu/mit/tiny/data/index.html
+** Behance Artistic Media Dataset
+https://bam-dataset.org/#download
+2.5 million images
+automatically labelled
+-  Automatically-labeled binary attribute scores for over 2.5 million images across 20 attributes each
+- 393,000 crowdsourced binary attribute labels for individual images
+- Short image descriptions/captions for 74,000 images from the crowd
+- Image URLs for all images mentioned above
+** stanford dogs dataset
+http://vision.stanford.edu/aditya86/ImageNetDogs/
+** Comma.ai driving dataset
+https://archive.org/details/comma-dataset
+** cat database
+https://www.reddit.com/r/MachineLearning/comments/16rxn0/ml_for_reddit_10000_images_of_cats/ (sorry about reddit link, beware of cat puns)
+
+Link to torrent file.
+
+10,000 images of cats.
+** Cityscapes Dataset
+https://www.cityscapes-dataset.com/dataset-overview/
+** links to check
+https://www.visualdata.io/
+** openfMRI
+https://openfmri.org
+** List of medical databases
+You are welcome: here are some more name of medical database:
+2008 MICCAI MS Lesion Segmentation Challenge (National Institutes of Health Blueprint for Neuroscience Research)
+ASU DR-AutoCC Data - a Multiple-Instance Learning feature space for a diabetic retinopathy classification dataset (Ragav Venkatesan, Parag Chandakkar, Baoxin Li - Arizona State University)
+Aberystwyth Leaf Evaluation Dataset - Timelapse plant images with hand marked up leaf-level segmentations for some time steps, and biological data from plant sacrifice. (Bell, Jonathan; Dee, Hannah M.)
+Annotated Spine CT Database for Benchmarking of Vertebrae Localization, 125 patients, 242 scans (Ben Glockern)
+BRATS - the identification and segmentation of tumor structures in multiparametric magnetic resonance images of the brain (TU Munchen etc.)
+Cholec80: 80 gallbladder laparoscopic videos annotated with phase and tool information. (Andru Putra Twinanda)
+CRCHistoPhenotypes - Labeled Cell Nuclei Data - colorectal cancer?histology images?consisting of nearly 30,000 dotted nuclei with over 22,000 labeled with the cell type (Rajpoot + Sirinukunwattana)
+CREMI: MICCAI 2016 Challenge - 6 volumes of electron microscopy of neural tissue,neuron and synapse segmentation, synaptic partner annotation. (Jan Funke, Stephan Saalfeld, Srini Turaga, Davi Bock, Eric Perlman)
+Cavy Action Dataset - 16 sequences with 640 x 480 resolutions recorded at 7.5 frames per second (fps) with approximately 31621506 frames in total (272 GB) of interacting cavies (guinea pig) (Al-Raziqi and Denzler)
+Cell Tracking Challenge Datasets - 2D/3D time-lapse video sequences with ground truth(Ma et al., Bioinformatics 30:1609-1617, 2014)
+Computed Tomography Emphysema Database (Lauge Sorensen)
+CRIM13 Caltech Resident-Intruder Mouse dataset - 237 10 minute videos (25 fps)
+annotated with actions (13 classes) (Burgos-Artizzu, Dollr, Lin, Anderson and Perona)
+DIADEM: Digital Reconstruction of Axonal and Dendritic Morphology Competition (Allen Institute for Brain Science et al)
+DIARETDB1 - Standard Diabetic Retinopathy Database (Lappeenranta Univ of Technology)
+DRIVE: Digital Retinal Images for Vessel Extraction (Univ of Utrecht)
+DeformIt 2.0 - Image Data Augmentation Tool: Simulate novel images with ground truth segmentations from a single image-segmentation pair (Brian Booth and Ghassan Hamarneh)
+Deformable Image Registration Lab dataset - for objective and rigrorous evaluation of deformable image registration (DIR) spatial accuracy performance. (Richard Castillo et al.)
+Dermoscopy images (Eric Ehrsam)
+EPT29.This database contains 4842 images of 1613 specimens of 29 taxa of EPTs:(Tom etc.)
+FIRE Fundus Image Registration Dataset - 134 retinal image pairs and groud truth for registration.(FORTH-ICS)
+IRMA(Image retrieval in medical applications) - This collection compiles anonymous radiographs (Deserno TM, Ott B)
+KID - A capsule endoscopy database for medical decision support (Anastasios Koulaouzidis and Dimitris Iakovidis)
+Leaf Segmentation ChallengeTobacco and arabidopsis plant images (Hanno Scharr, Massimo Minervini, Andreas Fischbach, Sotirios A. Tsaftaris)
+MIT CBCL Automated Mouse Behavior Recognition datasets (Nicholas Edelman)
+MUCIC: Masaryk University Cell Image Collection - 2D/3D synthetic images of cells/tissues for benchmarking(Masaryk University)
+MiniMammographic Database (Mammographic Image Analysis Society)
+Moth fine-grained recognition - 675 similar classes, 5344 images (Erik Rodner et al)
+Mouse Embryo Tracking Database - cell division event detection (Marcelo Cicconet, Kris Gunsalus)
+OASIS - Open Access Series of Imaging Studies - 500+ MRI data sets of the brain (Washington University, Harvard University, Biomedical Informatics Research Network)
+Plant Phenotyping Datasets - plant data suitable for plant and leaf detection, segmentation, tracking, and species recognition (M. Minervini, A. Fischbach, H. Scharr, S. A. Tsaftaris)
+RatSI: Rat Social Interaction Dataset - 9 fully annotated (11 class) videos (15 minute, 25 FPS) of two rats interacting socially in a cage (Malte Lorbach, Noldus Information Technology)
+Retinal fundus images - Ground truth of vascular bifurcations and crossovers (Univ of Groningen)
+SCORHE - 1, 2 and 3 mouse behavior videos, 9 behaviors, (Ghadi H. Salem, et al, NIH)
+STructured Analysis of the Retina - DESCRIPTION(400+ retinal images, with ground truth segmentations and medical annotations)
+Spine and Cardiac data (Digital Imaging Group of London Ontario, Shuo Li)
+Stonefly9This database contains 3826 images of 773 specimens of 9 taxa of Stoneflies (Tom etc.)
+Synthetic Migrating Cells -Six artificial migrating cells (neutrophils) over 98 time frames, various levels of Gaussian/Poisson noise and different paths characteristics with ground truth. (Dr Constantino Carlos Reyes-Aldasoro et al.)
+Univ of Central Florida - DDSM: Digital Database for Screening Mammography (Univ of Central Florida)
+VascuSynth - 120 3D vascular tree like structures with ground truth (Mengliu Zhao, Ghassan Hamarneh)
+VascuSynth - Vascular Synthesizer generates vascular trees in 3D volumes. (Ghassan Hamarneh, Preet Jassi, Mengliu Zhao)
+York Cardiac MRI dataset (Alexander Andreopoulos)
+** simpsons image training dataset
+https://github.com/jbencina/simpsons-image-training-dataset
+** natural earth
+http://www.naturalearthdata.com/
+Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales
+** Google Trends Datastore
+http://googletrends.github.io/data/
+** USGS.gov
+https://www.usgs.gov/products/data-and-tools/overview
+** Overhead Imagery Research Data Set
+https://en.wikipedia.org/wiki/Overhead_Imagery_Research_Data_Set
+** Image segmentation data set
+http://archive.ics.uci.edu/ml/datasets/image+segmentation
+** MovieLens
+https://grouplens.org/datasets/movielens/
+GroupLens Research has collected and made available rating data sets from the MovieLens web site (http://movielens.org). The data sets were collected over various periods of time, depending on the size of the set. Before using these data sets, please review their README files for the usage licenses and other details.
+
+Movie ratings and review datasets of various different sizes and scopes.
+** spam assasin
+http://spamassassin.apache.org/old/publiccorpus/
+** fashion mnist
+https://www.kaggle.com/zalando-research/fashionmnist

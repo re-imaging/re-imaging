@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-05-15 Tue 11:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reimaging: Dataset Research</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Kynan Tan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Reimaging: Dataset Research</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org2b2c6c0">1. dataset research</a>
+<ul>
+<li><a href="#org41b2a01">1.1. Indexes of datasets</a>
+<ul>
+<li><a href="#org7333e47">1.1.1. Wiki list</a></li>
+<li><a href="#org642e5da">1.1.2. Algorithmia Blog</a></li>
+<li><a href="#org93fdf18">1.1.3. Hackernoon Machine Learning Process description</a></li>
+<li><a href="#org2967d4e">1.1.4. Yet Another Computer Vision Index To Datasets (YACVID)</a></li>
+<li><a href="#org15e53ef">1.1.5. Deep Learning Datasets</a></li>
+<li><a href="#org276426c">1.1.6. Open Data for Deep Learning</a></li>
+<li><a href="#orgf584679">1.1.7. Computer Vision Online</a></li>
+<li><a href="#org3ad586c">1.1.8. CVonline Image Databases</a></li>
+<li><a href="#org8835e27">1.1.9. Awesome Computer Vision resources</a></li>
+<li><a href="#orge624e8f">1.1.10. mldata.org</a></li>
+<li><a href="#org993f439">1.1.11. Statistical Datasets</a></li>
+<li><a href="#orgbe4b324">1.1.12. Mulan Datasets</a></li>
+<li><a href="#org0e50a6b">1.1.13. Medical Data for Machine Learning</a></li>
+<li><a href="#org1e04f71">1.1.14. UC Irvine datasets</a></li>
+<li><a href="#org08f7d08">1.1.15. Mighty AI</a></li>
+<li><a href="#orgb774a07">1.1.16. Pew Research Center</a></li>
+<li><a href="#org9575239">1.1.17. Open Data Network</a></li>
+<li><a href="#orge496483">1.1.18. Open Data Stack Exchange</a></li>
+<li><a href="#orgcc001e4">1.1.19. Data Is Plural - Structured Archive</a></li>
+<li><a href="#org9957179">1.1.20. Kaggle databases</a></li>
+</ul>
+</li>
+<li><a href="#orge175977">1.2. ImageNet</a>
+<ul>
+<li><a href="#orge63a3bb">1.2.1. browse image classes through search/filters</a></li>
+<li><a href="#org351d3ab">1.2.2. description</a></li>
+</ul>
+</li>
+<li><a href="#org56c6ffb">1.3. CIFAR-10 and CIFAR-100</a></li>
+<li><a href="#org3e01d6f">1.4. MNIST</a></li>
+<li><a href="#org8ffb7de">1.5. Common Objects in Context (COCO)</a></li>
+<li><a href="#org6e6251b">1.6. Google Open Image</a></li>
+<li><a href="#org6209ca7">1.7. Google YouTube8M</a></li>
+<li><a href="#orga81fa31">1.8. CMU Face Images Data Set</a></li>
+<li><a href="#orgf21d2e7">1.9. 11k hands</a></li>
+<li><a href="#orgc549db2">1.10. STL-10</a></li>
+<li><a href="#org3e1c63a">1.11. MIAS</a></li>
+<li><a href="#orgc98a68d">1.12. Danbooru2017</a></li>
+<li><a href="#org2508e7b">1.13. NutriNet</a></li>
+<li><a href="#orgb6abc48">1.14. Caltech 101 / 256 / Silhouettes</a></li>
+<li><a href="#orgdf8063d">1.15. Visual Dictionary</a></li>
+<li><a href="#org552339b">1.16. Behance Artistic Media Dataset</a></li>
+<li><a href="#orgfd48b46">1.17. stanford dogs dataset</a></li>
+<li><a href="#org27aff1b">1.18. Comma.ai driving dataset</a></li>
+<li><a href="#org2bd99f9">1.19. cat database</a></li>
+<li><a href="#org4e3db57">1.20. Cityscapes Dataset</a></li>
+<li><a href="#org473769b">1.21. links to check</a></li>
+<li><a href="#org1309eb5">1.22. openfMRI</a></li>
+<li><a href="#org8ce39f0">1.23. List of medical databases</a></li>
+<li><a href="#org9d3a77c">1.24. simpsons image training dataset</a></li>
+<li><a href="#orgbc12071">1.25. natural earth</a></li>
+<li><a href="#org4d5db44">1.26. Google Trends Datastore</a></li>
+<li><a href="#org2537f18">1.27. USGS.gov</a></li>
+<li><a href="#org0c2f7f8">1.28. Overhead Imagery Research Data Set</a></li>
+<li><a href="#org470b32a">1.29. Image segmentation data set</a></li>
+<li><a href="#org2250681">1.30. MovieLens</a></li>
+<li><a href="#orgd313f07">1.31. spam assasin</a></li>
+<li><a href="#org6306de5">1.32. fashion mnist</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2b2c6c0" class="outline-2">
+<h2 id="org2b2c6c0"><span class="section-number-2">1</span> dataset research</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-org41b2a01" class="outline-3">
+<h3 id="org41b2a01"><span class="section-number-3">1.1</span> Indexes of datasets</h3>
+<div class="outline-text-3" id="text-1-1">
+</div><div id="outline-container-org7333e47" class="outline-4">
+<h4 id="org7333e47"><span class="section-number-4">1.1.1</span> Wiki list</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+<a href="https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research">https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org642e5da" class="outline-4">
+<h4 id="org642e5da"><span class="section-number-4">1.1.2</span> Algorithmia Blog</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+<a href="https://blog.algorithmia.com/machine-learning-datasets-for-data-scientists/">https://blog.algorithmia.com/machine-learning-datasets-for-data-scientists/</a>
+lists some datasets
+</p>
+</div>
+</div>
+<div id="outline-container-org93fdf18" class="outline-4">
+<h4 id="org93fdf18"><span class="section-number-4">1.1.3</span> Hackernoon Machine Learning Process description</h4>
+<div class="outline-text-4" id="text-1-1-3">
+<p>
+<a href="https://hackernoon.com/a-definitive-guide-to-build-training-data-for-computer-vision-1d1d50b4bf07">https://hackernoon.com/a-definitive-guide-to-build-training-data-for-computer-vision-1d1d50b4bf07</a>
+list some datasets and some tools for annotation and labelling (then becomes an advertisement)
+</p>
+</div>
+</div>
+<div id="outline-container-org2967d4e" class="outline-4">
+<h4 id="org2967d4e"><span class="section-number-4">1.1.4</span> Yet Another Computer Vision Index To Datasets (YACVID)</h4>
+<div class="outline-text-4" id="text-1-1-4">
+<p>
+<a href="http://yacvid.hayko.at/">http://yacvid.hayko.at/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org15e53ef" class="outline-4">
+<h4 id="org15e53ef"><span class="section-number-4">1.1.5</span> Deep Learning Datasets</h4>
+<div class="outline-text-4" id="text-1-1-5">
+<p>
+<a href="http://deeplearning.net/datasets/">http://deeplearning.net/datasets/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org276426c" class="outline-4">
+<h4 id="org276426c"><span class="section-number-4">1.1.6</span> Open Data for Deep Learning</h4>
+<div class="outline-text-4" id="text-1-1-6">
+<p>
+<a href="https://deeplearning4j.org/opendata">https://deeplearning4j.org/opendata</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgf584679" class="outline-4">
+<h4 id="orgf584679"><span class="section-number-4">1.1.7</span> Computer Vision Online</h4>
+<div class="outline-text-4" id="text-1-1-7">
+<p>
+<a href="https://computervisiononline.com/">https://computervisiononline.com/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org3ad586c" class="outline-4">
+<h4 id="org3ad586c"><span class="section-number-4">1.1.8</span> CVonline Image Databases</h4>
+<div class="outline-text-4" id="text-1-1-8">
+<p>
+<a href="http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm">http://homepages.inf.ed.ac.uk/rbf/CVonline/Imagedbase.htm</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org8835e27" class="outline-4">
+<h4 id="org8835e27"><span class="section-number-4">1.1.9</span> Awesome Computer Vision resources</h4>
+<div class="outline-text-4" id="text-1-1-9">
+<p>
+<a href="https://github.com/jbhuang0604/awesome-computer-vision#datasets">https://github.com/jbhuang0604/awesome-computer-vision#datasets</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orge624e8f" class="outline-4">
+<h4 id="orge624e8f"><span class="section-number-4">1.1.10</span> mldata.org</h4>
+<div class="outline-text-4" id="text-1-1-10">
+<p>
+<a href="http://mldata.org/repository/data/">http://mldata.org/repository/data/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org993f439" class="outline-4">
+<h4 id="org993f439"><span class="section-number-4">1.1.11</span> Statistical Datasets</h4>
+<div class="outline-text-4" id="text-1-1-11">
+<p>
+<a href="https://www.mat.univie.ac.at/~neum/statdat.html">https://www.mat.univie.ac.at/~neum/statdat.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgbe4b324" class="outline-4">
+<h4 id="orgbe4b324"><span class="section-number-4">1.1.12</span> Mulan Datasets</h4>
+<div class="outline-text-4" id="text-1-1-12">
+<p>
+<a href="http://mulan.sourceforge.net/datasets-mlc.html">http://mulan.sourceforge.net/datasets-mlc.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org0e50a6b" class="outline-4">
+<h4 id="org0e50a6b"><span class="section-number-4">1.1.13</span> Medical Data for Machine Learning</h4>
+<div class="outline-text-4" id="text-1-1-13">
+<p>
+<a href="https://github.com/beamandrew/medical-data">https://github.com/beamandrew/medical-data</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org1e04f71" class="outline-4">
+<h4 id="org1e04f71"><span class="section-number-4">1.1.14</span> UC Irvine datasets</h4>
+<div class="outline-text-4" id="text-1-1-14">
+<p>
+<a href="http://archive.ics.uci.edu/ml/index.php">http://archive.ics.uci.edu/ml/index.php</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org08f7d08" class="outline-4">
+<h4 id="org08f7d08"><span class="section-number-4">1.1.15</span> Mighty AI</h4>
+<div class="outline-text-4" id="text-1-1-15">
+<p>
+<a href="https://mty.ai/blog/training-data-for-computer-vision-algorithms-your-options-for-collecting-or-creating-annotated-datasets/">https://mty.ai/blog/training-data-for-computer-vision-algorithms-your-options-for-collecting-or-creating-annotated-datasets/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgb774a07" class="outline-4">
+<h4 id="orgb774a07"><span class="section-number-4">1.1.16</span> Pew Research Center</h4>
+<div class="outline-text-4" id="text-1-1-16">
+<p>
+<a href="http://www.pewresearch.org/download-datasets/">http://www.pewresearch.org/download-datasets/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org9575239" class="outline-4">
+<h4 id="org9575239"><span class="section-number-4">1.1.17</span> Open Data Network</h4>
+<div class="outline-text-4" id="text-1-1-17">
+<p>
+<a href="https://www.opendatanetwork.com/">https://www.opendatanetwork.com/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orge496483" class="outline-4">
+<h4 id="orge496483"><span class="section-number-4">1.1.18</span> Open Data Stack Exchange</h4>
+<div class="outline-text-4" id="text-1-1-18">
+<p>
+<a href="https://opendata.stackexchange.com/">https://opendata.stackexchange.com/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgcc001e4" class="outline-4">
+<h4 id="orgcc001e4"><span class="section-number-4">1.1.19</span> Data Is Plural - Structured Archive</h4>
+<div class="outline-text-4" id="text-1-1-19">
+<p>
+<a href="https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0">https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org9957179" class="outline-4">
+<h4 id="org9957179"><span class="section-number-4">1.1.20</span> Kaggle databases</h4>
+<div class="outline-text-4" id="text-1-1-20">
+<p>
+Kaggle hosts machine learning competitions as well as datasets and learning materials for data science and machine learning.
+</p>
+
+<p>
+<a href="https://www.kaggle.com/datasets">https://www.kaggle.com/datasets</a>
+</p>
+
+<p>
+Huge range of datasets, ordered by popularity. Used extensively for testing and learning about data science. Some datasets are duplicates that are hosted elsewhere and mirrored by Kaggle.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge175977" class="outline-3">
+<h3 id="orge175977"><span class="section-number-3">1.2</span> ImageNet</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+<a href="http://image-net.org">http://image-net.org</a>
+</p>
+</div>
+<div id="outline-container-orge63a3bb" class="outline-4">
+<h4 id="orge63a3bb"><span class="section-number-4">1.2.1</span> browse image classes through search/filters</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+<a href="http://image-net.org/challenges/LSVRC/2015/ui/det.html">http://image-net.org/challenges/LSVRC/2015/ui/det.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org351d3ab" class="outline-4">
+<h4 id="org351d3ab"><span class="section-number-4">1.2.2</span> description</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Overview
+</p>
+
+<p>
+Welcome to the ImageNet project! ImageNet is an ongoing research effort to provide researchers around the world an easily accessible image database. On this page, you will find some useful information about the database, the ImageNet community, and the background of this project. Please feel free to contact us if you have comments or questions. We'd love to hear from researchers on ideas to improve ImageNet.
+</p>
+
+<p>
+What is ImageNet?
+</p>
+
+<p>
+ImageNet is an image dataset organized according to the WordNet hierarchy. Each meaningful concept in WordNet, possibly described by multiple words or word phrases, is called a "synonym set" or "synset". There are more than 100,000 synsets in WordNet, majority of them are nouns (80,000+). In ImageNet, we aim to provide on average 1000 images to illustrate each synset. Images of each concept are quality-controlled and human-annotated. In its completion, we hope ImageNet will offer tens of millions of cleanly sorted images for most of the concepts in the WordNet hierarchy.
+</p>
+
+<p>
+Why ImageNet?
+</p>
+
+<p>
+The ImageNet project is inspired by a growing sentiment in the image and vision research field  the need for more data. Ever since the birth of the digital era and the availability of web-scale data exchanges, researchers in these fields have been working hard to design more and more sophisticated algorithms to index, retrieve, organize and annotate multimedia data. But good research needs good resource. To tackle these problem in large-scale (think of your growing personal collection of digital images, or videos, or a commercial web search engines database), it would be tremendously helpful to researchers if there exists a large-scale image database. This is the motivation for us to put together ImageNet. We hope it will become a useful resource to our research community, as well as anyone whose research and education would benefit from using a large image database.
+</p>
+
+<p>
+Who uses ImageNet?
+</p>
+
+<p>
+We envision ImageNet as a useful resource to researchers in the academic world, as well as educators around the world.
+</p>
+
+<p>
+Does ImageNet own the images? Can I download the images?
+</p>
+
+<p>
+No, ImageNet does not own the copyright of the images. ImageNet only provides thumbnails and URLs of images, in a way similar to what image search engines do. In other words, ImageNet compiles an accurate list of web images for each synset of WordNet. For researchers and educators who wish to use the images for non-commercial research and/or educational purposes, we can provide access through our site under certain conditions and terms. For details click here
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org56c6ffb" class="outline-3">
+<h3 id="org56c6ffb"><span class="section-number-3">1.3</span> CIFAR-10 and CIFAR-100</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+<a href="http://www.cs.toronto.edu/~kriz/cifar.html">http://www.cs.toronto.edu/~kriz/cifar.html</a>
+The CIFAR-10 and CIFAR-100 are labeled subsets of the 80 million tiny images dataset. They were collected by Alex Krizhevsky, Vinod Nair, and Geoffrey Hinton. 
+</p>
+
+<p>
+The CIFAR-10 dataset
+The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.
+</p>
+
+<p>
+The dataset is divided into five training batches and one test batch, each with 10000 images. The test batch contains exactly 1000 randomly-selected images from each class. The training batches contain the remaining images in random order, but some training batches may contain more images from one class than another. Between them, the training batches contain exactly 5000 images from each class. 
+</p>
+
+<p>
+The CIFAR-100 dataset
+This dataset is just like the CIFAR-10, except it has 100 classes containing 600 images each. There are 500 training images and 100 testing images per class. The 100 classes in the CIFAR-100 are grouped into 20 superclasses. Each image comes with a "fine" label (the class to which it belongs) and a "coarse" label (the superclass to which it belongs).
+Here is the list of classes in the CIFAR-100:
+</p>
+</div>
+</div>
+<div id="outline-container-org3e01d6f" class="outline-3">
+<h3 id="org3e01d6f"><span class="section-number-3">1.4</span> MNIST</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+<a href="http://yann.lecun.com/exdb/mnist/">http://yann.lecun.com/exdb/mnist/</a>
+The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. It is a subset of a larger set available from NIST. The digits have been size-normalized and centered in a fixed-size image. 
+</p>
+
+<p>
+The original black and white (bilevel) images from NIST were size normalized to fit in a 20x20 pixel box while preserving their aspect ratio. The resulting images contain grey levels as a result of the anti-aliasing technique used by the normalization algorithm. the images were centered in a 28x28 image by computing the center of mass of the pixels, and translating the image so as to position this point at the center of the 28x28 field. 
+</p>
+</div>
+</div>
+<div id="outline-container-org8ffb7de" class="outline-3">
+<h3 id="org8ffb7de"><span class="section-number-3">1.5</span> Common Objects in Context (COCO)</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+<a href="http://cocodataset.org/#home">http://cocodataset.org/#home</a>
+</p>
+
+<p>
+COCO is a large-scale object detection, segmentation, and captioning dataset. COCO has several features:
+</p>
+
+<ul class="org-ul">
+<li>Object segmentation</li>
+<li>Recognition in context</li>
+<li>Superpixel stuff segmentation</li>
+<li>330K images (&gt;200K labeled)</li>
+<li>1.5 million object instances</li>
+<li>80 object categories</li>
+<li>91 stuff categories</li>
+<li>5 captions per image</li>
+<li>250,000 people with keypoints</li>
+</ul>
+
+<p>
+Images labelled with particular objects identified by rectangles or outlines
+</p>
+</div>
+</div>
+<div id="outline-container-org6e6251b" class="outline-3">
+<h3 id="org6e6251b"><span class="section-number-3">1.6</span> Google Open Image</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+<a href="https://github.com/openimages/dataset">https://github.com/openimages/dataset</a>
+Open Images is a dataset of ~9 million URLs to images that have been annotated with image-level labels and bounding boxes spanning thousands of classes.
+</p>
+
+<p>
+The annotations are licensed by Google Inc. under CC BY 4.0 license. The contents of this repository are released under an Apache 2 license.
+</p>
+
+<p>
+The images are listed as having a CC BY 2.0 license. Note: while we tried to identify images that are licensed under a Creative Commons Attribution license, we make no representations or warranties regarding the license status of each image and you should verify the license for each image yourself.
+</p>
+
+<p>
+1.76 million image files
+~18TB of image files
+990MB of annnotations and metadata
+labelled images with bounding boxes for particular object classifications
+</p>
+
+<p>
+Can be downloaded following instructions here: <a href="https://github.com/cvdfoundation/open-images-dataset">https://github.com/cvdfoundation/open-images-dataset</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org6209ca7" class="outline-3">
+<h3 id="org6209ca7"><span class="section-number-3">1.7</span> Google YouTube8M</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+<a href="https://research.google.com/youtube8m/">https://research.google.com/youtube8m/</a>
+YouTube-8M is a large-scale labeled video dataset that consists of millions of YouTube video IDs and associated labels from a diverse vocabulary of 4700+ visual entities. It comes with precomputed state-of-the-art audio-visual features from billions of frames and audio segments, designed to fit on a single hard disk. This makes it possible to get started on this dataset by training a baseline video model in less than a day on a single machine! At the same time, the dataset's scale and diversity can enable deep exploration of complex audio-visual models that can take weeks to train even in a distributed fashion.
+</p>
+
+<p>
+Our goal is to accelerate research on large-scale video understanding, representation learning, noisy data modeling, transfer learning, and domain adaptation approaches for video. More details about the dataset and initial experiments can be found in our technical report. Some statistics from the latest version of the dataset are included below. 
+</p>
+
+<p>
+<a href="https://research.google.com/youtube8m/download.html">https://research.google.com/youtube8m/download.html</a>
+</p>
+
+<p>
+Download as TensorFlow record files.
+Creative Commons Attribution 4.0 International (CC BY 4.0) licence.
+</p>
+</div>
+</div>
+<div id="outline-container-orga81fa31" class="outline-3">
+<h3 id="orga81fa31"><span class="section-number-3">1.8</span> CMU Face Images Data Set</h3>
+<div class="outline-text-3" id="text-1-8">
+<p>
+<a href="http://archive.ics.uci.edu/ml/datasets/cmu+face+images">http://archive.ics.uci.edu/ml/datasets/cmu+face+images</a>
+Abstract: This data consists of 640 black and white face images of people taken with varying pose (straight, left, right, up), expression (neutral, happy, sad, angry), eyes (wearing sunglasses or not), and size
+</p>
+</div>
+</div>
+<div id="outline-container-orgf21d2e7" class="outline-3">
+<h3 id="orgf21d2e7"><span class="section-number-3">1.9</span> 11k hands</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+<a href="https://sites.google.com/view/11khands">https://sites.google.com/view/11khands</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgc549db2" class="outline-3">
+<h3 id="orgc549db2"><span class="section-number-3">1.10</span> STL-10</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+Subset of ImageNet selected for unsupervised feature learning, deep learning and self-taught learning algorithms. Similar to CIFAR-10
+</p>
+
+<p>
+<a href="https://cs.stanford.edu/~acoates/stl10/">https://cs.stanford.edu/~acoates/stl10/</a>
+The STL-10 dataset is an image recognition dataset for developing unsupervised feature learning, deep learning, self-taught learning algorithms. It is inspired by the CIFAR-10 dataset but with some modifications. In particular, each class has fewer labeled training examples than in CIFAR-10, but a very large set of unlabeled examples is provided to learn image models prior to supervised training. The primary challenge is to make use of the unlabeled data (which comes from a similar but different distribution from the labeled data) to build a useful prior. We also expect that the higher resolution of this dataset (96x96) will make it a challenging benchmark for developing more scalable unsupervised learning methods.
+Overview
+</p>
+
+<ul class="org-ul">
+<li>10 classes: airplane, bird, car, cat, deer, dog, horse, monkey, ship, truck.</li>
+<li>Images are 96x96 pixels, color.</li>
+<li>500 training images (10 pre-defined folds), 800 test images per class.</li>
+<li>100000 unlabeled images for unsupervised learning. These examples are extracted from a similar but broader distribution of images. For instance, it contains other types of animals (bears, rabbits, etc.) and vehicles (trains, buses, etc.) in addition to the ones in the labeled set.</li>
+<li>Images were acquired from labeled examples on ImageNet.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3e1c63a" class="outline-3">
+<h3 id="org3e1c63a"><span class="section-number-3">1.11</span> MIAS</h3>
+<div class="outline-text-3" id="text-1-11">
+<p>
+<a href="http://www.mammoimage.org/databases/">http://www.mammoimage.org/databases/</a>
+Mammographic Image Analysis Society
+</p>
+</div>
+</div>
+<div id="outline-container-orgc98a68d" class="outline-3">
+<h3 id="orgc98a68d"><span class="section-number-3">1.12</span> Danbooru2017</h3>
+<div class="outline-text-3" id="text-1-12">
+<p>
+<a href="https://www.gwern.net/Danbooru2017">https://www.gwern.net/Danbooru2017</a>
+Danbooru2017 is a large-scale anime image database with 2.9m+ images annotated with 77.5m+ tags; it can be useful for machine learning purposes such as image recognition and generation. (statistics, NN, anime, shell)
+</p>
+</div>
+</div>
+<div id="outline-container-org2508e7b" class="outline-3">
+<h3 id="org2508e7b"><span class="section-number-3">1.13</span> NutriNet</h3>
+<div class="outline-text-3" id="text-1-13">
+<p>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5537777/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5537777/</a>
+</p>
+
+<p>
+Paper Abstract:
+Automatic food image recognition systems are alleviating the process of food-intake estimation and dietary assessment. However, due to the nature of food images, their recognition is a particularly challenging task, which is why traditional approaches in the field have achieved a low classification accuracy. Deep neural networks have outperformed such solutions, and we present a novel approach to the problem of food and drink image detection and recognition that uses a newly-defined deep convolutional neural network architecture, called NutriNet. This architecture was tuned on a recognition dataset containing 225,953 512 512 pixel images of 520 different food and drink items from a broad spectrum of food groups, on which we achieved a classification accuracy of 86.72%, along with an accuracy of 94.47% on a detection dataset containing 130,517 images. We also performed a real-world test on a dataset of self-acquired images, combined with images from Parkinsons disease patients, all taken using a smartphone camera, achieving a top-five accuracy of 55%, which is an encouraging result for real-world images. Additionally, we tested NutriNet on the University of Milano-Bicocca 2016 (UNIMIB2016) food image dataset, on which we improved upon the provided baseline recognition result. An online training component was implemented to continually fine-tune the food and drink recognition model on new images. The model is being used in practice as part of a mobile app for the dietary assessment of Parkinsons disease patients.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb6abc48" class="outline-3">
+<h3 id="orgb6abc48"><span class="section-number-3">1.14</span> Caltech 101 / 256 / Silhouettes</h3>
+<div class="outline-text-3" id="text-1-14">
+<ul class="org-ul">
+<li>101 (circa. 2003)</li>
+</ul>
+<p>
+Description
+</p>
+
+<p>
+Pictures of objects belonging to 101 categories. About 40 to 800 images per category. Most categories have about 50 images. Collected in September 2003 by Fei-Fei Li, Marco Andreetto, and Marc 'Aurelio Ranzato.  The size of each image is roughly 300 x 200 pixels.
+We have carefully clicked outlines of each object in these pictures, these are included under the 'Annotations.tar'. There is also a matlab script to view the annotaitons, 'show<sub>annotations.m</sub>'.
+How to use the dataset
+</p>
+
+<p>
+If you are using the Caltech 101 dataset for testing your recognition algorithm you should try and make your results comparable to the results of others. We suggest training and testing on fixed number of pictures and repeating the experiment with different random selections of pictures in order to obtain error bars. Popular number of training images: 1, 3, 5, 10, 15, 20, 30. Popular numbers of testing images: 20, 30. See also the discussion below.
+When you report your results please keep track of which images you used and which were misclassified. We will soon publish a more detailed experimental protocol that allows you to report those details. See the Discussion section for more details.
+</p>
+
+<p>
+-256 (circa. 2006)
+Collection of all 30607 images
+256 Object Categories + Clutter
+At least 80 images per category
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdf8063d" class="outline-3">
+<h3 id="orgdf8063d"><span class="section-number-3">1.15</span> Visual Dictionary</h3>
+<div class="outline-text-3" id="text-1-15">
+<p>
+<a href="http://groups.csail.mit.edu/vision/TinyImages/">http://groups.csail.mit.edu/vision/TinyImages/</a>
+80 million tiny images
+</p>
+
+<p>
+This is the dataset which CIFAR is taken from.
+</p>
+
+<p>
+<a href="http://horatio.cs.nyu.edu/mit/tiny/data/index.html">http://horatio.cs.nyu.edu/mit/tiny/data/index.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org552339b" class="outline-3">
+<h3 id="org552339b"><span class="section-number-3">1.16</span> Behance Artistic Media Dataset</h3>
+<div class="outline-text-3" id="text-1-16">
+<p>
+<a href="https://bam-dataset.org/#download">https://bam-dataset.org/#download</a>
+2.5 million images
+automatically labelled
+</p>
+<ul class="org-ul">
+<li>Automatically-labeled binary attribute scores for over 2.5 million images across 20 attributes each</li>
+<li>393,000 crowdsourced binary attribute labels for individual images</li>
+<li>Short image descriptions/captions for 74,000 images from the crowd</li>
+<li>Image URLs for all images mentioned above</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfd48b46" class="outline-3">
+<h3 id="orgfd48b46"><span class="section-number-3">1.17</span> stanford dogs dataset</h3>
+<div class="outline-text-3" id="text-1-17">
+<p>
+<a href="http://vision.stanford.edu/aditya86/ImageNetDogs/">http://vision.stanford.edu/aditya86/ImageNetDogs/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org27aff1b" class="outline-3">
+<h3 id="org27aff1b"><span class="section-number-3">1.18</span> Comma.ai driving dataset</h3>
+<div class="outline-text-3" id="text-1-18">
+<p>
+<a href="https://archive.org/details/comma-dataset">https://archive.org/details/comma-dataset</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org2bd99f9" class="outline-3">
+<h3 id="org2bd99f9"><span class="section-number-3">1.19</span> cat database</h3>
+<div class="outline-text-3" id="text-1-19">
+<p>
+<a href="https://www.reddit.com/r/MachineLearning/comments/16rxn0/ml_for_reddit_10000_images_of_cats/">https://www.reddit.com/r/MachineLearning/comments/16rxn0/ml_for_reddit_10000_images_of_cats/</a> (sorry about reddit link, beware of cat puns)
+</p>
+
+<p>
+Link to torrent file.
+</p>
+
+<p>
+10,000 images of cats.
+</p>
+</div>
+</div>
+<div id="outline-container-org4e3db57" class="outline-3">
+<h3 id="org4e3db57"><span class="section-number-3">1.20</span> Cityscapes Dataset</h3>
+<div class="outline-text-3" id="text-1-20">
+<p>
+<a href="https://www.cityscapes-dataset.com/dataset-overview/">https://www.cityscapes-dataset.com/dataset-overview/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org473769b" class="outline-3">
+<h3 id="org473769b"><span class="section-number-3">1.21</span> links to check</h3>
+<div class="outline-text-3" id="text-1-21">
+<p>
+<a href="https://www.visualdata.io/">https://www.visualdata.io/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org1309eb5" class="outline-3">
+<h3 id="org1309eb5"><span class="section-number-3">1.22</span> openfMRI</h3>
+<div class="outline-text-3" id="text-1-22">
+<p>
+<a href="https://openfmri.org">https://openfmri.org</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org8ce39f0" class="outline-3">
+<h3 id="org8ce39f0"><span class="section-number-3">1.23</span> List of medical databases</h3>
+<div class="outline-text-3" id="text-1-23">
+<p>
+You are welcome: here are some more name of medical database:
+2008 MICCAI MS Lesion Segmentation Challenge (National Institutes of Health Blueprint for Neuroscience Research)
+ASU DR-AutoCC Data - a Multiple-Instance Learning feature space for a diabetic retinopathy classification dataset (Ragav Venkatesan, Parag Chandakkar, Baoxin Li - Arizona State University)
+Aberystwyth Leaf Evaluation Dataset - Timelapse plant images with hand marked up leaf-level segmentations for some time steps, and biological data from plant sacrifice. (Bell, Jonathan; Dee, Hannah M.)
+Annotated Spine CT Database for Benchmarking of Vertebrae Localization, 125 patients, 242 scans (Ben Glockern)
+BRATS - the identification and segmentation of tumor structures in multiparametric magnetic resonance images of the brain (TU Munchen etc.)
+Cholec80: 80 gallbladder laparoscopic videos annotated with phase and tool information. (Andru Putra Twinanda)
+CRCHistoPhenotypes - Labeled Cell Nuclei Data - colorectal cancer?histology images?consisting of nearly 30,000 dotted nuclei with over 22,000 labeled with the cell type (Rajpoot + Sirinukunwattana)
+CREMI: MICCAI 2016 Challenge - 6 volumes of electron microscopy of neural tissue,neuron and synapse segmentation, synaptic partner annotation. (Jan Funke, Stephan Saalfeld, Srini Turaga, Davi Bock, Eric Perlman)
+Cavy Action Dataset - 16 sequences with 640 x 480 resolutions recorded at 7.5 frames per second (fps) with approximately 31621506 frames in total (272 GB) of interacting cavies (guinea pig) (Al-Raziqi and Denzler)
+Cell Tracking Challenge Datasets - 2D/3D time-lapse video sequences with ground truth(Ma et al., Bioinformatics 30:1609-1617, 2014)
+Computed Tomography Emphysema Database (Lauge Sorensen)
+CRIM13 Caltech Resident-Intruder Mouse dataset - 237 10 minute videos (25 fps)
+annotated with actions (13 classes) (Burgos-Artizzu, Dollr, Lin, Anderson and Perona)
+DIADEM: Digital Reconstruction of Axonal and Dendritic Morphology Competition (Allen Institute for Brain Science et al)
+DIARETDB1 - Standard Diabetic Retinopathy Database (Lappeenranta Univ of Technology)
+DRIVE: Digital Retinal Images for Vessel Extraction (Univ of Utrecht)
+DeformIt 2.0 - Image Data Augmentation Tool: Simulate novel images with ground truth segmentations from a single image-segmentation pair (Brian Booth and Ghassan Hamarneh)
+Deformable Image Registration Lab dataset - for objective and rigrorous evaluation of deformable image registration (DIR) spatial accuracy performance. (Richard Castillo et al.)
+Dermoscopy images (Eric Ehrsam)
+EPT29.This database contains 4842 images of 1613 specimens of 29 taxa of EPTs:(Tom etc.)
+FIRE Fundus Image Registration Dataset - 134 retinal image pairs and groud truth for registration.(FORTH-ICS)
+IRMA(Image retrieval in medical applications) - This collection compiles anonymous radiographs (Deserno TM, Ott B)
+KID - A capsule endoscopy database for medical decision support (Anastasios Koulaouzidis and Dimitris Iakovidis)
+Leaf Segmentation ChallengeTobacco and arabidopsis plant images (Hanno Scharr, Massimo Minervini, Andreas Fischbach, Sotirios A. Tsaftaris)
+MIT CBCL Automated Mouse Behavior Recognition datasets (Nicholas Edelman)
+MUCIC: Masaryk University Cell Image Collection - 2D/3D synthetic images of cells/tissues for benchmarking(Masaryk University)
+MiniMammographic Database (Mammographic Image Analysis Society)
+Moth fine-grained recognition - 675 similar classes, 5344 images (Erik Rodner et al)
+Mouse Embryo Tracking Database - cell division event detection (Marcelo Cicconet, Kris Gunsalus)
+OASIS - Open Access Series of Imaging Studies - 500+ MRI data sets of the brain (Washington University, Harvard University, Biomedical Informatics Research Network)
+Plant Phenotyping Datasets - plant data suitable for plant and leaf detection, segmentation, tracking, and species recognition (M. Minervini, A. Fischbach, H. Scharr, S. A. Tsaftaris)
+RatSI: Rat Social Interaction Dataset - 9 fully annotated (11 class) videos (15 minute, 25 FPS) of two rats interacting socially in a cage (Malte Lorbach, Noldus Information Technology)
+Retinal fundus images - Ground truth of vascular bifurcations and crossovers (Univ of Groningen)
+SCORHE - 1, 2 and 3 mouse behavior videos, 9 behaviors, (Ghadi H. Salem, et al, NIH)
+STructured Analysis of the Retina - DESCRIPTION(400+ retinal images, with ground truth segmentations and medical annotations)
+Spine and Cardiac data (Digital Imaging Group of London Ontario, Shuo Li)
+Stonefly9This database contains 3826 images of 773 specimens of 9 taxa of Stoneflies (Tom etc.)
+Synthetic Migrating Cells -Six artificial migrating cells (neutrophils) over 98 time frames, various levels of Gaussian/Poisson noise and different paths characteristics with ground truth. (Dr Constantino Carlos Reyes-Aldasoro et al.)
+Univ of Central Florida - DDSM: Digital Database for Screening Mammography (Univ of Central Florida)
+VascuSynth - 120 3D vascular tree like structures with ground truth (Mengliu Zhao, Ghassan Hamarneh)
+VascuSynth - Vascular Synthesizer generates vascular trees in 3D volumes. (Ghassan Hamarneh, Preet Jassi, Mengliu Zhao)
+York Cardiac MRI dataset (Alexander Andreopoulos)
+</p>
+</div>
+</div>
+<div id="outline-container-org9d3a77c" class="outline-3">
+<h3 id="org9d3a77c"><span class="section-number-3">1.24</span> simpsons image training dataset</h3>
+<div class="outline-text-3" id="text-1-24">
+<p>
+<a href="https://github.com/jbencina/simpsons-image-training-dataset">https://github.com/jbencina/simpsons-image-training-dataset</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgbc12071" class="outline-3">
+<h3 id="orgbc12071"><span class="section-number-3">1.25</span> natural earth</h3>
+<div class="outline-text-3" id="text-1-25">
+<p>
+<a href="http://www.naturalearthdata.com/">http://www.naturalearthdata.com/</a>
+Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales
+</p>
+</div>
+</div>
+<div id="outline-container-org4d5db44" class="outline-3">
+<h3 id="org4d5db44"><span class="section-number-3">1.26</span> Google Trends Datastore</h3>
+<div class="outline-text-3" id="text-1-26">
+<p>
+<a href="http://googletrends.github.io/data/">http://googletrends.github.io/data/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org2537f18" class="outline-3">
+<h3 id="org2537f18"><span class="section-number-3">1.27</span> USGS.gov</h3>
+<div class="outline-text-3" id="text-1-27">
+<p>
+<a href="https://www.usgs.gov/products/data-and-tools/overview">https://www.usgs.gov/products/data-and-tools/overview</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org0c2f7f8" class="outline-3">
+<h3 id="org0c2f7f8"><span class="section-number-3">1.28</span> Overhead Imagery Research Data Set</h3>
+<div class="outline-text-3" id="text-1-28">
+<p>
+<a href="https://en.wikipedia.org/wiki/Overhead_Imagery_Research_Data_Set">https://en.wikipedia.org/wiki/Overhead_Imagery_Research_Data_Set</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org470b32a" class="outline-3">
+<h3 id="org470b32a"><span class="section-number-3">1.29</span> Image segmentation data set</h3>
+<div class="outline-text-3" id="text-1-29">
+<p>
+<a href="http://archive.ics.uci.edu/ml/datasets/image+segmentation">http://archive.ics.uci.edu/ml/datasets/image+segmentation</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org2250681" class="outline-3">
+<h3 id="org2250681"><span class="section-number-3">1.30</span> MovieLens</h3>
+<div class="outline-text-3" id="text-1-30">
+<p>
+<a href="https://grouplens.org/datasets/movielens/">https://grouplens.org/datasets/movielens/</a>
+GroupLens Research has collected and made available rating data sets from the MovieLens web site (<a href="http://movielens.org">http://movielens.org</a>). The data sets were collected over various periods of time, depending on the size of the set. Before using these data sets, please review their README files for the usage licenses and other details.
+</p>
+
+<p>
+Movie ratings and review datasets of various different sizes and scopes.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd313f07" class="outline-3">
+<h3 id="orgd313f07"><span class="section-number-3">1.31</span> spam assasin</h3>
+<div class="outline-text-3" id="text-1-31">
+<p>
+<a href="http://spamassassin.apache.org/old/publiccorpus/">http://spamassassin.apache.org/old/publiccorpus/</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org6306de5" class="outline-3">
+<h3 id="org6306de5"><span class="section-number-3">1.32</span> fashion mnist</h3>
+<div class="outline-text-3" id="text-1-32">
+<p>
+<a href="https://www.kaggle.com/zalando-research/fashionmnist">https://www.kaggle.com/zalando-research/fashionmnist</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Kynan Tan</p>
+<p class="date">Created: 2018-05-15 Tue 11:34</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
