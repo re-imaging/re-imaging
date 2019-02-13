@@ -15,15 +15,13 @@
 # after downloading the files, change into directory
 cd ~/arXiv/
 
+# get list of all archives
+for i in src/*; do echo $i; done
 # for each archive, decompress into a specific folder
 for i in src/*; do tar xvf $i -C src_all/; done
 
-# change directory
+# change directory - remaining commands are done from here
 cd ../src_all
-
-# check how many pdf files there are
-echo "total number of pdf only articles: "
-find . -maxdepth 2 -name "*.pdf" -print
 
 # move all pdf files to their own folder
 find . -maxdepth 2 -name "*.pdf" -print -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "${1%.*}" ' _ {} \;
@@ -33,17 +31,17 @@ find . -maxdepth 2 -name "*.pdf" -print -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "
 find . -maxdepth 3 -name "*.pdf" -print -exec sh -c 'pdfimages -png "${1}" "${1}_image" ' _ {} \;
 
 # extract text from pdf files
-find . -name "*.pdf" -print -exec sh -c 'pdftotext "${1}" "${1%.*}.txt" ' _ {} \;
+find . -name "*.pdf" -print -exec sh -c 'pdftotext "${1}" "${1%.*}_get.txt" ' _ {} \;
 
-# for each archive within each subfolder (needed so tar puts things in proper places)
+# for each archive within each subfolder
 # find all gz tars, extract, and then delete the gz files
 for d in *; do cd "$d" && for f in *.gz; do tar xvfz "$f" --one-top-level && rm "$f"; done; cd ..; done
 
 # note that some of the archives are gz only and not tar
 # seems to be because they only contain one file
-# so for these we use gunzip
-find . -name "*.gz" -exec gunzip -v {} \;
+# so for these we use gunzip which neatly replaces each .gz with a text file
+find . -name "*.gz" -exec gunzip -v -q {} \;
 
 # and for each individual (tex) file, make a folder and move the item to that folder
 # note this needs to do some trickery as many of these files don't have extensions and we can't make a folder of the same name
-find . -maxdepth 2 -type f -exec sh -c 'mkdir "${1}_dir" ; mv "$1" "${1}_dir" ; mv "${1}_dir" "$1"' _ {} \;
+find . -maxdepth 2 -type f -print -exec sh -c 'mkdir "${1}_dir" ; mv "$1" "${1}.srconly"  ; mv "${1}.srconly" "${1}_dir" ; mv "${1}_dir" "$1"' _ {} \;
