@@ -81,6 +81,7 @@ Totals
 - Breakdown of the most common image formats. 
 - There are more images than just these file extensions, but in uncommon formats, or in formats that are a bit tricky to work with (like metapost or xfig vector graphics languages), but the numbers of these are much smaller proportions of the dataset.
 
+|----------+--------|
 |      606 | .GIF   |
 |      919 | .JPEG  |
 |     1386 | .PDF   |
@@ -101,6 +102,8 @@ Totals
 |  4202415 | .eps   |
 |----------+--------|
 | 10101580 | total  |
+|----------+--------|
+
 
 - Source uploads include a total of over 10 million images.
 - These image formats are all relatively straightforward to work with and seem to give a good spread across different uses such as vector graphics (eps/svg), web (jpeg/gif), and print (ps)
@@ -115,3 +118,5 @@ Totals
 - Parse OAI xml files and write relevant data into an SQLite table
 - Create a table for individual images, iterate over all image files of relevant file extensions and insert a row into table for each
 - Be able to query database for any images for a given article or metadata query, or matching metadata for a given image
+
+- In progress as of 20190311
