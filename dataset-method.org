@@ -1,0 +1,117 @@
+* Re-imaging the Empirical
+Research Project
+
+Working with arXiv source dataset for image analysis, processing, and machine learning.
+
+Process for downloading, extracting, unarchiving, and organising data for usage in machine learning applications as well as data mining.
+
+** Step 1a: Download all source files from the arXiv Amazon Web Services (AWS) data storage using requestor pays.
+- Information provided by arXiv: https://arxiv.org/help/bulk_data_s3
+- At the time of downloading in January-February 2019, this equated to approximately 1 terabyte of data in the form of 2150 compressed tar archive files
+- Downloading from UNSW in Australia, this download via AWS cost ~AU$150
+- Download took several days
+- Used s3cmd (https://s3tools.org/s3cmd and https://github.com/s3tools/s3cmd) for automated downloads using the --sync function (NB: turning off MD5 hash checking greatly speeds up process, but use with caution)
+
+Totals:
+- 2150 compressed tar archive files
+
+** Step 1b: Download OAI metadata
+- arXiv maintains metadata for articles via the Open Access Initiative v2.0 protocol. This allows users to query the server to retrieve metadata relating to a particular time period or set (category, e.g. math)
+- As we require the entire metadata database, we used a harvesting tool to request the metadata for the entire time range, which is downloaded incrementally in blocks of approximately 10,000 items
+- Second attempt used metha (https://github.com/miku/metha). Metha is a command line harvester that incrementally caches a particular endpoint. This attempt produced 1506176 (1.5m) unique records
+- Initial attempt at downloading metadata used oai-harvest (https://github.com/bloomonkey/oai-harvest). While simple to setup and use, the download only produced approximately 1.1 million records, which is much less than the expected 1.5 million records. The tool also downloaded items as individual xml files that each hold one record only, which has proven somewhat unwieldy
+
+Totals:
+- 1506176 OAI records across 1578 xml files
+
+** Step 2: Unarchive and decompress
+- Steps 2 and 3 were accomplished by using a number of single line bash commands that iteratively decompressed, unarchived, renamed, and organised the data, as well as extracting images and text from PDF documents.
+- See document arxiv_extract.sh for annotated code
+- Recommended to run each step individually and inspect for errors
+- Extracting and unarchiving will take a long time
+- During this process, images and text are extracted from each PDF file using pdf-images and pdftotext (this can be omitted, see below)
+
+Totals:
+- 1,483,662 total articles
+- 114,132 PDF-only articles (no source provided)
+- 324,101 source-only articles (single source file only, no images)
+
+File organisation
+*** Directory structure
+**** arXiv
+***** src_all
+****** YYMM
+- 1512
+- 1601
+- 1602
+******* individual article folders
+- 1804.04821
+- 1804.04822
+- 1804.04823
+- 1804.04824
+- 1804.04825
+******** subfolders for additional code or figures etc.
+- figures
+- diagrams
+- text
+
+*** Filenames
+- Each article in the source directory has its own folder named in the format of YYMM.XXXXX (or only 4 digits in the form of YYMM.XXXX for pre-2015). Articles prior to March 2007 (9107-0703) use the identifier archive.subjectclass/YYMMXXX e.g. math.GT/0309136
+- For more information on arXiv identifiers, see https://arxiv.org/help/arxiv_identifier
+- Image files are named according to the original filenames that were deposited to arXiv, as we are using the original source
+
+** Step 3: Extract images and text from PDF documents (NB: this took place during Step 2, but is outlined separately here)
+- Extract images and text from PDF documents
+- This originally seemed like an important process, as there is a decent portion of the arXiv that was not submitted as source code
+- 7.69% of all articles are submitted as PDF only
+- Attempted to use pdf-images to extract images, with varying success.
+- Extracted over 27 million image files from PDFs
+- Produced a very "dirty" dataset with a number of problems in the image files: A large number are "stripes" (images split into multiple horizontal bars) as well as lots of single symbols, strange transparency or inverted colours, and low resolution images
+- Many of these are unusable. Some example montages of these problematic images can be found here: https://www.dropbox.com/sh/o6juhotbn9cih7w/AADWjarbKAs13U2fj_ZSKu1wa?dl=0
+- Decision was made to ignore this part of the dataset and proceed with using only the images found in the source uploads. This will save time and effort in cleaning the data, as well as avoiding a number of pitfalls of having such a large and messy dataset, but at the cost of not having any images extracted from PDF files
+- Each image extracted from a PDF was given the filename extension .pdf_image-XXX.png, so they can be ignored or conditionally operated upon at later stages of the process
+- All PDF data was kept in case it would be required at a later stage in the project, and for posterity
+
+Totals
+- Total number of articles: 1,483,662
+- Number of these that were PDF only: 114,132 (7.69% of total number of articles)
+- 27,198,781 images extracted from PDFs
+
+** Image totals
+- Breakdown of the most common image formats. 
+- There are more images than just these file extensions, but in uncommon formats, or in formats that are a bit tricky to work with (like metapost or xfig vector graphics languages), but the numbers of these are much smaller proportions of the dataset.
+
+|      606 | .GIF   |
+|      919 | .JPEG  |
+|     1386 | .PDF   |
+|     3425 | .epsf  |
+|     5236 | .PS    |
+|     7788 | .JPG   |
+|    11256 | .PNG   |
+|    12404 | .svg   |
+|    15182 | .epsi  |
+|    18496 | .gif   |
+|    24190 | .pstex |
+|    25141 | .EPS   |
+|    26164 | .jpeg  |
+|   450816 | .jpg   |
+|   905970 | .ps    |
+|  1090973 | .png   |
+|  3299213 | .pdf   |
+|  4202415 | .eps   |
+|----------+--------|
+| 10101580 | total  |
+
+- Source uploads include a total of over 10 million images.
+- These image formats are all relatively straightforward to work with and seem to give a good spread across different uses such as vector graphics (eps/svg), web (jpeg/gif), and print (ps)
+- Mean average of 6.81 images per article
+- Would be worthwhile to investigate and analyse proportion of images used across different categories and time
+- Also important to keep looking for other strong tendencies or trends in the dataset e.g. is there something that has been missed through this process? By excluding PDF only articles are we missing a key part of the archive, or are these distributed uniformally?
+** Step 4: Organise dataset
+- Source dataset consists only of article source and image files, no metadata or data about the placement within arXiv
+- OAI files consist only of metadata
+- Place the data for both into SQLite database as an attempt to link this data and be able to analyse and label dataset
+- Create SQLite database
+- Parse OAI xml files and write relevant data into an SQLite table
+- Create a table for individual images, iterate over all image files of relevant file extensions and insert a row into table for each
+- Be able to query database for any images for a given article or metadata query, or matching metadata for a given image
