@@ -1,11 +1,13 @@
 import xml.etree.ElementTree as ET
 import glob
 import datetime
-
+import os
+import sys
 import sqlite3
 
 table_name = "metadata"
-db_path = "../sqlite/arxiv_db.sqlite3"
+oai_path = "/home/rte/data/oai-metadata/"
+db_path = "/home/rte/data/db/arxiv_db.sqlite3"
 
 count = 0
 
@@ -15,34 +17,14 @@ bVerbose = True
 OAI = "{http://www.openarchives.org/OAI/2.0/}"
 ARXIV = "{http://arxiv.org/OAI/arXiv/}"
 
-# def data_entry():
-#     c = db.cursor()
-#     try:
-#         c.execute("INSERT INTO {tn} (identifier, created) VALUES ({_id}, {_created})".\
-#         format(tn=table_name, _id=identifier, _created=created))
-#         # do this after inserting everything
-#         db.commit()
-#         c.close()
-#     except sqlite3.IntegrityError:
-#         print('ERROR: ID already exists in PRIMARY KEY column')
-#     except Exception as e:
-#         raise e
-
-try:
-    # maybe find a better way to get filepath of db
-    db = sqlite3.connect(db_path)
-    # c = db.cursor()
-except Exception as e:
-    # Roll back any change if something goes wrong
-    db.rollback()
-    raise e
+db = sqlite3.connect(db_path)
 
 # to just parse through one file
-filenames = ["2018-04-30-00000011.xml"]
-for filename in filenames:
+filenames = [oai_path + "2018-04-30-00000011.xml"]
+# for filename in filenames:
 
 # iteratively progress through all files in folder
-# for filename in glob.glob('*.xml'):
+for filename in glob.glob(oai_path + '*.xml'):
 
     data = ET.parse(filename)
     if(bVerbose):
@@ -64,8 +46,9 @@ for filename in filenames:
                 continue
 
             info = meta.find(ARXIV+"arXiv")
-            created = info.find(ARXIV+"created").text
-            # created = datetime.datetime.strptime(created, "%Y-%m-%d")
+            # date = ""
+            date = info.find(ARXIV+"created").text
+            # date = datetime.datetime.strptime(date, "%Y-%m-%d")
             categories = info.find(ARXIV+"categories").text
             title = info.find(ARXIV+"title").text
             abstract = info.find(ARXIV+"abstract").text
@@ -84,10 +67,6 @@ for filename in filenames:
 
             # create a variable to store all authors names
             anames = ""
-
-            # getting whole string is very messy
-            # astr = ET.tostring(authors_element, encoding='utf8', method='xml').decode()
-            # print(astr)
 
             for author in authors_element:
                 # print(author.find(ARXIV+"keyname").text)
@@ -119,7 +98,7 @@ for filename in filenames:
             if(bVerbose):
                 print("-" * 20)
                 print(identifier)
-                print(created)
+                print(date)
                 print(categories)
                 print(authors)
                 print(title)
@@ -127,20 +106,45 @@ for filename in filenames:
                 print(lic) # don't use license as it is reserved for Python!
 
             c = db.cursor()
-            c.execute("INSERT INTO {tn} (identifier, created, cat, authors, title, abstract, licence) VALUES ({_id}, {_created}, {_cat}, {_authors}, {_title}, {_abstract}, {_licence})".\
-            format(tn=table_name, _id=identifier, _created=created, _cat=categories, _authors=authors, _title=title, _abstract=abstract, _licence=lic))
+
+            # c.execute("INSERT INTO {tn} (identifier, created, cat, authors, title, abstract, licence) \
+            # VALUES ({_id}, {_created}, {_cat}, {_authors}, {_title}, {_abstract}, {_licence})".\
+            # format(tn=table_name, _id=identifier, _created=created, _cat=categories,\
+            # _authors=authors, _title=title, _abstract=abstract, _licence=lic))
+
+            print(table_name)
+            print(identifier)
+            print(date)
+            print(authors)
+            authors = "" + str(authors)
+            print(authors)
+            print(title)
+
+            c.execute("INSERT INTO metadata (identifier, created, cat, authors, title, abstract, licence) \
+            VALUES (?, ?, ?, ?, ?, ?, ?)", \
+            (identifier, date, categories, authors, title, abstract, lic))
+            # , authors, title, abstract, licence
+            # , '{3}', '{4}', '{5}', '{6}'
+            c.close()
 
         except KeyboardInterrupt:
+            db.commit()
+
             # quit
             sys.exit()
         # except AttributeError as error:
             # print(error)
             # continue
-        finally:
-            print("finished")
-            print("total count: " + str(count))
+        except Exception as e:
+            raise e
+        # finally:
+
+
 # do this after inserting everything
 db.commit()
 c.close()
 
 db.close()
+
+print("finished")
+print("total count: " + str(count))

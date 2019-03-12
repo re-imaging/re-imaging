@@ -2,12 +2,13 @@ import sqlite3
 # import pandas as pd
 
 table_name = "metadata"
+db_path = "/home/rte/data/db/arxiv_db.sqlite3"
 
 try:
     # create a database in RAM
     # db = sqlite3.connect(':memory:')
     # creates or opens a file database
-    db = sqlite3.connect('arxiv_db.sqlite3')
+    db = sqlite3.connect(db_path)
 
     # get cursor object
     c = db.cursor()
