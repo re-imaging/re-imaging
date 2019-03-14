@@ -9,10 +9,9 @@ import scandir
 # verbose = True
 verbose = False
 
-table_name = "metadata"
 # src_path = "/home/rte/arXiv/src_50/"
 src_path = "/home/rte/arXiv/src_all/"
-db_path = "/home/rte/data/db/arxiv_db.sqlite3"
+db_path = "/home/rte/data/db/arxiv_db_test.sqlite3"
 
 count = 0
 
@@ -49,18 +48,19 @@ for root, dirs, files in scandir.walk("."):
             # and that it also isn't a PDF that was provided as PDF-only article (ARTICLE-IDXXX.pdf)
             if n.endswith(('.png', '.eps', '.pdf', '.ps', '.jpg', 'jpeg', 'pstex', '.gif', '.svg', '.epsf'))\
             and 'pdf_image' not in n\
-            and n != (article_name + ".pdf"):
+            and name != (article_name + ".pdf"):
+                print(name)
                 count += 1
 
-                # print out the count at regular indecodetervals
+                # print out the count at regular intervals
                 if (count % 10 == 0):
                     print("---------- count: " + str(count))
 
-                filesize = os.stat(filename).st_size
+                # filesize = os.stat(filename).st_size
 
                 # p = subprocess.check_output(['identify', filename]).decode('utf-8')
                 # args = '-format "%w %h %m"'
-                p = subprocess.run(['identify', '-format', '%w %h %m', filename], stdout=subprocess.PIPE).stdout.decode('utf-8')
+                p = subprocess.run(['identify', '-ping', '-format', '%w %h %m %b', filename], stdout=subprocess.PIPE).stdout.decode('utf-8')
                 # print(p)
                 split_p = p.split(" ")
 
@@ -74,9 +74,12 @@ for root, dirs, files in scandir.walk("."):
                 # print('code: ' + str(proc.returncode))
 
                 # im = Image.open(filename)
+
                 x = split_p[0]
                 y = split_p[1]
                 imageformat = split_p[2]
+                filesize = split_p[3]
+
                 if(verbose):
                     print(article_name)
                     print(name)
@@ -91,6 +94,9 @@ for root, dirs, files in scandir.walk("."):
                 # print("imagemode: " + imagemode)
 
                 insert_image(article_name, name, filesize, root, x, y, imageformat)
+
+                if(count >= 200):
+                    break
 
         except Exception as e:
             print(e)

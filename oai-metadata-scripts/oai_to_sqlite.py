@@ -143,7 +143,6 @@ for filename in glob.glob(oai_path + '*.xml'):
 # do this after inserting everything
 db.commit()
 c.close()
-
 db.close()
 
 print("finished")
