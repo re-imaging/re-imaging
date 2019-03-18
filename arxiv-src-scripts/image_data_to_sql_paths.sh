@@ -4,9 +4,17 @@ cd ~/arXiv/src_all
 echo "current working directory: "
 pwd
 
+startline=0
 count=0
 
-cat ~/data/paths/all_image_paths.txt | while read fullpath; do
+if [ "$1" != "" ]; then
+  echo "reading from line "$1""
+  startline=$1
+  count=$1
+fi
+
+
+tail -n +${1} ~/data/paths/all_image_paths.txt | while read fullpath; do
 
   echo "--------------------"
   echo "$fullpath"
