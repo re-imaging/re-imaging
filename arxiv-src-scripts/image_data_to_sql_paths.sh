@@ -32,7 +32,7 @@ tail -n +${1} ~/data/paths/all_image_paths.txt | while read fullpath; do
   pdfarticle="${article}.pdf"
   # echo $pdfarticle
   # echo "----------"
-  if [[ $name != $pdfarticle ]];
+  if [[ $name != $pdfarticle && $name != "article.pdf" ]];
   then
     count=$((count+1))
     echo $count
