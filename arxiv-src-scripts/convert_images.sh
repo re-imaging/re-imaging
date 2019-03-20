@@ -14,6 +14,6 @@ for f in *; do
     echo "f "$f""
     newname="converted/$base.jpg"
     echo "newname "$newname""
-    convert "$f" -resize "512^>" "$newname"
+    convert "$f" -colorspace sRGB -units PixelsPerInch -density 300 -background white -alpha off -resize "512^>" "$newname"
   fi
 done
