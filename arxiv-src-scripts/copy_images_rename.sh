@@ -1,12 +1,31 @@
 #!/bin/bash
 
-srcdir="/mnt/hd-4tb/arXiv/src_all/1001/"
-destdir="/home/rte/data/images/1001/"
-imagepaths="/home/rte/data/paths/image_paths_1001.txt"
+set -o nounset
+set -o errexit
+
+if [ "$1" != "" ]; then
+  echo "source directory: "$1""
+  srcdir="$1"
+fi
+
+if [ "$2" != "" ]; then
+  echo "target directory: "$2""
+  destdir="$2"
+fi
+
+if [ "$3" != "" ]; then
+  echo "text file containing image paths: "$3""
+  imagepaths="$3"
+fi
+
+# srcdir="/mnt/hd-4tb/arXiv/src_all/1001/"
+# destdir="/home/rte/data/images/1001/"
+# imagepaths="/home/rte/data/paths/image_paths_1001.txt"
 linecount=1
 
-echo "srcdir: $srcdir"
-echo "destdir: $destdir"
+echo "srcdir: "$srcdir""
+echo "destdir: "$destdir""
+echo "imagepaths: "$imagepaths""
 
 cd $srcdir
 pwd

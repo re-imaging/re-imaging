@@ -1,8 +1,19 @@
 #!/bin/bash
+set -o nounset
+set -o errexit
 
-cd ~/arXiv/src_all
-echo "current working directory: "
-pwd
+if [ "$1" != "" ]; then
+  echo "source directory: "$1""
+  srcdir="$1"
+fi
+
+if [ "$2" != "" ]; then
+  echo "target file to write: "$2""
+  destfile="$2"
+fi
+
+cd "$srcdir"
+echo "current working directory: "$(pwd)""
 
 count=0
 
@@ -46,8 +57,8 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
     # sqlite3 /home/rte/data/db/arxiv_db_test.sqlite3 "INSERT INTO images \
     # (identifier, filename, filesize, path, x, y, imageformat) \
     # VALUES (\"$article\", \"$name\", \"$filesize\", \"$path\", \"$x\", \"$y\", \"$imageformat\");"
-    destdir=~/data/paths/all_image_paths.txt
-    echo "$fullpath" >> "$destdir"
+    # destfile=~/data/paths/all_image_paths.txt
+    echo "$fullpath" >> "$destfile"
   fi
   echo "total number of files:"
   echo $count
