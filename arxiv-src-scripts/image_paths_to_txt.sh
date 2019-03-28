@@ -37,7 +37,7 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
   pdfarticle="${article}.pdf"
   # echo $pdfarticle
   # echo "----------"
-  if [[ $name != $pdfarticle ]];
+  if [[ $name != $pdfarticle && $name != "article.pdf" ]];
   then
     count=$((count+1))
     echo $count
