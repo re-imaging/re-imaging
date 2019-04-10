@@ -12,7 +12,7 @@ try:
     # get cursor object
     c = db.cursor()
     c.execute('''
-        CREATE TABLE images(id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
+        CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
         filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
     ''')
 
