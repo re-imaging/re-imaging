@@ -14,18 +14,38 @@
 
 display_usage() {
   echo "create_month_paths.sh - make path files from a selection of folders"
-  echo -e "\nUsage:\n ./create_month_paths.sh [source directory]"
+  echo -e "Usage:\n ./create_month_paths.sh [source directory]"
 }
 
+# if less than two arguments supplied, display usage
+if [ $# -le 0 ]
+then
+  echo "not enough arguments"
+  display_usage
+  exit 1
+fi
+
+# check whether user had supplied -h or --help . If yes display usage
+if [[ ( $# == "--help") ||  $# == "-h" ]]
+ then
+   echo "help"
+   display_usage
+   exit 0
+ fi
+
 if [ "$1" != "" ]; then
-  echo "source directory: "$1""
-  srcdir="$1"
+  echo "checking if "$1" is a directory"
+  if [[ -d "$1" ]]; then
+    echo "source directory: "$1""
+    srcdir="$1"
+  fi
 fi
 
 cd "$srcdir"
 echo "current directory: $(pwd)"
 
-for m in *;
+# add slash at the end to only find directories
+for m in */;
 do
   cd "$m"
   wd=$(pwd)
@@ -45,7 +65,7 @@ do
     article="$(cut -d'/' -f2 <<< "$fullpath")"
     # path="${fullpath%/*}"
     name="${fullpath##*/}"
-    echo "path "$path""
+    # echo "path "$path""
     echo "name "$name""
     echo "article "$article""
 
@@ -64,7 +84,10 @@ do
 
       # echo "count "$count""
 
-      echo "$fullpath" >> "$dest"
+      echo "./""$month""${fullpath:1}" >> "$dest"
     fi
-  done
+  done;
+  echo "--------- returning to original directory for next loop"
+  cd ..
+  echo "current directory: "$(pwd)"";
 done
