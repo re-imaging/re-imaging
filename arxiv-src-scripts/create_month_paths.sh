@@ -59,7 +59,7 @@ do
   -o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" \) \
   -not -name "*pdf_image-*" | while read fullpath; do
 
-    # echo "--------------------"
+    echo "--------------------"
     echo "fullpath "$fullpath""
 
     article="$(cut -d'/' -f2 <<< "$fullpath")"
@@ -69,13 +69,34 @@ do
     echo "name "$name""
     echo "article "$article""
 
+    ext="${name##*.}"
+    echo "extension "$ext""
+
+    multipagepdf=0
+
+    if [[ $ext = "pdf" ]];
+    then
+      # this checks the pdf file for how many pages it contains
+      # we can pretty safely ignore multipage pdf files as they are likely to be whole articles
+      echo "opening "$fullpath""
+      npages=$(pdfinfo "$fullpath" | grep Pages | awk '{print $2}')
+      echo "number of pages: ""$npages"
+
+      if (( npages > 1 ));
+      then
+        let multipagepdf=1
+        echo "multipagepdf $multipagepdf"
+      fi
+    fi
+
     # pdfext=$article
     # *_${article}.pdf
     # echo ${article}.pdf
+
     pdfarticle="${article}.pdf"
     echo "pdfarticle "$pdfarticle""
-    # echo "----------"
-    if [[ $name != $pdfarticle ]];
+
+    if [[ $name != $pdfarticle && $multipagepdf != 1 ]];
     then
       # let "count=count+1"
 
@@ -83,7 +104,7 @@ do
       # echo $COUNTER > $TEMPFILE
 
       # echo "count "$count""
-
+      echo "writing data"
       echo "./""$month""${fullpath:1}" >> "$dest"
     fi
   done;
