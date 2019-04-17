@@ -1,0 +1,360 @@
+* data statistics
+# copied to separate doc on [2019-04-12 Fri]
+** data span
+1986 to 2019 (limited number of articles prior to 1991)
+~30 years
+~360 months
+10,000,000/360 = 27777 approximate articles per month (mean)
+** number of tar archive files
+2150 [2019-02-04 Mon]
+** total number of articles
+- arXiv.org: 1,495,708 [2019-02-04 Mon]
+- metadata->sqlite: 1,506,177 [2019-04-12 Fri] (metadata downloaded on [2019-03-06 Wed])
+** total number of extracted files (articles)
+1483662 
+number of pdfs and gz files total
+# command
+find . -type f | wc -l [2019-02-05 Tue]
+** number of pdf only articles
+114132
+# command
+find . -name "*.pdf" | wc -l [2019-02-05 Tue]
+(7.69% of total articles)
+** number of images extracted from pdfs
+- png 27,198,781
+# command
+find . -maxdepth 3 -name "*.pdf" -print -exec sh -c 'pdfimages -png "${1}" "${1}_image" ' _ {} \;
+** number of text files extracted from pdfs
+114131
+** number of articles that include source (generally in TeX or LaTeX format)
+1369530 (includes source-only, i.e. no images)
+** number of source-only articles (single source file only)
+324101 .gz files
+
+# command
+find . -type f -name "*.gz" | wc -l
+# would now need a more complex command to check for this
+** list of all different file extensions
+(now in git as format_totals.txt from [2019-02-09 Sat] pre-gz unzip)
+# command
+find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
+
+# or all in one go, getting totals
+find . -type f | grep -E ".*\.[a-zA-Z0-9]*$" | sed -e 's/.*\(\.[a-zA-Z0-9]*\)$/\1/' | sort | uniq -c | sort -n > ../format_totals.txt
+find . -type f | grep -E ".*\.[a-zA-Z0-9]*$" | sed -e 's/.*\(\.[a-zA-Z0-9]*\)$/\1/' | sort | uniq -c | sort -n > ../format_totals_final.txt
+** number of images total
+- 10061873
+# written to a paths text file
+# command
+find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "*.ps" -o -iname "*.jpg" \
+-o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" \) \
+-not -name "*pdf_image-*"
+# full command in bash script image_paths_to_txt.sh
+
+- 10061232 (10mil+)
+this is the total number of rows in the sqlite database, written via the find command [2019-04-12 Fri]
+** average number of images per article
+10061232 / 
+** average size of images
+614.5988512991947 x 478.21691675858534
+or
+615 x 478 pixels
+mean across the entire dataset [2019-04-12 Fri]
+** distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)
+** total number of characters of text files
+** different formats of text files
+** total data size
+** total number of articles (number of folders below the year/month folders)
+1476538 [2019-03-05 Tue] (-mindepth 2 -maxdepth 2)
+
+find . -type d -maxdepth 2 -mindepth 1
+** primary image formats
+|----------+--------|
+|      606 | .GIF   |
+|      919 | .JPEG  |
+|     1386 | .PDF   |
+|     3425 | .epsf  |
+|     5236 | .PS    |
+|     7788 | .JPG   |
+|    11256 | .PNG   |
+|    12404 | .svg   |
+|    15182 | .epsi  |
+|    18496 | .gif   |
+|    24190 | .pstex |
+|    25141 | .EPS   |
+|    26164 | .jpeg  |
+|   450816 | .jpg   |
+|   905970 | .ps    |
+|  1090973 | .png   |
+|  3299213 | .pdf   |
+|  4202415 | .eps   |
+|----------+--------|
+| 10101580 | total  |
+|----------+--------|
+** highest number of images for a single article
+67
+/1804/1804.11192/
+[2019-04-12 Fri]
+** images by category (not totally accurate) - top 100 [2019-04-12 Fri]
+# note this is by each combination of categories rather than the primary category
+('cs.CV', 401985)
+('hep-ph', 299442)
+('astro-ph.GA', 286399)
+('astro-ph.CO', 264151)
+('astro-ph.SR', 258633)
+('astro-ph', 170464)
+('astro-ph.HE', 160563)
+('quant-ph', 153522)
+('math.NA', 132838)
+('hep-ex', 119860)
+('cond-mat.mes-hall', 117547)
+('cs.IT math.IT', 109733)
+('astro-ph.EP', 107692)
+('cond-mat.str-el', 101510)
+('hep-ph hep-ex', 98219)
+('hep-th', 92500)
+('cond-mat.mtrl-sci', 91265)
+('physics.flu-dyn', 70619)
+('gr-qc', 70218)
+('nucl-th', 66227)
+('cond-mat.stat-mech', 60862)
+('cs.LG stat.ML', 59611)
+('math.GT', 59363)
+('astro-ph.IM', 58970)
+('astro-ph.GA astro-ph.CO', 58936)
+('cond-mat.soft', 58553)
+('cs.NI', 57744)
+('stat.ME', 51821)
+('math.OC', 48722)
+('cond-mat.supr-con', 44425)
+('math.CO', 43947)
+('physics.optics', 41141)
+('astro-ph.SR astro-ph.GA', 40489)
+('stat.ML cs.LG', 40372)
+('nucl-ex', 39500)
+('hep-lat', 39017)
+('astro-ph.CO astro-ph.GA', 38669)
+('cs.RO', 36855)
+('cs.LG', 35298)
+('cond-mat.quant-gas', 33831)
+('cs.SE', 33765)
+('physics.ins-det hep-ex', 33738)
+('math.DS', 32833)
+('cs.DC', 31869)
+('cs.CL', 30181)
+('astro-ph.GA astro-ph.SR', 29992)
+('stat.AP', 29446)
+('cs.CV cs.LG', 27890)
+('physics.plasm-ph', 27792)
+('math.AP', 27385)
+('cs.CR', 27090)
+('hep-ph nucl-th', 27077)
+('physics.ins-det', 25742)
+('cs.SY', 24374)
+('hep-th gr-qc', 24322)
+('math.ST stat.TH', 23896)
+('cs.AI', 23169)
+('stat.ML', 23066)
+('math.PR', 22125)
+('physics.atom-ph', 20897)
+('cs.DS', 20461)
+('gr-qc hep-th', 20024)
+('cs.SI physics.soc-ph', 19973)
+('math-ph math.MP', 19879)
+('hep-ex hep-ph', 19710)
+('cs.DB', 19687)
+('cs.CG', 19582)
+('cond-mat.supr-con cond-mat.str-el', 19437)
+('astro-ph.EP astro-ph.SR', 18886)
+('hep-ph hep-th', 18574)
+('cond-mat.mes-hall cond-mat.mtrl-sci', 18444)
+('astro-ph.SR astro-ph.EP', 18046)
+('hep-lat hep-ph', 17207)
+('astro-ph.HE astro-ph.GA', 17109)
+('physics.acc-ph', 16885)
+('nlin.CD', 16829)
+('astro-ph.HE astro-ph.CO', 16266)
+('stat.ML cs.CV cs.LG cs.NE', 16117)
+('hep-ph astro-ph.CO', 15632)
+('nucl-th hep-ph', 14625)
+('physics.soc-ph', 14593)
+('astro-ph.GA astro-ph.HE', 14495)
+('astro-ph.HE astro-ph.SR', 14393)
+('astro-ph.CO gr-qc', 14288)
+('nlin.PS', 13724)
+('astro-ph.SR astro-ph.HE', 13619)
+('cs.SI', 13364)
+('hep-th hep-ph', 13361)
+('cond-mat.str-el cond-mat.mtrl-sci', 13258)
+('physics.chem-ph', 13072)
+('nucl-th nucl-ex', 13034)
+('physics.comp-ph', 12899)
+('q-bio.PE', 12814)
+('eess.SP', 12789)
+('physics.soc-ph cs.SI', 12288)
+('cond-mat.soft cond-mat.stat-mech', 12134)
+('cs.LG cs.AI stat.ML', 12102)
+('astro-ph.CO astro-ph.HE', 12084)
+('cs.GR', 12001)
+** images by month/year (not totally accurate) [2019-04-12 Fri]
+(169, '03-2007')
+(22485, '04-2007')
+(25668, '05-2007')
+(24426, '06-2007')
+(25360, '07-2007')
+(24225, '08-2007')
+(26571, '09-2007')
+(31672, '10-2007')
+(27463, '11-2007')
+(25980, '12-2007')
+(27561, '01-2008')
+(25120, '02-2008')
+(25970, '03-2008')
+(27261, '04-2008')
+(27428, '05-2008')
+(28252, '06-2008')
+(29978, '07-2008')
+(25154, '08-2008')
+(30985, '09-2008')
+(35081, '10-2008')
+(28507, '11-2008')
+(30994, '12-2008')
+(29999, '01-2009')
+(27152, '02-2009')
+(31566, '03-2009')
+(28030, '04-2009')
+(30822, '05-2009')
+(34584, '06-2009')
+(35045, '07-2009')
+(31141, '08-2009')
+(35056, '09-2009')
+(36168, '10-2009')
+(33965, '11-2009')
+(34971, '12-2009')
+(32916, '01-2010')
+(30680, '02-2010')
+(34933, '03-2010')
+(34588, '04-2010')
+(34520, '05-2010')
+(37563, '06-2010')
+(34320, '07-2010')
+(33145, '08-2010')
+(38881, '09-2010')
+(39270, '10-2010')
+(42457, '11-2010')
+(38161, '12-2010')
+(37872, '01-2011')
+(35109, '02-2011')
+(40708, '03-2011')
+(35983, '04-2011')
+(38638, '05-2011')
+(40226, '06-2011')
+(41267, '07-2011')
+(41337, '08-2011')
+(46899, '09-2011')
+(46266, '10-2011')
+(48216, '11-2011')
+(44847, '12-2011')
+(42370, '01-2012')
+(44005, '02-2012')
+(45168, '03-2012')
+(43510, '04-2012')
+(46642, '05-2012')
+(47912, '06-2012')
+(48265, '07-2012')
+(46157, '08-2012')
+(45269, '09-2012')
+(53842, '10-2012')
+(49689, '11-2012')
+(48001, '12-2012')
+(48995, '01-2013')
+(45883, '02-2013')
+(52934, '03-2013')
+(51476, '04-2013')
+(50673, '05-2013')
+(50448, '06-2013')
+(62295, '07-2013')
+(52996, '08-2013')
+(71950, '09-2013')
+(61687, '10-2013')
+(55479, '11-2013')
+(54234, '12-2013')
+(55454, '01-2014')
+(53244, '02-2014')
+(61297, '03-2014')
+(55829, '04-2014')
+(60058, '05-2014')
+(57758, '06-2014')
+(66888, '07-2014')
+(55138, '08-2014')
+(63416, '09-2014')
+(65598, '10-2014')
+(65634, '11-2014')
+(68876, '12-2014')
+(61961, '01-2015')
+(61664, '02-2015')
+(72438, '03-2015')
+(68725, '04-2015')
+(70703, '05-2015')
+(73845, '06-2015')
+(70855, '07-2015')
+(64263, '08-2015')
+(76662, '09-2015')
+(75521, '10-2015')
+(84480, '11-2015')
+(76998, '12-2015')
+(72871, '01-2016')
+(74819, '02-2016')
+(87150, '03-2016')
+(78843, '04-2016')
+(86293, '05-2016')
+(95666, '06-2016')
+(77832, '07-2016')
+(75794, '08-2016')
+(85315, '09-2016')
+(88463, '10-2016')
+(93998, '11-2016')
+(86732, '12-2016')
+(75725, '01-2017')
+(76541, '02-2017')
+(99462, '03-2017')
+(88333, '04-2017')
+(99221, '05-2017')
+(90892, '06-2017')
+(90875, '07-2017')
+(91564, '08-2017')
+(99620, '09-2017')
+(104697, '10-2017')
+(107585, '11-2017')
+(105499, '12-2017')
+(94672, '01-2018')
+(102907, '02-2018')
+(110683, '03-2018')
+(112673, '04-2018')
+(117354, '05-2018')
+(109180, '06-2018')
+(114857, '07-2018')
+(110967, '08-2018')
+(111968, '09-2018')
+(128121, '10-2018')
+(130495, '11-2018')
+(120037, '12-2018')
+** images by image format [2019-04-12 Fri]
+# as determined by the identify (ImageMagick) command
+('PS', 5149324)
+('PDF', 3261411)
+('PNG', 1079044)
+('JPEG', 484113)
+('GIF', 18742)
+('PDF612', 13083)
+('SVG', 12407)
+('PDF595', 9874)
+('', 8117)
+('PS360', 1967)
+('PS612', 1688)
+('EPS', 1643)
+('PS596', 1099)
+('PDF504', 709)
+('PDF360', 644)
+('PDF842', 602)
+('PS504', 563)

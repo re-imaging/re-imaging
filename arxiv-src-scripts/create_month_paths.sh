@@ -105,6 +105,7 @@ do
 
       # echo "count "$count""
       echo "writing data"
+      # the ":1" removes the leading "." which is manually added to the beginning of the path
       echo "./""$month""${fullpath:1}" >> "$dest"
     fi
   done;
