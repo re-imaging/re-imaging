@@ -24,6 +24,6 @@ do
   # montage $(head -1 "$f") "$outname"
 
   # montage command with smaller, more square images
-  montage ${list} -colorspace sRGB -units PixelsPerInch -density 300 -background white -alpha off -geometry 240x240+2+2 -tile 12x "$outname"_wide.jpg
+  montage ${list} -colorspace sRGB -units PixelsPerInch -density 300 -background white -alpha off -geometry 240x240+2+2 -tile 12x "$outname"_wide.jpg || true
   # -label '%f'
 done
