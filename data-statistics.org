@@ -1184,6 +1184,16 @@ find . -type d -maxdepth 2 -mindepth 1
 (11837, '12-2018')
 (11440, '01-2019')
 (11010, '02-2019')
+** number of articles per licence [2019-04-18 Thu]
+('', 453077)
+('http://arxiv.org/licenses/nonexclusive-distrib/1.0/', 1017997)
+('http://creativecommons.org/licenses/by-nc-sa/3.0/', 5909)
+('http://creativecommons.org/licenses/by-nc-sa/4.0/', 4617)
+('http://creativecommons.org/licenses/by-sa/4.0/', 1608)
+('http://creativecommons.org/licenses/by/3.0/', 7944)
+('http://creativecommons.org/licenses/by/4.0/', 10657)
+('http://creativecommons.org/licenses/publicdomain/', 2485)
+('http://creativecommons.org/publicdomain/zero/1.0/', 1883)
 ** key
 list of categories
 http://arxitics.com/help/categories
