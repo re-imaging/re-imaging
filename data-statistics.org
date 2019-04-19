@@ -34,6 +34,9 @@ find . -maxdepth 3 -name "*.pdf" -print -exec sh -c 'pdfimages -png "${1}" "${1}
 # command
 find . -type f -name "*.gz" | wc -l
 # would now need a more complex command to check for this
+** number of folders with ancillary files
+3343
+find . -name "anc" | wc -l
 ** list of all different file extensions
 (now in git as format_totals.txt from [2019-02-09 Sat] pre-gz unzip)
 # command
@@ -63,7 +66,9 @@ mean across the entire dataset [2019-04-12 Fri]
 ** distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)
 ** total number of characters of text files
 ** different formats of text files
-** total data size
+** total data size 
+2.1T    ./arXiv [2019-04-19 Fri]
+# du -h --max-depth 1
 ** total number of articles (number of folders below the year/month folders)
 1476538 [2019-03-05 Tue] (-mindepth 2 -maxdepth 2)
 
