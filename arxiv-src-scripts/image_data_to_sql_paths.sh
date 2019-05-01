@@ -13,8 +13,13 @@ if [ "$1" != "" ]; then
   count=$1
 fi
 
+if [ "$2" != "" ]; then
+  echo "target file to read: "$2""
+  targetfile="$2"
+fi
 
-tail -n +${1} ~/data/paths/all_image_paths.txt | while read fullpath; do
+
+tail -n +${1} $targetfile | while read fullpath; do
 
   echo "--------------------"
   echo "$fullpath"
