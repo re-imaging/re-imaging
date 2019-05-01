@@ -11,12 +11,16 @@ bVerbose = False
 OAI = "{http://www.openarchives.org/OAI/2.0/}"
 ARXIV = "{http://arxiv.org/OAI/arXiv/}"
 
-# inputID = input("Enter an arXiv identifier: ")
+inputID = input("Enter an arXiv identifier: ")
 # inputID = "1804.04861"
-inputID = "9912209"
+# inputID = "9912209"
+# inputID = "0804.3168"
+# inputID = "1710.10269"
+
 print("searching for " + inputID)
 
-filenames = ["2018-04-30-00000011.xml"]
+# filenames = ["2018-04-30-00000011.xml"]
+filenames = ["2008-04-30-00000000.xml", "2008-04-30-00000001.xml", "2008-04-30-00000002.xml"]
 
 for filename in glob.glob('*.xml'):
 # for filename in filenames:
@@ -58,6 +62,7 @@ for filename in glob.glob('*.xml'):
                 print(identifier)
                 print(created)
                 print(categories)
+                print(filename)
                 print("-" * 20)
         except KeyboardInterrupt:
             # quit
