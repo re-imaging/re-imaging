@@ -1,19 +1,57 @@
-* data statistics
-** key
+* About
+
+This document contains various data statistics relating to the text and image data of the www.arxiv.org dataset. The entire source of the arxiv dataset was downloaded at the end of 2018 and extracted into individual files. The majority of these statistics have been collected through the process of querying the dataset along with the associated metadata provided via the OAI format (see https://arxiv.org/help/oa).
+
+* Table of Contents                                             :TOC_3:QUOTE:
+#+BEGIN_QUOTE
+- [[#about][About]]
+- [[#key][Key]]
+- [[#general][General]]
+  - [[#data-timespan][Data timespan]]
+- [[#text][Text]]
+  - [[#total-number-of-articles][Total number of articles]]
+  - [[#number-of-pdf-only-articles][Number of PDF-only articles]]
+  - [[#number-of-text-files-extracted-from-pdfs][Number of text files extracted from PDFs]]
+  - [[#number-of-articles-that-include-source-generally-in-tex-or-latex-format][Number of articles that include source (generally in TeX or LaTeX format)]]
+  - [[#number-of-source-only-articles-single-source-file-only][Number of source-only articles (single source file only)]]
+  - [[#total-number-of-characters-of-text-files][Total number of characters of text files]]
+  - [[#different-formats-of-text-files][Different formats of text files]]
+  - [[#articles-by-monthyear][Articles by month/year]]
+  - [[#number-of-articles-by-licence][Number of articles by licence]]
+- [[#data][Data]]
+  - [[#total-data-size][Total data size]]
+  - [[#number-of-tar-archive-files][Number of tar archive files]]
+  - [[#number-of-folders-with-ancillary-files-provided][Number of folders with ancillary files provided]]
+- [[#images][Images]]
+  - [[#number-of-images-extracted-from-pdfs][Number of images extracted from PDFs]]
+  - [[#list-of-all-different-image-file-extensions][List of all different image file extensions]]
+  - [[#number-of-images-total][Number of images total]]
+  - [[#average-number-of-images-per-article][Average number of images per article]]
+  - [[#average-size-of-images][Average size of images]]
+  - [[#distribution-of-size-of-images-perhaps-divisions-of-common-resolutions-480p-240p-etc][Distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)]]
+  - [[#primary-image-formats][Primary image formats]]
+  - [[#highest-number-of-images-for-a-single-article][Highest number of images for a single article]]
+  - [[#images-by-primary-category][Images by primary category]]
+  - [[#images-by-monthyear][Images by month/year]]
+  - [[#images-by-image-format][Images by image format]]
+#+END_QUOTE
+
+* Key
 
 list of categories: http://arxitics.com/help/categories
 
-** general
-*** data timespan
+* General
+** Data timespan
 
 04-1986 to 12-2018 (limited number of articles prior to 1991)
 
-~32 years  
+~32 years
+
 392 months
 
-** --------------------
-** text
-*** total number of articles
+* Text
+** Total number of articles
+
 - arXiv.org: 1,495,708 [2019-02-04 Mon]
 - metadata->sqlite: 1,506,177 [2019-04-12 Fri] (metadata downloaded on [2019-03-06 Wed])
 - number of folders below the year/month folders: 1,476,538 [2019-03-05 Tue]
@@ -23,7 +61,7 @@ list of categories: http://arxitics.com/help/categories
 find . -type d  -mindepth 2 -maxdepth 2 | wc -l
 #+END_SRC
 
-*** number of pdf only articles
+** Number of PDF-only articles
 # [2019-02-05 Tue]
 
 114,132
@@ -35,17 +73,17 @@ find . -type d  -mindepth 2 -maxdepth 2 | wc -l
 find . -name "*.pdf" | wc -l 
 #+END_SRC
 
-*** number of text files extracted from pdfs
+** Number of text files extracted from PDFs
 
 114,131
 
-*** number of articles that include source (generally in TeX or LaTeX format)
+** Number of articles that include source (generally in TeX or LaTeX format)
 
 1,369,530
 
 (includes source-only, i.e. no images)
 
-*** number of source-only articles (single source file only)
+** Number of source-only articles (single source file only)
 
 324,101 
 
@@ -55,11 +93,11 @@ find . -type f -name "*.gz" | wc -l
 # would now need a more complex command to check for this, gz files have been extracted
 #+END_SRC
 
-*** total number of characters of text files
+** Total number of characters of text files
 
-*** different formats of text files
+** Different formats of text files
 
-*** articles by month/year
+** Articles by month/year
 # [2019-04-17 Wed]
 
 |   month | total |
@@ -422,7 +460,7 @@ find . -type f -name "*.gz" | wc -l
 |---------+-------|
 #+tblfm: 
 
-*** number of articles per licence 
+** Number of articles by licence 
 # [2019-04-18 Thu]
 
 |-----------------------------------------------------+---------|
@@ -439,9 +477,8 @@ find . -type f -name "*.gz" | wc -l
 | http://creativecommons.org/licenses/by-sa/4.0/      |    1608 |
 |-----------------------------------------------------+---------|
 
-** --------------------
-** data
-*** total data size 
+* Data
+** Total data size
 # [2019-04-19 Fri]
 
 2.1 TB
@@ -451,12 +488,12 @@ find . -type f -name "*.gz" | wc -l
 du -h --max-depth 1
 #+END_SRC
 
-*** number of tar archive files
+** Number of tar archive files
 # [2019-02-04 Mo]
 
 2150 
 
-*** number of folders with ancillary files provided as part of upload
+** Number of folders with ancillary files provided
 
 3343
 
@@ -465,13 +502,12 @@ du -h --max-depth 1
 find . -name "anc" | wc -l
 #+END_SRC
 
-** --------------------
-** images
-*** number of images extracted from pdfs
+* Images
+** Number of images extracted from PDFs
 
 27,198,781
 
-*** list of all different image file extensions
+** List of all different image file extensions
 
 see https://github.com/re-imaging/re-imaging/blob/master/arxiv-src-scripts/format_totals_final.txt 
 # from [2019-02-09 Sat] pre-gz unzip
@@ -484,7 +520,7 @@ find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
 find . -type f | grep -E ".*\.[a-zA-Z0-9]*$" | sed -e 's/.*\(\.[a-zA-Z0-9]*\)$/\1/' | sort | uniq -c | sort -n > ../format_totals_final.txt
 #+END_SRC
 
-*** number of images total
+** Number of images total
 
 10,061,873  
 (using find command to write each filepath into a text file)
@@ -502,7 +538,7 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
 (this is the total number of rows in the sqlite database, written via the find command)
 # [2019-04-12 Fri]
 
-*** average number of images per article
+** Average number of images per article
 
 6.814069127
 
@@ -510,7 +546,7 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
 10061232 / 1476538 = 6.814069127
 #+END_SRC
 
-*** average size of images
+** Average size of images
 # [2019-04-12 Fri]
 
 615 x 478 pixels
@@ -519,9 +555,9 @@ mean across the entire dataset: 614.5988512991947 x 478.21691675858534
 
 calculated using sqlite database
 
-*** distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)
+** Distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)
 
-*** primary image formats
+** Primary image formats
 
 |----------+--------|
 |    total | format |
@@ -548,14 +584,14 @@ calculated using sqlite database
 | 10101580 | total  |
 |----------+--------|
 
-*** highest number of images for a single article
+** Highest number of images for a single article
 # [2019-04-12 Fri]
 
 67
 
 article: /1804/1804.11192/
 
-*** images by primary category 
+** Images by primary category 
 # [2019-05-02 Thu]
 
 171 different primary categories
@@ -736,7 +772,7 @@ article: /1804/1804.11192/
 |--------------------+--------+------|
 #+tblfm: $3=@#-1
 
-*** images by month/year
+** Images by month/year
 # [2019-04-17 Wed]
 
 |---------+--------|
@@ -1083,7 +1119,7 @@ article: /1804/1804.11192/
 |---------+--------|
 #+tblfm: 
 
-*** images by image format 
+** Images by image format 
 # [2019-04-12 Fri]
 
 as determined by the ImageMagick identify command (blank means no output from this command)
