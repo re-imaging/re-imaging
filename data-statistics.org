@@ -17,6 +17,7 @@ This document contains various data statistics relating to the text and image da
   - [[#total-number-of-characters-of-text-files][Total number of characters of text files]]
   - [[#different-formats-of-text-files][Different formats of text files]]
   - [[#articles-by-monthyear][Articles by month/year]]
+  - [[#articles-by-year][Articles by year]]
   - [[#number-of-articles-by-licence][Number of articles by licence]]
 - [[#data][Data]]
   - [[#total-data-size][Total data size]]
@@ -33,6 +34,7 @@ This document contains various data statistics relating to the text and image da
   - [[#highest-number-of-images-for-a-single-article][Highest number of images for a single article]]
   - [[#images-by-primary-category][Images by primary category]]
   - [[#images-by-monthyear][Images by month/year]]
+  - [[#images-by-year][Images by year]]
   - [[#images-by-image-format][Images by image format]]
 #+END_QUOTE
 
@@ -458,7 +460,47 @@ find . -type f -name "*.gz" | wc -l
 | 01-2019 | 11440 |
 | 02-2019 | 11010 |
 |---------+-------|
-#+tblfm: 
+#+tblfm:
+** Articles by year
+# [2019-05-10 Fri]
+
+|------+----------|
+| year | articles |
+|------+----------|
+| 1986 |        1 |
+| 1988 |        1 |
+| 1989 |        8 |
+| 1990 |       25 |
+| 1991 |      370 |
+| 1992 |     3181 |
+| 1993 |     6728 |
+| 1994 |    10085 |
+| 1995 |    12994 |
+| 1996 |    15876 |
+| 1997 |    19621 |
+| 1998 |    24174 |
+| 1999 |    27694 |
+| 2000 |    30672 |
+| 2001 |    33127 |
+| 2002 |    36102 |
+| 2003 |    39389 |
+| 2004 |    43719 |
+| 2005 |    46863 |
+| 2006 |    50303 |
+| 2007 |    55768 |
+| 2008 |    58796 |
+| 2009 |    64077 |
+| 2010 |    70283 |
+| 2011 |    76604 |
+| 2012 |    84385 |
+| 2013 |    92864 |
+| 2014 |    97593 |
+| 2015 |   105124 |
+| 2016 |   113422 |
+| 2017 |   123750 |
+| 2018 |   140242 |
+| 2019 |    22721 |
+|------+----------|
 
 ** Number of articles by licence 
 # [2019-04-18 Thu]
@@ -1117,7 +1159,44 @@ article: /1804/1804.11192/
 | 11-2018 | 130495 |
 | 12-2018 | 120037 |
 |---------+--------|
-#+tblfm: 
+#+tblfm:
+** Images by year
+# [2019-05-10 Fri]
+
+|------+---------|
+| year |  images |
+|------+---------|
+| 1988 |      11 |
+| 1990 |     130 |
+| 1991 |     146 |
+| 1992 |     972 |
+| 1993 |    6885 |
+| 1994 |   20136 |
+| 1995 |   26763 |
+| 1996 |   51088 |
+| 1997 |   75713 |
+| 1998 |  101662 |
+| 1999 |  122189 |
+| 2000 |  137860 |
+| 2001 |  150775 |
+| 2002 |  171813 |
+| 2003 |  190805 |
+| 2004 |  220669 |
+| 2005 |  243900 |
+| 2006 |  266790 |
+| 2007 |  303204 |
+| 2008 |  342292 |
+| 2009 |  388500 |
+| 2010 |  431434 |
+| 2011 |  497368 |
+| 2012 |  560836 |
+| 2013 |  659050 |
+| 2014 |  729214 |
+| 2015 |  858174 |
+| 2016 | 1003842 |
+| 2017 | 1130770 |
+| 2018 | 1368231 |
+|------+---------|
 
 ** Images by image format 
 # [2019-04-12 Fri]
