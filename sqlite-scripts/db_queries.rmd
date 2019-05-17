@@ -1,0 +1,16 @@
+```{r open}
+library(dbplyr)
+library(dplyr)
+library(ggplot2)
+
+con <- dbConnect(RSQLite::SQLite(), path = "/home/mackenza/arc_numbers/re-imaging/data/arxiv_db_images.sqlite3")
+dbListTables(con)
+
+db <- src_sqlite('/home/mackenza/arc_numbers/re-imaging/data/arxiv_db_images.sqlite3', create=FALSE)
+md = tbl(db, "metadata")
+colnames(md)
+q = 'select id, cat from metadata'
+db %>% tbl(sql(q))
+```
+
+
