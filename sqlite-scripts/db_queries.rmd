@@ -1,16 +1,45 @@
+This file main contains GPU-related analysis of arxiv from inception to Jan 2019
+
+Categories for arxiv can be found at https://arxiv.org/corr/subjectclasses
+
+
 ```{r open}
 library(dbplyr)
 library(dplyr)
 library(ggplot2)
-
-con <- dbConnect(RSQLite::SQLite(), path = "/home/mackenza/arc_numbers/re-imaging/data/arxiv_db_images.sqlite3")
-dbListTables(con)
+library(stringr)
+library(lubridate)
 
 db <- src_sqlite('/home/mackenza/arc_numbers/re-imaging/data/arxiv_db_images.sqlite3', create=FALSE)
 md = tbl(db, "metadata")
 colnames(md)
-q = 'select id, cat from metadata'
-db %>% tbl(sql(q))
+```
+
+```{r weightedav}
+q1 = 'select cat, created from metadata'
+cats = db %>% tbl(sql(q1)) %>% collect()
+catsum = cats %>% mutate(primcat = str_extract(cat, '[a-zA-Z-]+(\\.[a-zA-Z-]+)?'), yr = year(created)) %>%  group_by(yr, primcat) %>% 
+    filter(yr> 1991) %>%
+    summarize(tcat = n()) %>% arrange(yr, desc(tcat))
+
+#plot the general paper counts to get a sense of relative size
+p1 = catsum %>% filter(tcat > 1000, !is.na(primcat))  %>%  ggplot( aes(x=primcat, y=tcat, fill=primcat)) + geom_col() + coord_flip() +  theme(legend.position = "none") + ggtitle('Relative size of arxiv categories')
+
+ggsave(p1, file='../figure/arxiv-cat-relativesize.svg')
+
+#trying to get a picture of the dynamics of disciplines
+#calculate totals for each primcat
+#divide the yearly-total for each primcat by overall total for primcat
+
+cc = catsum %>% group_by(primcat) %>% mutate(ocat = sum(tcat)) %>% mutate(pcat = tcat/ocat*100) %>%
+    filter(yr < 2019)
+#test plot
+ggplot(cc[cc$primcat=='math.DG',], aes(x=yr, y=pcat, color=primcat)) + geom_line()
+
+#all primcat cats
+p3 = ggplot(cc, aes(x=yr, y=pcat, color=primcat)) + geom_col() + facet_wrap(~primcat) +  theme(legend.position = "none") + ggtitle('All primary categories 1991-2018',  '% of publications in a given category appearing each year') + xlab('Year') + ylab('% of overall volume')
+ggsave(p3, file='../figure/arxiv-primcat-percent-volume-per-year.svg')
+
 ```
 
 
