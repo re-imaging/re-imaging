@@ -596,7 +596,7 @@ Free vector and raster map data at 1:10m, 1:50m, and 1:110m scales
 ## MovieLens
 
 <https://grouplens.org/datasets/movielens/>
-GroupLens Research has collected and made available rating data sets from the MovieLens web site (<http://movielens.org>). The data sets were collected over various periods of time, depending on the size of the set. Before using these data sets, please review their README files for the usage licenses and other details.
+GroupLens Research has now collected and made available rating data sets from the MovieLens web site (<http://movielens.org>). The data sets were collected over various periods of time, depending on the size of the set. Before using these data sets, please review their README files for the usage licenses and other details.
 
 Movie ratings and review datasets of various different sizes and scopes.
 
