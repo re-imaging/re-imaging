@@ -135,7 +135,7 @@ for p in paths[:]:
                 tile = tile.resize((int(tile.width/rs), int(tile.height/rs)), Image.ANTIALIAS)
                 full_image.paste(tile, (int((width-max_dim)*x), int((height-max_dim)*y)), mask=tile.convert('RGBA'))
             else:
-                print("tile has width or height of zero!")
+                print("tile width or height too small")
         plt.figure(figsize = (16,12))
         imshow(full_image)
 
