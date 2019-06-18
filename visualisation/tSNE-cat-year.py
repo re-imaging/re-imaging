@@ -74,7 +74,7 @@ for p in paths:
 
 # loop here
 
-for p in paths:
+for p in paths[:]:
     print(p)
     
     category = p.split('_')[1]
@@ -105,6 +105,19 @@ for p in paths:
         X.shape
         tsne = TSNE(n_components=2, learning_rate=150, perplexity=perp, angle=0.2, verbose=2, n_iter=num_iterations).fit_transform(X)
 
+        # write pickle
+        print("writing tsne pickle")
+
+        ts = time.time()
+        st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d_%H-%M-%S')
+
+        filename = "tSNE_" + category + "_" + year + "_n" + str(num_iterations) + "_p" + str(perp) + "_" + st
+        print(filename + ".pickle")
+        
+        with open(filename + ".pickle", "wb") as write_file:
+            pickle.dump([images, tsne], write_file)
+            write_file.close()
+            
         # normalise points
         tx, ty = tsne[:,0], tsne[:,1]
         tx = (tx-np.min(tx)) / (np.max(tx) - np.min(tx))
@@ -117,23 +130,17 @@ for p in paths:
         full_image = Image.new('RGBA', (width, height))
         for img, x, y in zip(images, tx, ty):
             tile = Image.open(img)
-            rs = max(1, tile.width/max_dim, tile.height/max_dim)
-            tile = tile.resize((int(tile.width/rs), int(tile.height/rs)), Image.ANTIALIAS)
-            full_image.paste(tile, (int((width-max_dim)*x), int((height-max_dim)*y)), mask=tile.convert('RGBA'))
-
+            if tile.width > 100 and tile.height > 100:
+                rs = max(1, tile.width/max_dim, tile.height/max_dim)
+                tile = tile.resize((int(tile.width/rs), int(tile.height/rs)), Image.ANTIALIAS)
+                full_image.paste(tile, (int((width-max_dim)*x), int((height-max_dim)*y)), mask=tile.convert('RGBA'))
+            else:
+                print("tile has width or height of zero!")
         plt.figure(figsize = (16,12))
         imshow(full_image)
 
-        ts = time.time()
-        st = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d_%H-%M-%S')
-        filename = "tSNE_" + category + "_" + year + "_n" + str(num_iterations) + "_p" + str(perp) + "_" + st
         print(filename)
         full_image.save(filename + ".png")
-
-
-# In[ ]:
-
-
-# !pip install -U git+https://github.com/bmcfee/RasterFairy/ --user
-# import rasterfairy
+    else:
+        print("selected dataset has less than 300 items")
 
