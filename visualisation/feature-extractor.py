@@ -108,7 +108,7 @@ print(paths)
 
 # big loop here
 
-for cat in paths:
+for cat in paths[4:]:
     for d in cat:
         current_path = d
         print("current path: " + current_path)
