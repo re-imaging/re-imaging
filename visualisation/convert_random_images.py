@@ -89,7 +89,7 @@ for row in rows[:20]:
 # In[ ]:
 
 
-convert_path = "/home/rte/data/images/random/1k/"
+convert_path = "/home/rte/data/images/random/100k/"
 
 start = time.time()
 
@@ -118,7 +118,7 @@ f.close()
 # -colorspace sRGB -background white \
 # -alpha background -trim +repage -resize 512x512^ [out].jpg
 prearg = shlex.split("-density 300 -colorspace CMYK")
-arguments = shlex.split("-colorspace sRGB -background white -alpha background     -trim +repage -flatten -resize 512x512^>")
+arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
 # print(arguments)
 
 # call convert for each image path
