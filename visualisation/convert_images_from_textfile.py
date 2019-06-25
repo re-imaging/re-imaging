@@ -5,6 +5,7 @@
 
 
 import itertools
+import subprocess
 from subprocess import Popen, PIPE, TimeoutExpired
 import os
 import shlex
@@ -33,6 +34,7 @@ textfile = "/home/rte/data/images/random/100k/filepaths.txt"
 
 start_line = 43806 -1
 # start_line = sys.argv[2] - 1
+
 counter = 0
 
 
@@ -79,10 +81,11 @@ arguments = shlex.split("-colorspace sRGB -background white -alpha background   
 
 logpath = convert_path + "error_log.txt"
 
-start = time.time()
-
+overall_start = time.time()
 
 for image_id, filepath in zip(image_ids[start_line:], filepaths[start_line:]):
+    
+    start = time.time()
     
     if counter % 10 is 0:
         print("*" * 20)
@@ -90,28 +93,35 @@ for image_id, filepath in zip(image_ids[start_line:], filepaths[start_line:]):
         print("converting image:",start_line+counter)
         print("*" * 20)
         
+    print("filename:",filepath)
     outputname = [convert_path + str(image_id) + ".jpg"]
     print("outputname:",outputname)
 
     # call the montage command and parse list of files and arguments
     convert_cmd = ["convert"] + prearg + [filepath + "[0]"] + arguments + outputname
-    print(convert_cmd)
+#     print(convert_cmd)
 
     try:
         subprocess.run(convert_cmd, timeout=5)
     except subprocess.TimeoutExpired:
+        print("!" * 20)
+        print("timeout --- logging problem file")
         f = open(logpath, "a+")
         f.write(filepath + "," + image_id + "\n")
         f.close()
+        print("-" * 20)
+
         continue
 
     counter += 1
     
     print("time elapsed: {:.2f}".format(time.time() - start))
+    print("-" * 20)
     
 print("finished converting!")
+print("total number of items:",counter)
 end = time.time()
-print("total time taken:", end - start)
+print("total time taken:", end - overall_start)
 
 
 # In[ ]:
