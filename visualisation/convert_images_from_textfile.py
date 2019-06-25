@@ -102,7 +102,7 @@ for image_id, filepath in zip(image_ids[start_line:], filepaths[start_line:]):
 #     print(convert_cmd)
 
     try:
-        subprocess.run(convert_cmd, timeout=5)
+        subprocess.run(convert_cmd, timeout=30)
     except subprocess.TimeoutExpired:
         print("!" * 20)
         print("timeout --- logging problem file")
