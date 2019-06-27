@@ -13,6 +13,8 @@ potential to communicate the value and role of statistics today.
 #+name:t-SNE1
 #+caption: t-SNE map of 1000 images from arXiv, organised by features extracted from VGG classifier
 [[file:figure/t-SNE/example-tSNE-grid-arxiv1001_1000.jpg]]
+
+[[t-SNE1]]
 t-SNE map of 1000 images from arXiv, organised by features extracted from VGG classifier
 
 #+name:t-SNE1
