@@ -13,8 +13,6 @@ potential to communicate the value and role of statistics today.
 #+name:t-SNE1
 #+caption: t-SNE map of 1000 images from arXiv, organised by features extracted from VGG classifier
 [[file:figure/t-SNE/example-tSNE-grid-arxiv1001_1000.jpg]]
-
-[[t-SNE1]]
 t-SNE map of 1000 images from arXiv, organised by features extracted from VGG classifier
 
 #+name:t-SNE1
@@ -27,7 +25,7 @@ t-SNE map of images with the primary category of cs.CV (computer science, comput
 ** Code
 This repository contains code, statistics, and images produced throughout the project. These materials are mostly concerned with looking at the dataset of all the images, text, and metadata contained within the [arXiv](arXiv.org) source files.
 
-For detailed instructions on running the code, please look in the [methods](methods/) folder.
+For detailed instructions on running the code, please look in the [[methods/][methods]] folder.
 
 Code is written using bash, python, SQLite, jupyter, and anaconda. Tested on Ubuntu 18.04 with NVidia graphics card.
 ** Project Methodology
