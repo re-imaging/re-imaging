@@ -1,0 +1,26 @@
+
+* Re-imaging the empirical: statistical visualisation in art and science
+** Project Description
+The increasing overlap of popular, scientific and aesthetic dimensions of visual culture with data analytical techniques is leading to a new kind of statistical visual culture. Yet there is scant literacy or understanding of statistical visualisation's role in empirical domains today. This research project aims to investigate how statistical images re-shape diverse knowledge domains and practices from facial recognition to medical diagnosis to video-tagging. Equally it will discern how arts-led visualisation transforms statistical image conventions and techniques. It aims to improve visual literacies and dialogue across communities of practice in art and science, and has the
+potential to communicate the value and role of statistics today.
+** Project Outline
+- Downloading and extracting the arXiv source dataset - see [arXiv_extract.sh](arXiv_extract.sh)
+- Creating an SQLite database to index each image and link to metadata - [sql-scripts](sql-scripts)
+- Querying dataset for various statistics regarding image formats, dimensions, category distributions etc.
+- Running machine learning techniques such as image classification and dimensionality reduction across data
+- Producing t-SNE maps of the distribution of different image features within subsets of the data
+** Code
+This repository contains code, statistics, and images produced throughout the project. These materials are mostly concerned with looking at the dataset of all the images, text, and metadata contained within the [arXiv](arXiv.org) source files.
+
+For detailed instructions on running the code, please look in the [methods](methods/) folder.
+
+Code is written using bash, python, SQLite, jupyter, and anaconda. Tested on Ubuntu 18.04 with NVidia graphics card.
+** Project Methodology
+
+** People
+- Professor Anna Munster, UNSW Art & Design
+- Professor Adrian Mackenzie, Australian National University
+- Kynan Tan, UNSW Art & Design
+** Licence
+** Acknowledgements
+Project supported by an Australian Research Council Discovery Grant
