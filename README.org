@@ -4,7 +4,7 @@
 The increasing overlap of popular, scientific and aesthetic dimensions of visual culture with data analytical techniques is leading to a new kind of statistical visual culture. Yet there is scant literacy or understanding of statistical visualisation's role in empirical domains today. This research project aims to investigate how statistical images re-shape diverse knowledge domains and practices from facial recognition to medical diagnosis to video-tagging. Equally it will discern how arts-led visualisation transforms statistical image conventions and techniques. It aims to improve visual literacies and dialogue across communities of practice in art and science, and has the
 potential to communicate the value and role of statistics today.
 ** Project Outline
-- Downloading and extracting the arXiv source dataset - see [[arxiv_extract.sh][arxiv_extract.sh]]
+- Downloading and extracting the arXiv source dataset - see [[arxiv-src-scripts/arxiv_extract.sh][arxiv_extract.sh]]
 - Creating an SQLite database to index each image and link to metadata - [[sqlite-scripts][sqlite-scripts]]
 - Querying dataset for various statistics regarding image formats, dimensions, category distributions etc. - see [[statistics][statistics]], e.g. [[statistics/data-statistics.org][general data statistics]]
 - Running machine learning techniques such as image classification and dimensionality reduction across data
