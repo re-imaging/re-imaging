@@ -31,6 +31,7 @@ This document contains various data statistics relating to the text and image da
   - [[#average-size-of-images][Average size of images]]
   - [[#distribution-of-size-of-images-perhaps-divisions-of-common-resolutions-480p-240p-etc][Distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)]]
   - [[#primary-image-formats][Primary image formats]]
+  - [[#primary-image-formats-combined-case-insensitive][Primary image formats (combined, case-insensitive)]]
   - [[#highest-number-of-images-for-a-single-article][Highest number of images for a single article]]
   - [[#images-by-primary-category][Images by primary category]]
   - [[#images-by-monthyear][Images by month/year]]
@@ -622,6 +623,23 @@ calculated using sqlite database
 |  4202415 | .eps   |
 |     3425 | .epsf  |
 |    15182 | .epsi  |
+|----------+--------|
+| 10101580 | total  |
+|----------+--------|
+
+** Primary image formats (combined, case-insensitive)
+
+|----------+--------|
+|     3425 | .epsf  |
+|    12404 | .svg   |
+|    15182 | .epsi  |
+|    19102 | .gif   |
+|    24190 | .pstex |
+|   485687 | .jpg   |
+|   911206 | .ps    |
+|  1102229 | .png   |
+|  3300599 | .pdf   |
+|  4227556 | .eps   |
 |----------+--------|
 | 10101580 | total  |
 |----------+--------|

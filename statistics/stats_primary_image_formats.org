@@ -1,5 +1,5 @@
 * primary image formats
-(combined case indifferent totals)
+(combined, case indifferent totals)
 |----------+--------|
 |     3425 | .epsf  |
 |    12404 | .svg   |
