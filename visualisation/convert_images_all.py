@@ -11,8 +11,12 @@ import subprocess
 import os
 import shlex
 import time
+import sys
 
 import shutil
+
+
+print(sys.argv, len(sys.argv))
 
 
 # In[ ]:
@@ -67,12 +71,15 @@ rows = c.fetchall()
 print("total number of rows:",len(rows))
 
 
+# start_line = 43806 -1
+start_line = int(sys.argv[1]) - 1
+
 # In[ ]:
 
 
 # view a subset
 print("first rows")
-for row in rows[:5]:
+for row in rows[start_line:start_line + 5]:
     print(row)
 
 
@@ -94,6 +101,11 @@ for row in rows:
 print("total filepaths:", len(filepaths))
 print("total ids:", len(image_ids))
 
+print("*" * 20)
+print("checking the first filepath and id:")
+print(filepaths[start_line], image_ids[start_line])
+print("*" * 20)
+
 
 # In[ ]:
 
@@ -109,9 +121,9 @@ for path, row in zip(filepaths, rows):
     f.write(path + "," + str(row[0]) + "\n")
 f.close()
 '''
+1111.7297
 
-
-# ### convert all images 
+# ### convert all images
 
 # In[ ]:
 
@@ -127,22 +139,22 @@ space_limit = 20
 
 # arguments for convert
 prearg = shlex.split("-density 300 -colorspace CMYK")
-arguments = shlex.split("-colorspace sRGB -background white -alpha background     -trim +repage -flatten -resize 512x512^>")
+arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
 
 logpath = "/home/rte/re-imaging/visualisation/error_log.txt"
 
 overall_start = time.time()
 
-counter = 0
+counter = start_line
 
-for image_id, filepath in zip(image_ids, filepaths):
-    
+for image_id, filepath in zip(image_ids[start_line:], filepaths[start_line:]):
+
     start = time.time()
-    
+
     if counter % 100 is 0:
         print("*" * 20)
         print("counter:",counter)
-        print("process has been running for:",time.time() - overall_start)
+        print("process has been running for:", time.time() - overall_start)
         print("*" * 20)
     '''
     # this code only really relevant if moving to boot disk
@@ -153,7 +165,7 @@ for image_id, filepath in zip(image_ids, filepaths):
         files = os.listdir(source_path)
         for f in files:
             shutil.move(source_path+f, dest_path)
-            
+
         # make sure we have disk space free
         total, used, free = shutil.disk_usage("/")
         print("checking disk space:")
@@ -162,7 +174,7 @@ for image_id, filepath in zip(image_ids, filepaths):
         print("Free: %d GB" % (free // (2**30)))
         if free // (2**30) > space_limit:
             print("enough space free, continuing")
-    
+
         # if not enough disk space, sleep for a while
         while free // (2**30) < 20:
             total, used, free = shutil.disk_usage("/")
@@ -173,7 +185,7 @@ for image_id, filepath in zip(image_ids, filepaths):
 #     if free // (2**30) > 5:
 #         sys.exit("not enough disk space remaining")
     '''
-    
+
 #     print("filename:",filepath)
     outputname = [convert_path + str(image_id) + ".jpg"]
 #     print("outputname:",outputname)
@@ -187,20 +199,20 @@ for image_id, filepath in zip(image_ids, filepaths):
     except subprocess.TimeoutExpired:
         print("!" * 20)
         print("timeout --- logging problem file")
+        print("id:",str(image_id))
         f = open(logpath, "a+")
-        f.write(filepath + "," + image_id + "\n")
+        f.write(filepath + "," + str(image_id) + "\n")
         f.close()
         print("-" * 20)
 
         continue
 
     counter += 1
-    
+
 #     print("time elapsed: {:.2f}".format(time.time() - start))
 #     print("-" * 20)
-    
+
 print("finished converting!")
 print("total number of items:",counter)
 end = time.time()
 print("total time taken:", end - overall_start)
-
