@@ -1,0 +1,1457 @@
+   2751 Adobe Photoshop CS6 (Windows)
+   1788 Adobe Photoshop CS5 Windows
+   1487 Windows Photo Editor 10.0.10011.16384
+   1395 Adobe Photoshop 7.0
+   1358 Adobe Photoshop CS6 (Macintosh)
+   1209 Adobe Photoshop CS2 Windows
+   1165 Adobe Photoshop CS3 Windows
+   1027 MATLAB, The MathWorks, Inc.
+   1005 Adobe Photoshop CS Windows
+    971 Created with the Wolfram Language : www.wolfram.com
+    828 Adobe Photoshop CS4 Windows
+    747 www.meitu.com
+    735 Picasa
+    684 ACDSee Professional 2019
+    669 Adobe Photoshop CS5 Macintosh
+    643 Adobe Photoshop CC 2017 (Windows)
+    640 Adobe Photoshop CC 2015 (Windows)
+    629 Shotwell 0.18.0
+    606 Adobe Photoshop CS3 Macintosh
+    590 Adobe Photoshop CC (Windows)
+    563 Paint.NET v3.5.10
+    562 Adobe Photoshop CC 2015 (Macintosh)
+    532 Adobe Photoshop CS4 Macintosh
+    518 Adobe Photoshop CC 2014 (Windows)
+    477 ACD Systems Digital Imaging
+    447 Adobe Photoshop CS5.1 Macintosh
+    404 www.inkscape.org
+    390 Adobe Photoshop CC 2017 (Macintosh)
+    361 Adobe Photoshop CS5.1 Windows
+    359 Shotwell 0.22.0
+    357 GIMP 2.8.10
+    312 GIMP 2.8.16
+    309 Microsoft Windows Photo Viewer 6.1.7600.16385
+    309 Adobe Photoshop CC (Macintosh)
+    268 Adobe Photoshop CS2 Macintosh
+    259 Microsoft Office
+    240 Adobe Photoshop CS Macintosh
+    232 MATLAB, The Mathworks, Inc.
+    226 Phatch
+    221 Microsoft Windows Photo Gallery 6.0.6001.18000
+    216 Adobe Photoshop CC 2014 (Macintosh)
+    175 Google
+    168 GIMP 2.8.14
+    162 Created with the Wolfram Language for Students - Personal Use Only : www.wolfram.com
+    156 Adobe Photoshop CC 2015.5 (Macintosh)
+    149 Adobe Photoshop CC 2018 (Windows)
+    138 GIMP 2.8.18
+    132 GIMP 2.6.12
+    125 Photos 2.0
+    125 paint.net 4.0.21
+    125 Adobe Photoshop CC 2018 (Macintosh)
+    122 gnome-screenshot
+    118 Paint.NET v3.36
+    115 Ver.1.00
+    114 Adobe ImageReady
+    112 Shotwell 0.9.3
+    112 GIMP 2.8.22
+    112 Adobe Photoshop CC 2015.5 (Windows)
+    108 QuickTime 7.7.1
+    106 Adobe Photoshop Elements 2.0
+    105 Adobe Photoshop CS5 (12.0x20100115 [20100115.m.998 2010/01/15:02:00:00 cutoff; m branch])  Windows
+    103 Picasa 3.0
+    102 Shotwell 0.12.3
+     99 QuickTime 7.6.6
+     97 Adobe Photoshop Lightroom 6.5 (Macintosh)
+     96 paint.net 4.0.5
+     95 Digital Camera X-E2 Ver3.00
+     90 paint.net 4.0.19
+     90 iPhoto 9.5.1
+     89 Windows Photo Editor 6.3.9600.17418
+     89 GIMP 2.6.8
+     87 Microsoft Windows Photo Gallery 6.0.6000.16386
+     84 Photos 1.0.1
+     82 ACD Systems  ˝¬Î≥…œÒ
+     80 paint.net 4.0.9
+     79 PhotoScape
+     76 matplotlib version 2.1.1, http://matplotlib.org/
+     76 ????????? ???????? ????????? ??????????? ???????? ACD Systems
+     74 GIMP 2.6.11
+     71 
+     70 Adobe Photoshop Lightroom 6.7 (Macintosh)
+     70 10.3.3
+     67 Ver.1.01
+     67 paint.net 4.0.6
+     65 GIMP 2.8.2
+     64 Paint.NET v3.5.8
+     63 Ver.1.0
+     63 PaintShop Pro 14.00
+     62 GIMP 2.10.6
+     62 f-spot version 0.6.1.5
+     62 Digital Camera FinePix S6500fd Ver1.00
+     60 Adobe Photoshop CC 2019 (Macintosh)
+     59 Adobe Photoshop Elements 6.0 Windows
+     57 Photos 3.0
+     55 Mac OS X 10.5.8 (9L31a)
+     55 GIMP 2.10.4
+     55 Adobe Photoshop Elements 4.0 Windows
+     54 Pixelmator 3.7
+     53 GIMP 2.4.6
+     53 Adobe Photoshop Lightroom 4.3 (Windows)
+     52 Paint.NET v3.5.11
+     51 Pixelmator 3.6
+     51 Photos 1.5
+     51 Paint.NET v3.5.5
+     51 matplotlib version 2.1.0, http://matplotlib.org/
+     51 Adobe Photoshop Elements 7.0 Windows
+     50 paint.net 4.0.16
+     49 paint.net 4.0.17
+     49 paint.net 4.0.10
+     48 G900TUVS1GPI1
+     46 Adobe Photoshop CS6 (13.0 20120305.m.415 2012/03/05:21:00:00)  (Windows)
+     46 ACDSee Pro 6
+     44 POV-Ray 3.7.1-alpha.8826150.unofficial
+     42 Wolfram Mathematica 9.0 : www.wolfram.com
+     41 Digital Photo Professional
+     41 ACDSee GFMF
+     40 Mac OS X 10.5.8 (9L30)
+     39 paint.net 4.0.13
+     38 DxO OpticsPro 10.5.4 build 174
+     37 GIMP 2.8.4
+     36 matplotlib version 2.1.2, http://matplotlib.org/
+     36 GPL Ghostscript 9.10
+     36 GIMP 2.8.6
+     35 matplotlib version 2.2.3, http://matplotlib.org/
+     35 matplotlib version 2.2.2, http://matplotlib.org/
+     35 iPhoto 9.6.1
+     35 Alias MultiLayer TIFF V1.1
+     35 7.1.1
+     34 Photos 1.3
+     34 GIMP 2.10.0
+     34 Adobe Photoshop Elements 8.0 Macintosh
+     33 GPL Ghostscript 9.19
+     33 Adobe Photoshop Elements 8.0 Windows
+     33 Adobe Photoshop Elements 11.0 Windows
+     32 v1.5.6-0-gc109663
+     32 GIMP 2.6.10
+     31 Paint.NET v3.5.6
+     31 paint.net 4.0.12
+     31 Adobe Photoshop Lightroom 5.7 (Windows)
+     31 Adobe Photoshop Lightroom 5.7.1 (Windows)
+     29 Skitch
+     29 Mac OS X 10.5.6 (9G55)
+     29 Greenshot
+     29 Adobe Photoshop Elements 10.0 Windows
+     29 9.3.2
+     28 Wolfram Mathematica 8.0
+     28 Shotwell 0.20.2
+     28 POV-Ray 3.7.0.unofficial
+     28 Adobe Photoshop Elements 9.0 Windows
+     27 Adobe Photoshop Lightroom 6.2.1 (Windows)
+     27 Adobe Photoshop Lightroom 6.0 (Windows)
+     27 Adobe Photoshop Elements 9.0 Macintosh
+     27 Adobe Photoshop Elements 12.0 Macintosh
+     26 Windows Phone
+     26 paint.net 4.0.3
+     26 GPL Ghostscript  9.00
+     26 Adobe Photoshop Lightroom 3.4.1
+     25 Pixelmator 3.5.1
+     25 Pixelmator 3.1
+     25 Adobe Illustrator CS6 (Windows)
+     25 10.2.1
+     24 Shotwell 0.11.6
+     24 Pixelmator 3.5
+     24 Pixelmator 3.4
+     24 Pixelmator 3.3
+     24 Nero PhotoSnap 1, 1, 0, 6
+     24 ESP Ghostscript 7.07
+     24 Adobe Photoshop Elements 13.0 (Windows)
+     24 ACDSee Pro (Mac)
+     23 gThumb 2.14.3
+     23 GIMP 2.8.20
+     23 Adobe Photoshop Elements 3.0 Windows
+     23 10.3.2
+     22 QuickTime 7.5.5
+     22 Pixelmator 3.2
+     22 Adobe Photoshop Lightroom 6.4 (Windows)
+     22 7.0.4
+     21 PaintShop Pro 18,00
+     21 iPhoto 9.6
+     21 GPL Ghostscript 9.15
+     21 GIMP 2.9.9
+     21 GIMP 2.6.9
+     20 Version 1.0
+     20 Shutter
+     20 Canva
+     20 bq software
+     20 BeFunky Photo Editor
+     20 Adobe Photoshop Elements 6.0 Macintosh
+     20 Adobe Photoshop CC 2019 (Windows)
+     20 9.3.5
+     20 10.3.1
+     20 10.0.2
+     19 Shotwell 0.28.2
+     19 PhotoFiltre 7
+     19 GIMP 2.4.5
+     19 Aperture 3.6
+     19 Adobe Fireworks CS5 11.0.1.7 Macintosh
+     19 ACDSee Pro 5
+     19 9.2.1
+     19 11.4.1
+     18 Shotwell 0.9.2
+     18 QuickTime 7.6.4
+     18 Nero PhotoSnap 1, 2, 0, 19
+     18 GIMP 2.8.0
+     18 GIMP 2.10.2
+     18 digiKam-0.9.0
+     18 Adobe Photoshop Lightroom 4.4 (Macintosh)
+     18 Adobe Illustrator CS5
+     17 Ver.2.00
+     17 QuickTime 7.7
+     17 Adobe Photoshop Lightroom 6.0 (Macintosh)
+     17 Adobe Photoshop Lightroom 5.6 (Macintosh)
+     17 10.2
+     16 Pixelmator 3.7.5
+     16 Paint.NET v3.08
+     16 GIMP 2.6.5
+     16 G920VVRU4DQF3
+     16 Exif Software Version 2.2
+     16 ESP Ghostscript 815.04
+     16 Aperture 3.5.1
+     16 Adobe Illustrator CC 22.0 (Macintosh)
+     16 8.4.1
+     16 10.1.1
+     15 Snapseed 2.18.168212136
+     15 Shotwell 0.24.5
+     15 Microsoft Windows Photo Viewer 6.2.9200.16384
+     15 Microsoft Windows Live Photo Gallery14.0.8081.709
+     15 GIMP 2.10.8
+     15 Gcam
+     15 Apple Image Capture
+     15 Adobe Photoshop Lightroom 5.7 (Macintosh)
+     15 Adobe Photoshop Lightroom 5.0 (Macintosh)
+     15 9.3.4
+     15 8.4
+     15 7.1.2
+     14 Wolfram Mathematica 7.0
+     14 Shotwell 0.14.1
+     14 Radiance 4.2a pab
+     14 HIGZ Version 1.29/04
+     14 GIMP 2.6.7
+     14 digiKam-2.6.0
+     14 Adobe Photoshop Elements 4.0.1 Macintosh
+     14 11.3.1
+     14 11.2.6
+     14 11.1.2
+     13 VNS-L31C02B125
+     13 QuickTime 7.6
+     13 Paint.NET v3.30
+     13 GIMP 2.6.6
+     13 FOVEA for iOS
+     13 Adobe Photoshop Lightroom 5.7.1 (Macintosh)
+     13 Adobe Illustrator CC 2015 (Windows)
+     13 9.1
+     12 Windows Movie Maker 2.1.4027.0
+     12 Shotwell 0.15.1
+     12 Photos 1.1
+     12 iPhoto 9.5
+     12 I9300XXUGNG3
+     12 GIMP 2.9.5
+     12 darktable 1.4
+     12 ArcSoft MediaImpression for Kodak
+     12 Adobe Photoshop Lightroom 6.12 (Macintosh)
+     12 Adobe Photoshop Elements 12.0 Windows
+     12 11.2.1
+     11 Version 1.1
+     11 Ver.1.10
+     11 Ver.1.02
+     11 POV-Ray 3.7.0
+     11 Photos 4.0
+     11 MediaTek Camera Application
+     11 bullhead-user 6.0.1 MHC19Q 2705526 release-keys
+     11 Adobe Photoshop Lightroom 6.6.1 (Macintosh)
+     11 Adobe Photoshop Elements 3.0 Macintosh
+     11 Adobe Photoshop Elements 11.0 Macintosh
+     11 Adobe Photoshop 7.0 CE
+     11 9.3.1
+     11 902262
+     11 8.3
+     11 8.1.3
+     11 1.00
+     10 Ver.1.1
+     10 V100-02
+     10 Shotwell 0.26.3
+     10 R/RGL package/libpng
+     10 QuickTime 7.6.9
+     10 Paint.NET v3.20
+     10 paint.net 4.1.1
+     10 paint.net 4.0
+     10 Microsoft Windows Photo Viewer 6.3.9600.16384
+     10 G532MTVJU1AQB1
+     10 DSC-WX150 v1.00
+     10 bullhead-user 7.1.1 NMF26F 3425388 release-keys
+     10 Adobe Premiere Pro CC 2018.0 (Macintosh)
+     10 Adobe Photoshop Lightroom 4.1 (Macintosh)
+     10 Adobe Photoshop Lightroom 4.0 (Macintosh)
+     10 Adobe Photoshop Elements 13.0 (Macintosh)
+     10 Acorn version 1.2.1
+     10 œÓ„‡ÏÏ‡ ˆËÙÓ‚ÓÈ Ó·‡·ÓÚÍË ËÁÓ·‡ÊÂÌËÈ ÍÓÏÔ‡ÌËË ACD Systems
+     10 ACDSee 17
+     10 9.0
+     10 8.1.2
+     10 32.4.A.1.54_0_f500
+      9 QuickTime 7.5
+      9 plasq skitch
+      9 Pixelmator 3.4.2
+      9 picnik.com
+      9 L710VPUCMK3
+      9 GIMP 2.10.0-RC1
+      9 Embettered by PicMonkey. http://www.picmonkey.com
+      9 E4600v1.1
+      9 DSC-HX10V v1.00
+      9 DiMAGE X50 Ver1.01
+      9 Adobe Illustrator CS5.1
+      9 ACDSee Ultimate 2018
+      9 8.1.1
+      9 6.1.3
+      9 5.0.1
+      8 Shotwell 0.26.4
+      8 Pixelmator 2.0.1
+      8 Photos 1.2
+      8 Photos 1.0
+      8 Paint.NET v3.5.4
+      8 Paint.NET v3.5
+      8 paint.net 4.1.3
+      8 Microsoft Windows Photo Viewer 6.3.9600.17415
+      8 Grace-5.1.25
+      8 AFPL Ghostscript 8.51
+      8 Adobe Photoshop Express Editor
+      8 Adobe Illustrator CS6 (Macintosh)
+      8 Adobe Illustrator CC 2017 (Macintosh)
+      8 6.0.1
+      8 11.3
+      8 11.0.3
+      7 Zoner Photo Studio 18
+      7 v1.3.6-0-gf3d2d40
+      7 STIFF version 2.4.0 (2014-06-07)
+      7 QuickTime 7.7.1 (Mac OS X)
+      7 potter-user 7.0 NPN25.137-83 91 release-keys
+      7 PhotoFiltre Studio 9
+      7 IrfanView
+      7 GIMP 2.8.8
+      7 GIMP 2.6.2
+      7 GIMP 2.4.2
+      7 E2500v1.1
+      7 Aperture 3.4.5
+      7 Adobe Photoshop Lightroom 6.1 (Macintosh)
+      7 Adobe Photoshop Lightroom 5.6 (Windows)
+      7 Adobe Photoshop Lightroom 3.6 (Macintosh)
+      7 ACDSee Quick View
+      7 9.3.3
+      7 6.0
+      7 11.2.5
+      6 XLICap Version 14
+      6 Windows Photo Editor 6.3.9600.17031
+      6 Windows Movie Maker 2.1.4028.0
+      6 Ver.1.2
+      6 tifffile.py
+      6 QuickTime 7.4.1
+      6 Pixelmator 3.3.2
+      6 pdfresizer.com
+      6 PaintShop Pro 14,00
+      6 Paint.NET v3.10
+      6 N920GUBU3BQA8
+      6 ILCE-5000 v1.10
+      6 HDR+ 1.0.199571065z
+      6 GPL Ghostscript 9.21
+      6 FastStone Soft
+      6 DSLR-A200 v1.00
+      6 Digital Camera FinePix A345 Ver1.01
+      6 Digital Camera FinePix6900ZOOM Ver1.00
+      6 athene_amz-user 7.0 NPJS25.93-14-4 4 release-keys
+      6 Adobe Photoshop Lightroom 5.4 (Macintosh)
+      6 Adobe Photoshop Lightroom 5.0 (Windows)
+      6 Adobe Photoshop Express Windows Phone 9.8 (Windows)
+      6 Adobe Photoshop Express 9.0 (Windows)
+      6 Adobe Photoshop Elements 5.0 Windows
+      6 Adobe Photoshop 7.0 ME
+      6 Adobe Illustrator CC 2015.3 (Macintosh)
+      6 ACDSee Ultimate 8
+      6 A310FXXU2BPH8
+      6 7.1
+      6 6.1.4
+      6 6.1.2
+      6 5.1.1
+      6 4.2.1
+      6 3.4.0-ga9a3f03
+      5 Snapseed 2.18.200158453
+      5 Shotwell 0.10.1
+      5 Rim Exif Version1.00a
+      5 QuickTime 7.7.3
+      5 QuickTime 7.6.2
+      5 QuickTime 7.2
+      5 QuickTime 7.1.3
+      5 QuickTime 6.5.2
+      5 QuickTime 6.5
+      5 Pixelmator 3.4.4
+      5 PE-TL20V100R001CHNC00B145
+      5 PaintShop Pro 15.00
+      5 Paint.NET v3.22
+      5 Optio T30 Ver 1.00
+      5 Nikon Transfer 2.3 M
+      5 IJ Scan Utility
+      5 Igor Pro
+      5 HDR+ 1.0.191678339z
+      5 HDR+ 1.0.177471000z
+      5 HD4.01.03.00.00
+      5 G900FXXS1CQAV
+      5 G800FXXU1ANJ2
+      5 custom software
+      5 Celsys Studio Tool
+      5 Capture One 9 Macintosh
+      5 Adobe Photoshop Lightroom 6.8 (Macintosh)
+      5 Adobe Photoshop Lightroom 6.6 (Macintosh)
+      5 Adobe Photoshop Lightroom 6.1.1 (Windows)
+      5 Adobe Photoshop Lightroom 5.3 (Macintosh)
+      5 Adobe Photoshop CC 2015.5 (2015.5.0 20160525.m.73 2016/05/25:23:00:00 CL 1078089)  (Macintosh)
+      5 Adobe Illustrator CC 2015 (Macintosh)
+      5 Adobe Fireworks CS6
+      5 A310FXXU2BQA3
+      5 7.0.2
+      5 23.5.B.0.303_6_f1000010
+      5 23.0.1.A.0.167_6_f100000e
+      5 1.01
+      4 XV version 3.10a-jumboFix+Enh of 20081216 (interim!)
+      4 Wolfram Mathematica 8.0 : www.wolfram.com
+      4 Version 1.4
+      4 Ver. 1.00
+      4 v756-76
+      4 v571u-76
+      4 V1.48
+      4 V1.01
+      4 TRT-LX1C109B161
+      4 T999UVDMD5
+      4 T989DTLLG2
+      4 SNS-Resizer v1.7.2
+      4 QuickTime 7.1.5
+      4 QuickTime 7.0.4
+      4 Pixelmator 3.7.3
+      4 Pixelmator 1.6
+      4 Photoshelter http://www.photoshelter.com
+      4 OnePlus2-user 5.1.1 LMY47V 56 dev-keys
+      4 N8000XXCMA2
+      4 Lenovo Camera
+      4 J200BTUBU2AQB2
+      4 J200BTUBU2APL2
+      4 IMAGEnet 2000
+      4 Illustrator
+      4 ILCE-5100 v3.10
+      4 I9505XXUBMGA
+      4 I9192XXUBNB1
+      4 GIMP 2.4.7
+      4 G930FXXU2ERGE
+      4 G930FXXU1DQEI
+      4 G900VVRU2DPG2
+      4 FW Ver 01.03
+      4 FinePixViewer Ver.5.3
+      4 DSC-RX100 v1.00
+      4 Digital Camera FinePix S8000fd Ver1.01
+      4 COOLPIX S4V1.0
+      4 Chrome OS Gallery App
+      4 Camera360
+      4 bullhead-user 7.1.2 N2G47W 3938523 release-keys
+      4 bullhead-user 7.1.1 N4F26T 3687331 release-keys
+      4 Adobe Photoshop Lightroom 6.8 (Windows)
+      4 Adobe Photoshop Lightroom 6.5.1 (Macintosh)
+      4 Adobe Photoshop Lightroom 6.3 (Macintosh)
+      4 Adobe Photoshop Lightroom 5.5 (Windows)
+      4 Adobe Photoshop Lightroom 5.3 (Windows)
+      4 Adobe Photoshop Lightroom 4.4 (Windows)
+      4 Adobe Photoshop Lightroom 4.2 (Macintosh)
+      4 Adobe Photoshop Elements 4.0 Macintosh
+      4 Adobe Photoshop CS4 (11.0x20071101 [20071101.m.190 2007/11/01:02:00:00 cutoff; m branch])  Windows
+      4 Adobe Fireworks CS4
+      4 Adobe Bridge CS6 (Macintosh)
+      4 ACDSee 15
+      4 A500HXXS1CQC7
+      4 A320FLXXS2BRA9
+      4 9.2
+      4 9.0.2
+      4 83-1058
+      4 8.2
+      4 8.0.2
+      4 7.0.6
+      4 3.1.2
+      4 28-1012
+      4 2.2
+      4   1.0200
+      4 10.1
+      4 038C v1.17 130621
+      3 Windows Photo Editor 10.0.10011.0
+      3 VSCO
+      3 ViewNX-i 1.2 M
+      3 Version 1.2
+      3 Version 1.0000
+      3            Ver.1.2
+      3 Ver.1.04
+      3 Ver.1.03
+      3 v775u-79
+      3 v756-81
+      3 v558-77
+      3 V2.10
+      3 Snapseed
+      3 SIGMA PhotoPro 3
+      3 Shotwell 0.11.4
+      3 RawTherapee 5.3
+      3 R950VXUCNE2
+      3 R7AA071     prg1223-3004_GENERIC_RA d:180.1 f:46 h:43
+      3 QuickTime 7.4
+      3 QuickTime 7.1.2
+      3 PyMOL
+      3 Pixelmator 3.3.3
+      3 Pixelmator 3.2.1
+      3 Pixelmator 2.2
+      3 Pixelmator 2.1.4
+      3 Picasa 2.7
+      3 PaintShop Pro 16.00
+      3 PaintShop Photo Pro 13.00
+      3 Paint.NET v3.5.7
+      3 Paint.NET v3.5.3
+      3 Paint.NET v3.5.2
+      3 paint.net 4.0.1
+      3 NEX-5R v1.00
+      3 Microsoft Windows Live Photo Gallery14.0.8117.416
+      3 Microsoft Office Document Scanning  11.0.1897.00
+      3 L710VPUDND8
+      3 L520VPUANA7
+      3 KODAK EASYSHARE C613 ZOOM DIGITAL CAMERA
+      3 Instagram
+      3 ImageMagick 6.6.9-7 2014-03-06 Q16 http://www.imagemagick.org
+      3 ILCE-6000 v2.00
+      3 I9100XWMS1
+      3 I545VRUAME7
+      3 I535VRBMF1
+      3 HX1.01.01.50
+      3 HDR+ 1.0.163413028n
+      3 HDR+ 1.0.147548766n
+      3 HDR+ 1.0.118402515y
+      3 HDR+ 1.0.118402515r
+      3 GRA-L09C432B200
+      3 GPL Ghostscript 8.64
+      3 GomPlayer 2, 2, 69, 5228 (CHT)
+      3 GIMP 2.6.1
+      3 GIMP 2.4.3
+      3 GIMP 2.10
+      3 G930PVPS4BQC1
+      3 G900VVRU2BPB1
+      3 G900PVPU2BOD3
+      3 fw 15.16 prm 08.06
+      3 fw 05.15 prm 05.15
+      3 eng..2012101
+      3 E995v1.6
+      3 E775v1.3u
+      3 E4500v1.2
+      3 E4500v1.1
+      3 DSC-RX10M2 v1.00
+      3 DSC-RX100M2 v1.10
+      3 DiMAGE Z3 v1.02
+      3 Digital Camera FinePix E550    Ver1.00
+      3 Digital Camera FinePix A400    Ver1.02
+      3 COOLPIX L22 V1.0
+      3 Capture One 5 Macintosh
+      3 by.blooddy.crypto.image.PNG24Encoder
+      3 by.blooddy.crypto.image.JPEGEncoder
+      3 bullhead-user 7.0 NRD90R 3141966 release-keys
+      3 athene-user 7.0 NPJ25.93-14 16 release-keys
+      3 athene-user 6.0.1 MPJ24.139-63 64 release-keys
+      3 ArcSoft MediaImpression
+      3 Aperture 3.4.3
+      3 Aperture 3.1.2
+      3 Aperture 3.0.3
+      3 Adobe Photoshop Lightroom 4.2 (Windows)
+      3 Adobe Photoshop Lightroom 3.6 (Windows)
+      3 Adobe Photoshop Express Windows 10 (Windows)
+      3 Adobe Photoshop Elements 10.0 Macintosh
+      3 Adobe Photoshop Camera Raw 6.4.1
+      3 Adobe Illustrator CC (Macintosh)
+      3 Adobe Illustrator CC 22.1 (Macintosh)
+      3 Adobe Illustrator CC 2014 (Macintosh)
+      3 ACD Systems Êï∞Á†ÅÊàêÂÉè
+      3 A520FXXS4CRE1
+      3 A320FLXXU2CRE3
+      3 A310FXXU3CQE6
+      3 A310FXXU3BQC2
+      3 9.3
+      3 808221
+      3 8.0
+      3 6.1.1.B.1.89_56_a246
+      3 4.3
+      3 4.0.2.A.0.42_2d_f200
+      3 11.2.2
+      3 11.1.1
+      3 11.0.2
+      3 11.0
+      3               1.00
+      3 1.0
+      2 Y330-U11 V100R001C00B114
+      2 Windows Photo Editor 6.3.9600.17122
+      2 Version 2.00
+      2 VER: F2D20M-FS610C-BS32148T1-WR019,DATE:Mar 15 2013  16:34:09
+      2 Ver 1.16
+      2 Ver.1.11
+      2 Ver.1.05
+      2 v981-78
+      2 v754u-80
+      2 v753u2-86
+      2 v574u-76
+      2 v374-74
+      2 v353p-75
+      2 The GIMP
+      2 T599NUVAMD4
+      2 Snapseed 2.0
+      2 Shotwell 0.11.2
+      2 S7562XXALJ4
+      2 S5830XWKPU
+      2 S5830iBGLB3
+      2 Rookie
+      2 RICOH THETA Ver 1.00
+      2 QuickTime 7.6.3
+      2 QuickTime 7.1.6
+      2 QuickTime 6.5.1
+      2 Polarr Photo Editor
+      2 PLK-TL01HC01B389
+      2 Pixlr
+      2 PIXEL-TECH : Dokumenty Pro 5 v.5.3.49.13
+      2 Pixelmator 3.7.4
+      2 Pixelmator 1.5.1
+      2 PictureProject 1.7 W
+      2 Photos 0.2.3
+      2 PhotoLine20.50
+      2 PhotoFiltre Studio X
+      2 Paint Shop Pro Photo 12.01
+      2 Paint.NET v2.5
+      2 paint.net 4.0.8
+      2 Ortery Photosimile
+      2 Optio W60 Ver 1.00
+      2 Optio T10 Ver 1.00
+      2 OnePlus5T-user 8.0.0 OPR1.170623.032 79 release-keys
+      2 OnePlus3-user 7.0 NRD90M 86 dev-keys
+      2 OnePlus2-user 6.0.1 MMB29M 31 dev-keys
+      2 nomacs - Image Lounge
+      2 NImageFileJPG 1.0
+      2 Nikon Transfer 1.5 W
+      2 Nikon Transfer 1.5 M
+      2 NEX-5 Ver.03
+      2 NEX-5T v1.00
+      2 N910R4TYU1BOG2
+      2 N9000QXXUDND2
+      2 N7505XXSDPL1
+      2 N7100XXUFNE1
+      2 MP Navigator EX 4.0
+      2 MP Navigator EX 2.0
+      2 Microsoft Windows Photo Viewer 10.0.14393.0
+      2 Microsoft Windows Live Photo Gallery 15.4.3508.1109
+      2 Mac OS X 10.5 (9A3115a)
+      2 Mac OS X 10.5.4 (9E17)
+      2 L'imagerie numÈrique d'ACD Systems
+      2 LIBFORMAT (c) Pierre-e Gougelet
+      2 KODAK PROFESSIONAL DCS Photo Desk 4.3.0.4 W
+      2 iPhoto BorderFX
+      2 iOS
+      2 ILCE-6000 v3.10
+      2 I9505XXUFNC4
+      2 I9300XXUGNJ2
+      2 I545VRUFNK1
+      2 Hugin 2015.0.0.cdefc6e53a58
+      2 HDR-PJ820E v1.00
+      2 HDR+ 1.0.171916441z
+      2 HDR+ 1.0.147548766z
+      2 HDR+ 1.0.126161355r
+      2 GraphicConverter (Intel)
+      2 GPL Ghostscript 9.07
+      2 GPL Ghostscript 8.61
+      2 GIMP 2.9.2
+      2 GIMP 2.8.3
+      2 G950FXXU1AQG5
+      2 G935FXXS2DRC3
+      2 G935FXXS2DRAB
+      2 G935AUCS4BQE1
+      2 G930FXXU1BPLB
+      2 G925FXXU4DPJG
+      2 G920VVRS4CPI2
+      2 G920TUVS6FRA3
+      2 G920PVPU3BOL1
+      2 G900VVRU2BOG5
+      2 G900R4VXU1ANCF
+      2 G900HXXU1BOL1
+      2 G900FXXU1ANG2
+      2 G900FXXS1CQD1
+      2 G900FXXS1CPLV
+      2 G900AUCU3BOC4
+      2 G530WVLU1AOFB
+      2 G350XXU0ANG4
+      2 FX Photo Studio 3.0.1
+      2 FW Ver 1302121
+      2 FRD-L09C432B394
+      2 FRD-L04C567B360
+      2 EPSON Scan
+      2 E880v1.1
+      2 E5200 V 1.2
+      2 DSC-WX100 v1.00
+      2 DSC-RX100M5 v1.00
+      2 DSC-RX100M2 v1.00
+      2 DL560PBNx02020
+      2 Digital Camera FinePixS2Pro Ver1.00
+      2 Digital Camera FinePix S2800HD Ver2.00
+      2 Digital Camera FinePixS1Pro Ver1.00
+      2 Digital Camera FinePix F30     Ver1.02
+      2 Digital Camera FinePix E900    Ver1.00
+      2 digiKam-2.5.0
+      2 darktable 2.0.5
+      2 darktable 1.2.3
+      2 COOLPIX S9100V1.0
+      2 COOLPIX S8V1.1
+      2 COOLPIX S6V1.0
+      2 COOLPIX P7000V1.1
+      2 COOLPIX P600   V1.1
+      2 COOLPIX P300   V1.0
+      2 COOLPIX L820V1.0
+      2 COOLPIX L6V1.0
+      2 COOLPIX L18 V1.1
+      2 COOLPIX L110V1.3
+      2 Camera360 ÁÖßÁâá
+      2 bullhead-user N NPC56W 2673096 release-keys
+      2 bullhead-user 7.1.2 N2G47Z 4045513 release-keys
+      2 Bibble Pro 5 5.2.3
+      2 Autopano Pro
+      2 Aperture 3.4.1
+      2 Aperture 3.3.2
+      2 Android
+      2 Adobe Photoshop Lightroom Classic 7.5 (Windows)
+      2 Adobe Photoshop Lightroom Classic 7.5 (Macintosh)
+      2 Adobe Photoshop Lightroom Classic 7.3 (Macintosh)
+      2 Adobe Photoshop Lightroom Classic 7.3.1 (Macintosh)
+      2 Adobe Photoshop Lightroom 6.4 (Macintosh)
+      2 Adobe Photoshop Lightroom 6.3 (Windows)
+      2 Adobe Photoshop Lightroom 6.1.1 (Macintosh)
+      2 Adobe Photoshop Lightroom 6.10.1 (Windows)
+      2 Adobe Photoshop Lightroom 5.5 (Macintosh)
+      2 Adobe Photoshop Lightroom 5.4 (Windows)
+      2 Adobe Photoshop Lightroom 4.0 (Windows)
+      2 Adobe Photoshop Lightroom
+      2 Adobe Photoshop Elements 5.0 (20060914.r.77)  Windows
+      2 Adobe Photoshop Elements 15.0 (Macintosh)
+      2 Adobe Photoshop Elements 10 Editor 10.0 Macintosh
+      2 Adobe Photoshop CS6 Windows
+      2 Adobe Photoshop CS6 Macintosh
+      2 Adobe Photoshop CS3 (10.0x20061208 [20061208.beta.1251 2006/12/08:02:00:00 cutoff; m branch])  Macintosh
+      2 Adobe Photoshop CS3 (10.0x20061208 [20061208.beta.1251 02:00:00 cutoff; m branch])  Windows
+      2 Adobe Photoshop CC 2015 Macintosh
+      2 Adobe Photoshop Camera Raw 9.1.1 (Macintosh)
+      2 Adobe Photoshop Album 2.0
+      2 Adobe Fireworks CS5
+      2 Adobe Fireworks
+      2 addison-user 7.1.1 NPNS26.118-22-1 1 release-keys
+      2 ACDSee Pro 8
+      2 ACDSee øÏÀŸ≤Èø¥
+      2 A320FLXXU1BQI4
+      2 A310FXXU3CQL2
+      2 6.1.1.B.1.54_56_a246
+      2 607212
+      2 6.0.2
+      2 5.1
+      2 4.3.5
+      2 4.1.B.0.587_2d_f100
+      2 41-1002A
+      2 4_08_28288_00
+      2 4.0.2.A.0.69_2d_f100
+      2 4.0.2
+      2 3.4.0-perf-g708019f
+      2 3.4.0-perf-g4c1aa5c
+      2 33A.
+      2 3.1.3
+      2 2.1.1.C.0.0_12307
+      2 12.1.A.1.205_58_a002
+      2 12.0.1
+      2 11.4
+      2 1.10
+      2 1009281
+      2 0207
+      1 –ü—Ä–æ–≥—Ä–∞–º–º–∞ —Ü–∏—Ñ—Ä–æ–≤–æ–π –æ–±—Ä–∞–±–æ—Ç–∫–∏ –∏–∑–æ–±—Ä–∞–∂–µ–Ω–∏–π –∫–æ–º–ø–∞–Ω–∏–∏ ACD Systems
+      1 Yandex.Disk (http://disk.yandex.ru)
+      1 XV version 3.10a-jumboFix+Enh of 20081216 (interim!)+FLmask
+      1 XPaint 2.9.1
+      1 Xara Picture Editor @image6(edited).jpg.xpe
+      1 Xara Designer Pro 6
+      1 X-5 Ver 1.00
+      1 Wolfram Mathematica 9.0 for Students - Personal Use Only : www.wolfram.com
+      1 Windows Photo Editor 6.3.9600.17334
+      1 Windows Photo Editor 6.3.9600.16384
+      1 Windows Phone 7.5
+      1 Windows NT Fax Server
+      1 Watermark Factory 2.53
+      1 VNS-L31C432B160
+      1 ViewNX 2.9 W
+      1 ViewNX 2.7 W
+      1 ViewNX 2.0 M
+      1 VIE-AL10C00B386
+      1 VIE-AL10C00B356
+      1 VIE-AL10C00B192
+      1 Version 1.5
+      1 Version 1.3
+      1 Version 1.0070
+      1 Ver.2.2
+      1 Ver 2.05SG
+      1 Ver.2.02
+      1 Ver.2.01
+      1 Ver.2.00D
+      1 Ver.1.4
+      1 Ver.1.3
+      1 Ver:1.2.06
+      1 Ver.1.10e
+      1            Ver.1.1
+      1 VER. 105
+      1 Ver.1.02e
+      1 ver1.0.0
+      1 Ver 1.0
+      1 Ver 0.25 x
+      1 VEOS-X
+      1 v984p-75
+      1 v984-74
+      1 v959p-71
+      1 v954p-76
+      1 v882p-70
+      1 v874-74
+      1 v852p-71
+      1 v757-75
+      1 v757-74
+      1 v754u-77
+      1 v754g2-85
+      1 v754-78
+      1 v575u-77
+      1 v574p-75
+      1 v558-79
+      1 v558-78
+      1 v358u-76
+      1 v355u-76
+      1 v354p-73
+      1 v353p2-71
+      1 V2.10.06(HW-4)
+      1 V100-01
+      1 unknown
+      1 Ultimate PureXSP_58_a002
+      1 This document contains no slices.  In order to create a Nested Table, your document must contain at least one slice. Symbols may not contain nested tables. RESOURCES NOT USED FOR ENGINE
+      1 the Wolfram Language : www.wolfram.com
+      1 TF700T-B03400
+      1 T999NUVAME4
+      1 T820XXU1AQI2
+      1 SVG Converter 1.0.1 (31)
+      1 STIFF version 2.1.3 (2015-03-26)
+      1 STIFF version 2.1.3 (2012-10-02)
+      1 SLT-A77V v1.05
+      1 SLT-A33 v1.10
+      1 SlidePlayer
+      1 Shotwell 0.28.3
+      1 Shotwell 0.24.6
+      1 Shotwell 0.23.1
+      1 Shotwell 0.20.1
+      1 Shotwell 0.18.1
+      1 Shotwell 0.12.2
+      1 SAMSUNG
+      1 sailfish-user 7.1.2 NKG47S 4146038 release-keys
+      1 S6802XXLK2
+      1 S5830BGKS5
+      1 S5660JIKQ7
+      1 S5360XXLK3
+      1 S5360JPLF1
+      1 s2-user 6.0.1 IIXOSOP5801910121S 44 release-keys
+      1 Reshade Image Enlarger 3.0
+      1 RawTherapee
+      1 R6BC002     prgCXC1123362_GENERIC_L 0.0
+      1 QuickTime 7.6.2 (Mac OS X)
+      1 QuickTime 7.3
+      1 QuickTime 7.1.3 (Mac OS X)
+      1 QuickTime 7.0
+      1 QuickTime 6.4
+      1 QuickTime 5.0.6
+      1 POV-Ray 3.8.0-alpha.9322209.unofficial
+      1 potter-user 7.0 NPNS25.137-93-8 10 release-keys
+      1 potter_n-user 7.0 NPN25.137-93 11 release-keys
+      1 PortraitPro Studio Max 12
+      1 PMB
+      1 Pixelmator 3.7.2
+      1 Pixelmator 1.6.7
+      1 Pixelmator  1.6.7
+      1 Pixelmator 1.6.5
+      1 Pixelmator 1.5
+      1 PictureProject 1.5 W
+      1 PicsArt Photo Studio
+      1 (PHP JPEG Metadata Toolkit v1.11)
+      1 Photoshop Express 4.0.8.20
+      1 Photoshop Express 3.4.196
+      1 Photos 0.2.4
+      1 PhotoFiltre Studio 7
+      1 PENTAX K-3 Ver. 1.11
+      1 Paparazzi! 0.6.7
+      1 Paint Shop Pro Photo 12.50
+      1 Paint Shop Pro Photo 12,01
+      1 Paint Shop Pro Photo 11.20
+      1 Paint Shop Pro Photo 11.10
+      1 PaintShop Photo Pro 13,00
+      1 Paint Shop Photo Album v5.21
+      1 Paint Shop Photo Album v4.0.3
+      1 Paint.NET v3.35
+      1 Paint.NET v3.07
+      1 Paint.NET v2.6
+      1 paint.net 4.1.5
+      1 paint.net 4.1.4
+      1 paint.net 4.0.4
+      1 paint.net 4.0.15
+      1 Paint.NET ?????? 3.5.5
+      1 Paint.NET ?????? 3.5.4
+      1 P7-L07C01B851
+      1 P5100XWALD7
+      1 Optio WG-2 Ver 1.00
+      1 Optio S5i Ver 1.00
+      1 Optio S12 Ver 1.00
+      1 Optio P70 Ver 1.00
+      1 Optio 30 Ver 1.01
+      1 OnePlus5-user 7.1.1 NMF26X 273 release-keys
+      1 OnePlus5T-user 8.1.0 OPM1.171019.011 1 release-keys
+      1 OnePlus3-user 8.0.0 OPR6.170623.013 5 release-keys
+      1 OnePlus3-user 7.0 NRD90M 3 dev-keys
+      1 OLYMPUS CAMEDIA Master
+      1 NXT-AL10C00B386
+      1 Nikon Scan 4.0.3 W
+      1 NEX-6 v1.02
+      1 NEX-6 v1.00
+      1 NEX-5 Ver.04
+      1 NEX-5 v1.05
+      1 NEX-3N v1.00
+      1 NetXposure Image Portal 6.0.0
+      1 Nero PhotoSnap 2, 4, 28, 100
+      1 Nero PhotoSnap 1, 6, 1, 0
+      1 Nero PhotoSnap 1, 4, 0, 0
+      1 N920GUBU3CQH1
+      1 N920AUCU4EQC6
+      1 N920AUCS3CPJ1
+      1 N910R4TYU1CPC5
+      1 N900VVRUCNC4
+      1 N900SKSUFNH4
+      1 N9005XXUGNG1
+      1 N9005XXUGBPH2
+      1 N9005XXUGBOK6
+      1 N9005XXUGBOD6
+      1 N7100ZSSFQA2
+      1 N5110XXDNE1
+      1 N5110UEEMF2
+      1 MT7-TL10C636B562
+      1 msm8937-user 7.1.1 NMF26F JP_user_31.40.13.84_20171018 release-keys
+      1 mido-user 7.0 NRD90M V9.2.1.0.NCFMIEK release-keys
+      1 Microsoft Windows Photo Viewer 10.0.10586.0
+      1 Microsoft Windows Photo Viewer 10.0.10240.16384
+      1 Microsoft ICE v2.0.3.0
+      1 MHA-L29C635B187
+      1 MetaSeries
+      1 MediaOne 2.10
+      1 Mediafile Assistent 1.02.2
+      1 matplotlib version 2.2.0, http://matplotlib.org/
+      1 mate-screenshot
+      1 marlin-user 7.1.1 NOF26V 3636322 release-keys
+      1 macro
+      1 Mac OS X 10.5.7 (9J61)
+      1 Mac OS X 10.5.5 (9F33)
+      1 Mac OS X 10.5.3 (9D34)
+      1 Mac OS X 10.4.8 (8N1430)
+      1 Mac OS X 10.4.8 (8N1051)
+      1 Mac OS X 10.4.3 (8F46)
+      1 LVY48F
+      1 LGP990-V10b
+      1 Layout‚Ñ¢ NewTek LightWave 10¬Æ Version 10.0
+      1 L720VPUGOK3
+      1 L720VPSGPL1
+      1 K-r Ver 1.00
+      1 Kodak Digital Central Lab System
+      1 kinzie_verizon-user 6.0 MCK24.78-13.12 12 release-keys
+      1 kinzie_verizon-user 6.0.1 MCK24.183-22 22 release-keys
+      1 K-7 Ver 1.00
+      1 K-5 II Ver 1.00
+      1 K100D       Ver 1.00
+      1 JZO54K
+      1 .jpeg/1_pic.2.jpeg.001.jpeg
+      1 Jasc
+      1 J700HXXU2APC5
+      1 J320FNXXU0AQE3
+      1 J320FNXXU0APB4
+      1 iPhoto 9.4.3
+      1 iPhoto 9.4.2
+      1 Intensify Pro 1.0.3
+      1 InFocus Camera Application
+      1 ImageReady
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/divcolor_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/divcolor_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/divcolor_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/divcolor_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/divcolor_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/cvae_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/cvae_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/cvae_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/cvae_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00048295.JPEG/cvae_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/divcolor_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/divcolor_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/divcolor_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/divcolor_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/divcolor_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/cvae_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/cvae_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/cvae_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/cvae_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00030719.JPEG/cvae_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/divcolor_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/divcolor_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/divcolor_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/divcolor_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/divcolor_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/cvae_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/cvae_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/cvae_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/cvae_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00028070.JPEG/cvae_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/divcolor_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/divcolor_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/divcolor_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/divcolor_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/divcolor_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/cvae_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/cvae_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/cvae_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/cvae_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00017528.JPEG/cvae_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/divcolor_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/divcolor_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/divcolor_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/divcolor_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/divcolor_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/cvae_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/cvae_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/cvae_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/cvae_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00014409.JPEG/cvae_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/divcolor_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/divcolor_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/divcolor_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/divcolor_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/divcolor_000.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/cvae_004.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/cvae_003.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/cvae_002.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/cvae_001.jpg
+      1 /imagenetval/sk_res/ILSVRC2012_val_00000247.JPEG/cvae_000.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00048295.JPEG/cluster5.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00048295.JPEG/cluster4.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00048295.JPEG/cluster3.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00048295.JPEG/cluster2.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00048295.JPEG/cluster1.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00030719.JPEG/cluster5.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00030719.JPEG/cluster4.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00030719.JPEG/cluster3.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00030719.JPEG/cluster2.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00030719.JPEG/cluster1.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00028070.JPEG/cluster5.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00028070.JPEG/cluster4.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00028070.JPEG/cluster3.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00028070.JPEG/cluster2.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00028070.JPEG/cluster1.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00017528.JPEG/cluster5.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00017528.JPEG/cluster4.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00017528.JPEG/cluster3.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00017528.JPEG/cluster2.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00017528.JPEG/cluster1.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00014409.JPEG/cluster5.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00014409.JPEG/cluster4.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00014409.JPEG/cluster3.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00014409.JPEG/cluster2.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00014409.JPEG/cluster1.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00000247.JPEG/cluster5.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00000247.JPEG/cluster4.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00000247.JPEG/cluster3.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00000247.JPEG/cluster2.jpg
+      1 /imagenetval/im2im_res/ILSVRC2012_val_00000247.JPEG/cluster1.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00048295.JPEG/divcolor_004.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00048295.JPEG/divcolor_003.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00048295.JPEG/divcolor_002.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00048295.JPEG/divcolor_001.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00048295.JPEG/divcolor_000.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00030719.JPEG/divcolor_004.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00030719.JPEG/divcolor_003.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00030719.JPEG/divcolor_002.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00030719.JPEG/divcolor_001.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00030719.JPEG/divcolor_000.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00028070.JPEG/divcolor_004.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00028070.JPEG/divcolor_003.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00028070.JPEG/divcolor_002.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00028070.JPEG/divcolor_001.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00028070.JPEG/divcolor_000.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00017528.JPEG/divcolor_004.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00017528.JPEG/divcolor_003.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00017528.JPEG/divcolor_002.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00017528.JPEG/divcolor_001.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00017528.JPEG/divcolor_000.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00014409.JPEG/divcolor_004.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00014409.JPEG/divcolor_003.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00014409.JPEG/divcolor_002.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00014409.JPEG/divcolor_001.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00014409.JPEG/divcolor_000.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00000247.JPEG/divcolor_004.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00000247.JPEG/divcolor_003.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00000247.JPEG/divcolor_002.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00000247.JPEG/divcolor_001.jpg
+      1 /imagenetval/cvpr_res/ILSVRC2012_val_00000247.JPEG/divcolor_000.jpg
+      1 ImageMagick 6.6.9-7 2012-08-17 Q16 http://www.imagemagick.org
+      1 ImageMagick 6.6.2-6 2010-08-11 Q8 http://www.imagemagick.org
+      1 ILCE-6000 v1.21
+      1 ILCE-6000 v1.00
+      1 ILCE-5000 v1.00
+      1 idol4s-user 6.0.1 MMB29M vAH4-0 release-keys
+      1 IDL 6.4, ITT Visual Information Solutions
+      1 Iconfactory Flare
+      1 I9515XXU1ANI3
+      1 I9506XXUBML6
+      1 I9506XXSDPL2
+      1 I9505XXUGNF1
+      1 I9500XXUHOH6
+      1 I9500XXUGNH2
+      1 I9305ZHBMA5
+      1 I9305XXUENC1
+      1 I9305XXBME3
+      1 I9300XXUGOE1
+      1 I9300XXUGNA5
+      1 I9300XXEMC2
+      1 I9195XXUCOI4
+      1 I9195XXUCOA2
+      1 I9195XXUCNK1
+      1 I9100XXLPQ
+      1 I9100XWLSW
+      1 I9100XWLSS
+      1 I9070PXXLPE
+      1 I9060DDUANJ1
+      1 I8262XXBNJ1
+      1 I8262XXAMJ2
+      1 I8200NXXUAOF1
+      1 I747MVLUFOB1
+      1 I727RUXUMA7
+      1 I535VRUDNE1
+      1 I535VRUCML1
+      1 I337MVLUEMK6
+      1 I257UCS2BOI6
+      1 Hugin 2011.0.0.0fd3e119979c built by Matthew Petroff
+      1 HDR+ 1.0.76504408
+      1 HDR+ 1.0.223879943zy
+      1 HDR+ 1.0.198487984z
+      1 HDR+ 1.0.191678339zb
+      1 HDR+ 1.0.171916441n
+      1 HDR+ 1.0.137460761z
+      1 HDR+ 1.0.106412213y
+      1 HDR+ 1.0.106412213r
+      1 HD4.02.03.00.00
+      1 HD4.02.01.00.04
+      1 gthumb 2.11.5
+      1 GR Firmware
+      1 Greenshot Ä?
+      1 GPL Ghostscript 9.20
+      1 GPL Ghostscript 9.02
+      1 GPL Ghostscript 8.62
+      1 Google Color Efex Pro 4 4.3.24.10
+      1 Glass-1 XE21 1410200 [Gcam]
+      1 GIMP 2.9.1
+      1 GIMP 2.6.4
+      1 GIMP 2.6.3
+      1 GIMP 2.4.0-rc3
+      1 GIMP 2.10.3
+      1 gemini-user 8.0.0 OPR1.170623.032 8.8.3 release-keys
+      1 gemini-user 7.0 NRD90M V8.2.2.0.NAAMIEB release-keys
+      1 gemini-user 6.0.1 MXB48T V8.0.3.0.MAACNDH release-keys
+      1 G965U1UEU1ARBG
+      1 G960USQU1ARBI
+      1 G955FXXU1CRD7
+      1 G950U1UEU1AQH3
+      1 G935TUVU3APG1
+      1 G935FXXU2DRC1
+      1 G935FXXU1APEQ
+      1 G935FXXS1DQLC
+      1 G930VVRU4BQH4
+      1 G930VVRU4API3
+      1 G930VVRS4BRA1
+      1 G930VVRS2APF2
+      1 G930TUVU4BQH7
+      1 G930FXXU1DQH9
+      1 G930FXXU1DQD7
+      1 G930FXXU1BPH6
+      1 G930FXXS2ERH6
+      1 G930FXXS2DRDJ
+      1 G930FXXS1DRA7
+      1 G930FXXS1DQG5
+      1 G925SKSU3EQD5
+      1 G925FXXS5DQC1
+      1 G920VVRS4DRB1
+      1 G920PVPU4CPL3
+      1 G920PVPU3BOI1
+      1 G920FXXU4DPIL
+      1 G920FXXU3DPDP
+      1 G920FXXS4DPG6
+      1 G920AUCU3BOJ9
+      1 G903FXXU1APA6
+      1 G903FXXU1APA2
+      1 G900VVRU2DQL1
+      1 G900VVRU2DQH2
+      1 G900VVRU2BOK3
+      1 G900R4VXU2BOG2
+      1 G900IDVU1CQD1
+      1 G900IDVS1CPI2
+      1 G900FXXU1CPGI
+      1 G900FXXU1BOJ1
+      1 G900FXXU1BOD3
+      1 G900FXXU1ANG9
+      1 G900FXXS1CPEF
+      1 G900AUCS4DPH4
+      1 G800FXXU1CQH2
+      1 G800FXXU1AOG2
+      1 G610FXWU1BRG1
+      1 G386FXWUANK1
+      1 G357FZXXU1ANL1
+      1 G318HXCU0AOI2
+      1 F/W VER 1.8000
+      1 FW Ver 1303261
+      1 FW Ver 1301291
+      1 fw 49.01 prm 49.103
+      1 fw 05.25 prm 05.33
+      1 fw 05.11 prm 07.44
+      1 f-spot version 0.4.3.1
+      1 f-spot version 0.1.11
+      1 FRD-L09C432B402
+      1 FRD-L09C432B389
+      1 Fotoschau
+      1 FinePix Viewer Ver.1.1
+      1 FDi V4.0 / FRONTIER350/370-6.0-0E-742
+      1 Exif Viewer Ver.1.1
+      1 EXIF Software Version 0.06a
+      1 E995v1.5
+      1 E990v1.0
+      1 E5700v1.1
+      1 E5000v1.6
+      1 E4800v1.2
+      1 E4300v1.5
+      1 E3200v1.1
+      1 E3100v1.1
+      1 E2000v1.4
+      1 DYNAX 7D v1.10
+      1 DYNAX 5D v1.00
+      1 DXO Optics Pro v6
+      1 DxO Optics Pro Standard MACOSX 3.55b.6377581.356110 TF
+      1 DxO Optics Pro Standard 4.5.1 (MacOS X) W1BMVDDCW2FU
+      1 DxO OpticsPro 10.5.3 build 166
+      1 DSLR-A700 v04
+      1 DSLR-A300 v1.00
+      1 DSLR-A290 v1.00
+      1 DSC-WX80 v1.00
+      1 DSC-HX200V v1.00
+      1 DiMAGE Z2 Ver1.03
+      1 Digital Camera PDRM81 Ver1.10
+      1 Digital Camera FinePix Z20fd Ver1.00
+      1 Digital Camera FinePix S7000 Ver1.00
+      1 Digital Camera FinePix S602 ZOOM Ver1.00
+      1 Digital Camera FinePix S5800 S800 Ver1.01
+      1 Digital Camera FinePix S5700 S700 Ver1.02
+      1 Digital Camera FinePix S2700HD Ver1.02
+      1 Digital Camera FinePix S2500HD Ver1.04
+      1 Digital Camera FinePix S1500 Ver1.02
+      1 Digital Camera FinePix S1000fd Ver1.03
+      1 Digital Camera FinePix JX620 Ver1.00
+      1 Digital Camera FinePix J100 Ver1.00
+      1 Digital Camera FinePix HS30EXR Ver1.00
+      1 Digital Camera FinePix F750EXR Ver1.00
+      1 Digital Camera FinePix F72EXR Ver1.01
+      1 Digital Camera FinePix F60fd   Ver1.00
+      1 Digital Camera FinePix F480 Ver1.00
+      1 Digital Camera FinePix F31fd   Ver1.00
+      1 Digital Camera FinePix A510    Ver1.01
+      1 Digital Camera FinePix A303   Ver1.00
+      1 Digital Camera FinePix 3800   Ver1.00
+      1 Digital Camera FinePix2800ZOOM Ver7.00
+      1 Digital Camera FinePix2600Zoom Ver3.00
+      1 digiKam-4.6.0
+      1 digiKam-0.9.2-final
+      1 digiKam-0.10.0
+      1 DeltaPix InSight
+      1 darktable 2.2.5
+      1 darktable 2.2.4
+      1 darktable 2.0.7
+      1 darktable 2.0.4
+      1 darktable 1.6.9
+      1 darktable 1.6.8
+      1 D33510b
+      1 CX6 Firmware
+      1 Created with Tecplot Version 11.3.29.563 (Unix)
+      1 Corel Photo Album 6
+      1 COOLPIX S9400V1.0
+      1 COOLPIX S620V1.0
+      1 COOLPIX S5200V1.1
+      1 COOLPIX S5200V1.0
+      1 COOLPIX S5100  V1.0
+      1 COOLPIX S3300V1.0
+      1 COOLPIX S3100V1.0
+      1 COOLPIX S2600V1.0
+      1 COOLPIX S230V1.0
+      1 COOLPIX S220V1.0
+      1 COOLPIX S203V1.0
+      1 COOLPIX S200V1.0
+      1 COOLPIX S10V1.0
+      1 COOLPIX S01    V1.0
+      1 COOLPIX P510   V1.0
+      1 COOLPIX P5100V1.1
+      1 COOLPIX L840V1.0
+      1 COOLPIX L2v1.2
+      1 COOLPIX L1  V1.3
+      1 COOLPIX L1V1.2
+      1 COOLPIX L12V1.0
+      1 COOLPIX AW130  V1.1
+      1 CLT-L29 8.1.0.156(C432)
+      1 Cheese 3.22.1
+      1 Che2-L11 V100R001C432B130
+      1 CEWE / IMAGE CD
+      1 Capture One Express (for Sony) 11.0 Windows
+      1 Capture NX 2.2.8 W
+      1 Capture NX 2.2.0 W
+      1 Capture NX 2.1.1 W
+      1 Capture NX 2.1.1 M
+      1 Capture NX 1.3.0 W
+      1 capricorn-user 6.0.1 MXB48T V8.5.3.0.MAGMIED release-keys
+      1 Camera Remote Ver.3.0.0.10
+      1 Camera+ 3.0.2
+      1 CAMEDIA Master 4.3
+      1 bullhead-user 8.1.0 OPM3.171019.016 4565142 release-keys
+      1 bullhead-user 8.1.0 OPM3.171019.014 4503998 release-keys
+      1 bullhead-user 7.1.2 N2G47F 3769476 release-keys
+      1 bullhead-user 7.1.1 N4F26I 3532671 release-keys
+      1 bullhead-user 7.0 N5D91L 3425233 release-keys
+      1 bullhead-user 6.0 MDA89E 2296692 release-keys
+      1 bullhead-user 6.0.1 MHC19J 2595691 release-keys
+      1 BLN-L21C432B377
+      1 BLN-L21C432B375
+      1 BLA-L29 8.0.0.129(C432)
+      1 bardockpro-user 7.1.1 NMF26F 1.7.0_20180323-1025 release-keys
+      1 bardockpro-user 7.1.1 NMF26F 1.4.0_20171110-0936 release-keys
+      1 Auto
+      1 athene-user 7.0 NPJS25.93-14-4 4 release-keys
+      1 athene_f-user 7.0 NPJS25.93-14-15 5 release-keys
+      1 athene_f-user 7.0 NPJS25.93-14-13 3 release-keys
+      1 athene_f-user 6.0.1 MPJ24.139-63 64 release-keys
+      1 ArcSoft PhotoStudio
+      1 Aperture 3.2.2
+      1 angler-user 8.0.0 OPR5.170623.007 4302479 release-keys
+      1 angler-user 7.1.2 N2G48C 4104010 release-keys
+      1 angler-user 6.0.1 MTC20F 3031278 release-keys
+      1 Android Gallery
+      1 analySIS 3.2
+      1 ALP-AL00 8.0.0.127(SP1C00)
+      1 ALE-L21C432B614
+      1 ALE-L21C432B204
+      1 AfterShot Pro 1.0.1.10
+      1 "AfterShot 2.2.1.64"
+      1 AfterShot 2.1.0.40
+      1 Adobe Photoshop Lightroom Classic 7.3.1 (Windows)
+      1 Adobe Photoshop Lightroom Classic 7.2 (Windows)
+      1 Adobe Photoshop Lightroom Classic 7.1 (Macintosh)
+      1 Adobe Photoshop Lightroom 6.9 (Windows)
+      1 Adobe Photoshop Lightroom 6.6.1 (Windows)
+      1 Adobe Photoshop Lightroom 6.5 (Windows)
+      1 Adobe Photoshop Lightroom 6.5.1 (Windows)
+      1 Adobe Photoshop Lightroom 6.2.1 (Macintosh)
+      1 Adobe Photoshop Lightroom 6.13 (Macintosh)
+      1 Adobe Photoshop Lightroom 6.10 (Windows)
+      1 Adobe Photoshop Lightroom 4.3 (Macintosh)
+      1 Adobe Photoshop Lightroom 4.1 (Windows)
+      1 Adobe Photoshop Lightroom 3.5 (Windows)
+      1 Adobe Photoshop Lightroom 3.5 (Macintosh)
+      1 Adobe Photoshop Lightroom 3.4
+      1 Adobe Photoshop Lightroom 3.3
+      1 Adobe Photoshop Elements 9 Editor 9.0 Macintosh
+      1 Adobe Photoshop Elements 6.0
+      1 Adobe Photoshop Elements 14.0 (Windows)
+      1 Adobe Photoshop Elements 14.0 (Macintosh)
+      1 Adobe Photoshop CS6 (13.020111012.m.258 2011/10/12:21:00:00)  (Macintosh)
+      1 Adobe Photoshop CS6
+      1 Adobe Photoshop Camera Raw 9.8 (Macintosh)
+      1 Adobe Photoshop Camera Raw 9.5 (Macintosh)
+      1 Adobe Photoshop Camera Raw 9.1 (Windows)
+      1 Adobe Photoshop Camera Raw 9.0 (Macintosh)
+      1 Adobe Photoshop Camera Raw 8.8 (Macintosh)
+      1 Adobe Photoshop Camera Raw 8.7.1 (Macintosh)
+      1 Adobe Photoshop Camera Raw 8.2 (Windows)
+      1 Adobe Photoshop Camera Raw 8.1 (Macintosh)
+      1 Adobe Photoshop Camera Raw 7.1 (Macintosh)
+      1 Adobe Photoshop Camera Raw 7.0 (Macintosh)
+      1 Adobe Photoshop Camera Raw 6.7 (Macintosh)
+      1 Adobe Photoshop Camera Raw 6.6 (Macintosh)
+      1 Adobe Illustrator CS4
+      1 Adobe Fireworks CS5.1 11.1.0.205 Macintosh
+      1 Adobe Fireworks CS5 11.0.1.7 Windows
+      1 Adobe Bridge CC (Windows)
+      1 Acorn version 4.5.8
+      1 Acorn version 1.5.3
+      1 ACD Systems º∆ΩXπœπ≥
+      1 ACD Systems Gestione immagini digitali
+      1 ACDSee Pro 9
+      1 ACDSee 14
+      1 A510FXXU4BQD1
+      1 A510FXXU3BQA3
+      1 A510FXXU3BPK4
+      1 A510FXXS5CRD3
+      1 A500YDVU1BOK1
+      1 A500MUBU1CPH3
+      1 9.2.A.1.210_58_f100
+      1 908042
+      1 8.1
+      1 711021
+      1 7.0.3
+      1 7.0
+      1 6.2.B.1.96_58_f100
+      1 6.2.A.1.100_56_a246
+      1 6.1
+      1 503241
+      1 5.0
+      1 4580BWDLx0200B
+      1 4.3.4
+      1 4.3.3
+      1 4.2.rel.12859
+      1 4.2.6
+      1 42-0120
+      1 4.11.0
+      1 34-1036
+      1 34-1018
+      1 3.4.0-g478f124
+      1 32.2.A.5.11_0_f500
+      1 3.10.84-perf-ge19f521
+      1 26.1.A.3.111
+      1 23.5.A.1.291_6_f1000010
+      1 23.4.A.1.232_6_f1000010
+      1 23.4.A.0.546_6_f100000f
+      1 23.1.G.2.244_6_f1000010
+      1 23.1.A.1.28_6_f100000f
+      1 23.0.1.A.5.77_6_f100000f
+      1 22-1014
+      1 2011/04/08 16:00
+      1 2.0.1
+      1 1224-4699_R2AK007.02-03-10..(c) SonyEricsson
+      1 1.21.0
+      1 12.1
+      1 1200EDGJMJ32F51SA0
+      1 12.0
+      1 11.0.1
+      1 1.03_O
+      1 1.02
+      1 1002251
+      1   0.7800
+      1   0.6c00
+      1 01.15
