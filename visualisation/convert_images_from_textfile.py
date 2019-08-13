@@ -8,6 +8,7 @@ import itertools
 import subprocess
 from subprocess import Popen, PIPE, TimeoutExpired
 import os
+import signal
 import shlex
 import time
 import sys
@@ -25,10 +26,6 @@ from time import monotonic as timer
 
 from PIL import Image
 import math
-
-
-# In[ ]:
-
 
 parser = argparse.ArgumentParser(description='Script for converting images from a textfile')
 
@@ -91,17 +88,16 @@ end = time.time()
 print("finished loading filepaths")
 print("time taken:", end - start)
 
-
-# In[ ]:
-
-
 print("*" * 20)
 print("checking the first filepath and id:")
 print(filepaths[start_line], image_ids[start_line])
 print("*" * 20)
 
+# handle Ctrl+C
+def signal_handler(signal, frame):
+  sys.exit(0)
 
-# In[ ]:
+signal.signal(signal.SIGINT, signal_handler)
 
 
 # arguments for convert
