@@ -2,9 +2,6 @@
 # coding: utf-8
 
 import os
-# import matplotlib.pyplot as plt
-# from PIL import Image
-
 from tkinter import *
 from PIL import ImageTk, Image
 import time
@@ -22,7 +19,8 @@ global targetpath
 if args.targetpath is not None:
     targetpath = args.targetpath
 else:
-    targetpath = "/home/rte/data/images/random/seq/0-100k/"
+    # targetpath = "/home/rte/data/images/random/seq/0-100k/"
+    targetpath = 'data/'
 
 # create required directories
 diagram_path = targetpath + "diagram/"
