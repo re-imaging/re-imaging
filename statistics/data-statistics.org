@@ -53,6 +53,10 @@ list of categories: http://arxitics.com/help/categories
 
 392 months
 
+~3816 articles per month (mean across entire timespan)
+
+~25668 images per month (mean across entire timespan)
+
 * Text
 ** Total number of articles
 

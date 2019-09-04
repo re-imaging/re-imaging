@@ -28,7 +28,7 @@ find . -maxdepth 2 -name "*.pdf" -print -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "
 
 # do the extraction here as it will operate only on the papers that were given only as pdf
 # extract all images from pdf files
-find . -maxdepth 3 -name "*.pdf" -print -exec sh -c 'pdfimages -png "${1}" "${1}_image" ' _ {} \;
+# find . -maxdepth 3 -name "*.pdf" -print -exec sh -c 'pdfimages -png "${1}" "${1}_image" ' _ {} \;
 
 # extract text from pdf files
 find . -name "*.pdf" -print -exec sh -c 'pdftotext "${1}" "${1%.*}_get.txt" ' _ {} \;
