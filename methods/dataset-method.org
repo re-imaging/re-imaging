@@ -32,7 +32,7 @@ Totals:
 - During this process, images and text are extracted from each PDF file using pdf-images and pdftotext (this can be omitted, see below)
 
 Totals:
-- 1,483,662 total articles
+- 1,476,538 total articles (by number of folders extracted)
 - 114,132 PDF-only articles (no source provided)
 - 324,101 source-only articles (single source file only, no images)
 
