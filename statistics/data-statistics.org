@@ -14,20 +14,19 @@ This document contains various data statistics relating to the text and image da
   - [[#number-of-text-files-extracted-from-pdfs][Number of text files extracted from PDFs]]
   - [[#number-of-articles-that-include-source-generally-in-tex-or-latex-format][Number of articles that include source (generally in TeX or LaTeX format)]]
   - [[#number-of-source-only-articles-single-source-file-only][Number of source-only articles (single source file only)]]
-  - [[#total-number-of-characters-of-text-files][Total number of characters of text files]]
-  - [[#different-formats-of-text-files][Different formats of text files]]
+  - [[#articles-with-at-least-one-image][Articles with at least one image]]
   - [[#articles-by-monthyear][Articles by month/year]]
   - [[#articles-by-year][Articles by year]]
   - [[#number-of-articles-by-licence][Number of articles by licence]]
-  - [[#number-of-articles-by-category][Number of articles by category]]
+  - [[#number-of-articles-by-primary-category][Number of articles by primary category]]
 - [[#data][Data]]
   - [[#total-data-size][Total data size]]
   - [[#number-of-tar-archive-files][Number of tar archive files]]
   - [[#number-of-folders-with-ancillary-files-provided][Number of folders with ancillary files provided]]
 - [[#images][Images]]
+  - [[#number-of-images-total][Number of images total]]
   - [[#number-of-images-extracted-from-pdfs][Number of images extracted from PDFs]]
   - [[#list-of-all-different-image-file-extensions][List of all different image file extensions]]
-  - [[#number-of-images-total][Number of images total]]
   - [[#average-number-of-images-per-article][Average number of images per article]]
   - [[#average-size-of-images][Average size of images]]
   - [[#distribution-of-size-of-images-perhaps-divisions-of-common-resolutions-480p-240p-etc][Distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)]]
@@ -74,7 +73,7 @@ find . -type d  -mindepth 2 -maxdepth 2 | wc -l
 
 114,132
 
-(7.69% of total articles)
+(114,132 / 1,476,538 = 7.72% of total articles)
 
 #+BEGIN_SRC bash
 # find all pdf files
@@ -93,7 +92,9 @@ find . -name "*.pdf" | wc -l
 
 ** Number of source-only articles (single source file only)
 
-324,101 
+324,101
+
+(324,101 / 1,476,538 = 21.95% of total articles)
 
 #+BEGIN_SRC bash
 # command to find all .gz files
@@ -101,9 +102,11 @@ find . -type f -name "*.gz" | wc -l
 # would now need a more complex command to check for this, gz files have been extracted
 #+END_SRC
 
-** Total number of characters of text files
+** Articles with at least one image
 
-** Different formats of text files
+1,476,538 - 324,101 - 114,132 = 1038305
+
+(1038305 / 1,476,538 = 70.32% of total articles)
 
 ** Articles by month/year
 # [2019-04-17 Wed]
@@ -464,7 +467,6 @@ find . -type f -name "*.gz" | wc -l
 | 11-2018 | 12898 |
 | 12-2018 | 11837 |
 | 01-2019 | 11440 |
-| 02-2019 | 11010 |
 |---------+-------|
 #+tblfm:
 ** Articles by year
@@ -505,7 +507,6 @@ find . -type f -name "*.gz" | wc -l
 | 2016 |   113422 |
 | 2017 |   123750 |
 | 2018 |   140242 |
-| 2019 |    22721 |
 |------+----------|
 
 ** Number of articles by licence 
@@ -524,7 +525,7 @@ find . -type f -name "*.gz" | wc -l
 | http://creativecommons.org/publicdomain/zero/1.0/   |    1883 |
 | http://creativecommons.org/licenses/by-sa/4.0/      |    1608 |
 |-----------------------------------------------------+---------|
-** Number of articles by category
+** Number of articles by primary category
 |---------+--------------------|
 |      47 | acc-phys           |
 |     306 | adap-org           |
@@ -725,23 +726,6 @@ find . -name "anc" | wc -l
 #+END_SRC
 
 * Images
-** Number of images extracted from PDFs
-
-27,198,781
-
-** List of all different image file extensions
-
-see https://github.com/re-imaging/re-imaging/blob/master/arxiv-src-scripts/format_totals_final.txt 
-# from [2019-02-09 Sat] pre-gz unzip
-
-#+BEGIN_SRC bash
-# command for finding files using perl
-find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
-
-# or all in one go, getting totals and writing to text file
-find . -type f | grep -E ".*\.[a-zA-Z0-9]*$" | sed -e 's/.*\(\.[a-zA-Z0-9]*\)$/\1/' | sort | uniq -c | sort -n > ../format_totals_final.txt
-#+END_SRC
-
 ** Number of images total
 
 10,061,873  
@@ -759,6 +743,23 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
 10,061,232  
 (this is the total number of rows in the sqlite database, written via the find command)
 # [2019-04-12 Fri]
+
+** Number of images extracted from PDFs
+
+27,198,781
+
+** List of all different image file extensions
+
+see https://github.com/re-imaging/re-imaging/blob/master/arxiv-src-scripts/format_totals_final.txt 
+# from [2019-02-09 Sat] pre-gz unzip
+
+#+BEGIN_SRC bash
+# command for finding files using perl
+find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
+
+# or all in one go, getting totals and writing to text file
+find . -type f | grep -E ".*\.[a-zA-Z0-9]*$" | sed -e 's/.*\(\.[a-zA-Z0-9]*\)$/\1/' | sort | uniq -c | sort -n > ../format_totals_final.txt
+#+END_SRC
 
 ** Average number of images per article
 
