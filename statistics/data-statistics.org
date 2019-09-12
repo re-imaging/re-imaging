@@ -744,13 +744,17 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
 (this is the total number of rows in the sqlite database, written via the find command)
 # [2019-04-12 Fri]
 
+10,053,059
+(total in filepaths_all_images.txt)
+# [2019-09-12 Thu]
+
 ** Number of images extracted from PDFs
 
 27,198,781
 
 ** List of all different image file extensions
 
-see https://github.com/re-imaging/re-imaging/blob/master/arxiv-src-scripts/format_totals_final.txt 
+see https://github.com/re-imaging/re-imaging/blob/master/statistics/file_extension_totals.org
 # from [2019-02-09 Sat] pre-gz unzip
 
 #+BEGIN_SRC bash
@@ -785,24 +789,24 @@ calculated using sqlite database
 |----------+--------|
 |    total | format |
 |----------+--------|
-|      606 | .gif   |
-|      919 | .jpeg  |
-|     1386 | .pdf   |
-|     3425 | .epsf  |
-|     5236 | .ps    |
-|     7788 | .jpg   |
-|    11256 | .png   |
-|    12404 | .svg   |
-|    15182 | .epsi  |
-|    18496 | .gif   |
-|    24190 | .pstex |
-|    25141 | .eps   |
-|    26164 | .jpeg  |
-|   450816 | .jpg   |
-|   905970 | .ps    |
-|  1090973 | .png   |
-|  3299213 | .pdf   |
 |  4202415 | .eps   |
+|  3299213 | .pdf   |
+|  1090973 | .png   |
+|   905970 | .ps    |
+|   450816 | .jpg   |
+|    26164 | .jpeg  |
+|    25141 | .eps   |
+|    24190 | .pstex |
+|    18496 | .gif   |
+|    15182 | .epsi  |
+|    12404 | .svg   |
+|    11256 | .png   |
+|     7788 | .jpg   |
+|     5236 | .ps    |
+|     3425 | .epsf  |
+|     1386 | .pdf   |
+|      919 | .jpeg  |
+|      606 | .gif   |
 |----------+--------|
 | 10101580 | total  |
 |----------+--------|
@@ -810,16 +814,16 @@ calculated using sqlite database
 ** Primary image formats (combined, case-insensitive)
 
 |----------+--------|
-|     3425 | .epsf  |
-|    12404 | .svg   |
-|    15182 | .epsi  |
-|    19102 | .gif   |
-|    24190 | .pstex |
-|   485687 | .jpg   |
-|   911206 | .ps    |
-|  1102229 | .png   |
-|  3300599 | .pdf   |
 |  4227556 | .eps   |
+|  3300599 | .pdf   |
+|  1102229 | .png   |
+|   911206 | .ps    |
+|   485687 | .jpg   |
+|    24190 | .pstex |
+|    19102 | .gif   |
+|    15182 | .epsi  |
+|    12404 | .svg   |
+|     3425 | .epsf  |
 |----------+--------|
 | 10101580 | total  |
 |----------+--------|
