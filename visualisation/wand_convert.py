@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
+from wand.image import Image
 
 import argparse
 import itertools
@@ -21,7 +18,6 @@ import os
 import signal
 from time import monotonic as timer
 
-from PIL import Image
 import math
 
 parser = argparse.ArgumentParser(description='Script for converting images from a textfile')
@@ -32,7 +28,7 @@ parser.add_argument('--start_line', default=0, type=int, help='line to read text
 parser.add_argument('--timeout', default=30, type=int, help='timeout for convert command (default: 30)')
 parser.add_argument('--verbose', action='store_true', help='verbose output')
 parser.add_argument('--missing', action='store_true', help='write missing output file: True/False')
-parser.add_argument('--lowdensity', action='store_true', help='run convert with lower density (default: False)')
+parser.add_argument('--lowdensity', action='store_true', help='run convert without density action (default: False)')
 
 # convert_path = "/home/rte/data/images/random/100k/test/"
 # convert_path = sys.argv[2]
@@ -96,7 +92,7 @@ signal.signal(signal.SIGINT, signal_handler)
 
 # arguments for convert
 if args.lowdensity:
-    prearg = shlex.split("-density 150 -colorspace CMYK")
+    prearg = shlex.split("-colorspace CMYK")
 else:
     prearg = shlex.split("-density 300 -colorspace CMYK")
 arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
@@ -112,7 +108,9 @@ print("logging missing files to:",missing_logpath)
 
 overall_start = time.time()
 
-for image_id, filepath in zip(image_ids[start_line:], filepaths[start_line:]):
+filepaths_copy = filepaths[start_line:]
+
+for image_id, filepath in zip(image_ids[start_line:], filepaths_copy):
 
     start = time.time()
 
@@ -135,20 +133,39 @@ for image_id, filepath in zip(image_ids[start_line:], filepaths[start_line:]):
     if os.path.isfile(str(outputname[0])):
         if args.verbose:
             print("file already exists!:",outputname)
+
+    # remove filepath - this could be done better probably
+        filepaths.remove(filepath)
+
     else:
         missing_count += 1
 
-        if args.verbose:
-            print("*" * 20)
-            print("file doesn't exist, converting")
+        print("*" * 20)
+        print("file doesn't exist")
         # write file path to missing log
         if args.missing:
             f = open(missing_logpath, "a+")
             f.write(filepath + "," + image_id + "\n")
             f.close()
+
+print("length of original filepaths:",len(filepaths_copy))
+print("length of current filepaths:",len(filepaths))
+
+outputnames = []
+for image_id, filepath in zip(image_ids[start_line:], filepaths):
+    outputnames.append([convert_path + str(image_id) + ".jpg"])
+print("length of outputnames:",len(outputnames))
+
+
+# es = 'Finished conversion of {} to {}'
+# p = Pool()
+# for infn, outfn in p
+
+if False:
+    if False:
         # call the montage command and parse list of files and arguments
         convert_cmd = ["convert"] + prearg + [":" + filepath + "[0]"] + arguments + outputname
-        print(convert_cmd)
+        # print(convert_cmd)
 
         extension = filepath.rsplit(".", 1)[1]
         print(extension)
@@ -167,16 +184,35 @@ for image_id, filepath in zip(image_ids[start_line:], filepaths[start_line:]):
         #         print("error converting PNG")
         # # if not a PNG
         # else:
+
+        # Try running conversion command
         if True:
             try:
+                # NEW MAGICK WAND
+                with Image(filename=filepath + "[0]", resolution=300) as img:
+                    # img.units = 'pixelsperinch'
+                    # img.resolution = (300, 300)
+                    img.transform_colorspace("cmyk")
+                    img.transform_colorspace("srgb")
+                    img.backgroun = "white"
+                    img.alpha = "background"
+                    img.trim()
+                    img.reset_coords()
+                    img.merge_layers("flatten")
+                    img.transform(resize="512x512^>")
+                    img.format = 'jpeg'
+                    img.save(filename=str(outputname[0]))
+
+                # Subprocess
                 # subprocess.run(convert_cmd, timeout=args.timeout)
-                child = subprocess.Popen(convert_cmd, universal_newlines=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-                output,error = child.communicate(timeout=args.timeout)
-                if child.returncode != 0:
-                    raise Exception("exception")
-                    print("returncode:",child.returncode)
-                    print("output:",output)
-                    print("error:",error)
+
+                # child = subprocess.Popen(convert_cmd, universal_newlines=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                # output,error = child.communicate(timeout=args.timeout)
+                # if child.returncode != 0:
+                #     raise Exception("exception")
+                #     print("returncode:",child.returncode)
+                #     print("output:",output)
+                #     print("error:",error)
 
             except TimeoutExpired:
 
@@ -228,6 +264,3 @@ print("total number of items:",counter)
 end = time.time()
 print("total time taken:", end - overall_start)
 print("number of missing files:",missing_count)
-
-
-# In[ ]:

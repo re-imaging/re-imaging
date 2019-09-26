@@ -1,6 +1,10 @@
 #ignore log files
 *log*.txt
 
+#ignore filepath text files
+*filelist*.txt
+*filenames*.txt
+
 #ignore files starting with .#
 .#*
 
@@ -9,6 +13,15 @@
 
 #ignore subfolders
 old/
+explain/
+notebooks/
+classification/*/
+visualisation/paths/
+visualisation/logs/
+visualisation/heatmap/
+extra/
+ml-scripts/
 
-#ignore jupyter notebook checkpoints
+#ignore jupyter notebook checkpoints and config files
 .ipynb_checkpoints
+.config_ipynb
