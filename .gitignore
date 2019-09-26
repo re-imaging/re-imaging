@@ -1,10 +1,14 @@
-data/arxiv_db_images.sqlite3
-### JupyterNotebook ###
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
+#ignore log files
+*log*.txt
 
-### Linux ###
+#ignore files starting with .#
+.#*
+
+#ignore emacs backups
 *~
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
+#ignore subfolders
+old/
+
+#ignore jupyter notebook checkpoints
+.ipynb_checkpoints
