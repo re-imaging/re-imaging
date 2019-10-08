@@ -6,6 +6,7 @@ pwd
 
 count=0
 
+# find all relevant image files
 find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "*.ps" -o -iname "*.jpg" \
 -o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" \) \
 -not -name "*pdf_image-*" | while read fullpath; do
@@ -26,6 +27,8 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
   pdfarticle="${article}.pdf"
   # echo $pdfarticle
   # echo "----------"
+
+  # check that the filename is not the same as the article ID, indicating a PDF of the article
   if [[ $name != $pdfarticle ]];
   then
     count=$((count+1))
@@ -43,6 +46,7 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
     imageformat="$(cut -d' ' -f3 <<< "$res")"
     # echo $imageformat
 
+    # insert row into sqlite3
     sqlite3 /home/rte/data/db/arxiv_db_test.sqlite3 "INSERT INTO images \
     (identifier, filename, filesize, path, x, y, imageformat) \
     VALUES (\"$article\", \"$name\", \"$filesize\", \"$path\", \"$x\", \"$y\", \"$imageformat\");"

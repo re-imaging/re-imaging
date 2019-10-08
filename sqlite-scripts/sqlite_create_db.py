@@ -1,7 +1,5 @@
 import sqlite3
-# import pandas as pd
 
-table_name = "metadata"
 db_path = "/home/rte/data/db/arxiv_db.sqlite3"
 
 try:
@@ -10,11 +8,17 @@ try:
     # creates or opens a file database
     db = sqlite3.connect(db_path)
 
-    # get cursor object
+    # get cursor object and create metadata table
     c = db.cursor()
     c.execute('''
         CREATE TABLE metadata(id INTEGER PRIMARY KEY, identifier TEXT, created TEXT, \
         cat TEXT, authors TEXT, title TEXT, abstract TEXT, licence TEXT)
+    ''')
+
+    # create images table
+    c.execute('''
+        CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
+        filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
     ''')
 
     # c.execute('''

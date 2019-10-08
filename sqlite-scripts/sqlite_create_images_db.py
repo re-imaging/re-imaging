@@ -1,6 +1,8 @@
 import sqlite3
 # import pandas as pd
 
+# !!! this code now included in sqlite_create_db.py !!!
+
 db_path = "/home/rte/data/db/arxiv_db.sqlite3"
 
 try:

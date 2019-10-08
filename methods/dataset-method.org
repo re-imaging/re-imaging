@@ -246,6 +246,43 @@ Totals
 - Create a table for individual images, iterate over all image files of relevant file extensions and insert a row into table for each
 - Be able to query database for any images for a given article or metadata query, or matching metadata for a given image
 
+Creating SQLite3 database
+#+BEGIN_SRC python
+import sqlite3
+
+db_path = "/home/rte/data/db/arxiv_db.sqlite3"
+
+try:
+    db = sqlite3.connect(db_path)
+
+    c = db.cursor()
+    c.execute('''
+        CREATE TABLE metadata(id INTEGER PRIMARY KEY, identifier TEXT, created TEXT, \
+        cat TEXT, authors TEXT, title TEXT, abstract TEXT, licence TEXT)
+    ''')
+
+    # create images table
+    c.execute('''
+        CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
+        filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
+    ''')
+
+    db.commit()
+
+except Exception as e:
+    db.rollback()
+    raise e
+finally:
+    db.close()
+#+END_SRC
+
+Inserting article metdata
+see oai-metadata-scripts/oai_to_sqlite.py for code for parsing OAI xml files and inserting relevant data into SQLite table
+#+BEGIN_SRC bash
+python oai-metadata-scripts/oai_to_sqlite.py
+#+END_SRC
+
+Inserting image metadata
 #+BEGIN_SRC bash
 # for full code, see file image_data_to_sql.sh
 # code also reproduced in python, see image_data_to_sql.py
