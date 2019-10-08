@@ -131,6 +131,7 @@ File organisation
 - diagrams
 - text
 *** Directory structure (tree command)
+#+BEGIN_SRC bash
 1801/
 ├── 1801.00001
 │   ├── Einstein_Ring.tex
@@ -179,6 +180,7 @@ File organisation
 │   ├── main.bbl
 │   └── main.tex
         ...
+#+END_SRC
 
 *** Filenames
 - Each article in the source directory has its own folder named in the format of YYMM.XXXXX (or only 4 digits in the form of YYMM.XXXX for pre-2015). Articles prior to March 2007 (9107-0703) use the identifier archive.subjectclass/YYMMXXX e.g. math.GT/0309136
