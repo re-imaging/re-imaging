@@ -30,7 +30,8 @@ global args
 args = parser.parse_args()
 
 if args.lowdensity:
-    prearg = shlex.split("-density 150 -colorspace CMYK")
+    # prearg = shlex.split("-density 72 -colorspace CMYK")
+    prearg = shlex.split("-colorspace CMYK")
 else:
     prearg = shlex.split("-density 300 -colorspace CMYK")
 arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
@@ -166,6 +167,7 @@ def main():
         # print("missing:",args.missing)
         print("lowdensity:",args.lowdensity)
         print("reverse:",args.reverse)
+        print("number of threads:",args.num_threads)
 
     filepaths = []
     image_ids = []

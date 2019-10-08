@@ -17,14 +17,14 @@ parser.add_argument('convert_path', help='path to destination folder')
 parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')
 parser.add_argument('--timeout', default=30, type=int, help='timeout for convert command (default: 30)')
 # parser.add_argument('--missing', action='store_true', help='write missing output file: True/False')
-parser.add_argument('--lowdensity', action='store_true', help='run convert without density action (default: False)')
+parser.add_argument('--lowdensity', action='store_true', help='run convert with lower density (dpi) (default: False)')
 parser.add_argument('-v', '--verbose', action='store_true', help='verbose output')
 
 global args
 args = parser.parse_args()
 
 if args.lowdensity:
-    prearg = shlex.split("-density 150 -colorspace CMYK")
+    prearg = shlex.split("-density 72 -colorspace CMYK")
 else:
     prearg = shlex.split("-density 300 -colorspace CMYK")
 arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
