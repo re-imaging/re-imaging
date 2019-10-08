@@ -1,6 +1,4 @@
 * Re-imaging the Empirical
-Research Project
-
 Working with arXiv source dataset for image analysis, processing, and machine learning.
 
 Process for downloading, extracting, unarchiving, and organising data for usage in machine learning applications as well as data mining.
@@ -12,14 +10,50 @@ Process for downloading, extracting, unarchiving, and organising data for usage 
 - Download took several days
 - Used s3cmd (https://s3tools.org/s3cmd and https://github.com/s3tools/s3cmd) for automated downloads using the --sync function (NB: turning off MD5 hash checking greatly speeds up process, but use with caution)
 
+#+BEGIN_SRC bash
+# first set up s3cmd with username and password
+
+# testing - list files
+s3cmd ls --requester-pays s3://arxiv/src/ 2>&1 | tee ~/s3cmd_log.txt
+
+# get manifests
+s3cmd get --requester-pays s3://arxiv/src/arXiv_src_manifest.xml
+s3cmd get --requester-pays s3://arxiv/pdf/arXiv_pdf_manifest.xml
+
+# NOTE: sync commands take a long time to begin due to checking md5s etc.
+# may not respond or output any text for some time
+
+# dry run
+s3cmd sync --requester-pays -n s3://arxiv/src/ /mnt/hd-4tb/arXiv/src/
+
+# sync with md5 check -- !!! this takes a long time !!!
+s3cmd sync --requester-pays -v s3://arxiv/src/ /mnt/hd-4tb/arXiv/src/ 2>&1 | tee ~/s3cmd_log_checkmd5.txt
+# sync without check and skipping existing
+s3cmd sync --requester-pays --skip-existing --no-check-md5 -v s3://arxiv/src/ /mnt/hd-4tb/arXiv/src/ 2>&1 | tee ~/s3cmd_log.txt
+#+END_SRC
+
 Totals:
 - 2150 compressed tar archive files
 
 ** Step 1b: Download OAI metadata
 - arXiv maintains metadata for articles via the Open Access Initiative v2.0 protocol. This allows users to query the server to retrieve metadata relating to a particular time period or set (category, e.g. math)
 - As we require the entire metadata database, we used a harvesting tool to request the metadata for the entire time range, which is downloaded incrementally in blocks of approximately 10,000 items
-- Second attempt used metha (https://github.com/miku/metha). Metha is a command line harvester that incrementally caches a particular endpoint. This attempt produced 1506176 (1.5m) unique records
 - Initial attempt at downloading metadata used oai-harvest (https://github.com/bloomonkey/oai-harvest). While simple to setup and use, the download only produced approximately 1.1 million records, which is much less than the expected 1.5 million records. The tool also downloaded items as individual xml files that each hold one record only, which has proven somewhat unwieldy
+- Second attempt used metha (https://github.com/miku/metha). Metha is a command line harvester that incrementally caches a particular endpoint. This attempt produced 1506176 (1.5m) unique records
+
+#+BEGIN_SRC bash
+
+# first install metha using instructions from https://github.com/miku/metha
+
+# check metha folder -- might not give output if not previously run
+metha-sync -dir http://export.arxiv.org/oai2
+
+# run harvester
+metha-sync -format arXiv http://export.arxiv.org/oai2
+
+# run harvester with date constraints
+metha-sync -format arXiv -from 2019-01-01 http://export.arxiv.org/oai2
+#+END_SRC
 
 Totals:
 - 1506176 OAI records across 1578 xml files
@@ -30,6 +64,48 @@ Totals:
 - Recommended to run each step individually and inspect for errors
 - Extracting and unarchiving will take a long time
 - During this process, images and text are extracted from each PDF file using pdf-images and pdftotext (this can be omitted, see below)
+
+See arxiv_extract.sh - some code reproduced here:
+
+#+BEGIN_SRC bash
+# after downloading all arXiv tars and placing them in ~/arXiv/src
+
+# change into directory
+cd ~
+mkdir arXiv
+cd ~/arXiv/
+mkdir src_all
+
+# for each archive, decompress into a specific folder
+for i in src/*; do tar xvf $i -C src_all/; done
+
+# change directory - remaining commands are done from here
+cd ~/arXiv/src_all
+
+# move all pdf files to their own folder
+find . -maxdepth 2 -name "*.pdf" -print -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "${1%.*}" ' _ {} \;
+
+# do the extraction here as it will operate only on the papers that were given only as pdf
+# extract all images from pdf files
+# find . -maxdepth 3 -name "*.pdf" -print -exec sh -c 'pdfimages -png "${1}" "${1}_image" ' _ {} \;
+
+# extract text from pdf files
+find . -name "*.pdf" -print -exec sh -c 'pdftotext "${1}" "${1%.*}_get.txt" ' _ {} \;
+
+# for each archive within each subfolder
+# find all gz tars, extract, and then delete the gz files
+for d in *; do cd "$d" && for f in *.gz; do tar xvfz "$f" --one-top-level && rm "$f"; done; cd ..; done
+
+# note that some of the archives are gz only and not tar
+# seems to be because they only contain one file
+# so for these we use gunzip which neatly replaces each .gz with a text file
+find . -name "*.gz" -exec gunzip -v -q {} \;
+
+# and for each individual (tex) file, make a folder and move the item to that folder
+# note this needs to do some trickery as many of these files don't have extensions and we can't make a folder of the same name
+find . -maxdepth 2 -type f -print -exec sh -c 'mkdir "${1}_dir" ; mv "$1" "${1}.srconly"  ; mv "${1}.srconly" "${1}_dir" ; mv "${1}_dir" "$1"' _ {} \;
+
+#+END_SRC
 
 Totals:
 - 1,476,538 total articles (by number of folders extracted)
@@ -119,4 +195,47 @@ Totals
 - Create a table for individual images, iterate over all image files of relevant file extensions and insert a row into table for each
 - Be able to query database for any images for a given article or metadata query, or matching metadata for a given image
 
-- In progress as of 20190311
+#+BEGIN_SRC bash
+# for full code, see file image_data_to_sql.sh
+# code also reproduced in python, see image_data_to_sql.py
+
+# find all relevant image files
+find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "*.ps" -o -iname "*.jpg" \
+-o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" \) \
+-not -name "*pdf_image-*" | while read fullpath; do
+
+  article="$(cut -d'/' -f3 <<< "$fullpath")"
+  path="${fullpath%/*}"
+  name="${fullpath##*/}"
+
+  pdfext=$article
+
+  pdfarticle="${article}.pdf"
+
+  # check that the filename is not the same as the article ID, indicating a PDF of the article
+  if [[ $name != $pdfarticle ]];
+  then
+    count=$((count+1))
+    echo $count
+
+    filesize=$(stat --printf="%s" "$fullpath")
+
+    res="$(identify -ping -format "%w %h %m" "$fullpath")"
+
+    x="$(cut -d' ' -f1 <<< "$res")"
+
+    y="$(cut -d' ' -f2 <<< "$res")"
+
+    imageformat="$(cut -d' ' -f3 <<< "$res")"
+
+    # insert row into sqlite3
+    sqlite3 /home/rte/data/db/arxiv_db_test.sqlite3 "INSERT INTO images \
+    (identifier, filename, filesize, path, x, y, imageformat) \
+    VALUES (\"$article\", \"$name\", \"$filesize\", \"$path\", \"$x\", \"$y\", \"$imageformat\");"
+  fi
+done
+
+#+END_SRC
+
+*** Further information
+- In progress as of [2019-10-08 Tue]

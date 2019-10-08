@@ -12,16 +12,23 @@
 # - finishes extracting all tar and gz zipped archives
 # - moves each text only article to its own individual folder
 
-# after downloading the files, change into directory
+# after downloading all arXiv tars and placing them in ~/arXiv/src
+# change into directory
+cd ~
+mkdir arXiv
 cd ~/arXiv/
+mkdir src_all
 
-# get list of all archives
+# it may also be helpful to place the data on a secondary drive and create a symlink
+
+# test - get list of all archives
 for i in src/*; do echo $i; done
+
 # for each archive, decompress into a specific folder
 for i in src/*; do tar xvf $i -C src_all/; done
 
 # change directory - remaining commands are done from here
-cd ../src_all
+cd ~/arXiv/src_all
 
 # move all pdf files to their own folder
 find . -maxdepth 2 -name "*.pdf" -print -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "${1%.*}" ' _ {} \;
