@@ -130,6 +130,55 @@ File organisation
 - figures
 - diagrams
 - text
+*** Directory structure (tree command)
+1801/
+├── 1801.00001
+│   ├── Einstein_Ring.tex
+│   ├── Fig_1.jpg
+│   ├── Fig_2.jpg
+│   ├── Fig_3.jpg
+│   ├── Fig_4.jpg
+│   └── Fig_5.jpg
+├── 1801.00002
+│   ├── 1801.00002_get.txt
+│   ├── 1801.00002.pdf
+│   ├── 1801.00002.pdf_image-000.png
+│   ├── 1801.00002.pdf_image-001.png
+│   ├── 1801.00002.pdf_image-002.png
+│   ├── 1801.00002.pdf_image-003.png
+│   ├── 1801.00002.pdf_image-004.png
+│   └── 1801.00002.pdf_image-005.png
+├── 1801.00003
+│   ├── 0_285-eps-converted-to.pdf
+│   ├── 0_57-eps-converted-to.pdf
+│   ├── 1_4-eps-converted-to.pdf
+│   ├── bubble-eps-converted-to.pdf
+│   ├── e_2-eps-converted-to.pdf
+│   ├── He_a.jpg
+│   ├── He_c.jpg
+│   ├── He_d.jpg
+│   ├── ...
+│   └── u_1-eps-converted-to.pdf
+        ...
+
+1802/
+├── 1802.00001
+│   └── 1802.00001.srconly
+├── 1802.00002
+│   ├── draft.tex
+│   ├── IEEEtran.cls
+│   ├── images_anomalydetection
+│   │   ├── apattern.png
+│   │   ├── cnn.png
+│   │   ├── football_patterns.png
+│   │   ├── onehot-game.png
+│   │   ├── patterns.png
+│   │   ├── ROC.png
+│   │   ├── scenarios.png
+│   │   └── workflow.png
+│   ├── main.bbl
+│   └── main.tex
+        ...
 
 *** Filenames
 - Each article in the source directory has its own folder named in the format of YYMM.XXXXX (or only 4 digits in the form of YYMM.XXXX for pre-2015). Articles prior to March 2007 (9107-0703) use the identifier archive.subjectclass/YYMMXXX e.g. math.GT/0309136
