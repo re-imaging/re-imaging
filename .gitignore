@@ -14,7 +14,7 @@
 #ignore subfolders
 old/
 explain/
-notebooks/
+notebooks-ml4a/
 classification/*/
 visualisation/paths/
 visualisation/logs/
