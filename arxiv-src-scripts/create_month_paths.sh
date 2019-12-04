@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# NB: see image_paths_to_txt.sh instead
+
 # this script moves to each subfolder, runs a find command, and then creates
 # a matching text file that lists all the relevant paths
 

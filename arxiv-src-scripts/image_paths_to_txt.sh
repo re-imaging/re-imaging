@@ -1,4 +1,13 @@
 #!/bin/bash
+
+# script that runs a find command from a target directory and
+# creates a text file with all of the file paths
+# this was then used to run commands over each file in order
+
+# arguments
+# 1 - source directory to run find from
+# 2 - target text file to write paths
+
 set -o nounset
 set -o errexit
 

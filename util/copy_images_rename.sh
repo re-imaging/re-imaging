@@ -1,5 +1,14 @@
 #!/bin/bash
 
+# script to copy files from a source to destination folder
+# uses a text file with file paths
+# renames folders according to their line number in the file paths text file
+
+# arguments
+# 1 - source directory
+# 2 - target directory
+# 3 - text file containing image paths
+
 set -o nounset
 set -o errexit
 

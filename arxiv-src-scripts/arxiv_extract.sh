@@ -13,11 +13,12 @@
 # - moves each text only article to its own individual folder
 
 # after downloading all arXiv tars and placing them in ~/arXiv/src
-# change into directory
 cd ~
 mkdir arXiv
-cd ~/arXiv/
+cd arXiv
 mkdir src_all
+mkdir src
+# move source tars now
 
 # it may also be helpful to place the data on a secondary drive and create a symlink
 
@@ -33,7 +34,7 @@ cd ~/arXiv/src_all
 # move all pdf files to their own folder
 find . -maxdepth 2 -name "*.pdf" -print -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "${1%.*}" ' _ {} \;
 
-# do the extraction here as it will operate only on the papers that were given only as pdf
+# do PDF image extraction here as it will operate only on the papers that were given only as pdf
 # extract all images from pdf files
 # find . -maxdepth 3 -name "*.pdf" -print -exec sh -c 'pdfimages -png "${1}" "${1}_image" ' _ {} \;
 
