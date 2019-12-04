@@ -1,6 +1,9 @@
+# create an SQLite database with tables for metadata and images
+
 import sqlite3
 
-db_path = "/home/rte/data/db/arxiv_db.sqlite3"
+# db_path = "/home/rte/data/db/arxiv_db.sqlite3"
+db_path = "/home/rte/data/db/test_db.sqlite3"
 
 try:
     # create a database in RAM
@@ -20,6 +23,8 @@ try:
         CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
         filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
     ''')
+
+    # for testing insertion
 
     # c.execute('''
     #     INSERT INTO metadata(identifier, name, cat)
