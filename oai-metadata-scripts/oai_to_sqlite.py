@@ -20,7 +20,7 @@ ARXIV = "{http://arxiv.org/OAI/arXiv/}"
 db = sqlite3.connect(db_path)
 
 # to just parse through one file
-filenames = [oai_path + "2018-04-30-00000011.xml"]
+# filenames = [oai_path + "2018-04-30-00000011.xml"]
 # for filename in filenames:
 
 # iteratively progress through all files in folder

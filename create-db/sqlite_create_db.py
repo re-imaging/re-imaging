@@ -2,7 +2,8 @@
 
 import sqlite3
 
-db_path = "/home/rte/data/db/arxiv_db.sqlite3"
+# db_path = "/home/rte/data/db/arxiv_db.sqlite3"
+db_path = "/home/rte/data/db/test_db.sqlite3"
 
 try:
     # create a database in RAM
