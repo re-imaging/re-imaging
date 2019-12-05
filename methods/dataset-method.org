@@ -187,7 +187,7 @@ File organisation
 - For more information on arXiv identifiers, see https://arxiv.org/help/arxiv_identifier
 - Image files are named according to the original filenames that were deposited to arXiv, as we are using the original source
 
-** Step 3: Extract images and text from PDF documents (NB: this took place during Step 2, but is outlined separately here)
+** Optional: Extract images and text from PDF documents (NB: do this during Step 2)
 - Extract images and text from PDF documents
 - This originally seemed like an important process, as there is a decent portion of the arXiv that was not submitted as source code
 - 7.69% of all articles are submitted as PDF only
@@ -237,6 +237,7 @@ Totals
 - Mean average of 6.81 images per article
 - Would be worthwhile to investigate and analyse proportion of images used across different categories and time
 - Also important to keep looking for other strong tendencies or trends in the dataset e.g. is there something that has been missed through this process? By excluding PDF only articles are we missing a key part of the archive, or are these distributed uniformally?
+
 ** Step 4: Organise dataset
 - Source dataset consists only of article source and image files, no metadata or data about the placement within arXiv
 - OAI files consist only of metadata

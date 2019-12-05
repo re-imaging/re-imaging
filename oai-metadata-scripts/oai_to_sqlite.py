@@ -6,8 +6,7 @@ import sys
 import sqlite3
 import argparse
 
-parser = argparse.ArgumentParser(description='Parse xml files and insert metadata into SQLite database',
-                                    epilog="Tested with Metha OAI .xml files")
+parser = argparse.ArgumentParser(description='Parse Matha OAI XML files and insert metadata into SQLite database')
 
 parser.add_argument('db_path', help="path to SQLite database")
 parser.add_argument('oai_path', help='set folder of OAI xml files')
@@ -63,7 +62,7 @@ for filename in glob.glob(oai_path + '*.xml'):
             else:
                 lic = ""
 
-            authors = []
+            authors_list = []
             authors_element = info.find(ARXIV+"authors")
 
             # create a (string) variable to store all authors names
@@ -83,9 +82,15 @@ for filename in glob.glob(oai_path + '*.xml'):
 
                 anames += aname
 
-            authors.append(anames)
-            # convert to string
-            authors = "" + str(authors)
+            authors_list.append(anames)
+
+            # convert to string and remove extra characters
+            # authors = "" + str(authors)
+            authors = (str)(authors_list)[2:-4]
+
+            # optionally clean up abstract by removing first 2 characters (spaces),
+            # replacing line breaks with spaces and removing trailing whitespace
+            # abstract = abstract[2:].replace("\n"," ").rstrip()
 
             count += 1
 

@@ -5,12 +5,12 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Utility script for finding number of records in Metha OAI metadata')
 
-parser.add_argument('targetpath', help='set folder of OAI xml files')
+parser.add_argument('oai_path', help='set folder of OAI xml files')
 
 global args
 args = parser.parse_args()
 
-os.chdir(args.targetpath)
+os.chdir(args.oai_path)
 print("current working directory:",os.getcwd())
 
 total_count = 0
@@ -25,4 +25,4 @@ for filename in glob.glob('*.xml'):
         total_count += 1
 
 print("total number of xml files:",num_xml_files)
-print ("total count:",total_count)
+print ("total number of records:",total_count)

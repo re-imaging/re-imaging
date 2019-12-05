@@ -14,8 +14,6 @@ parser.add_argument('-v', '--verbose', action='store_true', help='verbose output
 global args
 args = parser.parse_args()
 
-oai_path = args.oai_path
-
 count = 0
 deleted = 0
 
@@ -29,7 +27,7 @@ else:
 
 print("searching for " + inputID)
 
-for filename in glob.glob(oai_path + '*.xml'):
+for filename in glob.glob(args.oai_path + '*.xml'):
     data = ET.parse(filename)
     if(args.verbose):
         print("opening file: " + filename)
