@@ -6,6 +6,7 @@ pwd
 
 startline=0
 count=0
+db="/home/rte/data/db/arxiv_db_images.sqlite3"
 
 if [ "$1" != "" ]; then
   echo "reading from line "$1""
@@ -18,10 +19,16 @@ if [ "$2" != "" ]; then
   targetfile="$2"
 fi
 
+if [ "$3" != "" ]; then
+  echo "database file: "$3""
+  db="$3"
+fi
 
-tail -n +${1} $targetfile | while read fullpath; do
+tail -n +${startline} $targetfile | while read fullpath; do
 
   echo "--------------------"
+  # echo "$fullpath"
+  # fullpath=${fullpath#"."} # remove the first full stop, if there is one
   echo "$fullpath"
 
   article="$(cut -d'/' -f3 <<< "$fullpath")"
@@ -54,7 +61,7 @@ tail -n +${1} $targetfile | while read fullpath; do
     imageformat="$(cut -d' ' -f3 <<< "$res")"
     # echo $imageformat
 
-    sqlite3 /home/rte/data/db/arxiv_db_images.sqlite3 "INSERT INTO images \
+    sqlite3 "$db" "INSERT INTO images \
     (identifier, filename, filesize, path, x, y, imageformat) \
     VALUES (\"$article\", \"$name\", \"$filesize\", \"$path\", \"$x\", \"$y\", \"$imageformat\");"
   fi
