@@ -1,0 +1,128 @@
+
+* Setting Up SQLite Database
+** Installing software
+** Downloading Metha OAI XML files
+
+arXiv participates in the Open Archives Initiative and provides up-to-date metadata for the full archive. Full bulk metadata is therefore downloadable using the OAI-PMH v2.0 protocol (Lagoze et. al., 2001). These records are stored in XML format and contain details such as the identifier, author, title, categories, licence, abstract, and date. The format specification of the metadata used for this project is arXiv, although other formats are available that provide slightly different data fields. We downloaded the metadata for all articles (records) up to the end of 2018 using the Metha OAI harvesting tool. After installing Metha, usage is as simple as calling:
+
+#+BEGIN_SRC bash
+metha-sync -format arXiv http://export.arxiv.org/oai2 
+#+END_SRC
+
+which will download all OAI records in gzipped XML format (Extensible Markup Language) using the arXiv format. In our case, this resulted in 1575 separate gzipped XML files that could then be parsed through to retrieve metadata fields.
+** Extract Metha gz files
+
+#+BEGIN_SRC bash
+# back up files first, this converts in-place
+# change to directory with metha-downloaded oai gz files
+
+for f in *.gz; do gunzip "$f"; done
+#+END_SRC
+
+** Example metadata
+<ListRecords>
+    <record>
+        <header status="">
+            <identifier>oai:arXiv.org:0704.0004</identifier>
+            <datestamp>2007-05-23</datestamp>
+            <setSpec>math</setSpec>
+        </header>
+        <metadata>
+            <arXiv xsi:schemaLocation="http://arxiv.org/OAI/arXiv/                             http://arxiv.org/OAI/arXiv.xsd">
+                <id>0704.0004</id>
+                <created>2007-03-30</created>
+                <authors>
+                    <author>
+                        <keyname>Callan</keyname>
+                        <forenames>David</forenames>
+                    </author>
+                </authors>
+                <title>A determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata</title>
+                <categories>math.CO</categories>
+                <comments>11 pages</comments>
+                <msc-class>05A15</msc-class>
+                <abstract>  We show that a determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata. The proof involves a bijection from these automata to certain marked lattice paths and a sign-reversing involution to evaluate the determinant.
+                </abstract>
+            </arXiv>
+        </metadata>
+    <about/>
+</record>
+
+Figure XX. Example XML file in the “arXiv” format showing organisation of metadata according to specific tags such as “categories”, “title”, “author”, “abstract” etc. Example shown here is Callan, David: A determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata, 2007, https://arxiv.org/abs/0704.0004
+
+** Create SQLite database
+Python script to create SQLite database
+
+Usage:
+
+#+BEGIN_SRC bash
+python create-db/sqlite_create_db.py
+#+END_SRC
+
+Details or table creation in the script:
+
+#+BEGIN_SRC Python
+# create metadata table
+c.execute('''
+    CREATE TABLE metadata(id INTEGER PRIMARY KEY, identifier TEXT, created TEXT, \
+    cat TEXT, authors TEXT, title TEXT, abstract TEXT, licence TEXT)
+''')
+
+# create images table
+c.execute('''
+    CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
+    filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
+''')
+#+END_SRC
+** Inserting article metadata into database
+
+For our purposes, we used a primary key of a unique number, and inserted the identifier, date created, categories, authors, title, abstract, and licence. 
+
+The oai_to_sqlite.py script accesses a folder of Metha-downloaded OAI XML files.
+
+#+BEGIN_SRC bash
+usage: oai_to_sqlite.py [-h] [-v] db_path oai_path
+
+Parse Matha OAI XML files and insert metadata into SQLite database
+
+positional arguments:
+  db_path        path to SQLite database
+  oai_path       set folder of OAI xml files
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -v, --verbose  verbose output
+#+END_SRC
+
+Example usage
+#+BEGIN_SRC bash
+python oai_to_sqlite.py ~/data/db/arxiv_db.sqlite ~/data/oai/metha/
+#+END_SRC
+** Image metadata
+
+This is done as a two step process because it will take a long time and it is helpful to be able to restart the process partway. (If you'd like to do it in one step, examples are in create-db/additional.)
+
+#+BEGIN_SRC bash
+# first we need to get the paths of all the image files
+cd create-db
+
+# this will take a little while
+./image_paths_to_txt.sh SOURCE_DIR TARGET_FILE
+
+# then use this paths text file to get each image metadata and write into SQL
+# this will also take a while
+./image_data_to_sql_paths.sh START_LINE PATHS_FILE DATABASE_FILE
+# e.g
+./image_data_to_sql_paths.sh 0 ~/data/paths/all_image_paths.txt ~/data/db/arXiv_db.sqlite
+
+#+END_SRC
+** Entry examples
+*** Metadata
+| 1038521 | hep-ph0107222 | 2001-07-20 | hep-ph          | ['Yang, Jian-Jun; ']                                       | Up and Down Quark Contributions...                   | We check the...                                                                 |                                                     |
+| 1235851 |     0912.5313 | 2009-12-29 | math.CV math.AG | ['Catanese, Fabrizio; Oguiso, Keiji; Peternell, Thomas; '] | On volume preserving complex structures on real tori | A basic problem in the classification theory of compact complex manifolds is... | http://arxiv.org/licenses/nonexclusive-distrib/1.0/ |
+| 1214856 |     1308.0124 | 2013-08-01 | hep-ph hep-th   | ['Rose, Luigi Delle; ']                                    | The Standard Model in a Weak Gravitational...        | The principal goal of the physics of the fundamental interactions is...         | http://arxiv.org/licenses/nonexclusive-distrib/1.   |
+*** Images
+| 4876126 |  cs0007002 | gouala05.eps     | 145239 | ./0007/cs0007002                                                                                          |  663 | 300 | PS  |
+| 2209549 |  0906.0725 | belleescan_b.eps | 842045 | ./0906/0906.0725                                                                                          | 1450 | 725 | PS  |
+| 6591348 | 1710.10269 | HAT-P-12.pdf     |  78468 | ./1710/1710.10269/figures/figures_from_umserve/chemistry/abundance_change_with_grid_parameter/metallicity |  566 | 406 | PDF |
+** 

@@ -1,0 +1,7 @@
+
+* Computer Setup Instructions
+** Ubuntu Linux 18.04
+** Software
+** Anaconda
+Recommend using Anaconda for installing and managing Python packages
+** 
