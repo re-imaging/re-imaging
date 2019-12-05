@@ -11,6 +11,10 @@
 #ignore emacs backups
 *~
 
+#ignore pickle files
+*.pickle
+*.pkl
+
 #ignore subfolders
 old/
 explain/
