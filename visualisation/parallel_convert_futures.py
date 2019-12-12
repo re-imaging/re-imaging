@@ -248,7 +248,7 @@ def main():
     else:
         starter = partial(convert, logpath=logpath)
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.num_threads) as tp:
-            fl = [tp.submit(starter, t) for t in zip(filepaths[args.start_line:], outputnames)]
+            fl = [tp.submit(starter, t) for t in zip(filepaths[args.start_line:], outputnames[args.start_line:])]
             for fut in concurrent.futures.as_completed(fl):
                 fn, rv = fut.result()
                 if rv == 0:
