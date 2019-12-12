@@ -174,10 +174,10 @@ We also searched the SQLite database for any entries with special characters suc
 Additional metadata can be procured from the individual files by accessing the Exif (Exchangeable image file format). Although this could be done at the same time as inserting rows for the images into the database table, we did this at a later stage.
 
 #+BEGIN_SRC bash
-python imagemeta_to_sql_threads.py ~/data/db/arxiv_db_images.sqlite3 ~/arXiv/src_all/
+python create-db/imagemeta_to_sql_threads.py ~/data/db/arxiv_db_images.sqlite3 ~/arXiv/src_all/
 #+END_SRC
 
-This uses the exiftool command to check each file for metadata relating to "software" or "creator". Depending on the file extension, different fields are accessed. These were determined through testing exiftool across a range of file formats and checking which fields might relate to the software used to create or process the images. See the following Python excerpt for corresponding fields:
+This uses the exiftool command to check each file for metadata relating to "software" or "creator". Depending on the file extension, different fields are accessed. These were determined through testing exiftool across a range of file formats and checking which fields might relate to the software used to create or process the images. This is stored in a single column for simplicity, although the metadata may refer to different fields. See the following Python excerpt for the relation between extension and Exif field accessed:
 
 #+BEGIN_SRC Python
 n = filename.lower()
@@ -195,5 +195,7 @@ elif n.endswith(('.gif')):
 elif n.endswith(('.svg')):
     field = "Desc"
 #+END_SRC
+
+Note that a fairly high proportion of images do not have this metadata.
 
 
