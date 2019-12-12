@@ -27,7 +27,7 @@ echo "current working directory: "$(pwd)""
 count=0
 
 find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "*.ps" -o -iname "*.jpg" \
--o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" \) \
+-o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" -o -iname "*.epsi" \) \
 -not -name "*pdf_image-*" | while read fullpath; do
 
   # echo "--------------------"
