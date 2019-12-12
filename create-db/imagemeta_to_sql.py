@@ -5,11 +5,15 @@ import sqlite3
 import argparse
 import subprocess
 
+import time
+
 parser = argparse.ArgumentParser(description='Script for getting image metadata and writing to database')
 
 # parser.add_argument('paths_file', help='textfile to read image paths from')
 parser.add_argument('db_path', help="path to SQLite database")
+parser.add_argument('images_path', help="path to folder of images")
 parser.add_argument('-v', '--verbose', action='store_true', help='verbose output')
+parser.add_argument('-t', '--timing', action='store_true', help='timing output')
 
 global args
 args = parser.parse_args()
@@ -17,31 +21,79 @@ args = parser.parse_args()
 table_name = "images"
 startline = 0
 
-def get_pdfinfo(path):
-    command = ["exiftool"] + ["-Creator"] + [path]
+now = datetime.datetime.now()
+now_string = "{:04d}{:02d}{:02d}_{:02d}{:02d}{:02d}".format(now.year, now.month, now.day, now.hour, now.minute, now.second)
+logpath = "error_log_" + now_string + ".txt"
+
+
+def get_metadata(path, id, _c, field):
+    if args.timing:
+        start = time.time()
+
+    command = ["exiftool"] + ["-T"] + ["-" + field] + [path]
+    # print(command)
+
+    sql = ('''
+    UPDATE images
+    SET creator = ?
+    WHERE id = ?
+    ''')
+
+    if args.timing:
+        end = time.time()
+        print("time taken prior to subprocess:",end-start)
+        start = time.time()
+
+    creator = ""
+
     try:
-        p = subprocess.run(command, stdout=subprocess.PIPE, timeout=30).stdout.decode('utf-8')
-# p = subprocess.run(['identify', '-ping', '-format', '%w %h %m %b', filename], stdout=subprocess.PIPE).stdout.decode('utf-8')
-        print(p)
-        results = p.rsplit("\n")
-        # print(results[0])
-        creator = ""
-        for r in results:
-            if r.startswith("Creator"):
-                creator = p[34:]
-            # break
+        p = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE).stdout.decode('utf-8')
+        # p = subprocess.run(['identify', '-ping', '-format', '%w %h %m %b', filename], stdout=subprocess.PIPE).stdout.decode('utf-8')
+
+        # out, err = p.communicate()
+        # errcode = p.returncode
+
+        # print("output:",out.decode('utf-8'))
+        # print("error:",err)
+        # print("errcode:",errcode)
+
+        creator = p.rsplit("\n")[0]
+        # creator = ""
+        # for r in results:
+        #     if r.startswith("Creator"):
+        #         creator = p[34:]
+        #         break
         print("creator:",creator)
+        print("id:",id)
         print("*" * 20)
 
     except subprocess.TimeoutExpired:
         print("timeout")
+    except UnicodeDecodeError:
+        creator = ""
+    # finally:
 
-    # sys.exit()
-    # return creator
+    if args.timing:
+        end = time.time()
+        print("time taken for exiftool:",end-start)
+        start = time.time()
+
+    if creator != "":
+        _c.execute(sql, (creator, id))
+
+    if args.timing:
+        end = time.time()
+        print("time taken for db update:",end-start)
+        start = time.time()
+
+    return 0
 
 def main():
 
-    count = 0
+    if args.timing:
+        start = time.time()
+
+    count = startline
 
     db = sqlite3.connect(args.db_path)
     c = db.cursor()
@@ -51,85 +103,77 @@ def main():
     FROM images
     ''')
 
-    db.create_function("reverse", 1, lambda s: s[::-1])
-
     c.execute(sql, )
 
     rows = c.fetchall()
-    # for row in rows:
-        # print(row)
-    print(len(rows))
+    print("number of entries:",len(rows))
 
-    os.chdir("/home/rte/arXiv/src_all/")
+    if args.timing:
+        end = time.time()
+        print("time taken to load entries:",end-start)
+        start = time.time()
+
+    os.chdir(args.images_path)
+
+    c.execute("BEGIN TRANSACTION;")
 
     # loop over all images, processing one at a time
-    for row in rows:
-        # c.execute("BEGIN TRANSACTION")
-        print(row)
-        id = row[1]
+    for row in rows[startline:]:
+        if args.timing:
+            start = time.time()
+
+        # print(row)
+        id = row[0]
+        print(id)
         path = row[1] + "/" + row[2]
-        print(path)
+        # print("count:",count)
+        # print(path)
         filename = row[2]
         n = filename.lower()
         print(filename)
+
         if n.endswith(('.eps', '.ps', 'pstex', '.epsf', '.epsi')):
-            print("PS")
-
+            if args.verbose: print("PS")
+            get_metadata(path, id, c, "Creator")
         elif n.endswith(('.png')):
-            print("PNG")
+            if args.verbose: print("PNG")
+            get_metadata(path, id, c, "Software")
         elif n.endswith(('.pdf')):
-            print("PDF")
-            get_pdfinfo(path)
+            if args.verbose: print("PDF")
+            get_metadata(path, id, c, "Creator")
         elif n.endswith(('.jpg', 'jpeg')):
-            print("JPG")
+            if args.verbose: print("JPG")
+            get_metadata(path, id, c, "Software")
         elif n.endswith(('.gif')):
-            print("GIF")
+            if args.verbose: print("GIF")
+            get_metadata(path, id, c, "Comment")
         elif n.endswith(('.svg')):
-            print("SVG")
+            if args.verbose: print("SVG")
+            get_metadata(path, id, c, "Desc")
         else:
-            print("***** SOMETHING ELSE *****")
-            # sys.exit()
+            print("***** Extension not recognised, exiting *****")
+            with open(logpath, "a+") as f:
+                f.write(filename + "," + id + "\n")
+            sys.exit()
 
+        count += 1
 
+        # write database every so often to protect against crashes etc
+        if count % 1000 == 0 and count != 0:
+            db.commit()
 
+            if args.timing:
+                end = time.time()
+                print("time taken for db commit:",end-start)
+                start = time.time()
 
-        # c.execute("COMMIT;") # probably not this
-        # db.commit()
+            c.execute("BEGIN TRANSACTION;")
 
+    print("done, cleaning up db")
 
-    # write count when crashing etc.
-
-    # try:
-    #     subprocess.run(convert_cmd, timeout=30)
-    # except subprocess.TimeoutExpired:
-
-    # PDF
-    #  pdfinfo {} | grep -i "creator" | cut -c 17-
-
-    # GIF
-    # exiftool -Comment {} | cut -c 35-
-
-    # PS
-    # "*.*ps*" | xargs -d '\n' -l1 -I {} exiftool -Creator {} | cut -c 35-
-
-    # JPG
-    # exiftool -Software {} | cut -c 35-
-
-    # SVG
-    # exiftool -f -Desc | cut -c
-
-    # PNG
-    # exiftool -Software {} | cut -c 35-
-
-    '''
-    BEGIN TRANSACTION;
-
-    UPDATE image
-    SET creator = ?
-    WHERE id = ?
-    '''
-
-    # do in transactions, 1k at a time? or 10k?
+    db.commit()
+    c.close()
+    db.close()
 
 if __name__ == "__main__":
     main()
