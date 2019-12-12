@@ -229,7 +229,7 @@ def main():
     # manage procs version
     '''
     procs = []
-    maxprocs = 8 # could be cpu_count()
+    maxprocs = args.num_threads # could be cpu_count()
     for n, f in enumerate(filepaths[args.start_line:]):
         while len(procs) == maxprocs:
             manageprocs(procs)
@@ -247,7 +247,7 @@ def main():
         pass
     else:
         starter = partial(convert, logpath=logpath)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as tp:
+        with concurrent.futures.ThreadPoolExecutor(max_workers=args.num_threads) as tp:
             fl = [tp.submit(starter, t) for t in zip(filepaths[args.start_line:], outputnames)]
             for fut in concurrent.futures.as_completed(fl):
                 fn, rv = fut.result()
