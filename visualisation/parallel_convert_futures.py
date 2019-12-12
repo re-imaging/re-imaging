@@ -254,16 +254,18 @@ def main():
                 if rv == 0:
                     print('finished "{}"'.format(fn))
                 elif rv < 0:
-                    print('exit code < 0 in child process')
+                    print('exit code > 0 in child process')
                     # fut.kill()
                 else:
-                    print("converting {} failed, return code P{}".format(fn, rv))
+                    print("converting {} failed, return code {}".format(fn, rv))
 
+'''
 def manageprocs(proclist):
     for pr in proclist:
         if pr.poll() is not None:
             proclist.remove(pr)
     time.sleep(0.5)
+'''
 
 if __name__ == "__main__":
     main()
