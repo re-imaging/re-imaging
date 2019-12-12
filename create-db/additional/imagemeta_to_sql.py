@@ -1,3 +1,5 @@
+# NB: recommended to use the threaded version of this script if working on large numbers of files
+
 import datetime
 import os
 import sys
