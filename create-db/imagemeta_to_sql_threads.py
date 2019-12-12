@@ -7,6 +7,7 @@ import subprocess
 import concurrent.futures
 from functools import partial
 import itertools
+import math
 
 import time
 
@@ -15,6 +16,9 @@ parser = argparse.ArgumentParser(description='Script for getting image metadata 
 # parser.add_argument('paths_file', help='textfile to read image paths from')
 parser.add_argument('db_path', help="path to SQLite database")
 parser.add_argument('images_path', help="path to folder of images")
+parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')
+parser.add_argument('-s', '--slice_size', default=2500, type=int, help='size of each slice to process (default: 2500)')
+parser.add_argument('-n', '--num_threads', default=8, type=int, help='number of threads (default: 8)')
 parser.add_argument('-v', '--verbose', action='store_true', help='verbose output')
 parser.add_argument('-t', '--timing', action='store_true', help='timing output')
 parser.add_argument('-z', '--dryrun', action='store_true', help="don't modify or create any files (default: False)")
@@ -23,7 +27,6 @@ global args
 args = parser.parse_args()
 
 table_name = "images"
-startline = 0
 
 db = sqlite3.connect(args.db_path)
 c = db.cursor()
@@ -100,7 +103,7 @@ def main():
     if args.timing:
         start = time.time()
 
-    count = startline
+    # count = args.start_line
 
     sql = ('''
     SELECT id, path, filename
@@ -127,26 +130,43 @@ def main():
     WHERE id = ?
     ''')
 
-    if args.dryrun:
-        pass
-    else:
-        print("running futures")
-        starter = partial(get_metadata, logpath=logpath)
-        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as tp:
-            for input, output in zip(rows, tp.map(get_metadata, rows)):
-                if args.verbose:
-                    print("input:",input)
-                    print("output:",output)
+    # break work up into chunks so as to limit memory usage
+    increment = args.slice_size
+    slices = [i for i in range(args.start_line + increment, len(rows), increment)]
+    slices.append(len(rows)) # add the total length at the end
+    print("slices:",slices)
+    slice_start = args.start_line
 
-                c.execute(sql, (output[1], output[0]))
+    for slice_end in slices:
 
-                count += 1
-                if count % 1000 == 0 and count != 0:
-                    print("input:",input)
-                    print("output:",output)
-                    print("committing to db")
-                    db.commit()
-                    c.execute("BEGIN TRANSACTION;")
+        print("taking slice from",slice_start,"to",slice_end)
+        data = rows[slice_start:slice_end]
+        # sys.exit()
+
+        if args.dryrun:
+            pass
+        else:
+            print("running futures")
+            starter = partial(get_metadata, logpath=logpath)
+            with concurrent.futures.ThreadPoolExecutor(max_workers=args.num_threads) as tp:
+                for input, output in zip(data, tp.map(get_metadata, data)):
+                    if args.verbose:
+                        print("input:",input)
+                        print("output:",output)
+
+                    c.execute(sql, (output[1], output[0]))
+
+                    # count += 1
+                    # if count % 1000 == 0 and count != 0:
+
+        # commit at the end of each slice
+        print("input:",input)
+        print("output:",output)
+        print("committing to db")
+        db.commit()
+        c.execute("BEGIN TRANSACTION;")
+
+        slice_start = slice_end
 
         print("finished running futures")
 
