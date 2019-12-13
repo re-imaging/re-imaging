@@ -24,8 +24,8 @@ catsum = cats %>% mutate(primcat = str_extract(cat, '[a-zA-Z-]+(\\.[a-zA-Z-]+)?'
 
 #plot the general paper counts to get a sense of relative size
 p1 = catsum %>% filter(tcat > 1000, !is.na(primcat))  %>%  ggplot( aes(x=primcat, y=tcat, fill=primcat)) + geom_col() + coord_flip() +  theme(legend.position = "none") + ggtitle('Relative size of arxiv categories')
-
-ggsave(p1, file='../figure/arxiv-cat-relativesize.svg')
+p1
+ggsave(p1, file='../figures/arxiv-cat-relativesize.svg')
 
 #trying to get a picture of the dynamics of disciplines
 #calculate totals for each primcat
