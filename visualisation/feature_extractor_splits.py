@@ -82,7 +82,6 @@ slices.append(len(filepaths)) # add the total length at the end
 print("slices:",slices)
 slice_start = args.start_line
 
-
 for slice_end in slices:
     # current_path = d
     # print("current path: " + current_path)
@@ -115,13 +114,17 @@ for slice_end in slices:
 
     print('finished extracting features for %d images' % len(paths_slice))
 
+    slice_start = slice_end
+
+
     # write images, features to a pickle file
 
-    savefilename = "features_" + slice_start + "_" + slice_end + "_vgg.pkl"
+    savefilename = args.savedir + "features_" + str(slice_start) + "_" + str(slice_end) + "_vgg.pkl"
 
     print(f)
 
     # WRITE
-    with open(f, "wb") as write_file:
+    with open(savefilename, "wb") as write_file:
         pickle.dump([paths_slice, features], write_file)
         write_file.close()
+        print("writing pickle")
