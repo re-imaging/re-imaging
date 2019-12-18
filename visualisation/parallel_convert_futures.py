@@ -13,7 +13,7 @@ from multiprocessing import Pool, cpu_count
 import concurrent.futures
 from functools import partial
 
-parser = argparse.ArgumentParser(description='Script for converting images from a textfile')
+parser = argparse.ArgumentParser(description='Script for converting images from a textfile using convert (threaded)')
 
 parser.add_argument('textfile', help='textfile to read from')
 parser.add_argument('convert_path', help='path to destination folder')

@@ -9,6 +9,8 @@ parser.add_argument('convert_path', help='path to destination folder')
 parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')
 parser.add_argument('-v', '--verbose', action='store_true', help='verbose output')
 
+# script to convert a list of image paths via Python PIL (pillow)
+
 global args
 args = parser.parse_args()
 
