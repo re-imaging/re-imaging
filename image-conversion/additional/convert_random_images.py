@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import sqlite3
 import random
 import itertools
@@ -12,31 +6,20 @@ import os
 import shlex
 import time
 
-
-# In[ ]:
-
+# script to fetch a number of random samples (e.g. 100k) from the database and convert them into jpg
 
 # Here we import the sqlite3 database and create a cursor
 db_path = "/home/rte/data/db/arxiv_db_images.sqlite3"
 db = sqlite3.connect(db_path)
 c = db.cursor()
 
-
-# In[ ]:
-
-
 # test that we can fetch the pragma for each table
-
 c.execute('PRAGMA TABLE_INFO({})'.format("metadata"))
 info = c.fetchall()
 
 print("\nColumn Info:\nID, Name, Type, NotNull, DefaultVal, PrimaryKey")
 for col in info:
     print(col)
-
-
-# In[ ]:
-
 
 c.execute('PRAGMA TABLE_INFO({})'.format("images"))
 info = c.fetchall()
@@ -45,23 +28,7 @@ print("\nColumn Info:\nID, Name, Type, NotNull, DefaultVal, PrimaryKey")
 for col in info:
     print(col)
 
-
-# In[ ]:
-
-
-# set variables for automating process
-
-targetCats = ["cs.CV", "stat.ML", "math.CT", "physics.med-ph", "math.AC"]
-
-# targetDate = "2009-01-01"
-targetDates = ["2006-01-01", "2009-01-01", "2012-01-01", "2015-01-01", "2018-01-01"]
-
-
 # ### Get 100k random samples
-
-# In[ ]:
-
-
 sql = ('''
     SELECT images.id, images.path, images.filename, images.identifier, metadata.cat
     FROM images
@@ -75,24 +42,13 @@ c.execute(sql)
 rows = c.fetchall()
 print("total number of entries found:", len(rows))
 
-
-# In[ ]:
-
-
 # view a subset
 for row in rows[:20]:
     print(row)
 
-
 # ### convert random subset
-
-# In[ ]:
-
-
 convert_path = "/home/rte/data/images/random/100k/"
-
 start = time.time()
-
 targetSize = 512
 
 filepaths = []
@@ -105,7 +61,6 @@ for row in rows:
 print("total number of filepaths: " + str(len(filepaths)))
 
 # write list of image paths and IDs to file (for debugging purposes, mostly)
-
 fname = convert_path + "filepaths.txt"
 # print(fname)
 f = open(fname, "w+")

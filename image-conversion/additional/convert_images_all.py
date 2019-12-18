@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import sqlite3
 import random
 import itertools
@@ -15,34 +9,25 @@ import sys
 
 import shutil
 
+# script to grab all file paths from SQLite database and attempts to convert each to a smaller jpg
+#
+# WARNING: Use with caution, can fill disk
+# NB: this is also single-thread and slow, recommended to use parallel_convert_futures.py instead
 
 print(sys.argv, len(sys.argv))
-
-
-# In[ ]:
-
 
 # Here we import the sqlite3 database and create a cursor
 db_path = "/home/rte/data/db/arxiv_db_images.sqlite3"
 db = sqlite3.connect(db_path)
 c = db.cursor()
 
-
-# In[ ]:
-
-
 # test that we can fetch the pragma for each table
-
 c.execute('PRAGMA TABLE_INFO({})'.format("metadata"))
 info = c.fetchall()
 
 print("\nColumn Info:\nID, Name, Type, NotNull, DefaultVal, PrimaryKey")
 for col in info:
     print(col)
-
-
-# In[ ]:
-
 
 c.execute('PRAGMA TABLE_INFO({})'.format("images"))
 info = c.fetchall()
@@ -51,12 +36,7 @@ print("\nColumn Info:\nID, Name, Type, NotNull, DefaultVal, PrimaryKey")
 for col in info:
     print(col)
 
-
 # ### Get all image rows from the database
-
-# In[ ]:
-
-
 print("getting rows from database...")
 
 sql = ('''
@@ -70,24 +50,15 @@ c.execute(sql)
 rows = c.fetchall()
 print("total number of rows:",len(rows))
 
-
 # start_line = 43806 -1
 start_line = int(sys.argv[1]) - 1
-
-# In[ ]:
-
 
 # view a subset
 print("first rows")
 for row in rows[start_line:start_line + 5]:
     print(row)
 
-
 # ### Write text file with all filepaths and IDs
-
-# In[ ]:
-
-
 print("organising data into variables")
 
 filepaths = []
@@ -106,10 +77,6 @@ print("checking the first filepath and id:")
 print(filepaths[start_line], image_ids[start_line])
 print("*" * 20)
 
-
-# In[ ]:
-
-
 # write list of image paths and IDs to file (for debugging purposes, mostly)
 '''
 print("writing text file")
@@ -121,12 +88,8 @@ for path, row in zip(filepaths, rows):
     f.write(path + "," + str(row[0]) + "\n")
 f.close()
 '''
-1111.7297
 
 # ### convert all images
-
-# In[ ]:
-
 
 # convert_path = "/home/rte/data/images/all/"
 convert_path = "/mnt/hd2/images/all/"
