@@ -40,6 +40,6 @@ for f in *; do
     newname="$targetdir/$base.jpg"
     echo "newname "$newname""
     # run the convert command, but continue even if it fails
-    convert "$f" -colorspace sRGB -units PixelsPerInch -density 300 -background white -alpha off -resize "$minsize"^> "$newname" || true
+    convert "$f" -colorspace sRGB -units PixelsPerInch -density 300 -background white -alpha off -resize "$minsize"x"$minsize"^\> "$newname" || true
   fi
 done
