@@ -1,0 +1,57 @@
+
+* Image Conversion
+This document contains some tips and tricks for converting large amounts of images that might be in a wide variety of file formats, image types, dimensions etc.
+
+** Specs
+*** Hardware
+Linux: Ubuntu 18.04
+500GB NVME solid state drive
+4TB 72000 rpm hard disk
+*** Software
+Python
+ImageMagick (for convert and identify)
+Jupyter Notebook
+SQLite interfaces for Python and Bash
+** Getting list of file paths
+
+Use this command to read all entries from the SQLite database, build a list of file paths, and write this into a text file. This allows for ease of use when running other scripts and especially for running scripts that might take a very long time or fail, so that it can be restarted at a known point.
+
+#+BEGIN_SRC bash
+cd sqlite-scripts
+python get_all_image_paths.py
+
+#+END_SRC
+** Recommended way to convert lots of images quickly
+
+Build a file list and then convert from it
+
+#+BEGIN_SRC bash
+cd ~/re-imaging/visualisation
+
+conda activate py37
+
+# get a list of filepath difference
+python util/filepaths_difference.py paths/filepaths_all_images.txt /mnt/hd2/images/all/ -v -m
+
+screen -r convert
+# or -S if not already open
+
+conda activate py37
+
+# run reverse over images
+# make sure to update missing_log filename
+# make sure to include trailing forward slash for folder location
+python parallel_convert_futures.py missing_log_20190924_162556.txt /mnt/hd2/images/new/ --verbose -r 
+
+# run over all images again with less processes
+# make sure to update missing_log filename
+python parallel_convert_futures.py missing_log_20190924_162556.txt /mnt/hd2/images/new/ --verbose 
+
+#+END_SRC
+** Crontab for killing long running processes
+# run find to remove ImageMagick convert temporary files every 5 mins:
+*/5 * * * * /usr/bin/find /tmp -name "*magick*" -mmin +10 -and -not -exec fuser -s {} ';' -and -exec rm -v {} ';' 2>&1 | tee /tmp/findcron.txt
+
+# find any long running (stalled) ghostscript processes ("gs") and kill them
+# set to use SIGTERM on anything over 5 minutes
+*/5 * * * * kill -15 $(ps -eo comm,pid,etimes | awk '/^gs / {if ($3 > 300) { print $2}}')

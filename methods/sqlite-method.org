@@ -32,6 +32,7 @@ metha-sync -format arXiv http://export.arxiv.org/oai2
 #+END_SRC
 
 which will download all OAI records in gzipped XML format (Extensible Markup Language) using the arXiv format. In our case, this resulted in 1575 separate gzipped XML files that could then be parsed through to retrieve metadata fields.
+
 ** Extract Metha gz files
 
 #+BEGIN_SRC bash
@@ -96,6 +97,7 @@ c.execute('''
     filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
 ''')
 #+END_SRC
+
 ** Inserting article metadata into database
 
 We used a set of Python scripts to then iterate over the XML files and insert rows into the database for each. For this step we used the Python ElementTree XML API to navigate the required XML files and extract the desired metadata. This required custom code that was tailored to the specific XML format as it is stored on arxiv.org and downloaded by metha (which groups XML documents together to reduce the number of files).
@@ -124,6 +126,7 @@ Example usage
 #+BEGIN_SRC bash
 python oai_to_sqlite.py ~/data/db/arxiv_db.sqlite ~/data/oai/metha/
 #+END_SRC
+
 ** Image metadata
 
 In order to add rows of image data to the database, we searched and iterated over all of the directory structure of the arXiv bulk downloads and gathered metadata directly from each file. We found that an effective way to do this was to use the unix ```find``` command to write all image file paths to a text file, then using those paths to run an identify command (from Imagemagick) to write a number of details to the database. We collected the article identifier, filename, filesize, filepath, x dimension size, y dimension size, and imageformat. This took a number of days to complete, but could be optimised using faster storage media and/or parallel processing.
@@ -142,8 +145,8 @@ cd create-db
 ./image_data_to_sql_paths.sh START_LINE PATHS_FILE DATABASE_FILE
 # e.g
 ./image_data_to_sql_paths.sh 0 ~/data/paths/all_image_paths.txt ~/data/db/arXiv_db.sqlite
-
 #+END_SRC
+
 ** Entry examples
 *** Metadata
 | 1038521 | hep-ph0107222 | 2001-07-20 | hep-ph          | ['Yang, Jian-Jun; ']                                       | Up and Down Quark Contributions...                   | We check the...                                                                 |                                                     |
@@ -153,6 +156,7 @@ cd create-db
 | 4876126 |  cs0007002 | gouala05.eps     | 145239 | ./0007/cs0007002                                                                                          |  663 | 300 | PS  |
 | 2209549 |  0906.0725 | belleescan_b.eps | 842045 | ./0906/0906.0725                                                                                          | 1450 | 725 | PS  |
 | 6591348 | 1710.10269 | HAT-P-12.pdf     |  78468 | ./1710/1710.10269/figures/figures_from_umserve/chemistry/abundance_change_with_grid_parameter/metallicity |  566 | 406 | PDF |
+
 ** Querying
 Once both tables have been created, it is then possible to perform SQL queries with a left join to pair the associated metadata with a given image. This allows us to create queries and perform analyses  that would not have been possible with only the bulk download: accessing the image data according to different metadata such as subject categories or date, performing searches, and analysing the image content of the dataset in various ways. The SQLite database provides a convenient and flexible way to perform these queries across the ~10 million images and ~1.5 million articles.
 
@@ -198,4 +202,13 @@ elif n.endswith(('.svg')):
 
 Note that a fairly high proportion of images do not have this metadata.
 
+** Building list of all filepaths from SQLite database
+
+Use this command to read all entries from the SQLite database, build a list of file paths, and write this into a text file. This allows for ease of use when running other scripts and especially for running scripts that might take a very long time or fail, so that it can be restarted at a known point.
+
+#+BEGIN_SRC bash
+cd sqlite-scripts
+python get_all_image_paths.py
+
+#+END_SRC
 
