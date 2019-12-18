@@ -10,7 +10,7 @@ parser = argparse.ArgumentParser(description='Script for generating text file fr
 parser.add_argument('textfile', help='textfile to read from')
 parser.add_argument('target_folder', help='path to destination folder')
 parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')
-parser.add_argument('-m', '--missing', action='store_true', help='write missing output file: True/False')
+parser.add_argument('-m', '--missing', action='store_true', help='write missing output file')
 parser.add_argument('-v', '--verbose', action='store_true', help='verbose output')
 
 # compares a list of filepaths with the folders in target_folder
