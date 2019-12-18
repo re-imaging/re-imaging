@@ -10,7 +10,7 @@ import sys
 import datetime
 from multiprocessing import Pool, cpu_count
 
-# NB: recommended to use parallel_convert_futures.py instead for performance gains
+# NB: recommended to use convert_images_from_textfile_threaded.py instead for performance gains
 # implements python threading to speed up image conversion
 
 parser = argparse.ArgumentParser(description='Script for converting images from a textfile')

@@ -12,7 +12,7 @@ import shutil
 # script to grab all file paths from SQLite database and attempts to convert each to a smaller jpg
 #
 # WARNING: Use with caution, can fill disk
-# NB: this is also single-thread and slow, recommended to use parallel_convert_futures.py instead
+# NB: this is also single-thread and slow, recommended to use convert_images_from_textfile_threaded.py instead
 
 print(sys.argv, len(sys.argv))
 
