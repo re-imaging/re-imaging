@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
+# utility script for plotting the error rate from keras text output
+
 filename = sys.argv[1]
 
 a = np.array([0.0])
