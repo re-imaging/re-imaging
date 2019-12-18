@@ -2,6 +2,9 @@ from PIL import Image
 import argparse
 import datetime
 
+# used for converting images that couldn't be converted using ImageMagick convert
+# NB: recommended to use parallel_convert_futures.py first, then run this on images that couldn't be converted
+
 parser = argparse.ArgumentParser(description='Script for converting images from a textfile')
 
 parser.add_argument('textfile', help='textfile to read from')

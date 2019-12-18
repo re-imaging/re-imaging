@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 import argparse
 import itertools
 import subprocess
@@ -33,15 +28,6 @@ parser.add_argument('--timeout', default=30, type=int, help='timeout for convert
 parser.add_argument('--verbose', action='store_true', help='verbose output')
 parser.add_argument('--missing', action='store_true', help='write missing output file: True/False')
 parser.add_argument('--lowdensity', action='store_true', help='run convert with lower density (default: False)')
-
-# convert_path = "/home/rte/data/images/random/100k/test/"
-# convert_path = sys.argv[2]
-
-# textfile = "/home/rte/data/images/random/100k/filepaths.txt"
-# textfile = sys.argv[1]
-
-# start_line = 43806 -1
-# start_line = int(sys.argv[3])
 
 counter = 0
 missing_count = 0
@@ -87,12 +73,11 @@ print("checking the first filepath and id:")
 print(filepaths[start_line], image_ids[start_line])
 print("*" * 20)
 
-# handle Ctrl+C
+# handle Ctrl+C, doesn't seem to work?
 def signal_handler(signal, frame):
   sys.exit(0)
 
 signal.signal(signal.SIGINT, signal_handler)
-
 
 # arguments for convert
 if args.lowdensity:
@@ -228,6 +213,3 @@ print("total number of items:",counter)
 end = time.time()
 print("total time taken:", end - overall_start)
 print("number of missing files:",missing_count)
-
-
-# In[ ]:
