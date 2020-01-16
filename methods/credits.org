@@ -1,0 +1,1035 @@
+Image Credits for montage and t-SNE
+* 4x4 random montage
+Ribas, Ignasi; Jordi, Carme; Torra, Jordi: CD Tau: a detached eclipsing binary with a solar-mass companion, 1999, https://arxiv.org/abs/astro-ph/9905110
+Tawfik, Abdel Nasser; Diab, Abdel Magied: Generalized Uncertainty Principle and Recent Cosmic Inflation Observations, 2014, https://arxiv.org/abs/1410.7966
+Martin, A. D.; Roberts, R. G.; Stirling, W. J.; Thorne, R. S.: Uncertainties of predictions from parton distributions. I: experimental errors, 2002, https://arxiv.org/abs/hep-ph/0211080
+Zhou, Lifeng; Tokekar, Pratap: An Approximation Algorithm for Risk-averse Submodular Optimization, 2018, https://arxiv.org/abs/1807.09358
+Focardi, M.; Di Giorgio, A. M.; Farina, M.; Pancrazzi, M.; Ottensamer, R.; Lim, T. L.; Pezzuto, S.; Micela, G.; Pace, E.: EChO Payload electronics architecture and SW design, 2014, https://arxiv.org/abs/1401.2977
+Chulaevsky, Victor: Localization with Less Larmes: Simply MSA, 2008, https://arxiv.org/abs/0812.2634
+Howlett, Cullan; Manera, Marc; Percival, Will J.: L-PICOLA: A parallel code for fast dark matter simulation, 2015, https://arxiv.org/abs/1506.03737
+Muehlbacher, Lothar; Ankerhold, Joachim: Path-integral Monte-Carlo simulations for electronic dynamics on molecular chains: II. Transport across impurities, 2004, https://arxiv.org/abs/cond-mat/0412562
+Ananikian, N.; Artuso, R.; Chakhmakhchyan, L.: Superstable cycles for antiferromagnetic Q-state Potts and three-site interaction Ising models on recursive lattices, 2013, https://arxiv.org/abs/1307.6038
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Liu, Hao; Li, Ti-Pei: Systematic Distortion in Cosmic Microwave Background Maps, 2008, https://arxiv.org/abs/0809.4160
+Albarelli, Francesco; Rossi, Matteo A. C.; Paris, Matteo G. A.; Genoni, Marco G.: Ultimate limits for quantum magnetometry via time-continuous measurements, 2017, https://arxiv.org/abs/1706.00485
+Ellis, John; Mavromatos, Nick E.: Inflation induced by Gravitino Condensation in Supergravity, 2013, https://arxiv.org/abs/1308.1906
+Xiangrong Zhu for the ALICE Collaboration, : Two-particle correlations in pp and Pb-Pb collisions with ALICE, 2013, https://arxiv.org/abs/1311.2394
+Abolfath, M.; MacDonald, A. H.; Radzihovsky, L.: Critical Currents of Ideal Quantum Hall Superfluids, 2003, https://arxiv.org/abs/cond-mat/0305295
+Dudík, J.; Zuccarello, F. P.; Aulanier, G.; Schmieder, B.; Démoulin, P.: Expanding and Contracting Coronal Loops as Evidence of Vortex Flows Induced by Solar Eruptions, 2017, https://arxiv.org/abs/1706.04783
+
+* 12x12 random montage
+Lazzati, D.; Morsony, B. J.; Margutti, R.; Begelman, M. C.: Photospheric emission as the dominant radiation mechanism in long-duration gamma-ray bursts, 2013, https://arxiv.org/abs/1301.3920
+Serpa, Nilo: New Lectures on Supergravity, 2011, https://arxiv.org/abs/1105.3213
+Burikham, Piyabut; Panpanich, Sirachak: Effects of Chameleon Scalar Field on Rotation Curves of the Galaxies, 2011, https://arxiv.org/abs/1103.1198
+Bass, S. D.; De Roeck, A.: The Spin Structure of the Proton and Polarized Collider Physics, 2001, https://arxiv.org/abs/hep-ph/0111377
+Adel, Tameem; Wong, Alexander; Stashuk, Daniel: A Weakly Supervised Learning Approach based on Spectral Graph-Theoretic Grouping, 2015, https://arxiv.org/abs/1508.00507
+Phillips, M. M.; Simon, Joshua D.; Morrell, Nidia; Burns, Christopher R.; Cox, Nick L. J.; Foley, Ryan J.; Karakas, Amanda I.; Patat, F.; Sternberg, A.; Williams, R. E.; Gal-Yam, A.; Hsiao, E. Y.; Leonard, D. C.; Persson, Sven E.; Stritzinger, Maximilian; Thompson, I. B.; Campillay, Abdo; Contreras, Carlos; Folatelli, Gastón; Freedman, Wendy L.; Hamuy, Mario; Roth, Miguel; Shields, Gregory A.; Suntzeff, Nicholas B.; Chomiuk, Laura; Ivans, Inese I.; Madore, Barry F.; Penprase, B. E.; Perley, Daniel; Preston, G. Pignata G.; Soderberg, Alicia M.: On the Source of the Dust Extinction in Type Ia Supernovae and the Discovery of Anomalously Strong Na I Absorption, 2013, https://arxiv.org/abs/1311.0147
+Ghorbani, Karim; Khalkhali, Leila: Mono-Higgs signature in fermionic dark matter model, 2016, https://arxiv.org/abs/1608.04559
+Lu, Jingwei; Zhuang, Hao; Kang, Ilgweon; Chen, Pengwen; Cheng, Chung-Kuan: ePlace-3D: Electrostatics based Placement for 3D-ICs, 2015, https://arxiv.org/abs/1512.08291
+Sanakoyeu, Artsiom; Bautista, Miguel A.; Ommer, Björn: Deep Unsupervised Learning of Visual Similarities, 2018, https://arxiv.org/abs/1802.08562
+de Freitas, Rodolfo C.; Velten, Hermano: Non-linear clustering during the BEC dark matter phase transition, 2015, https://arxiv.org/abs/1503.01877
+Abbas, Halim; Garberson, Ford; Glover, Eric; Wall, Dennis P: Machine learning approach for early detection of autism by combining questionnaire and home video screening, 2017, https://arxiv.org/abs/1703.06076
+Tsurkan, V.; Zherlitsyn, S.; Yasin, S.; Felea, V.; Skourski, Y.; Deisenhofer, J.; von Nidda, H. -A. Krug; Wosnitza, J.; Loidl, A.: Unconventional magnetostructural transition in CoCr2O4 at high magnetic fields, 2013, https://arxiv.org/abs/1302.5605
+Swift, Damian C.; Kraus, Richard G.: On the Properties of Plastic Ablators in Laser-Driven Material Dynamics Experiments, 2007, https://arxiv.org/abs/0712.1203
+Guichon, P. A. M.; Mossé, L.; Vanderhaeghen, M.: Pion production in deeply virtual Compton scattering, 2003, https://arxiv.org/abs/hep-ph/0305231
+Kibiłda, Jacek; Kaminski, Nicholas J.; DaSilva, Luiz A.: Radio Access Network and Spectrum Sharing in Mobile Networks: A Stochastic Geometry Perspective, 2016, https://arxiv.org/abs/1604.06588
+Frederix, Rikkert; Frixione, Stefano; Hirschi, Valentin; Pagani, Davide; Shao, Hua-Sheng; Zaro, Marco: The complete NLO corrections to dijet hadroproduction, 2016, https://arxiv.org/abs/1612.06548
+Hansen, Ursula Bengaard; Bertelsen, Mads; Knudsen, Erik Bergbäck; Lefmann, Kim: Simulation of waviness in neutron guides, 2016, https://arxiv.org/abs/1612.03763
+Roca-Maza, X.; Pozzi, G.; Brenna, M.; Mizuyama, K.; Colò, G.: Low-lying dipole response: isospin character and collectivity in ${}^{68}$Ni, ${}^{132}$Sn and ${}^{208}$Pb, 2011, https://arxiv.org/abs/1112.0190
+Wang, Hui; Huang, Jinyuan; Xu, Xiaomin; Xiao, Yanghua; Wang, Wei: Robustness of Complex Networks against Attacks Guided by Damage, 2011, https://arxiv.org/abs/1105.0275
+Paikan, Ali; Tikhanoff, Vadim; Metta, Giorgio; Natale, Lorenzo: Enhancing software module reusability using port plug-ins: an experiment with the iCub robot, 2014, https://arxiv.org/abs/1411.1102
+Brandenburg, A.; Dobler, W.; Subramanian, K.: Magnetic helicity in stellar dynamos: new numerical experiments, 2001, https://arxiv.org/abs/astro-ph/0111567
+Rizzo, Thomas G.: Tests of Low Scale Quantum Gravity in $e^-e^-$ and $\gamma \gamma$ Collisions, 1999, https://arxiv.org/abs/hep-ph/9907401
+"Moccia, Massimo; Castaldi, Giuseppe; D'Alterio, Giuliana; Feo, Maurizio; Vitiello, Roberto; Galdi, Vincenzo;: Transformation-Optics-Based Design of a Metamaterial Radome for Extending the Scanning Angle of a Phased Array Antenna, 2017, https://arxiv.org/abs/1703.03793
+Manna, S. S.; Chakrabarti, A. D.; Cafiero, R.: Critical States in a Dissipative Sandpile Model, 1999, https://arxiv.org/abs/cond-mat/9909065
+Rorai, Alberto; Hennawi, Joseph F.; Oñorbe, Jose; White, Martin; Prochaska, J. Xavier; Kulkarni, Girish; Walther, Michael; Lukić, Zarija; Lee, Khee-Gan: Measurement of the small-scale structure of the intergalactic medium using close quasar pairs, 2017, https://arxiv.org/abs/1704.08366
+Cellucci, Daniel; Cheung, Kenneth C.: Evaluation of Cellular Solids Derived from Triply Periodic Minimal Surfaces, 2015, https://arxiv.org/abs/1512.07512
+Richard, Samuel; Nelson, Richard P.; Umurhan, Orkan M.: Vortex formation in protoplanetary discs induced by the vertical shear instability, 2016, https://arxiv.org/abs/1601.01921
+Liu, Chenxu; Dutt, M. V. Gurudev; Pekker, David: Measurement based 2-qubit unitary gates for pairs of Nitrogen-Vacancy centers in diamond, 2018, https://arxiv.org/abs/1808.10015
+MirMostafaee, S. M. T. K.; Amini, Morteza; Asgharzadeh, A.: Bayesian prediction of minimal repair times of a series system based on hybrid censored sample of components' lifetimes under Rayleigh distribution, 2015, https://arxiv.org/abs/1505.06417
+Ferrari, Luca Alberto Davide; Rossmanith, Carolin; Wirth, Benedikt: Phase field approximations of branched transportation problems, 2018, https://arxiv.org/abs/1805.11399
+Hlinka, Jaroslav; Hartman, David; Vejmelka, Martin; Novotná, Dagmar; Paluš, Milan: Non-linear dependence and teleconnections in climate data: sources, relevance, nonstationarity, 2012, https://arxiv.org/abs/1211.6688
+Sawant, Rahul; Rangwala, S. A.: Optical bistability enabled control of resonant light transmission for an atom-cavity system, 2015, https://arxiv.org/abs/1505.00105
+Yang, Yuan-Pei; Zhang, Bing: Extracting host galaxy dispersion measure and constraining cosmological parameters using fast radio burst data, 2016, https://arxiv.org/abs/1608.08154
+Staley, T. D.; Titterington, D. J.; Fender, R. P.; Swinbank, J. D.; van der Horst, A. J.; Rowlinson, A.; Scaife, A. M. M.; Grainge, K. J. B.; Pooley, G. G.: Automated rapid follow-up of Swift GRBs with AMI-LA, 2012, https://arxiv.org/abs/1211.3115
+Barbot, Thierry; Fillastre, François: Quasi-Fuchsian co-Minkowski manifolds, 2018, https://arxiv.org/abs/1801.10429
+Chang, Chi-Ming; Lin, Ying-Hsuan; Shao, Shu-Heng; Wang, Yifan; Yin, Xi: Topological Defect Lines and Renormalization Group Flows in Two Dimensions, 2018, https://arxiv.org/abs/1802.04445
+Zimnik, Samantha; Dickmann, Marcel; Hugenschmidt, Christoph: In-situ observation of temperature-dependent segregation of Ni adatoms on oriented Pd surfaces, 2017, https://arxiv.org/abs/1704.01966
+Lüscher, Martin: Topology, the Wilson flow and the HMC algorithm, 2010, https://arxiv.org/abs/1009.5877
+Leino, Viljami; Rummukainen, Kari; Tuominen, Kimmo: Slope of the beta function at the fixed point of SU(2) gauge theory with six or eight flavors, 2018, https://arxiv.org/abs/1804.02319
+Pasetto, Alice; Kraus, Alex; Mack, Karl-Heinz; Bruni, Gabriele; Carrasco-Gonzalez, Carlos: A study of a sample of high rotation measure AGNs through multifrequency single dish observations, 2015, https://arxiv.org/abs/1510.01136
+Feng, Shuai; Shao, Zheng-Yi; Shen, Shi-Yin; Argudo-Fernández, Maria; Wu, Hong; Lam, Man-I; Yang, Ming; Yuan, Fang-Ting: An Isolated Compact Galaxy Triplet, 2015, https://arxiv.org/abs/1512.02439
+Grant, Edward; Sahm, Stephan; Zabihi, Mariam; van Gerven, Marcel: Predicting and visualizing psychological attributions with a deep neural network, 2015, https://arxiv.org/abs/1512.01289
+Kamio, Suguru; Hara, Hirohisa; Watanabe, Tetsuya; Matsuzaki, Keiichi; Shibata, Kazunari; Culhane, Len; Warren, Harry: Velocity Structure of Jets in Coronal Hole, 2007, https://arxiv.org/abs/0711.2848
+ExHIC Collaboration, ; Cho, Sungtae; Hyodo, Tetsuo; Jido, Daisuke; Ko, Che Ming; Lee, Su Houng; Maeda, Saori; Miyahara, Kenta; Morita, Kenji; Nielsen, Marina; Ohnishi, Akira; Sekihara, Takayasu; Song, Taesoo; Yasui, Shigehiro; Yazaki, Koichi: Exotic Hadrons from Heavy Ion Collisions, 2017, https://arxiv.org/abs/1702.00486
+Iskrzynski, Mateusz; Kowalska, Kamila: Exact SU(5) Yukawa matrix unification in the General Flavour Violating MSSM, 2014, https://arxiv.org/abs/1412.8651
+Farrar, Glennys R.; Sutherland, Michael S.: Deflections of UHECRs in the Galactic magnetic field, 2017, https://arxiv.org/abs/1711.02730
+McJunkin, Matthew; France, Kevin; Schneider, P. C.; Herczeg, Gregory J.; Brown, Alexander; Hillenbrand, Lynne; Schindhelm, Eric; Edwards, Suzan: Direct Measurement of Interstellar Extinction Toward Young Stars Using Atomic Hydrogen Lyman-$\alpha$ Absorption, 2013, https://arxiv.org/abs/1312.1650
+Cloutier, R.; Astudillo-Defru, N.; Doyon, R.; Bonfils, X.; Almenara, J. M.; Benneke, B.; Bouchy, F.; Delfosse, X.; Ehrenreich, D.; Forveille, T.; Lovis, C.; Mayor, M.; Menou, K.; Murgas, F.; Pepe, F.; Rowe, J.; Santos, N. C.; Udry, S.; Wünsche, A.: Characterization of the K2-18 multi-planetary system with HARPS: A habitable zone super-Earth and discovery of a second, warm super-Earth on a non-coplanar orbit, 2017, https://arxiv.org/abs/1707.04292
+Shipman, Nicholas; Calatroni, Sergio; Jones, Roger M.; Wuensch, Walter: Measurement of the dynamic response of the CERN DC spark system and preliminary estimates of the breakdown turn-on time, 2012, https://arxiv.org/abs/1206.0573
+Batiz, Zoltan; Gross, Franz: Pole Term and Gauge Invariance in Deep Inelastic Scattering, 1998, https://arxiv.org/abs/nucl-th/9803053
+Gupta, Raj Kumar; Chia, Alex Yong-Sang; Rajan, Deepu; Zhiyong, Huang: A learning-based approach for automatic image and video colorization, 2017, https://arxiv.org/abs/1704.04610
+Moreno-Bromberg, Santiago; Taschini, Luca: Pollution permits, Strategic Trading and Dynamic Technology Adoption, 2011, https://arxiv.org/abs/1103.2914
+Likhoded, A. K.; Slabospitsky, S. R.: Charmed hadrons production in high-energy $\Sigma^-$ beam, 2000, https://arxiv.org/abs/hep-ph/0002202
+Christou, A. A.; Kwiatkowski, T.; Butkiewicz, M.; Gulbis, A.; Hergenrother, C. W.; Duddy, S.; Fitzsimmons, A.: Physical and dynamical characterisation of low Delta-V NEA (190491) 2000 FJ10, 2012, https://arxiv.org/abs/1210.3486
+Bhaumik, Sourjya; Chuck, David; Narlikar, Girija; Wilfong, Gordon: Energy-Efficient Design and Optimization of Wireline Access Networks, 2011, https://arxiv.org/abs/1101.2717
+Zhang, Shaobo; Xu, Ye; Yang, Ji: Molecular Clouds in the North American and Pelican Nebulae: Structures, 2013, https://arxiv.org/abs/1312.3079
+Rasskazov, Alexander; Merritt, David: Evolution Of Binary Supermassive Black Holes In Rotating Nuclei, 2016, https://arxiv.org/abs/1610.08555
+Zhou, Xiaowei; Yang, Can; Yu, Weichuan: Moving Object Detection by Detecting Contiguous Outliers in the Low-Rank Representation, 2011, https://arxiv.org/abs/1109.0882
+Radicchi, Filippo; Castellano, Claudio: Leveraging percolation theory to single out influential spreaders in networks, 2016, https://arxiv.org/abs/1605.07041
+Bornyakov, V. G.; Kononenko, A. G.: Abelian monopoles in finite temperature lattice SU(2) gluodynamics: first study with improved action, 2011, https://arxiv.org/abs/1111.0169
+Gamiz, E.; Bailey, J. A.; Bazavov, A.; Bernard, C.; Bouchard, C.; DeTar, C.; Du, D.; El-Khadra, A. X.; Foley, J.; Freeland, E. D.; Gottlieb, Steven; Heller, U. M.; Kim, J.; Kronfeld, A. S.; Laiho, J.; Levkova, L.; Mackenzie, P. B.; Neil, E. T.; Oktay, M. B.; Qiu, Si-Wei; Simone, J. N.; Sugar, R.; Toussaint, D.; Van de Water, R. S.; Zhou, R.: Kaon semileptonic decay form factors with HISQ valence quarks, 2012, https://arxiv.org/abs/1211.0751
+Cho, Inyong; Chun, Eung Jin; Kim, Hang Bae; Kim, Yoonbai: String Cosmology of the D-brane Universe, 2006, https://arxiv.org/abs/hep-th/0603174
+Ghosh, Premomoy; Muhuri, Sanjib: Do we see change of phase in proton-proton collisions at the Large Hadron Collider?, 2014, https://arxiv.org/abs/1406.5811
+Huang, Qingqing; Roozbehani, Mardavij; Dahleh, Munther A: Efficiency-Risk Tradeoffs in Dynamic Oligopoly Markets - with application to electricity markets, 2012, https://arxiv.org/abs/1209.0229
+Bernini, A.; Disanto, F.; Pinzani, R.; Rinaldi, S.: Permutations defining convex permutominoes, 2007, https://arxiv.org/abs/0711.0582
+Inamdar, Niraj K.; Binzel, Richard P.; Hong, Jae Sub; Allen, Branden; Grindlay, Jonathan; Masterson, Rebecca A.: Modeling the Expected Performance of the REgolith X-ray Imaging Spectrometer (REXIS), 2014, https://arxiv.org/abs/1410.3051
+Glossop, Matthew T.; Ingersent, Kevin: Kondo physics and dissipation: A numerical renormalization-group approach to Bose-Fermi Kondo models, 2006, https://arxiv.org/abs/cond-mat/0609589
+Richard, Johan; Stark, Daniel P.; Ellis, Richard S.; George, Matthew R.; Egami, Eiichi; Kneib, Jean-Paul; Smith, Graham P.: A Hubble & Spitzer Space Telescope Survey for Gravitationally-Lensed Galaxies: Further Evidence for a Significant Population of Low Luminosity Galaxies beyond Redshift Seven, 2008, https://arxiv.org/abs/0803.4391
+Funakubo, K.; Kakuto, A.; Otsuki, S.; Takenaga, K.; Toyoda, F.: Profile of the Electroweak Bubble Wall, 1996, https://arxiv.org/abs/hep-ph/9609317
+Ota, Naomi; Hattori, Makoto; Pointecouteau, Etienne; Mitsuda, Kazuhisa: Chandra Spectroscopy and Mass Estimation of the Lensing Cluster of Galaxies CL0024+17, 2002, https://arxiv.org/abs/astro-ph/0209226
+Liška, Martin: Optimizing large applications, 2014, https://arxiv.org/abs/1403.6997
+Li, Jin: Radiative Penguin decays at Belle, 2008, https://arxiv.org/abs/0810.3069
+Priest, E. R.: Hinode 7: Conference Summary and Future Suggestions, 2014, https://arxiv.org/abs/1405.3523
+Samokhin, K. V.; Truong, B. P.: Fulde-Ferrell-Larkin-Ovchinnikov superconductors near a surface, 2018, https://arxiv.org/abs/1807.05261
+Chow, Siu-Fai; Wick, Stuart D.; Riecke, Hermann: Neurogenesis Drives Stimulus Decorrelation in a Model of the Olfactory Bulb, 2012, https://arxiv.org/abs/1202.2148
+Lee, Juhee; Mueller, Peter; Sengupta, Subhajit; Gulukota, Kamalakar; Ji, Yuan: Bayesian Inference for Tumor Subclones Accounting for Sequencing and Structural Variants, 2014, https://arxiv.org/abs/1409.7158
+Simionescu, A.; Roediger, E.; Nulsen, P. E. J.; Brüggen, M.; Forman, W. R.; Böhringer, H.; Werner, N.; Finoguenov, A.: The large-scale shock in the cluster of galaxies Hydra A, 2008, https://arxiv.org/abs/0810.0271
+Doussal, Pierre Le; Wiese, Kay Joerg: Avalanche dynamics of elastic interfaces, 2013, https://arxiv.org/abs/1302.4316
+Gugushvili, Shota; van der Meulen, Frank; Schauer, Moritz; Spreij, Peter: Bayesian wavelet de-noising with the caravan prior, 2018, https://arxiv.org/abs/1810.07668
+Heavy Flavor Averaging Group, ; Amhis, Y.; Banerjee, Sw.; Ben-Haim, E.; Blyth, S.; Bozek, A.; Bozzi, C.; Carbone, A.; Chistov, R.; Chrząszcz, M.; Cibinetto, G.; Dingfelder, J.; Gelb, M.; Gersabeck, M.; Gershon, T.; Gibbons, L.; Golob, B.; Harr, R.; Hayasaka, K.; Hayashii, H.; Kuhr, T.; Leroy, O.; Lusiani, A.; Miyabayashi, K.; Naik, P.; Nishida, S.; Campos, A. Oyanguren; Patel, M.; Pedrini, D.; Petrič, M.; Rama, M.; Roney, M.; Rotondo, M.; Schneider, O.; Schwanda, C.; Schwartz, A. J.; Shwartz, B.; Smith, J. G.; Tesarek, R.; Trabelsi, K.; Urquijo, P.; Van Kooten, R.; Zupanc, A.: Averages of $b$-hadron, $c$-hadron, and $\tau$-lepton properties as of summer 2014, 2014, https://arxiv.org/abs/1412.7515
+Banerji, Manda; McMahon, R. G.; Willott, C. J.; Geach, J. E.; Harrison, C. M.; Alaghband-Zadeh, S.; Alexander, D. M.; Bourne, N.; Coppin, K. E. K.; Dunlop, J. S.; Farrah, D.; Jarvis, M.; Michalowski, M. J.; Page, M.; Smith, D. J. B.; Swinbank, A. M.; Symeonidis, M.; Van der Werf, P. P.: Cold Dust Emission from X-ray AGN in the SCUBA-2 Cosmology Legacy Survey: Dependence on Luminosity, Obscuration & AGN Activity, 2015, https://arxiv.org/abs/1509.00018
+Oshima, Kazuto: Simple procedure for classical signal-procession in cluster-state quantum computation, 2009, https://arxiv.org/abs/0909.5533
+Hao, Yue; Litvinenko, Vladimir N.; Ptitsyn, Vadim: Beam-beam Effects of 'Gear-changing' in Ring-Ring Colliders, 2013, https://arxiv.org/abs/1309.1739
+Gao, Chao; Harle, Robert: Semi-automated Signal Surveying Using Smartphones and Floorplans, 2017, https://arxiv.org/abs/1711.06503
+Shalev-Shwartz, Shai; Zhang, Tong: Stochastic Dual Coordinate Ascent Methods for Regularized Loss Minimization, 2012, https://arxiv.org/abs/1209.1873
+Zenger, Christan; Vogt, Hendrik; Zimmer, Jan; Sezgin, Aydin; Paar, Christof: The Passive Eavesdropper Affects my Channel: Secret-Key Rates under Real-World Conditions (Extended Version), 2017, https://arxiv.org/abs/1701.03904
+Dominik, M.: Adaptive Contouring -- an efficient way to calculate microlensing light curves of extended sources, 2007, https://arxiv.org/abs/astro-ph/0703305
+Viswanathan, Vaisagh; Lee, Chong Eu; Lees, Michael Harold; Cheong, Siew Ann; Sloot, Peter M. A.: Quantitative Comparison Between Crowd Models for Evacuation Planning and Evaluation, 2014, https://arxiv.org/abs/1401.0366
+Sicilia, Alberto; Arenzon, Jeferson J.; Bray, Alan J.; Cugliandolo, Leticia F.: Domain growth morphology in curvature driven two dimensional coarsening, 2007, https://arxiv.org/abs/0706.4314
+Keceli, Feyza; Inan, Inanc; Ayanoglu, Ender: Fair and Efficient TCP Access in the IEEE 802.11 Infrastructure Basic Service Set, 2008, https://arxiv.org/abs/0806.1089
+Lazar, M.: Fast magnetization in counterstreaming plasmas with temperature anisotropies, 2007, https://arxiv.org/abs/0711.2385
+Boden, Hans U.; Chrisman, Micah; Gaudreau, Robin: Signature and concordance of virtual knots, 2017, https://arxiv.org/abs/1708.08090
+Herty, Michael; Puppo, Gabriella; Roncoroni, Sebastiano; Visconti, Giuseppe: The BGK approximation of kinetic models for traffic, 2018, https://arxiv.org/abs/1812.11056
+Tan, Chenhao; Lee, Lillian: All Who Wander: On the Prevalence and Characteristics of Multi-community Engagement, 2015, https://arxiv.org/abs/1503.01180
+Blaes, Omer; Krolik, Julian H.; Hirose, Shigenobu; Shabaltas, Natalia: Dissipation and Vertical Energy Transport in Radiation-Dominated Accretion Disks, 2011, https://arxiv.org/abs/1103.5052
+Clavier, Pierre J.: Analytical and Geometric approches of non-perturbative Quantum Field Theories, 2015, https://arxiv.org/abs/1511.09190
+Xilouris, E. M.; Tabatabaei, F. S.; Boquien, M.; Kramer, C.; Buchbender, C.; Bertoldi, F.; Anderl, S.; Braine, J.; Verley, S.; Relano, M.; Quintana-Lacaci, G.; Akras, S.; Beck, R.; Calzetti, D.; Combes, F.; Gonzalez, M.; Gratier, P.; Henkel, C.; Israel, F.; Koribalski, B.; Lord, S.; Mookerjea, B.; Rosolowsky, E.; Stacey, G.; Tilanus, R. P. J.; van der Tak, F.; van der Werf, P.: Cool and warm dust emission from M33 (HerM33es), 2012, https://arxiv.org/abs/1205.1351
+"West, Nathan E; O'Shea, Timothy J.;: Deep Architectures for Modulation Recognition, 2017, https://arxiv.org/abs/1703.09197
+Schott, Matthias; Dunford, Monica: Review of single vector boson production in pp collisions at $\sqrt{s} = 7$ TeV, 2014, https://arxiv.org/abs/1405.1160
+Archer, Thomas; Pemmaraju, Chaitanya Das; Sanvito, Stefano: Magnetic interaction of Co ions near the {10\bar{1}0} ZnO surface, 2010, https://arxiv.org/abs/1003.2576
+Valero, Carlos: Maxwell's Equations, The Euler Index and Morse Theory, 2013, https://arxiv.org/abs/1311.0569
+Sekeh, Salimeh Yasaei; Oselio, Brandon; Hero, Alfred O.: A Dimension-Independent discriminant between distributions, 2018, https://arxiv.org/abs/1802.04497
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Basat, Ran Ben; Einziger, Gil; Friedman, Roy; Kassner, Yaron: Randomized Admission Policy for Efficient Top-k and Frequency Estimation, 2016, https://arxiv.org/abs/1612.02962
+Lorenz, T.; Ammerahl, U.; Ziemes, R.; Buechner, B.; Revcolevschi, A.; Dhalenne, G.: Thermodynamic Properties of the Incommensurate Phase of CuGeO_3, 1996, https://arxiv.org/abs/cond-mat/9610163
+Billot, Nicolas: Calibrating a novel type of bolometer arrays for the Herschel/PACS Photometer, 2008, https://arxiv.org/abs/0808.3958
+Enoki, Motohiro; Nagashima, Masahiro: The Effect of Orbital Eccentricity on Gravitational Wave Background Radiation from Supermassive Black Hole Binaries, 2006, https://arxiv.org/abs/astro-ph/0609377
+Yang, S. -R. Eric; Cha, Min-Chul; Han, Jung Hoon: Numerical Test of Disk Trial Wave function for Half-Filled Landau Level, 2000, https://arxiv.org/abs/cond-mat/0006434
+Motta, S.; Muñoz-Darias, T.; Belloni, T.: On the outburst evolution of H1743-322: a 2008/2009 comparison, 2010, https://arxiv.org/abs/1006.4773
+Roediger, E.; Kraft, R. P.; Nulsen, P.; Churazov, E.; Forman, W.; Brueggen, M.; Kokotanekova, R.: Viscous Kelvin-Helmholtz instabilities in highly ionised plasmas, 2013, https://arxiv.org/abs/1309.2635
+Cammarota, Valentina; Marinucci, Domenico; Wigman, Igor: On the distribution of the critical values of random spherical harmonics, 2014, https://arxiv.org/abs/1409.1364
+Körtgen, Bastian; Bovino, Stefano; Schleicher, Dominik R. G.; Stutz, Amelia; Banerjee, Robi; Giannetti, Andrea; Leurini, Silvia: Fast deuterium fractionation in magnetized and turbulent filaments, 2017, https://arxiv.org/abs/1709.04013
+Long, Gucan; Kneip, Laurent; Alvarez, Jose M.; Li, Hongdong: Learning Image Matching by Simply Watching Video, 2016, https://arxiv.org/abs/1603.06041
+Espinoza, Néstor; Jordán, Andrés: Limb darkening and exoplanets: testing stellar model atmospheres and identifying biases in transit parameters, 2015, https://arxiv.org/abs/1503.07020
+Lokas, Ewa L.; Ebrova, Ivana; del Pino, Andres; Sybilska, Agnieszka; Athanassoula, E.; Semczuk, Marcin; Gajda, Grzegorz; Fouquet, Sylvain: Tidally induced bars of galaxies in clusters, 2016, https://arxiv.org/abs/1601.07433
+Zhang, Xiaoshuai; Lu, Yiping; Liu, Jiaying; Dong, Bin: Dynamically Unfolding Recurrent Restorer: A Moving Endpoint Control Method for Image Restoration, 2018, https://arxiv.org/abs/1805.07709
+Bertone, V.; Carrasco, N.; Ciuchini, M.; Dimopoulos, P.; Frezzotti, R.; Gimenez, V.; Lubicz, V.; Martinelli, G.; Mescia, F.; Papinutto, M.; Rossi, G. C.; Silvestrini, L.; Simula, S.; Tarantino, C.; Vladikas, A.; Collaboration, for the ETM: Kaon Mixing Beyond the SM from Nf=2 tmQCD and model independent constraints from the UTA, 2012, https://arxiv.org/abs/1207.1287
+Bronnikov, Kirill; Dymnikova, Irina; Galaktionov, Evgeny: Multi-horizon spherically symmetric spacetimes with several scales of vacuum energy, 2012, https://arxiv.org/abs/1204.0534
+Ledwig, Tim; Kim, Hyun-Chul: Transverse strange quark spin structure of the nucleon, 2011, https://arxiv.org/abs/1107.4952
+Udagedara, Indika; Helenbrook, Brian; Luttman, Aaron; Catenacci, Jared: Improved Probabilistic Principal Component Analysis for Application to Reduced Order Modeling, 2017, https://arxiv.org/abs/1702.01236
+Moustakas, John; Kennicutt,, Robert C.; Tremonti, Christy A.: Optical Star-Formation Rate Indicators, 2005, https://arxiv.org/abs/astro-ph/0511730
+Shi, Jiaxin; Sun, Shengyang; Zhu, Jun: A Spectral Approach to Gradient Estimation for Implicit Distributions, 2018, https://arxiv.org/abs/1806.02925
+Bücher, Axel; Dette, Holger: Multiplier bootstrap of tail copulas with applications, 2011, https://arxiv.org/abs/1102.0110
+Li, Yao Dong; Lu, Yuan-Ming; Chen, Gang: The Spinon Fermi Surface U(1) Spin Liquid in a Spin-Orbit-Coupled Triangular Lattice Mott Insulator YbMgGaO4, 2016, https://arxiv.org/abs/1612.03447
+Zentner, Raphael: A class of knots with simple $SU(2)$ representations, 2015, https://arxiv.org/abs/1501.02504
+Wang, M.; Wang, S.; Zhang, Q.; Chan, C. T.; Chan, H. B.: Measurement of mechanical deformations induced by enhanced electromagnetic stress on a parallel metallic-plate system, 2018, https://arxiv.org/abs/1804.08260
+Sefat, Athena S.; Singh, David J.; Garlea, V. Ovidiu; Zuev, Yuri L.; McGuire, Michael A.; VanBebber, Lindsay; Sales, Brian C.: Control of Correlations in Sr4V2O6Fe2As2 by Chemical Stoichiometry, 2010, https://arxiv.org/abs/1009.4911
+Wang, Xuelei; Zeng, Qingguo; Jin, Zhenlan; Liu, Suzhen: The associated productions of the new gauge boson $B_{H}$ in the littlest Higgs model with a SM gauge boson via $e^+e^-$ collision, 2007, https://arxiv.org/abs/hep-ph/0702064
+Sisakyan, Narek; Malakyan, Yuri: Quantum Theory for Generation of Nonclassical Photon Pairs by a Medium with Coherent Atomic Memory, 2005, https://arxiv.org/abs/quant-ph/0503186
+Kervella, Pierre; Mérand, Antoine; Gallenne, Alexandre: The circumstellar envelopes of the Cepheids L Car and RS Pup - Comparative study in the infrared with Spitzer, VLT/VISIR and VLTI/MIDI, 2009, https://arxiv.org/abs/0902.1588
+Fegan, S. J.; Sanchez, D.; Collaboration, Fermi LAT; :, ; Abdo, A. A.: Fermi observations of TeV-selected AGN, 2009, https://arxiv.org/abs/0910.4881
+Khurshudyan, M.; Pasqua, A.; Sadeghi, J.; Farahani, H.: Quintessence Cosmology with an Effective $\Lambda$-Term in Lyra Manifold, 2014, https://arxiv.org/abs/1402.0118
+Zhang, Cheng; Ek, Carl Henrik; Damianou, Andreas; Kjellstrom, Hedvig: Factorized Topic Models, 2013, https://arxiv.org/abs/1301.3461
+Frassek, Rouven: Q-operators, Yangian invariance and the quantum inverse scattering method, 2014, https://arxiv.org/abs/1412.3339
+Goldfarb, Donald; Qin, Zhiwei: Robust Low-rank Tensor Recovery: Models and Algorithms, 2013, https://arxiv.org/abs/1311.6182
+Gull, Emanuel; Ferrero, Michel; Parcollet, Olivier; Georges, Antoine; Millis, Andrew J.: Momentum space anisotropy and pseudogaps: a comparative cluster dynamical mean field analysis of the doping-driven metal-insulator transition in the two dimensional Hubbard model, 2010, https://arxiv.org/abs/1007.2592
+Deng, Haiyun; Liu, Hairong; Tian, Long: Critical points of solutions for mean curvature equation in strictly convex and nonconvex domains, 2017, https://arxiv.org/abs/1712.08431
+Biondini, Gino; Li, Sitai; Mantzavinos, Dionyssis; Trillo, Stefano: Universal behavior of modulationally unstable media, 2017, https://arxiv.org/abs/1710.05068
+Kajdanowicz, Tomasz; Michalski, Radosław; Musiał, Katarzyna; Kazienko, Przemysław: Learning in Unlabeled Networks - An Active Learning and Inference Approach, 2015, https://arxiv.org/abs/1510.01270
+Soheili, Ali Reza; Stockie, John M.: A moving mesh method with variable relaxation time, 2006, https://arxiv.org/abs/math/0602376
+von Hippel, Georg; Rae, Thomas D.; Shintani, Eigo; Wittig, Hartmut: Nucleon matrix elements from lattice QCD with all-mode-averaging and a domain-decomposed solver: an exploratory study, 2016, https://arxiv.org/abs/1605.00564
+Wong, K. Y. Michael; Saad, D.: Inference and Optimization of Real Edges on Sparse Graphs - A Statistical Physics Perspective, 2006, https://arxiv.org/abs/cond-mat/0609367
+Vollmer, B.; Krichbaum, T. P.; Angelakis, E.; Kovalev, Y. Y.: Quasi-simultaneous multi-frequency observations of inverted-spectrum GPS candidate sources, 2008, https://arxiv.org/abs/0806.3694
+Ryskin, M. G.; Drukarev, E. G.; Sadovnikova, V. A.: Nucleon QCD sum rules in instanton medium, 2013, https://arxiv.org/abs/1312.1449
+
+* 12x12 cs.CV October 2012
+Mondal, Arnab Kumar; Dolz, Jose; Desrosiers, Christian: Few-shot 3D Multi-modal Medical Image Segmentation using Generative Adversarial Learning, 2018, https://arxiv.org/abs/1810.12241
+Stamatescu, Victor; McDonnell, Mark D.: Diagnosing Convolutional Neural Networks using their Spectral Response, 2018, https://arxiv.org/abs/1810.03241
+Cavallari, Tommaso; Golodetz, Stuart; Lord, Nicholas A.; Valentin, Julien; Prisacariu, Victor A.; Di Stefano, Luigi; Torr, Philip H. S.: Real-Time RGB-D Camera Pose Estimation in Novel Scenes using a Relocalisation Cascade, 2018, https://arxiv.org/abs/1810.12163
+Mao, Wendong; Wang, Mingjie; Zhou, Jun; Gong, Minglun: Semi-dense Stereo Matching using Dual CNNs, 2018, https://arxiv.org/abs/1810.01369
+Engelmann, Francis; Kontogianni, Theodora; Schult, Jonas; Leibe, Bastian: Know What Your Neighbors Do: 3D Semantic Segmentation of Point Clouds, 2018, https://arxiv.org/abs/1810.01151
+Aliakbarian, Mohammad Sadegh; Saleh, Fatemeh Sadat; Salzmann, Mathieu; Fernando, Basura; Petersson, Lars; Andersson, Lars: VIENA2: A Driving Anticipation Dataset, 2018, https://arxiv.org/abs/1810.09044
+Liang, Yixiong; Mao, Yuan; Xia, Jiazhi; Xiang, Yao; Liu, Jianfeng: Scale-Invariant Structure Saliency Selection for Fast Image Fusion, 2018, https://arxiv.org/abs/1810.12553
+Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
+Laves, Max-Heinrich; Kahrs, Lüder A.; Ortmaier, Tobias: Deep learning based 2.5D flow field estimation for maximum intensity projections of 4D optical coherence tomography, 2018, https://arxiv.org/abs/1810.11205
+Lin, Hubert; Averkiou, Melinos; Kalogerakis, Evangelos; Kovacs, Balazs; Ranade, Siddhant; Kim, Vladimir G.; Chaudhuri, Siddhartha; Bala, Kavita: Learning Material-Aware Local Descriptors for 3D Shapes, 2018, https://arxiv.org/abs/1810.08729
+Le, T. Hoang Ngan; Gummadi, Raajitha; Savvides, Marios: Deep Recurrent Level Set for Segmenting Brain Tumors, 2018, https://arxiv.org/abs/1810.04752
+Chen, Chen; Bai, Wenjia; Rueckert, Daniel: Multi-Task Learning for Left Atrial Segmentation on GE-MRI, 2018, https://arxiv.org/abs/1810.13205
+Irmakci, Ismail; Hussein, Sarfaraz; Savran, Aydogan; Kalyani, Rita R.; Reiter, David; Chia, Chee W.; Fishbein, Kenneth W.; Spencer, Richard G.; Ferrucci, Luigi; Bagci, Ulas: A Novel Extension to Fuzzy Connectivity for Body Composition Analysis: Applications in Thigh, Brain, and Whole Body Tissue Segmentation, 2018, https://arxiv.org/abs/1810.06071
+Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
+Melekhov, Iaroslav; Tiulpin, Aleksei; Sattler, Torsten; Pollefeys, Marc; Rahtu, Esa; Kannala, Juho: DGC-Net: Dense Geometric Correspondence Network, 2018, https://arxiv.org/abs/1810.08393
+Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
+Krish, Ram P.; Fierrez, Julian; Ramos, Daniel; Alonso-Fernandez, Fernando; Bigun, Josef: Improving Automated Latent Fingerprint Identification using Extended Minutia Types, 2018, https://arxiv.org/abs/1810.09801
+Nekrasov, Vladimir; Shen, Chunhua; Reid, Ian: Light-Weight RefineNet for Real-Time Semantic Segmentation, 2018, https://arxiv.org/abs/1810.03272
+Borji, Ali: Saliency Prediction in the Deep Learning Era: An Empirical Investigation, 2018, https://arxiv.org/abs/1810.03716
+Adebayo, Julius; Gilmer, Justin; Muelly, Michael; Goodfellow, Ian; Hardt, Moritz; Kim, Been: Sanity Checks for Saliency Maps, 2018, https://arxiv.org/abs/1810.03292
+Singh, Amanpreet; Agrawal, Sharan: CanvasGAN: A simple baseline for text to image generation by incrementally patching a canvas, 2018, https://arxiv.org/abs/1810.02833
+Kuchera, Michelle P.; Ramanujan, Raghuram; Taylor, Jack Z.; Strauss, Ryan R.; Bazin, Daniel; Bradt, Joshua; Chen, Ruiming: Machine Learning Methods for Track Classification in the AT-TPC, 2018, https://arxiv.org/abs/1810.10350
+Hossain, Md. Zakir; Sohel, Ferdous; Shiratuddin, Mohd Fairuz; Laga, Hamid: A Comprehensive Survey of Deep Learning for Image Captioning, 2018, https://arxiv.org/abs/1810.04020
+Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
+Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+Wang, Yaming; Tan, Xiao; Yang, Yi; Li, Ziyu; Liu, Xiao; Zhou, Feng; Davis, Larry S.: Improving Annotation for 3D Pose Dataset of Fine-Grained Object Categories, 2018, https://arxiv.org/abs/1810.09263
+Ramirez, Pierluigi Zama; Poggi, Matteo; Tosi, Fabio; Mattoccia, Stefano; Di Stefano, Luigi: Geometry meets semantics for semi-supervised monocular depth estimation, 2018, https://arxiv.org/abs/1810.04093
+Lee, Kuan-Hui; Ros, German; Li, Jie; Gaidon, Adrien: SPIGAN: Privileged Adversarial Learning from Simulation, 2018, https://arxiv.org/abs/1810.03756
+Dodds, Eric; Nguyen, Huy; Herdade, Simao; Culpepper, Jack; Kae, Andrew; Garrigues, Pierre: Learning Embeddings for Product Visual Search with Triplet Loss and Online Sampling, 2018, https://arxiv.org/abs/1810.04652
+Dai, Dengxin; Van Gool, Luc: Dark Model Adaptation: Semantic Image Segmentation from Daytime to Nighttime, 2018, https://arxiv.org/abs/1810.02575
+Liu, Jing; van der Schot, Gijs; Engblom, Stefan: Supervised Classification Methods for Flash X-ray single particle diffraction Imaging, 2018, https://arxiv.org/abs/1810.10786
+Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+Marin, Javier; Biswas, Aritro; Ofli, Ferda; Hynes, Nicholas; Salvador, Amaia; Aytar, Yusuf; Weber, Ingmar; Torralba, Antonio: Recipe1M: A Dataset for Learning Cross-Modal Embeddings for Cooking Recipes and Food Images, 2018, https://arxiv.org/abs/1810.06553
+Nekrasov, Vladimir; Chen, Hao; Shen, Chunhua; Reid, Ian: Fast Neural Architecture Search of Compact Semantic Segmentation Models via Auxiliary Cells, 2018, https://arxiv.org/abs/1810.10804
+Kuzin, Artur; Fattakhov, Artur; Kibardin, Ilya; Iglovikov, Vladimir; Dautov, Ruslan: Camera Model Identification Using Convolutional Neural Networks, 2018, https://arxiv.org/abs/1810.02981
+Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+Yun, Inyong; Jung, Cheolkon; Wang, Xinran; Hero, Alfred O; Kim, Joongkyu: Part-Level Convolutional Neural Networks for Pedestrian Detection Using Saliency and Boundary Box Alignment, 2018, https://arxiv.org/abs/1810.00689
+Prakash, Aayush; Boochoon, Shaad; Brophy, Mark; Acuna, David; Cameracci, Eric; State, Gavriel; Shapira, Omer; Birchfield, Stan: Structured Domain Randomization: Bridging the Reality Gap by Context-Aware Synthetic Data, 2018, https://arxiv.org/abs/1810.10093
+Temel, Dogancan; Lee, Jinsol; AlRegib, Ghassan: CURE-OR: Challenging Unreal and Real Environments for Object Recognition, 2018, https://arxiv.org/abs/1810.08293
+Planche, Benjamin; Zakharov, Sergey; Wu, Ziyan; Hutter, Andreas; Kosch, Harald; Ilic, Slobodan: Seeing Beyond Appearance - Mapping Real Images into Geometrical Domains for Unsupervised CAD-based Recognition, 2018, https://arxiv.org/abs/1810.04158
+Shuster, Kurt; Humeau, Samuel; Hu, Hexiang; Bordes, Antoine; Weston, Jason: Engaging Image Captioning Via Personality, 2018, https://arxiv.org/abs/1810.10665
+Chiu, Hsu-kuang; Adeli, Ehsan; Wang, Borui; Huang, De-An; Niebles, Juan Carlos: Action-Agnostic Human Pose Forecasting, 2018, https://arxiv.org/abs/1810.09676
+Girard, Julien; Tamaazousti, Youssef; Borgne, Hervé Le; Hudelot, Céline: Learning Finer-class Networks for Universal Representations, 2018, https://arxiv.org/abs/1810.02126
+Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+Baptista-Ríos, Marcos; López-Sastre, Roberto J.; Acevedo-Rodríguez, Franciso Javier; Maldonado-Bascón, Saturnino: Embarrassingly Simple Model for Early Action Proposal, 2018, https://arxiv.org/abs/1810.07420
+Femling, Frida; Olsson, Adam; Alonso-Fernandez, Fernando: Fruit and Vegetable Identification Using Machine Learning for Retail Applications, 2018, https://arxiv.org/abs/1810.09811
+Lu, Changsheng; Xia, Siyu; Shao, Ming; Fu, Yun: High-quality Ellipse Detection Based on Arc-support Line Segments, 2018, https://arxiv.org/abs/1810.03243
+Kuzin, Artur; Fattakhov, Artur; Kibardin, Ilya; Iglovikov, Vladimir; Dautov, Ruslan: Camera Model Identification Using Convolutional Neural Networks, 2018, https://arxiv.org/abs/1810.02981
+Ekström, Simon; Malmberg, Filip; Ahlström, Håkan; Kullberg, Joel; Strand, Robin: Fast Graph-Cut Based Optimization for Practical Dense Deformable Registration of Volume Images, 2018, https://arxiv.org/abs/1810.08427
+Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
+Tonioni, Alessio; Tosi, Fabio; Poggi, Matteo; Mattoccia, Stefano; Di Stefano, Luigi: Real-time self-adaptive deep stereo, 2018, https://arxiv.org/abs/1810.05424
+Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
+Lu, Changsheng; Xia, Siyu; Shao, Ming; Fu, Yun: High-quality Ellipse Detection Based on Arc-support Line Segments, 2018, https://arxiv.org/abs/1810.03243
+Manhardt, Fabian; Kehl, Wadim; Navab, Nassir; Tombari, Federico: Deep Model-Based 6D Pose Refinement in RGB, 2018, https://arxiv.org/abs/1810.03065
+Lee, Kuan-Hui; Ros, German; Li, Jie; Gaidon, Adrien: SPIGAN: Privileged Adversarial Learning from Simulation, 2018, https://arxiv.org/abs/1810.03756
+Zhuang, Zijie; Ai, Haizhou; Chen, Long; Shang, Chong: Cross-Resolution Person Re-identification with Deep Antithetical Learning, 2018, https://arxiv.org/abs/1810.10221
+Lu, Zhiwu; Guan, Jiechao; Li, Aoxue; Xiang, Tao; Zhao, An; Wen, Ji-Rong: Zero and Few Shot Learning with Semantic Feature Synthesis and Competitive Learning, 2018, https://arxiv.org/abs/1810.08332
+Koenig, Jonas; Malberg, Simon; Martens, Martin; Niehaus, Sebastian; Krohn-Grimberghe, Artus; Ramaswamy, Arunselvan: Multi-Stage Reinforcement Learning For Object Detection, 2018, https://arxiv.org/abs/1810.10325
+Wang, Hai; Williams, Jason D.; Kang, SingBing: Learning to Globally Edit Images with Textual Description, 2018, https://arxiv.org/abs/1810.05786
+Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+Chiu, Hsu-kuang; Adeli, Ehsan; Wang, Borui; Huang, De-An; Niebles, Juan Carlos: Action-Agnostic Human Pose Forecasting, 2018, https://arxiv.org/abs/1810.09676
+Yu, Xiaoming; Cai, Xing; Ying, Zhenqiang; Li, Thomas; Li, Ge: SingleGAN: Image-to-Image Translation by a Single-Generator Network using Multiple Generative Adversarial Learning, 2018, https://arxiv.org/abs/1810.04991
+Mei, Kangfu; Jiang, Aiwen; Li, Juncheng; Ye, Jihua; Wang, Mingwen: An Effective Single-Image Super-Resolution Model Using Squeeze-and-Excitation Networks, 2018, https://arxiv.org/abs/1810.01831
+Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
+Gonthier, Nicolas; Gousseau, Yann; Ladjal, Said; Bonfait, Olivier: Weakly Supervised Object Detection in Artworks, 2018, https://arxiv.org/abs/1810.02569
+Liu, Risheng; Ma, Long; Wang, Yiyang; Zhang, Lei: Learning Converged Propagations with Deep Prior Ensemble for Image Enhancement, 2018, https://arxiv.org/abs/1810.04012
+Öfverstedt, Johan; Lindblad, Joakim; Sladoje, Nataša: Stochastic Distance Transform, 2018, https://arxiv.org/abs/1810.08097
+Rocco, Ignacio; Cimpoi, Mircea; Arandjelović, Relja; Torii, Akihiko; Pajdla, Tomas; Sivic, Josef: Neighbourhood Consensus Networks, 2018, https://arxiv.org/abs/1810.10510
+Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+Manhardt, Fabian; Kehl, Wadim; Navab, Nassir; Tombari, Federico: Deep Model-Based 6D Pose Refinement in RGB, 2018, https://arxiv.org/abs/1810.03065
+Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
+Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
+Liao, Zhibin; Drummond, Tom; Reid, Ian; Carneiro, Gustavo: Approximate Fisher Information Matrix to Characterise the Training of Deep Neural Networks, 2018, https://arxiv.org/abs/1810.06767
+Cheng, Xinjing; Wang, Peng; Yang, Ruigang: Learning Depth with Convolutional Spatial Propagation Network, 2018, https://arxiv.org/abs/1810.02695
+Rocco, Ignacio; Cimpoi, Mircea; Arandjelović, Relja; Torii, Akihiko; Pajdla, Tomas; Sivic, Josef: Neighbourhood Consensus Networks, 2018, https://arxiv.org/abs/1810.10510
+Ge, Weifeng; Huang, Weilin; Dong, Dengke; Scott, Matthew R.: Deep Metric Learning with Hierarchical Triplet Loss, 2018, https://arxiv.org/abs/1810.06951
+Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
+Cheng, Ruiqi; Wang, Kaiwei; Lin, Longqing; Yang, Kailun: Visual Localization of Key Positions for Visually Impaired People, 2018, https://arxiv.org/abs/1810.03790
+Chou, Hsin-Rung; Lee, Jia-Hong; Chan, Yi-Ming; Chen, Chu-Song: Data-specific Adaptive Threshold for Face Recognition and Authentication, 2018, https://arxiv.org/abs/1810.11160
+Mustaniemi, Janne; Kannala, Juho; Särkkä, Simo; Matas, Jiri; Heikkilä, Janne: Gyroscope-Aided Motion Deblurring with Deep Networks, 2018, https://arxiv.org/abs/1810.00986
+Buchholz, Tim-Oliver; Jordan, Mareike; Pigino, Gaia; Jug, Florian: Cryo-CARE: Content-Aware Image Restoration for Cryo-Transmission Electron Microscopy Data, 2018, https://arxiv.org/abs/1810.05420
+"Tarroni, Giacomo; Oktay, Ozan; Sinclair, Matthew; Bai, Wenjia; Schuh, Andreas; Suzuki, Hideaki; de Marvao, Antonio; O'Regan, Declan; Cook, Stuart; Rueckert, Daniel;: A Comprehensive Approach for Learning-based Fully-Automated Inter-slice Motion Correction for Short-Axis Cine Cardiac MR Image Stacks, 2018, https://arxiv.org/abs/1810.02201
+Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
+Liu, Yuanliu; Li, Ang; Yuan, Zejian; Chen, Badong; Zheng, Nanning: Consistency-aware Shading Orders Selective Fusion for Intrinsic Image Decomposition, 2018, https://arxiv.org/abs/1810.09706
+Hong, Danfeng; Yokoya, Naoto; Chanussot, Jocelyn; Zhu, Xiao Xiang: An Augmented Linear Mixing Model to Address Spectral Variability for Hyperspectral Unmixing, 2018, https://arxiv.org/abs/1810.12000
+Park, Ji Hwan; Nadeem, Saad; Mirhosseini, Seyedkoosha; Kaufman, Arie: C2A: Crowd Consensus Analytics for Virtual Colonoscopy, 2018, https://arxiv.org/abs/1810.09012
+Tang, Wei; Li, Teng; Nian, Fudong; Wang, Meng: MsCGAN: Multi-scale Conditional Generative Adversarial Networks for Person Image Generation, 2018, https://arxiv.org/abs/1810.08534
+Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
+Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
+Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
+Qi, Lu; Liu, Shu; Shi, Jianping; Jia, Jiaya: Sequential Context Encoding for Duplicate Removal, 2018, https://arxiv.org/abs/1810.08770
+Torosdagli, Neslisah; Liberton, Denise K.; Verma, Payal; Sincan, Murat; Lee, Janice S.; Bagci, Ulas: Deep Geodesic Learning for Segmentation and Anatomical Landmarking, 2018, https://arxiv.org/abs/1810.04021
+Liu, Risheng; Ma, Long; Wang, Yiyang; Zhang, Lei: Learning Converged Propagations with Deep Prior Ensemble for Image Enhancement, 2018, https://arxiv.org/abs/1810.04012
+Kuchera, Michelle P.; Ramanujan, Raghuram; Taylor, Jack Z.; Strauss, Ryan R.; Bazin, Daniel; Bradt, Joshua; Chen, Ruiming: Machine Learning Methods for Track Classification in the AT-TPC, 2018, https://arxiv.org/abs/1810.10350
+Öfverstedt, Johan; Lindblad, Joakim; Sladoje, Nataša: Stochastic Distance Transform, 2018, https://arxiv.org/abs/1810.08097
+Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
+Zhou, Tao; Fang, Chen; Wang, Zhaowen; Yang, Jimei; Kim, Byungmoon; Chen, Zhili; Brandt, Jonathan; Terzopoulos, Demetri: Learning to Sketch with Deep Q Networks and Demonstrated Strokes, 2018, https://arxiv.org/abs/1810.05977
+Cavallari, Tommaso; Golodetz, Stuart; Lord, Nicholas A.; Valentin, Julien; Prisacariu, Victor A.; Di Stefano, Luigi; Torr, Philip H. S.: Real-Time RGB-D Camera Pose Estimation in Novel Scenes using a Relocalisation Cascade, 2018, https://arxiv.org/abs/1810.12163
+Chou, Hsin-Rung; Lee, Jia-Hong; Chan, Yi-Ming; Chen, Chu-Song: Data-specific Adaptive Threshold for Face Recognition and Authentication, 2018, https://arxiv.org/abs/1810.11160
+Nam, Seonghyeon; Kim, Yunji; Kim, Seon Joo: Text-Adaptive Generative Adversarial Networks: Manipulating Images with Natural Language, 2018, https://arxiv.org/abs/1810.11919
+Krish, Ram P.; Fierrez, Julian; Ramos, Daniel; Alonso-Fernandez, Fernando; Bigun, Josef: Improving Automated Latent Fingerprint Identification using Extended Minutia Types, 2018, https://arxiv.org/abs/1810.09801
+Kasten, Yoni; Werman, Michael: Two view constraints on the epipoles from few correspondences, 2018, https://arxiv.org/abs/1810.09496
+Varytimidis, Dimitrios; Alonso-Fernandez, Fernando; Duran, Boris; Englund, Cristofer: Action and intention recognition of pedestrians in urban traffic, 2018, https://arxiv.org/abs/1810.09805
+Swofford, Mason: Image Completion on CIFAR-10, 2018, https://arxiv.org/abs/1810.03213
+Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+Cuzzolin, Fabio: Visions of a generalized probability theory, 2018, https://arxiv.org/abs/1810.10341
+Wang, Hai; Williams, Jason D.; Kang, SingBing: Learning to Globally Edit Images with Textual Description, 2018, https://arxiv.org/abs/1810.05786
+Temel, Dogancan; Lee, Jinsol; AlRegib, Ghassan: CURE-OR: Challenging Unreal and Real Environments for Object Recognition, 2018, https://arxiv.org/abs/1810.08293
+Swofford, Mason: Image Completion on CIFAR-10, 2018, https://arxiv.org/abs/1810.03213
+Kehl, Christian; Mustafa, Wail; Kehres, Jan; Dahl, Anders Bjorholm; Olsen, Ulrik Lund: Multi-Spectral Imaging via Computed Tomography (MUSIC) - Comparing Unsupervised Spectral Segmentations for Material Differentiation, 2018, https://arxiv.org/abs/1810.11823
+Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+Yu, Fuxun; Qin, Zhuwei; Chen, Xiang: Distilling Critical Paths in Convolutional Neural Networks, 2018, https://arxiv.org/abs/1811.02643
+Wolterink, Jelmer M.; van Hamersvelt, Robbert W.; Viergever, Max A.; Leiner, Tim; Išgum, Ivana: Coronary Artery Centerline Extraction in Cardiac CT Angiography Using a CNN-Based Orientation Classifier, 2018, https://arxiv.org/abs/1810.03143
+Mao, Wendong; Wang, Mingjie; Zhou, Jun; Gong, Minglun: Semi-dense Stereo Matching using Dual CNNs, 2018, https://arxiv.org/abs/1810.01369
+Nekrasov, Vladimir; Shen, Chunhua; Reid, Ian: Light-Weight RefineNet for Real-Time Semantic Segmentation, 2018, https://arxiv.org/abs/1810.03272
+Daudt, Rodrigo Caye; Saux, Bertrand Le; Boulch, Alexandre: Fully Convolutional Siamese Networks for Change Detection, 2018, https://arxiv.org/abs/1810.08462
+Kehl, Christian; Mustafa, Wail; Kehres, Jan; Dahl, Anders Bjorholm; Olsen, Ulrik Lund: Multi-Spectral Imaging via Computed Tomography (MUSIC) - Comparing Unsupervised Spectral Segmentations for Material Differentiation, 2018, https://arxiv.org/abs/1810.11823
+Noothout, Julia M. H.; de Vos, Bob D.; Wolterink, Jelmer M.; Isgum, Ivana: Automatic Segmentation of Thoracic Aorta Segments in Low-Dose Chest CT, 2018, https://arxiv.org/abs/1810.05727
+Kalash, Mahmoud; Islam, Md Amirul; Bruce, Neil D. B.: Relative Saliency and Ranking: Models, Metrics, Data, and Benchmarks, 2018, https://arxiv.org/abs/1810.02426
+Lee, Sang Jun; Kim, Sang Woo; Kwon, Wookyong; Koo, Gyogwon; Yun, Jong Pil: Selective Distillation of Weakly Annotated GTD for Vision-based Slab Identification System, 2018, https://arxiv.org/abs/1810.04029
+Nadeem, Saad; Kaufman, Arie: Visualization Framework for Colonoscopy Videos, 2018, https://arxiv.org/abs/1810.08998
+Zou, Yang; Yu, Zhiding; Kumar, B. V. K. Vijaya; Wang, Jinsong: Domain Adaptation for Semantic Segmentation via Class-Balanced Self-Training, 2018, https://arxiv.org/abs/1810.07911
+Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
+Dong, Haoye; Liang, Xiaodan; Gong, Ke; Lai, Hanjiang; Zhu, Jia; Yin, Jian: Soft-Gated Warping-GAN for Pose-Guided Person Image Synthesis, 2018, https://arxiv.org/abs/1810.11610
+Ma, Minghuang; Pouransari, Hadi; Chao, Daniel; Adya, Saurabh; Serrano, Santiago Akle; Qin, Yi; Gimnicher, Dan; Walsh, Dominic: Democratizing Production-Scale Distributed Deep Learning, 2018, https://arxiv.org/abs/1811.00143
+Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+Mei, Kangfu; Jiang, Aiwen; Li, Juncheng; Ye, Jihua; Wang, Mingwen: An Effective Single-Image Super-Resolution Model Using Squeeze-and-Excitation Networks, 2018, https://arxiv.org/abs/1810.01831
+Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
+Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+Qian, Kun; Zhou, Jun; Xiong, Fengchao; Zhou, Huixin; Du, Juan: Object Tracking in Hyperspectral Videos with Convolutional Features and Kernelized Correlation Filter, 2018, https://arxiv.org/abs/1810.11819
+Liu, Shenglan; Liu, Xiang; Liu, Yang; Feng, Lin; Qiao, Hong; Zhou, Jian; Wang, Yang: Perceptual Visual Interactive Learning, 2018, https://arxiv.org/abs/1810.10789
+Chen, Min; Song, Andy; Yhanandan, Shivanthan A. C.; Zhang, Jing: Background Subtraction using Compressed Low-resolution Images, 2018, https://arxiv.org/abs/1810.10155
+Stamatescu, Victor; McDonnell, Mark D.: Diagnosing Convolutional Neural Networks using their Spectral Response, 2018, https://arxiv.org/abs/1810.03241
+Ge, Weifeng; Huang, Weilin; Dong, Dengke; Scott, Matthew R.: Deep Metric Learning with Hierarchical Triplet Loss, 2018, https://arxiv.org/abs/1810.06951
+Lei, Yiming; Tian, Yukun; Shan, Hongming; Zhang, Junping; Wang, Ge; Kalra, Mannudeep: Soft Activation Mapping of Lung Nodules in Low-Dose CT images, 2018, https://arxiv.org/abs/1810.12494
+Zhou, Tao; Fang, Chen; Wang, Zhaowen; Yang, Jimei; Kim, Byungmoon; Chen, Zhili; Brandt, Jonathan; Terzopoulos, Demetri: Learning to Sketch with Deep Q Networks and Demonstrated Strokes, 2018, https://arxiv.org/abs/1810.05977
+Dai, Dengxin; Van Gool, Luc: Dark Model Adaptation: Semantic Image Segmentation from Daytime to Nighttime, 2018, https://arxiv.org/abs/1810.02575
+Kuo, C. -C. Jay; Zhang, Min; Li, Siyang; Duan, Jiali; Chen, Yueru: Interpretable Convolutional Neural Networks via Feedforward Design, 2018, https://arxiv.org/abs/1810.02786
+Ling, Suiyi; Gutiérrez, Jesús; Ke, Gu; Callet, Patrick Le: Prediction of the Influence of Navigation Scan-path on Perceived Quality of Free-Viewpoint Videos, 2018, https://arxiv.org/abs/1810.04409
+Ghiasi, Golnaz; Lin, Tsung-Yi; Le, Quoc V.: DropBlock: A regularization method for convolutional networks, 2018, https://arxiv.org/abs/1810.12890
+Meng, Lili; Zhao, Bo; Chang, Bo; Huang, Gao; Tung, Frederick; Sigal, Leonid: Where and When to Look? Spatio-temporal Attention for Action Recognition in Videos, 2018, https://arxiv.org/abs/1810.04511
+
+* 12x12 stat.ML October 2012
+Knowles, David A.; Ghahramani, Zoubin: Pitman-Yor Diffusion Trees, 2011, https://arxiv.org/abs/1106.2494
+Xu, Ning; Hong, Jian; Fisher, Timothy C. G.: Finite-sample and asymptotic analysis of generalization ability with an application to penalized regression, 2016, https://arxiv.org/abs/1609.03344
+Gasse, Maxime; Aussem, Alex; Elghazel, Haytham: An Experimental Comparison of Hybrid Algorithms for Bayesian Network Structure Learning, 2015, https://arxiv.org/abs/1505.05004
+Oh, Seong Joon; Augustin, Max; Schiele, Bernt; Fritz, Mario: Towards Reverse-Engineering Black-Box Neural Networks, 2017, https://arxiv.org/abs/1711.01768
+Schoenholz, Samuel S.; Gilmer, Justin; Ganguli, Surya; Sohl-Dickstein, Jascha: Deep Information Propagation, 2016, https://arxiv.org/abs/1611.01232
+Wang, Xu; Slavakis, Konstantinos; Lerman, Gilad: Riemannian Multi-Manifold Modeling, 2014, https://arxiv.org/abs/1410.0095
+Gao, Wei; Chen, Jie; Richard, Cédric; Huang, Jianguo: Online dictionary learning for kernel LMS. Analysis and forward-backward splitting algorithm, 2013, https://arxiv.org/abs/1306.5310
+Silva, Ricardo: Observational-Interventional Priors for Dose-Response Learning, 2016, https://arxiv.org/abs/1605.01573
+Suzumura, Shinya; Nakagawa, Kazuya; Sugiyama, Mahito; Tsuda, Koji; Takeuchi, Ichiro: Selective Inference Approach for Statistically Sound Predictive Pattern Mining, 2016, https://arxiv.org/abs/1602.04601
+Jitkrittum, Wittawat; Kanagawa, Heishiro; Sangkloy, Patsorn; Hays, James; Schölkopf, Bernhard; Gretton, Arthur: Informative Features for Model Comparison, 2018, https://arxiv.org/abs/1810.11630
+Zarezade, Ali; Upadhyay, Utkarsh; Rabiee, Hamid; Rodriguez, Manuel Gomez: RedQueen: An Online Algorithm for Smart Broadcasting in Social Networks, 2016, https://arxiv.org/abs/1610.05773
+Siarohin, Aliaksandr; Sangineto, Enver; Sebe, Nicu: Whitening and Coloring batch transform for GANs, 2018, https://arxiv.org/abs/1806.00420
+Dorta, Garoe; Vicente, Sara; Agapito, Lourdes; Campbell, Neill D. F.; Simpson, Ivor: Structured Uncertainty Prediction Networks, 2018, https://arxiv.org/abs/1802.07079
+Aicher, Christopher; Ma, Yi-An; Foti, Nicholas J.; Fox, Emily B.: Stochastic Gradient MCMC for State Space Models, 2018, https://arxiv.org/abs/1810.09098
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Dumoulin, Vincent; Goodfellow, Ian J.; Courville, Aaron; Bengio, Yoshua: On the Challenges of Physical Implementations of RBMs, 2013, https://arxiv.org/abs/1312.5258
+Mohamed, Shakir; Rezende, Danilo Jimenez: Variational Information Maximisation for Intrinsically Motivated Reinforcement Learning, 2015, https://arxiv.org/abs/1509.08731
+Navarrete, Raymundo; Viswanath, Divakar: Prediction of Dynamical time Series Using Kernel Based Regression and Smooth Splines, 2015, https://arxiv.org/abs/1511.00158
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Haque, Kazi Nazmul; Yousuf, Mohammad Abu; Rana, Rajib: Image denoising and restoration with CNN-LSTM Encoder Decoder with Direct Attention, 2018, https://arxiv.org/abs/1801.05141
+Calandriello, Daniele; Lazaric, Alessandro; Valko, Michal; Koutis, Ioannis: Incremental Spectral Sparsification for Large-Scale Graph-Based Semi-Supervised Learning, 2016, https://arxiv.org/abs/1601.05675
+Qian, Junyang; Jia, Jinzhu: On pattern recovery of the fused Lasso, 2012, https://arxiv.org/abs/1211.5194
+Puchkin, Nikita; Spokoiny, Vladimir: Adaptive multiclass nearest neighbor classifier, 2018, https://arxiv.org/abs/1804.02756
+Kim, Sanggyun; Mesa, Diego; Ma, Rui; Coleman, Todd P.: Tractable Fully Bayesian Inference via Convex Optimization and Optimal Transport Theory, 2015, https://arxiv.org/abs/1509.08582
+Denil, Misha; Matheson, David; de Freitas, Nando: Narrowing the Gap: Random Forests In Theory and In Practice, 2013, https://arxiv.org/abs/1310.1415
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Lang, Hunter; Sontag, David; Vijayaraghavan, Aravindan: Block Stability for MAP Inference, 2018, https://arxiv.org/abs/1810.05305
+Xie, Christopher; Tank, Alex; Greaves-Tunnell, Alec; Fox, Emily: A Unified Framework for Long Range and Cold Start Forecasting of Seasonal Profiles in Time Series, 2017, https://arxiv.org/abs/1710.08473
+Rezende, Danilo Jimenez; Mohamed, Shakir; Danihelka, Ivo; Gregor, Karol; Wierstra, Daan: One-Shot Generalization in Deep Generative Models, 2016, https://arxiv.org/abs/1603.05106
+Raghu, Maithra; Gilmer, Justin; Yosinski, Jason; Sohl-Dickstein, Jascha: SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability, 2017, https://arxiv.org/abs/1706.05806
+Sinha, Aman; Namkoong, Hongseok; Duchi, John: Certifying Some Distributional Robustness with Principled Adversarial Training, 2017, https://arxiv.org/abs/1710.10571
+Schaumberg, Andrew; Yu, Angela; Koshi, Tatsuhiro; Zong, Xiaochan; Rayadhurgam, Santoshkalyan: Predicting Drug Interactions and Mutagenicity with Ensemble Classifiers on Subgraphs of Molecules, 2016, https://arxiv.org/abs/1601.07233
+Hjelm, R Devon; Jacob, Athul Paul; Che, Tong; Trischler, Adam; Cho, Kyunghyun; Bengio, Yoshua: Boundary-Seeking Generative Adversarial Networks, 2017, https://arxiv.org/abs/1702.08431
+Xu, Shuang; Zhang, Chun-Xia; Wang, Pei; Zhang, Jiangshe: Variational Bayesian Complex Network Reconstruction, 2018, https://arxiv.org/abs/1812.04369
+Blundell, Charles; Uria, Benigno; Pritzel, Alexander; Li, Yazhe; Ruderman, Avraham; Leibo, Joel Z; Rae, Jack; Wierstra, Daan; Hassabis, Demis: Model-Free Episodic Control, 2016, https://arxiv.org/abs/1606.04460
+Metzler, Christopher A.; Mousavi, Ali; Baraniuk, Richard G.: Learned D-AMP: Principled Neural Network based Compressive Image Recovery, 2017, https://arxiv.org/abs/1704.06625
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Stewart, Lawrence; Stalzer, Mark: Bayesian Optimization for Parameter Tuning of the XOR Neural Network, 2017, https://arxiv.org/abs/1709.07842
+Alvarado, Pablo A.; Stowell, Dan: Gaussian Processes for Music Audio Modelling and Content Analysis, 2016, https://arxiv.org/abs/1606.01039
+Laparra, Valero; Jiménez, Sandra; Camps-Valls, Gustavo; Malo, Jesús: Nonlinearities and Adaptation of Color Vision from Sequential Principal Curves Analysis, 2016, https://arxiv.org/abs/1602.00236
+Lei, Huitian; Tewari, Ambuj; Murphy, Susan A.: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions, 2017, https://arxiv.org/abs/1706.09090
+Bahmani, Sohail; Raj, Bhiksha; Boufounos, Petros: Greedy Sparsity-Constrained Optimization, 2012, https://arxiv.org/abs/1203.5483
+Gellert, Karol; Schlögl, Erik: Parameter Learning and Change Detection Using a Particle Filter With Accelerated Adaptation, 2018, https://arxiv.org/abs/1806.05387
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Steeg, Greg Ver; Galstyan, Aram: The Information Sieve, 2015, https://arxiv.org/abs/1507.02284
+Zhang, Yuan; Levina, Elizaveta; Zhu, Ji: Community Detection in Networks with Node Features, 2015, https://arxiv.org/abs/1509.01173
+Gomez, Leonardo Gutierrez; Chiem, Benjamin; Delvenne, Jean-Charles: Dynamics Based Features For Graph Classification, 2017, https://arxiv.org/abs/1705.10817
+Zhang, Yuan; Levina, Elizaveta; Zhu, Ji: Community Detection in Networks with Node Features, 2015, https://arxiv.org/abs/1509.01173
+Khan, Muhammad Raza; Blumenstock, Joshua E.: Machine Learning Across Cultures: Modeling the Adoption of Financial Services for the Poor, 2016, https://arxiv.org/abs/1606.05105
+Yu, Jin; Vishwanathan, S. V. N.; Guenter, Simon; Schraudolph, Nicol N.: A Quasi-Newton Approach to Nonsmooth Convex Optimization Problems in Machine Learning, 2008, https://arxiv.org/abs/0804.3835
+Jain, Swayambhoo; Soni, Akshay; Laptev, Nikolay; Mehdad, Yashar: Rank-to-engage: New Listwise Approaches to Maximize Engagement, 2017, https://arxiv.org/abs/1702.07798
+Zhang, Wenwen; Loh, Wei-Yin: PLUTO: Penalized Unbiased Logistic Regression Trees, 2014, https://arxiv.org/abs/1411.6948
+Lei, Huitian; Tewari, Ambuj; Murphy, Susan A.: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions, 2017, https://arxiv.org/abs/1706.09090
+Jiang, Zhanhong; Balu, Aditya; Hegde, Chinmay; Sarkar, Soumik: Collaborative Deep Learning in Fixed Topology Networks, 2017, https://arxiv.org/abs/1706.07880
+Yao, Zhigang; Zhang, Zhenyue: Principal Boundary on Riemannian Manifolds, 2017, https://arxiv.org/abs/1711.06705
+Schuster, Ingmar: Gradient Importance Sampling, 2015, https://arxiv.org/abs/1507.05781
+Chwialkowski, Kacper; Ramdas, Aaditya; Sejdinovic, Dino; Gretton, Arthur: Fast Two-Sample Testing with Analytic Representations of Probability Measures, 2015, https://arxiv.org/abs/1506.04725
+Dorta, Garoe; Vicente, Sara; Agapito, Lourdes; Campbell, Neill D. F.; Simpson, Ivor: Structured Uncertainty Prediction Networks, 2018, https://arxiv.org/abs/1802.07079
+Tomal, Jabed H; Welch, William J; Zamar, Ruben H: Ensembles of Models and Metrics for Robust Ranking of Homologous Proteins, 2017, https://arxiv.org/abs/1706.06971
+Yang, Yingxiang; Etesami, Jalal; He, Niao; Kiyavash, Negar: Nonparametric Hawkes Processes: Online Estimation and Generalization Bounds, 2018, https://arxiv.org/abs/1801.08273
+Sun, Rémy; Lampert, Christoph H.: KS(conf ): A Light-Weight Test if a ConvNet Operates Outside of Its Specifications, 2018, https://arxiv.org/abs/1804.04171
+Xie, Yujia; Wang, Xiangfeng; Wang, Ruijia; Zha, Hongyuan: A Fast Proximal Point Method for Computing Wasserstein Distance, 2018, https://arxiv.org/abs/1802.04307
+Iwata, Tomoharu; Duvenaud, David; Ghahramani, Zoubin: Warped Mixtures for Nonparametric Cluster Shapes, 2012, https://arxiv.org/abs/1206.1846
+Leskovec, Jure; Chakrabarti, Deepayan; Kleinberg, Jon; Faloutsos, Christos; Ghahramani, Zoubin: Kronecker Graphs: An Approach to Modeling Networks, 2008, https://arxiv.org/abs/0812.4905
+Pham, Thai T.; Shen, Yuanyuan: A Deep Causal Inference Approach to Measuring the Effects of Forming Group Loans in Online Non-profit Microfinance Platform, 2017, https://arxiv.org/abs/1706.02795
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Holland, Matthew J.; Ikeda, Kazushi: Efficient learning with robust gradient descent, 2017, https://arxiv.org/abs/1706.00182
+Lee, Nam H.; Priebe, Carey; Park, Youngser; Wang, I-Jeng; Rosen, Michael: Techniques for clustering interaction data as a collection of graphs, 2014, https://arxiv.org/abs/1406.6319
+Marques, Alexandre N.; Lam, Remi R.; Willcox, Karen E.: Contour location via entropy reduction leveraging multiple information sources, 2018, https://arxiv.org/abs/1805.07489
+Yang, Eunho; Lozano, Aurelie; Aravkin, Aleksandr: A General Family of Trimmed Estimators for Robust High-dimensional Data Analysis, 2016, https://arxiv.org/abs/1605.08299
+Ting, Daniel; Brochu, Eric: Optimal Sub-sampling with Influence Functions, 2017, https://arxiv.org/abs/1709.01716
+Shang, Fanhua; Liu, Yuanyuan; Zhou, Kaiwen; Cheng, James; Ng, Kelvin K. W.; Yoshida, Yuichi: Guaranteed Sufficient Decrease for Stochastic Variance Reduced Gradient Optimization, 2018, https://arxiv.org/abs/1802.09933
+Chan, Antoni B.; Hsiao, Janet H.: EMHMM Simulation Study, 2018, https://arxiv.org/abs/1810.07435
+Teso, Stefano; Passerini, Andrea; Viappiani, Paolo: Constructive Preference Elicitation by Setwise Max-margin Learning, 2016, https://arxiv.org/abs/1604.06020
+Chen, Pin-Yu; Wu, Lingfei; Liu, Sijia; Rajapakse, Indika: Fast Incremental von Neumann Graph Entropy Computation: Theory, Algorithm, and Applications, 2018, https://arxiv.org/abs/1805.11769
+Rubenstein, Paul K.; Li, Yunpeng; Roblek, Dominik: An Empirical Study of Generative Models with Encoders, 2018, https://arxiv.org/abs/1812.07909
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Dimitrakakis, Christos; Rothkopf, Constantin: Bayesian multitask inverse reinforcement learning, 2011, https://arxiv.org/abs/1106.3655
+Waegeman, Willem; Pahikkala, Tapio; Airola, Antti; Salakoski, Tapio; Stock, Michiel; De Baets, Bernard: A kernel-based framework for learning graded relations from data, 2011, https://arxiv.org/abs/1111.6473
+Böttcher, Alexander; Brendel, Wieland; Englitz, Bernhard; Bethge, Matthias: Trace your sources in large-scale data: one ring to find them all, 2018, https://arxiv.org/abs/1803.08882
+Gultekin, San; Zhang, Aonan; Paisley, John: Stochastic Annealing for Variational Inference, 2015, https://arxiv.org/abs/1505.06723
+Zhao, Renbo; Haskell, William B.; Feng, Jiashi: A Unified Framework for Stochastic Matrix Factorization via Variance Reduction, 2017, https://arxiv.org/abs/1705.06884
+Podosinnikova, Anastasia; Setzer, Simon; Hein, Matthias: Robust PCA: Optimization of the Robust Reconstruction Error over the Stiefel Manifold, 2015, https://arxiv.org/abs/1506.00323
+Zhang, Jiajun; Shi, Zhiguo: Deformable Deep Convolutional Generative Adversarial Network in Microwave Based Hand Gesture Recognition System, 2017, https://arxiv.org/abs/1711.01968
+Liu, Kaihui; Wang, Jiayi; Xing, Zhengli; Yang, Linxiao; Fang, Jun: Low-Rank Phase Retrieval via Variational Bayesian Learning, 2018, https://arxiv.org/abs/1811.01574
+Huggins, Jonathan H.; Mackey, Lester: Random Feature Stein Discrepancies, 2018, https://arxiv.org/abs/1806.07788
+Mondelli, Marco; Montanari, Andrea: Fundamental Limits of Weak Recovery with Applications to Phase Retrieval, 2017, https://arxiv.org/abs/1708.05932
+Laparra, Valero; Jiménez, Sandra; Camps-Valls, Gustavo; Malo, Jesús: Nonlinearities and Adaptation of Color Vision from Sequential Principal Curves Analysis, 2016, https://arxiv.org/abs/1602.00236
+McCarter, Calvin; Kim, Seyoung: Large-Scale Optimization Algorithms for Sparse Conditional Gaussian Graphical Models, 2015, https://arxiv.org/abs/1509.04681
+Scardapane, Simone; Van Vaerenbergh, Steven; Totaro, Simone; Uncini, Aurelio: Kafnets: kernel-based non-parametric activation functions for neural networks, 2017, https://arxiv.org/abs/1707.04035
+Fusco, Francesco; Tirupathi, Seshu; Gormally, Robert: Power Systems Data Fusion based on Belief Propagation, 2017, https://arxiv.org/abs/1705.08815
+Chamroukhi, Faicel; Huynh, Bao-Tuyen: Regularized Maximum Likelihood Estimation and Feature Selection in Mixtures-of-Experts Models, 2018, https://arxiv.org/abs/1810.12161
+Siddharth, N.; Paige, Brooks; van de Meent, Jan-Willem; Desmaison, Alban; Goodman, Noah D.; Kohli, Pushmeet; Wood, Frank; Torr, Philip H. S.: Learning Disentangled Representations with Semi-Supervised Deep Generative Models, 2017, https://arxiv.org/abs/1706.00400
+Doshi-Velez, Finale; Kim, Been: Towards A Rigorous Science of Interpretable Machine Learning, 2017, https://arxiv.org/abs/1702.08608
+Loosli, Gaëlle; Aboubacar, Hattoibe: Using SVDD in SimpleMKL for 3D-Shapes Filtering, 2017, https://arxiv.org/abs/1712.02658
+Webb, Stefan Douglas: Inference, Sampling, and Learning in Copula Cumulative Distribution Networks, 2013, https://arxiv.org/abs/1310.4456
+Liu, Sida; Barbu, Adrian: Unsupervised Learning of Mixture Models with a Uniform Background Component, 2018, https://arxiv.org/abs/1804.02744
+Goix, Nicolas; Sabourin, Anne; Clémençon, Stéphan: Sparsity in Multivariate Extremes with Applications to Anomaly Detection, 2015, https://arxiv.org/abs/1507.05899
+Wilson, Andrew Gordon; Gilboa, Elad; Nehorai, Arye; Cunningham, John P.: GPatt: Fast Multidimensional Pattern Extrapolation with Gaussian Processes, 2013, https://arxiv.org/abs/1310.5288
+Kim, Seyoung; Xing, Eric P.: Tree-guided group lasso for multi-response regression with structured sparsity, with an application to eQTL mapping, 2009, https://arxiv.org/abs/0909.1373
+Obozinski, Guillaume; Bach, Francis: Convex Relaxation for Combinatorial Penalties, 2012, https://arxiv.org/abs/1205.1240
+Briol, Francois-Xavier; Oates, Chris J.; Cockayne, Jon; Chen, Wilson Ye; Girolami, Mark: On the Sampling Problem for Kernel Quadrature, 2017, https://arxiv.org/abs/1706.03369
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Garrido-Merchán, Eduardo C.; Hernández-Lobato, Daniel: Predictive Entropy Search for Multi-objective Bayesian Optimization with Constraints, 2016, https://arxiv.org/abs/1609.01051
+Husic, Brooke E.; Schlueter-Kuck, Kristy L.; Dabiri, John O.: Simultaneous Coherent Structure Coloring facilitates interpretable clustering of scientific data by amplifying dissimilarity, 2018, https://arxiv.org/abs/1807.04427
+Chacón, José E.: Mixture model modal clustering, 2016, https://arxiv.org/abs/1609.04721
+Shah, Viraj; Soltani, Mohammadreza; Hegde, Chinmay: Reconstruction from Periodic Nonlinearities, With Applications to HDR Imaging, 2017, https://arxiv.org/abs/1710.00109
+Puolamäki, Kai; Oikarinen, Emilia; Kang, Bo; Lijffijt, Jefrey; De Bie, Tijl: Interactive Visual Data Exploration with Subjective Feedback: An Information-Theoretic Approach, 2017, https://arxiv.org/abs/1710.08167
+Gandhi, Manan; Lee, Keuntaek; Pan, Yunpeng; Theodorou, Evangelos: Propagating Uncertainty through the tanh Function with Application to Reservoir Computing, 2018, https://arxiv.org/abs/1806.09431
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Kailkhura, Bhavya; Thiagarajan, Jayaraman J.; Rastogi, Charvi; Varshney, Pramod K.; Bremer, Peer-Timo: A Spectral Approach for the Design of Experiments: Design, Analysis and Algorithms, 2017, https://arxiv.org/abs/1712.06028
+Ragoza, Matthew; Hochuli, Joshua; Idrobo, Elisa; Sunseri, Jocelyn; Koes, David Ryan: Protein-Ligand Scoring with Convolutional Neural Networks, 2016, https://arxiv.org/abs/1612.02751
+Siarohin, Aliaksandr; Zen, Gloria; Sebe, Nicu; Ricci, Elisa: Enhancing Perceptual Attributes with Bayesian Style Generation, 2018, https://arxiv.org/abs/1812.00717
+Ruffini, Matteo; Rabusseau, Guillaume; Balle, Borja: Hierarchical Methods of Moments, 2018, https://arxiv.org/abs/1810.07468
+Heinze-Deml, Christina; Meinshausen, Nicolai: Conditional Variance Penalties and Domain Shift Robustness, 2017, https://arxiv.org/abs/1710.11469
+"d'Errico, Maria; Facco, Elena; Laio, Alessandro; Rodriguez, Alex;: Automatic topography of high-dimensional data sets by non-parametric Density Peak clustering, 2018, https://arxiv.org/abs/1802.10549
+Zou, James Y.; Chaudhuri, Kamalika; Kalai, Adam Tauman: Crowdsourcing Feature Discovery via Adaptively Chosen Comparisons, 2015, https://arxiv.org/abs/1504.00064
+Cardoso,  ngelo; Daolio, Fabio; Vargas, Saúl: Product Characterisation towards Personalisation: Learning Attributes from Unstructured Data to Recommend Fashion Products, 2018, https://arxiv.org/abs/1803.07679
+Xie, Christopher; Tank, Alex; Greaves-Tunnell, Alec; Fox, Emily: A Unified Framework for Long Range and Cold Start Forecasting of Seasonal Profiles in Time Series, 2017, https://arxiv.org/abs/1710.08473
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Tuia, Devis; Camps-Valls, Gustau: Kernel Manifold Alignment, 2015, https://arxiv.org/abs/1504.02338
+Hofert, Marius; Prasad, Avinash; Zhu, Mu: Quasi-random number generators for multivariate distributions based on generative neural networks, 2018, https://arxiv.org/abs/1811.00683
+Tandon, Rashish; Si, Si; Ravikumar, Pradeep; Dhillon, Inderjit: Kernel Ridge Regression via Partitioning, 2016, https://arxiv.org/abs/1608.01976
+Goldfarb, Donald; Qin, Zhiwei: Robust Low-rank Tensor Recovery: Models and Algorithms, 2013, https://arxiv.org/abs/1311.6182
+Yao, Yuling; Vehtari, Aki; Simpson, Daniel; Gelman, Andrew: Yes, but Did It Work?: Evaluating Variational Inference, 2018, https://arxiv.org/abs/1802.02538
+Yang, Xiu; Tartakovsky, Guzel; Tartakovsky, Alexandre: Physics-Informed Kriging: A Physics-Informed Gaussian Process Regression Method for Data-Model Convergence, 2018, https://arxiv.org/abs/1809.03461
+Wang, Gang; Giannakis, Georgios B.; Chen, Jie: Learning ReLU Networks on Linearly Separable Data: Algorithm, Optimality, and Generalization, 2018, https://arxiv.org/abs/1808.04685
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Lakshminarayanan, Balaji; Pritzel, Alexander; Blundell, Charles: Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles, 2016, https://arxiv.org/abs/1612.01474
+Sattigeri, Prasanna; Hoffman, Samuel C.; Chenthamarakshan, Vijil; Varshney, Kush R.: Fairness GAN, 2018, https://arxiv.org/abs/1805.09910
+Webb, Stefan; Golinski, Adam; Zinkov, Robert; Siddharth, N.; Rainforth, Tom; Teh, Yee Whye; Wood, Frank: Faithful Inversion of Generative Models for Effective Amortized Inference, 2017, https://arxiv.org/abs/1712.00287
+Roth, Kevin; Lucchi, Aurelien; Nowozin, Sebastian; Hofmann, Thomas: Adversarially Robust Training through Structured Gradient Regularization, 2018, https://arxiv.org/abs/1805.08736
+Remes, Sami; Heinonen, Markus; Kaski, Samuel: Non-Stationary Spectral Kernels, 2017, https://arxiv.org/abs/1705.08736
+Xiao, Lechao; Bahri, Yasaman; Sohl-Dickstein, Jascha; Schoenholz, Samuel S.; Pennington, Jeffrey: Dynamical Isometry and a Mean Field Theory of CNNs: How to Train 10,000-Layer Vanilla Convolutional Neural Networks, 2018, https://arxiv.org/abs/1806.05393
+Cheplygina, Veronika; Tax, David M. J.; Loog, Marco: Multiple Instance Learning with Bag Dissimilarities, 2013, https://arxiv.org/abs/1309.5643
+Lefèvre, Augustin; Bach, Francis; Févotte, Cédric: Online algorithms for Nonnegative Matrix Factorization with the Itakura-Saito divergence, 2011, https://arxiv.org/abs/1106.4198
+Novak, Roman; Bahri, Yasaman; Abolafia, Daniel A.; Pennington, Jeffrey; Sohl-Dickstein, Jascha: Sensitivity and Generalization in Neural Networks: an Empirical Study, 2018, https://arxiv.org/abs/1802.08760
+Imani, Ehsan; White, Martha: Improving Regression Performance with Distributional Losses, 2018, https://arxiv.org/abs/1806.04613
+Chowdhury, Agniva; Yang, Jiasen; Drineas, Petros: Structural Conditions for Projection-Cost Preservation via Randomized Matrix Multiplication, 2017, https://arxiv.org/abs/1705.10102
+Kim, Hyeji; Gao, Weihao; Kannan, Sreeram; Oh, Sewoong; Viswanath, Pramod: Discovering Potential Correlations via Hypercontractivity, 2017, https://arxiv.org/abs/1709.04024
+Kulesza, Alex; Taskar, Ben: Determinantal point processes for machine learning, 2012, https://arxiv.org/abs/1207.6083
+Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+Ustun, Berk; Rudin, Cynthia: Learning Optimized Risk Scores, 2016, https://arxiv.org/abs/1610.00168
+
+* Grid t-SNE 1000 images cs.CV 2012
+1. Bagon, Shai: Discrete Energy Minimization, beyond Submodularity: Applications and Approximations, 2012, https://arxiv.org/abs/1210.7362
+2. Vondrick, Carl; Khosla, Aditya; Malisiewicz, Tomasz; Torralba, Antonio: Inverting and Visualizing Features for Object Detection, 2012, https://arxiv.org/abs/1212.2278
+3. Premachandran, Vittal; Kakarala, Ramakrishna: Perceptually Motivated Shape Context Which Uses Shape Interiors, 2012, https://arxiv.org/abs/1212.4608
+4. Chaudhury, Kunal N.; Singer, Amit: Non-Local Patch Regression: Robust Image Denoising in Patch Space, 2012, https://arxiv.org/abs/1211.4264
+5. Caraig, Lou Marvin: A New Training Algorithm for Kanerva's Sparse Distributed Memory, 2012, https://arxiv.org/abs/1207.5774
+6. Aly, Salah A.: A Missing and Found Recognition System for Hajj and Umrah, 2012, https://arxiv.org/abs/1208.5365
+7. Gonçalves, Wesley Nunes; Bruno, Odemir Martinez: Automatic system for counting cells with elliptical shape, 2012, https://arxiv.org/abs/1201.3109
+8. Eynard, Davide; Glashoff, Klaus; Bronstein, Michael M.; Bronstein, Alexander M.: Multimodal diffusion geometry by joint diagonalization of Laplacians, 2012, https://arxiv.org/abs/1209.2295
+9. Ren, Xiang; Lin, Zhouchen: Linearized Alternating Direction Method with Adaptive Penalty and Warm Starts for Fast Solving Transform Invariant Low-Rank Textures, 2012, https://arxiv.org/abs/1205.5351
+10. Tang, Zhongwei; Castrodad, Alexey; Tepper, Mariano; Sapiro, Guillermo: Are You Imitating Me? Unsupervised Sparse Modeling for Group Activity Analysis from a Single Video, 2012, https://arxiv.org/abs/1208.5451
+11. Kolmogorov, Vladimir; Schoenemann, Thomas: Generalized sequential tree-reweighted message passing, 2012, https://arxiv.org/abs/1205.6352
+12. "d'Angelo, Emmanuel; jacques, Laurent; Alahi, Alexandre; Vandergheynst, Pierre;: From Bits to Images: Inversion of Local Binary Descriptors, 2012, https://arxiv.org/abs/1211.1265
+13. Arabadjis, Dimitris; Rousopoulos, Panayiotis; Papaodysseus, Constantin; Exarhos, Michalis; Panagopoulos, Michalis; Papazoglou-Manioudaki, Lena: Optimization in Differentiable Manifolds in Order to Determine the Method of Construction of Prehistoric Wall-Paintings, 2012, https://arxiv.org/abs/1210.2629
+14. Gong, Yunchao; Ke, Qifa; Isard, Michael; Lazebnik, Svetlana: A Multi-View Embedding Space for Modeling Internet Images, Tags, and their Semantics, 2012, https://arxiv.org/abs/1212.4522
+15. Fiori, Marcelo; Musé, Pablo; Sapiro, Guillermo: A Complete System for Candidate Polyps Detection in Virtual Colonoscopy, 2012, https://arxiv.org/abs/1209.6525
+16. Zeiler, Matthew D.; Fergus, Rob: Differentiable Pooling for Hierarchical Feature Learning, 2012, https://arxiv.org/abs/1207.0151
+17. Estellers, Virginia; Thiran, Jean-Philippe; Bresson, Xavier: Enhanced Compressed Sensing Recovery with Level Set Normals, 2012, https://arxiv.org/abs/1210.3350
+18. Jayawardena, Srimal; Yang, Di; Hutter, Marcus: 3D Model Assisted Image Segmentation, 2012, https://arxiv.org/abs/1202.1943
+19. Kubota, Toshiro: Contour Completion Around a Fixation Point, 2012, https://arxiv.org/abs/1208.3512
+20. Chang, Jason; Fisher, John W.: Efficient Topology-Controlled Sampling of Implicit Shapes, 2012, https://arxiv.org/abs/1205.3766
+21. Guimarães, Silvio Jamil F.; Cousty, Jean; Kenmochi, Yukiko; Najman, Laurent: An efficient hierarchical graph based image segmentation, 2012, https://arxiv.org/abs/1206.2807
+22. Gangeh, Mehrdad J.; Duin, Robert P. W.; Romeny, Bart M. ter Haar; Kamel, Mohamed S.: A Two-Stage Combined Classifier in Scale Space Texture Classification, 2012, https://arxiv.org/abs/1207.4089
+23. Song, Shuran; Xiao, Jianxiong: Tracking Revisited using RGBD Camera: Baseline and Benchmark, 2012, https://arxiv.org/abs/1212.2823
+24. da Silva, Núbia Rosa; Bruno, Odemir Martinez: Analysis of Multi-Scale Fractal Dimension to Classify Human Motion, 2012, https://arxiv.org/abs/1207.1649
+25. Burger, Harold Christopher; Schuler, Christian J.; Harmeling, Stefan: Image denoising with multi-layer perceptrons, part 2: training trade-offs and analysis of their mechanisms, 2012, https://arxiv.org/abs/1211.1552
+26. Chaudhry, Rizwan; Hager, Gregory; Vidal, Rene: Dynamic Template Tracking and Recognition, 2012, https://arxiv.org/abs/1204.4476
+27. Narayanaswamy, Siddharth; Barbu, Andrei; Siskind, Jeffrey Mark: Seeing Unseeability to See the Unseeable, 2012, https://arxiv.org/abs/1204.2801
+28. Wang, Quan: GMM-Based Hidden Markov Random Field for Color Image and 3D Volume Segmentation, 2012, https://arxiv.org/abs/1212.4527
+29. Tabor, Jacek; Misztal, Krzysztof: Detection of elliptical shapes via cross-entropy clustering, 2012, https://arxiv.org/abs/1211.5712
+30. "Ersoy, Dalton Lunga 'and' Okan;: Nonlinear Dynamic Field Embedding: On Hyperspectral Scene Visualization, 2012, https://arxiv.org/abs/1211.6675
+31. Duarte-Carvajalino, Julio M.; Yu, Guoshen; Carin, Lawrence; Sapiro, Guillermo: Task-Driven Adaptive Statistical Compressive Sensing of Gaussian Mixture Models, 2012, https://arxiv.org/abs/1201.5404
+32. Krähenbühl, Philipp; Koltun, Vladlen: Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials, 2012, https://arxiv.org/abs/1210.5644
+33. Daneshgar, Amir; Javadi, Ramin; Razavi, Basir Shariat: Clustering Using Isoperimetric Number of Trees, 2012, https://arxiv.org/abs/1203.4204
+34. Chaudhury, Kunal N.: Acceleration of the shiftable O(1) algorithm for bilateral filtering and non-local means, 2012, https://arxiv.org/abs/1203.5128
+35. Schclar, Alon: Multi-Sensor Fusion via Reduction of Dimensionality, 2012, https://arxiv.org/abs/1211.2863
+36. Singaraju, Dheeraj; Elhamifar, Ehsan; Tron, Roberto; Yang, Allen Y.; Sastry, S. Shankar: On the Lagrangian Biduality of Sparsity Minimization Problems, 2012, https://arxiv.org/abs/1201.3674
+37. Gonçalves, Wesley Nunes; Machado, Bruno Brandoli; Bruno, Odemir Martinez: Spatiotemporal Gabor filters: a new method for dynamic texture recognition, 2012, https://arxiv.org/abs/1201.3612
+38. Barriuso, Adela; Torralba, Antonio: Notes on image annotation, 2012, https://arxiv.org/abs/1210.3448
+39. Needell, Deanna; Ward, Rachel: Stable image reconstruction using total variation minimization, 2012, https://arxiv.org/abs/1202.6429
+40. Wang, Junyan; Chan, Kap Luk: Piecewise Linear Patch Reconstruction for Segmentation and Description of Non-smooth Image Structures, 2012, https://arxiv.org/abs/1207.5113
+41. Elhamifar, Ehsan; Vidal, Rene: Sparse Subspace Clustering: Algorithm, Theory, and Applications, 2012, https://arxiv.org/abs/1203.1005
+42. Christlein, Vincent; Riess, Christian; Jordan, Johannes; Riess, Corinna; Angelopoulou, Elli: An Evaluation of Popular Copy-Move Forgery Detection Approaches, 2012, https://arxiv.org/abs/1208.3665
+43. Anand, Abhishek; Li, Sherwin: 3D Scene Grammar for Parsing RGB-D Pointclouds, 2012, https://arxiv.org/abs/1211.1752
+44. Burgi, Pierre-Yves; Yuille, Alan L.; Grzywacz, Norberto M.: Probabilistic Motion Estimation Based on Temporal Coherence, 2012, https://arxiv.org/abs/1201.1216
+45. Krahmer, Felix; Ward, Rachel: Stable and robust sampling strategies for compressive imaging, 2012, https://arxiv.org/abs/1210.2380
+46. Bekkers, Erik; Duits, Remco; Berendschot, Tos; Romeny, Bart ter Haar: A Multi-Orientation Analysis Approach to Retinal Vessel Tracking, 2012, https://arxiv.org/abs/1212.3530
+47. Darkner, Sune; Sporring, Jon: Locally Orderless Registration, 2012, https://arxiv.org/abs/1205.5425
+48. Salmon, Joseph; Willett, Rebecca; Arias-Castro, Ery: A two-stage denoising filter: the preprocessed Yaroslavsky filter, 2012, https://arxiv.org/abs/1208.6516
+49. Konukoglu, Ender; Glocker, Ben; Criminisi, Antonio; Pohl, Kilian M.: WESD - Weighted Spectral Distance for Measuring Shape Dissimilarity, 2012, https://arxiv.org/abs/1208.5016
+50. Frery, Alejandro C.; Jacobo-Berlles, Julio; Gambini, Juliana; Mejail, Marta: Polarimetric SAR Image Segmentation with B-Splines and a New Statistical Model, 2012, https://arxiv.org/abs/1207.3944
+51. Puy, Gilles; Vandergheynst, Pierre: Robust image reconstruction from multi-view measurements, 2012, https://arxiv.org/abs/1212.3268
+52. Yang, Yanchao; Sundaramoorthi, Ganesh: Shape Tracking With Occlusions via Coarse-To-Fine Region-Based Sobolev Descent, 2012, https://arxiv.org/abs/1208.4391
+53. Qiu, Qiang; Chellappa, Rama: A Unified Approach for Modeling and Recognition of Individual Actions and Group Activities, 2012, https://arxiv.org/abs/1208.4398
+54. Seer, Stefan; Brändle, Norbert; Ratti, Carlo: Kinects and Human Kinetics: A New Approach for Studying Crowd Behavior, 2012, https://arxiv.org/abs/1210.2838
+55. Tofighi, Mohammad; Kalbkhani, Hashem; Shayesteh, Mahrokh G.; Ghasemzadeh, Mehdi: Robust Head Pose Estimation Using Contourlet Transform, 2012, https://arxiv.org/abs/1204.5431
+56. Zaidenberg, Sofia; Boulay, Bernard; Bremond, François: A generic framework for video understanding applied to group behavior recognition, 2012, https://arxiv.org/abs/1206.5065
+57. Barbu, Andrei; Bridge, Alexander; Burchill, Zachary; Coroian, Dan; Dickinson, Sven; Fidler, Sanja; Michaux, Aaron; Mussman, Sam; Narayanaswamy, Siddharth; Salvi, Dhaval; Schmidt, Lara; Shangguan, Jiangnan; Siskind, Jeffrey Mark; Waggoner, Jarrell; Wang, Song; Wei, Jinlian; Yin, Yifan; Zhang, Zhiqi: Video In Sentences Out, 2012, https://arxiv.org/abs/1204.2742
+58. Rodner, Erik: Visual Transfer Learning: Informal Introduction and Literature Overview, 2012, https://arxiv.org/abs/1211.1127
+59. Kong, Shu; Wang, Donghui: A Report on Multilinear PCA Plus Multilinear LDA to Deal with Tensorial Data: Visual Classification as An Example, 2012, https://arxiv.org/abs/1203.0744
+60. Tepper, Mariano; Musé, Pablo; Almansa, Andrés: On the Role of Contrast and Regularity in Perceptual Boundary Saliency, 2012, https://arxiv.org/abs/1210.3718
+61. Bhavsar, Arnav: Analysis of Magnification in Depth from Defocus, 2012, https://arxiv.org/abs/1203.6329
+62. Li, Xi; Shen, Chunhua; Shi, Qinfeng; Dick, Anthony; Hengel, Anton van den: Non-sparse Linear Representations for Visual Tracking with Online Reservoir Metric Learning, 2012, https://arxiv.org/abs/1204.2912
+63. Mollah, Ayatullah Faruk; Basu, Subhadip; Nasipuri, Mita: Computationally Efficient Implementation of Convolution-based Locally Adaptive Binarization Techniques, 2012, https://arxiv.org/abs/1210.3165
+64. Abeles, Peter: Resolving Implementation Ambiguity and Improving SURF, 2012, https://arxiv.org/abs/1202.0492
+65. Xu, Yongchao; Géraud, Thierry; Najman, Laurent: Morphological Filtering in Shape Spaces: Applications using Tree-Based Image Representations, 2012, https://arxiv.org/abs/1204.4758
+66. Soomro, Khurram; Zamir, Amir Roshan; Shah, Mubarak: UCF101: A Dataset of 101 Human Actions Classes From Videos in The Wild, 2012, https://arxiv.org/abs/1212.0402
+67. Wang, Quan: HMRF-EM-image: Implementation of the Hidden Markov Random Field Model and its Expectation-Maximization Algorithm, 2012, https://arxiv.org/abs/1207.3510
+68. Cireşan, Dan; Meier, Ueli; Schmidhuber, Juergen: Multi-column Deep Neural Networks for Image Classification, 2012, https://arxiv.org/abs/1202.2745
+69. Sundaramoorthi, Ganesh; Yang, Yanchao: Matching Through Features and Features Through Matching, 2012, https://arxiv.org/abs/1211.4771
+70. Meyer, Fernand: Watersheds, waterfalls, on edge or node weighted graphs, 2012, https://arxiv.org/abs/1204.2837
+71. Hale, Scott A.: Unsupervised Threshold for Automatic Extraction of Dolphin Dorsal Fin Outlines from Digital Photographs in DARWIN (Digital Analysis and Recognition of Whale Images on a Network), 2012, https://arxiv.org/abs/1202.4107
+72. Tosic, Ivana; Drewes, Sarah: Learning joint intensity-depth sparse representations, 2012, https://arxiv.org/abs/1201.0566
+73. Wang, Quan: Kernel Principal Component Analysis and its Applications in Face Recognition and Active Shape Models, 2012, https://arxiv.org/abs/1207.3538
+74. Wang, Junyan; Chan, Kap Luk: Active Contour with A Tangential Component, 2012, https://arxiv.org/abs/1204.6458
+75. Liu, Risheng; Lin, Zhouchen; De la Torre, Fernando; Su, Zhixun: Fixed-Rank Representation for Unsupervised Visual Learning, 2012, https://arxiv.org/abs/1203.2210
+76. Masci, Jonathan; Bronstein, Michael M.; Bronstein, Alexander A.; Schmidhuber, Jürgen: Multimodal similarity-preserving hashing, 2012, https://arxiv.org/abs/1207.1522
+77. Yamaguchi, Koichiro; Hazan, Tamir; McAllester, David; Urtasun, Raquel: Continuous Markov Random Fields for Robust Stereo Estimation, 2012, https://arxiv.org/abs/1204.1393
+78. Perciano, Talita; Urban, Matthew; Mascarenhas, Nelson D. A.; Fatemi, Mostafa; Frery, Alejandro C.; Silva, Glauber T.: Deconvolution of vibroacoustic images using a simulation model based on a three dimensional point spread function, 2012, https://arxiv.org/abs/1207.3370
+79. Bagon, Shai; Galun, Meirav: A Unified Multiscale Framework for Discrete Energy Minimization, 2012, https://arxiv.org/abs/1204.4867
+80. Sudhakar, Prasad; Jacques, Laurent; Dubois, Xavier; Antoine, Philippe; Joannes, Luc: Compressive Schlieren Deflectometry, 2012, https://arxiv.org/abs/1212.0433
+81. Brunton, Alan; Salazar, Augusto; Bolkart, Timo; Wuhrer, Stefanie: Review of Statistical Shape Spaces for 3D Data with Comparative Analysis for Human Faces, 2012, https://arxiv.org/abs/1209.6491
+82. Arabadjis, Dimitris; Rousopoulos, Panayiotis; Papaodysseus, Constantin; Panagopoulos, Michalis; Loumou, Panayiota; Theodoropoulos, Georgios: A General Methodology for the Determination of 2D Bodies Elastic Deformation Invariants. Application to the Automatic Identification of Parasites, 2012, https://arxiv.org/abs/1210.2646
+83. Wang, Junyan; Chan, Kap Luk: The Stability of Convergence of Curve Evolutions in Vector Fields, 2012, https://arxiv.org/abs/1206.4042
+84. Kovnatsky, A.; Bronstein, M. M.; Bronstein, A. M.; Glashoff, K.; Kimmel, R.: Coupled quasi-harmonic bases, 2012, https://arxiv.org/abs/1210.0026
+85. Masmoudi, Khaled; Antonini, Marc; Kornprobst, Pierre: Streaming an image through the eye: The retina seen as a dithered scalable image coder, 2012, https://arxiv.org/abs/1202.2350
+86. Zhang, Haichao; Wipf, David; Zhang, Yanning: Image Super-Resolution via Sparse Bayesian Modeling of Natural Images, 2012, https://arxiv.org/abs/1209.4317
+87. Tang, Zhongwei; von Gioi, Rafael Grompone; Monasse, Pascal; Morel, Jean-Michel: High-precision camera distortion measurements with a "calibration harp", 2012, https://arxiv.org/abs/1212.5656
+88. Mu, Yadong; Liu, Wei; Yan, Shuicheng: Video De-fencing, 2012, https://arxiv.org/abs/1210.2388
+89. Mader, Kevin; Reese, Gil: Using Covariance Matrices as Feature Descriptors for Vehicle Detection from a Fixed Camera, 2012, https://arxiv.org/abs/1202.2528
+90. Backes, André Ricardo; Bruno, Odemir Martinez: Fractal and Multi-Scale Fractal Dimension analysis: a comparative study of Bouligand-Minkowski method, 2012, https://arxiv.org/abs/1201.3153
+91. Thakur, Gautam S.; Ali, Mohsen; Hui, Pan; Helmy, Ahmed: Comparing Background Subtraction Algorithms and Method of Car Counting, 2012, https://arxiv.org/abs/1202.0549
+92. Bruna, Joan; Mallat, Stéphane: Invariant Scattering Convolution Networks, 2012, https://arxiv.org/abs/1203.1513
+93. Kaliamoorthi, Prabhu; Kakarala, Ramakrishna: Parametric annealing: a stochastic search method for human pose tracking, 2012, https://arxiv.org/abs/1204.6563
+94. Zawbaa, Hossam; Aly, Salah A.: Hajj and Umrah Event Recognition Datasets, 2012, https://arxiv.org/abs/1205.2345
+95. Pele, Ofir; Werman, Michael: Improving Perceptual Color Difference using Basic Color Terms, 2012, https://arxiv.org/abs/1211.5556
+96. Ronda, José I.; Valdés, Antonio; Gallego, Guillermo: Autocalibration with the Minimum Number of Cameras with Known Pixel Shape, 2012, https://arxiv.org/abs/1203.0905
+97. Chakrabarti, Ayan; Zickler, Todd: Image Restoration with Signal-dependent Camera Noise, 2012, https://arxiv.org/abs/1204.2994
+98. Sun, Ju; Zhang, Yuqian; Wright, John: Efficient Point-to-Subspace Query in $\ell^1$ with Application to Robust Object Instance Recognition, 2012, https://arxiv.org/abs/1208.0432
+99. Barbu, Andrei; Michaux, Aaron; Narayanaswamy, Siddharth; Siskind, Jeffrey Mark: Simultaneous Object Detection, Tracking, and Event Recognition, 2012, https://arxiv.org/abs/1204.2741
+100. Burger, Harold Christopher; Schuler, Christian J.; Harmeling, Stefan: Image denoising with multi-layer perceptrons, part 1: comparison with existing algorithms and with bounds, 2012, https://arxiv.org/abs/1211.1544
+101. Li, Xi; Dick, Anthony; Shen, Chunhua; Hengel, Anton van den; Wang, Hanzi: Incremental Learning of 3D-DCT Compact Representations for Robust Visual Tracking, 2012, https://arxiv.org/abs/1207.3389
+102. Lu, Yao; Huang, Kaizhu; Liu, Cheng-Lin: A Fast Projected Fixed-Point Algorithm for Large Graph Matching, 2012, https://arxiv.org/abs/1207.1114
+103. Hashemi, Jordan; Spina, Thiago Vallin; Tepper, Mariano; Esler, Amy; Morellas, Vassilios; Papanikolopoulos, Nikolaos; Sapiro, Guillermo: Computer vision tools for the non-invasive assessment of autism-related behavioral markers, 2012, https://arxiv.org/abs/1210.7014
+104. Salazar, Augusto; Wuhrer, Stefanie; Shu, Chang; Prieto, Flavio: Fully Automatic Expression-Invariant Face Correspondence, 2012, https://arxiv.org/abs/1202.1444
+105. Welk, Martin; Raudaschl, Patrik; Schwarzbauer, Thomas; Erler, Martin; Läuter, Martin: Fast and Robust Linear Motion Deblurring, 2012, https://arxiv.org/abs/1212.2245
+106. Rajaei, Boshra; Maugey, Thomas; Pourreza, Hamid-Reza; Frossard, Pascal: Rate-Distortion Analysis of Multiview Coding in a DIBR Framework, 2012, https://arxiv.org/abs/1211.4499
+107. Ram, Idan; Elad, Michael; Cohen, Israel: Image Processing using Smooth Ordering of its Patches, 2012, https://arxiv.org/abs/1210.3832
+108. Peng, Xi; Yu, Zhiding; Tang, Huajin; Yi, Zhang: Constructing the L2-Graph for Robust Subspace Learning and Subspace Clustering, 2012, https://arxiv.org/abs/1209.0841
+109. Reininghaus, Jan; Günther, David; Hotz, Ingrid; Weinkauf, Tino; Seidel, Hans Peter: Combinatorial Gradient Fields for 2D Images with Empirically Convergent Separatrices, 2012, https://arxiv.org/abs/1208.6523
+110. Abdelwahab, Moataz M.; Aly, Salah A.; Yousry, Islam: Efficient Web-based Facial Recognition System Employing 2DHOG, 2012, https://arxiv.org/abs/1202.2449
+111. Jin, Qiyu; Grama, Ion; Liu, Quansheng: Optimal Weights Mixed Filter for Removing Mixture of Gaussian and Impulse Noises, 2012, https://arxiv.org/abs/1205.3999
+112. Zhou, Guoxu; Cichocki, Andrzej; Zhang, Yu; Mandic, Danilo: Group Component Analysis for Multiblock Data: Common and Individual Feature Extraction, 2012, https://arxiv.org/abs/1212.3913
+113. van der Walt, Stéfan J.; Herbst, B. M.: A polygon-based interpolation operator for super-resolution imaging, 2012, https://arxiv.org/abs/1210.3404
+114. Yang, Yingzhen; Chu, Xinqi; Ng, Tian-Tsong; Chia, Alex Yong-Sang; Yan, Shuicheng; Huang, Thomas S.: Epitome for Automatic Image Colorization, 2012, https://arxiv.org/abs/1210.4481
+115. Peng, Xi; Zhang, Lei; Yi, Zhang; Tan, Kok Kiong: Learning Locality-Constrained Collaborative Representation for Face Recognition, 2012, https://arxiv.org/abs/1210.1316
+116. Yarkony, Julian; Ihler, Alexander T.; Fowlkes, Charless C.: Fast Planar Correlation Clustering for Image Segmentation, 2012, https://arxiv.org/abs/1208.0378
+117. Divvala, Santosh K.; Efros, Alexei A.; Hebert, Martial: How important are Deformable Parts in the Deformable Parts Model?, 2012, https://arxiv.org/abs/1206.3714
+118. Katsuki, Takayuki; Inoue, Masato: Posterior Mean Super-Resolution with a Compound Gaussian Markov Random Field Prior, 2012, https://arxiv.org/abs/1203.0781
+119. Soni, Akshay; Haupt, Jarvis: Level Set Estimation from Compressive Measurements using Box Constrained Total Variation Regularization, 2012, https://arxiv.org/abs/1210.2474
+120. Meyer, Fernand: The steepest watershed: from graphs to images, 2012, https://arxiv.org/abs/1204.2134
+121. Qiu, Qiang; Patel, Vishal M.; Chellappa, Rama: Information-theoretic Dictionary Learning for Image Classification, 2012, https://arxiv.org/abs/1208.3687
+122. Machado, Bruno Brandoli; Gonçalves, Wesley Nunes; Bruno, Odemir Martinez: Image decomposition with anisotropic diffusion applied to leaf-texture analysis, 2012, https://arxiv.org/abs/1201.4139
+123. Gonzalez, Adriana; Jacques, Laurent; De Vleeschouwer, Christophe; Antoine, Philippe: Compressive Optical Deflectometric Tomography: A Constrained Total-Variation Minimization Approach, 2012, https://arxiv.org/abs/1209.0654
+124. Băzăvan, Eduard Gabriel; Li, Fuxin; Sminchisescu, Cristian: Learning Random Kernel Approximations for Object Recognition, 2012, https://arxiv.org/abs/1203.1483
+125. Wang, Zhaowen; Wang, Jinjun; Xiao, Jing; Lin, Kai-Hsiang; Huang, Thomas: Substructure and Boundary Modeling for Continuous Action Recognition, 2012, https://arxiv.org/abs/1203.1985
+126. Gabarda, Salvador; Cristobal, Gabriel: No-reference image quality assessment through the von Mises distribution, 2012, https://arxiv.org/abs/1202.3021
+127. Collard, Anne; Bonnabel, Silvère; Phillips, Christophe; Sepulchre, Rodolphe: An anisotropy preserving metric for DTI processing, 2012, https://arxiv.org/abs/1210.2826
+128. Mokhov, Serguei A.; Sun, Yankui: OCT Segmentation Survey and Summary Reviews and a Novel 3D Segmentation Algorithm and a Proof of Concept Implementation, 2012, https://arxiv.org/abs/1204.6725
+129. Bhavsar, Arnav: Resolution Enhancement of Range Images via Color-Image Segmentation, 2012, https://arxiv.org/abs/1210.7403
+130. Chang, Joshua C.; Chou, Tom: Iterative graph cuts for image segmentation with a nonlinear statistical shape prior, 2012, https://arxiv.org/abs/1208.4384
+131. Pan, Jinshan; Liu, Risheng; Su, Zhixun; Gu, Xianfeng: Kernel Estimation from Salient Structure for Robust Motion Deblurring, 2012, https://arxiv.org/abs/1212.1073
+132. Zhang, Wei; Wang, Xiaogang; Zhao, Deli; Tang, Xiaoou: Graph Degree Linkage: Agglomerative Clustering on a Directed Graph, 2012, https://arxiv.org/abs/1208.5092
+133. Akram, Saad; Beskow, Jonas; Kjellstrom, Hedvig: Visual Recognition of Isolated Swedish Sign Language Signs, 2012, https://arxiv.org/abs/1211.3901
+134. Quesada, Luis: Using Barriers to Reduce the Sensitivity to Edge Miscalculations of Casting-Based Object Projection Feature Estimation, 2012, https://arxiv.org/abs/1203.0076
+135. Guha, Tanaya; Ward, Rabab K.: Image Similarity Using Sparse Representation and Compression Distance, 2012, https://arxiv.org/abs/1206.2627
+136. Rajathilagam, B.; Rangarajan, Murali; Soman, K. P.: G-Lets: Signal Processing Using Transformation Groups, 2012, https://arxiv.org/abs/1201.2995
+137. Florindo, João Batista; de Castro, Mário; Bruno, Odemir Martinez: Enhancing Volumetric Bouligand-Minkowski Fractal Descriptors by using Functional Data Analysis, 2012, https://arxiv.org/abs/1201.3116
+138. Gonalez-Diaz, Rocio; Lamar, Javier; Umble, Ronald: Cups Products in Z2-Cohomology of 3D Polyhedral Complexes, 2012, https://arxiv.org/abs/1207.2346
+139. Barbu, Andrei; Bridge, Alexander; Coroian, Dan; Dickinson, Sven; Mussman, Sam; Narayanaswamy, Siddharth; Salvi, Dhaval; Schmidt, Lara; Shangguan, Jiangnan; Siskind, Jeffrey Mark; Waggoner, Jarrell; Wang, Song; Wei, Jinlian; Yin, Yifan; Zhang, Zhiqi: Large-Scale Automatic Labeling of Video Events with Verbs Based on Event-Participant Interaction, 2012, https://arxiv.org/abs/1204.3616
+140. Masci, Jonathan; Angulo, Jesús; Schmidhuber, Jürgen: A Learning Framework for Morphological Operators using Counter-Harmonic Mean, 2012, https://arxiv.org/abs/1212.2546
+141. Sermanet, Pierre; Kavukcuoglu, Koray; Chintala, Soumith; LeCun, Yann: Pedestrian Detection with Unsupervised Multi-Stage Feature Learning, 2012, https://arxiv.org/abs/1212.0142
+142. Dundar, Aysegul; Jin, Jonghoon; Culurciello, Eugenio: Visual Tracking with Similarity Matching Ratio, 2012, https://arxiv.org/abs/1209.2696
+143. Sermanet, Pierre; Chintala, Soumith; LeCun, Yann: Convolutional Neural Networks Applied to House Numbers Digit Classification, 2012, https://arxiv.org/abs/1204.3968
+144. Zhao, Zhizhen; Singer, Amit: Fourier-Bessel rotational invariant eigenimages, 2012, https://arxiv.org/abs/1211.1968
+145. Singh, Saurabh; Gupta, Abhinav; Efros, Alexei A.: Unsupervised Discovery of Mid-Level Discriminative Patches, 2012, https://arxiv.org/abs/1205.3137
+146. Sankaranarayanan, Aswin C; Turaga, Pavan K; Chellappa, Rama; Baraniuk, Richard G: Compressive Acquisition of Dynamic Scenes, 2012, https://arxiv.org/abs/1201.4895
+147. Sarhrouni, Elkebir; Hammouch, Ahmed; Aboutajdine, Driss: Dimensionality Reduction and Classification Feature Using Mutual Information Applied to Hyperspectral Images: A Wrapper Strategy Algorithm Based on Minimizing the Error Probability Using the Inequality of Fano, 2012, https://arxiv.org/abs/1211.0055
+148. Tofighi, Mohammad; Ayremlou, Ali; Marvasti, Farokh: Compensating Interpolation Distortion by Using New Optimized Modular Method, 2012, https://arxiv.org/abs/1204.3618
+149. Moschetti, Elsa E.; Palacio, M. Gabriela; Picco, Mery; Bustos, Oscar H.; Frery, Alejandro C.: On the Use of Lee's Protocol for Speckle-Reducing Techniques, 2012, https://arxiv.org/abs/1209.1788
+150. Chaudhury, Kunal N.; Singer, Amit: Non-Local Euclidean Medians, 2012, https://arxiv.org/abs/1207.3056
+151. Ristic, Branko; Sherrah, Jamie; García-Fernández, Ángel F.: Performance Evaluation of Random Set Based Pedestrian Tracking Algorithms, 2012, https://arxiv.org/abs/1211.0191
+152. Liu, Guangcan; Chang, Shiyu; Ma, Yi: Blind Image Deblurring by Spectral Properties of Convolution Operators, 2012, https://arxiv.org/abs/1209.2082
+153. McAuley, Julian; Leskovec, Jure: Image Labeling on a Network: Using Social-Network Metadata for Image Classification, 2012, https://arxiv.org/abs/1207.3809
+154. Ioannou, Yani; Taati, Babak; Harrap, Robin; Greenspan, Michael: Difference of Normals as a Multi-Scale Operator in Unorganized Point Clouds, 2012, https://arxiv.org/abs/1209.1759
+* t-SNE 8381 images cs.CV 2012
+1. Hashemi, Jordan; Spina, Thiago Vallin; Tepper, Mariano; Esler, Amy; Morellas, Vassilios; Papanikolopoulos, Nikolaos; Sapiro, Guillermo: Computer vision tools for the non-invasive assessment of autism-related behavioral markers, 2012, https://arxiv.org/abs/1210.7014
+2. Bagon, Shai; Galun, Meirav: A Multiscale Framework for Challenging Discrete Optimization, 2012, https://arxiv.org/abs/1210.7070
+3. Bagon, Shai: Discrete Energy Minimization, beyond Submodularity: Applications and Approximations, 2012, https://arxiv.org/abs/1210.7362
+4. Rebagliati, Nicola; Solé-Ribalta, Albert; Pelillo, Marcello; Serratosa, Francesc: On the Relation Between the Common Labelling and the Median Graph, 2012, https://arxiv.org/abs/1210.8262
+5. Chennamma, H. R.; Rangarajan, Lalitha: Mugshot Identification from Manipulated Facial Images, 2012, https://arxiv.org/abs/1210.8318
+6. Sarhrouni, Elkebir; Hammouch, Ahmed; Aboutajdine, Driss: Dimensionality Reduction and Classification Feature Using Mutual Information Applied to Hyperspectral Images: A Wrapper Strategy Algorithm Based on Minimizing the Error Probability Using the Inequality of Fano, 2012, https://arxiv.org/abs/1211.0055
+7. Ristic, Branko; Sherrah, Jamie; García-Fernández, Ángel F.: Performance Evaluation of Random Set Based Pedestrian Tracking Algorithms, 2012, https://arxiv.org/abs/1211.0191
+8. Zhao, Jie; Zheng, Wei; Zhang, Li; Tian, Hua: Segmentation of ultrasound images of thyroid nodule for assisting fine needle aspiration cytology, 2012, https://arxiv.org/abs/1211.0602
+9. Rodner, Erik: Visual Transfer Learning: Informal Introduction and Literature Overview, 2012, https://arxiv.org/abs/1211.1127
+10. Hossain, Md. Ali; Ahsan-Ul-Ambia, ; Aktaruzzaman, Md.; Khan, Md. Ahaduzzaman: Implementation of Radon Transformation for Electrical Impedance Tomography (EIT), 2012, https://arxiv.org/abs/1211.1252
+11. "d'Angelo, Emmanuel; jacques, Laurent; Alahi, Alexandre; Vandergheynst, Pierre;: From Bits to Images: Inversion of Local Binary Descriptors, 2012, https://arxiv.org/abs/1211.1265
+12. Ye, Chengxi; Lin, Yuxu; Song, Mingli; Chen, Chun; Jacobs, David W.: Spectral Graph Cut from a Filtering Point of View, 2012, https://arxiv.org/abs/1205.4450
+13. Zhang, Jian; Zhao, Chen; Xiong, Ruiqin; Ma, Siwei; Zhao, Debin: Image Super-Resolution via Dual-Dictionary Learning And Sparse Representation, 2012, https://arxiv.org/abs/1208.3723
+14. Gabarda, Salvador; Cristobal, Gabriel: No-reference image quality assessment through the von Mises distribution, 2012, https://arxiv.org/abs/1202.3021
+15. Yang, Meng; Zhang, Lei; Yang, Jian; Zhang, David: Regularized Robust Coding for Face Recognition, 2012, https://arxiv.org/abs/1202.4207
+16. Szlam, Arthur; Gregor, Karol; LeCun, Yann: Fast approximations to structured sparse coding and applications to object classification, 2012, https://arxiv.org/abs/1202.6384
+17. Zhang, Lei; Yang, Meng; Feng, Xiangchu; Ma, Yi; Zhang, David: Collaborative Representation based Classification for Face Recognition, 2012, https://arxiv.org/abs/1204.2358
+18. Sun, Guangling: Demosaicing and Superresolution for Color Filter Array via Residual Image Reconstruction and Sparse Representation, 2012, https://arxiv.org/abs/1210.0115
+19. Sun, Guangling; Li, Guoqing; Yin, Jie: Blurred Image Classification based on Adaptive Dictionary, 2012, https://arxiv.org/abs/1210.1029
+20. Gonzalez, Adriana; Jacques, Laurent; De Vleeschouwer, Christophe; Antoine, Philippe: Compressive Optical Deflectometric Tomography: A Constrained Total-Variation Minimization Approach, 2012, https://arxiv.org/abs/1209.0654
+21. Peng, Xi; Zhang, Lei; Yi, Zhang; Tan, Kok Kiong: Learning Locality-Constrained Collaborative Representation for Face Recognition, 2012, https://arxiv.org/abs/1210.1316
+22. Ko, Young Jun; Seeger, Matthias: Large Scale Variational Bayesian Inference for Structured Scale Mixture Models, 2012, https://arxiv.org/abs/1206.6437
+23. Tang, Yichuan; Salakhutdinov, Ruslan; Hinton, Geoffrey: Deep Lambertian Networks, 2012, https://arxiv.org/abs/1206.6445
+24. Zhai, Ke; Hu, Yuening; Williamson, Sinead; Boyd-Graber, Jordan: Modeling Images using Transformed Indian Buffet Processes, 2012, https://arxiv.org/abs/1206.6482
+25. Stavens, David; Thrun, Sebastian: A Self-Supervised Terrain Roughness Estimator for Off-Road Autonomous Driving, 2012, https://arxiv.org/abs/1206.6872
+26. Schaeffer, Monika; Parr, Ron: Efficient Selection of Disambiguating Actions for Stereo Vision, 2012, https://arxiv.org/abs/1206.6878
+27. Zeiler, Matthew D.; Fergus, Rob: Differentiable Pooling for Hierarchical Feature Learning, 2012, https://arxiv.org/abs/1207.0151
+28. Elhamifar, Ehsan; Vidal, Rene: Sparse Subspace Clustering: Algorithm, Theory, and Applications, 2012, https://arxiv.org/abs/1203.1005
+29. Xu, Yongchao; Géraud, Thierry; Najman, Laurent: Morphological Filtering in Shape Spaces: Applications using Tree-Based Image Representations, 2012, https://arxiv.org/abs/1204.4758
+30. Sparavigna, Amelia Carolina: Portraits of Julius Caesar: a proposal for 3D analysis, 2012, https://arxiv.org/abs/1206.4866
+31. Revathy, K.; Jayamohan, M.: Dynamic Domain Classification for Fractal Image Compression, 2012, https://arxiv.org/abs/1206.4880
+32. Katyal, Vini; Aviral, : Leaf vein segmentation using Odd Gabor filters and morphological operations, 2012, https://arxiv.org/abs/1206.5157
+33. Bejuri, Wan Mohd Yaakob Wan; Mohamad, Mohd Murtadha; Sapri, Maimunah; Rosly, Mohd Adly: Investigation of Color Constancy for Ubiquitous Wireless LAN/Camera Positioning: An Initial Outcome, 2012, https://arxiv.org/abs/1206.6514
+34. Oji, Reza; Tajeripour, Farshad: Full Object Boundary Detection by Applying Scale Invariant Features in a Region Merging Segmentation Algorithm, 2012, https://arxiv.org/abs/1210.7038
+35. Shekar, B. H.; Harivinod, N.; Kumari, M. Sharmila; Holla, K. Raghurama: 3D Face Recognition using Significant Point based SULD Descriptor, 2012, https://arxiv.org/abs/1210.7102
+36. Bhavsar, Arnav: Resolution Enhancement of Range Images via Color-Image Segmentation, 2012, https://arxiv.org/abs/1210.7403
+37. de Souza, César Roberto; Pizzolato, Ednaldo Brigante; Anjo, Mauro dos Santos: Recognizing Static Signs from the Brazilian Sign Language: Comparing Large-Margin Decision Directed Acyclic Graphs, Voting Support Vector Machines and Artificial Neural Networks, 2012, https://arxiv.org/abs/1210.7461
+38. Sparavigna, Amelia Carolina: The fortresses of Ejin: an example of outlining a site from satellite images, 2012, https://arxiv.org/abs/1210.7631
+39. Maknikar, Pooja: Performance Evaluation of Different Techniques for texture Classification, 2012, https://arxiv.org/abs/1210.7669
+40. Zuva, Tranos; Olugbara, Oludayo O.; Ojo, Sunday O.; Ngwira, Seleman M.: Kernel Density Feature Points Estimator for Content-Based Image Retrieval, 2012, https://arxiv.org/abs/1203.5078
+41. Kimura, Akisato; Sugiyama, Masashi; Hitoshi, Sakano; Kameoka, Hirokazu: Designing various component analysis at will, 2012, https://arxiv.org/abs/1207.3554
+42. Kharinov, M.: Stable Segmentation of Digital Image, 2012, https://arxiv.org/abs/1208.2655
+43. Fiori, Marcelo; Musé, Pablo; Sapiro, Guillermo: A Complete System for Candidate Polyps Detection in Virtual Colonoscopy, 2012, https://arxiv.org/abs/1209.6525
+44. Kovnatsky, A.; Bronstein, M. M.; Bronstein, A. M.; Glashoff, K.; Kimmel, R.: Coupled quasi-harmonic bases, 2012, https://arxiv.org/abs/1210.0026
+45. Sarhrouni, ELkebir; Hammouch, Ahmed; Aboutajdine, Driss: Dimensionality Reduction and Classification feature using Mutual Information applied to Hyperspectral Images : A Filter strategy based algorithm, 2012, https://arxiv.org/abs/1210.0052
+46. Aalsalem, Mohammed Y; Khan, Wazir Zada; Arshad, Quratul Ain: A Low Cost Vision Based Hybrid Fiducial Mark Tracking Technique for Mobile Industrial Robots, 2012, https://arxiv.org/abs/1210.0153
+47. Kafieh, Raheleh; Rabbani, Hossein; Abramoff, Michael D.; Sonka, Milan: Intra-Retinal Layer Segmentation of 3D Optical Coherence Tomography Using Coarse Grained Diffusion Map, 2012, https://arxiv.org/abs/1210.0310
+48. Sasirekha, D.; Chandra, E.: Enhanced Techniques for PDF Image Segmentation and Text Extraction, 2012, https://arxiv.org/abs/1210.0347
+49. Hu, Junlin; Guo, Ping: Combined Descriptors in Spatial Pyramid Domain for Image Classification, 2012, https://arxiv.org/abs/1210.0386
+50. Sarhrouni, Elkebir; Hammouch, Ahmed; Aboutajdine, Driss: Band Selection and Classification of Hyperspectral Images using Mutual Information: An algorithm based on minimizing the error probability using the inequality of Fano, 2012, https://arxiv.org/abs/1210.0528
+51. Hu, Tao; Nunez-Iglesias, Juan; Vitaladevuni, Shiv; Scheffer, Lou; Xu, Shan; Bolorizadeh, Mehdi; Hess, Harald; Fetter, Richard; Chklovskii, Dmitri: Super-resolution using Sparse Representations over Learned Dictionaries: Reconstruction of Brain Structure using Electron Microscopy, 2012, https://arxiv.org/abs/1210.0564
+52. Chadha, Aman; Mallik, Sushmit; Johar, Ravdeep: Comparative Study and Optimization of Feature-Extraction Techniques for Content based Image Retrieval, 2012, https://arxiv.org/abs/1208.6335
+53. Duarte-Carvajalino, Julio M.; Yu, Guoshen; Carin, Lawrence; Sapiro, Guillermo: Task-Driven Adaptive Statistical Compressive Sensing of Gaussian Mixture Models, 2012, https://arxiv.org/abs/1201.5404
+54. Farabet, Clément; Couprie, Camille; Najman, Laurent; LeCun, Yann: Scene Parsing with Multiscale Feature Learning, Purity Trees, and Optimal Covers, 2012, https://arxiv.org/abs/1202.2160
+55. Buemi, Maria E.; Mejail, Marta; Jacobo, Julio; Frery, Alejandro C.; Ramos, Heitor S.: Assessment of SAR Image Filtering using Adaptive Stack Filters, 2012, https://arxiv.org/abs/1207.4308
+56. Al-Wassai, Firouz Abdullah; Kalyankar, Dr. N. V.: A Novel Metric Approach Evaluation For The Spatial Enhancement Of Pan-Sharpened Images, 2012, https://arxiv.org/abs/1207.5064
+57. Caraig, Lou Marvin: A New Training Algorithm for Kanerva's Sparse Distributed Memory, 2012, https://arxiv.org/abs/1207.5774
+58. Revathi, A. R.; Kumar, Dhananjay: A Survey Of Activity Recognition And Understanding The Behavior In Video Survelliance, 2012, https://arxiv.org/abs/1207.6774
+59. Salmon, Joseph; Harmany, Zachary; Deledalle, Charles-Alban; Willett, Rebecca: Poisson noise reduction with non-local PCA, 2012, https://arxiv.org/abs/1206.0338
+60. Wang, Junyan; Chan, Kap Luk: Piecewise Linear Patch Reconstruction for Segmentation and Description of Non-smooth Image Structures, 2012, https://arxiv.org/abs/1207.5113
+61. Liu, Guangcan; Chang, Shiyu; Ma, Yi: Blind Image Deblurring by Spectral Properties of Convolution Operators, 2012, https://arxiv.org/abs/1209.2082
+62. Parseh, Mohammad Javad; Pashazadeh, Saeid: Applying Dynamic Model for Multiple Manoeuvring Target Tracking Using Particle Filtering, 2012, https://arxiv.org/abs/1211.4524
+63. Masci, Jonathan; Angulo, Jesús; Schmidhuber, Jürgen: A Learning Framework for Morphological Operators using Counter-Harmonic Mean, 2012, https://arxiv.org/abs/1212.2546
+64. Osman, Ghazali; Hitam, Muhammad Suzuri; Ismail, Mohd Nasir: Enhanced skin colour classifier using RGB Ratio model, 2012, https://arxiv.org/abs/1212.2692
+65. Song, Shuran; Xiao, Jianxiong: Tracking Revisited using RGBD Camera: Baseline and Benchmark, 2012, https://arxiv.org/abs/1212.2823
+66. Egger, Jan; Kapur, Tina; Nimsky, Christopher; Kikinis, Ron: Pituitary Adenoma Volumetry with 3D Slicer, 2012, https://arxiv.org/abs/1212.2860
+67. Telgarsky, Rastislav: Multi-target tracking algorithms in 3D, 2012, https://arxiv.org/abs/1212.3034
+68. Mandal, J. K.; Mukhopadhyay, Somnath: A Novel Directional Weighted Minimum Deviation (DWMD) Based Filter for Removal of Random Valued Impulse Noise, 2012, https://arxiv.org/abs/1212.3373
+69. Lim, Hao Wooi; Tay, Yong Haur: Visual Objects Classification with Sliding Spatial Pyramid Matching, 2012, https://arxiv.org/abs/1212.3767
+70. Wang, Quan: GMM-Based Hidden Markov Random Field for Color Image and 3D Volume Segmentation, 2012, https://arxiv.org/abs/1212.4527
+71. Premachandran, Vittal; Kakarala, Ramakrishna: Perceptually Motivated Shape Context Which Uses Shape Interiors, 2012, https://arxiv.org/abs/1212.4608
+72. Guo, Jianya; Mei, Xi; Tang, Kun: Automatic landmark annotation and dense correspondence registration for 3D human facial images, 2012, https://arxiv.org/abs/1212.4920
+73. Chua, Kah Keong; Tay, Yong Haur: On the Adaptability of Neural Network Image Super-Resolution, 2012, https://arxiv.org/abs/1212.5352
+74. Bekkers, Erik; Duits, Remco; Berendschot, Tos; Romeny, Bart ter Haar: A Multi-Orientation Analysis Approach to Retinal Vessel Tracking, 2012, https://arxiv.org/abs/1212.3530
+75. Welk, Martin; Raudaschl, Patrik; Schwarzbauer, Thomas; Erler, Martin; Läuter, Martin: Fast and Robust Linear Motion Deblurring, 2012, https://arxiv.org/abs/1212.2245
+76. Kumar, Deepak; Prasad, M N Anil; Ramakrishnan, A G: Benchmarking recognition results on word image datasets, 2012, https://arxiv.org/abs/1208.6137
+77. Coelho, Luis Pedro: Mahotas: Open source software for scriptable computer vision, 2012, https://arxiv.org/abs/1211.4907
+78. Yang, Yanchao; Sundaramoorthi, Ganesh: Shape Tracking With Occlusions via Coarse-To-Fine Region-Based Sobolev Descent, 2012, https://arxiv.org/abs/1208.4391
+79. Masci, Jonathan; Bronstein, Michael M.; Bronstein, Alexander A.; Schmidhuber, Jürgen: Multimodal similarity-preserving hashing, 2012, https://arxiv.org/abs/1207.1522
+80. Fekri-Ershad, Shervan; Saberi, Mohammad; Tajeripour, Farshad: An Innovative Skin Detection Approach Using Color Based Image Retrieval Technique, 2012, https://arxiv.org/abs/1207.1551
+81. da Silva, Núbia Rosa; Bruno, Odemir Martinez: Analysis of Multi-Scale Fractal Dimension to Classify Human Motion, 2012, https://arxiv.org/abs/1207.1649
+82. Masci, Jonathan; Meier, Ueli; Fricout, Gabriel; Schmidhuber, Jürgen: Object Recognition with Multi-Scale Pyramidal Pooling Networks, 2012, https://arxiv.org/abs/1207.1765
+83. Qaffou, Issam; Sadgal, Mohammed; Elfazziki, Abdelaziz: A Multi-Agents Architecture to Learn Vision Operators and their Parameters, 2012, https://arxiv.org/abs/1207.2426
+84. Biswas, Sambhunath; Biswas, Amrita: Face Recognition Algorithms based on Transformed Shape Features, 2012, https://arxiv.org/abs/1207.2537
+85. Warade, Saket; Aghav, Jagannath; Claude, Petitpierre; Udayagiri, Sandeep: Automated Training and Maintenance through Kinect, 2012, https://arxiv.org/abs/1207.2597
+86. Qatawneh, Sokyna; Alneaimi, Afaf; Rawashdeh, Thamer; Muhairat, Mmohammad; Qahwaji, Rami; Ipson, Stan: Efficient Prediction of DNA-Binding Proteins Using Machine Learning, 2012, https://arxiv.org/abs/1207.2600
+87. Mohammadi, Seyed Amir; Mahzoun, Mohammad Reza: A Novel Approach Coloured Object Tracker with Adaptive Model and Bandwidth using Mean Shift Algorithm, 2012, https://arxiv.org/abs/1207.2602
+88. Surbhi, ; Arora, Vishal: ROI Segmentation for Feature Extraction from Human Facial Images, 2012, https://arxiv.org/abs/1207.2922
+89. Perciano, Talita; Urban, Matthew; Mascarenhas, Nelson D. A.; Fatemi, Mostafa; Frery, Alejandro C.; Silva, Glauber T.: Deconvolution of vibroacoustic images using a simulation model based on a three dimensional point spread function, 2012, https://arxiv.org/abs/1207.3370
+90. Li, Xi; Dick, Anthony; Shen, Chunhua; Hengel, Anton van den; Wang, Hanzi: Incremental Learning of 3D-DCT Compact Representations for Robust Visual Tracking, 2012, https://arxiv.org/abs/1207.3389
+91. Demirkesen, Can; Cherifi, Hocine: Fusing image representations for classification using support vector machines, 2012, https://arxiv.org/abs/1207.3607
+92. McAuley, Julian; Leskovec, Jure: Image Labeling on a Network: Using Social-Network Metadata for Image Classification, 2012, https://arxiv.org/abs/1207.3809
+93. Frery, Alejandro C.; Jacobo-Berlles, Julio; Gambini, Juliana; Mejail, Marta: Polarimetric SAR Image Segmentation with B-Splines and a New Statistical Model, 2012, https://arxiv.org/abs/1207.3944
+94. Anguelov, Dragomir; Koller, Daphne; Pang, Hoi-Cheung; Srinivasan, Praveen; Thrun, Sebastian: Recovering Articulated Object Models from 3D Range Data, 2012, https://arxiv.org/abs/1207.4129
+95. Jojic, Nebojsa; Caspi, Yaron; Reyes-Gomez, Manuel: Probabilistic index maps for modeling natural signals, 2012, https://arxiv.org/abs/1207.4179
+96. Katyal, Vini; Aviral, ; Srivastava, Deepesh: Elimination of Glass Artifacts and Object Segmentation, 2012, https://arxiv.org/abs/1204.6653
+97. Tofighi, Mohammad; Ayremlou, Ali; Marvasti, Farokh: Compensating Interpolation Distortion by Using New Optimized Modular Method, 2012, https://arxiv.org/abs/1204.3618
+98. Tofighi, Mohammad; Kalbkhani, Hashem; Shayesteh, Mahrokh G.; Ghasemzadeh, Mehdi: Robust Head Pose Estimation Using Contourlet Transform, 2012, https://arxiv.org/abs/1204.5431
+99. Jodoin, Jean-Philippe; Bilodeau, Guillaume-Alexandre; Saunier, Nicolas: Background subtraction based on Local Shape, 2012, https://arxiv.org/abs/1204.6326
+100. Sun, Yankui; Zhang, Tian: A 3D Segmentation Method for Retinal Optical Coherence Tomography Volume Data, 2012, https://arxiv.org/abs/1204.6385
+101. Wang, Junyan; Chan, Kap Luk: Active Contour with A Tangential Component, 2012, https://arxiv.org/abs/1204.6458
+102. Kaliamoorthi, Prabhu; Kakarala, Ramakrishna: Parametric annealing: a stochastic search method for human pose tracking, 2012, https://arxiv.org/abs/1204.6563
+103. Jagadeesh, H S; Babu, K Suresh; Raja, K B: DBC based Face Recognition using DWT, 2012, https://arxiv.org/abs/1205.1644
+104. T, Manu V; Simon, Philomina: A novel statistical fusion rule for image fusion and its comparison in non subsampled contourlet transform domain and wavelet domain, 2012, https://arxiv.org/abs/1205.1648
+105. Wang, Quan; Ou, Yan; Julius, A. Agung; Boyer, Kim L.; Kim, Min Jun: Tracking Tetrahymena Pyriformis Cells using Decision Trees, 2012, https://arxiv.org/abs/1207.3127
+106. Fong, Chamberlain: Revolvable Indoor Panoramas Using a Rectified Azimuthal Projection, 2012, https://arxiv.org/abs/1206.2068
+107. Wang, Zhaowen; Wang, Jinjun; Xiao, Jing; Lin, Kai-Hsiang; Huang, Thomas: Substructure and Boundary Modeling for Continuous Action Recognition, 2012, https://arxiv.org/abs/1203.1985
+108. Qadir, Ashraf; Neubert, Jeremiah; Semke, William: On-Board Visual Tracking with Unmanned Aircraft System (UAS), 2012, https://arxiv.org/abs/1203.2386
+109. Pallath, Nobert Thomas; Thomas, Tessamma: Video Object Tracking and Analysis for Computer Assisted Surgery, 2012, https://arxiv.org/abs/1203.2404
+110. Sreedhar, K.; Panlal, B.: Enhancement of Images using Morphological Transformation, 2012, https://arxiv.org/abs/1203.2514
+111. Egger, Jan; Kapur, Tina; Dukatz, Thomas; Kolodziej, Malgorzata; Zukic, Dzenan; Freisleben, Bernd; Nimsky, Christopher: Square-Cut: A Segmentation Algorithm on the Basis of a Rectangle Shape, 2012, https://arxiv.org/abs/1203.2839
+112. Sosas, Maria-Luisa; Arias, Miguel-Octavio: Integrated three-dimensional reconstruction using reflectance fields, 2012, https://arxiv.org/abs/1203.3114
+113. Sengupta, Shampa; Das, Asit Kr.: Single Reduct Generation Based on Relative Indiscernibility of Rough Set Theory, 2012, https://arxiv.org/abs/1203.3170
+114. Masiero, Andrea; Cenedese, Angelo: Reconstruction error in a motion capture system, 2012, https://arxiv.org/abs/1203.3230
+115. Paul, Sushil Kumar; Uddin, Mohammad Shorif; Bouakaz, Saida: Extraction of Facial Feature Points Using Cumulative Histogram, 2012, https://arxiv.org/abs/1203.3270
+116. Daneshgar, Amir; Javadi, Ramin; Razavi, Basir Shariat: Clustering Using Isoperimetric Number of Trees, 2012, https://arxiv.org/abs/1203.4204
+117. Ershad, Shervan Fekri: Texture Classification Approach Based on Combination of Edge & Co-occurrence and Local Binary Pattern, 2012, https://arxiv.org/abs/1203.4855
+118. Thorpe, Christopher; Li, Feng; Li, Zijia; Yu, Zhan; Saunders, David; Yu, Jingyi: A Co-Prime Blur Scheme for Data Security in Video Surveillance, 2012, https://arxiv.org/abs/1203.4874
+119. Ronda, José I.; Valdés, Antonio; Gallego, Guillermo: Autocalibration with the Minimum Number of Cameras with Known Pixel Shape, 2012, https://arxiv.org/abs/1203.0905
+120. Zhou, Guoxu; Cichocki, Andrzej; Zhang, Yu; Mandic, Danilo: Group Component Analysis for Multiblock Data: Common and Individual Feature Extraction, 2012, https://arxiv.org/abs/1212.3913
+121. Al-Wassai, Firouz Abdullah; Kalyankar, N. V.; Al-Zaky, Ali A.: Spatial And Spectral Quality Evaluation Based On Edges Regions Of Satellite Image Fusion, 2012, https://arxiv.org/abs/1207.1922
+122. Lu, Hongyu; Wang, Yutian; Bao, Shanglian: A United Image Force for Deformable Models and Direct Transforming Geometric Active Contorus to Snakes by Level Sets, 2012, https://arxiv.org/abs/1201.1571
+123. Wu, Yue; Tracey, Brian; Noonan, Joseph P.: James-Stein Type Center Pixel Weights for Non-Local Means Image Denoising, 2012, https://arxiv.org/abs/1211.1656
+124. Guha, Tanaya; Ward, Rabab K.: Image Similarity Using Sparse Representation and Compression Distance, 2012, https://arxiv.org/abs/1206.2627
+125. Chang, Joshua C.; Chou, Tom: Iterative graph cuts for image segmentation with a nonlinear statistical shape prior, 2012, https://arxiv.org/abs/1208.4384
+126. Pan, Jinshan; Liu, Risheng; Su, Zhixun; Gu, Xianfeng: Kernel Estimation from Salient Structure for Robust Motion Deblurring, 2012, https://arxiv.org/abs/1212.1073
+127. Krahmer, Felix; Ward, Rachel: Stable and robust sampling strategies for compressive imaging, 2012, https://arxiv.org/abs/1210.2380
+128. Chaudhury, Kunal N.; Singer, Amit: Non-Local Euclidean Medians, 2012, https://arxiv.org/abs/1207.3056
+129. Yang, Yingzhen; Chu, Xinqi; Ng, Tian-Tsong; Chia, Alex Yong-Sang; Yan, Shuicheng; Huang, Thomas S.: Epitome for Automatic Image Colorization, 2012, https://arxiv.org/abs/1210.4481
+130. Dubuisson, Severine; Gonzales, Christophe; NGuyen, Xuan Son: DBN-Based Combinatorial Resampling for Articulated Object Tracking, 2012, https://arxiv.org/abs/1210.4863
+131. Krähenbühl, Philipp; Koltun, Vladlen: Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials, 2012, https://arxiv.org/abs/1210.5644
+132. Bandyopadhyay, Prof. Samir K.; Datta, Biswajita; Roy, Sudipta: Identifications of concealed weapon in a Human Body, 2012, https://arxiv.org/abs/1210.5653
+133. Dutta, Vibekananda; Kesswani, Dr Nishtha; Gahalot, Deepti: Novel Architecture for 3D model in virtual communities from detected face, 2012, https://arxiv.org/abs/1210.6157
+134. Misra, Rachita; ray, Kasturika B: Textural Approach to Palmprint Identification, 2012, https://arxiv.org/abs/1210.6192
+135. Ioannou, Yani; Taati, Babak; Harrap, Robin; Greenspan, Michael: Difference of Normals as a Multi-Scale Operator in Unorganized Point Clouds, 2012, https://arxiv.org/abs/1209.1759
+136. Vondrick, Carl; Khosla, Aditya; Malisiewicz, Tomasz; Torralba, Antonio: Inverting and Visualizing Features for Object Detection, 2012, https://arxiv.org/abs/1212.2278
+137. Rajathilagam, B.; Rangarajan, Murali; Soman, K. P.: G-Lets: Signal Processing Using Transformation Groups, 2012, https://arxiv.org/abs/1201.2995
+138. Gonçalves, Wesley Nunes; Bruno, Odemir Martinez: Automatic system for counting cells with elliptical shape, 2012, https://arxiv.org/abs/1201.3109
+139. Florindo, João Batista; de Castro, Mário; Bruno, Odemir Martinez: Enhancing Volumetric Bouligand-Minkowski Fractal Descriptors by using Functional Data Analysis, 2012, https://arxiv.org/abs/1201.3116
+140. Backes, André Ricardo; Bruno, Odemir Martinez: Fractal and Multi-Scale Fractal Dimension analysis: a comparative study of Bouligand-Minkowski method, 2012, https://arxiv.org/abs/1201.3153
+141. Sparavigna, Amelia Carolina: Variations of images to increase their visibility, 2012, https://arxiv.org/abs/1201.3233
+142. Alamdar, Fatemeh; Keyvanpour, MohammadReza: A New Color Feature Extraction Method Based on Dynamic Color Distribution Entropy of Neighborhoods, 2012, https://arxiv.org/abs/1201.3337
+143. Gonçalves, Wesley Nunes; Machado, Bruno Brandoli; Bruno, Odemir Martinez: Spatiotemporal Gabor filters: a new method for dynamic texture recognition, 2012, https://arxiv.org/abs/1201.3612
+144. Singaraju, Dheeraj; Elhamifar, Ehsan; Tron, Roberto; Yang, Allen Y.; Sastry, S. Shankar: On the Lagrangian Biduality of Sparsity Minimization Problems, 2012, https://arxiv.org/abs/1201.3674
+145. Khan, Aamir; Farhan, Muhammad; Khurshid, Aasim; Akram, Adeel: A Multimodal Biometric System Using Linear Discriminant Analysis For Improved Performance, 2012, https://arxiv.org/abs/1201.3720
+146. Vairalkar, Manoj K.; Nimbhorkar, Sonali.: Image Labeling and Segmentation using Hierarchical Conditional Random Field Model, 2012, https://arxiv.org/abs/1201.3803
+147. Miravet, Carlos; Rodríguez, Francisco B.: A PCA-Based Super-Resolution Algorithm for Short Image Sequences, 2012, https://arxiv.org/abs/1201.3821
+148. Machado, Bruno Brandoli; Gonçalves, Wesley Nunes; Bruno, Odemir Martinez: Image decomposition with anisotropic diffusion applied to leaf-texture analysis, 2012, https://arxiv.org/abs/1201.4139
+149. Singh, T. Romen; Roy, Sudipta; Singh, O. Imocha; Sinam, Tejmani; Singh, Kh. Manglem: A New Local Adaptive Thresholding Technique in Binarization, 2012, https://arxiv.org/abs/1201.5227
+150. Moradmand, Hajar; Setayeshi, Saeed; Targhi, Hossein Khazaei: Comparing Methods for segmentation of Microcalcification Clusters in Digitized Mammograms, 2012, https://arxiv.org/abs/1201.5938
+151. James, Alex Pappachen; Dimitrijev, Sima: Feature selection using nearest attributes, 2012, https://arxiv.org/abs/1201.5946
+152. James, Alex Pappachen; Dimitrijev, Sima: Examplers based image fusion features for face recognition, 2012, https://arxiv.org/abs/1201.5947
+153. Salazar, Augusto; Wuhrer, Stefanie; Shu, Chang; Prieto, Flavio: Fully Automatic Expression-Invariant Face Correspondence, 2012, https://arxiv.org/abs/1202.1444
+154. Masmoudi, Khaled; Antonini, Marc; Kornprobst, Pierre: Streaming an image through the eye: The retina seen as a dithered scalable image coder, 2012, https://arxiv.org/abs/1202.2350
+155. Gaurav, Dinesh Dileep; Ramesh, Renu: A feature extraction technique based on character geometry for character recognition, 2012, https://arxiv.org/abs/1202.3884
+156. Needell, Deanna; Ward, Rachel: Stable image reconstruction using total variation minimization, 2012, https://arxiv.org/abs/1202.6429
+157. Lim, Hyon; Sinha, Sudipta; Cohen, Michael; Uyttendaele, Matt: Real-time Image-based 6-DOF Localization in Large-Scale Environments, 2012, https://arxiv.org/abs/1203.4355
+158. Penatti, Otavio A. B.; Valle, Eduardo; Torres, Ricardo da S.: Are visual dictionaries generalizable?, 2012, https://arxiv.org/abs/1205.2663
+159. Darkner, Sune; Sporring, Jon: Locally Orderless Registration, 2012, https://arxiv.org/abs/1205.5425
+160. Kolmogorov, Vladimir; Schoenemann, Thomas: Generalized sequential tree-reweighted message passing, 2012, https://arxiv.org/abs/1205.6352
+161. Sreejini, K. S.; Lijiya, A.; Govindan, V. K.: M-FISH Karyotyping - A New Approach Based on Watershed Transform, 2012, https://arxiv.org/abs/1205.2031
+162. Kumar, Ankit; Patnaik, Tushar; Verma, Vivek Kr: Discrimination of English to other Indian languages (Kannada and Hindi) for OCR system, 2012, https://arxiv.org/abs/1205.2164
+163. Zawbaa, Hossam; Aly, Salah A.: Hajj and Umrah Event Recognition Datasets, 2012, https://arxiv.org/abs/1205.2345
+164. Chang, Jason; Fisher, John W.: Efficient Topology-Controlled Sampling of Implicit Shapes, 2012, https://arxiv.org/abs/1205.3766
+165. Jin, Qiyu; Grama, Ion; Liu, Quansheng: Optimal Weights Mixed Filter for Removing Mixture of Gaussian and Impulse Noises, 2012, https://arxiv.org/abs/1205.3999
+166. Thangavel, K.; Roselin, R.: Fuzzy - Rough Feature Selection With {\Pi}- Membership Function For Mammogram Classification, 2012, https://arxiv.org/abs/1205.4336
+167. AlMahafzah, Harbi; Imran, Mohammad; Sheshadri, H. S.: Multibiometric: Feature Level Fusion Using FKP Multi-Instance biometric, 2012, https://arxiv.org/abs/1210.0818
+168. Adcock, Aaron; Rubin, Daniel; Carlsson, Gunnar: Classification of Hepatic Lesions using the Matching Metric, 2012, https://arxiv.org/abs/1210.0866
+169. Iglesias, Jose A.; Kimmel, Ron: Schr\"{o}dinger Diffusion for Shape Analysis with Texture, 2012, https://arxiv.org/abs/1210.0880
+170. Sun, Guangling; Li, Guoqing; Zhang, Xinpeng: Robust Degraded Face Recognition Using Enhanced Local Frequency Descriptor and Multi-scale Competition, 2012, https://arxiv.org/abs/1210.1033
+171. Badawy, AbdelHameed A.; Hugue, Michelle M.: Evaluating Discussion Boards on BlackBoard as a Collaborative Learning Tool A Students Survey and Reflections, 2012, https://arxiv.org/abs/1210.1230
+172. Rahman, Meftah Ur: A comparative study on face recognition techniques and neural network, 2012, https://arxiv.org/abs/1210.1916
+173. Mu, Yadong; Liu, Wei; Yan, Shuicheng: Video De-fencing, 2012, https://arxiv.org/abs/1210.2388
+174. Soni, Akshay; Haupt, Jarvis: Level Set Estimation from Compressive Measurements using Box Constrained Total Variation Regularization, 2012, https://arxiv.org/abs/1210.2474
+175. Arabadjis, Dimitris; Rousopoulos, Panayiotis; Papaodysseus, Constantin; Panagopoulos, Michalis; Loumou, Panayiota; Theodoropoulos, Georgios: A General Methodology for the Determination of 2D Bodies Elastic Deformation Invariants. Application to the Automatic Identification of Parasites, 2012, https://arxiv.org/abs/1210.2646
+176. Collard, Anne; Bonnabel, Silvère; Phillips, Christophe; Sepulchre, Rodolphe: An anisotropy preserving metric for DTI processing, 2012, https://arxiv.org/abs/1210.2826
+177. Seer, Stefan; Brändle, Norbert; Ratti, Carlo: Kinects and Human Kinetics: A New Approach for Studying Crowd Behavior, 2012, https://arxiv.org/abs/1210.2838
+178. Papaodysseus, Constantin; Arabadjis, Dimitris; Exarhos, Michalis; Rousopoulos, Panayiotis; Zannos, Solomon; Panagopoulos, Michail; Papazoglou-Manioudaki, Lena: Efficient Solution to the 3D Problem of Automatic Wall Paintings Reassembly, 2012, https://arxiv.org/abs/1210.2877
+179. Mollah, Ayatullah Faruk; Basu, Subhadip; Nasipuri, Mita: Computationally Efficient Implementation of Convolution-based Locally Adaptive Binarization Techniques, 2012, https://arxiv.org/abs/1210.3165
+180. van der Walt, Stéfan J.; Herbst, B. M.: A polygon-based interpolation operator for super-resolution imaging, 2012, https://arxiv.org/abs/1210.3404
+181. Barriuso, Adela; Torralba, Antonio: Notes on image annotation, 2012, https://arxiv.org/abs/1210.3448
+182. Tosic, Ivana; Drewes, Sarah: Learning joint intensity-depth sparse representations, 2012, https://arxiv.org/abs/1201.0566
+183. Schclar, Alon: Multi-Sensor Fusion via Reduction of Dimensionality, 2012, https://arxiv.org/abs/1211.2863
+184. Shadvar, Ali: Dimension Reduction by Mutual Information Discriminant Analysis, 2012, https://arxiv.org/abs/1206.2058
+185. Guimarães, Silvio Jamil F.; Cousty, Jean; Kenmochi, Yukiko; Najman, Laurent: An efficient hierarchical graph based image segmentation, 2012, https://arxiv.org/abs/1206.2807
+186. Srivastava, Saumil: Real time facial expression recognition using a novel method, 2012, https://arxiv.org/abs/1206.3559
+187. Bunyak, Yu. A.; Sofina, O. Yu.; Kvetnyy, R. N.: Blind PSF estimation and methods of deconvolution optimization, 2012, https://arxiv.org/abs/1206.3594
+188. Mondal, Koushik; Dutta, Paramartha; Bhattacharyya, Siddhartha: Feature Based Fuzzy Rule Base Design for Image Extraction, 2012, https://arxiv.org/abs/1206.3633
+189. Divvala, Santosh K.; Efros, Alexei A.; Hebert, Martial: How important are Deformable Parts in the Deformable Parts Model?, 2012, https://arxiv.org/abs/1206.3714
+190. Wang, Junyan; Chan, Kap Luk: The Stability of Convergence of Curve Evolutions in Vector Fields, 2012, https://arxiv.org/abs/1206.4042
+191. Mondal, Koushik; Dutta, Paramartha; Bhattacharyya, Siddhartha: Gray Image extraction using Fuzzy Logic, 2012, https://arxiv.org/abs/1206.4391
+192. Memisevic, Roland: On multi-view feature learning, 2012, https://arxiv.org/abs/1206.4609
+193. Tabor, Jacek; Misztal, Krzysztof: Detection of elliptical shapes via cross-entropy clustering, 2012, https://arxiv.org/abs/1211.5712
+194. Liu, Risheng; Lin, Zhouchen; De la Torre, Fernando; Su, Zhixun: Fixed-Rank Representation for Unsupervised Visual Learning, 2012, https://arxiv.org/abs/1203.2210
+195. Wang, Quan: HMRF-EM-image: Implementation of the Hidden Markov Random Field Model and its Expectation-Maximization Algorithm, 2012, https://arxiv.org/abs/1207.3510
+196. Zhang, Jian; Liu, Shaohui; Zhao, Debin; Xiong, Ruiqin; Ma, Siwei: Improved Total Variation based Image Compressive Sensing Recovery by Nonlocal Regularization, 2012, https://arxiv.org/abs/1208.3716
+197. Sarhrouni, ELkebir; Hammouch, Ahmed; Aboutajdine, Driss: Application of Symmetric Uncertainty and Mutual Information to Dimensionality Reduction and Classification of Hyperspectral Images, 2012, https://arxiv.org/abs/1211.0613
+198. Sadek, Rowayda A.: SVD Based Image Processing Applications: State of The Art, Contributions and Research Challenges, 2012, https://arxiv.org/abs/1211.7102
+199. Sahidullah, Md.; Saha, Goutam: A Novel Windowing Technique for Efficient Computation of MFCC for Speaker Recognition, 2012, https://arxiv.org/abs/1206.2437
+200. Abd-Elhafiez, Walaa M.; Gharibi, Wajeb: Color Image Compression Algorithm Based on the DCT Blocks, 2012, https://arxiv.org/abs/1208.3133
+201. Kubota, Toshiro: Contour Completion Around a Fixation Point, 2012, https://arxiv.org/abs/1208.3512
+202. Liu, Qiong: A Survey of Recent View-based 3D Model Retrieval Methods, 2012, https://arxiv.org/abs/1208.3670
+203. M, Sreeraj.; Idicula, Sumam Mary: An Online Character Recognition System to Convert Grantha Script to Malayalam, 2012, https://arxiv.org/abs/1208.4316
+204. Al-Wassai, Firouz Abdullah; Kalyankar, N. V.: The Segmentation Fusion Method On10 Multi-Sensors, 2012, https://arxiv.org/abs/1208.4842
+205. Aly, Salah A.: A Missing and Found Recognition System for Hajj and Umrah, 2012, https://arxiv.org/abs/1208.5365
+206. Tang, Zhongwei; Castrodad, Alexey; Tepper, Mariano; Sapiro, Guillermo: Are You Imitating Me? Unsupervised Sparse Modeling for Group Activity Analysis from a Single Video, 2012, https://arxiv.org/abs/1208.5451
+207. Tang, Sarah; Godil, Afzal: An evaluation of local shape descriptors for 3D shape retrieval, 2012, https://arxiv.org/abs/1202.2368
+208. Abdelwahab, Moataz M.; Aly, Salah A.; Yousry, Islam: Efficient Web-based Facial Recognition System Employing 2DHOG, 2012, https://arxiv.org/abs/1202.2449
+209. Mader, Kevin; Reese, Gil: Using Covariance Matrices as Feature Descriptors for Vehicle Detection from a Fixed Camera, 2012, https://arxiv.org/abs/1202.2528
+210. Basu, Subhadip; Chaudhuri, Chitrita; Kundu, Mahantapas; Nasipuri, Mita; Basu, Dipak K.: Segmentation of Offline Handwritten Bengali Script, 2012, https://arxiv.org/abs/1202.3046
+211. Leordeanu, Marius; Sukthankar, Rahul; Sminchisescu, Cristian: Generalized Boundaries from Multiple Image Interpretations, 2012, https://arxiv.org/abs/1202.3684
+212. Vidal, Rene; Ma, Yi; Sastry, Shankar: Generalized Principal Component Analysis (GPCA), 2012, https://arxiv.org/abs/1202.4002
+213. Hale, Scott A.: Unsupervised Threshold for Automatic Extraction of Dolphin Dorsal Fin Outlines from Digital Photographs in DARWIN (Digital Analysis and Recognition of Whale Images on a Network), 2012, https://arxiv.org/abs/1202.4107
+214. Zhao, Qiyang: A Simple Unsupervised Color Image Segmentation Method based on MRF-MAP, 2012, https://arxiv.org/abs/1202.4237
+215. Canals, V.; Morro, A.; Rosselló, J. L.: Stochastic-Based Pattern Recognition Analysis, 2012, https://arxiv.org/abs/1202.4495
+216. Cao, Liujuan: Visual Vocabulary Learning and Its Application to 3D and Mobile Visual Search, 2012, https://arxiv.org/abs/1207.7244
+217. Yarkony, Julian; Ihler, Alexander T.; Fowlkes, Charless C.: Fast Planar Correlation Clustering for Image Segmentation, 2012, https://arxiv.org/abs/1208.0378
+218. Koppula, Hema Swetha; Gupta, Rudhir; Saxena, Ashutosh: Human Activity Learning using Object Affordances from RGB-D Videos, 2012, https://arxiv.org/abs/1208.0967
+219. Ramakrishnan, Josphineleela; Malaisamy, Ramakrishnan: Performance Measurement and Method Analysis (PMMA) for Fingerprint Reconstruction, 2012, https://arxiv.org/abs/1208.1670
+220. Ramakrishnan, Josphineleela; Ramakrishnan, M.: An Efficient Automatic Attendance System Using Fingerprint Reconstruction Technique, 2012, https://arxiv.org/abs/1208.1672
+221. Rao, Supreeth K.; B., Arpitha Prasad; Shetty, Anushree R.; Chinmai, ; Bhakthavathsalam, R.; Hegde, Rajeshwari: Stereo Acoustic Perception based on Real Time Video Acquisition for Navigational Assistance, 2012, https://arxiv.org/abs/1208.1880
+222. Rathi, V. P. Gladis Pushpa; Palani, S.: Brain tumor MRI image classification with feature selection and extraction using linear discriminant analysis, 2012, https://arxiv.org/abs/1208.2128
+223. Puy, Gilles; Vandergheynst, Pierre: Robust image reconstruction from multi-view measurements, 2012, https://arxiv.org/abs/1212.3268
+224. Gong, Yunchao; Ke, Qifa; Isard, Michael; Lazebnik, Svetlana: A Multi-View Embedding Space for Modeling Internet Images, Tags, and their Semantics, 2012, https://arxiv.org/abs/1212.4522
+225. Larkin, Kieran G.; Fletcher, Peter A.; Hardy, Stephen J.: Tenacious tagging of images via Mellin monomials, 2012, https://arxiv.org/abs/1208.5842
+226. Gupta, Kapil Kumar; Beg, Rizwan; Niranjan, Jitendra Kumar: A Novel Approach to Fast Image Filtering Algorithm of Infrared Images based on Intro Sort Algorithm, 2012, https://arxiv.org/abs/1201.3972
+227. Sun, Ju; Zhang, Yuqian; Wright, John: Efficient Point-to-Subspace Query in $\ell^1$ with Application to Robust Object Instance Recognition, 2012, https://arxiv.org/abs/1208.0432
+228. Cireşan, Dan; Meier, Ueli; Schmidhuber, Juergen: Multi-column Deep Neural Networks for Image Classification, 2012, https://arxiv.org/abs/1202.2745
+229. Bhavsar, Arnav: Analysis of Magnification in Depth from Defocus, 2012, https://arxiv.org/abs/1203.6329
+230. Li, Bing; Xiong, Weihua; Hu, Weiming: Color Constancy based on Image Similarity via Bilayer Sparse Coding, 2012, https://arxiv.org/abs/1207.3142
+231. Christlein, Vincent; Riess, Christian; Jordan, Johannes; Riess, Corinna; Angelopoulou, Elli: An Evaluation of Popular Copy-Move Forgery Detection Approaches, 2012, https://arxiv.org/abs/1208.3665
+232. Olaizola, Igor G.; Quartulli, Marco; Florez, Julian; Sierra, Basilio: Trace transform based method for color image domain identification, 2012, https://arxiv.org/abs/1208.3901
+233. Mokhov, Serguei A.; Sun, Yankui: OCT Segmentation Survey and Summary Reviews and a Novel 3D Segmentation Algorithm and a Proof of Concept Implementation, 2012, https://arxiv.org/abs/1204.6725
+234. Hossain, M. Zahid; Amin, M. Ashraful; Yan, Hong: Rapid Feature Extraction for Optical Character Recognition, 2012, https://arxiv.org/abs/1206.0238
+235. Mandal, J. K.; Mukhopadhyay, Somnath: Image Filtering using All Neighbor Directional Weighted Pixels: Optimization using Particle Swarm Optimization, 2012, https://arxiv.org/abs/1206.0285
+236. Abdullah, Manal; Wazzan, Majda; Bo-saeed, Sahar: Optimizing Face Recognition Using PCA, 2012, https://arxiv.org/abs/1206.1515
+237. Abdullah, Manal A.; Al-Harigy, Lulwah M.; Al-Fraidi, Hanadi H.: Off-Line Arabic Handwriting Character Recognition Using Word Segmentation, 2012, https://arxiv.org/abs/1206.1518
+238. Vasanth, K.; Kumar, V. Jawahar Senthil: Performance Analysis of Unsymmetrical trimmed median as detector on image noises and its Fpga implementation, 2012, https://arxiv.org/abs/1206.1552
+239. Cohen, Andrew R.; Vitanyi, Paul M. B.: Normalized Compression Distance of Multisets with Applications, 2012, https://arxiv.org/abs/1212.5711
+240. Lakshmi, G. Geethu: Anatomical Structure Segmentation in Liver MRI Images, 2012, https://arxiv.org/abs/1207.0805
+241. Wang, Jingyan: Joint-ViVo: Selecting and Weighting Visual Words Jointly for Bag-of-Features based Tissue Classification in Medical Images, 2012, https://arxiv.org/abs/1208.3822
+242. Wang, Jing-Yan: Discriminative Sparse Coding on Multi-Manifold for Data Representation and Classification, 2012, https://arxiv.org/abs/1208.3839
+243. Sermanet, Pierre; Kavukcuoglu, Koray; Chintala, Soumith; LeCun, Yann: Pedestrian Detection with Unsupervised Multi-Stage Feature Learning, 2012, https://arxiv.org/abs/1212.0142
+244. Dai, Zhenwen; Lücke, Jörg: Autonomous Cleaning of Corrupted Scanned Documents - A Generative Modeling Approach, 2012, https://arxiv.org/abs/1201.2605
+245. Tepper, Mariano; Musé, Pablo; Almansa, Andrés: On the Role of Contrast and Regularity in Perceptual Boundary Saliency, 2012, https://arxiv.org/abs/1210.3718
+246. Zaidenberg, Sofia; Boulay, Bernard; Bremond, François: A generic framework for video understanding applied to group behavior recognition, 2012, https://arxiv.org/abs/1206.5065
+247. Wang, Yang; Tan, Tele: Adaptive Foreground and Shadow Detection inImage Sequences, 2012, https://arxiv.org/abs/1301.0612
+248. Abeles, Peter: Resolving Implementation Ambiguity and Improving SURF, 2012, https://arxiv.org/abs/1202.0492
+249. Quesada, Luis; León, Alejandro J.: Filling-Based Techniques Applied to Object Projection Feature Estimation, 2012, https://arxiv.org/abs/1202.6586
+250. Quesada, Luis: Using Barriers to Reduce the Sensitivity to Edge Miscalculations of Casting-Based Object Projection Feature Estimation, 2012, https://arxiv.org/abs/1203.0076
+251. Chitra, S.; Bhattacharjee, J. B.; Thilakavathi, B.: Image Fusion and Re-Modified SPIHT for Fused Image, 2012, https://arxiv.org/abs/1203.0265
+252. Kong, Shu; Wang, Donghui: Multi-Level Feature Descriptor for Robust Texture Classification via Locality-Constrained Collaborative Strategy, 2012, https://arxiv.org/abs/1203.0488
+253. Kong, Shu; Wang, Donghui: A Report on Multilinear PCA Plus Multilinear LDA to Deal with Tensorial Data: Visual Classification as An Example, 2012, https://arxiv.org/abs/1203.0744
+254. Katsuki, Takayuki; Inoue, Masato: Posterior Mean Super-Resolution with a Compound Gaussian Markov Random Field Prior, 2012, https://arxiv.org/abs/1203.0781
+255. Kong, Shu; Wang, Donghui: Online Discriminative Dictionary Learning for Image Classification Based on Block-Coordinate Descent Method, 2012, https://arxiv.org/abs/1203.0856
+256. Basu, Subhadip; Das, Nibaran; Sarkar, Ram; Kundu, Mahantapas; Nasipuri, Mita; Basu, Dipak Kumar: An MLP based Approach for Recognition of Handwritten `Bangla' Numerals, 2012, https://arxiv.org/abs/1203.0876
+257. Basu, Subhadip; Das, Nibaran; Sarkar, Ram; Kundu, Mahantapas; Nasipuri, Mita; Basu, Dipak Kumar: Handwritten Bangla Alphabet Recognition using an MLP Based Classifier, 2012, https://arxiv.org/abs/1203.0882
+258. Băzăvan, Eduard Gabriel; Li, Fuxin; Sminchisescu, Cristian: Learning Random Kernel Approximations for Object Recognition, 2012, https://arxiv.org/abs/1203.1483
+259. Bruna, Joan; Mallat, Stéphane: Invariant Scattering Convolution Networks, 2012, https://arxiv.org/abs/1203.1513
+260. Kom, Guillaume; Tiedeu, Alain; Kom, Martin; Ngundam, John: A comparative evaluation of two algorithms of detection of masses on mammograms, 2012, https://arxiv.org/abs/1203.1765
+261. Josephus, Chelsy Sapna; Remya, S.: Enhancement Techniques for Local Content Preservation and Contrast Improvement in Images, 2012, https://arxiv.org/abs/1203.1823
+262. Sebastian, Bino; Unnikrishnan, A.; Balakrishnan, Kannan: Gray Level Co-Occurrence Matrices: Generalisation and Some New Features, 2012, https://arxiv.org/abs/1205.4831
+263. Vijayalaxmi, ; Rao, P. Sudhakara; Sreehari, S.: Neural Network Approach for Eye Detection, 2012, https://arxiv.org/abs/1205.5097
+264. Shu, Kong; Donghui, Wang: A Brief Summary of Dictionary Learning Based Approach for Classification, 2012, https://arxiv.org/abs/1205.6391
+265. Kong, Shu; Wang, Donghui: A Brief Summary of Dictionary Learning Based Approach for Classification (revised), 2012, https://arxiv.org/abs/1205.6544
+266. Halder, Amiya; Pramanik, Soumajit: An Unsupervised Dynamic Image Segmentation using Fuzzy Hopfield Neural Network based Genetic Algorithm, 2012, https://arxiv.org/abs/1205.6572
+267. Egger, Jan; Freisleben, Bernd; Nimsky, Christopher; Kapur, Tina: Template-Cut: A Pattern-Based Segmentation Paradigm, 2012, https://arxiv.org/abs/1205.6605
+268. Gnanasivam, P; Muttan, Dr. S: Fingerprint Gender Classification using Wavelet Transform and Singular Value Decomposition, 2012, https://arxiv.org/abs/1205.6745
+269. Zhao, Zhizhen; Singer, Amit: Fourier-Bessel rotational invariant eigenimages, 2012, https://arxiv.org/abs/1211.1968
+270. Singh, Saurabh; Gupta, Abhinav; Efros, Alexei A.: Unsupervised Discovery of Mid-Level Discriminative Patches, 2012, https://arxiv.org/abs/1205.3137
+271. Lu, Yao; Huang, Kaizhu; Liu, Cheng-Lin: A Fast Projected Fixed-Point Algorithm for Large Graph Matching, 2012, https://arxiv.org/abs/1207.1114
+272. Zhao, Qian; Meng, Deyu; Xu, Zongben: A recursive divide-and-conquer approach for sparse principal component analysis, 2012, https://arxiv.org/abs/1211.7219
+273. Khalil, Osama; Habib, Andrew: Viewpoint Invariant Object Detector, 2012, https://arxiv.org/abs/1212.0030
+274. Sharma, Minakshi: Artificial Neural Network Fuzzy Inference System (ANFIS) For Brain Tumor Detection, 2012, https://arxiv.org/abs/1212.0059
+275. Raheja, J. L.; Das, Karen; Chaudhary, Ankit: Fingertip Detection: A Fast Method with Natural Hand, 2012, https://arxiv.org/abs/1212.0134
+276. Prabhakar, C. J.; Kumar, P. U. Praveen: An Image Based Technique for Enhancement of Underwater Images, 2012, https://arxiv.org/abs/1212.0291
+277. Rao, D. Srinivasa; Seetha, M.; Prasad, M. H. M. Krishna: Comparison of Fuzzy and Neuro Fuzzy Image Fusion Techniques and its Applications, 2012, https://arxiv.org/abs/1212.0318
+278. Asha, V.; Bhajantri, N. U.; Nagabhushan, P.: GLCM-based chi-square histogram distance for automatic detection of defects on patterned textures, 2012, https://arxiv.org/abs/1212.0383
+279. Soomro, Khurram; Zamir, Amir Roshan; Shah, Mubarak: UCF101: A Dataset of 101 Human Actions Classes From Videos in The Wild, 2012, https://arxiv.org/abs/1212.0402
+280. Sudhakar, Prasad; Jacques, Laurent; Dubois, Xavier; Antoine, Philippe; Joannes, Luc: Compressive Schlieren Deflectometry, 2012, https://arxiv.org/abs/1212.0433
+281. Shchepin, Evgeny: A Topological Code for Plane Images, 2012, https://arxiv.org/abs/1212.0819
+282. Rajabi, Roozbeh; Ghassemian, Hassan: Unmixing of Hyperspectral Data Using Robust Statistics-based NMF, 2012, https://arxiv.org/abs/1212.0888
+283. Banerji, Debajyoti; Ray, Ranjit; Basu, Jhankar; Basak, Indrajit: Autonomous Navigation by Robust Scan Matching Technique, 2012, https://arxiv.org/abs/1212.1313
+284. Asha, V.; Bhajantri, N. U.; Nagabhushan, P.: Automatic Detection of Texture Defects Using Texture-Periodicity and Gabor Wavelets, 2012, https://arxiv.org/abs/1212.1329
+285. Baar, Teun; van Houten, Wiger; Geradts, Zeno: Camera identification by grouping images from database, based on shared noise patterns, 2012, https://arxiv.org/abs/1207.2641
+286. Gangeh, Mehrdad J.; Duin, Robert P. W.; Romeny, Bart M. ter Haar; Kamel, Mohamed S.: A Two-Stage Combined Classifier in Scale Space Texture Classification, 2012, https://arxiv.org/abs/1207.4089
+287. Qiu, Qiang; Patel, Vishal M.; Chellappa, Rama: Information-theoretic Dictionary Learning for Image Classification, 2012, https://arxiv.org/abs/1208.3687
+288. Qiu, Qiang; Chellappa, Rama: A Unified Approach for Modeling and Recognition of Individual Actions and Group Activities, 2012, https://arxiv.org/abs/1208.4398
+289. Konukoglu, Ender; Glocker, Ben; Criminisi, Antonio; Pohl, Kilian M.: WESD - Weighted Spectral Distance for Measuring Shape Dissimilarity, 2012, https://arxiv.org/abs/1208.5016
+290. Zhang, Wei; Wang, Xiaogang; Zhao, Deli; Tang, Xiaoou: Graph Degree Linkage: Agglomerative Clustering on a Directed Graph, 2012, https://arxiv.org/abs/1208.5092
+291. Salmon, Joseph; Willett, Rebecca; Arias-Castro, Ery: A two-stage denoising filter: the preprocessed Yaroslavsky filter, 2012, https://arxiv.org/abs/1208.6516
+292. Dilawari, Jaswinder Singh; Khanna, Ravinder: Creation of Digital Test Form for Prepress Department, 2012, https://arxiv.org/abs/1209.5039
+293. Dilawari, Jaswinder Singh; Khanna, Ravinder: Image Classification and Optimized Image Reproduction, 2012, https://arxiv.org/abs/1209.5040
+294. Dilawari, Jaswinder Singh; Khanna, Ravinder: An Implementation of Computer Graphics as Prepress Image Enhancement Process, 2012, https://arxiv.org/abs/1209.5041
+295. Dilawari, Jaswinder Singh; Khanna, Ravinder: Reproduction of Images by Gamut Mapping and Creation of New Test Charts in Prepress Process, 2012, https://arxiv.org/abs/1209.6037
+296. Brunton, Alan; Salazar, Augusto; Bolkart, Timo; Wuhrer, Stefanie: Review of Statistical Shape Spaces for 3D Data with Comparative Analysis for Human Faces, 2012, https://arxiv.org/abs/1209.6491
+297. Dilawari, Jaswinder Singh; Khanna, Ravinder: Developing ICC Profile Using Gray Level Control In Offset Printing Process, 2012, https://arxiv.org/abs/1210.5732
+298. Dilawari, Jaswinder Singh; Khanna, Ravinder: Different Operating Systems Compatible for Image Prepress Process in Color Management: Analysis and Performance Testing, 2012, https://arxiv.org/abs/1211.1650
+299. Chaudhury, Kunal N.: Acceleration of the shiftable O(1) algorithm for bilateral filtering and non-local means, 2012, https://arxiv.org/abs/1203.5128
+300. Rajaei, Boshra; Maugey, Thomas; Pourreza, Hamid-Reza; Frossard, Pascal: Rate-Distortion Analysis of Multiview Coding in a DIBR Framework, 2012, https://arxiv.org/abs/1211.4499
+301. Bhuyan, Monowar H.; Bhattacharyya, D. K.: An Effective Fingerprint Classification and Search Method, 2012, https://arxiv.org/abs/1211.4503
+302. Jassim, Firas A.; Qassim, Hind E.: Five Modulus Method For Image Compression, 2012, https://arxiv.org/abs/1211.4591
+303. Bhuyan, Monowar H.; Saharia, Sarat; Bhattacharyya, Dhruba Kr: An Effective Method for Fingerprint Classification, 2012, https://arxiv.org/abs/1211.4658
+304. Sundaramoorthi, Ganesh; Yang, Yanchao: Matching Through Features and Features Through Matching, 2012, https://arxiv.org/abs/1211.4771
+305. Beijbom, Oscar: Domain Adaptations for Computer Vision Applications, 2012, https://arxiv.org/abs/1211.4860
+306. Kundu, Raka; Chakrabarti, Amlan; Lenka, Prasanna K.: Cobb Angle Measurement of Scoliosis with Reduced Variability, 2012, https://arxiv.org/abs/1211.5355
+307. Pele, Ofir; Werman, Michael: Improving Perceptual Color Difference using Basic Color Terms, 2012, https://arxiv.org/abs/1211.5556
+308. "Ersoy, Dalton Lunga 'and' Okan;: Nonlinear Dynamic Field Embedding: On Hyperspectral Scene Visualization, 2012, https://arxiv.org/abs/1211.6675
+309. Qaffou, Issam; Sadgal, Mohamed; Elfazziki, Aziz: A New Automatic Method to Adjust Parameters for Object Recognition, 2012, https://arxiv.org/abs/1211.6971
+310. Jayawardena, Srimal; Yang, Di; Hutter, Marcus: 3D Model Assisted Image Segmentation, 2012, https://arxiv.org/abs/1202.1943
+311. Gangeh, Mehrdad J.; Ghodsi, Ali; Kamel, Mohamed S.: Kernelized Supervised Dictionary Learning, 2012, https://arxiv.org/abs/1207.2488
+312. Gangeh, Mehrdad J.; Ghodsi, Ali; Kamel, Mohamed S.: Supervised Texture Classification Using a Novel Compression-Based Similarity Measure, 2012, https://arxiv.org/abs/1207.3071
+313. Ekhtiyar, Hesam; Sheida, Mehdi; Moghadam, Somaye Sobati: Model based neuro-fuzzy ASR on Texas processor, 2012, https://arxiv.org/abs/1209.5417
+314. Saidin, Nafiza; Sakim, Harsa Amylia Mat; Ngah, Umi Kalthum; Shuaib, Ibrahim Lutfi: Segmentation of Breast Regions in Mammogram Based on Density: A Review, 2012, https://arxiv.org/abs/1209.5494
+315. Souli, Sameh; Lachiri, Zied: Environmental Sounds Spectrogram Classification using Log-Gabor Filters and Multiclass Support Vector Machines, 2012, https://arxiv.org/abs/1209.5756
+316. Le, Thai Hoang; Vo, Truong Nhat: Face Alignment Using Active Shape Model And Support Vector Machine, 2012, https://arxiv.org/abs/1209.6151
+317. Popescu-Bodorin, Nicolaie; Balas, Valentina E.; Motoc, Iulia M.: The Biometric Menagerie - A Fuzzy and Inconsistent Concept, 2012, https://arxiv.org/abs/1209.6189
+318. Motoc, Iulia M.; Noaica, Cristina M.; Badea, Robert; Ghica, Claudiu G.: Noise Influence on the Fuzzy-Linguistic Partitioning of Iris Code Space, 2012, https://arxiv.org/abs/1209.6190
+319. Kharinov, M.: Reclassification formula that provides to surpass K-means method, 2012, https://arxiv.org/abs/1209.6204
+320. David, Omid; Gerrah, Rabin: In Vivo Quantification of Clot Formation in Extracorporeal Circuits, 2012, https://arxiv.org/abs/1212.5454
+321. Karrenbauer, Andreas; Wöll, Dominik: Blinking Molecule Tracking, 2012, https://arxiv.org/abs/1212.5877
+322. Ali, Sajid: Gender Recognition in Walk Gait through 3D Motion by Quadratic Bezier Curve and Statistical Techniques, 2012, https://arxiv.org/abs/1211.1482
+323. Carlinet, Edwin; Géraud, Thierry: A fair comparison of many max-tree computation algorithms (Extended version of the paper submitted to ISMM 2013, 2012, https://arxiv.org/abs/1212.1819
+324. Yu, Yen-Yun; Fletcher, P. Thomas; Awate, Suyash P.: Hierarchical Graphical Models for Multigroup Shape Analysis using Expectation Maximization with Sampling in Kendall's Shape Space, 2012, https://arxiv.org/abs/1212.5720
+325. Moukalled, H. J.: On Automation and Medical Image Interpretation, With Applications for Laryngeal Imaging, 2012, https://arxiv.org/abs/1212.6933
+326. AlMahafzah, Harbi; AlRwashdeh, Maen Zaid: A Survey of Multibiometric Systems, 2012, https://arxiv.org/abs/1210.0829
+327. Estellers, Virginia; Thiran, Jean-Philippe; Bresson, Xavier: Enhanced Compressed Sensing Recovery with Level Set Normals, 2012, https://arxiv.org/abs/1210.3350
+328. Ram, Idan; Elad, Michael; Cohen, Israel: Image Processing using Smooth Ordering of its Patches, 2012, https://arxiv.org/abs/1210.3832
+329. Peng, Xi; Yu, Zhiding; Tang, Huajin; Yi, Zhang: Constructing the L2-Graph for Robust Subspace Learning and Subspace Clustering, 2012, https://arxiv.org/abs/1209.0841
+330. Arabadjis, Dimitris; Rousopoulos, Panayiotis; Papaodysseus, Constantin; Exarhos, Michalis; Panagopoulos, Michalis; Papazoglou-Manioudaki, Lena: Optimization in Differentiable Manifolds in Order to Determine the Method of Construction of Prehistoric Wall-Paintings, 2012, https://arxiv.org/abs/1210.2629
+331. Chaudhury, Kunal N.; Singer, Amit: Non-Local Patch Regression: Robust Image Denoising in Patch Space, 2012, https://arxiv.org/abs/1211.4264
+332. Barbu, Andrei; Bridge, Alexander; Burchill, Zachary; Coroian, Dan; Dickinson, Sven; Fidler, Sanja; Michaux, Aaron; Mussman, Sam; Narayanaswamy, Siddharth; Salvi, Dhaval; Schmidt, Lara; Shangguan, Jiangnan; Siskind, Jeffrey Mark; Waggoner, Jarrell; Wang, Song; Wei, Jinlian; Yin, Yifan; Zhang, Zhiqi: Video In Sentences Out, 2012, https://arxiv.org/abs/1204.2742
+333. Meyer, Fernand: Watersheds, waterfalls, on edge or node weighted graphs, 2012, https://arxiv.org/abs/1204.2837
+334. Li, Xi; Shen, Chunhua; Shi, Qinfeng; Dick, Anthony; Hengel, Anton van den: Non-sparse Linear Representations for Visual Tracking with Online Reservoir Metric Learning, 2012, https://arxiv.org/abs/1204.2912
+335. Chakrabarti, Ayan; Zickler, Todd: Image Restoration with Signal-dependent Camera Noise, 2012, https://arxiv.org/abs/1204.2994
+336. Barbu, Andrei; Bridge, Alexander; Coroian, Dan; Dickinson, Sven; Mussman, Sam; Narayanaswamy, Siddharth; Salvi, Dhaval; Schmidt, Lara; Shangguan, Jiangnan; Siskind, Jeffrey Mark; Waggoner, Jarrell; Wang, Song; Wei, Jinlian; Yin, Yifan; Zhang, Zhiqi: Large-Scale Automatic Labeling of Video Events with Verbs Based on Event-Participant Interaction, 2012, https://arxiv.org/abs/1204.3616
+337. Sermanet, Pierre; Chintala, Soumith; LeCun, Yann: Convolutional Neural Networks Applied to House Numbers Digit Classification, 2012, https://arxiv.org/abs/1204.3968
+338. Khan, Aamir; Farhan, Muhammad; Ali, Asar: Speech Recognition: Increasing Efficiency of Support Vector Machines, 2012, https://arxiv.org/abs/1204.4257
+339. Chaudhry, Rizwan; Hager, Gregory; Vidal, Rene: Dynamic Template Tracking and Recognition, 2012, https://arxiv.org/abs/1204.4476
+340. Bagon, Shai; Galun, Meirav: A Unified Multiscale Framework for Discrete Energy Minimization, 2012, https://arxiv.org/abs/1204.4867
+341. Kumar, Manoj; Kaushik, Vikas; Singla, Pradeep: A New Approach of Improving CFA Image for Digital Camera's, 2012, https://arxiv.org/abs/1204.5416
+342. Reininghaus, Jan; Günther, David; Hotz, Ingrid; Weinkauf, Tino; Seidel, Hans Peter: Combinatorial Gradient Fields for 2D Images with Empirically Convergent Separatrices, 2012, https://arxiv.org/abs/1208.6523
+343. Dey, Nilanjan; Pal, Moumita; Das, Achintya: A Session Based Blind Watermarking Technique within the NROI of Retinal Fundus Images for Authentication Using DWT, Spread Spectrum and Harris Corner Detection, 2012, https://arxiv.org/abs/1209.0053
+344. Dey, Nilanjan; Roy, Anamitra Bardhan; Pal, Moumita; Das, Achintya: FCM Based Blood Vessel Segmentation Method for Retinal Images, 2012, https://arxiv.org/abs/1209.1181
+345. Dey, Nilanjan; Das, Achintya; Chaudhuri, Sheli Sinha: Wavelet Based Normal and Abnormal Heart Sound Identification using Spectrogram Analysis, 2012, https://arxiv.org/abs/1209.1224
+346. Dey, Nilanjan; Nandi, Pradipti; Barman, Nilanjana; Das, Debolina; Chakraborty, Subhabrata: A Comparative Study between Moravec and Harris Corner Detection of Noisy Images Using Adaptive Wavelet Thresholding Technique, 2012, https://arxiv.org/abs/1209.1558
+347. Mukhopadhyay, Sayantan; Biswas, Shouvik; Roy, Anamitra Bardhan; Dey, Nilanjan: Wavelet Based QRS Complex Detection of ECG Signal, 2012, https://arxiv.org/abs/1209.1563
+348. Moschetti, Elsa E.; Palacio, M. Gabriela; Picco, Mery; Bustos, Oscar H.; Frery, Alejandro C.: On the Use of Lee's Protocol for Speckle-Reducing Techniques, 2012, https://arxiv.org/abs/1209.1788
+349. Eynard, Davide; Glashoff, Klaus; Bronstein, Michael M.; Bronstein, Alexander M.: Multimodal diffusion geometry by joint diagonalization of Laplacians, 2012, https://arxiv.org/abs/1209.2295
+350. Burger, Harold Christopher; Schuler, Christian J.; Harmeling, Stefan: Image denoising with multi-layer perceptrons, part 1: comparison with existing algorithms and with bounds, 2012, https://arxiv.org/abs/1211.1544
+351. Burger, Harold Christopher; Schuler, Christian J.; Harmeling, Stefan: Image denoising with multi-layer perceptrons, part 2: training trade-offs and analysis of their mechanisms, 2012, https://arxiv.org/abs/1211.1552
+352. Anand, Abhishek; Li, Sherwin: 3D Scene Grammar for Parsing RGB-D Pointclouds, 2012, https://arxiv.org/abs/1211.1752
+353. Hassen, Hamdi; khemakhem, Maher: A Comparative study of Arabic handwritten characters invariant feature, 2012, https://arxiv.org/abs/1211.1800
+354. Ejbali, Ridha; Zaied, Mourad; Amar, Chokri Ben: Multi-input Multi-output Beta Wavelet Network: Modeling of Acoustic Units for Speech Recognition, 2012, https://arxiv.org/abs/1211.2007
+355. J., Rehna V.; Jeyakumar, M. K.: Time Complexity Analysis of Binary Space Partitioning Scheme for Image Compression, 2012, https://arxiv.org/abs/1211.2037
+356. Prabhakar, C. J.; Kumar, P. U. Praveen: 3D Surface Reconstruction of Underwater Objects, 2012, https://arxiv.org/abs/1211.2082
+357. Arunkumar, S; Sahu, Pallab Kumar; Gorai, Sudeep; Ghosh, Kalyan: Localisation of Numerical Date Field in an Indian Handwritten Document, 2012, https://arxiv.org/abs/1211.2116
+358. Halima, Mohamed Ben; karray, Hichem; Alimi, Adel. M.; Vila, Ana Fernández: NF-SAVO: Neuro-Fuzzy system for Arabic Video OCR, 2012, https://arxiv.org/abs/1211.2150
+359. El-Sayed, Mohamed A.: A New Algorithm Based Entropic Threshold for Edge Detection in Images, 2012, https://arxiv.org/abs/1211.2500
+360. El-Sayed, Mohamed A.; Hafeez, Tarek Abd-El: New Edge Detection Technique based on the Shannon Entropy in Gray Level Images, 2012, https://arxiv.org/abs/1211.2502
+361. Vashisht, Vasudha; Choudhury, Tanupriya; Prasad, T. V.: Sketch Recognition using Domain Classification, 2012, https://arxiv.org/abs/1211.2742
+362. Chung, Junyoung; Lee, Donghoon; Seo, Youngjoo; Yoo, Chang D.: Deep Attribute Networks, 2012, https://arxiv.org/abs/1211.2881
+363. Akram, Saad; Beskow, Jonas; Kjellstrom, Hedvig: Visual Recognition of Isolated Swedish Sign Language Signs, 2012, https://arxiv.org/abs/1211.3901
+364. Li, Han; Gai, Kun; Gong, Pinghua; Zhang, Changshui: Efficient Superimposition Recovering Algorithm, 2012, https://arxiv.org/abs/1211.4307
+365. Shrivastava, Vivek; Sharma, Navdeep: Artificial Neural Network Based Optical Character Recognition, 2012, https://arxiv.org/abs/1211.4385
+366. Gonalez-Diaz, Rocio; Lamar, Javier; Umble, Ronald: Cups Products in Z2-Cohomology of 3D Polyhedral Complexes, 2012, https://arxiv.org/abs/1207.2346
+367. Padmavathi, S.; Archana, N.; Soman, K. P.: Hierarchical Approach for Total Variation Digital Image Inpainting, 2012, https://arxiv.org/abs/1207.3576
+368. Srivastava, Madhur; Yashu, Yashwant; Singh, Satish K.; Panigrahi, Prasanta K.: Multisegmentation through wavelets: Comparing the efficacy of Daubechies vs Coiflets, 2012, https://arxiv.org/abs/1207.5007
+369. Rehna, V. J.; Kumar, M. K. Jeya: Wavelet Based Image Coding Schemes : A Recent Survey, 2012, https://arxiv.org/abs/1209.2515
+370. Dundar, Aysegul; Jin, Jonghoon; Culurciello, Eugenio: Visual Tracking with Similarity Matching Ratio, 2012, https://arxiv.org/abs/1209.2696
+371. Padmavathi, S.; Soman, B. Priyalakshmi. Dr. K. P.: Hirarchical Digital Image Inpainting Using Wavelets, 2012, https://arxiv.org/abs/1209.2816
+372. Dey, Nilanjan; Nandi, Pradipti; Barman, Nilanjana: A Novel Approach of Harris Corner Detection of Noisy Images using Adaptive Wavelet Thresholding Technique, 2012, https://arxiv.org/abs/1209.2903
+373. Tander, Baran; Özmen, Atilla; Başkan, Murat: Detection and Classification of Viewer Age Range Smart Signs at TV Broadcast, 2012, https://arxiv.org/abs/1209.3113
+374. Zawbaa, Hossam M.; Aly, Salah A.; Gutub, Adnan A.: A Hajj And Umrah Location Classification System For Video Crowded Scenes, 2012, https://arxiv.org/abs/1209.3433
+375. Zhang, Haichao; Wipf, David; Zhang, Yanning: Image Super-Resolution via Sparse Bayesian Modeling of Natural Images, 2012, https://arxiv.org/abs/1209.4317
+376. Wang, Chao: Head Frontal-View Identification Using Extended LLE, 2012, https://arxiv.org/abs/1209.4419
+377. LI, Lan-Ting: An Efficient Color Face Verification Based on 2-Directional 2-Dimensional Feature Extraction, 2012, https://arxiv.org/abs/1209.4420
+378. Bergstra, J.; Yamins, D.; Cox, D. D.: Making a Science of Model Search, 2012, https://arxiv.org/abs/1209.5111
+379. Behi, Tarek; Arous, Najet; Ellouze, Noureddine: Spike Timing Dependent Competitive Learning in Recurrent Self Organizing Pulsed Neural Networks Case Study: Phoneme and Word Recognition, 2012, https://arxiv.org/abs/1209.5245
+380. Meyer, Fernand: The watershed concept and its use in segmentation : a brief history, 2012, https://arxiv.org/abs/1202.0216
+381. Thakur, Gautam S.; Ali, Mohsen; Hui, Pan; Helmy, Ahmed: Comparing Background Subtraction Algorithms and Method of Car Counting, 2012, https://arxiv.org/abs/1202.0549
+382. Herrera, Roberto Henry; Orozco, Rubén; Rodríguez, Manuel: Wavelet-based deconvolution of ultrasonic signals in nondestructive evaluation, 2012, https://arxiv.org/abs/1202.0609
+383. Pavan, K. Karteeka; Rao, Allam Appa; Rao, A. V. Dattatreya; Sridhar, G. R.: Robust seed selection algorithm for k-means type algorithms, 2012, https://arxiv.org/abs/1202.1585
+384. Pavan, K. Karteeka; Rao, Allam Appa; Rao, A. V. Dattatreya: Automatic Clustering with Single Optimal Solution, 2012, https://arxiv.org/abs/1202.1587
+385. Balas, Valentina E.; Motoc, Iulia M.; Barbulescu, Alina: Combined Haar-Hilbert and Log-Gabor Based Iris Encoders, 2012, https://arxiv.org/abs/1202.1685
+386. Kumar, Upendra; Lahiri, Tapobrata; Pal, Manoj Kumar: Non-parametric convolution based image-segmentation of ill-posed objects applying context window approach, 2012, https://arxiv.org/abs/1202.1990
+387. Bettadapura, Vinay: Face Expression Recognition and Analysis: The State of the Art, 2012, https://arxiv.org/abs/1203.6722
+388. Bauer, Stefan; Nolte, Lutz-P.; Reyes, Mauricio: Skull-stripping for Tumor-bearing Brain Images, 2012, https://arxiv.org/abs/1204.0357
+389. Katyal, Vini; Srivastava, Deepesh: Efficient Fruit Defect Detection and Glare removal Algorithm by anisotropic diffusion and 2D Gabor filter, 2012, https://arxiv.org/abs/1204.0767
+390. Khan, Aamir; Farooq, Hasan: Principal Component Analysis-Linear Discriminant Analysis Feature Extractor for Pattern Recognition, 2012, https://arxiv.org/abs/1204.1177
+391. Omee, Farjana Yeasmin; Himel, Shiam Shabbir; Bikas, Md. Abu Naser: A Complete Workflow for Development of Bangla OCR, 2012, https://arxiv.org/abs/1204.1198
+392. Yamaguchi, Koichiro; Hazan, Tamir; McAllester, David; Urtasun, Raquel: Continuous Markov Random Fields for Robust Stereo Estimation, 2012, https://arxiv.org/abs/1204.1393
+393. Ng, Choon Boon; Tay, Yong Haur; Goi, Bok Min: Vision-based Human Gender Recognition: A Survey, 2012, https://arxiv.org/abs/1204.1611
+394. Haboubi, Sofiene; Maddouri, Samia; Amiri, Hamid: Discrimination between Arabic and Latin from bilingual documents, 2012, https://arxiv.org/abs/1204.1615
+395. Mahjoub, Mohamed Ali; kalti, karim: Image segmentation by adaptive distance based on EM algorithm, 2012, https://arxiv.org/abs/1204.1629
+396. jayech, Khlifia; mahjoub, mohamed ali: New approach using Bayesian Network to improve content based image classification systems, 2012, https://arxiv.org/abs/1204.1631
+397. zayane, Oussema; jouini, besma; Mahjoub, Mohamed Ali: Automatic liver segmentation method in CT images, 2012, https://arxiv.org/abs/1204.1634
+398. Charfi, Moncef; Kherallah, Monji; Baati, Abdelkarim El; Alimi, Adel M.: A New Approach for Arabic Handwritten Postal Addresses Recognition, 2012, https://arxiv.org/abs/1204.1678
+399. Jayech, Khlifia; Mahjoub, Mohamed Ali: Clustering and Bayesian network for image of faces classification, 2012, https://arxiv.org/abs/1204.1679
+400. Somasundaram, K.; Vimala, S.: Multi-Level Coding Efficiency with Improved Quality for Image Compression based on AMBTC, 2012, https://arxiv.org/abs/1204.1704
+401. Khan, Rehanullah; Maqsood, Asad; Khan, Zeeshan; Ishaq, Muhammad; Arif, Arsalan: Skin-color based videos categorization, 2012, https://arxiv.org/abs/1204.1811
+402. Patil, Babasaheb G.; Subbaraman, Shaila: SVD-EBP Algorithm for Iris Pattern Recognition, 2012, https://arxiv.org/abs/1204.2062
+403. Khandait, S. P.; Thool, R. C.; Khandait, P. D.: Automatic facial feature extraction and expression recognition based on neural network, 2012, https://arxiv.org/abs/1204.2073
+404. Ng, Jun Yee; Tay, Yong Haur: Image-based Vehicle Classification System, 2012, https://arxiv.org/abs/1204.2114
+405. Meyer, Fernand: The steepest watershed: from graphs to images, 2012, https://arxiv.org/abs/1204.2134
+406. Bejuri, Wan Mohd Yaakob Wan; Mohamad, Mohd Murtadha; Sapri, Maimunah; Rosly, Mohd Adly: Ubiquitous WLAN/Camera Positioning using Inverse Intensity Chromaticity Space-based Feature Detection and Matching: A Preliminary Result, 2012, https://arxiv.org/abs/1204.2294
+407. Chary, R. Venkata Ramana; Lakshmi, D. Rajya; Sunitha, K. V. N.: Feature Extraction Methods for Color Image Similarity, 2012, https://arxiv.org/abs/1204.2336
+408. Wang, Quan: Kernel Principal Component Analysis and its Applications in Face Recognition and Active Shape Models, 2012, https://arxiv.org/abs/1207.3538
+409. Trapeznikov, Kirill; Saligrama, Venkatesh; Castanon, David: Multi-Stage Classifier Design, 2012, https://arxiv.org/abs/1205.4377
+410. Aly, Salah A.: Pilgrims Face Recognition Dataset -- HUFRD, 2012, https://arxiv.org/abs/1205.4463
+411. Ren, Xiang; Lin, Zhouchen: Linearized Alternating Direction Method with Adaptive Penalty and Warm Starts for Fast Solving Transform Invariant Low-Rank Textures, 2012, https://arxiv.org/abs/1205.5351
+412. Liu, Jingwei; Xu, Meizhi: Penalty Constraints and Kernelization of M-Estimation Based Fuzzy C-Means, 2012, https://arxiv.org/abs/1207.4417
+413. Tang, Zhongwei; von Gioi, Rafael Grompone; Monasse, Pascal; Morel, Jean-Michel: High-precision camera distortion measurements with a "calibration harp", 2012, https://arxiv.org/abs/1212.5656
+414. Huang, Chang; Zhu, Shenghuo; Yu, Kai: Large Scale Strongly Supervised Ensemble Metric Learning, with Applications to Face Verification and Retrieval, 2012, https://arxiv.org/abs/1212.6094
+415. Sankaranarayanan, Aswin C; Turaga, Pavan K; Chellappa, Rama; Baraniuk, Richard G: Compressive Acquisition of Dynamic Scenes, 2012, https://arxiv.org/abs/1201.4895
+416. Barbu, Andrei; Michaux, Aaron; Narayanaswamy, Siddharth; Siskind, Jeffrey Mark: Simultaneous Object Detection, Tracking, and Event Recognition, 2012, https://arxiv.org/abs/1204.2741
+417. Narayanaswamy, Siddharth; Barbu, Andrei; Siskind, Jeffrey Mark: Seeing Unseeability to See the Unseeable, 2012, https://arxiv.org/abs/1204.2801
+418. Burgi, Pierre-Yves; Yuille, Alan L.; Grzywacz, Norberto M.: Probabilistic Motion Estimation Based on Temporal Coherence, 2012, https://arxiv.org/abs/1201.1216
+419. Vitanyi, P. M. B.: Information Distance: New Developments, 2012, https://arxiv.org/abs/1201.1221
+420. Gebreyohannes, Tina; Kim, Dong-Yoon: Adaptive Noise Reduction Scheme for Salt and Pepper, 2012, https://arxiv.org/abs/1201.2050
+421. Mayiami, Mahmoud Ramezani; Seyfe, Babak: Nonparametric Sparse Representation, 2012, https://arxiv.org/abs/1201.2843
+422. Qiyang, Zhao: NegCut: Automatic Image Segmentation based on MRF-MAP, 2012, https://arxiv.org/abs/1201.2905
