@@ -1,459 +1,459 @@
 Image Credits for montage and t-SNE
 * 4x4 random montage
-Ribas, Ignasi; Jordi, Carme; Torra, Jordi: CD Tau: a detached eclipsing binary with a solar-mass companion, 1999, https://arxiv.org/abs/astro-ph/9905110
-Tawfik, Abdel Nasser; Diab, Abdel Magied: Generalized Uncertainty Principle and Recent Cosmic Inflation Observations, 2014, https://arxiv.org/abs/1410.7966
-Martin, A. D.; Roberts, R. G.; Stirling, W. J.; Thorne, R. S.: Uncertainties of predictions from parton distributions. I: experimental errors, 2002, https://arxiv.org/abs/hep-ph/0211080
-Zhou, Lifeng; Tokekar, Pratap: An Approximation Algorithm for Risk-averse Submodular Optimization, 2018, https://arxiv.org/abs/1807.09358
-Focardi, M.; Di Giorgio, A. M.; Farina, M.; Pancrazzi, M.; Ottensamer, R.; Lim, T. L.; Pezzuto, S.; Micela, G.; Pace, E.: EChO Payload electronics architecture and SW design, 2014, https://arxiv.org/abs/1401.2977
-Chulaevsky, Victor: Localization with Less Larmes: Simply MSA, 2008, https://arxiv.org/abs/0812.2634
-Howlett, Cullan; Manera, Marc; Percival, Will J.: L-PICOLA: A parallel code for fast dark matter simulation, 2015, https://arxiv.org/abs/1506.03737
-Muehlbacher, Lothar; Ankerhold, Joachim: Path-integral Monte-Carlo simulations for electronic dynamics on molecular chains: II. Transport across impurities, 2004, https://arxiv.org/abs/cond-mat/0412562
-Ananikian, N.; Artuso, R.; Chakhmakhchyan, L.: Superstable cycles for antiferromagnetic Q-state Potts and three-site interaction Ising models on recursive lattices, 2013, https://arxiv.org/abs/1307.6038
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Liu, Hao; Li, Ti-Pei: Systematic Distortion in Cosmic Microwave Background Maps, 2008, https://arxiv.org/abs/0809.4160
-Albarelli, Francesco; Rossi, Matteo A. C.; Paris, Matteo G. A.; Genoni, Marco G.: Ultimate limits for quantum magnetometry via time-continuous measurements, 2017, https://arxiv.org/abs/1706.00485
-Ellis, John; Mavromatos, Nick E.: Inflation induced by Gravitino Condensation in Supergravity, 2013, https://arxiv.org/abs/1308.1906
-Xiangrong Zhu for the ALICE Collaboration, : Two-particle correlations in pp and Pb-Pb collisions with ALICE, 2013, https://arxiv.org/abs/1311.2394
-Abolfath, M.; MacDonald, A. H.; Radzihovsky, L.: Critical Currents of Ideal Quantum Hall Superfluids, 2003, https://arxiv.org/abs/cond-mat/0305295
-Dudík, J.; Zuccarello, F. P.; Aulanier, G.; Schmieder, B.; Démoulin, P.: Expanding and Contracting Coronal Loops as Evidence of Vortex Flows Induced by Solar Eruptions, 2017, https://arxiv.org/abs/1706.04783
+1. Ribas, Ignasi; Jordi, Carme; Torra, Jordi: CD Tau: a detached eclipsing binary with a solar-mass companion, 1999, https://arxiv.org/abs/astro-ph/9905110
+2. Tawfik, Abdel Nasser; Diab, Abdel Magied: Generalized Uncertainty Principle and Recent Cosmic Inflation Observations, 2014, https://arxiv.org/abs/1410.7966
+3. Martin, A. D.; Roberts, R. G.; Stirling, W. J.; Thorne, R. S.: Uncertainties of predictions from parton distributions. I: experimental errors, 2002, https://arxiv.org/abs/hep-ph/0211080
+4. Zhou, Lifeng; Tokekar, Pratap: An Approximation Algorithm for Risk-averse Submodular Optimization, 2018, https://arxiv.org/abs/1807.09358
+5. Focardi, M.; Di Giorgio, A. M.; Farina, M.; Pancrazzi, M.; Ottensamer, R.; Lim, T. L.; Pezzuto, S.; Micela, G.; Pace, E.: EChO Payload electronics architecture and SW design, 2014, https://arxiv.org/abs/1401.2977
+6. Chulaevsky, Victor: Localization with Less Larmes: Simply MSA, 2008, https://arxiv.org/abs/0812.2634
+7. Howlett, Cullan; Manera, Marc; Percival, Will J.: L-PICOLA: A parallel code for fast dark matter simulation, 2015, https://arxiv.org/abs/1506.03737
+8. Muehlbacher, Lothar; Ankerhold, Joachim: Path-integral Monte-Carlo simulations for electronic dynamics on molecular chains: II. Transport across impurities, 2004, https://arxiv.org/abs/cond-mat/0412562
+9. Ananikian, N.; Artuso, R.; Chakhmakhchyan, L.: Superstable cycles for antiferromagnetic Q-state Potts and three-site interaction Ising models on recursive lattices, 2013, https://arxiv.org/abs/1307.6038
+10. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+11. Liu, Hao; Li, Ti-Pei: Systematic Distortion in Cosmic Microwave Background Maps, 2008, https://arxiv.org/abs/0809.4160
+12. Albarelli, Francesco; Rossi, Matteo A. C.; Paris, Matteo G. A.; Genoni, Marco G.: Ultimate limits for quantum magnetometry via time-continuous measurements, 2017, https://arxiv.org/abs/1706.00485
+13. Ellis, John; Mavromatos, Nick E.: Inflation induced by Gravitino Condensation in Supergravity, 2013, https://arxiv.org/abs/1308.1906
+14. Xiangrong Zhu for the ALICE Collaboration, : Two-particle correlations in pp and Pb-Pb collisions with ALICE, 2013, https://arxiv.org/abs/1311.2394
+15. Abolfath, M.; MacDonald, A. H.; Radzihovsky, L.: Critical Currents of Ideal Quantum Hall Superfluids, 2003, https://arxiv.org/abs/cond-mat/0305295
+16. Dudík, J.; Zuccarello, F. P.; Aulanier, G.; Schmieder, B.; Démoulin, P.: Expanding and Contracting Coronal Loops as Evidence of Vortex Flows Induced by Solar Eruptions, 2017, https://arxiv.org/abs/1706.04783
 
 * 12x12 random montage
-Lazzati, D.; Morsony, B. J.; Margutti, R.; Begelman, M. C.: Photospheric emission as the dominant radiation mechanism in long-duration gamma-ray bursts, 2013, https://arxiv.org/abs/1301.3920
-Serpa, Nilo: New Lectures on Supergravity, 2011, https://arxiv.org/abs/1105.3213
-Burikham, Piyabut; Panpanich, Sirachak: Effects of Chameleon Scalar Field on Rotation Curves of the Galaxies, 2011, https://arxiv.org/abs/1103.1198
-Bass, S. D.; De Roeck, A.: The Spin Structure of the Proton and Polarized Collider Physics, 2001, https://arxiv.org/abs/hep-ph/0111377
-Adel, Tameem; Wong, Alexander; Stashuk, Daniel: A Weakly Supervised Learning Approach based on Spectral Graph-Theoretic Grouping, 2015, https://arxiv.org/abs/1508.00507
-Phillips, M. M.; Simon, Joshua D.; Morrell, Nidia; Burns, Christopher R.; Cox, Nick L. J.; Foley, Ryan J.; Karakas, Amanda I.; Patat, F.; Sternberg, A.; Williams, R. E.; Gal-Yam, A.; Hsiao, E. Y.; Leonard, D. C.; Persson, Sven E.; Stritzinger, Maximilian; Thompson, I. B.; Campillay, Abdo; Contreras, Carlos; Folatelli, Gastón; Freedman, Wendy L.; Hamuy, Mario; Roth, Miguel; Shields, Gregory A.; Suntzeff, Nicholas B.; Chomiuk, Laura; Ivans, Inese I.; Madore, Barry F.; Penprase, B. E.; Perley, Daniel; Preston, G. Pignata G.; Soderberg, Alicia M.: On the Source of the Dust Extinction in Type Ia Supernovae and the Discovery of Anomalously Strong Na I Absorption, 2013, https://arxiv.org/abs/1311.0147
-Ghorbani, Karim; Khalkhali, Leila: Mono-Higgs signature in fermionic dark matter model, 2016, https://arxiv.org/abs/1608.04559
-Lu, Jingwei; Zhuang, Hao; Kang, Ilgweon; Chen, Pengwen; Cheng, Chung-Kuan: ePlace-3D: Electrostatics based Placement for 3D-ICs, 2015, https://arxiv.org/abs/1512.08291
-Sanakoyeu, Artsiom; Bautista, Miguel A.; Ommer, Björn: Deep Unsupervised Learning of Visual Similarities, 2018, https://arxiv.org/abs/1802.08562
-de Freitas, Rodolfo C.; Velten, Hermano: Non-linear clustering during the BEC dark matter phase transition, 2015, https://arxiv.org/abs/1503.01877
-Abbas, Halim; Garberson, Ford; Glover, Eric; Wall, Dennis P: Machine learning approach for early detection of autism by combining questionnaire and home video screening, 2017, https://arxiv.org/abs/1703.06076
-Tsurkan, V.; Zherlitsyn, S.; Yasin, S.; Felea, V.; Skourski, Y.; Deisenhofer, J.; von Nidda, H. -A. Krug; Wosnitza, J.; Loidl, A.: Unconventional magnetostructural transition in CoCr2O4 at high magnetic fields, 2013, https://arxiv.org/abs/1302.5605
-Swift, Damian C.; Kraus, Richard G.: On the Properties of Plastic Ablators in Laser-Driven Material Dynamics Experiments, 2007, https://arxiv.org/abs/0712.1203
-Guichon, P. A. M.; Mossé, L.; Vanderhaeghen, M.: Pion production in deeply virtual Compton scattering, 2003, https://arxiv.org/abs/hep-ph/0305231
-Kibiłda, Jacek; Kaminski, Nicholas J.; DaSilva, Luiz A.: Radio Access Network and Spectrum Sharing in Mobile Networks: A Stochastic Geometry Perspective, 2016, https://arxiv.org/abs/1604.06588
-Frederix, Rikkert; Frixione, Stefano; Hirschi, Valentin; Pagani, Davide; Shao, Hua-Sheng; Zaro, Marco: The complete NLO corrections to dijet hadroproduction, 2016, https://arxiv.org/abs/1612.06548
-Hansen, Ursula Bengaard; Bertelsen, Mads; Knudsen, Erik Bergbäck; Lefmann, Kim: Simulation of waviness in neutron guides, 2016, https://arxiv.org/abs/1612.03763
-Roca-Maza, X.; Pozzi, G.; Brenna, M.; Mizuyama, K.; Colò, G.: Low-lying dipole response: isospin character and collectivity in ${}^{68}$Ni, ${}^{132}$Sn and ${}^{208}$Pb, 2011, https://arxiv.org/abs/1112.0190
-Wang, Hui; Huang, Jinyuan; Xu, Xiaomin; Xiao, Yanghua; Wang, Wei: Robustness of Complex Networks against Attacks Guided by Damage, 2011, https://arxiv.org/abs/1105.0275
-Paikan, Ali; Tikhanoff, Vadim; Metta, Giorgio; Natale, Lorenzo: Enhancing software module reusability using port plug-ins: an experiment with the iCub robot, 2014, https://arxiv.org/abs/1411.1102
-Brandenburg, A.; Dobler, W.; Subramanian, K.: Magnetic helicity in stellar dynamos: new numerical experiments, 2001, https://arxiv.org/abs/astro-ph/0111567
-Rizzo, Thomas G.: Tests of Low Scale Quantum Gravity in $e^-e^-$ and $\gamma \gamma$ Collisions, 1999, https://arxiv.org/abs/hep-ph/9907401
-"Moccia, Massimo; Castaldi, Giuseppe; D'Alterio, Giuliana; Feo, Maurizio; Vitiello, Roberto; Galdi, Vincenzo;: Transformation-Optics-Based Design of a Metamaterial Radome for Extending the Scanning Angle of a Phased Array Antenna, 2017, https://arxiv.org/abs/1703.03793
-Manna, S. S.; Chakrabarti, A. D.; Cafiero, R.: Critical States in a Dissipative Sandpile Model, 1999, https://arxiv.org/abs/cond-mat/9909065
-Rorai, Alberto; Hennawi, Joseph F.; Oñorbe, Jose; White, Martin; Prochaska, J. Xavier; Kulkarni, Girish; Walther, Michael; Lukić, Zarija; Lee, Khee-Gan: Measurement of the small-scale structure of the intergalactic medium using close quasar pairs, 2017, https://arxiv.org/abs/1704.08366
-Cellucci, Daniel; Cheung, Kenneth C.: Evaluation of Cellular Solids Derived from Triply Periodic Minimal Surfaces, 2015, https://arxiv.org/abs/1512.07512
-Richard, Samuel; Nelson, Richard P.; Umurhan, Orkan M.: Vortex formation in protoplanetary discs induced by the vertical shear instability, 2016, https://arxiv.org/abs/1601.01921
-Liu, Chenxu; Dutt, M. V. Gurudev; Pekker, David: Measurement based 2-qubit unitary gates for pairs of Nitrogen-Vacancy centers in diamond, 2018, https://arxiv.org/abs/1808.10015
-MirMostafaee, S. M. T. K.; Amini, Morteza; Asgharzadeh, A.: Bayesian prediction of minimal repair times of a series system based on hybrid censored sample of components' lifetimes under Rayleigh distribution, 2015, https://arxiv.org/abs/1505.06417
-Ferrari, Luca Alberto Davide; Rossmanith, Carolin; Wirth, Benedikt: Phase field approximations of branched transportation problems, 2018, https://arxiv.org/abs/1805.11399
-Hlinka, Jaroslav; Hartman, David; Vejmelka, Martin; Novotná, Dagmar; Paluš, Milan: Non-linear dependence and teleconnections in climate data: sources, relevance, nonstationarity, 2012, https://arxiv.org/abs/1211.6688
-Sawant, Rahul; Rangwala, S. A.: Optical bistability enabled control of resonant light transmission for an atom-cavity system, 2015, https://arxiv.org/abs/1505.00105
-Yang, Yuan-Pei; Zhang, Bing: Extracting host galaxy dispersion measure and constraining cosmological parameters using fast radio burst data, 2016, https://arxiv.org/abs/1608.08154
-Staley, T. D.; Titterington, D. J.; Fender, R. P.; Swinbank, J. D.; van der Horst, A. J.; Rowlinson, A.; Scaife, A. M. M.; Grainge, K. J. B.; Pooley, G. G.: Automated rapid follow-up of Swift GRBs with AMI-LA, 2012, https://arxiv.org/abs/1211.3115
-Barbot, Thierry; Fillastre, François: Quasi-Fuchsian co-Minkowski manifolds, 2018, https://arxiv.org/abs/1801.10429
-Chang, Chi-Ming; Lin, Ying-Hsuan; Shao, Shu-Heng; Wang, Yifan; Yin, Xi: Topological Defect Lines and Renormalization Group Flows in Two Dimensions, 2018, https://arxiv.org/abs/1802.04445
-Zimnik, Samantha; Dickmann, Marcel; Hugenschmidt, Christoph: In-situ observation of temperature-dependent segregation of Ni adatoms on oriented Pd surfaces, 2017, https://arxiv.org/abs/1704.01966
-Lüscher, Martin: Topology, the Wilson flow and the HMC algorithm, 2010, https://arxiv.org/abs/1009.5877
-Leino, Viljami; Rummukainen, Kari; Tuominen, Kimmo: Slope of the beta function at the fixed point of SU(2) gauge theory with six or eight flavors, 2018, https://arxiv.org/abs/1804.02319
-Pasetto, Alice; Kraus, Alex; Mack, Karl-Heinz; Bruni, Gabriele; Carrasco-Gonzalez, Carlos: A study of a sample of high rotation measure AGNs through multifrequency single dish observations, 2015, https://arxiv.org/abs/1510.01136
-Feng, Shuai; Shao, Zheng-Yi; Shen, Shi-Yin; Argudo-Fernández, Maria; Wu, Hong; Lam, Man-I; Yang, Ming; Yuan, Fang-Ting: An Isolated Compact Galaxy Triplet, 2015, https://arxiv.org/abs/1512.02439
-Grant, Edward; Sahm, Stephan; Zabihi, Mariam; van Gerven, Marcel: Predicting and visualizing psychological attributions with a deep neural network, 2015, https://arxiv.org/abs/1512.01289
-Kamio, Suguru; Hara, Hirohisa; Watanabe, Tetsuya; Matsuzaki, Keiichi; Shibata, Kazunari; Culhane, Len; Warren, Harry: Velocity Structure of Jets in Coronal Hole, 2007, https://arxiv.org/abs/0711.2848
-ExHIC Collaboration, ; Cho, Sungtae; Hyodo, Tetsuo; Jido, Daisuke; Ko, Che Ming; Lee, Su Houng; Maeda, Saori; Miyahara, Kenta; Morita, Kenji; Nielsen, Marina; Ohnishi, Akira; Sekihara, Takayasu; Song, Taesoo; Yasui, Shigehiro; Yazaki, Koichi: Exotic Hadrons from Heavy Ion Collisions, 2017, https://arxiv.org/abs/1702.00486
-Iskrzynski, Mateusz; Kowalska, Kamila: Exact SU(5) Yukawa matrix unification in the General Flavour Violating MSSM, 2014, https://arxiv.org/abs/1412.8651
-Farrar, Glennys R.; Sutherland, Michael S.: Deflections of UHECRs in the Galactic magnetic field, 2017, https://arxiv.org/abs/1711.02730
-McJunkin, Matthew; France, Kevin; Schneider, P. C.; Herczeg, Gregory J.; Brown, Alexander; Hillenbrand, Lynne; Schindhelm, Eric; Edwards, Suzan: Direct Measurement of Interstellar Extinction Toward Young Stars Using Atomic Hydrogen Lyman-$\alpha$ Absorption, 2013, https://arxiv.org/abs/1312.1650
-Cloutier, R.; Astudillo-Defru, N.; Doyon, R.; Bonfils, X.; Almenara, J. M.; Benneke, B.; Bouchy, F.; Delfosse, X.; Ehrenreich, D.; Forveille, T.; Lovis, C.; Mayor, M.; Menou, K.; Murgas, F.; Pepe, F.; Rowe, J.; Santos, N. C.; Udry, S.; Wünsche, A.: Characterization of the K2-18 multi-planetary system with HARPS: A habitable zone super-Earth and discovery of a second, warm super-Earth on a non-coplanar orbit, 2017, https://arxiv.org/abs/1707.04292
-Shipman, Nicholas; Calatroni, Sergio; Jones, Roger M.; Wuensch, Walter: Measurement of the dynamic response of the CERN DC spark system and preliminary estimates of the breakdown turn-on time, 2012, https://arxiv.org/abs/1206.0573
-Batiz, Zoltan; Gross, Franz: Pole Term and Gauge Invariance in Deep Inelastic Scattering, 1998, https://arxiv.org/abs/nucl-th/9803053
-Gupta, Raj Kumar; Chia, Alex Yong-Sang; Rajan, Deepu; Zhiyong, Huang: A learning-based approach for automatic image and video colorization, 2017, https://arxiv.org/abs/1704.04610
-Moreno-Bromberg, Santiago; Taschini, Luca: Pollution permits, Strategic Trading and Dynamic Technology Adoption, 2011, https://arxiv.org/abs/1103.2914
-Likhoded, A. K.; Slabospitsky, S. R.: Charmed hadrons production in high-energy $\Sigma^-$ beam, 2000, https://arxiv.org/abs/hep-ph/0002202
-Christou, A. A.; Kwiatkowski, T.; Butkiewicz, M.; Gulbis, A.; Hergenrother, C. W.; Duddy, S.; Fitzsimmons, A.: Physical and dynamical characterisation of low Delta-V NEA (190491) 2000 FJ10, 2012, https://arxiv.org/abs/1210.3486
-Bhaumik, Sourjya; Chuck, David; Narlikar, Girija; Wilfong, Gordon: Energy-Efficient Design and Optimization of Wireline Access Networks, 2011, https://arxiv.org/abs/1101.2717
-Zhang, Shaobo; Xu, Ye; Yang, Ji: Molecular Clouds in the North American and Pelican Nebulae: Structures, 2013, https://arxiv.org/abs/1312.3079
-Rasskazov, Alexander; Merritt, David: Evolution Of Binary Supermassive Black Holes In Rotating Nuclei, 2016, https://arxiv.org/abs/1610.08555
-Zhou, Xiaowei; Yang, Can; Yu, Weichuan: Moving Object Detection by Detecting Contiguous Outliers in the Low-Rank Representation, 2011, https://arxiv.org/abs/1109.0882
-Radicchi, Filippo; Castellano, Claudio: Leveraging percolation theory to single out influential spreaders in networks, 2016, https://arxiv.org/abs/1605.07041
-Bornyakov, V. G.; Kononenko, A. G.: Abelian monopoles in finite temperature lattice SU(2) gluodynamics: first study with improved action, 2011, https://arxiv.org/abs/1111.0169
-Gamiz, E.; Bailey, J. A.; Bazavov, A.; Bernard, C.; Bouchard, C.; DeTar, C.; Du, D.; El-Khadra, A. X.; Foley, J.; Freeland, E. D.; Gottlieb, Steven; Heller, U. M.; Kim, J.; Kronfeld, A. S.; Laiho, J.; Levkova, L.; Mackenzie, P. B.; Neil, E. T.; Oktay, M. B.; Qiu, Si-Wei; Simone, J. N.; Sugar, R.; Toussaint, D.; Van de Water, R. S.; Zhou, R.: Kaon semileptonic decay form factors with HISQ valence quarks, 2012, https://arxiv.org/abs/1211.0751
-Cho, Inyong; Chun, Eung Jin; Kim, Hang Bae; Kim, Yoonbai: String Cosmology of the D-brane Universe, 2006, https://arxiv.org/abs/hep-th/0603174
-Ghosh, Premomoy; Muhuri, Sanjib: Do we see change of phase in proton-proton collisions at the Large Hadron Collider?, 2014, https://arxiv.org/abs/1406.5811
-Huang, Qingqing; Roozbehani, Mardavij; Dahleh, Munther A: Efficiency-Risk Tradeoffs in Dynamic Oligopoly Markets - with application to electricity markets, 2012, https://arxiv.org/abs/1209.0229
-Bernini, A.; Disanto, F.; Pinzani, R.; Rinaldi, S.: Permutations defining convex permutominoes, 2007, https://arxiv.org/abs/0711.0582
-Inamdar, Niraj K.; Binzel, Richard P.; Hong, Jae Sub; Allen, Branden; Grindlay, Jonathan; Masterson, Rebecca A.: Modeling the Expected Performance of the REgolith X-ray Imaging Spectrometer (REXIS), 2014, https://arxiv.org/abs/1410.3051
-Glossop, Matthew T.; Ingersent, Kevin: Kondo physics and dissipation: A numerical renormalization-group approach to Bose-Fermi Kondo models, 2006, https://arxiv.org/abs/cond-mat/0609589
-Richard, Johan; Stark, Daniel P.; Ellis, Richard S.; George, Matthew R.; Egami, Eiichi; Kneib, Jean-Paul; Smith, Graham P.: A Hubble & Spitzer Space Telescope Survey for Gravitationally-Lensed Galaxies: Further Evidence for a Significant Population of Low Luminosity Galaxies beyond Redshift Seven, 2008, https://arxiv.org/abs/0803.4391
-Funakubo, K.; Kakuto, A.; Otsuki, S.; Takenaga, K.; Toyoda, F.: Profile of the Electroweak Bubble Wall, 1996, https://arxiv.org/abs/hep-ph/9609317
-Ota, Naomi; Hattori, Makoto; Pointecouteau, Etienne; Mitsuda, Kazuhisa: Chandra Spectroscopy and Mass Estimation of the Lensing Cluster of Galaxies CL0024+17, 2002, https://arxiv.org/abs/astro-ph/0209226
-Liška, Martin: Optimizing large applications, 2014, https://arxiv.org/abs/1403.6997
-Li, Jin: Radiative Penguin decays at Belle, 2008, https://arxiv.org/abs/0810.3069
-Priest, E. R.: Hinode 7: Conference Summary and Future Suggestions, 2014, https://arxiv.org/abs/1405.3523
-Samokhin, K. V.; Truong, B. P.: Fulde-Ferrell-Larkin-Ovchinnikov superconductors near a surface, 2018, https://arxiv.org/abs/1807.05261
-Chow, Siu-Fai; Wick, Stuart D.; Riecke, Hermann: Neurogenesis Drives Stimulus Decorrelation in a Model of the Olfactory Bulb, 2012, https://arxiv.org/abs/1202.2148
-Lee, Juhee; Mueller, Peter; Sengupta, Subhajit; Gulukota, Kamalakar; Ji, Yuan: Bayesian Inference for Tumor Subclones Accounting for Sequencing and Structural Variants, 2014, https://arxiv.org/abs/1409.7158
-Simionescu, A.; Roediger, E.; Nulsen, P. E. J.; Brüggen, M.; Forman, W. R.; Böhringer, H.; Werner, N.; Finoguenov, A.: The large-scale shock in the cluster of galaxies Hydra A, 2008, https://arxiv.org/abs/0810.0271
-Doussal, Pierre Le; Wiese, Kay Joerg: Avalanche dynamics of elastic interfaces, 2013, https://arxiv.org/abs/1302.4316
-Gugushvili, Shota; van der Meulen, Frank; Schauer, Moritz; Spreij, Peter: Bayesian wavelet de-noising with the caravan prior, 2018, https://arxiv.org/abs/1810.07668
-Heavy Flavor Averaging Group, ; Amhis, Y.; Banerjee, Sw.; Ben-Haim, E.; Blyth, S.; Bozek, A.; Bozzi, C.; Carbone, A.; Chistov, R.; Chrząszcz, M.; Cibinetto, G.; Dingfelder, J.; Gelb, M.; Gersabeck, M.; Gershon, T.; Gibbons, L.; Golob, B.; Harr, R.; Hayasaka, K.; Hayashii, H.; Kuhr, T.; Leroy, O.; Lusiani, A.; Miyabayashi, K.; Naik, P.; Nishida, S.; Campos, A. Oyanguren; Patel, M.; Pedrini, D.; Petrič, M.; Rama, M.; Roney, M.; Rotondo, M.; Schneider, O.; Schwanda, C.; Schwartz, A. J.; Shwartz, B.; Smith, J. G.; Tesarek, R.; Trabelsi, K.; Urquijo, P.; Van Kooten, R.; Zupanc, A.: Averages of $b$-hadron, $c$-hadron, and $\tau$-lepton properties as of summer 2014, 2014, https://arxiv.org/abs/1412.7515
-Banerji, Manda; McMahon, R. G.; Willott, C. J.; Geach, J. E.; Harrison, C. M.; Alaghband-Zadeh, S.; Alexander, D. M.; Bourne, N.; Coppin, K. E. K.; Dunlop, J. S.; Farrah, D.; Jarvis, M.; Michalowski, M. J.; Page, M.; Smith, D. J. B.; Swinbank, A. M.; Symeonidis, M.; Van der Werf, P. P.: Cold Dust Emission from X-ray AGN in the SCUBA-2 Cosmology Legacy Survey: Dependence on Luminosity, Obscuration & AGN Activity, 2015, https://arxiv.org/abs/1509.00018
-Oshima, Kazuto: Simple procedure for classical signal-procession in cluster-state quantum computation, 2009, https://arxiv.org/abs/0909.5533
-Hao, Yue; Litvinenko, Vladimir N.; Ptitsyn, Vadim: Beam-beam Effects of 'Gear-changing' in Ring-Ring Colliders, 2013, https://arxiv.org/abs/1309.1739
-Gao, Chao; Harle, Robert: Semi-automated Signal Surveying Using Smartphones and Floorplans, 2017, https://arxiv.org/abs/1711.06503
-Shalev-Shwartz, Shai; Zhang, Tong: Stochastic Dual Coordinate Ascent Methods for Regularized Loss Minimization, 2012, https://arxiv.org/abs/1209.1873
-Zenger, Christan; Vogt, Hendrik; Zimmer, Jan; Sezgin, Aydin; Paar, Christof: The Passive Eavesdropper Affects my Channel: Secret-Key Rates under Real-World Conditions (Extended Version), 2017, https://arxiv.org/abs/1701.03904
-Dominik, M.: Adaptive Contouring -- an efficient way to calculate microlensing light curves of extended sources, 2007, https://arxiv.org/abs/astro-ph/0703305
-Viswanathan, Vaisagh; Lee, Chong Eu; Lees, Michael Harold; Cheong, Siew Ann; Sloot, Peter M. A.: Quantitative Comparison Between Crowd Models for Evacuation Planning and Evaluation, 2014, https://arxiv.org/abs/1401.0366
-Sicilia, Alberto; Arenzon, Jeferson J.; Bray, Alan J.; Cugliandolo, Leticia F.: Domain growth morphology in curvature driven two dimensional coarsening, 2007, https://arxiv.org/abs/0706.4314
-Keceli, Feyza; Inan, Inanc; Ayanoglu, Ender: Fair and Efficient TCP Access in the IEEE 802.11 Infrastructure Basic Service Set, 2008, https://arxiv.org/abs/0806.1089
-Lazar, M.: Fast magnetization in counterstreaming plasmas with temperature anisotropies, 2007, https://arxiv.org/abs/0711.2385
-Boden, Hans U.; Chrisman, Micah; Gaudreau, Robin: Signature and concordance of virtual knots, 2017, https://arxiv.org/abs/1708.08090
-Herty, Michael; Puppo, Gabriella; Roncoroni, Sebastiano; Visconti, Giuseppe: The BGK approximation of kinetic models for traffic, 2018, https://arxiv.org/abs/1812.11056
-Tan, Chenhao; Lee, Lillian: All Who Wander: On the Prevalence and Characteristics of Multi-community Engagement, 2015, https://arxiv.org/abs/1503.01180
-Blaes, Omer; Krolik, Julian H.; Hirose, Shigenobu; Shabaltas, Natalia: Dissipation and Vertical Energy Transport in Radiation-Dominated Accretion Disks, 2011, https://arxiv.org/abs/1103.5052
-Clavier, Pierre J.: Analytical and Geometric approches of non-perturbative Quantum Field Theories, 2015, https://arxiv.org/abs/1511.09190
-Xilouris, E. M.; Tabatabaei, F. S.; Boquien, M.; Kramer, C.; Buchbender, C.; Bertoldi, F.; Anderl, S.; Braine, J.; Verley, S.; Relano, M.; Quintana-Lacaci, G.; Akras, S.; Beck, R.; Calzetti, D.; Combes, F.; Gonzalez, M.; Gratier, P.; Henkel, C.; Israel, F.; Koribalski, B.; Lord, S.; Mookerjea, B.; Rosolowsky, E.; Stacey, G.; Tilanus, R. P. J.; van der Tak, F.; van der Werf, P.: Cool and warm dust emission from M33 (HerM33es), 2012, https://arxiv.org/abs/1205.1351
-"West, Nathan E; O'Shea, Timothy J.;: Deep Architectures for Modulation Recognition, 2017, https://arxiv.org/abs/1703.09197
-Schott, Matthias; Dunford, Monica: Review of single vector boson production in pp collisions at $\sqrt{s} = 7$ TeV, 2014, https://arxiv.org/abs/1405.1160
-Archer, Thomas; Pemmaraju, Chaitanya Das; Sanvito, Stefano: Magnetic interaction of Co ions near the {10\bar{1}0} ZnO surface, 2010, https://arxiv.org/abs/1003.2576
-Valero, Carlos: Maxwell's Equations, The Euler Index and Morse Theory, 2013, https://arxiv.org/abs/1311.0569
-Sekeh, Salimeh Yasaei; Oselio, Brandon; Hero, Alfred O.: A Dimension-Independent discriminant between distributions, 2018, https://arxiv.org/abs/1802.04497
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Basat, Ran Ben; Einziger, Gil; Friedman, Roy; Kassner, Yaron: Randomized Admission Policy for Efficient Top-k and Frequency Estimation, 2016, https://arxiv.org/abs/1612.02962
-Lorenz, T.; Ammerahl, U.; Ziemes, R.; Buechner, B.; Revcolevschi, A.; Dhalenne, G.: Thermodynamic Properties of the Incommensurate Phase of CuGeO_3, 1996, https://arxiv.org/abs/cond-mat/9610163
-Billot, Nicolas: Calibrating a novel type of bolometer arrays for the Herschel/PACS Photometer, 2008, https://arxiv.org/abs/0808.3958
-Enoki, Motohiro; Nagashima, Masahiro: The Effect of Orbital Eccentricity on Gravitational Wave Background Radiation from Supermassive Black Hole Binaries, 2006, https://arxiv.org/abs/astro-ph/0609377
-Yang, S. -R. Eric; Cha, Min-Chul; Han, Jung Hoon: Numerical Test of Disk Trial Wave function for Half-Filled Landau Level, 2000, https://arxiv.org/abs/cond-mat/0006434
-Motta, S.; Muñoz-Darias, T.; Belloni, T.: On the outburst evolution of H1743-322: a 2008/2009 comparison, 2010, https://arxiv.org/abs/1006.4773
-Roediger, E.; Kraft, R. P.; Nulsen, P.; Churazov, E.; Forman, W.; Brueggen, M.; Kokotanekova, R.: Viscous Kelvin-Helmholtz instabilities in highly ionised plasmas, 2013, https://arxiv.org/abs/1309.2635
-Cammarota, Valentina; Marinucci, Domenico; Wigman, Igor: On the distribution of the critical values of random spherical harmonics, 2014, https://arxiv.org/abs/1409.1364
-Körtgen, Bastian; Bovino, Stefano; Schleicher, Dominik R. G.; Stutz, Amelia; Banerjee, Robi; Giannetti, Andrea; Leurini, Silvia: Fast deuterium fractionation in magnetized and turbulent filaments, 2017, https://arxiv.org/abs/1709.04013
-Long, Gucan; Kneip, Laurent; Alvarez, Jose M.; Li, Hongdong: Learning Image Matching by Simply Watching Video, 2016, https://arxiv.org/abs/1603.06041
-Espinoza, Néstor; Jordán, Andrés: Limb darkening and exoplanets: testing stellar model atmospheres and identifying biases in transit parameters, 2015, https://arxiv.org/abs/1503.07020
-Lokas, Ewa L.; Ebrova, Ivana; del Pino, Andres; Sybilska, Agnieszka; Athanassoula, E.; Semczuk, Marcin; Gajda, Grzegorz; Fouquet, Sylvain: Tidally induced bars of galaxies in clusters, 2016, https://arxiv.org/abs/1601.07433
-Zhang, Xiaoshuai; Lu, Yiping; Liu, Jiaying; Dong, Bin: Dynamically Unfolding Recurrent Restorer: A Moving Endpoint Control Method for Image Restoration, 2018, https://arxiv.org/abs/1805.07709
-Bertone, V.; Carrasco, N.; Ciuchini, M.; Dimopoulos, P.; Frezzotti, R.; Gimenez, V.; Lubicz, V.; Martinelli, G.; Mescia, F.; Papinutto, M.; Rossi, G. C.; Silvestrini, L.; Simula, S.; Tarantino, C.; Vladikas, A.; Collaboration, for the ETM: Kaon Mixing Beyond the SM from Nf=2 tmQCD and model independent constraints from the UTA, 2012, https://arxiv.org/abs/1207.1287
-Bronnikov, Kirill; Dymnikova, Irina; Galaktionov, Evgeny: Multi-horizon spherically symmetric spacetimes with several scales of vacuum energy, 2012, https://arxiv.org/abs/1204.0534
-Ledwig, Tim; Kim, Hyun-Chul: Transverse strange quark spin structure of the nucleon, 2011, https://arxiv.org/abs/1107.4952
-Udagedara, Indika; Helenbrook, Brian; Luttman, Aaron; Catenacci, Jared: Improved Probabilistic Principal Component Analysis for Application to Reduced Order Modeling, 2017, https://arxiv.org/abs/1702.01236
-Moustakas, John; Kennicutt,, Robert C.; Tremonti, Christy A.: Optical Star-Formation Rate Indicators, 2005, https://arxiv.org/abs/astro-ph/0511730
-Shi, Jiaxin; Sun, Shengyang; Zhu, Jun: A Spectral Approach to Gradient Estimation for Implicit Distributions, 2018, https://arxiv.org/abs/1806.02925
-Bücher, Axel; Dette, Holger: Multiplier bootstrap of tail copulas with applications, 2011, https://arxiv.org/abs/1102.0110
-Li, Yao Dong; Lu, Yuan-Ming; Chen, Gang: The Spinon Fermi Surface U(1) Spin Liquid in a Spin-Orbit-Coupled Triangular Lattice Mott Insulator YbMgGaO4, 2016, https://arxiv.org/abs/1612.03447
-Zentner, Raphael: A class of knots with simple $SU(2)$ representations, 2015, https://arxiv.org/abs/1501.02504
-Wang, M.; Wang, S.; Zhang, Q.; Chan, C. T.; Chan, H. B.: Measurement of mechanical deformations induced by enhanced electromagnetic stress on a parallel metallic-plate system, 2018, https://arxiv.org/abs/1804.08260
-Sefat, Athena S.; Singh, David J.; Garlea, V. Ovidiu; Zuev, Yuri L.; McGuire, Michael A.; VanBebber, Lindsay; Sales, Brian C.: Control of Correlations in Sr4V2O6Fe2As2 by Chemical Stoichiometry, 2010, https://arxiv.org/abs/1009.4911
-Wang, Xuelei; Zeng, Qingguo; Jin, Zhenlan; Liu, Suzhen: The associated productions of the new gauge boson $B_{H}$ in the littlest Higgs model with a SM gauge boson via $e^+e^-$ collision, 2007, https://arxiv.org/abs/hep-ph/0702064
-Sisakyan, Narek; Malakyan, Yuri: Quantum Theory for Generation of Nonclassical Photon Pairs by a Medium with Coherent Atomic Memory, 2005, https://arxiv.org/abs/quant-ph/0503186
-Kervella, Pierre; Mérand, Antoine; Gallenne, Alexandre: The circumstellar envelopes of the Cepheids L Car and RS Pup - Comparative study in the infrared with Spitzer, VLT/VISIR and VLTI/MIDI, 2009, https://arxiv.org/abs/0902.1588
-Fegan, S. J.; Sanchez, D.; Collaboration, Fermi LAT; :, ; Abdo, A. A.: Fermi observations of TeV-selected AGN, 2009, https://arxiv.org/abs/0910.4881
-Khurshudyan, M.; Pasqua, A.; Sadeghi, J.; Farahani, H.: Quintessence Cosmology with an Effective $\Lambda$-Term in Lyra Manifold, 2014, https://arxiv.org/abs/1402.0118
-Zhang, Cheng; Ek, Carl Henrik; Damianou, Andreas; Kjellstrom, Hedvig: Factorized Topic Models, 2013, https://arxiv.org/abs/1301.3461
-Frassek, Rouven: Q-operators, Yangian invariance and the quantum inverse scattering method, 2014, https://arxiv.org/abs/1412.3339
-Goldfarb, Donald; Qin, Zhiwei: Robust Low-rank Tensor Recovery: Models and Algorithms, 2013, https://arxiv.org/abs/1311.6182
-Gull, Emanuel; Ferrero, Michel; Parcollet, Olivier; Georges, Antoine; Millis, Andrew J.: Momentum space anisotropy and pseudogaps: a comparative cluster dynamical mean field analysis of the doping-driven metal-insulator transition in the two dimensional Hubbard model, 2010, https://arxiv.org/abs/1007.2592
-Deng, Haiyun; Liu, Hairong; Tian, Long: Critical points of solutions for mean curvature equation in strictly convex and nonconvex domains, 2017, https://arxiv.org/abs/1712.08431
-Biondini, Gino; Li, Sitai; Mantzavinos, Dionyssis; Trillo, Stefano: Universal behavior of modulationally unstable media, 2017, https://arxiv.org/abs/1710.05068
-Kajdanowicz, Tomasz; Michalski, Radosław; Musiał, Katarzyna; Kazienko, Przemysław: Learning in Unlabeled Networks - An Active Learning and Inference Approach, 2015, https://arxiv.org/abs/1510.01270
-Soheili, Ali Reza; Stockie, John M.: A moving mesh method with variable relaxation time, 2006, https://arxiv.org/abs/math/0602376
-von Hippel, Georg; Rae, Thomas D.; Shintani, Eigo; Wittig, Hartmut: Nucleon matrix elements from lattice QCD with all-mode-averaging and a domain-decomposed solver: an exploratory study, 2016, https://arxiv.org/abs/1605.00564
-Wong, K. Y. Michael; Saad, D.: Inference and Optimization of Real Edges on Sparse Graphs - A Statistical Physics Perspective, 2006, https://arxiv.org/abs/cond-mat/0609367
-Vollmer, B.; Krichbaum, T. P.; Angelakis, E.; Kovalev, Y. Y.: Quasi-simultaneous multi-frequency observations of inverted-spectrum GPS candidate sources, 2008, https://arxiv.org/abs/0806.3694
-Ryskin, M. G.; Drukarev, E. G.; Sadovnikova, V. A.: Nucleon QCD sum rules in instanton medium, 2013, https://arxiv.org/abs/1312.1449
+1. Lazzati, D.; Morsony, B. J.; Margutti, R.; Begelman, M. C.: Photospheric emission as the dominant radiation mechanism in long-duration gamma-ray bursts, 2013, https://arxiv.org/abs/1301.3920
+2. Serpa, Nilo: New Lectures on Supergravity, 2011, https://arxiv.org/abs/1105.3213
+3. Burikham, Piyabut; Panpanich, Sirachak: Effects of Chameleon Scalar Field on Rotation Curves of the Galaxies, 2011, https://arxiv.org/abs/1103.1198
+4. Bass, S. D.; De Roeck, A.: The Spin Structure of the Proton and Polarized Collider Physics, 2001, https://arxiv.org/abs/hep-ph/0111377
+5. Adel, Tameem; Wong, Alexander; Stashuk, Daniel: A Weakly Supervised Learning Approach based on Spectral Graph-Theoretic Grouping, 2015, https://arxiv.org/abs/1508.00507
+6. Phillips, M. M.; Simon, Joshua D.; Morrell, Nidia; Burns, Christopher R.; Cox, Nick L. J.; Foley, Ryan J.; Karakas, Amanda I.; Patat, F.; Sternberg, A.; Williams, R. E.; Gal-Yam, A.; Hsiao, E. Y.; Leonard, D. C.; Persson, Sven E.; Stritzinger, Maximilian; Thompson, I. B.; Campillay, Abdo; Contreras, Carlos; Folatelli, Gastón; Freedman, Wendy L.; Hamuy, Mario; Roth, Miguel; Shields, Gregory A.; Suntzeff, Nicholas B.; Chomiuk, Laura; Ivans, Inese I.; Madore, Barry F.; Penprase, B. E.; Perley, Daniel; Preston, G. Pignata G.; Soderberg, Alicia M.: On the Source of the Dust Extinction in Type Ia Supernovae and the Discovery of Anomalously Strong Na I Absorption, 2013, https://arxiv.org/abs/1311.0147
+7. Ghorbani, Karim; Khalkhali, Leila: Mono-Higgs signature in fermionic dark matter model, 2016, https://arxiv.org/abs/1608.04559
+8. Lu, Jingwei; Zhuang, Hao; Kang, Ilgweon; Chen, Pengwen; Cheng, Chung-Kuan: ePlace-3D: Electrostatics based Placement for 3D-ICs, 2015, https://arxiv.org/abs/1512.08291
+9. Sanakoyeu, Artsiom; Bautista, Miguel A.; Ommer, Björn: Deep Unsupervised Learning of Visual Similarities, 2018, https://arxiv.org/abs/1802.08562
+10. de Freitas, Rodolfo C.; Velten, Hermano: Non-linear clustering during the BEC dark matter phase transition, 2015, https://arxiv.org/abs/1503.01877
+11. Abbas, Halim; Garberson, Ford; Glover, Eric; Wall, Dennis P: Machine learning approach for early detection of autism by combining questionnaire and home video screening, 2017, https://arxiv.org/abs/1703.06076
+12. Tsurkan, V.; Zherlitsyn, S.; Yasin, S.; Felea, V.; Skourski, Y.; Deisenhofer, J.; von Nidda, H. -A. Krug; Wosnitza, J.; Loidl, A.: Unconventional magnetostructural transition in CoCr2O4 at high magnetic fields, 2013, https://arxiv.org/abs/1302.5605
+13. Swift, Damian C.; Kraus, Richard G.: On the Properties of Plastic Ablators in Laser-Driven Material Dynamics Experiments, 2007, https://arxiv.org/abs/0712.1203
+14. Guichon, P. A. M.; Mossé, L.; Vanderhaeghen, M.: Pion production in deeply virtual Compton scattering, 2003, https://arxiv.org/abs/hep-ph/0305231
+15. Kibiłda, Jacek; Kaminski, Nicholas J.; DaSilva, Luiz A.: Radio Access Network and Spectrum Sharing in Mobile Networks: A Stochastic Geometry Perspective, 2016, https://arxiv.org/abs/1604.06588
+16. Frederix, Rikkert; Frixione, Stefano; Hirschi, Valentin; Pagani, Davide; Shao, Hua-Sheng; Zaro, Marco: The complete NLO corrections to dijet hadroproduction, 2016, https://arxiv.org/abs/1612.06548
+17. Hansen, Ursula Bengaard; Bertelsen, Mads; Knudsen, Erik Bergbäck; Lefmann, Kim: Simulation of waviness in neutron guides, 2016, https://arxiv.org/abs/1612.03763
+18. Roca-Maza, X.; Pozzi, G.; Brenna, M.; Mizuyama, K.; Colò, G.: Low-lying dipole response: isospin character and collectivity in ${}^{68}$Ni, ${}^{132}$Sn and ${}^{208}$Pb, 2011, https://arxiv.org/abs/1112.0190
+19. Wang, Hui; Huang, Jinyuan; Xu, Xiaomin; Xiao, Yanghua; Wang, Wei: Robustness of Complex Networks against Attacks Guided by Damage, 2011, https://arxiv.org/abs/1105.0275
+20. Paikan, Ali; Tikhanoff, Vadim; Metta, Giorgio; Natale, Lorenzo: Enhancing software module reusability using port plug-ins: an experiment with the iCub robot, 2014, https://arxiv.org/abs/1411.1102
+21. Brandenburg, A.; Dobler, W.; Subramanian, K.: Magnetic helicity in stellar dynamos: new numerical experiments, 2001, https://arxiv.org/abs/astro-ph/0111567
+22. Rizzo, Thomas G.: Tests of Low Scale Quantum Gravity in $e^-e^-$ and $\gamma \gamma$ Collisions, 1999, https://arxiv.org/abs/hep-ph/9907401
+23. "Moccia, Massimo; Castaldi, Giuseppe; D'Alterio, Giuliana; Feo, Maurizio; Vitiello, Roberto; Galdi, Vincenzo;: Transformation-Optics-Based Design of a Metamaterial Radome for Extending the Scanning Angle of a Phased Array Antenna, 2017, https://arxiv.org/abs/1703.03793
+24. Manna, S. S.; Chakrabarti, A. D.; Cafiero, R.: Critical States in a Dissipative Sandpile Model, 1999, https://arxiv.org/abs/cond-mat/9909065
+25. Rorai, Alberto; Hennawi, Joseph F.; Oñorbe, Jose; White, Martin; Prochaska, J. Xavier; Kulkarni, Girish; Walther, Michael; Lukić, Zarija; Lee, Khee-Gan: Measurement of the small-scale structure of the intergalactic medium using close quasar pairs, 2017, https://arxiv.org/abs/1704.08366
+26. Cellucci, Daniel; Cheung, Kenneth C.: Evaluation of Cellular Solids Derived from Triply Periodic Minimal Surfaces, 2015, https://arxiv.org/abs/1512.07512
+27. Richard, Samuel; Nelson, Richard P.; Umurhan, Orkan M.: Vortex formation in protoplanetary discs induced by the vertical shear instability, 2016, https://arxiv.org/abs/1601.01921
+28. Liu, Chenxu; Dutt, M. V. Gurudev; Pekker, David: Measurement based 2-qubit unitary gates for pairs of Nitrogen-Vacancy centers in diamond, 2018, https://arxiv.org/abs/1808.10015
+29. MirMostafaee, S. M. T. K.; Amini, Morteza; Asgharzadeh, A.: Bayesian prediction of minimal repair times of a series system based on hybrid censored sample of components' lifetimes under Rayleigh distribution, 2015, https://arxiv.org/abs/1505.06417
+30. Ferrari, Luca Alberto Davide; Rossmanith, Carolin; Wirth, Benedikt: Phase field approximations of branched transportation problems, 2018, https://arxiv.org/abs/1805.11399
+31. Hlinka, Jaroslav; Hartman, David; Vejmelka, Martin; Novotná, Dagmar; Paluš, Milan: Non-linear dependence and teleconnections in climate data: sources, relevance, nonstationarity, 2012, https://arxiv.org/abs/1211.6688
+32. Sawant, Rahul; Rangwala, S. A.: Optical bistability enabled control of resonant light transmission for an atom-cavity system, 2015, https://arxiv.org/abs/1505.00105
+33. Yang, Yuan-Pei; Zhang, Bing: Extracting host galaxy dispersion measure and constraining cosmological parameters using fast radio burst data, 2016, https://arxiv.org/abs/1608.08154
+34. Staley, T. D.; Titterington, D. J.; Fender, R. P.; Swinbank, J. D.; van der Horst, A. J.; Rowlinson, A.; Scaife, A. M. M.; Grainge, K. J. B.; Pooley, G. G.: Automated rapid follow-up of Swift GRBs with AMI-LA, 2012, https://arxiv.org/abs/1211.3115
+35. Barbot, Thierry; Fillastre, François: Quasi-Fuchsian co-Minkowski manifolds, 2018, https://arxiv.org/abs/1801.10429
+36. Chang, Chi-Ming; Lin, Ying-Hsuan; Shao, Shu-Heng; Wang, Yifan; Yin, Xi: Topological Defect Lines and Renormalization Group Flows in Two Dimensions, 2018, https://arxiv.org/abs/1802.04445
+37. Zimnik, Samantha; Dickmann, Marcel; Hugenschmidt, Christoph: In-situ observation of temperature-dependent segregation of Ni adatoms on oriented Pd surfaces, 2017, https://arxiv.org/abs/1704.01966
+38. Lüscher, Martin: Topology, the Wilson flow and the HMC algorithm, 2010, https://arxiv.org/abs/1009.5877
+39. Leino, Viljami; Rummukainen, Kari; Tuominen, Kimmo: Slope of the beta function at the fixed point of SU(2) gauge theory with six or eight flavors, 2018, https://arxiv.org/abs/1804.02319
+40. Pasetto, Alice; Kraus, Alex; Mack, Karl-Heinz; Bruni, Gabriele; Carrasco-Gonzalez, Carlos: A study of a sample of high rotation measure AGNs through multifrequency single dish observations, 2015, https://arxiv.org/abs/1510.01136
+41. Feng, Shuai; Shao, Zheng-Yi; Shen, Shi-Yin; Argudo-Fernández, Maria; Wu, Hong; Lam, Man-I; Yang, Ming; Yuan, Fang-Ting: An Isolated Compact Galaxy Triplet, 2015, https://arxiv.org/abs/1512.02439
+42. Grant, Edward; Sahm, Stephan; Zabihi, Mariam; van Gerven, Marcel: Predicting and visualizing psychological attributions with a deep neural network, 2015, https://arxiv.org/abs/1512.01289
+43. Kamio, Suguru; Hara, Hirohisa; Watanabe, Tetsuya; Matsuzaki, Keiichi; Shibata, Kazunari; Culhane, Len; Warren, Harry: Velocity Structure of Jets in Coronal Hole, 2007, https://arxiv.org/abs/0711.2848
+44. ExHIC Collaboration, ; Cho, Sungtae; Hyodo, Tetsuo; Jido, Daisuke; Ko, Che Ming; Lee, Su Houng; Maeda, Saori; Miyahara, Kenta; Morita, Kenji; Nielsen, Marina; Ohnishi, Akira; Sekihara, Takayasu; Song, Taesoo; Yasui, Shigehiro; Yazaki, Koichi: Exotic Hadrons from Heavy Ion Collisions, 2017, https://arxiv.org/abs/1702.00486
+45. Iskrzynski, Mateusz; Kowalska, Kamila: Exact SU(5) Yukawa matrix unification in the General Flavour Violating MSSM, 2014, https://arxiv.org/abs/1412.8651
+46. Farrar, Glennys R.; Sutherland, Michael S.: Deflections of UHECRs in the Galactic magnetic field, 2017, https://arxiv.org/abs/1711.02730
+47. McJunkin, Matthew; France, Kevin; Schneider, P. C.; Herczeg, Gregory J.; Brown, Alexander; Hillenbrand, Lynne; Schindhelm, Eric; Edwards, Suzan: Direct Measurement of Interstellar Extinction Toward Young Stars Using Atomic Hydrogen Lyman-$\alpha$ Absorption, 2013, https://arxiv.org/abs/1312.1650
+48. Cloutier, R.; Astudillo-Defru, N.; Doyon, R.; Bonfils, X.; Almenara, J. M.; Benneke, B.; Bouchy, F.; Delfosse, X.; Ehrenreich, D.; Forveille, T.; Lovis, C.; Mayor, M.; Menou, K.; Murgas, F.; Pepe, F.; Rowe, J.; Santos, N. C.; Udry, S.; Wünsche, A.: Characterization of the K2-18 multi-planetary system with HARPS: A habitable zone super-Earth and discovery of a second, warm super-Earth on a non-coplanar orbit, 2017, https://arxiv.org/abs/1707.04292
+49. Shipman, Nicholas; Calatroni, Sergio; Jones, Roger M.; Wuensch, Walter: Measurement of the dynamic response of the CERN DC spark system and preliminary estimates of the breakdown turn-on time, 2012, https://arxiv.org/abs/1206.0573
+50. Batiz, Zoltan; Gross, Franz: Pole Term and Gauge Invariance in Deep Inelastic Scattering, 1998, https://arxiv.org/abs/nucl-th/9803053
+51. Gupta, Raj Kumar; Chia, Alex Yong-Sang; Rajan, Deepu; Zhiyong, Huang: A learning-based approach for automatic image and video colorization, 2017, https://arxiv.org/abs/1704.04610
+52. Moreno-Bromberg, Santiago; Taschini, Luca: Pollution permits, Strategic Trading and Dynamic Technology Adoption, 2011, https://arxiv.org/abs/1103.2914
+53. Likhoded, A. K.; Slabospitsky, S. R.: Charmed hadrons production in high-energy $\Sigma^-$ beam, 2000, https://arxiv.org/abs/hep-ph/0002202
+54. Christou, A. A.; Kwiatkowski, T.; Butkiewicz, M.; Gulbis, A.; Hergenrother, C. W.; Duddy, S.; Fitzsimmons, A.: Physical and dynamical characterisation of low Delta-V NEA (190491) 2000 FJ10, 2012, https://arxiv.org/abs/1210.3486
+55. Bhaumik, Sourjya; Chuck, David; Narlikar, Girija; Wilfong, Gordon: Energy-Efficient Design and Optimization of Wireline Access Networks, 2011, https://arxiv.org/abs/1101.2717
+56. Zhang, Shaobo; Xu, Ye; Yang, Ji: Molecular Clouds in the North American and Pelican Nebulae: Structures, 2013, https://arxiv.org/abs/1312.3079
+57. Rasskazov, Alexander; Merritt, David: Evolution Of Binary Supermassive Black Holes In Rotating Nuclei, 2016, https://arxiv.org/abs/1610.08555
+58. Zhou, Xiaowei; Yang, Can; Yu, Weichuan: Moving Object Detection by Detecting Contiguous Outliers in the Low-Rank Representation, 2011, https://arxiv.org/abs/1109.0882
+59. Radicchi, Filippo; Castellano, Claudio: Leveraging percolation theory to single out influential spreaders in networks, 2016, https://arxiv.org/abs/1605.07041
+60. Bornyakov, V. G.; Kononenko, A. G.: Abelian monopoles in finite temperature lattice SU(2) gluodynamics: first study with improved action, 2011, https://arxiv.org/abs/1111.0169
+61. Gamiz, E.; Bailey, J. A.; Bazavov, A.; Bernard, C.; Bouchard, C.; DeTar, C.; Du, D.; El-Khadra, A. X.; Foley, J.; Freeland, E. D.; Gottlieb, Steven; Heller, U. M.; Kim, J.; Kronfeld, A. S.; Laiho, J.; Levkova, L.; Mackenzie, P. B.; Neil, E. T.; Oktay, M. B.; Qiu, Si-Wei; Simone, J. N.; Sugar, R.; Toussaint, D.; Van de Water, R. S.; Zhou, R.: Kaon semileptonic decay form factors with HISQ valence quarks, 2012, https://arxiv.org/abs/1211.0751
+62. Cho, Inyong; Chun, Eung Jin; Kim, Hang Bae; Kim, Yoonbai: String Cosmology of the D-brane Universe, 2006, https://arxiv.org/abs/hep-th/0603174
+63. Ghosh, Premomoy; Muhuri, Sanjib: Do we see change of phase in proton-proton collisions at the Large Hadron Collider?, 2014, https://arxiv.org/abs/1406.5811
+64. Huang, Qingqing; Roozbehani, Mardavij; Dahleh, Munther A: Efficiency-Risk Tradeoffs in Dynamic Oligopoly Markets - with application to electricity markets, 2012, https://arxiv.org/abs/1209.0229
+65. Bernini, A.; Disanto, F.; Pinzani, R.; Rinaldi, S.: Permutations defining convex permutominoes, 2007, https://arxiv.org/abs/0711.0582
+66. Inamdar, Niraj K.; Binzel, Richard P.; Hong, Jae Sub; Allen, Branden; Grindlay, Jonathan; Masterson, Rebecca A.: Modeling the Expected Performance of the REgolith X-ray Imaging Spectrometer (REXIS), 2014, https://arxiv.org/abs/1410.3051
+67. Glossop, Matthew T.; Ingersent, Kevin: Kondo physics and dissipation: A numerical renormalization-group approach to Bose-Fermi Kondo models, 2006, https://arxiv.org/abs/cond-mat/0609589
+68. Richard, Johan; Stark, Daniel P.; Ellis, Richard S.; George, Matthew R.; Egami, Eiichi; Kneib, Jean-Paul; Smith, Graham P.: A Hubble & Spitzer Space Telescope Survey for Gravitationally-Lensed Galaxies: Further Evidence for a Significant Population of Low Luminosity Galaxies beyond Redshift Seven, 2008, https://arxiv.org/abs/0803.4391
+69. Funakubo, K.; Kakuto, A.; Otsuki, S.; Takenaga, K.; Toyoda, F.: Profile of the Electroweak Bubble Wall, 1996, https://arxiv.org/abs/hep-ph/9609317
+70. Ota, Naomi; Hattori, Makoto; Pointecouteau, Etienne; Mitsuda, Kazuhisa: Chandra Spectroscopy and Mass Estimation of the Lensing Cluster of Galaxies CL0024+17, 2002, https://arxiv.org/abs/astro-ph/0209226
+71. Liška, Martin: Optimizing large applications, 2014, https://arxiv.org/abs/1403.6997
+72. Li, Jin: Radiative Penguin decays at Belle, 2008, https://arxiv.org/abs/0810.3069
+73. Priest, E. R.: Hinode 7: Conference Summary and Future Suggestions, 2014, https://arxiv.org/abs/1405.3523
+74. Samokhin, K. V.; Truong, B. P.: Fulde-Ferrell-Larkin-Ovchinnikov superconductors near a surface, 2018, https://arxiv.org/abs/1807.05261
+75. Chow, Siu-Fai; Wick, Stuart D.; Riecke, Hermann: Neurogenesis Drives Stimulus Decorrelation in a Model of the Olfactory Bulb, 2012, https://arxiv.org/abs/1202.2148
+76. Lee, Juhee; Mueller, Peter; Sengupta, Subhajit; Gulukota, Kamalakar; Ji, Yuan: Bayesian Inference for Tumor Subclones Accounting for Sequencing and Structural Variants, 2014, https://arxiv.org/abs/1409.7158
+77. Simionescu, A.; Roediger, E.; Nulsen, P. E. J.; Brüggen, M.; Forman, W. R.; Böhringer, H.; Werner, N.; Finoguenov, A.: The large-scale shock in the cluster of galaxies Hydra A, 2008, https://arxiv.org/abs/0810.0271
+78. Doussal, Pierre Le; Wiese, Kay Joerg: Avalanche dynamics of elastic interfaces, 2013, https://arxiv.org/abs/1302.4316
+79. Gugushvili, Shota; van der Meulen, Frank; Schauer, Moritz; Spreij, Peter: Bayesian wavelet de-noising with the caravan prior, 2018, https://arxiv.org/abs/1810.07668
+80. Heavy Flavor Averaging Group, ; Amhis, Y.; Banerjee, Sw.; Ben-Haim, E.; Blyth, S.; Bozek, A.; Bozzi, C.; Carbone, A.; Chistov, R.; Chrząszcz, M.; Cibinetto, G.; Dingfelder, J.; Gelb, M.; Gersabeck, M.; Gershon, T.; Gibbons, L.; Golob, B.; Harr, R.; Hayasaka, K.; Hayashii, H.; Kuhr, T.; Leroy, O.; Lusiani, A.; Miyabayashi, K.; Naik, P.; Nishida, S.; Campos, A. Oyanguren; Patel, M.; Pedrini, D.; Petrič, M.; Rama, M.; Roney, M.; Rotondo, M.; Schneider, O.; Schwanda, C.; Schwartz, A. J.; Shwartz, B.; Smith, J. G.; Tesarek, R.; Trabelsi, K.; Urquijo, P.; Van Kooten, R.; Zupanc, A.: Averages of $b$-hadron, $c$-hadron, and $\tau$-lepton properties as of summer 2014, 2014, https://arxiv.org/abs/1412.7515
+81. Banerji, Manda; McMahon, R. G.; Willott, C. J.; Geach, J. E.; Harrison, C. M.; Alaghband-Zadeh, S.; Alexander, D. M.; Bourne, N.; Coppin, K. E. K.; Dunlop, J. S.; Farrah, D.; Jarvis, M.; Michalowski, M. J.; Page, M.; Smith, D. J. B.; Swinbank, A. M.; Symeonidis, M.; Van der Werf, P. P.: Cold Dust Emission from X-ray AGN in the SCUBA-2 Cosmology Legacy Survey: Dependence on Luminosity, Obscuration & AGN Activity, 2015, https://arxiv.org/abs/1509.00018
+82. Oshima, Kazuto: Simple procedure for classical signal-procession in cluster-state quantum computation, 2009, https://arxiv.org/abs/0909.5533
+83. Hao, Yue; Litvinenko, Vladimir N.; Ptitsyn, Vadim: Beam-beam Effects of 'Gear-changing' in Ring-Ring Colliders, 2013, https://arxiv.org/abs/1309.1739
+84. Gao, Chao; Harle, Robert: Semi-automated Signal Surveying Using Smartphones and Floorplans, 2017, https://arxiv.org/abs/1711.06503
+85. Shalev-Shwartz, Shai; Zhang, Tong: Stochastic Dual Coordinate Ascent Methods for Regularized Loss Minimization, 2012, https://arxiv.org/abs/1209.1873
+86. Zenger, Christan; Vogt, Hendrik; Zimmer, Jan; Sezgin, Aydin; Paar, Christof: The Passive Eavesdropper Affects my Channel: Secret-Key Rates under Real-World Conditions (Extended Version), 2017, https://arxiv.org/abs/1701.03904
+87. Dominik, M.: Adaptive Contouring -- an efficient way to calculate microlensing light curves of extended sources, 2007, https://arxiv.org/abs/astro-ph/0703305
+88. Viswanathan, Vaisagh; Lee, Chong Eu; Lees, Michael Harold; Cheong, Siew Ann; Sloot, Peter M. A.: Quantitative Comparison Between Crowd Models for Evacuation Planning and Evaluation, 2014, https://arxiv.org/abs/1401.0366
+89. Sicilia, Alberto; Arenzon, Jeferson J.; Bray, Alan J.; Cugliandolo, Leticia F.: Domain growth morphology in curvature driven two dimensional coarsening, 2007, https://arxiv.org/abs/0706.4314
+90. Keceli, Feyza; Inan, Inanc; Ayanoglu, Ender: Fair and Efficient TCP Access in the IEEE 802.11 Infrastructure Basic Service Set, 2008, https://arxiv.org/abs/0806.1089
+91. Lazar, M.: Fast magnetization in counterstreaming plasmas with temperature anisotropies, 2007, https://arxiv.org/abs/0711.2385
+92. Boden, Hans U.; Chrisman, Micah; Gaudreau, Robin: Signature and concordance of virtual knots, 2017, https://arxiv.org/abs/1708.08090
+93. Herty, Michael; Puppo, Gabriella; Roncoroni, Sebastiano; Visconti, Giuseppe: The BGK approximation of kinetic models for traffic, 2018, https://arxiv.org/abs/1812.11056
+94. Tan, Chenhao; Lee, Lillian: All Who Wander: On the Prevalence and Characteristics of Multi-community Engagement, 2015, https://arxiv.org/abs/1503.01180
+95. Blaes, Omer; Krolik, Julian H.; Hirose, Shigenobu; Shabaltas, Natalia: Dissipation and Vertical Energy Transport in Radiation-Dominated Accretion Disks, 2011, https://arxiv.org/abs/1103.5052
+96. Clavier, Pierre J.: Analytical and Geometric approches of non-perturbative Quantum Field Theories, 2015, https://arxiv.org/abs/1511.09190
+97. Xilouris, E. M.; Tabatabaei, F. S.; Boquien, M.; Kramer, C.; Buchbender, C.; Bertoldi, F.; Anderl, S.; Braine, J.; Verley, S.; Relano, M.; Quintana-Lacaci, G.; Akras, S.; Beck, R.; Calzetti, D.; Combes, F.; Gonzalez, M.; Gratier, P.; Henkel, C.; Israel, F.; Koribalski, B.; Lord, S.; Mookerjea, B.; Rosolowsky, E.; Stacey, G.; Tilanus, R. P. J.; van der Tak, F.; van der Werf, P.: Cool and warm dust emission from M33 (HerM33es), 2012, https://arxiv.org/abs/1205.1351
+98. "West, Nathan E; O'Shea, Timothy J.;: Deep Architectures for Modulation Recognition, 2017, https://arxiv.org/abs/1703.09197
+99. Schott, Matthias; Dunford, Monica: Review of single vector boson production in pp collisions at $\sqrt{s} = 7$ TeV, 2014, https://arxiv.org/abs/1405.1160
+100. Archer, Thomas; Pemmaraju, Chaitanya Das; Sanvito, Stefano: Magnetic interaction of Co ions near the {10\bar{1}0} ZnO surface, 2010, https://arxiv.org/abs/1003.2576
+101. Valero, Carlos: Maxwell's Equations, The Euler Index and Morse Theory, 2013, https://arxiv.org/abs/1311.0569
+102. Sekeh, Salimeh Yasaei; Oselio, Brandon; Hero, Alfred O.: A Dimension-Independent discriminant between distributions, 2018, https://arxiv.org/abs/1802.04497
+103. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+104. Basat, Ran Ben; Einziger, Gil; Friedman, Roy; Kassner, Yaron: Randomized Admission Policy for Efficient Top-k and Frequency Estimation, 2016, https://arxiv.org/abs/1612.02962
+105. Lorenz, T.; Ammerahl, U.; Ziemes, R.; Buechner, B.; Revcolevschi, A.; Dhalenne, G.: Thermodynamic Properties of the Incommensurate Phase of CuGeO_3, 1996, https://arxiv.org/abs/cond-mat/9610163
+106. Billot, Nicolas: Calibrating a novel type of bolometer arrays for the Herschel/PACS Photometer, 2008, https://arxiv.org/abs/0808.3958
+107. Enoki, Motohiro; Nagashima, Masahiro: The Effect of Orbital Eccentricity on Gravitational Wave Background Radiation from Supermassive Black Hole Binaries, 2006, https://arxiv.org/abs/astro-ph/0609377
+108. Yang, S. -R. Eric; Cha, Min-Chul; Han, Jung Hoon: Numerical Test of Disk Trial Wave function for Half-Filled Landau Level, 2000, https://arxiv.org/abs/cond-mat/0006434
+109. Motta, S.; Muñoz-Darias, T.; Belloni, T.: On the outburst evolution of H1743-322: a 2008/2009 comparison, 2010, https://arxiv.org/abs/1006.4773
+110. Roediger, E.; Kraft, R. P.; Nulsen, P.; Churazov, E.; Forman, W.; Brueggen, M.; Kokotanekova, R.: Viscous Kelvin-Helmholtz instabilities in highly ionised plasmas, 2013, https://arxiv.org/abs/1309.2635
+111. Cammarota, Valentina; Marinucci, Domenico; Wigman, Igor: On the distribution of the critical values of random spherical harmonics, 2014, https://arxiv.org/abs/1409.1364
+112. Körtgen, Bastian; Bovino, Stefano; Schleicher, Dominik R. G.; Stutz, Amelia; Banerjee, Robi; Giannetti, Andrea; Leurini, Silvia: Fast deuterium fractionation in magnetized and turbulent filaments, 2017, https://arxiv.org/abs/1709.04013
+113. Long, Gucan; Kneip, Laurent; Alvarez, Jose M.; Li, Hongdong: Learning Image Matching by Simply Watching Video, 2016, https://arxiv.org/abs/1603.06041
+114. Espinoza, Néstor; Jordán, Andrés: Limb darkening and exoplanets: testing stellar model atmospheres and identifying biases in transit parameters, 2015, https://arxiv.org/abs/1503.07020
+115. Lokas, Ewa L.; Ebrova, Ivana; del Pino, Andres; Sybilska, Agnieszka; Athanassoula, E.; Semczuk, Marcin; Gajda, Grzegorz; Fouquet, Sylvain: Tidally induced bars of galaxies in clusters, 2016, https://arxiv.org/abs/1601.07433
+116. Zhang, Xiaoshuai; Lu, Yiping; Liu, Jiaying; Dong, Bin: Dynamically Unfolding Recurrent Restorer: A Moving Endpoint Control Method for Image Restoration, 2018, https://arxiv.org/abs/1805.07709
+117. Bertone, V.; Carrasco, N.; Ciuchini, M.; Dimopoulos, P.; Frezzotti, R.; Gimenez, V.; Lubicz, V.; Martinelli, G.; Mescia, F.; Papinutto, M.; Rossi, G. C.; Silvestrini, L.; Simula, S.; Tarantino, C.; Vladikas, A.; Collaboration, for the ETM: Kaon Mixing Beyond the SM from Nf=2 tmQCD and model independent constraints from the UTA, 2012, https://arxiv.org/abs/1207.1287
+118. Bronnikov, Kirill; Dymnikova, Irina; Galaktionov, Evgeny: Multi-horizon spherically symmetric spacetimes with several scales of vacuum energy, 2012, https://arxiv.org/abs/1204.0534
+119. Ledwig, Tim; Kim, Hyun-Chul: Transverse strange quark spin structure of the nucleon, 2011, https://arxiv.org/abs/1107.4952
+120. Udagedara, Indika; Helenbrook, Brian; Luttman, Aaron; Catenacci, Jared: Improved Probabilistic Principal Component Analysis for Application to Reduced Order Modeling, 2017, https://arxiv.org/abs/1702.01236
+121. Moustakas, John; Kennicutt,, Robert C.; Tremonti, Christy A.: Optical Star-Formation Rate Indicators, 2005, https://arxiv.org/abs/astro-ph/0511730
+122. Shi, Jiaxin; Sun, Shengyang; Zhu, Jun: A Spectral Approach to Gradient Estimation for Implicit Distributions, 2018, https://arxiv.org/abs/1806.02925
+123. Bücher, Axel; Dette, Holger: Multiplier bootstrap of tail copulas with applications, 2011, https://arxiv.org/abs/1102.0110
+124. Li, Yao Dong; Lu, Yuan-Ming; Chen, Gang: The Spinon Fermi Surface U(1) Spin Liquid in a Spin-Orbit-Coupled Triangular Lattice Mott Insulator YbMgGaO4, 2016, https://arxiv.org/abs/1612.03447
+125. Zentner, Raphael: A class of knots with simple $SU(2)$ representations, 2015, https://arxiv.org/abs/1501.02504
+126. Wang, M.; Wang, S.; Zhang, Q.; Chan, C. T.; Chan, H. B.: Measurement of mechanical deformations induced by enhanced electromagnetic stress on a parallel metallic-plate system, 2018, https://arxiv.org/abs/1804.08260
+127. Sefat, Athena S.; Singh, David J.; Garlea, V. Ovidiu; Zuev, Yuri L.; McGuire, Michael A.; VanBebber, Lindsay; Sales, Brian C.: Control of Correlations in Sr4V2O6Fe2As2 by Chemical Stoichiometry, 2010, https://arxiv.org/abs/1009.4911
+128. Wang, Xuelei; Zeng, Qingguo; Jin, Zhenlan; Liu, Suzhen: The associated productions of the new gauge boson $B_{H}$ in the littlest Higgs model with a SM gauge boson via $e^+e^-$ collision, 2007, https://arxiv.org/abs/hep-ph/0702064
+129. Sisakyan, Narek; Malakyan, Yuri: Quantum Theory for Generation of Nonclassical Photon Pairs by a Medium with Coherent Atomic Memory, 2005, https://arxiv.org/abs/quant-ph/0503186
+130. Kervella, Pierre; Mérand, Antoine; Gallenne, Alexandre: The circumstellar envelopes of the Cepheids L Car and RS Pup - Comparative study in the infrared with Spitzer, VLT/VISIR and VLTI/MIDI, 2009, https://arxiv.org/abs/0902.1588
+131. Fegan, S. J.; Sanchez, D.; Collaboration, Fermi LAT; :, ; Abdo, A. A.: Fermi observations of TeV-selected AGN, 2009, https://arxiv.org/abs/0910.4881
+132. Khurshudyan, M.; Pasqua, A.; Sadeghi, J.; Farahani, H.: Quintessence Cosmology with an Effective $\Lambda$-Term in Lyra Manifold, 2014, https://arxiv.org/abs/1402.0118
+133. Zhang, Cheng; Ek, Carl Henrik; Damianou, Andreas; Kjellstrom, Hedvig: Factorized Topic Models, 2013, https://arxiv.org/abs/1301.3461
+134. Frassek, Rouven: Q-operators, Yangian invariance and the quantum inverse scattering method, 2014, https://arxiv.org/abs/1412.3339
+135. Goldfarb, Donald; Qin, Zhiwei: Robust Low-rank Tensor Recovery: Models and Algorithms, 2013, https://arxiv.org/abs/1311.6182
+136. Gull, Emanuel; Ferrero, Michel; Parcollet, Olivier; Georges, Antoine; Millis, Andrew J.: Momentum space anisotropy and pseudogaps: a comparative cluster dynamical mean field analysis of the doping-driven metal-insulator transition in the two dimensional Hubbard model, 2010, https://arxiv.org/abs/1007.2592
+137. Deng, Haiyun; Liu, Hairong; Tian, Long: Critical points of solutions for mean curvature equation in strictly convex and nonconvex domains, 2017, https://arxiv.org/abs/1712.08431
+138. Biondini, Gino; Li, Sitai; Mantzavinos, Dionyssis; Trillo, Stefano: Universal behavior of modulationally unstable media, 2017, https://arxiv.org/abs/1710.05068
+139. Kajdanowicz, Tomasz; Michalski, Radosław; Musiał, Katarzyna; Kazienko, Przemysław: Learning in Unlabeled Networks - An Active Learning and Inference Approach, 2015, https://arxiv.org/abs/1510.01270
+140. Soheili, Ali Reza; Stockie, John M.: A moving mesh method with variable relaxation time, 2006, https://arxiv.org/abs/math/0602376
+141. von Hippel, Georg; Rae, Thomas D.; Shintani, Eigo; Wittig, Hartmut: Nucleon matrix elements from lattice QCD with all-mode-averaging and a domain-decomposed solver: an exploratory study, 2016, https://arxiv.org/abs/1605.00564
+142. Wong, K. Y. Michael; Saad, D.: Inference and Optimization of Real Edges on Sparse Graphs - A Statistical Physics Perspective, 2006, https://arxiv.org/abs/cond-mat/0609367
+143. Vollmer, B.; Krichbaum, T. P.; Angelakis, E.; Kovalev, Y. Y.: Quasi-simultaneous multi-frequency observations of inverted-spectrum GPS candidate sources, 2008, https://arxiv.org/abs/0806.3694
+144. Ryskin, M. G.; Drukarev, E. G.; Sadovnikova, V. A.: Nucleon QCD sum rules in instanton medium, 2013, https://arxiv.org/abs/1312.1449
 
 * 12x12 cs.CV October 2012
-Mondal, Arnab Kumar; Dolz, Jose; Desrosiers, Christian: Few-shot 3D Multi-modal Medical Image Segmentation using Generative Adversarial Learning, 2018, https://arxiv.org/abs/1810.12241
-Stamatescu, Victor; McDonnell, Mark D.: Diagnosing Convolutional Neural Networks using their Spectral Response, 2018, https://arxiv.org/abs/1810.03241
-Cavallari, Tommaso; Golodetz, Stuart; Lord, Nicholas A.; Valentin, Julien; Prisacariu, Victor A.; Di Stefano, Luigi; Torr, Philip H. S.: Real-Time RGB-D Camera Pose Estimation in Novel Scenes using a Relocalisation Cascade, 2018, https://arxiv.org/abs/1810.12163
-Mao, Wendong; Wang, Mingjie; Zhou, Jun; Gong, Minglun: Semi-dense Stereo Matching using Dual CNNs, 2018, https://arxiv.org/abs/1810.01369
-Engelmann, Francis; Kontogianni, Theodora; Schult, Jonas; Leibe, Bastian: Know What Your Neighbors Do: 3D Semantic Segmentation of Point Clouds, 2018, https://arxiv.org/abs/1810.01151
-Aliakbarian, Mohammad Sadegh; Saleh, Fatemeh Sadat; Salzmann, Mathieu; Fernando, Basura; Petersson, Lars; Andersson, Lars: VIENA2: A Driving Anticipation Dataset, 2018, https://arxiv.org/abs/1810.09044
-Liang, Yixiong; Mao, Yuan; Xia, Jiazhi; Xiang, Yao; Liu, Jianfeng: Scale-Invariant Structure Saliency Selection for Fast Image Fusion, 2018, https://arxiv.org/abs/1810.12553
-Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
-Laves, Max-Heinrich; Kahrs, Lüder A.; Ortmaier, Tobias: Deep learning based 2.5D flow field estimation for maximum intensity projections of 4D optical coherence tomography, 2018, https://arxiv.org/abs/1810.11205
-Lin, Hubert; Averkiou, Melinos; Kalogerakis, Evangelos; Kovacs, Balazs; Ranade, Siddhant; Kim, Vladimir G.; Chaudhuri, Siddhartha; Bala, Kavita: Learning Material-Aware Local Descriptors for 3D Shapes, 2018, https://arxiv.org/abs/1810.08729
-Le, T. Hoang Ngan; Gummadi, Raajitha; Savvides, Marios: Deep Recurrent Level Set for Segmenting Brain Tumors, 2018, https://arxiv.org/abs/1810.04752
-Chen, Chen; Bai, Wenjia; Rueckert, Daniel: Multi-Task Learning for Left Atrial Segmentation on GE-MRI, 2018, https://arxiv.org/abs/1810.13205
-Irmakci, Ismail; Hussein, Sarfaraz; Savran, Aydogan; Kalyani, Rita R.; Reiter, David; Chia, Chee W.; Fishbein, Kenneth W.; Spencer, Richard G.; Ferrucci, Luigi; Bagci, Ulas: A Novel Extension to Fuzzy Connectivity for Body Composition Analysis: Applications in Thigh, Brain, and Whole Body Tissue Segmentation, 2018, https://arxiv.org/abs/1810.06071
-Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
-Melekhov, Iaroslav; Tiulpin, Aleksei; Sattler, Torsten; Pollefeys, Marc; Rahtu, Esa; Kannala, Juho: DGC-Net: Dense Geometric Correspondence Network, 2018, https://arxiv.org/abs/1810.08393
-Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
-Krish, Ram P.; Fierrez, Julian; Ramos, Daniel; Alonso-Fernandez, Fernando; Bigun, Josef: Improving Automated Latent Fingerprint Identification using Extended Minutia Types, 2018, https://arxiv.org/abs/1810.09801
-Nekrasov, Vladimir; Shen, Chunhua; Reid, Ian: Light-Weight RefineNet for Real-Time Semantic Segmentation, 2018, https://arxiv.org/abs/1810.03272
-Borji, Ali: Saliency Prediction in the Deep Learning Era: An Empirical Investigation, 2018, https://arxiv.org/abs/1810.03716
-Adebayo, Julius; Gilmer, Justin; Muelly, Michael; Goodfellow, Ian; Hardt, Moritz; Kim, Been: Sanity Checks for Saliency Maps, 2018, https://arxiv.org/abs/1810.03292
-Singh, Amanpreet; Agrawal, Sharan: CanvasGAN: A simple baseline for text to image generation by incrementally patching a canvas, 2018, https://arxiv.org/abs/1810.02833
-Kuchera, Michelle P.; Ramanujan, Raghuram; Taylor, Jack Z.; Strauss, Ryan R.; Bazin, Daniel; Bradt, Joshua; Chen, Ruiming: Machine Learning Methods for Track Classification in the AT-TPC, 2018, https://arxiv.org/abs/1810.10350
-Hossain, Md. Zakir; Sohel, Ferdous; Shiratuddin, Mohd Fairuz; Laga, Hamid: A Comprehensive Survey of Deep Learning for Image Captioning, 2018, https://arxiv.org/abs/1810.04020
-Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
-Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
-Wang, Yaming; Tan, Xiao; Yang, Yi; Li, Ziyu; Liu, Xiao; Zhou, Feng; Davis, Larry S.: Improving Annotation for 3D Pose Dataset of Fine-Grained Object Categories, 2018, https://arxiv.org/abs/1810.09263
-Ramirez, Pierluigi Zama; Poggi, Matteo; Tosi, Fabio; Mattoccia, Stefano; Di Stefano, Luigi: Geometry meets semantics for semi-supervised monocular depth estimation, 2018, https://arxiv.org/abs/1810.04093
-Lee, Kuan-Hui; Ros, German; Li, Jie; Gaidon, Adrien: SPIGAN: Privileged Adversarial Learning from Simulation, 2018, https://arxiv.org/abs/1810.03756
-Dodds, Eric; Nguyen, Huy; Herdade, Simao; Culpepper, Jack; Kae, Andrew; Garrigues, Pierre: Learning Embeddings for Product Visual Search with Triplet Loss and Online Sampling, 2018, https://arxiv.org/abs/1810.04652
-Dai, Dengxin; Van Gool, Luc: Dark Model Adaptation: Semantic Image Segmentation from Daytime to Nighttime, 2018, https://arxiv.org/abs/1810.02575
-Liu, Jing; van der Schot, Gijs; Engblom, Stefan: Supervised Classification Methods for Flash X-ray single particle diffraction Imaging, 2018, https://arxiv.org/abs/1810.10786
-Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
-Marin, Javier; Biswas, Aritro; Ofli, Ferda; Hynes, Nicholas; Salvador, Amaia; Aytar, Yusuf; Weber, Ingmar; Torralba, Antonio: Recipe1M: A Dataset for Learning Cross-Modal Embeddings for Cooking Recipes and Food Images, 2018, https://arxiv.org/abs/1810.06553
-Nekrasov, Vladimir; Chen, Hao; Shen, Chunhua; Reid, Ian: Fast Neural Architecture Search of Compact Semantic Segmentation Models via Auxiliary Cells, 2018, https://arxiv.org/abs/1810.10804
-Kuzin, Artur; Fattakhov, Artur; Kibardin, Ilya; Iglovikov, Vladimir; Dautov, Ruslan: Camera Model Identification Using Convolutional Neural Networks, 2018, https://arxiv.org/abs/1810.02981
-Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
-Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
-Yun, Inyong; Jung, Cheolkon; Wang, Xinran; Hero, Alfred O; Kim, Joongkyu: Part-Level Convolutional Neural Networks for Pedestrian Detection Using Saliency and Boundary Box Alignment, 2018, https://arxiv.org/abs/1810.00689
-Prakash, Aayush; Boochoon, Shaad; Brophy, Mark; Acuna, David; Cameracci, Eric; State, Gavriel; Shapira, Omer; Birchfield, Stan: Structured Domain Randomization: Bridging the Reality Gap by Context-Aware Synthetic Data, 2018, https://arxiv.org/abs/1810.10093
-Temel, Dogancan; Lee, Jinsol; AlRegib, Ghassan: CURE-OR: Challenging Unreal and Real Environments for Object Recognition, 2018, https://arxiv.org/abs/1810.08293
-Planche, Benjamin; Zakharov, Sergey; Wu, Ziyan; Hutter, Andreas; Kosch, Harald; Ilic, Slobodan: Seeing Beyond Appearance - Mapping Real Images into Geometrical Domains for Unsupervised CAD-based Recognition, 2018, https://arxiv.org/abs/1810.04158
-Shuster, Kurt; Humeau, Samuel; Hu, Hexiang; Bordes, Antoine; Weston, Jason: Engaging Image Captioning Via Personality, 2018, https://arxiv.org/abs/1810.10665
-Chiu, Hsu-kuang; Adeli, Ehsan; Wang, Borui; Huang, De-An; Niebles, Juan Carlos: Action-Agnostic Human Pose Forecasting, 2018, https://arxiv.org/abs/1810.09676
-Girard, Julien; Tamaazousti, Youssef; Borgne, Hervé Le; Hudelot, Céline: Learning Finer-class Networks for Universal Representations, 2018, https://arxiv.org/abs/1810.02126
-Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
-Baptista-Ríos, Marcos; López-Sastre, Roberto J.; Acevedo-Rodríguez, Franciso Javier; Maldonado-Bascón, Saturnino: Embarrassingly Simple Model for Early Action Proposal, 2018, https://arxiv.org/abs/1810.07420
-Femling, Frida; Olsson, Adam; Alonso-Fernandez, Fernando: Fruit and Vegetable Identification Using Machine Learning for Retail Applications, 2018, https://arxiv.org/abs/1810.09811
-Lu, Changsheng; Xia, Siyu; Shao, Ming; Fu, Yun: High-quality Ellipse Detection Based on Arc-support Line Segments, 2018, https://arxiv.org/abs/1810.03243
-Kuzin, Artur; Fattakhov, Artur; Kibardin, Ilya; Iglovikov, Vladimir; Dautov, Ruslan: Camera Model Identification Using Convolutional Neural Networks, 2018, https://arxiv.org/abs/1810.02981
-Ekström, Simon; Malmberg, Filip; Ahlström, Håkan; Kullberg, Joel; Strand, Robin: Fast Graph-Cut Based Optimization for Practical Dense Deformable Registration of Volume Images, 2018, https://arxiv.org/abs/1810.08427
-Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
-Tonioni, Alessio; Tosi, Fabio; Poggi, Matteo; Mattoccia, Stefano; Di Stefano, Luigi: Real-time self-adaptive deep stereo, 2018, https://arxiv.org/abs/1810.05424
-Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
-Lu, Changsheng; Xia, Siyu; Shao, Ming; Fu, Yun: High-quality Ellipse Detection Based on Arc-support Line Segments, 2018, https://arxiv.org/abs/1810.03243
-Manhardt, Fabian; Kehl, Wadim; Navab, Nassir; Tombari, Federico: Deep Model-Based 6D Pose Refinement in RGB, 2018, https://arxiv.org/abs/1810.03065
-Lee, Kuan-Hui; Ros, German; Li, Jie; Gaidon, Adrien: SPIGAN: Privileged Adversarial Learning from Simulation, 2018, https://arxiv.org/abs/1810.03756
-Zhuang, Zijie; Ai, Haizhou; Chen, Long; Shang, Chong: Cross-Resolution Person Re-identification with Deep Antithetical Learning, 2018, https://arxiv.org/abs/1810.10221
-Lu, Zhiwu; Guan, Jiechao; Li, Aoxue; Xiang, Tao; Zhao, An; Wen, Ji-Rong: Zero and Few Shot Learning with Semantic Feature Synthesis and Competitive Learning, 2018, https://arxiv.org/abs/1810.08332
-Koenig, Jonas; Malberg, Simon; Martens, Martin; Niehaus, Sebastian; Krohn-Grimberghe, Artus; Ramaswamy, Arunselvan: Multi-Stage Reinforcement Learning For Object Detection, 2018, https://arxiv.org/abs/1810.10325
-Wang, Hai; Williams, Jason D.; Kang, SingBing: Learning to Globally Edit Images with Textual Description, 2018, https://arxiv.org/abs/1810.05786
-Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
-Chiu, Hsu-kuang; Adeli, Ehsan; Wang, Borui; Huang, De-An; Niebles, Juan Carlos: Action-Agnostic Human Pose Forecasting, 2018, https://arxiv.org/abs/1810.09676
-Yu, Xiaoming; Cai, Xing; Ying, Zhenqiang; Li, Thomas; Li, Ge: SingleGAN: Image-to-Image Translation by a Single-Generator Network using Multiple Generative Adversarial Learning, 2018, https://arxiv.org/abs/1810.04991
-Mei, Kangfu; Jiang, Aiwen; Li, Juncheng; Ye, Jihua; Wang, Mingwen: An Effective Single-Image Super-Resolution Model Using Squeeze-and-Excitation Networks, 2018, https://arxiv.org/abs/1810.01831
-Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
-Gonthier, Nicolas; Gousseau, Yann; Ladjal, Said; Bonfait, Olivier: Weakly Supervised Object Detection in Artworks, 2018, https://arxiv.org/abs/1810.02569
-Liu, Risheng; Ma, Long; Wang, Yiyang; Zhang, Lei: Learning Converged Propagations with Deep Prior Ensemble for Image Enhancement, 2018, https://arxiv.org/abs/1810.04012
-Öfverstedt, Johan; Lindblad, Joakim; Sladoje, Nataša: Stochastic Distance Transform, 2018, https://arxiv.org/abs/1810.08097
-Rocco, Ignacio; Cimpoi, Mircea; Arandjelović, Relja; Torii, Akihiko; Pajdla, Tomas; Sivic, Josef: Neighbourhood Consensus Networks, 2018, https://arxiv.org/abs/1810.10510
-Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
-Manhardt, Fabian; Kehl, Wadim; Navab, Nassir; Tombari, Federico: Deep Model-Based 6D Pose Refinement in RGB, 2018, https://arxiv.org/abs/1810.03065
-Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
-Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
-Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
-Liao, Zhibin; Drummond, Tom; Reid, Ian; Carneiro, Gustavo: Approximate Fisher Information Matrix to Characterise the Training of Deep Neural Networks, 2018, https://arxiv.org/abs/1810.06767
-Cheng, Xinjing; Wang, Peng; Yang, Ruigang: Learning Depth with Convolutional Spatial Propagation Network, 2018, https://arxiv.org/abs/1810.02695
-Rocco, Ignacio; Cimpoi, Mircea; Arandjelović, Relja; Torii, Akihiko; Pajdla, Tomas; Sivic, Josef: Neighbourhood Consensus Networks, 2018, https://arxiv.org/abs/1810.10510
-Ge, Weifeng; Huang, Weilin; Dong, Dengke; Scott, Matthew R.: Deep Metric Learning with Hierarchical Triplet Loss, 2018, https://arxiv.org/abs/1810.06951
-Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
-Cheng, Ruiqi; Wang, Kaiwei; Lin, Longqing; Yang, Kailun: Visual Localization of Key Positions for Visually Impaired People, 2018, https://arxiv.org/abs/1810.03790
-Chou, Hsin-Rung; Lee, Jia-Hong; Chan, Yi-Ming; Chen, Chu-Song: Data-specific Adaptive Threshold for Face Recognition and Authentication, 2018, https://arxiv.org/abs/1810.11160
-Mustaniemi, Janne; Kannala, Juho; Särkkä, Simo; Matas, Jiri; Heikkilä, Janne: Gyroscope-Aided Motion Deblurring with Deep Networks, 2018, https://arxiv.org/abs/1810.00986
-Buchholz, Tim-Oliver; Jordan, Mareike; Pigino, Gaia; Jug, Florian: Cryo-CARE: Content-Aware Image Restoration for Cryo-Transmission Electron Microscopy Data, 2018, https://arxiv.org/abs/1810.05420
-"Tarroni, Giacomo; Oktay, Ozan; Sinclair, Matthew; Bai, Wenjia; Schuh, Andreas; Suzuki, Hideaki; de Marvao, Antonio; O'Regan, Declan; Cook, Stuart; Rueckert, Daniel;: A Comprehensive Approach for Learning-based Fully-Automated Inter-slice Motion Correction for Short-Axis Cine Cardiac MR Image Stacks, 2018, https://arxiv.org/abs/1810.02201
-Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
-Liu, Yuanliu; Li, Ang; Yuan, Zejian; Chen, Badong; Zheng, Nanning: Consistency-aware Shading Orders Selective Fusion for Intrinsic Image Decomposition, 2018, https://arxiv.org/abs/1810.09706
-Hong, Danfeng; Yokoya, Naoto; Chanussot, Jocelyn; Zhu, Xiao Xiang: An Augmented Linear Mixing Model to Address Spectral Variability for Hyperspectral Unmixing, 2018, https://arxiv.org/abs/1810.12000
-Park, Ji Hwan; Nadeem, Saad; Mirhosseini, Seyedkoosha; Kaufman, Arie: C2A: Crowd Consensus Analytics for Virtual Colonoscopy, 2018, https://arxiv.org/abs/1810.09012
-Tang, Wei; Li, Teng; Nian, Fudong; Wang, Meng: MsCGAN: Multi-scale Conditional Generative Adversarial Networks for Person Image Generation, 2018, https://arxiv.org/abs/1810.08534
-Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
-Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
-Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
-Qi, Lu; Liu, Shu; Shi, Jianping; Jia, Jiaya: Sequential Context Encoding for Duplicate Removal, 2018, https://arxiv.org/abs/1810.08770
-Torosdagli, Neslisah; Liberton, Denise K.; Verma, Payal; Sincan, Murat; Lee, Janice S.; Bagci, Ulas: Deep Geodesic Learning for Segmentation and Anatomical Landmarking, 2018, https://arxiv.org/abs/1810.04021
-Liu, Risheng; Ma, Long; Wang, Yiyang; Zhang, Lei: Learning Converged Propagations with Deep Prior Ensemble for Image Enhancement, 2018, https://arxiv.org/abs/1810.04012
-Kuchera, Michelle P.; Ramanujan, Raghuram; Taylor, Jack Z.; Strauss, Ryan R.; Bazin, Daniel; Bradt, Joshua; Chen, Ruiming: Machine Learning Methods for Track Classification in the AT-TPC, 2018, https://arxiv.org/abs/1810.10350
-Öfverstedt, Johan; Lindblad, Joakim; Sladoje, Nataša: Stochastic Distance Transform, 2018, https://arxiv.org/abs/1810.08097
-Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
-Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
-Zhou, Tao; Fang, Chen; Wang, Zhaowen; Yang, Jimei; Kim, Byungmoon; Chen, Zhili; Brandt, Jonathan; Terzopoulos, Demetri: Learning to Sketch with Deep Q Networks and Demonstrated Strokes, 2018, https://arxiv.org/abs/1810.05977
-Cavallari, Tommaso; Golodetz, Stuart; Lord, Nicholas A.; Valentin, Julien; Prisacariu, Victor A.; Di Stefano, Luigi; Torr, Philip H. S.: Real-Time RGB-D Camera Pose Estimation in Novel Scenes using a Relocalisation Cascade, 2018, https://arxiv.org/abs/1810.12163
-Chou, Hsin-Rung; Lee, Jia-Hong; Chan, Yi-Ming; Chen, Chu-Song: Data-specific Adaptive Threshold for Face Recognition and Authentication, 2018, https://arxiv.org/abs/1810.11160
-Nam, Seonghyeon; Kim, Yunji; Kim, Seon Joo: Text-Adaptive Generative Adversarial Networks: Manipulating Images with Natural Language, 2018, https://arxiv.org/abs/1810.11919
-Krish, Ram P.; Fierrez, Julian; Ramos, Daniel; Alonso-Fernandez, Fernando; Bigun, Josef: Improving Automated Latent Fingerprint Identification using Extended Minutia Types, 2018, https://arxiv.org/abs/1810.09801
-Kasten, Yoni; Werman, Michael: Two view constraints on the epipoles from few correspondences, 2018, https://arxiv.org/abs/1810.09496
-Varytimidis, Dimitrios; Alonso-Fernandez, Fernando; Duran, Boris; Englund, Cristofer: Action and intention recognition of pedestrians in urban traffic, 2018, https://arxiv.org/abs/1810.09805
-Swofford, Mason: Image Completion on CIFAR-10, 2018, https://arxiv.org/abs/1810.03213
-Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
-Cuzzolin, Fabio: Visions of a generalized probability theory, 2018, https://arxiv.org/abs/1810.10341
-Wang, Hai; Williams, Jason D.; Kang, SingBing: Learning to Globally Edit Images with Textual Description, 2018, https://arxiv.org/abs/1810.05786
-Temel, Dogancan; Lee, Jinsol; AlRegib, Ghassan: CURE-OR: Challenging Unreal and Real Environments for Object Recognition, 2018, https://arxiv.org/abs/1810.08293
-Swofford, Mason: Image Completion on CIFAR-10, 2018, https://arxiv.org/abs/1810.03213
-Kehl, Christian; Mustafa, Wail; Kehres, Jan; Dahl, Anders Bjorholm; Olsen, Ulrik Lund: Multi-Spectral Imaging via Computed Tomography (MUSIC) - Comparing Unsupervised Spectral Segmentations for Material Differentiation, 2018, https://arxiv.org/abs/1810.11823
-Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
-Yu, Fuxun; Qin, Zhuwei; Chen, Xiang: Distilling Critical Paths in Convolutional Neural Networks, 2018, https://arxiv.org/abs/1811.02643
-Wolterink, Jelmer M.; van Hamersvelt, Robbert W.; Viergever, Max A.; Leiner, Tim; Išgum, Ivana: Coronary Artery Centerline Extraction in Cardiac CT Angiography Using a CNN-Based Orientation Classifier, 2018, https://arxiv.org/abs/1810.03143
-Mao, Wendong; Wang, Mingjie; Zhou, Jun; Gong, Minglun: Semi-dense Stereo Matching using Dual CNNs, 2018, https://arxiv.org/abs/1810.01369
-Nekrasov, Vladimir; Shen, Chunhua; Reid, Ian: Light-Weight RefineNet for Real-Time Semantic Segmentation, 2018, https://arxiv.org/abs/1810.03272
-Daudt, Rodrigo Caye; Saux, Bertrand Le; Boulch, Alexandre: Fully Convolutional Siamese Networks for Change Detection, 2018, https://arxiv.org/abs/1810.08462
-Kehl, Christian; Mustafa, Wail; Kehres, Jan; Dahl, Anders Bjorholm; Olsen, Ulrik Lund: Multi-Spectral Imaging via Computed Tomography (MUSIC) - Comparing Unsupervised Spectral Segmentations for Material Differentiation, 2018, https://arxiv.org/abs/1810.11823
-Noothout, Julia M. H.; de Vos, Bob D.; Wolterink, Jelmer M.; Isgum, Ivana: Automatic Segmentation of Thoracic Aorta Segments in Low-Dose Chest CT, 2018, https://arxiv.org/abs/1810.05727
-Kalash, Mahmoud; Islam, Md Amirul; Bruce, Neil D. B.: Relative Saliency and Ranking: Models, Metrics, Data, and Benchmarks, 2018, https://arxiv.org/abs/1810.02426
-Lee, Sang Jun; Kim, Sang Woo; Kwon, Wookyong; Koo, Gyogwon; Yun, Jong Pil: Selective Distillation of Weakly Annotated GTD for Vision-based Slab Identification System, 2018, https://arxiv.org/abs/1810.04029
-Nadeem, Saad; Kaufman, Arie: Visualization Framework for Colonoscopy Videos, 2018, https://arxiv.org/abs/1810.08998
-Zou, Yang; Yu, Zhiding; Kumar, B. V. K. Vijaya; Wang, Jinsong: Domain Adaptation for Semantic Segmentation via Class-Balanced Self-Training, 2018, https://arxiv.org/abs/1810.07911
-Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
-Dong, Haoye; Liang, Xiaodan; Gong, Ke; Lai, Hanjiang; Zhu, Jia; Yin, Jian: Soft-Gated Warping-GAN for Pose-Guided Person Image Synthesis, 2018, https://arxiv.org/abs/1810.11610
-Ma, Minghuang; Pouransari, Hadi; Chao, Daniel; Adya, Saurabh; Serrano, Santiago Akle; Qin, Yi; Gimnicher, Dan; Walsh, Dominic: Democratizing Production-Scale Distributed Deep Learning, 2018, https://arxiv.org/abs/1811.00143
-Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
-Mei, Kangfu; Jiang, Aiwen; Li, Juncheng; Ye, Jihua; Wang, Mingwen: An Effective Single-Image Super-Resolution Model Using Squeeze-and-Excitation Networks, 2018, https://arxiv.org/abs/1810.01831
-Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
-Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
-Qian, Kun; Zhou, Jun; Xiong, Fengchao; Zhou, Huixin; Du, Juan: Object Tracking in Hyperspectral Videos with Convolutional Features and Kernelized Correlation Filter, 2018, https://arxiv.org/abs/1810.11819
-Liu, Shenglan; Liu, Xiang; Liu, Yang; Feng, Lin; Qiao, Hong; Zhou, Jian; Wang, Yang: Perceptual Visual Interactive Learning, 2018, https://arxiv.org/abs/1810.10789
-Chen, Min; Song, Andy; Yhanandan, Shivanthan A. C.; Zhang, Jing: Background Subtraction using Compressed Low-resolution Images, 2018, https://arxiv.org/abs/1810.10155
-Stamatescu, Victor; McDonnell, Mark D.: Diagnosing Convolutional Neural Networks using their Spectral Response, 2018, https://arxiv.org/abs/1810.03241
-Ge, Weifeng; Huang, Weilin; Dong, Dengke; Scott, Matthew R.: Deep Metric Learning with Hierarchical Triplet Loss, 2018, https://arxiv.org/abs/1810.06951
-Lei, Yiming; Tian, Yukun; Shan, Hongming; Zhang, Junping; Wang, Ge; Kalra, Mannudeep: Soft Activation Mapping of Lung Nodules in Low-Dose CT images, 2018, https://arxiv.org/abs/1810.12494
-Zhou, Tao; Fang, Chen; Wang, Zhaowen; Yang, Jimei; Kim, Byungmoon; Chen, Zhili; Brandt, Jonathan; Terzopoulos, Demetri: Learning to Sketch with Deep Q Networks and Demonstrated Strokes, 2018, https://arxiv.org/abs/1810.05977
-Dai, Dengxin; Van Gool, Luc: Dark Model Adaptation: Semantic Image Segmentation from Daytime to Nighttime, 2018, https://arxiv.org/abs/1810.02575
-Kuo, C. -C. Jay; Zhang, Min; Li, Siyang; Duan, Jiali; Chen, Yueru: Interpretable Convolutional Neural Networks via Feedforward Design, 2018, https://arxiv.org/abs/1810.02786
-Ling, Suiyi; Gutiérrez, Jesús; Ke, Gu; Callet, Patrick Le: Prediction of the Influence of Navigation Scan-path on Perceived Quality of Free-Viewpoint Videos, 2018, https://arxiv.org/abs/1810.04409
-Ghiasi, Golnaz; Lin, Tsung-Yi; Le, Quoc V.: DropBlock: A regularization method for convolutional networks, 2018, https://arxiv.org/abs/1810.12890
-Meng, Lili; Zhao, Bo; Chang, Bo; Huang, Gao; Tung, Frederick; Sigal, Leonid: Where and When to Look? Spatio-temporal Attention for Action Recognition in Videos, 2018, https://arxiv.org/abs/1810.04511
+1. Mondal, Arnab Kumar; Dolz, Jose; Desrosiers, Christian: Few-shot 3D Multi-modal Medical Image Segmentation using Generative Adversarial Learning, 2018, https://arxiv.org/abs/1810.12241
+2. Stamatescu, Victor; McDonnell, Mark D.: Diagnosing Convolutional Neural Networks using their Spectral Response, 2018, https://arxiv.org/abs/1810.03241
+3. Cavallari, Tommaso; Golodetz, Stuart; Lord, Nicholas A.; Valentin, Julien; Prisacariu, Victor A.; Di Stefano, Luigi; Torr, Philip H. S.: Real-Time RGB-D Camera Pose Estimation in Novel Scenes using a Relocalisation Cascade, 2018, https://arxiv.org/abs/1810.12163
+4. Mao, Wendong; Wang, Mingjie; Zhou, Jun; Gong, Minglun: Semi-dense Stereo Matching using Dual CNNs, 2018, https://arxiv.org/abs/1810.01369
+5. Engelmann, Francis; Kontogianni, Theodora; Schult, Jonas; Leibe, Bastian: Know What Your Neighbors Do: 3D Semantic Segmentation of Point Clouds, 2018, https://arxiv.org/abs/1810.01151
+6. Aliakbarian, Mohammad Sadegh; Saleh, Fatemeh Sadat; Salzmann, Mathieu; Fernando, Basura; Petersson, Lars; Andersson, Lars: VIENA2: A Driving Anticipation Dataset, 2018, https://arxiv.org/abs/1810.09044
+7. Liang, Yixiong; Mao, Yuan; Xia, Jiazhi; Xiang, Yao; Liu, Jianfeng: Scale-Invariant Structure Saliency Selection for Fast Image Fusion, 2018, https://arxiv.org/abs/1810.12553
+8. Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
+9. Laves, Max-Heinrich; Kahrs, Lüder A.; Ortmaier, Tobias: Deep learning based 2.5D flow field estimation for maximum intensity projections of 4D optical coherence tomography, 2018, https://arxiv.org/abs/1810.11205
+10. Lin, Hubert; Averkiou, Melinos; Kalogerakis, Evangelos; Kovacs, Balazs; Ranade, Siddhant; Kim, Vladimir G.; Chaudhuri, Siddhartha; Bala, Kavita: Learning Material-Aware Local Descriptors for 3D Shapes, 2018, https://arxiv.org/abs/1810.08729
+11. Le, T. Hoang Ngan; Gummadi, Raajitha; Savvides, Marios: Deep Recurrent Level Set for Segmenting Brain Tumors, 2018, https://arxiv.org/abs/1810.04752
+12. Chen, Chen; Bai, Wenjia; Rueckert, Daniel: Multi-Task Learning for Left Atrial Segmentation on GE-MRI, 2018, https://arxiv.org/abs/1810.13205
+13. Irmakci, Ismail; Hussein, Sarfaraz; Savran, Aydogan; Kalyani, Rita R.; Reiter, David; Chia, Chee W.; Fishbein, Kenneth W.; Spencer, Richard G.; Ferrucci, Luigi; Bagci, Ulas: A Novel Extension to Fuzzy Connectivity for Body Composition Analysis: Applications in Thigh, Brain, and Whole Body Tissue Segmentation, 2018, https://arxiv.org/abs/1810.06071
+14. Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
+15. Melekhov, Iaroslav; Tiulpin, Aleksei; Sattler, Torsten; Pollefeys, Marc; Rahtu, Esa; Kannala, Juho: DGC-Net: Dense Geometric Correspondence Network, 2018, https://arxiv.org/abs/1810.08393
+16. Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
+17. Krish, Ram P.; Fierrez, Julian; Ramos, Daniel; Alonso-Fernandez, Fernando; Bigun, Josef: Improving Automated Latent Fingerprint Identification using Extended Minutia Types, 2018, https://arxiv.org/abs/1810.09801
+18. Nekrasov, Vladimir; Shen, Chunhua; Reid, Ian: Light-Weight RefineNet for Real-Time Semantic Segmentation, 2018, https://arxiv.org/abs/1810.03272
+19. Borji, Ali: Saliency Prediction in the Deep Learning Era: An Empirical Investigation, 2018, https://arxiv.org/abs/1810.03716
+20. Adebayo, Julius; Gilmer, Justin; Muelly, Michael; Goodfellow, Ian; Hardt, Moritz; Kim, Been: Sanity Checks for Saliency Maps, 2018, https://arxiv.org/abs/1810.03292
+21. Singh, Amanpreet; Agrawal, Sharan: CanvasGAN: A simple baseline for text to image generation by incrementally patching a canvas, 2018, https://arxiv.org/abs/1810.02833
+22. Kuchera, Michelle P.; Ramanujan, Raghuram; Taylor, Jack Z.; Strauss, Ryan R.; Bazin, Daniel; Bradt, Joshua; Chen, Ruiming: Machine Learning Methods for Track Classification in the AT-TPC, 2018, https://arxiv.org/abs/1810.10350
+23. Hossain, Md. Zakir; Sohel, Ferdous; Shiratuddin, Mohd Fairuz; Laga, Hamid: A Comprehensive Survey of Deep Learning for Image Captioning, 2018, https://arxiv.org/abs/1810.04020
+24. Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
+25. Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+26. Wang, Yaming; Tan, Xiao; Yang, Yi; Li, Ziyu; Liu, Xiao; Zhou, Feng; Davis, Larry S.: Improving Annotation for 3D Pose Dataset of Fine-Grained Object Categories, 2018, https://arxiv.org/abs/1810.09263
+27. Ramirez, Pierluigi Zama; Poggi, Matteo; Tosi, Fabio; Mattoccia, Stefano; Di Stefano, Luigi: Geometry meets semantics for semi-supervised monocular depth estimation, 2018, https://arxiv.org/abs/1810.04093
+28. Lee, Kuan-Hui; Ros, German; Li, Jie; Gaidon, Adrien: SPIGAN: Privileged Adversarial Learning from Simulation, 2018, https://arxiv.org/abs/1810.03756
+29. Dodds, Eric; Nguyen, Huy; Herdade, Simao; Culpepper, Jack; Kae, Andrew; Garrigues, Pierre: Learning Embeddings for Product Visual Search with Triplet Loss and Online Sampling, 2018, https://arxiv.org/abs/1810.04652
+30. Dai, Dengxin; Van Gool, Luc: Dark Model Adaptation: Semantic Image Segmentation from Daytime to Nighttime, 2018, https://arxiv.org/abs/1810.02575
+31. Liu, Jing; van der Schot, Gijs; Engblom, Stefan: Supervised Classification Methods for Flash X-ray single particle diffraction Imaging, 2018, https://arxiv.org/abs/1810.10786
+32. Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+33. Marin, Javier; Biswas, Aritro; Ofli, Ferda; Hynes, Nicholas; Salvador, Amaia; Aytar, Yusuf; Weber, Ingmar; Torralba, Antonio: Recipe1M: A Dataset for Learning Cross-Modal Embeddings for Cooking Recipes and Food Images, 2018, https://arxiv.org/abs/1810.06553
+34. Nekrasov, Vladimir; Chen, Hao; Shen, Chunhua; Reid, Ian: Fast Neural Architecture Search of Compact Semantic Segmentation Models via Auxiliary Cells, 2018, https://arxiv.org/abs/1810.10804
+35. Kuzin, Artur; Fattakhov, Artur; Kibardin, Ilya; Iglovikov, Vladimir; Dautov, Ruslan: Camera Model Identification Using Convolutional Neural Networks, 2018, https://arxiv.org/abs/1810.02981
+36. Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+37. Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+38. Yun, Inyong; Jung, Cheolkon; Wang, Xinran; Hero, Alfred O; Kim, Joongkyu: Part-Level Convolutional Neural Networks for Pedestrian Detection Using Saliency and Boundary Box Alignment, 2018, https://arxiv.org/abs/1810.00689
+39. Prakash, Aayush; Boochoon, Shaad; Brophy, Mark; Acuna, David; Cameracci, Eric; State, Gavriel; Shapira, Omer; Birchfield, Stan: Structured Domain Randomization: Bridging the Reality Gap by Context-Aware Synthetic Data, 2018, https://arxiv.org/abs/1810.10093
+40. Temel, Dogancan; Lee, Jinsol; AlRegib, Ghassan: CURE-OR: Challenging Unreal and Real Environments for Object Recognition, 2018, https://arxiv.org/abs/1810.08293
+41. Planche, Benjamin; Zakharov, Sergey; Wu, Ziyan; Hutter, Andreas; Kosch, Harald; Ilic, Slobodan: Seeing Beyond Appearance - Mapping Real Images into Geometrical Domains for Unsupervised CAD-based Recognition, 2018, https://arxiv.org/abs/1810.04158
+42. Shuster, Kurt; Humeau, Samuel; Hu, Hexiang; Bordes, Antoine; Weston, Jason: Engaging Image Captioning Via Personality, 2018, https://arxiv.org/abs/1810.10665
+43. Chiu, Hsu-kuang; Adeli, Ehsan; Wang, Borui; Huang, De-An; Niebles, Juan Carlos: Action-Agnostic Human Pose Forecasting, 2018, https://arxiv.org/abs/1810.09676
+44. Girard, Julien; Tamaazousti, Youssef; Borgne, Hervé Le; Hudelot, Céline: Learning Finer-class Networks for Universal Representations, 2018, https://arxiv.org/abs/1810.02126
+45. Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+46. Baptista-Ríos, Marcos; López-Sastre, Roberto J.; Acevedo-Rodríguez, Franciso Javier; Maldonado-Bascón, Saturnino: Embarrassingly Simple Model for Early Action Proposal, 2018, https://arxiv.org/abs/1810.07420
+47. Femling, Frida; Olsson, Adam; Alonso-Fernandez, Fernando: Fruit and Vegetable Identification Using Machine Learning for Retail Applications, 2018, https://arxiv.org/abs/1810.09811
+48. Lu, Changsheng; Xia, Siyu; Shao, Ming; Fu, Yun: High-quality Ellipse Detection Based on Arc-support Line Segments, 2018, https://arxiv.org/abs/1810.03243
+49. Kuzin, Artur; Fattakhov, Artur; Kibardin, Ilya; Iglovikov, Vladimir; Dautov, Ruslan: Camera Model Identification Using Convolutional Neural Networks, 2018, https://arxiv.org/abs/1810.02981
+50. Ekström, Simon; Malmberg, Filip; Ahlström, Håkan; Kullberg, Joel; Strand, Robin: Fast Graph-Cut Based Optimization for Practical Dense Deformable Registration of Volume Images, 2018, https://arxiv.org/abs/1810.08427
+51. Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
+52. Tonioni, Alessio; Tosi, Fabio; Poggi, Matteo; Mattoccia, Stefano; Di Stefano, Luigi: Real-time self-adaptive deep stereo, 2018, https://arxiv.org/abs/1810.05424
+53. Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
+54. Lu, Changsheng; Xia, Siyu; Shao, Ming; Fu, Yun: High-quality Ellipse Detection Based on Arc-support Line Segments, 2018, https://arxiv.org/abs/1810.03243
+55. Manhardt, Fabian; Kehl, Wadim; Navab, Nassir; Tombari, Federico: Deep Model-Based 6D Pose Refinement in RGB, 2018, https://arxiv.org/abs/1810.03065
+56. Lee, Kuan-Hui; Ros, German; Li, Jie; Gaidon, Adrien: SPIGAN: Privileged Adversarial Learning from Simulation, 2018, https://arxiv.org/abs/1810.03756
+57. Zhuang, Zijie; Ai, Haizhou; Chen, Long; Shang, Chong: Cross-Resolution Person Re-identification with Deep Antithetical Learning, 2018, https://arxiv.org/abs/1810.10221
+58. Lu, Zhiwu; Guan, Jiechao; Li, Aoxue; Xiang, Tao; Zhao, An; Wen, Ji-Rong: Zero and Few Shot Learning with Semantic Feature Synthesis and Competitive Learning, 2018, https://arxiv.org/abs/1810.08332
+59. Koenig, Jonas; Malberg, Simon; Martens, Martin; Niehaus, Sebastian; Krohn-Grimberghe, Artus; Ramaswamy, Arunselvan: Multi-Stage Reinforcement Learning For Object Detection, 2018, https://arxiv.org/abs/1810.10325
+60. Wang, Hai; Williams, Jason D.; Kang, SingBing: Learning to Globally Edit Images with Textual Description, 2018, https://arxiv.org/abs/1810.05786
+61. Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+62. Chiu, Hsu-kuang; Adeli, Ehsan; Wang, Borui; Huang, De-An; Niebles, Juan Carlos: Action-Agnostic Human Pose Forecasting, 2018, https://arxiv.org/abs/1810.09676
+63. Yu, Xiaoming; Cai, Xing; Ying, Zhenqiang; Li, Thomas; Li, Ge: SingleGAN: Image-to-Image Translation by a Single-Generator Network using Multiple Generative Adversarial Learning, 2018, https://arxiv.org/abs/1810.04991
+64. Mei, Kangfu; Jiang, Aiwen; Li, Juncheng; Ye, Jihua; Wang, Mingwen: An Effective Single-Image Super-Resolution Model Using Squeeze-and-Excitation Networks, 2018, https://arxiv.org/abs/1810.01831
+65. Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
+66. Gonthier, Nicolas; Gousseau, Yann; Ladjal, Said; Bonfait, Olivier: Weakly Supervised Object Detection in Artworks, 2018, https://arxiv.org/abs/1810.02569
+67. Liu, Risheng; Ma, Long; Wang, Yiyang; Zhang, Lei: Learning Converged Propagations with Deep Prior Ensemble for Image Enhancement, 2018, https://arxiv.org/abs/1810.04012
+68. Öfverstedt, Johan; Lindblad, Joakim; Sladoje, Nataša: Stochastic Distance Transform, 2018, https://arxiv.org/abs/1810.08097
+69. Rocco, Ignacio; Cimpoi, Mircea; Arandjelović, Relja; Torii, Akihiko; Pajdla, Tomas; Sivic, Josef: Neighbourhood Consensus Networks, 2018, https://arxiv.org/abs/1810.10510
+70. Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+71. Manhardt, Fabian; Kehl, Wadim; Navab, Nassir; Tombari, Federico: Deep Model-Based 6D Pose Refinement in RGB, 2018, https://arxiv.org/abs/1810.03065
+72. Wang, Lijun; Shen, Xiaohui; Zhang, Jianming; Wang, Oliver; Lin, Zhe; Hsieh, Chih-Yao; Kong, Sarah; Lu, Huchuan: DeepLens: Shallow Depth Of Field From A Single Image, 2018, https://arxiv.org/abs/1810.08100
+73. Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+74. Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
+75. Liao, Zhibin; Drummond, Tom; Reid, Ian; Carneiro, Gustavo: Approximate Fisher Information Matrix to Characterise the Training of Deep Neural Networks, 2018, https://arxiv.org/abs/1810.06767
+76. Cheng, Xinjing; Wang, Peng; Yang, Ruigang: Learning Depth with Convolutional Spatial Propagation Network, 2018, https://arxiv.org/abs/1810.02695
+77. Rocco, Ignacio; Cimpoi, Mircea; Arandjelović, Relja; Torii, Akihiko; Pajdla, Tomas; Sivic, Josef: Neighbourhood Consensus Networks, 2018, https://arxiv.org/abs/1810.10510
+78. Ge, Weifeng; Huang, Weilin; Dong, Dengke; Scott, Matthew R.: Deep Metric Learning with Hierarchical Triplet Loss, 2018, https://arxiv.org/abs/1810.06951
+79. Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
+80. Cheng, Ruiqi; Wang, Kaiwei; Lin, Longqing; Yang, Kailun: Visual Localization of Key Positions for Visually Impaired People, 2018, https://arxiv.org/abs/1810.03790
+81. Chou, Hsin-Rung; Lee, Jia-Hong; Chan, Yi-Ming; Chen, Chu-Song: Data-specific Adaptive Threshold for Face Recognition and Authentication, 2018, https://arxiv.org/abs/1810.11160
+82. Mustaniemi, Janne; Kannala, Juho; Särkkä, Simo; Matas, Jiri; Heikkilä, Janne: Gyroscope-Aided Motion Deblurring with Deep Networks, 2018, https://arxiv.org/abs/1810.00986
+83. Buchholz, Tim-Oliver; Jordan, Mareike; Pigino, Gaia; Jug, Florian: Cryo-CARE: Content-Aware Image Restoration for Cryo-Transmission Electron Microscopy Data, 2018, https://arxiv.org/abs/1810.05420
+84. "Tarroni, Giacomo; Oktay, Ozan; Sinclair, Matthew; Bai, Wenjia; Schuh, Andreas; Suzuki, Hideaki; de Marvao, Antonio; O'Regan, Declan; Cook, Stuart; Rueckert, Daniel;: A Comprehensive Approach for Learning-based Fully-Automated Inter-slice Motion Correction for Short-Axis Cine Cardiac MR Image Stacks, 2018, https://arxiv.org/abs/1810.02201
+85. Cho, Hyunjoong; Jang, Jinhyeok; Lee, Chanhyeok; Yang, Seungjoon: Optimal Architecture for Deep Neural Networks with Heterogeneous Sensitivity, 2018, https://arxiv.org/abs/1810.05358
+86. Liu, Yuanliu; Li, Ang; Yuan, Zejian; Chen, Badong; Zheng, Nanning: Consistency-aware Shading Orders Selective Fusion for Intrinsic Image Decomposition, 2018, https://arxiv.org/abs/1810.09706
+87. Hong, Danfeng; Yokoya, Naoto; Chanussot, Jocelyn; Zhu, Xiao Xiang: An Augmented Linear Mixing Model to Address Spectral Variability for Hyperspectral Unmixing, 2018, https://arxiv.org/abs/1810.12000
+88. Park, Ji Hwan; Nadeem, Saad; Mirhosseini, Seyedkoosha; Kaufman, Arie: C2A: Crowd Consensus Analytics for Virtual Colonoscopy, 2018, https://arxiv.org/abs/1810.09012
+89. Tang, Wei; Li, Teng; Nian, Fudong; Wang, Meng: MsCGAN: Multi-scale Conditional Generative Adversarial Networks for Person Image Generation, 2018, https://arxiv.org/abs/1810.08534
+90. Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
+91. Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
+92. Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
+93. Qi, Lu; Liu, Shu; Shi, Jianping; Jia, Jiaya: Sequential Context Encoding for Duplicate Removal, 2018, https://arxiv.org/abs/1810.08770
+94. Torosdagli, Neslisah; Liberton, Denise K.; Verma, Payal; Sincan, Murat; Lee, Janice S.; Bagci, Ulas: Deep Geodesic Learning for Segmentation and Anatomical Landmarking, 2018, https://arxiv.org/abs/1810.04021
+95. Liu, Risheng; Ma, Long; Wang, Yiyang; Zhang, Lei: Learning Converged Propagations with Deep Prior Ensemble for Image Enhancement, 2018, https://arxiv.org/abs/1810.04012
+96. Kuchera, Michelle P.; Ramanujan, Raghuram; Taylor, Jack Z.; Strauss, Ryan R.; Bazin, Daniel; Bradt, Joshua; Chen, Ruiming: Machine Learning Methods for Track Classification in the AT-TPC, 2018, https://arxiv.org/abs/1810.10350
+97. Öfverstedt, Johan; Lindblad, Joakim; Sladoje, Nataša: Stochastic Distance Transform, 2018, https://arxiv.org/abs/1810.08097
+98. Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+99. Jacobs, Nathan; Kraft, Adam; Rafique, Muhammad Usman; Sharma, Ranti Dev: A Weakly Supervised Approach for Estimating Spatial Density Functions from High-Resolution Satellite Imagery, 2018, https://arxiv.org/abs/1810.09528
+100. Zhou, Tao; Fang, Chen; Wang, Zhaowen; Yang, Jimei; Kim, Byungmoon; Chen, Zhili; Brandt, Jonathan; Terzopoulos, Demetri: Learning to Sketch with Deep Q Networks and Demonstrated Strokes, 2018, https://arxiv.org/abs/1810.05977
+101. Cavallari, Tommaso; Golodetz, Stuart; Lord, Nicholas A.; Valentin, Julien; Prisacariu, Victor A.; Di Stefano, Luigi; Torr, Philip H. S.: Real-Time RGB-D Camera Pose Estimation in Novel Scenes using a Relocalisation Cascade, 2018, https://arxiv.org/abs/1810.12163
+102. Chou, Hsin-Rung; Lee, Jia-Hong; Chan, Yi-Ming; Chen, Chu-Song: Data-specific Adaptive Threshold for Face Recognition and Authentication, 2018, https://arxiv.org/abs/1810.11160
+103. Nam, Seonghyeon; Kim, Yunji; Kim, Seon Joo: Text-Adaptive Generative Adversarial Networks: Manipulating Images with Natural Language, 2018, https://arxiv.org/abs/1810.11919
+104. Krish, Ram P.; Fierrez, Julian; Ramos, Daniel; Alonso-Fernandez, Fernando; Bigun, Josef: Improving Automated Latent Fingerprint Identification using Extended Minutia Types, 2018, https://arxiv.org/abs/1810.09801
+105. Kasten, Yoni; Werman, Michael: Two view constraints on the epipoles from few correspondences, 2018, https://arxiv.org/abs/1810.09496
+106. Varytimidis, Dimitrios; Alonso-Fernandez, Fernando; Duran, Boris; Englund, Cristofer: Action and intention recognition of pedestrians in urban traffic, 2018, https://arxiv.org/abs/1810.09805
+107. Swofford, Mason: Image Completion on CIFAR-10, 2018, https://arxiv.org/abs/1810.03213
+108. Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+109. Cuzzolin, Fabio: Visions of a generalized probability theory, 2018, https://arxiv.org/abs/1810.10341
+110. Wang, Hai; Williams, Jason D.; Kang, SingBing: Learning to Globally Edit Images with Textual Description, 2018, https://arxiv.org/abs/1810.05786
+111. Temel, Dogancan; Lee, Jinsol; AlRegib, Ghassan: CURE-OR: Challenging Unreal and Real Environments for Object Recognition, 2018, https://arxiv.org/abs/1810.08293
+112. Swofford, Mason: Image Completion on CIFAR-10, 2018, https://arxiv.org/abs/1810.03213
+113. Kehl, Christian; Mustafa, Wail; Kehres, Jan; Dahl, Anders Bjorholm; Olsen, Ulrik Lund: Multi-Spectral Imaging via Computed Tomography (MUSIC) - Comparing Unsupervised Spectral Segmentations for Material Differentiation, 2018, https://arxiv.org/abs/1810.11823
+114. Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+115. Yu, Fuxun; Qin, Zhuwei; Chen, Xiang: Distilling Critical Paths in Convolutional Neural Networks, 2018, https://arxiv.org/abs/1811.02643
+116. Wolterink, Jelmer M.; van Hamersvelt, Robbert W.; Viergever, Max A.; Leiner, Tim; Išgum, Ivana: Coronary Artery Centerline Extraction in Cardiac CT Angiography Using a CNN-Based Orientation Classifier, 2018, https://arxiv.org/abs/1810.03143
+117. Mao, Wendong; Wang, Mingjie; Zhou, Jun; Gong, Minglun: Semi-dense Stereo Matching using Dual CNNs, 2018, https://arxiv.org/abs/1810.01369
+118. Nekrasov, Vladimir; Shen, Chunhua; Reid, Ian: Light-Weight RefineNet for Real-Time Semantic Segmentation, 2018, https://arxiv.org/abs/1810.03272
+119. Daudt, Rodrigo Caye; Saux, Bertrand Le; Boulch, Alexandre: Fully Convolutional Siamese Networks for Change Detection, 2018, https://arxiv.org/abs/1810.08462
+120. Kehl, Christian; Mustafa, Wail; Kehres, Jan; Dahl, Anders Bjorholm; Olsen, Ulrik Lund: Multi-Spectral Imaging via Computed Tomography (MUSIC) - Comparing Unsupervised Spectral Segmentations for Material Differentiation, 2018, https://arxiv.org/abs/1810.11823
+121. Noothout, Julia M. H.; de Vos, Bob D.; Wolterink, Jelmer M.; Isgum, Ivana: Automatic Segmentation of Thoracic Aorta Segments in Low-Dose Chest CT, 2018, https://arxiv.org/abs/1810.05727
+122. Kalash, Mahmoud; Islam, Md Amirul; Bruce, Neil D. B.: Relative Saliency and Ranking: Models, Metrics, Data, and Benchmarks, 2018, https://arxiv.org/abs/1810.02426
+123. Lee, Sang Jun; Kim, Sang Woo; Kwon, Wookyong; Koo, Gyogwon; Yun, Jong Pil: Selective Distillation of Weakly Annotated GTD for Vision-based Slab Identification System, 2018, https://arxiv.org/abs/1810.04029
+124. Nadeem, Saad; Kaufman, Arie: Visualization Framework for Colonoscopy Videos, 2018, https://arxiv.org/abs/1810.08998
+125. Zou, Yang; Yu, Zhiding; Kumar, B. V. K. Vijaya; Wang, Jinsong: Domain Adaptation for Semantic Segmentation via Class-Balanced Self-Training, 2018, https://arxiv.org/abs/1810.07911
+126. Corona, Enric; Kundu, Kaustav; Fidler, Sanja: Pose Estimation for Objects with Rotational Symmetry, 2018, https://arxiv.org/abs/1810.05780
+127. Dong, Haoye; Liang, Xiaodan; Gong, Ke; Lai, Hanjiang; Zhu, Jia; Yin, Jian: Soft-Gated Warping-GAN for Pose-Guided Person Image Synthesis, 2018, https://arxiv.org/abs/1810.11610
+128. Ma, Minghuang; Pouransari, Hadi; Chao, Daniel; Adya, Saurabh; Serrano, Santiago Akle; Qin, Yi; Gimnicher, Dan; Walsh, Dominic: Democratizing Production-Scale Distributed Deep Learning, 2018, https://arxiv.org/abs/1811.00143
+129. Sarwar, Omair; Rinner, Bernhard; Cavallaro, Andrea: Concealing the identity of faces in oblique images with adaptive hopping Gaussian mixtures, 2018, https://arxiv.org/abs/1810.12435
+130. Mei, Kangfu; Jiang, Aiwen; Li, Juncheng; Ye, Jihua; Wang, Mingwen: An Effective Single-Image Super-Resolution Model Using Squeeze-and-Excitation Networks, 2018, https://arxiv.org/abs/1810.01831
+131. Insafutdinov, Eldar; Dosovitskiy, Alexey: Unsupervised Learning of Shape and Pose with Differentiable Point Clouds, 2018, https://arxiv.org/abs/1810.09381
+132. Lee, Namhoon; Ajanthan, Thalaiyasingam; Torr, Philip H. S.: SNIP: Single-shot Network Pruning based on Connection Sensitivity, 2018, https://arxiv.org/abs/1810.02340
+133. Qian, Kun; Zhou, Jun; Xiong, Fengchao; Zhou, Huixin; Du, Juan: Object Tracking in Hyperspectral Videos with Convolutional Features and Kernelized Correlation Filter, 2018, https://arxiv.org/abs/1810.11819
+134. Liu, Shenglan; Liu, Xiang; Liu, Yang; Feng, Lin; Qiao, Hong; Zhou, Jian; Wang, Yang: Perceptual Visual Interactive Learning, 2018, https://arxiv.org/abs/1810.10789
+135. Chen, Min; Song, Andy; Yhanandan, Shivanthan A. C.; Zhang, Jing: Background Subtraction using Compressed Low-resolution Images, 2018, https://arxiv.org/abs/1810.10155
+136. Stamatescu, Victor; McDonnell, Mark D.: Diagnosing Convolutional Neural Networks using their Spectral Response, 2018, https://arxiv.org/abs/1810.03241
+137. Ge, Weifeng; Huang, Weilin; Dong, Dengke; Scott, Matthew R.: Deep Metric Learning with Hierarchical Triplet Loss, 2018, https://arxiv.org/abs/1810.06951
+138. Lei, Yiming; Tian, Yukun; Shan, Hongming; Zhang, Junping; Wang, Ge; Kalra, Mannudeep: Soft Activation Mapping of Lung Nodules in Low-Dose CT images, 2018, https://arxiv.org/abs/1810.12494
+139. Zhou, Tao; Fang, Chen; Wang, Zhaowen; Yang, Jimei; Kim, Byungmoon; Chen, Zhili; Brandt, Jonathan; Terzopoulos, Demetri: Learning to Sketch with Deep Q Networks and Demonstrated Strokes, 2018, https://arxiv.org/abs/1810.05977
+140. Dai, Dengxin; Van Gool, Luc: Dark Model Adaptation: Semantic Image Segmentation from Daytime to Nighttime, 2018, https://arxiv.org/abs/1810.02575
+141. Kuo, C. -C. Jay; Zhang, Min; Li, Siyang; Duan, Jiali; Chen, Yueru: Interpretable Convolutional Neural Networks via Feedforward Design, 2018, https://arxiv.org/abs/1810.02786
+142. Ling, Suiyi; Gutiérrez, Jesús; Ke, Gu; Callet, Patrick Le: Prediction of the Influence of Navigation Scan-path on Perceived Quality of Free-Viewpoint Videos, 2018, https://arxiv.org/abs/1810.04409
+143. Ghiasi, Golnaz; Lin, Tsung-Yi; Le, Quoc V.: DropBlock: A regularization method for convolutional networks, 2018, https://arxiv.org/abs/1810.12890
+144. Meng, Lili; Zhao, Bo; Chang, Bo; Huang, Gao; Tung, Frederick; Sigal, Leonid: Where and When to Look? Spatio-temporal Attention for Action Recognition in Videos, 2018, https://arxiv.org/abs/1810.04511
 
 * 12x12 stat.ML October 2012
-Knowles, David A.; Ghahramani, Zoubin: Pitman-Yor Diffusion Trees, 2011, https://arxiv.org/abs/1106.2494
-Xu, Ning; Hong, Jian; Fisher, Timothy C. G.: Finite-sample and asymptotic analysis of generalization ability with an application to penalized regression, 2016, https://arxiv.org/abs/1609.03344
-Gasse, Maxime; Aussem, Alex; Elghazel, Haytham: An Experimental Comparison of Hybrid Algorithms for Bayesian Network Structure Learning, 2015, https://arxiv.org/abs/1505.05004
-Oh, Seong Joon; Augustin, Max; Schiele, Bernt; Fritz, Mario: Towards Reverse-Engineering Black-Box Neural Networks, 2017, https://arxiv.org/abs/1711.01768
-Schoenholz, Samuel S.; Gilmer, Justin; Ganguli, Surya; Sohl-Dickstein, Jascha: Deep Information Propagation, 2016, https://arxiv.org/abs/1611.01232
-Wang, Xu; Slavakis, Konstantinos; Lerman, Gilad: Riemannian Multi-Manifold Modeling, 2014, https://arxiv.org/abs/1410.0095
-Gao, Wei; Chen, Jie; Richard, Cédric; Huang, Jianguo: Online dictionary learning for kernel LMS. Analysis and forward-backward splitting algorithm, 2013, https://arxiv.org/abs/1306.5310
-Silva, Ricardo: Observational-Interventional Priors for Dose-Response Learning, 2016, https://arxiv.org/abs/1605.01573
-Suzumura, Shinya; Nakagawa, Kazuya; Sugiyama, Mahito; Tsuda, Koji; Takeuchi, Ichiro: Selective Inference Approach for Statistically Sound Predictive Pattern Mining, 2016, https://arxiv.org/abs/1602.04601
-Jitkrittum, Wittawat; Kanagawa, Heishiro; Sangkloy, Patsorn; Hays, James; Schölkopf, Bernhard; Gretton, Arthur: Informative Features for Model Comparison, 2018, https://arxiv.org/abs/1810.11630
-Zarezade, Ali; Upadhyay, Utkarsh; Rabiee, Hamid; Rodriguez, Manuel Gomez: RedQueen: An Online Algorithm for Smart Broadcasting in Social Networks, 2016, https://arxiv.org/abs/1610.05773
-Siarohin, Aliaksandr; Sangineto, Enver; Sebe, Nicu: Whitening and Coloring batch transform for GANs, 2018, https://arxiv.org/abs/1806.00420
-Dorta, Garoe; Vicente, Sara; Agapito, Lourdes; Campbell, Neill D. F.; Simpson, Ivor: Structured Uncertainty Prediction Networks, 2018, https://arxiv.org/abs/1802.07079
-Aicher, Christopher; Ma, Yi-An; Foti, Nicholas J.; Fox, Emily B.: Stochastic Gradient MCMC for State Space Models, 2018, https://arxiv.org/abs/1810.09098
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Dumoulin, Vincent; Goodfellow, Ian J.; Courville, Aaron; Bengio, Yoshua: On the Challenges of Physical Implementations of RBMs, 2013, https://arxiv.org/abs/1312.5258
-Mohamed, Shakir; Rezende, Danilo Jimenez: Variational Information Maximisation for Intrinsically Motivated Reinforcement Learning, 2015, https://arxiv.org/abs/1509.08731
-Navarrete, Raymundo; Viswanath, Divakar: Prediction of Dynamical time Series Using Kernel Based Regression and Smooth Splines, 2015, https://arxiv.org/abs/1511.00158
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Haque, Kazi Nazmul; Yousuf, Mohammad Abu; Rana, Rajib: Image denoising and restoration with CNN-LSTM Encoder Decoder with Direct Attention, 2018, https://arxiv.org/abs/1801.05141
-Calandriello, Daniele; Lazaric, Alessandro; Valko, Michal; Koutis, Ioannis: Incremental Spectral Sparsification for Large-Scale Graph-Based Semi-Supervised Learning, 2016, https://arxiv.org/abs/1601.05675
-Qian, Junyang; Jia, Jinzhu: On pattern recovery of the fused Lasso, 2012, https://arxiv.org/abs/1211.5194
-Puchkin, Nikita; Spokoiny, Vladimir: Adaptive multiclass nearest neighbor classifier, 2018, https://arxiv.org/abs/1804.02756
-Kim, Sanggyun; Mesa, Diego; Ma, Rui; Coleman, Todd P.: Tractable Fully Bayesian Inference via Convex Optimization and Optimal Transport Theory, 2015, https://arxiv.org/abs/1509.08582
-Denil, Misha; Matheson, David; de Freitas, Nando: Narrowing the Gap: Random Forests In Theory and In Practice, 2013, https://arxiv.org/abs/1310.1415
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Lang, Hunter; Sontag, David; Vijayaraghavan, Aravindan: Block Stability for MAP Inference, 2018, https://arxiv.org/abs/1810.05305
-Xie, Christopher; Tank, Alex; Greaves-Tunnell, Alec; Fox, Emily: A Unified Framework for Long Range and Cold Start Forecasting of Seasonal Profiles in Time Series, 2017, https://arxiv.org/abs/1710.08473
-Rezende, Danilo Jimenez; Mohamed, Shakir; Danihelka, Ivo; Gregor, Karol; Wierstra, Daan: One-Shot Generalization in Deep Generative Models, 2016, https://arxiv.org/abs/1603.05106
-Raghu, Maithra; Gilmer, Justin; Yosinski, Jason; Sohl-Dickstein, Jascha: SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability, 2017, https://arxiv.org/abs/1706.05806
-Sinha, Aman; Namkoong, Hongseok; Duchi, John: Certifying Some Distributional Robustness with Principled Adversarial Training, 2017, https://arxiv.org/abs/1710.10571
-Schaumberg, Andrew; Yu, Angela; Koshi, Tatsuhiro; Zong, Xiaochan; Rayadhurgam, Santoshkalyan: Predicting Drug Interactions and Mutagenicity with Ensemble Classifiers on Subgraphs of Molecules, 2016, https://arxiv.org/abs/1601.07233
-Hjelm, R Devon; Jacob, Athul Paul; Che, Tong; Trischler, Adam; Cho, Kyunghyun; Bengio, Yoshua: Boundary-Seeking Generative Adversarial Networks, 2017, https://arxiv.org/abs/1702.08431
-Xu, Shuang; Zhang, Chun-Xia; Wang, Pei; Zhang, Jiangshe: Variational Bayesian Complex Network Reconstruction, 2018, https://arxiv.org/abs/1812.04369
-Blundell, Charles; Uria, Benigno; Pritzel, Alexander; Li, Yazhe; Ruderman, Avraham; Leibo, Joel Z; Rae, Jack; Wierstra, Daan; Hassabis, Demis: Model-Free Episodic Control, 2016, https://arxiv.org/abs/1606.04460
-Metzler, Christopher A.; Mousavi, Ali; Baraniuk, Richard G.: Learned D-AMP: Principled Neural Network based Compressive Image Recovery, 2017, https://arxiv.org/abs/1704.06625
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Stewart, Lawrence; Stalzer, Mark: Bayesian Optimization for Parameter Tuning of the XOR Neural Network, 2017, https://arxiv.org/abs/1709.07842
-Alvarado, Pablo A.; Stowell, Dan: Gaussian Processes for Music Audio Modelling and Content Analysis, 2016, https://arxiv.org/abs/1606.01039
-Laparra, Valero; Jiménez, Sandra; Camps-Valls, Gustavo; Malo, Jesús: Nonlinearities and Adaptation of Color Vision from Sequential Principal Curves Analysis, 2016, https://arxiv.org/abs/1602.00236
-Lei, Huitian; Tewari, Ambuj; Murphy, Susan A.: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions, 2017, https://arxiv.org/abs/1706.09090
-Bahmani, Sohail; Raj, Bhiksha; Boufounos, Petros: Greedy Sparsity-Constrained Optimization, 2012, https://arxiv.org/abs/1203.5483
-Gellert, Karol; Schlögl, Erik: Parameter Learning and Change Detection Using a Particle Filter With Accelerated Adaptation, 2018, https://arxiv.org/abs/1806.05387
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Steeg, Greg Ver; Galstyan, Aram: The Information Sieve, 2015, https://arxiv.org/abs/1507.02284
-Zhang, Yuan; Levina, Elizaveta; Zhu, Ji: Community Detection in Networks with Node Features, 2015, https://arxiv.org/abs/1509.01173
-Gomez, Leonardo Gutierrez; Chiem, Benjamin; Delvenne, Jean-Charles: Dynamics Based Features For Graph Classification, 2017, https://arxiv.org/abs/1705.10817
-Zhang, Yuan; Levina, Elizaveta; Zhu, Ji: Community Detection in Networks with Node Features, 2015, https://arxiv.org/abs/1509.01173
-Khan, Muhammad Raza; Blumenstock, Joshua E.: Machine Learning Across Cultures: Modeling the Adoption of Financial Services for the Poor, 2016, https://arxiv.org/abs/1606.05105
-Yu, Jin; Vishwanathan, S. V. N.; Guenter, Simon; Schraudolph, Nicol N.: A Quasi-Newton Approach to Nonsmooth Convex Optimization Problems in Machine Learning, 2008, https://arxiv.org/abs/0804.3835
-Jain, Swayambhoo; Soni, Akshay; Laptev, Nikolay; Mehdad, Yashar: Rank-to-engage: New Listwise Approaches to Maximize Engagement, 2017, https://arxiv.org/abs/1702.07798
-Zhang, Wenwen; Loh, Wei-Yin: PLUTO: Penalized Unbiased Logistic Regression Trees, 2014, https://arxiv.org/abs/1411.6948
-Lei, Huitian; Tewari, Ambuj; Murphy, Susan A.: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions, 2017, https://arxiv.org/abs/1706.09090
-Jiang, Zhanhong; Balu, Aditya; Hegde, Chinmay; Sarkar, Soumik: Collaborative Deep Learning in Fixed Topology Networks, 2017, https://arxiv.org/abs/1706.07880
-Yao, Zhigang; Zhang, Zhenyue: Principal Boundary on Riemannian Manifolds, 2017, https://arxiv.org/abs/1711.06705
-Schuster, Ingmar: Gradient Importance Sampling, 2015, https://arxiv.org/abs/1507.05781
-Chwialkowski, Kacper; Ramdas, Aaditya; Sejdinovic, Dino; Gretton, Arthur: Fast Two-Sample Testing with Analytic Representations of Probability Measures, 2015, https://arxiv.org/abs/1506.04725
-Dorta, Garoe; Vicente, Sara; Agapito, Lourdes; Campbell, Neill D. F.; Simpson, Ivor: Structured Uncertainty Prediction Networks, 2018, https://arxiv.org/abs/1802.07079
-Tomal, Jabed H; Welch, William J; Zamar, Ruben H: Ensembles of Models and Metrics for Robust Ranking of Homologous Proteins, 2017, https://arxiv.org/abs/1706.06971
-Yang, Yingxiang; Etesami, Jalal; He, Niao; Kiyavash, Negar: Nonparametric Hawkes Processes: Online Estimation and Generalization Bounds, 2018, https://arxiv.org/abs/1801.08273
-Sun, Rémy; Lampert, Christoph H.: KS(conf ): A Light-Weight Test if a ConvNet Operates Outside of Its Specifications, 2018, https://arxiv.org/abs/1804.04171
-Xie, Yujia; Wang, Xiangfeng; Wang, Ruijia; Zha, Hongyuan: A Fast Proximal Point Method for Computing Wasserstein Distance, 2018, https://arxiv.org/abs/1802.04307
-Iwata, Tomoharu; Duvenaud, David; Ghahramani, Zoubin: Warped Mixtures for Nonparametric Cluster Shapes, 2012, https://arxiv.org/abs/1206.1846
-Leskovec, Jure; Chakrabarti, Deepayan; Kleinberg, Jon; Faloutsos, Christos; Ghahramani, Zoubin: Kronecker Graphs: An Approach to Modeling Networks, 2008, https://arxiv.org/abs/0812.4905
-Pham, Thai T.; Shen, Yuanyuan: A Deep Causal Inference Approach to Measuring the Effects of Forming Group Loans in Online Non-profit Microfinance Platform, 2017, https://arxiv.org/abs/1706.02795
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Holland, Matthew J.; Ikeda, Kazushi: Efficient learning with robust gradient descent, 2017, https://arxiv.org/abs/1706.00182
-Lee, Nam H.; Priebe, Carey; Park, Youngser; Wang, I-Jeng; Rosen, Michael: Techniques for clustering interaction data as a collection of graphs, 2014, https://arxiv.org/abs/1406.6319
-Marques, Alexandre N.; Lam, Remi R.; Willcox, Karen E.: Contour location via entropy reduction leveraging multiple information sources, 2018, https://arxiv.org/abs/1805.07489
-Yang, Eunho; Lozano, Aurelie; Aravkin, Aleksandr: A General Family of Trimmed Estimators for Robust High-dimensional Data Analysis, 2016, https://arxiv.org/abs/1605.08299
-Ting, Daniel; Brochu, Eric: Optimal Sub-sampling with Influence Functions, 2017, https://arxiv.org/abs/1709.01716
-Shang, Fanhua; Liu, Yuanyuan; Zhou, Kaiwen; Cheng, James; Ng, Kelvin K. W.; Yoshida, Yuichi: Guaranteed Sufficient Decrease for Stochastic Variance Reduced Gradient Optimization, 2018, https://arxiv.org/abs/1802.09933
-Chan, Antoni B.; Hsiao, Janet H.: EMHMM Simulation Study, 2018, https://arxiv.org/abs/1810.07435
-Teso, Stefano; Passerini, Andrea; Viappiani, Paolo: Constructive Preference Elicitation by Setwise Max-margin Learning, 2016, https://arxiv.org/abs/1604.06020
-Chen, Pin-Yu; Wu, Lingfei; Liu, Sijia; Rajapakse, Indika: Fast Incremental von Neumann Graph Entropy Computation: Theory, Algorithm, and Applications, 2018, https://arxiv.org/abs/1805.11769
-Rubenstein, Paul K.; Li, Yunpeng; Roblek, Dominik: An Empirical Study of Generative Models with Encoders, 2018, https://arxiv.org/abs/1812.07909
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Dimitrakakis, Christos; Rothkopf, Constantin: Bayesian multitask inverse reinforcement learning, 2011, https://arxiv.org/abs/1106.3655
-Waegeman, Willem; Pahikkala, Tapio; Airola, Antti; Salakoski, Tapio; Stock, Michiel; De Baets, Bernard: A kernel-based framework for learning graded relations from data, 2011, https://arxiv.org/abs/1111.6473
-Böttcher, Alexander; Brendel, Wieland; Englitz, Bernhard; Bethge, Matthias: Trace your sources in large-scale data: one ring to find them all, 2018, https://arxiv.org/abs/1803.08882
-Gultekin, San; Zhang, Aonan; Paisley, John: Stochastic Annealing for Variational Inference, 2015, https://arxiv.org/abs/1505.06723
-Zhao, Renbo; Haskell, William B.; Feng, Jiashi: A Unified Framework for Stochastic Matrix Factorization via Variance Reduction, 2017, https://arxiv.org/abs/1705.06884
-Podosinnikova, Anastasia; Setzer, Simon; Hein, Matthias: Robust PCA: Optimization of the Robust Reconstruction Error over the Stiefel Manifold, 2015, https://arxiv.org/abs/1506.00323
-Zhang, Jiajun; Shi, Zhiguo: Deformable Deep Convolutional Generative Adversarial Network in Microwave Based Hand Gesture Recognition System, 2017, https://arxiv.org/abs/1711.01968
-Liu, Kaihui; Wang, Jiayi; Xing, Zhengli; Yang, Linxiao; Fang, Jun: Low-Rank Phase Retrieval via Variational Bayesian Learning, 2018, https://arxiv.org/abs/1811.01574
-Huggins, Jonathan H.; Mackey, Lester: Random Feature Stein Discrepancies, 2018, https://arxiv.org/abs/1806.07788
-Mondelli, Marco; Montanari, Andrea: Fundamental Limits of Weak Recovery with Applications to Phase Retrieval, 2017, https://arxiv.org/abs/1708.05932
-Laparra, Valero; Jiménez, Sandra; Camps-Valls, Gustavo; Malo, Jesús: Nonlinearities and Adaptation of Color Vision from Sequential Principal Curves Analysis, 2016, https://arxiv.org/abs/1602.00236
-McCarter, Calvin; Kim, Seyoung: Large-Scale Optimization Algorithms for Sparse Conditional Gaussian Graphical Models, 2015, https://arxiv.org/abs/1509.04681
-Scardapane, Simone; Van Vaerenbergh, Steven; Totaro, Simone; Uncini, Aurelio: Kafnets: kernel-based non-parametric activation functions for neural networks, 2017, https://arxiv.org/abs/1707.04035
-Fusco, Francesco; Tirupathi, Seshu; Gormally, Robert: Power Systems Data Fusion based on Belief Propagation, 2017, https://arxiv.org/abs/1705.08815
-Chamroukhi, Faicel; Huynh, Bao-Tuyen: Regularized Maximum Likelihood Estimation and Feature Selection in Mixtures-of-Experts Models, 2018, https://arxiv.org/abs/1810.12161
-Siddharth, N.; Paige, Brooks; van de Meent, Jan-Willem; Desmaison, Alban; Goodman, Noah D.; Kohli, Pushmeet; Wood, Frank; Torr, Philip H. S.: Learning Disentangled Representations with Semi-Supervised Deep Generative Models, 2017, https://arxiv.org/abs/1706.00400
-Doshi-Velez, Finale; Kim, Been: Towards A Rigorous Science of Interpretable Machine Learning, 2017, https://arxiv.org/abs/1702.08608
-Loosli, Gaëlle; Aboubacar, Hattoibe: Using SVDD in SimpleMKL for 3D-Shapes Filtering, 2017, https://arxiv.org/abs/1712.02658
-Webb, Stefan Douglas: Inference, Sampling, and Learning in Copula Cumulative Distribution Networks, 2013, https://arxiv.org/abs/1310.4456
-Liu, Sida; Barbu, Adrian: Unsupervised Learning of Mixture Models with a Uniform Background Component, 2018, https://arxiv.org/abs/1804.02744
-Goix, Nicolas; Sabourin, Anne; Clémençon, Stéphan: Sparsity in Multivariate Extremes with Applications to Anomaly Detection, 2015, https://arxiv.org/abs/1507.05899
-Wilson, Andrew Gordon; Gilboa, Elad; Nehorai, Arye; Cunningham, John P.: GPatt: Fast Multidimensional Pattern Extrapolation with Gaussian Processes, 2013, https://arxiv.org/abs/1310.5288
-Kim, Seyoung; Xing, Eric P.: Tree-guided group lasso for multi-response regression with structured sparsity, with an application to eQTL mapping, 2009, https://arxiv.org/abs/0909.1373
-Obozinski, Guillaume; Bach, Francis: Convex Relaxation for Combinatorial Penalties, 2012, https://arxiv.org/abs/1205.1240
-Briol, Francois-Xavier; Oates, Chris J.; Cockayne, Jon; Chen, Wilson Ye; Girolami, Mark: On the Sampling Problem for Kernel Quadrature, 2017, https://arxiv.org/abs/1706.03369
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Garrido-Merchán, Eduardo C.; Hernández-Lobato, Daniel: Predictive Entropy Search for Multi-objective Bayesian Optimization with Constraints, 2016, https://arxiv.org/abs/1609.01051
-Husic, Brooke E.; Schlueter-Kuck, Kristy L.; Dabiri, John O.: Simultaneous Coherent Structure Coloring facilitates interpretable clustering of scientific data by amplifying dissimilarity, 2018, https://arxiv.org/abs/1807.04427
-Chacón, José E.: Mixture model modal clustering, 2016, https://arxiv.org/abs/1609.04721
-Shah, Viraj; Soltani, Mohammadreza; Hegde, Chinmay: Reconstruction from Periodic Nonlinearities, With Applications to HDR Imaging, 2017, https://arxiv.org/abs/1710.00109
-Puolamäki, Kai; Oikarinen, Emilia; Kang, Bo; Lijffijt, Jefrey; De Bie, Tijl: Interactive Visual Data Exploration with Subjective Feedback: An Information-Theoretic Approach, 2017, https://arxiv.org/abs/1710.08167
-Gandhi, Manan; Lee, Keuntaek; Pan, Yunpeng; Theodorou, Evangelos: Propagating Uncertainty through the tanh Function with Application to Reservoir Computing, 2018, https://arxiv.org/abs/1806.09431
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Kailkhura, Bhavya; Thiagarajan, Jayaraman J.; Rastogi, Charvi; Varshney, Pramod K.; Bremer, Peer-Timo: A Spectral Approach for the Design of Experiments: Design, Analysis and Algorithms, 2017, https://arxiv.org/abs/1712.06028
-Ragoza, Matthew; Hochuli, Joshua; Idrobo, Elisa; Sunseri, Jocelyn; Koes, David Ryan: Protein-Ligand Scoring with Convolutional Neural Networks, 2016, https://arxiv.org/abs/1612.02751
-Siarohin, Aliaksandr; Zen, Gloria; Sebe, Nicu; Ricci, Elisa: Enhancing Perceptual Attributes with Bayesian Style Generation, 2018, https://arxiv.org/abs/1812.00717
-Ruffini, Matteo; Rabusseau, Guillaume; Balle, Borja: Hierarchical Methods of Moments, 2018, https://arxiv.org/abs/1810.07468
-Heinze-Deml, Christina; Meinshausen, Nicolai: Conditional Variance Penalties and Domain Shift Robustness, 2017, https://arxiv.org/abs/1710.11469
-"d'Errico, Maria; Facco, Elena; Laio, Alessandro; Rodriguez, Alex;: Automatic topography of high-dimensional data sets by non-parametric Density Peak clustering, 2018, https://arxiv.org/abs/1802.10549
-Zou, James Y.; Chaudhuri, Kamalika; Kalai, Adam Tauman: Crowdsourcing Feature Discovery via Adaptively Chosen Comparisons, 2015, https://arxiv.org/abs/1504.00064
-Cardoso,  ngelo; Daolio, Fabio; Vargas, Saúl: Product Characterisation towards Personalisation: Learning Attributes from Unstructured Data to Recommend Fashion Products, 2018, https://arxiv.org/abs/1803.07679
-Xie, Christopher; Tank, Alex; Greaves-Tunnell, Alec; Fox, Emily: A Unified Framework for Long Range and Cold Start Forecasting of Seasonal Profiles in Time Series, 2017, https://arxiv.org/abs/1710.08473
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Tuia, Devis; Camps-Valls, Gustau: Kernel Manifold Alignment, 2015, https://arxiv.org/abs/1504.02338
-Hofert, Marius; Prasad, Avinash; Zhu, Mu: Quasi-random number generators for multivariate distributions based on generative neural networks, 2018, https://arxiv.org/abs/1811.00683
-Tandon, Rashish; Si, Si; Ravikumar, Pradeep; Dhillon, Inderjit: Kernel Ridge Regression via Partitioning, 2016, https://arxiv.org/abs/1608.01976
-Goldfarb, Donald; Qin, Zhiwei: Robust Low-rank Tensor Recovery: Models and Algorithms, 2013, https://arxiv.org/abs/1311.6182
-Yao, Yuling; Vehtari, Aki; Simpson, Daniel; Gelman, Andrew: Yes, but Did It Work?: Evaluating Variational Inference, 2018, https://arxiv.org/abs/1802.02538
-Yang, Xiu; Tartakovsky, Guzel; Tartakovsky, Alexandre: Physics-Informed Kriging: A Physics-Informed Gaussian Process Regression Method for Data-Model Convergence, 2018, https://arxiv.org/abs/1809.03461
-Wang, Gang; Giannakis, Georgios B.; Chen, Jie: Learning ReLU Networks on Linearly Separable Data: Algorithm, Optimality, and Generalization, 2018, https://arxiv.org/abs/1808.04685
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Lakshminarayanan, Balaji; Pritzel, Alexander; Blundell, Charles: Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles, 2016, https://arxiv.org/abs/1612.01474
-Sattigeri, Prasanna; Hoffman, Samuel C.; Chenthamarakshan, Vijil; Varshney, Kush R.: Fairness GAN, 2018, https://arxiv.org/abs/1805.09910
-Webb, Stefan; Golinski, Adam; Zinkov, Robert; Siddharth, N.; Rainforth, Tom; Teh, Yee Whye; Wood, Frank: Faithful Inversion of Generative Models for Effective Amortized Inference, 2017, https://arxiv.org/abs/1712.00287
-Roth, Kevin; Lucchi, Aurelien; Nowozin, Sebastian; Hofmann, Thomas: Adversarially Robust Training through Structured Gradient Regularization, 2018, https://arxiv.org/abs/1805.08736
-Remes, Sami; Heinonen, Markus; Kaski, Samuel: Non-Stationary Spectral Kernels, 2017, https://arxiv.org/abs/1705.08736
-Xiao, Lechao; Bahri, Yasaman; Sohl-Dickstein, Jascha; Schoenholz, Samuel S.; Pennington, Jeffrey: Dynamical Isometry and a Mean Field Theory of CNNs: How to Train 10,000-Layer Vanilla Convolutional Neural Networks, 2018, https://arxiv.org/abs/1806.05393
-Cheplygina, Veronika; Tax, David M. J.; Loog, Marco: Multiple Instance Learning with Bag Dissimilarities, 2013, https://arxiv.org/abs/1309.5643
-Lefèvre, Augustin; Bach, Francis; Févotte, Cédric: Online algorithms for Nonnegative Matrix Factorization with the Itakura-Saito divergence, 2011, https://arxiv.org/abs/1106.4198
-Novak, Roman; Bahri, Yasaman; Abolafia, Daniel A.; Pennington, Jeffrey; Sohl-Dickstein, Jascha: Sensitivity and Generalization in Neural Networks: an Empirical Study, 2018, https://arxiv.org/abs/1802.08760
-Imani, Ehsan; White, Martha: Improving Regression Performance with Distributional Losses, 2018, https://arxiv.org/abs/1806.04613
-Chowdhury, Agniva; Yang, Jiasen; Drineas, Petros: Structural Conditions for Projection-Cost Preservation via Randomized Matrix Multiplication, 2017, https://arxiv.org/abs/1705.10102
-Kim, Hyeji; Gao, Weihao; Kannan, Sreeram; Oh, Sewoong; Viswanath, Pramod: Discovering Potential Correlations via Hypercontractivity, 2017, https://arxiv.org/abs/1709.04024
-Kulesza, Alex; Taskar, Ben: Determinantal point processes for machine learning, 2012, https://arxiv.org/abs/1207.6083
-Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-Ustun, Berk; Rudin, Cynthia: Learning Optimized Risk Scores, 2016, https://arxiv.org/abs/1610.00168
+1. Knowles, David A.; Ghahramani, Zoubin: Pitman-Yor Diffusion Trees, 2011, https://arxiv.org/abs/1106.2494
+2. Xu, Ning; Hong, Jian; Fisher, Timothy C. G.: Finite-sample and asymptotic analysis of generalization ability with an application to penalized regression, 2016, https://arxiv.org/abs/1609.03344
+3. Gasse, Maxime; Aussem, Alex; Elghazel, Haytham: An Experimental Comparison of Hybrid Algorithms for Bayesian Network Structure Learning, 2015, https://arxiv.org/abs/1505.05004
+4. Oh, Seong Joon; Augustin, Max; Schiele, Bernt; Fritz, Mario: Towards Reverse-Engineering Black-Box Neural Networks, 2017, https://arxiv.org/abs/1711.01768
+5. Schoenholz, Samuel S.; Gilmer, Justin; Ganguli, Surya; Sohl-Dickstein, Jascha: Deep Information Propagation, 2016, https://arxiv.org/abs/1611.01232
+6. Wang, Xu; Slavakis, Konstantinos; Lerman, Gilad: Riemannian Multi-Manifold Modeling, 2014, https://arxiv.org/abs/1410.0095
+7. Gao, Wei; Chen, Jie; Richard, Cédric; Huang, Jianguo: Online dictionary learning for kernel LMS. Analysis and forward-backward splitting algorithm, 2013, https://arxiv.org/abs/1306.5310
+8. Silva, Ricardo: Observational-Interventional Priors for Dose-Response Learning, 2016, https://arxiv.org/abs/1605.01573
+9. Suzumura, Shinya; Nakagawa, Kazuya; Sugiyama, Mahito; Tsuda, Koji; Takeuchi, Ichiro: Selective Inference Approach for Statistically Sound Predictive Pattern Mining, 2016, https://arxiv.org/abs/1602.04601
+10. Jitkrittum, Wittawat; Kanagawa, Heishiro; Sangkloy, Patsorn; Hays, James; Schölkopf, Bernhard; Gretton, Arthur: Informative Features for Model Comparison, 2018, https://arxiv.org/abs/1810.11630
+11. Zarezade, Ali; Upadhyay, Utkarsh; Rabiee, Hamid; Rodriguez, Manuel Gomez: RedQueen: An Online Algorithm for Smart Broadcasting in Social Networks, 2016, https://arxiv.org/abs/1610.05773
+12. Siarohin, Aliaksandr; Sangineto, Enver; Sebe, Nicu: Whitening and Coloring batch transform for GANs, 2018, https://arxiv.org/abs/1806.00420
+13. Dorta, Garoe; Vicente, Sara; Agapito, Lourdes; Campbell, Neill D. F.; Simpson, Ivor: Structured Uncertainty Prediction Networks, 2018, https://arxiv.org/abs/1802.07079
+14. Aicher, Christopher; Ma, Yi-An; Foti, Nicholas J.; Fox, Emily B.: Stochastic Gradient MCMC for State Space Models, 2018, https://arxiv.org/abs/1810.09098
+15. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+16. Dumoulin, Vincent; Goodfellow, Ian J.; Courville, Aaron; Bengio, Yoshua: On the Challenges of Physical Implementations of RBMs, 2013, https://arxiv.org/abs/1312.5258
+17. Mohamed, Shakir; Rezende, Danilo Jimenez: Variational Information Maximisation for Intrinsically Motivated Reinforcement Learning, 2015, https://arxiv.org/abs/1509.08731
+18. Navarrete, Raymundo; Viswanath, Divakar: Prediction of Dynamical time Series Using Kernel Based Regression and Smooth Splines, 2015, https://arxiv.org/abs/1511.00158
+19. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+20. Haque, Kazi Nazmul; Yousuf, Mohammad Abu; Rana, Rajib: Image denoising and restoration with CNN-LSTM Encoder Decoder with Direct Attention, 2018, https://arxiv.org/abs/1801.05141
+21. Calandriello, Daniele; Lazaric, Alessandro; Valko, Michal; Koutis, Ioannis: Incremental Spectral Sparsification for Large-Scale Graph-Based Semi-Supervised Learning, 2016, https://arxiv.org/abs/1601.05675
+22. Qian, Junyang; Jia, Jinzhu: On pattern recovery of the fused Lasso, 2012, https://arxiv.org/abs/1211.5194
+23. Puchkin, Nikita; Spokoiny, Vladimir: Adaptive multiclass nearest neighbor classifier, 2018, https://arxiv.org/abs/1804.02756
+24. Kim, Sanggyun; Mesa, Diego; Ma, Rui; Coleman, Todd P.: Tractable Fully Bayesian Inference via Convex Optimization and Optimal Transport Theory, 2015, https://arxiv.org/abs/1509.08582
+25. Denil, Misha; Matheson, David; de Freitas, Nando: Narrowing the Gap: Random Forests In Theory and In Practice, 2013, https://arxiv.org/abs/1310.1415
+26. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+27. Lang, Hunter; Sontag, David; Vijayaraghavan, Aravindan: Block Stability for MAP Inference, 2018, https://arxiv.org/abs/1810.05305
+28. Xie, Christopher; Tank, Alex; Greaves-Tunnell, Alec; Fox, Emily: A Unified Framework for Long Range and Cold Start Forecasting of Seasonal Profiles in Time Series, 2017, https://arxiv.org/abs/1710.08473
+29. Rezende, Danilo Jimenez; Mohamed, Shakir; Danihelka, Ivo; Gregor, Karol; Wierstra, Daan: One-Shot Generalization in Deep Generative Models, 2016, https://arxiv.org/abs/1603.05106
+30. Raghu, Maithra; Gilmer, Justin; Yosinski, Jason; Sohl-Dickstein, Jascha: SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability, 2017, https://arxiv.org/abs/1706.05806
+31. Sinha, Aman; Namkoong, Hongseok; Duchi, John: Certifying Some Distributional Robustness with Principled Adversarial Training, 2017, https://arxiv.org/abs/1710.10571
+32. Schaumberg, Andrew; Yu, Angela; Koshi, Tatsuhiro; Zong, Xiaochan; Rayadhurgam, Santoshkalyan: Predicting Drug Interactions and Mutagenicity with Ensemble Classifiers on Subgraphs of Molecules, 2016, https://arxiv.org/abs/1601.07233
+33. Hjelm, R Devon; Jacob, Athul Paul; Che, Tong; Trischler, Adam; Cho, Kyunghyun; Bengio, Yoshua: Boundary-Seeking Generative Adversarial Networks, 2017, https://arxiv.org/abs/1702.08431
+34. Xu, Shuang; Zhang, Chun-Xia; Wang, Pei; Zhang, Jiangshe: Variational Bayesian Complex Network Reconstruction, 2018, https://arxiv.org/abs/1812.04369
+35. Blundell, Charles; Uria, Benigno; Pritzel, Alexander; Li, Yazhe; Ruderman, Avraham; Leibo, Joel Z; Rae, Jack; Wierstra, Daan; Hassabis, Demis: Model-Free Episodic Control, 2016, https://arxiv.org/abs/1606.04460
+36. Metzler, Christopher A.; Mousavi, Ali; Baraniuk, Richard G.: Learned D-AMP: Principled Neural Network based Compressive Image Recovery, 2017, https://arxiv.org/abs/1704.06625
+37. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+38. Stewart, Lawrence; Stalzer, Mark: Bayesian Optimization for Parameter Tuning of the XOR Neural Network, 2017, https://arxiv.org/abs/1709.07842
+39. Alvarado, Pablo A.; Stowell, Dan: Gaussian Processes for Music Audio Modelling and Content Analysis, 2016, https://arxiv.org/abs/1606.01039
+40. Laparra, Valero; Jiménez, Sandra; Camps-Valls, Gustavo; Malo, Jesús: Nonlinearities and Adaptation of Color Vision from Sequential Principal Curves Analysis, 2016, https://arxiv.org/abs/1602.00236
+41. Lei, Huitian; Tewari, Ambuj; Murphy, Susan A.: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions, 2017, https://arxiv.org/abs/1706.09090
+42. Bahmani, Sohail; Raj, Bhiksha; Boufounos, Petros: Greedy Sparsity-Constrained Optimization, 2012, https://arxiv.org/abs/1203.5483
+43. Gellert, Karol; Schlögl, Erik: Parameter Learning and Change Detection Using a Particle Filter With Accelerated Adaptation, 2018, https://arxiv.org/abs/1806.05387
+44. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+45. Steeg, Greg Ver; Galstyan, Aram: The Information Sieve, 2015, https://arxiv.org/abs/1507.02284
+46. Zhang, Yuan; Levina, Elizaveta; Zhu, Ji: Community Detection in Networks with Node Features, 2015, https://arxiv.org/abs/1509.01173
+47. Gomez, Leonardo Gutierrez; Chiem, Benjamin; Delvenne, Jean-Charles: Dynamics Based Features For Graph Classification, 2017, https://arxiv.org/abs/1705.10817
+48. Zhang, Yuan; Levina, Elizaveta; Zhu, Ji: Community Detection in Networks with Node Features, 2015, https://arxiv.org/abs/1509.01173
+49. Khan, Muhammad Raza; Blumenstock, Joshua E.: Machine Learning Across Cultures: Modeling the Adoption of Financial Services for the Poor, 2016, https://arxiv.org/abs/1606.05105
+50. Yu, Jin; Vishwanathan, S. V. N.; Guenter, Simon; Schraudolph, Nicol N.: A Quasi-Newton Approach to Nonsmooth Convex Optimization Problems in Machine Learning, 2008, https://arxiv.org/abs/0804.3835
+51. Jain, Swayambhoo; Soni, Akshay; Laptev, Nikolay; Mehdad, Yashar: Rank-to-engage: New Listwise Approaches to Maximize Engagement, 2017, https://arxiv.org/abs/1702.07798
+52. Zhang, Wenwen; Loh, Wei-Yin: PLUTO: Penalized Unbiased Logistic Regression Trees, 2014, https://arxiv.org/abs/1411.6948
+53. Lei, Huitian; Tewari, Ambuj; Murphy, Susan A.: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions, 2017, https://arxiv.org/abs/1706.09090
+54. Jiang, Zhanhong; Balu, Aditya; Hegde, Chinmay; Sarkar, Soumik: Collaborative Deep Learning in Fixed Topology Networks, 2017, https://arxiv.org/abs/1706.07880
+55. Yao, Zhigang; Zhang, Zhenyue: Principal Boundary on Riemannian Manifolds, 2017, https://arxiv.org/abs/1711.06705
+56. Schuster, Ingmar: Gradient Importance Sampling, 2015, https://arxiv.org/abs/1507.05781
+57. Chwialkowski, Kacper; Ramdas, Aaditya; Sejdinovic, Dino; Gretton, Arthur: Fast Two-Sample Testing with Analytic Representations of Probability Measures, 2015, https://arxiv.org/abs/1506.04725
+58. Dorta, Garoe; Vicente, Sara; Agapito, Lourdes; Campbell, Neill D. F.; Simpson, Ivor: Structured Uncertainty Prediction Networks, 2018, https://arxiv.org/abs/1802.07079
+59. Tomal, Jabed H; Welch, William J; Zamar, Ruben H: Ensembles of Models and Metrics for Robust Ranking of Homologous Proteins, 2017, https://arxiv.org/abs/1706.06971
+60. Yang, Yingxiang; Etesami, Jalal; He, Niao; Kiyavash, Negar: Nonparametric Hawkes Processes: Online Estimation and Generalization Bounds, 2018, https://arxiv.org/abs/1801.08273
+61. Sun, Rémy; Lampert, Christoph H.: KS(conf ): A Light-Weight Test if a ConvNet Operates Outside of Its Specifications, 2018, https://arxiv.org/abs/1804.04171
+62. Xie, Yujia; Wang, Xiangfeng; Wang, Ruijia; Zha, Hongyuan: A Fast Proximal Point Method for Computing Wasserstein Distance, 2018, https://arxiv.org/abs/1802.04307
+63. Iwata, Tomoharu; Duvenaud, David; Ghahramani, Zoubin: Warped Mixtures for Nonparametric Cluster Shapes, 2012, https://arxiv.org/abs/1206.1846
+64. Leskovec, Jure; Chakrabarti, Deepayan; Kleinberg, Jon; Faloutsos, Christos; Ghahramani, Zoubin: Kronecker Graphs: An Approach to Modeling Networks, 2008, https://arxiv.org/abs/0812.4905
+65. Pham, Thai T.; Shen, Yuanyuan: A Deep Causal Inference Approach to Measuring the Effects of Forming Group Loans in Online Non-profit Microfinance Platform, 2017, https://arxiv.org/abs/1706.02795
+66. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+67. Holland, Matthew J.; Ikeda, Kazushi: Efficient learning with robust gradient descent, 2017, https://arxiv.org/abs/1706.00182
+68. Lee, Nam H.; Priebe, Carey; Park, Youngser; Wang, I-Jeng; Rosen, Michael: Techniques for clustering interaction data as a collection of graphs, 2014, https://arxiv.org/abs/1406.6319
+69. Marques, Alexandre N.; Lam, Remi R.; Willcox, Karen E.: Contour location via entropy reduction leveraging multiple information sources, 2018, https://arxiv.org/abs/1805.07489
+70. Yang, Eunho; Lozano, Aurelie; Aravkin, Aleksandr: A General Family of Trimmed Estimators for Robust High-dimensional Data Analysis, 2016, https://arxiv.org/abs/1605.08299
+71. Ting, Daniel; Brochu, Eric: Optimal Sub-sampling with Influence Functions, 2017, https://arxiv.org/abs/1709.01716
+72. Shang, Fanhua; Liu, Yuanyuan; Zhou, Kaiwen; Cheng, James; Ng, Kelvin K. W.; Yoshida, Yuichi: Guaranteed Sufficient Decrease for Stochastic Variance Reduced Gradient Optimization, 2018, https://arxiv.org/abs/1802.09933
+73. Chan, Antoni B.; Hsiao, Janet H.: EMHMM Simulation Study, 2018, https://arxiv.org/abs/1810.07435
+74. Teso, Stefano; Passerini, Andrea; Viappiani, Paolo: Constructive Preference Elicitation by Setwise Max-margin Learning, 2016, https://arxiv.org/abs/1604.06020
+75. Chen, Pin-Yu; Wu, Lingfei; Liu, Sijia; Rajapakse, Indika: Fast Incremental von Neumann Graph Entropy Computation: Theory, Algorithm, and Applications, 2018, https://arxiv.org/abs/1805.11769
+76. Rubenstein, Paul K.; Li, Yunpeng; Roblek, Dominik: An Empirical Study of Generative Models with Encoders, 2018, https://arxiv.org/abs/1812.07909
+77. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+78. Dimitrakakis, Christos; Rothkopf, Constantin: Bayesian multitask inverse reinforcement learning, 2011, https://arxiv.org/abs/1106.3655
+79. Waegeman, Willem; Pahikkala, Tapio; Airola, Antti; Salakoski, Tapio; Stock, Michiel; De Baets, Bernard: A kernel-based framework for learning graded relations from data, 2011, https://arxiv.org/abs/1111.6473
+80. Böttcher, Alexander; Brendel, Wieland; Englitz, Bernhard; Bethge, Matthias: Trace your sources in large-scale data: one ring to find them all, 2018, https://arxiv.org/abs/1803.08882
+81. Gultekin, San; Zhang, Aonan; Paisley, John: Stochastic Annealing for Variational Inference, 2015, https://arxiv.org/abs/1505.06723
+82. Zhao, Renbo; Haskell, William B.; Feng, Jiashi: A Unified Framework for Stochastic Matrix Factorization via Variance Reduction, 2017, https://arxiv.org/abs/1705.06884
+83. Podosinnikova, Anastasia; Setzer, Simon; Hein, Matthias: Robust PCA: Optimization of the Robust Reconstruction Error over the Stiefel Manifold, 2015, https://arxiv.org/abs/1506.00323
+84. Zhang, Jiajun; Shi, Zhiguo: Deformable Deep Convolutional Generative Adversarial Network in Microwave Based Hand Gesture Recognition System, 2017, https://arxiv.org/abs/1711.01968
+85. Liu, Kaihui; Wang, Jiayi; Xing, Zhengli; Yang, Linxiao; Fang, Jun: Low-Rank Phase Retrieval via Variational Bayesian Learning, 2018, https://arxiv.org/abs/1811.01574
+86. Huggins, Jonathan H.; Mackey, Lester: Random Feature Stein Discrepancies, 2018, https://arxiv.org/abs/1806.07788
+87. Mondelli, Marco; Montanari, Andrea: Fundamental Limits of Weak Recovery with Applications to Phase Retrieval, 2017, https://arxiv.org/abs/1708.05932
+88. Laparra, Valero; Jiménez, Sandra; Camps-Valls, Gustavo; Malo, Jesús: Nonlinearities and Adaptation of Color Vision from Sequential Principal Curves Analysis, 2016, https://arxiv.org/abs/1602.00236
+89. McCarter, Calvin; Kim, Seyoung: Large-Scale Optimization Algorithms for Sparse Conditional Gaussian Graphical Models, 2015, https://arxiv.org/abs/1509.04681
+90. Scardapane, Simone; Van Vaerenbergh, Steven; Totaro, Simone; Uncini, Aurelio: Kafnets: kernel-based non-parametric activation functions for neural networks, 2017, https://arxiv.org/abs/1707.04035
+91. Fusco, Francesco; Tirupathi, Seshu; Gormally, Robert: Power Systems Data Fusion based on Belief Propagation, 2017, https://arxiv.org/abs/1705.08815
+92. Chamroukhi, Faicel; Huynh, Bao-Tuyen: Regularized Maximum Likelihood Estimation and Feature Selection in Mixtures-of-Experts Models, 2018, https://arxiv.org/abs/1810.12161
+93. Siddharth, N.; Paige, Brooks; van de Meent, Jan-Willem; Desmaison, Alban; Goodman, Noah D.; Kohli, Pushmeet; Wood, Frank; Torr, Philip H. S.: Learning Disentangled Representations with Semi-Supervised Deep Generative Models, 2017, https://arxiv.org/abs/1706.00400
+94. Doshi-Velez, Finale; Kim, Been: Towards A Rigorous Science of Interpretable Machine Learning, 2017, https://arxiv.org/abs/1702.08608
+95. Loosli, Gaëlle; Aboubacar, Hattoibe: Using SVDD in SimpleMKL for 3D-Shapes Filtering, 2017, https://arxiv.org/abs/1712.02658
+96. Webb, Stefan Douglas: Inference, Sampling, and Learning in Copula Cumulative Distribution Networks, 2013, https://arxiv.org/abs/1310.4456
+97. Liu, Sida; Barbu, Adrian: Unsupervised Learning of Mixture Models with a Uniform Background Component, 2018, https://arxiv.org/abs/1804.02744
+98. Goix, Nicolas; Sabourin, Anne; Clémençon, Stéphan: Sparsity in Multivariate Extremes with Applications to Anomaly Detection, 2015, https://arxiv.org/abs/1507.05899
+99. Wilson, Andrew Gordon; Gilboa, Elad; Nehorai, Arye; Cunningham, John P.: GPatt: Fast Multidimensional Pattern Extrapolation with Gaussian Processes, 2013, https://arxiv.org/abs/1310.5288
+100. Kim, Seyoung; Xing, Eric P.: Tree-guided group lasso for multi-response regression with structured sparsity, with an application to eQTL mapping, 2009, https://arxiv.org/abs/0909.1373
+101. Obozinski, Guillaume; Bach, Francis: Convex Relaxation for Combinatorial Penalties, 2012, https://arxiv.org/abs/1205.1240
+102. Briol, Francois-Xavier; Oates, Chris J.; Cockayne, Jon; Chen, Wilson Ye; Girolami, Mark: On the Sampling Problem for Kernel Quadrature, 2017, https://arxiv.org/abs/1706.03369
+103. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+104. Garrido-Merchán, Eduardo C.; Hernández-Lobato, Daniel: Predictive Entropy Search for Multi-objective Bayesian Optimization with Constraints, 2016, https://arxiv.org/abs/1609.01051
+105. Husic, Brooke E.; Schlueter-Kuck, Kristy L.; Dabiri, John O.: Simultaneous Coherent Structure Coloring facilitates interpretable clustering of scientific data by amplifying dissimilarity, 2018, https://arxiv.org/abs/1807.04427
+106. Chacón, José E.: Mixture model modal clustering, 2016, https://arxiv.org/abs/1609.04721
+107. Shah, Viraj; Soltani, Mohammadreza; Hegde, Chinmay: Reconstruction from Periodic Nonlinearities, With Applications to HDR Imaging, 2017, https://arxiv.org/abs/1710.00109
+108. Puolamäki, Kai; Oikarinen, Emilia; Kang, Bo; Lijffijt, Jefrey; De Bie, Tijl: Interactive Visual Data Exploration with Subjective Feedback: An Information-Theoretic Approach, 2017, https://arxiv.org/abs/1710.08167
+109. Gandhi, Manan; Lee, Keuntaek; Pan, Yunpeng; Theodorou, Evangelos: Propagating Uncertainty through the tanh Function with Application to Reservoir Computing, 2018, https://arxiv.org/abs/1806.09431
+110. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+111. Kailkhura, Bhavya; Thiagarajan, Jayaraman J.; Rastogi, Charvi; Varshney, Pramod K.; Bremer, Peer-Timo: A Spectral Approach for the Design of Experiments: Design, Analysis and Algorithms, 2017, https://arxiv.org/abs/1712.06028
+112. Ragoza, Matthew; Hochuli, Joshua; Idrobo, Elisa; Sunseri, Jocelyn; Koes, David Ryan: Protein-Ligand Scoring with Convolutional Neural Networks, 2016, https://arxiv.org/abs/1612.02751
+113. Siarohin, Aliaksandr; Zen, Gloria; Sebe, Nicu; Ricci, Elisa: Enhancing Perceptual Attributes with Bayesian Style Generation, 2018, https://arxiv.org/abs/1812.00717
+114. Ruffini, Matteo; Rabusseau, Guillaume; Balle, Borja: Hierarchical Methods of Moments, 2018, https://arxiv.org/abs/1810.07468
+115. Heinze-Deml, Christina; Meinshausen, Nicolai: Conditional Variance Penalties and Domain Shift Robustness, 2017, https://arxiv.org/abs/1710.11469
+116. "d'Errico, Maria; Facco, Elena; Laio, Alessandro; Rodriguez, Alex;: Automatic topography of high-dimensional data sets by non-parametric Density Peak clustering, 2018, https://arxiv.org/abs/1802.10549
+117. Zou, James Y.; Chaudhuri, Kamalika; Kalai, Adam Tauman: Crowdsourcing Feature Discovery via Adaptively Chosen Comparisons, 2015, https://arxiv.org/abs/1504.00064
+118. Cardoso,  ngelo; Daolio, Fabio; Vargas, Saúl: Product Characterisation towards Personalisation: Learning Attributes from Unstructured Data to Recommend Fashion Products, 2018, https://arxiv.org/abs/1803.07679
+119. Xie, Christopher; Tank, Alex; Greaves-Tunnell, Alec; Fox, Emily: A Unified Framework for Long Range and Cold Start Forecasting of Seasonal Profiles in Time Series, 2017, https://arxiv.org/abs/1710.08473
+120. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+121. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+122. Tuia, Devis; Camps-Valls, Gustau: Kernel Manifold Alignment, 2015, https://arxiv.org/abs/1504.02338
+123. Hofert, Marius; Prasad, Avinash; Zhu, Mu: Quasi-random number generators for multivariate distributions based on generative neural networks, 2018, https://arxiv.org/abs/1811.00683
+124. Tandon, Rashish; Si, Si; Ravikumar, Pradeep; Dhillon, Inderjit: Kernel Ridge Regression via Partitioning, 2016, https://arxiv.org/abs/1608.01976
+125. Goldfarb, Donald; Qin, Zhiwei: Robust Low-rank Tensor Recovery: Models and Algorithms, 2013, https://arxiv.org/abs/1311.6182
+126. Yao, Yuling; Vehtari, Aki; Simpson, Daniel; Gelman, Andrew: Yes, but Did It Work?: Evaluating Variational Inference, 2018, https://arxiv.org/abs/1802.02538
+127. Yang, Xiu; Tartakovsky, Guzel; Tartakovsky, Alexandre: Physics-Informed Kriging: A Physics-Informed Gaussian Process Regression Method for Data-Model Convergence, 2018, https://arxiv.org/abs/1809.03461
+128. Wang, Gang; Giannakis, Georgios B.; Chen, Jie: Learning ReLU Networks on Linearly Separable Data: Algorithm, Optimality, and Generalization, 2018, https://arxiv.org/abs/1808.04685
+129. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+130. Lakshminarayanan, Balaji; Pritzel, Alexander; Blundell, Charles: Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles, 2016, https://arxiv.org/abs/1612.01474
+131. Sattigeri, Prasanna; Hoffman, Samuel C.; Chenthamarakshan, Vijil; Varshney, Kush R.: Fairness GAN, 2018, https://arxiv.org/abs/1805.09910
+132. Webb, Stefan; Golinski, Adam; Zinkov, Robert; Siddharth, N.; Rainforth, Tom; Teh, Yee Whye; Wood, Frank: Faithful Inversion of Generative Models for Effective Amortized Inference, 2017, https://arxiv.org/abs/1712.00287
+133. Roth, Kevin; Lucchi, Aurelien; Nowozin, Sebastian; Hofmann, Thomas: Adversarially Robust Training through Structured Gradient Regularization, 2018, https://arxiv.org/abs/1805.08736
+134. Remes, Sami; Heinonen, Markus; Kaski, Samuel: Non-Stationary Spectral Kernels, 2017, https://arxiv.org/abs/1705.08736
+135. Xiao, Lechao; Bahri, Yasaman; Sohl-Dickstein, Jascha; Schoenholz, Samuel S.; Pennington, Jeffrey: Dynamical Isometry and a Mean Field Theory of CNNs: How to Train 10,000-Layer Vanilla Convolutional Neural Networks, 2018, https://arxiv.org/abs/1806.05393
+136. Cheplygina, Veronika; Tax, David M. J.; Loog, Marco: Multiple Instance Learning with Bag Dissimilarities, 2013, https://arxiv.org/abs/1309.5643
+137. Lefèvre, Augustin; Bach, Francis; Févotte, Cédric: Online algorithms for Nonnegative Matrix Factorization with the Itakura-Saito divergence, 2011, https://arxiv.org/abs/1106.4198
+138. Novak, Roman; Bahri, Yasaman; Abolafia, Daniel A.; Pennington, Jeffrey; Sohl-Dickstein, Jascha: Sensitivity and Generalization in Neural Networks: an Empirical Study, 2018, https://arxiv.org/abs/1802.08760
+139. Imani, Ehsan; White, Martha: Improving Regression Performance with Distributional Losses, 2018, https://arxiv.org/abs/1806.04613
+140. Chowdhury, Agniva; Yang, Jiasen; Drineas, Petros: Structural Conditions for Projection-Cost Preservation via Randomized Matrix Multiplication, 2017, https://arxiv.org/abs/1705.10102
+141. Kim, Hyeji; Gao, Weihao; Kannan, Sreeram; Oh, Sewoong; Viswanath, Pramod: Discovering Potential Correlations via Hypercontractivity, 2017, https://arxiv.org/abs/1709.04024
+142. Kulesza, Alex; Taskar, Ben: Determinantal point processes for machine learning, 2012, https://arxiv.org/abs/1207.6083
+143. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
+144. Ustun, Berk; Rudin, Cynthia: Learning Optimized Risk Scores, 2016, https://arxiv.org/abs/1610.00168
 
 * Grid t-SNE 1000 images cs.CV 2012
 1. Bagon, Shai: Discrete Energy Minimization, beyond Submodularity: Applications and Approximations, 2012, https://arxiv.org/abs/1210.7362
