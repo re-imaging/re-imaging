@@ -1,0 +1,135 @@
+# # Ternary Classifier Predictions
+#
+# Uses a previously trained network to classify images and then saves the resulting prediction averages.
+
+import warnings
+warnings.filterwarnings('ignore')
+
+import numpy as np
+
+import os
+import sys
+import glob
+import random
+from IPython.display import clear_output, display
+import PIL.Image
+
+# from keras.applications.inception_v3 import InceptionV3, preprocess_input
+from keras.applications.vgg16 import VGG16, preprocess_input
+
+from keras.models import Model, load_model
+from keras.layers import Dense, GlobalAveragePooling2D, AveragePooling2D, Dropout, Flatten, Conv2D, Activation
+from keras.preprocessing import image
+from keras.preprocessing.image import ImageDataGenerator, img_to_array # load_img
+from keras.optimizers import SGD, Adam
+from keras.callbacks import ModelCheckpoint
+
+import matplotlib.pyplot as plt
+
+import matplotlib.pyplot as plt
+import numpy as np
+import sqlite3
+import pickle
+import json
+import math
+import random
+
+# this seems to help with some GPU memory issues
+
+import tensorflow as tf
+
+config = tf.ConfigProto()
+config.gpu_options.allow_growth = True
+session = tf.Session(config=config)
+
+model = load_model('ternary_20190911_9748x/diagram-sensor-unsure_vgg16-2000.hdf5')
+
+# import the sqlite3 database and create a cursor
+db_path = "/home/rte/data/db/arxiv_db_images.sqlite3"
+db = sqlite3.connect(db_path)
+c = db.cursor()
+
+image_pkl_filename = "../sqlite-scripts/images_cat_year_data.pkl"
+# READ PKL
+with open(image_pkl_filename, "rb") as read_file:
+    image_data = pickle.load(read_file)
+
+def load_image(path):
+    img = image.load_img(path, target_size=model.input_shape[1:3])
+    x = image.img_to_array(img)
+    x = np.expand_dims(x, axis=0)
+    x = preprocess_input(x)
+    return img, x
+
+# ### Run prediction
+#
+# Code below queryies the SQLite DB for a particular category and year and returns all of the image IDs. These are then used to check if the converted jpg file exists.
+#
+# Those files are passed to the model which gives a prediction. The top class prediction totals are saved in the big ```image_data``` list.
+#
+# Later the percentage probability for each class is calculated.
+
+sql = ('''
+    SELECT images.id
+    FROM images
+    LEFT JOIN metadata on images.identifier = metadata.identifier
+    WHERE substr(trim(cat),1,instr(trim(cat)||' ',' ')-1) = ?
+    AND strftime("%Y", metadata.created) = ?
+    ''')
+
+imagefolder = "/mnt/hd2/images/all/"
+classes = ["diagram", "sensor", "unsure"]
+
+for index, cat in enumerate(image_data[:]):
+    print(cat[0]) # category string
+    cat_class_totals = []
+    for year in cat[1]:
+        print(cat[0], year) # year
+
+        c.execute(sql, (cat[0], year))
+        rows = c.fetchall()
+
+        class_totals = [0, 0, 0]
+
+#         print("image files:",rows)
+        random.seed(4)
+        random.shuffle(rows)
+#         print("shuffled:", rows)
+
+        # get a maximum of 1000 rows from the randomly sorted results
+
+        for i, row in enumerate(rows[:1000]):
+            print(i, row)
+            imagefilepath = os.path.join(imagefolder, str(row[0]) + ".jpg")
+            print(imagefilepath)
+            try:
+                img, x = load_image(imagefilepath)
+                img.verify() # verify that it is, in fact an image
+            except (IOError, SyntaxError) as e:
+                print('>>>>> Bad file:', imagefilepath) # print out the names of corrupt files
+            predictions = model.predict(x)
+            print(predictions[0])
+
+            ind = np.argmax(predictions)
+            class_totals[ind] +=1
+            pred = classes[ind]
+            print(pred)
+
+            print("*" * 20)
+
+        print(class_totals)
+        cat_class_totals.append(class_totals)
+        print("-" * 40)
+
+    print(cat_class_totals)
+    image_data[index].append(cat_class_totals)
+
+    # WRITE PKL
+    with open("ternary_classifier_predictions.pkl", "wb") as write_file:
+        pickle.dump(image_data, write_file)
+    print("finished writing pickle file")
+    print("-" * 40)
+
+print("*** DONE ***")
+
+# image_data
