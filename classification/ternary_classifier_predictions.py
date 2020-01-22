@@ -13,6 +13,7 @@ import glob
 import random
 from IPython.display import clear_output, display
 import PIL.Image
+import datetime
 
 # from keras.applications.inception_v3 import InceptionV3, preprocess_input
 from keras.applications.vgg16 import VGG16, preprocess_input
@@ -49,7 +50,11 @@ db_path = "/home/rte/data/db/arxiv_db_images.sqlite3"
 db = sqlite3.connect(db_path)
 c = db.cursor()
 
+# load the data saved previously
 image_pkl_filename = "../sqlite-scripts/images_cat_year_data.pkl"
+# or pick up from where we left off
+# image_pkl_filename = "ternary_classifier_predictions.pkl"
+
 # READ PKL
 with open(image_pkl_filename, "rb") as read_file:
     image_data = pickle.load(read_file)
@@ -60,6 +65,15 @@ def load_image(path):
     x = np.expand_dims(x, axis=0)
     x = preprocess_input(x)
     return img, x
+
+# figure out where we were up to
+starting_index = 0
+for i, row in enumerate(image_data):
+    if(len(row) < 4):
+        print("checking for starting index")
+        starting_index = i
+        print("first index with length < 4:",starting_index)
+        break
 
 # ### Run prediction
 #
@@ -79,8 +93,11 @@ sql = ('''
 
 imagefolder = "/mnt/hd2/images/all/"
 classes = ["diagram", "sensor", "unsure"]
+now = datetime.datetime.now()
+now_string = "{:04d}{:02d}{:02d}_{:02d}{:02d}{:02d}".format(now.year, now.month, now.day, now.hour, now.minute, now.second)
+logpath = "error_log_" + now_string + ".txt"
 
-for index, cat in enumerate(image_data[:]):
+for index, cat in enumerate(image_data[starting_index:]):
     print(cat[0]) # category string
     cat_class_totals = []
     for year in cat[1]:
@@ -92,7 +109,7 @@ for index, cat in enumerate(image_data[:]):
         class_totals = [0, 0, 0]
 
 #         print("image files:",rows)
-        random.seed(4)
+        random.seed(4) # fixed seed for reproducable results
         random.shuffle(rows)
 #         print("shuffled:", rows)
 
@@ -105,8 +122,16 @@ for index, cat in enumerate(image_data[:]):
             try:
                 img, x = load_image(imagefilepath)
                 img.verify() # verify that it is, in fact an image
-            except (IOError, SyntaxError) as e:
+            except (IOError, SyntaxError, AttributeError) as e:
                 print('>>>>> Bad file:', imagefilepath) # print out the names of corrupt files
+                f = open(logpath, "a+")
+                f.write(imagefilepath + "\n")
+                f.close()
+            except:
+                print('>>>>> Bad file:', imagefilepath) # print out the names of corrupt files
+                f = open(logpath, "a+")
+                f.write(imagefilepath + "\n")
+                f.close()
             predictions = model.predict(x)
             print(predictions[0])
 
@@ -122,7 +147,7 @@ for index, cat in enumerate(image_data[:]):
         print("-" * 40)
 
     print(cat_class_totals)
-    image_data[index].append(cat_class_totals)
+    image_data[index + starting_index].append(cat_class_totals)
 
     # WRITE PKL
     with open("ternary_classifier_predictions.pkl", "wb") as write_file:
@@ -131,5 +156,3 @@ for index, cat in enumerate(image_data[:]):
     print("-" * 40)
 
 print("*** DONE ***")
-
-# image_data
