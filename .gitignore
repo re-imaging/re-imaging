@@ -32,3 +32,6 @@ ml-scripts/
 
 #ignore json files
 *.json
+
+#ignore remote
+visualisation/remote
