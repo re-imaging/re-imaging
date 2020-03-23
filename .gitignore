@@ -29,3 +29,6 @@ ml-scripts/
 #ignore jupyter notebook checkpoints and config files
 .ipynb_checkpoints
 .config_ipynb
+
+#ignore json files
+*.json
