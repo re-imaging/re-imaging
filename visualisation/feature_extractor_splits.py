@@ -25,7 +25,7 @@ config.log_device_placement = True  # to log device placement (on which device t
 sess = tf.Session(config=config)
 set_session(sess)  # set this TensorFlow session as the default session for Keras
 
-parser = argparse.ArgumentParser(description='Script for getting image metadata and writing to database')
+parser = argparse.ArgumentParser(description='Script for getting image features using VGG16 network and saving pickle')
 
 # parser.add_argument('paths_file', help='textfile to read image paths from')
 parser.add_argument('textfile', help="path to textfile of paths")
@@ -114,12 +114,11 @@ for slice_end in slices:
 
     print('finished extracting features for %d images' % len(paths_slice))
 
-    slice_start = slice_end
-
-
     # write images, features to a pickle file
 
     savefilename = args.savedir + "features_" + str(slice_start) + "_" + str(slice_end) + "_vgg.pkl"
+
+    slice_start = slice_end
 
     print(f)
 
