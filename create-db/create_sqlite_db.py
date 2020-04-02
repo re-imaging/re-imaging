@@ -22,6 +22,12 @@ try:
         CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
         filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
     ''')
+    
+    # create captions table
+    c.execute('''
+        CREATE TABLE "captions" ("id" INTEGER, "identifier" TEXT, "fignum" TEXT, \
+        "caption" TEXT, "label" TEXT, "filenames" TEXT, "image-ids" TEXT, PRIMARY KEY("id")
+    ''')
 
     # for testing insertion
 
