@@ -30,6 +30,8 @@ parser.add_argument('-v', '--verbose', action='store_true', help='verbose output
 parser.add_argument('-t', '--timing', action='store_true', help='timing output')
 parser.add_argument('-z', '--dryrun', action='store_true', help="don't modify the database, just print (default: False)")
 parser.add_argument('-r', '--shuffle', action='store_true', help="shuffle the list of tex files (default: False)")
+parser.add_argument('-n', '--no_captions', action='store_true', help="do not write captions into db (default: False)")
+parser.add_argument('-i', '--get_images', action='store_true', help="get the image-ids for each filename (default: False)")
 
 global args
 args = parser.parse_args()
@@ -104,7 +106,7 @@ def check_caption(text):
         if start_index == -1:
             if args.verbose:
                 print(text)
-                print("COULDN'T FIND ANOTHER \caption")
+                print(r"COULDN'T FIND ANOTHER \caption")
 #             start_index = text.lower().find(r"\mycaption")
             return ""
             break
@@ -177,7 +179,7 @@ def get_caption(t):
             caption_text = check_caption(figure_text)
 
 #             print("-" * 15)
-            start_index = figure_text.find(r'\caption')
+            # start_index = figure_text.find(r'\caption')
 #             print("start_index:", start_index)
             caption = parse_caption(caption_text)
             # print(">>>>> caption:")
@@ -212,7 +214,7 @@ def get_caption(t):
             for identifier, fignum, _, caption, label, filenames in figures:
                 c.execute("INSERT INTO captions (identifier, tex, fignum, caption, label, filenames) \
                 VALUES (?, ?, ?, ?, ?, ?)", \
-                (identifier, t, fignum, caption, label, ','.join([str(elem) for elem in filenames])))
+                (identifier, t, fignum, caption, label, '\|'.join([str(elem) for elem in filenames])))
             db.commit()
 
         signal.alarm(0)
@@ -236,7 +238,9 @@ def get_caption(t):
         with open(logpath, "a+") as f:
             f.write(t + "\n")
         raise e
-    # finally:
+
+def get_image_ids():
+    print("run get_image_ids")
 
 def main():
     signal.signal(signal.SIGALRM, handler)
@@ -264,19 +268,77 @@ def main():
         print("time taken to shuffle entries:",end-start)
         start = time.time()
 
-    for ai, t in enumerate(texs[args.start_line:]):
-        if(args.verbose):
-            print("*" * 20)
-            print("paper:",ai)
-            # print("-" * 20)
-        get_caption(t)
-        if ai % 1000 == 0:
-            print("*" * 20)
-            print("texs:",ai)
+    if args.no_captions is False:
+        for ai, t in enumerate(texs[args.start_line:]):
+            if(args.verbose):
+                print("*" * 20)
+                print("paper:",ai)
+                # print("-" * 20)
+            get_caption(t)
+            if ai % 1000 == 0:
+                print("*" * 20)
+                print("texs:",ai)
 
-            end = time.time()
-            print("time taken for process:",end-start)
-            start = time.time()
+                end = time.time()
+                print("time taken for process:",end-start)
+                start = time.time()
+
+    if args.get_images:
+        print("running SQLite query to grab id, tex, and filenames")
+        sql = ('''
+        SELECT id, identifier, tex, filenames
+        FROM captions
+        LIMIT 1000
+        ''')
+
+        c.execute(sql, )
+
+        rows = c.fetchall()
+        print("number of entries:",len(rows))
+
+        # for r in rows[:10]:
+        #     print(r)
+
+        sql = ('''
+        SELECT id, identifier, filename
+        FROM images
+        WHERE identifier = ?
+        AND filename LIKE ?||'%'
+        ''')
+
+
+        for id, identifier, tex_path, filenames in rows[500:510]:
+            print(id, tex_path, filenames)
+            filenames = filenames.split(",")
+            print(filenames)
+
+            for filename in filenames:
+                print("fetching sql for filename:", filename)
+                c.execute(sql, (identifier, filename))
+                rows = c.fetchall()
+                for row in rows:
+                    print(row)
+
+
+            # use tex_path to find the above folder
+            # start_folder = os.path.dirname(tex_path)
+
+            # for filename in filenames:
+            #     for root, dirs, files in os.walk(start_folder):
+            #         print(root, dirs, files)
+            #         if filename in files:
+
+                # for file in files:
+                    # if file.endswith(".txt"):
+                         # print(os.path.join(root, file))
+
+             # sql = ('''
+             # UPDATE captions
+             # SET image-ids = ?
+             # WHERE id = ?
+             # ''')
+
+
 
 if __name__ == "__main__":
     main()
