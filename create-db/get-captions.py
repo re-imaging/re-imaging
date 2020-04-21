@@ -32,12 +32,15 @@ parser.add_argument('-z', '--dryrun', action='store_true', help="don't modify th
 parser.add_argument('-r', '--shuffle', action='store_true', help="shuffle the list of tex files (default: False)")
 parser.add_argument('-n', '--no_captions', action='store_true', help="do not write captions into db (default: False)")
 parser.add_argument('-i', '--get_images', action='store_true', help="get the image-ids for each filename (default: False)")
+parser.add_argument('--create_index', action='store_true', help="create an index to speed up queries (default: False)")
 
 global args
 args = parser.parse_args()
 
 db = sqlite3.connect(args.db_path)
 c = db.cursor()
+write_db = sqlite3.connect(args.db_path)
+write_cursor = write_db.cursor()
 
 now = datetime.datetime.now()
 now_string = "{:04d}{:02d}{:02d}_{:02d}{:02d}{:02d}".format(now.year, now.month, now.day, now.hour, now.minute, now.second)
@@ -246,6 +249,7 @@ def main():
     signal.signal(signal.SIGALRM, handler)
 
     start = time.time()
+    program_start = time.time()
 
     texs = []
     with open(args.tex_list) as f:
@@ -274,7 +278,10 @@ def main():
                 print("*" * 20)
                 print("paper:",ai)
                 # print("-" * 20)
+
+            # run function to get caption from a tex filepath
             get_caption(t)
+
             if ai % 1000 == 0:
                 print("*" * 20)
                 print("texs:",ai)
@@ -288,57 +295,163 @@ def main():
         sql = ('''
         SELECT id, identifier, tex, filenames
         FROM captions
-        LIMIT 1000
         ''')
 
         c.execute(sql, )
 
-        rows = c.fetchall()
-        print("number of entries:",len(rows))
+        caption_rows = c.fetchall()
+        print("number of entries:",len(caption_rows))
 
-        # for r in rows[:10]:
-        #     print(r)
+        end = time.time()
+        print("time taken for getting all captions:",end-start)
+        start = time.time()
 
-        sql = ('''
-        SELECT id, identifier, filename
-        FROM images
-        WHERE identifier = ?
-        AND filename LIKE ?||'%'
-        ''')
+        # create sqlite index
+        if args.create_index:
+            c.execute("CREATE INDEX identifier_index ON images (identifier)",)
 
+            end = time.time()
+            print("time taken to generate index:",end-start)
+            start = time.time()
 
-        for id, identifier, tex_path, filenames in rows[500:510]:
-            print(id, tex_path, filenames)
-            filenames = filenames.split(",")
-            print(filenames)
+        write_cursor.execute("BEGIN TRANSACTION;")
 
-            for filename in filenames:
-                print("fetching sql for filename:", filename)
-                c.execute(sql, (identifier, filename))
-                rows = c.fetchall()
-                for row in rows:
-                    print(row)
+        last_identifier = ""
 
+        for i, (id, identifier, tex_path, filenames) in enumerate(caption_rows[args.start_line:]):
+            if args.verbose:
+                print(id, tex_path, filenames)
+            filenames = filenames.split("\|")
+            # print(filenames)
+            for ii, f in enumerate(filenames):
+                if "/" in f:
+                    filenames[ii] = f.rsplit("/", 1)[1]
+            # filenames = [x for x in filenames][0]
+            if args.verbose:
+                print(">>> filenames:")
+                print(filenames)
 
-            # use tex_path to find the above folder
-            # start_folder = os.path.dirname(tex_path)
+            # get rows from images of all images that match identifier
+            # print("last_identifier:",last_identifier)
+            # print("identifier:",identifier)
+            # print("same?", last_identifier == identifier)
 
-            # for filename in filenames:
-            #     for root, dirs, files in os.walk(start_folder):
-            #         print(root, dirs, files)
-            #         if filename in files:
+            get_sql = ('''
+            SELECT id, identifier, filename
+            FROM images
+            WHERE identifier = ?
+            ''')
+            # AND filename LIKE ?||'%'
 
-                # for file in files:
-                    # if file.endswith(".txt"):
-                         # print(os.path.join(root, file))
+            if (last_identifier == identifier) is False:
+                c.execute(get_sql, (identifier,))
+                image_rows = c.fetchall()
+                if args.verbose:
+                    print(">>> image_rows:")
+                    for row in image_rows:
+                        print(row)
+                    end = time.time()
+                    print("time taken to grab image rows:",end-start)
+                    start = time.time()
+            else:
+                if args.verbose:
+                    print("same identifier - reusing list")
 
-             # sql = ('''
-             # UPDATE captions
-             # SET image-ids = ?
-             # WHERE id = ?
-             # ''')
+            target_ids = [] # might need to make this a string
 
+            set_sql = ('''
+            UPDATE captions
+            SET "image-ids" = ?
+            WHERE id = ?
+            ''')
 
+            for f in filenames:
+                target_found = False
+                if args.verbose:
+                    print("looking for filename:",f)
+                for image_id, image_identifier, image_filename in image_rows:
+                    if f == image_filename:
+                        target_ids.append(str(image_id))
+                        if args.verbose:
+                            print("===== found exact match:",image_id)
+                        target_found = True
+                        break
+                if not target_found:
+                    for image_id, image_identifier, image_filename in image_rows:
+                        if image_filename.startswith(f) and (len(image_filename) < (len(f) + 6)):
+                            target_ids.append(str(image_id))
+                            if args.verbose:
+                                print("%%%%% found match starting with and not too long",image_filename,image_id)
+                            target_found = True
+                            break
+                if not target_found:
+                    for image_id, image_identifier, image_filename in image_rows:
+                        if (image_filename.startswith(f)) and (f in image_filename) and (f != ""):
+                            target_ids.append(str(image_id))
+                            if args.verbose:
+                                print("!!!!! found a startswith match",image_filename,image_id)
+                            target_found = True
+                            break
+                    # else:
+                        # print("image not found!")
+                # print("target_id:",target_ids)
+            if args.verbose:
+                end = time.time()
+                print("time taken to process filename strings:",end-start)
+                start = time.time()
+
+            # format image-ids for inserting
+            # only run if target_ids is not empty
+            if target_ids:
+                image_id_string = "\|".join(target_ids)
+                if args.verbose:
+                    print("target_ids:",target_ids)
+                    print("image_id_string:",image_id_string)
+
+                write_cursor.execute(set_sql, (image_id_string, id))
+
+            elif not target_ids:
+                if args.verbose:
+                    print("##### no image-ids found")
+
+            if args.verbose:
+                end = time.time()
+                print("time taken for executing SQLite update:",end-start)
+                start = time.time()
+
+            last_identifier = identifier
+
+            # if(args.verbose):
+            #     print("*" * 20)
+            #     print("caption number:",i)
+                # print("-" * 20)
+            if i % 1000 == 0:
+                print("*" * 20)
+                print("captions:",i)
+
+                end = time.time()
+                print("time taken for process:",end-start)
+                start = time.time()
+
+                write_db.commit()
+
+                end = time.time()
+                print("time taken for committing to SQLite:",end-start)
+                start = time.time()
+
+                write_cursor.execute("BEGIN TRANSACTION;")
+
+            if args.verbose:
+                print("\n" + ("*" * 20) + "\n")
+
+        write_db.commit()
+
+        end = time.time()
+        print("time taken for process:",end-start)
+        start = time.time()
+
+        program_end = time.time()
+        print("total program time taken:",program_end-program_start)
 
 if __name__ == "__main__":
     main()
