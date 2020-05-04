@@ -31,7 +31,7 @@ parser.add_argument('-t', '--timing', action='store_true', help='timing output')
 parser.add_argument('-z', '--dryrun', action='store_true', help="don't modify the database, just print (default: False)")
 parser.add_argument('-r', '--shuffle', action='store_true', help="shuffle the list of tex files (default: False)")
 parser.add_argument('-n', '--no_captions', action='store_true', help="do not write captions into db (default: False)")
-parser.add_argument('-i', '--get_images', action='store_true', help="get the image-ids for each filename (default: False)")
+parser.add_argument('-i', '--get_images', action='store_true', help="get the image_ids for each filename (default: False)")
 parser.add_argument('--create_index', action='store_true', help="create an index to speed up queries (default: False)")
 
 global args
@@ -47,10 +47,10 @@ now_string = "{:04d}{:02d}{:02d}_{:02d}{:02d}{:02d}".format(now.year, now.month,
 logpath = "error_log_" + now_string + ".txt"
 
 id_re = r'\/(\d{4}\.\d{4,5}|[^\/]+?\d{7})\/'
-caption_re = r'(?:\\caption[^{]*?{)(?:\s?\\label{[\S\s]*?\})?\s?([\s\S]+?)(?:\s+?\}?\s?)?(?:(?:\s*?\}?\s*?\\label)|(?:\}\s*?\\end))'
+# caption_re = r'(?:\\epsffile|\\epsfbox|\\sfig|\\plotfiddle|\\plottwo|\\psfig|\\plotone|\\includegraphics|\\epsfig)(?:\[[^\]]*?])?[^\{]*?(?:\{?{file={?|\{?{figure={?|{?results/{|{?\\[^\{]*?{|{{{|{{|{)([^\}\\]+))'
 # label_re = r'(?:\\caption[\s\S]*?)(?:\\label\{)([^}]+?)(?:\})'
 label_re = r'(?:\\label\{)([^}]+?)(?:\})'
-imagecheck_re = r'(?:\\epsfbox|\\sfig|\\plotfiddle|\\plottwo|\\psfig|\\plotone|\\includegraphics|\\epsfig)[^\{]*?(?:\{file=|\{figure=|{)([^\}\,]+)'
+imagecheck_re = r'(?:\\epsffile|\\epsfbox|\\sfig|\\plotfiddle|\\plottwo|\\psfig|\\plotone|\\includegraphics\*?|\\epsfig)\s?(?:\[[^\]]*?])?\s?[^\{]*?(?:\{?{file={?|\{?{figure={?|{?results/{?|{*?\\[^\{\/\s]+{?|{{{|{{|{)\/?\s?([^\}\\\s\,]+)'
 subfigure_re = r'\\begin\{subfigure[\S\s]+?\\end\{subfigure\}'
 remove_label_re = r'\s*\\label\{[^\}]*?\}\s*'
 
@@ -83,7 +83,8 @@ def parse_caption(text):
                 offset = i
         if char == "}":
             level -= 1
-            if sq_level == 0:
+            # and (level == 0)
+            if (sq_level == 0) and (level == 0):
                 completed_braces = True
         if char == "[":
             sq_level += 1
@@ -204,6 +205,10 @@ def get_caption(t):
                 # print("!!! no label")
             # get filenames
             filenames = re.findall(imagecheck_re, figure[2])
+            # remove the { character -- probably not needed now regex is updated
+            # filenames = [s.strip('{') for s in filenames]
+            # caption = re.sub(remove_label_re, "", caption)
+
             # print("filenames:",filenames)
             figures[i].append(filenames)
             # print("-" * 30)
@@ -230,19 +235,21 @@ def get_caption(t):
         # global error_count += 1
 
     except KeyboardInterrupt:
-        db.commit()
+        if args.dryrun is False:
+            db.commit()
         with open(logpath, "a+") as f:
             f.write(t + "\n")
         # quit
         sys.exit()
 
     except Exception as e:
-        db.commit()
+        if args.dryrun is False:
+            db.commit()
         with open(logpath, "a+") as f:
             f.write(t + "\n")
         raise e
 
-def get_image_ids():
+def get_image_ids(f):
     print("run get_image_ids")
 
 def main():
@@ -251,13 +258,16 @@ def main():
     start = time.time()
     program_start = time.time()
 
-    texs = []
+    # for testing
+    # texs = ["/home/rte/arXiv/src_all/1608/1608.04949/28867_am.tex"]
+    # texs = ["/home/rte/arXiv/src_all/1608/1608.01138/manuscript.tex"]
+    # texs = []
     with open(args.tex_list) as f:
         texs = json.load(f)
 
     # if(args.verbose):
     print("loaded file of .tex paths")
-    print(len(texs))
+    print("number of entries:",len(texs))
 
     end = time.time()
     print("time taken to load entries:",end-start)
@@ -296,6 +306,8 @@ def main():
         SELECT id, identifier, tex, filenames
         FROM captions
         ''')
+        # for testing a single example
+        # WHERE identifier == '1505.02792'
 
         c.execute(sql, )
 
@@ -314,7 +326,8 @@ def main():
             print("time taken to generate index:",end-start)
             start = time.time()
 
-        write_cursor.execute("BEGIN TRANSACTION;")
+        if args.dryrun is False:
+            write_cursor.execute("BEGIN TRANSACTION;")
 
         last_identifier = ""
 
@@ -323,10 +336,16 @@ def main():
                 print(id, tex_path, filenames)
             filenames = filenames.split("\|")
             # print(filenames)
+
+            # first split filenames on '/'
             for ii, f in enumerate(filenames):
                 if "/" in f:
                     filenames[ii] = f.rsplit("/", 1)[1]
-            # filenames = [x for x in filenames][0]
+            # then split filenames on '{'
+            for ii, f in enumerate(filenames):
+                if "{" in f:
+                    filenames[ii] = f.rsplit("{", 1)[1]
+
             if args.verbose:
                 print(">>> filenames:")
                 print(filenames)
@@ -359,39 +378,34 @@ def main():
 
             target_ids = [] # might need to make this a string
 
-            set_sql = ('''
-            UPDATE captions
-            SET "image-ids" = ?
-            WHERE id = ?
-            ''')
-
             for f in filenames:
                 target_found = False
-                if args.verbose:
-                    print("looking for filename:",f)
-                for image_id, image_identifier, image_filename in image_rows:
-                    if f == image_filename:
-                        target_ids.append(str(image_id))
-                        if args.verbose:
-                            print("===== found exact match:",image_id)
-                        target_found = True
-                        break
-                if not target_found:
+                if  (f != ""):
+                    if args.verbose:
+                        print("looking for filename:",f)
                     for image_id, image_identifier, image_filename in image_rows:
-                        if image_filename.startswith(f) and (len(image_filename) < (len(f) + 6)):
+                        if f == image_filename:
                             target_ids.append(str(image_id))
                             if args.verbose:
-                                print("%%%%% found match starting with and not too long",image_filename,image_id)
+                                print("===== found exact match:",image_id)
                             target_found = True
                             break
-                if not target_found:
-                    for image_id, image_identifier, image_filename in image_rows:
-                        if (image_filename.startswith(f)) and (f in image_filename) and (f != ""):
-                            target_ids.append(str(image_id))
-                            if args.verbose:
-                                print("!!!!! found a startswith match",image_filename,image_id)
-                            target_found = True
-                            break
+                    if not target_found:
+                        for image_id, image_identifier, image_filename in image_rows:
+                            if image_filename.startswith(f) and (len(image_filename) < (len(f) + 6)):
+                                target_ids.append(str(image_id))
+                                if args.verbose:
+                                    print("%%%%% found match startswith and not too long",image_filename,image_id)
+                                target_found = True
+                                break
+                    if not target_found:
+                        for image_id, image_identifier, image_filename in image_rows:
+                            if (image_filename.startswith(f)) and (f in image_filename):
+                                target_ids.append(str(image_id))
+                                if args.verbose:
+                                    print("!!!!! found a startswith match",image_filename,image_id)
+                                target_found = True
+                                break
                     # else:
                         # print("image not found!")
                 # print("target_id:",target_ids)
@@ -400,19 +414,25 @@ def main():
                 print("time taken to process filename strings:",end-start)
                 start = time.time()
 
-            # format image-ids for inserting
+            set_sql = ('''
+                UPDATE captions
+                SET "image_ids" = ?
+                WHERE id = ?
+                ''')
+
+            # format image_ids for inserting
             # only run if target_ids is not empty
             if target_ids:
                 image_id_string = "\|".join(target_ids)
                 if args.verbose:
                     print("target_ids:",target_ids)
                     print("image_id_string:",image_id_string)
-
-                write_cursor.execute(set_sql, (image_id_string, id))
+                if args.dryrun is False:
+                    write_cursor.execute(set_sql, (image_id_string, id))
 
             elif not target_ids:
                 if args.verbose:
-                    print("##### no image-ids found")
+                    print("##### no image_ids found")
 
             if args.verbose:
                 end = time.time()
@@ -439,12 +459,14 @@ def main():
                 print("time taken for committing to SQLite:",end-start)
                 start = time.time()
 
-                write_cursor.execute("BEGIN TRANSACTION;")
+                if args.dryrun is False:
+                    write_cursor.execute("BEGIN TRANSACTION;")
 
             if args.verbose:
                 print("\n" + ("*" * 20) + "\n")
 
-        write_db.commit()
+        if args.dryrun is False:
+            write_db.commit()
 
         end = time.time()
         print("time taken for process:",end-start)
