@@ -26,7 +26,7 @@ try:
     # create captions table
     c.execute('''
         CREATE TABLE "captions" ("id" INTEGER, "identifier" TEXT, "tex" TEXT, \
-        "fignum" TEXT, "caption" TEXT, "label" TEXT, "filenames" TEXT, "image-ids" TEXT, PRIMARY KEY("id"))
+        "fignum" TEXT, "caption" TEXT, "label" TEXT, "filenames" TEXT, "image_ids" TEXT, PRIMARY KEY("id"))
     ''')
 
     # for testing insertion
