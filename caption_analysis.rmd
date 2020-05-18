@@ -1,0 +1,434 @@
+# Comparison of ArXiv captions -- machine learning vs other   
+
+I analysed a sample (around 300k) of the captions. There is some specificity to the machine learning and computer vision captions, but maybe not what what we thought it would be. They diverge greatly from the background caption keywords in arxiv, and that probably would help separate out machine learning images.   The weird thing: its the use of the word 'image' that seems to most differentiate machine learning work. Or perhaps 'features,' and 'ground truth.' 
+
+I couldn't think of a good way to visualize the differences, but the table of top 100 keywords that comes at the end of this document gives some sense of the terms. Here it is. The columns are keyword, and then the three samples based on different categories. I took the top 100 keywords from the three samples. As you see from all the zeros, there is very little intersection between the samples. That said, the keywords for machine learning are depressingly generic. I prefer the physicality/materiality of the non-machine learning captions!    
+
+
+|keyword                  |  all| not_ml|   ml|
+|:------------------------|----:|------:|----:|
+|magnetic_field           | 1963|   2049|    0|
+|cross_section            | 1146|   1224|    0|
+|best_fit                 |  875|    915|    0|
+|phase_diagram            |  791|    761|    0|
+|ground_state             |  756|    781|    0|
+|standard_deviation       |  708|    714|    0|
+|time_evolution           |  679|    643|    0|
+|function_time            |  636|    697|    0|
+|monte_carlo              |  593|    583|    0|
+|cross_sections           |  578|    598|    0|
+|power_spectrum           |  576|    605|    0|
+|stellar_mass             |  547|    484|    0|
+|power_law                |  497|    513|    0|
+|temperature_dependence   |  468|    531|    0|
+|electric_field           |  455|    444|    0|
+|initial_conditions       |  454|    462|    0|
+|gev_gev                  |  441|    390|    0|
+|dark_matter              |  435|    429|    0|
+|function_temperature     |  434|    382|    0|
+|correlation_function     |  409|    393|    0|
+|parameter_space          |  407|    427|    0|
+|open_symbols             |  397|    395|    0|
+|invariant_mass           |  383|    381|    0|
+|star_formation           |  379|    369|    0|
+|chemical_potential       |  378|    339|    0|
+|open_squares             |  368|    370|    0|
+|angular_momentum         |  367|    389|    0|
+|density_states           |  360|    356|    0|
+|surface_brightness       |  354|    343|    0|
+|phase_transition         |  351|    323|    0|
+|time_series              |  345|    360|    0|
+|probability_distribution |  342|    294|    0|
+|phi_phi                  |  340|    364|    0|
+|energy_density           |  325|    362|    0|
+|logarithmic_scale        |  311|    311|    0|
+|order_parameter          |  308|    316|    0|
+|unit_cell                |  307|    339|    0|
+|phase_space              |  306|    258|    0|
+|schematic_representation |  298|    293|    0|
+|surface_density          |  298|    306|    0|
+|number_density           |  296|    275|    0|
+|boundary_conditions      |  294|    316|    0|
+|total_number             |  293|    279|    0|
+|distribution_function    |  286|    324|    0|
+|free_energy              |  286|    294|    0|
+|band_structure           |  285|    249|    0|
+|kinetic_energy           |  284|    295|    0|
+|contour_levels           |  284|    257|    0|
+|linear_fit               |  284|    260|    0|
+|velocity_dispersion      |  277|    288|    0|
+|probability_density      |  277|    271|    0|
+|mjy_beam                 |  277|    234|    0|
+|density_profile          |  276|    242|    0|
+|omega__omega_            |  273|    300|    0|
+|mass_function            |  272|    302|    0|
+|power_spectra            |  271|    295|    0|
+|real_part                |  269|    254|    0|
+|model_parameters         |  268|    233|    0|
+|magnetic_fields          |  267|    230|    0|
+|function_number          |  267|    281|    0|
+|flux_density             |  262|    229|    0|
+|positive_negative        |  251|    225|    0|
+|system_size              |  246|    231|    0|
+|transverse_momentum      |  245|    262|    0|
+|initial_state            |  243|    244|    0|
+|guide_eye                |  242|    265|    0|
+|radial_velocity          |  242|    286|    0|
+|density_function         |  241|    222|    0|
+|field_strength           |  228|    226|    0|
+|mass_distribution        |  227|    256|    0|
+|higgs_boson              |  225|    196|    0|
+|imaginary_part           |  223|    241|    0|
+|mev_mev                  |  222|    226|    0|
+|initial_condition        |  222|    201|    0|
+|north_east               |  220|    212|    0|
+|energy_spectrum          |  218|    226|    0|
+|schematic_diagram        |  218|    231|    0|
+|eta_eta                  |  218|    214|    0|
+|optical_depth            |  217|    221|    0|
+|spectral_index           |  216|    219|    0|
+|along_direction          |  215|    228|    0|
+|function_distance        |  212|      0|    0|
+|density_profiles         |  211|    217|    0|
+|feynman_diagrams         |  211|    239|    0|
+|specific_heat            |  209|      0|    0|
+|energy_levels            |  207|    195|    0|
+|experimental_setup       |  206|      0|    0|
+|density_distribution     |  204|      0|    0|
+|energy_distribution      |  204|      0|    0|
+|open_triangles           |  202|    205|    0|
+|differential_cross       |  201|    196|    0|
+|final_state              |  199|    210|    0|
+|total_energy             |  197|      0|    0|
+|numerical_solution       |  197|    222|    0|
+|function_redshift        |  197|    228|    0|
+|halo_mass                |  196|      0|    0|
+|steady_state             |  193|    207|    0|
+|growth_rate              |  193|      0|    0|
+|wave_function            |  193|    209|    0|
+|ket_ket                  |  191|      0|    0|
+|absolute_value           |    0|    224|    0|
+|brillouin_zone           |    0|    213|    0|
+|form_factor              |    0|    208|    0|
+|fermi_surface            |    0|    208|    0|
+|time_step                |    0|    206|  245|
+|velocity_field           |    0|    202|    0|
+|vert_vert                |    0|    198|    0|
+|ground_truth             |    0|    196| 4701|
+|mean_value               |    0|    194|    0|
+|input_images             |    0|      0| 2880|
+|features_maps            |    0|      0| 2055|
+|bounding_boxes           |    0|      0| 1941|
+|original_images          |    0|      0| 1843|
+|convolutional_layers     |    0|      0| 1170|
+|examples_images          |    0|      0|  827|
+|saliency_maps            |    0|      0|  821|
+|neural_network           |    0|      0|  789|
+|test_images              |    0|      0|  775|
+|network_architecture     |    0|      0|  723|
+|sample_images            |    0|      0|  692|
+|depth_maps               |    0|      0|  659|
+|standard_deviation2      |    0|      0|  655|
+|images_images            |    0|      0|  648|
+|optical_flow             |    0|      0|  648|
+|face_images              |    0|      0|  607|
+|rgb_images               |    0|      0|  562|
+|fully_connected          |    0|      0|  551|
+|images_ground            |    0|      0|  541|
+|semantic_segmentation    |    0|      0|  534|
+|failure_cases            |    0|      0|  506|
+|attention_maps           |    0|      0|  486|
+|training_images          |    0|      0|  475|
+|images_generated         |    0|      0|  472|
+|object_detection         |    0|      0|  470|
+|pose_estimation          |    0|      0|  465|
+|images_input             |    0|      0|  454|
+|pascal_voc               |    0|      0|  452|
+|connected_layers         |    0|      0|  449|
+|model_trained            |    0|      0|  448|
+|gaussian_noise           |    0|      0|  424|
+|confusion_matrix         |    0|      0|  416|
+|convolution_layers       |    0|      0|  405|
+|false_positives          |    0|      0|  399|
+|query_images             |    0|      0|  396|
+|classification_accuracy  |    0|      0|  374|
+|real_images              |    0|      0|  366|
+|features_extraction      |    0|      0|  364|
+|depth_images             |    0|      0|  358|
+|target_images            |    0|      0|  351|
+|reference_images         |    0|      0|  350|
+|generated_images         |    0|      0|  343|
+|network_trained          |    0|      0|  337|
+|psnr_ssim                |    0|      0|  337|
+|pooling_layers           |    0|      0|  335|
+|state-of-the-art_methods |    0|      0|  320|
+|images_features          |    0|      0|  316|
+|features_space           |    0|      0|  312|
+|convolutional_neural     |    0|      0|  306|
+|false_positive           |    0|      0|  302|
+|heat_maps                |    0|      0|  296|
+|video_frames             |    0|      0|  295|
+|training_samples         |    0|      0|  285|
+|reconstructed_images     |    0|      0|  278|
+|segmentation_result      |    0|      0|  277|
+|synthetic_images         |    0|      0|  276|
+|images_original          |    0|      0|  271|
+|features_extracted       |    0|      0|  269|
+|loss_function            |    0|      0|  268|
+|maps_generated           |    0|      0|  263|
+|style_transfer           |    0|      0|  262|
+|average_precision        |    0|      0|  262|
+|noise_level              |    0|      0|  261|
+|noisy_images             |    0|      0|  254|
+|images_segmentation      |    0|      0|  252|
+|models_trained           |    0|      0|  249|
+|source_images            |    0|      0|  249|
+|function_number2         |    0|      0|  248|
+|fully-connected_layers   |    0|      0|  246|
+|features_vector          |    0|      0|  244|
+|randomly_selected        |    0|      0|  242|
+|images_patches           |    0|      0|  242|
+|disparity_maps           |    0|      0|  240|
+|receptive_field          |    0|      0|  236|
+|dataset_images           |    0|      0|  235|
+|images_pairs             |    0|      0|  235|
+|images_methods           |    0|      0|  232|
+|baseline_methods         |    0|      0|  231|
+|images_pair              |    0|      0|  230|
+|kernel_size              |    0|      0|  229|
+|standard_deviations      |    0|      0|  229|
+|images_dataset           |    0|      0|  228|
+|positive_negative2       |    0|      0|  223|
+|precision_recall         |    0|      0|  222|
+|training_testing         |    0|      0|  221|
+|visual_features          |    0|      0|  219|
+|number_iterations        |    0|      0|  217|
+|images_examples          |    0|      0|  217|
+|single_images            |    0|      0|  216|
+|reconstruction_error     |    0|      0|  214|
+|light_field              |    0|      0|  214|
+|block_diagram            |    0|      0|  212|
+|convolutional_network    |    0|      0|  212|
+|truth_images             |    0|      0|  210|
+|body_parts               |    0|      0|  208|
+|fully_convolutional      |    0|      0|  207|
+|network_structure        |    0|      0|  204|
+|images_taken             |    0|      0|  202|
+
+```{r dbconnection}
+
+library(RSQLite)
+library(tidyverse)
+library(quanteda)
+
+conn  <- dbConnect(RSQLite::SQLite(), 'data/arxiv_db_images_new.sqlite3')
+dbListTables(conn)
+dbListFields(conn, 'captions')
+dbListFields(conn, 'images')
+dbListFields(conn, 'metadata')
+
+## the manuscripts
+mdata_tb  <-  tbl(conn, 'metadata')
+mdata_tb %>% head()
+
+# to see what the categories are
+cats  <- mdata_tb %>% select(cat) %>% count(cat, sort=TRUE)
+cats %>% filter(n < 10000, n> 5000) %>% ggplot( aes(cat, n)) + geom_col() + coord_flip()
+
+##the images
+image_tb  <-  tbl(conn, 'images')
+image_tb %>% head()
+
+```
+
+This chunk would get all the captions and their category. Its very slow on my laptop.
+
+```{r captions-only, eval = FALSE}
+
+captions_tbl  <-  tbl(conn, 'captions')
+captions_tbl %>% head()
+captions_tbl %>% select(identifier) %>% head()
+df <- captions_tbl %>%
+ #filter( row_number() %in% sample(n(), 30)) %>%
+ inner_join(mdata_tb, by='identifier')#  %>%
+ mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
+
+```
+
+This next function assumes a sample dataframe `df` ready to be converted to a corpus and its tokens. 
+
+```{r create-corpus-token}
+
+create_tokens_clean  <- function(df, stem = FALSE) {
+    df %>% select(primary_category) %>% count(primary_category, sort = TRUE)
+    co  <-  corpus(df,  text_field = 'caption') 
+    to  <-  tokens(co, remove_punct = TRUE, remove_numbers = TRUE, remove_url = TRUE, remove_symbols = TRUE, split_hyphens = FALSE)  %>% tokens_tolower() %>%
+    tokens_remove(stopwords('english'), min_nchar = 3)
+
+    # Clean out the tex stuff, etc
+    tex  <-  c('bold', 'emph','eq',  'ref', 'subref', 'top', 'frac', 'upper', 'lower', 'cite', 'textbf', 'texttt', 'textit',  'overline', 'boldsymbol', 'mathbf', 'fig','hat', 'mathcal', 'includegraphics', 'file', 'wcnf', 'rwpms', 'em', 'langle', 'rangle', 'mathrm', 'circ', 'x_1', 'x_2', 'times', 'prime', 'leq', 'tilde',  'ell', 'sqrt', 'protect', 'roman', 'sin', 'caption', 'vec', 'rightarrow', 'leftarrow' )
+    # remove indexical tokens
+    indx  <-  c('figure', 'plot', 'color',  'line', 'lines', 'point', 'points','data', 'set', 'sets', 'column', 'row', 'see', 'bottom', 'middle', 'top', 'left', 'right', 'small', 'shows', 'shown', 'dashed', 'solid', 'filled', 'panel', 'panels',  'plots', 'plotted',   'axis', 'red', 'blue', 'black', 'green',  'show', 'seen', 'viewed', 'shaded', 'indicates', 'indicate','arrow', 'dotted', 'represents', 'represent',  'vertical', 'horizontal',  'one', 'two', 'three', 'text', 'online', 'bars', 'bar', 'curve', 'curves',  'circle', 'circles', 'respectively', 'corresponding', 'different', 'first', 'second', 'table') 
+    # remove mathematical symbols
+    mathparams  <- c('alpha', 'beta', 'delta', 'gamma', 'lambda', 'sigma', 'rho', 'tau', 'theta',  'omega','theta',  'epsilon', 'psi')
+    # remove terms relating to process
+    processterms  <- c('using', 'results', 'used', 'proposed', 'obtain', 'obtained', 'values', 'comparison', 'can', 'may', 'listed', 'given') 
+
+    keytermdictionary  <-  dictionary(list(images = c('image', 'images'),
+                                        features = c('feature', 'features'), 
+                                        examples = c('example', 'examples'),
+                                        methods = c('method', 'methods'),
+                                        layers= c('layer', 'layers'),
+                                        boxes= c('box', 'boxes'),
+                                        maps= c('map', 'maps')
+                                        ))
+
+    to  <- to %>% tokens_remove(c(tex, indx, mathparams, processterms)) %>%
+#            tokens_replace(pattern = c('image', 'feature', 'example', 'method'), 
+            tokens_replace( pattern = sapply(keytermdictionary, '[', 1 ),
+                replace = names(keytermdictionary))
+
+    if (stem)
+            to  <- tokens_wordstem(to)
+
+    message('Number of tokens in sample: ', sum(ntoken(to)))
+    message('Number of types in sample: ', sum(ntype(to)))
+    return(to)
+}
+
+
+topkeywords  <- function(to, grams =1, toshow = 50, groups = FALSE) {
+    to2  <- to %>% tokens_ngrams(n = grams)
+    dfm2  <- dfm(to2)
+    if (groups) 
+        tf  <- topfeatures(dfm2,  scheme = 'count', n = toshow, groups = 'primary_category')
+    else
+        tf  <- topfeatures(dfm2,  scheme = 'count', n = toshow)
+    return(tf)
+}
+
+```
+
+## Sampling machine learning categories
+
+I'm sampling 100k captions. But this is mainly for exploration. How many needed?
+
+```{r stat-ml}
+
+samplesize = 100000
+query_ml<-  paste0('select captions.caption, metadata.cat, metadata.created  from captions  left join metadata  on captions.identifier = metadata.identifier where metadata.cat like "stat.ml" or metadata.cat like "cs.ai" or metadata.cat like "cs.cv" order by random() limit ', samplesize)
+ml_sample  <-  dbGetQuery(conn, query_ml)
+mldf  <- ml_sample %>%
+ mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
+mldf %>% select(primary_category) %>% count(primary_category, sort = TRUE)
+mlto  <-  create_tokens_clean(mldf)
+
+
+## Sampling other categories
+
+query_notml<-  paste0('select captions.caption, metadata.cat, metadata.created  from captions  left join metadata  on captions.identifier = metadata.identifier where metadata.cat not like "stat.ml" or metadata.cat not like "cs.ai" order by random() limit ', samplesize)
+notml_sample  <-  dbGetQuery(conn, query_notml)
+notmldf  <- notml_sample %>%
+ mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
+notmldf %>% select(primary_category) %>% count(primary_category, sort = TRUE)
+notmlto   <-  create_tokens_clean(notmldf)
+
+## Sample all categories - larger sample; might be able to work with this alone
+
+samplesize = 300000
+query_cat  <-  paste0('select captions.caption, metadata.cat, metadata.created  from captions  left join metadata  on captions.identifier = metadata.identifier  order by random() limit ', samplesize)
+cat_sample  <-  dbGetQuery(conn, query_cat)
+alldf  <- cat_sample %>%
+ mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
+alldf %>% select(primary_category) %>% count(primary_category, sort = TRUE)
+allto  <- create_tokens_clean(alldf)
+
+```
+
+
+This section is the core of the keyword analysis. It compares the machine learning and non-machine learning categories. 
+
+```{r keywords}
+
+#set up tokens (removing indexicals, latex, maths symbols, and generic verbs)
+mlto  <-  create_tokens_clean(mldf)
+allto  <- create_tokens_clean(alldf)
+notmlto   <-  create_tokens_clean(notmldf)
+
+#unigrams - good for diagnostics
+topkeywords(allto, 1, 20, group = TRUE)
+topkeywords(notmlto, 1, 20)
+topkeywords(mlto, 1, 20, FALSE)
+
+#to show differences between categories in machine learning
+topkeywords(mlto, 1, 20, TRUE)
+
+#bigrams -- most useful for content
+topkeywords(allto, 2, 20)
+topkeywords(notmlto, 2, 20)
+topkeywords(mlto, 2, 20)
+
+#to show differences between categories in machine learning
+topkeywords(mlto, 2, 20, TRUE)
+
+#trigrams -- to check if something important has slipped through
+topkeywords(allto, 3, 20)
+topkeywords(notmlto, 3, 20)
+topkeywords(mlto, 3, 20)
+
+#to show differences between categories in machine learning
+topkeywords(mlto, 3, 20, TRUE)
+
+```
+
+```{r summary}
+library(tidyr)
+
+alltop  <- topkeywords(allto, 2, 100)
+notmltop  <- topkeywords(notmlto, 2, 100)
+mltop  <- topkeywords(mlto, 2, 100)
+
+#reshape as one dataframe
+groups = c('all', 'ml', 'not_ml')
+alldf  <- as.data.frame(alltop)
+notmldf  <- as.data.frame(notmltop)
+mldf  <- as.data.frame(mltop)
+
+colnames(alldf)  <- 'termcount'
+colnames(notmldf)  <- 'termcount'
+colnames(mldf)  <- 'termcount'
+alldf$grouping = groups[1]
+mldf$grouping = groups[2]
+notmldf$grouping = groups[3]
+dfsummary   <-  rbind(alldf, notmldf, mldf)
+dfsummary$keyword  = rownames(dfsummary)
+dfsummary %>% head(20)
+nrow(dfsummary)
+colnames(dfsummary)
+
+# run to clean things up
+dfsummary  <- dfsummary %>% mutate(keyword = str_replace(keyword, '1', ''))
+
+#write-read to avoid db queries again; 
+write.csv(dfsummary, 'data/caption_keyword_summary.csv')
+dfsummary   = read_csv('data/caption_keyword_summary.csv')
+
+#transform from long to wide format
+dfoverview  <- dfsummary %>% select(keyword, grouping, termcount) %>% pivot_wider( names_from = c(grouping), values_from = c(termcount), values_fn = list(keyword =length),  values_fill = list(termcount=0 ) )
+
+dfsummary %>% select(grouping, keyword) %>% pivot_wider(names_from = grouping, values_from = keyword)
+
+
+#write-read to avoid db queries again; 
+write.csv(dfoverview, 'data/caption_keyword_summary_wide.csv', row.names = FALSE)
+dfoverview  <-  read.csv('data/caption_keyword_summary_wide.csv')
+dfoverview %>% filter(not_ml > 0, ml>0 )
+
+```
+
+## Conclusion
+
+```{r table-summary}
+library(knitr)
+dfoverview %>% select(-X) %>% kable()
+```
