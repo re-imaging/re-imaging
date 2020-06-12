@@ -221,7 +221,7 @@ library(RSQLite)
 library(tidyverse)
 library(quanteda)
 
-conn  <- dbConnect(RSQLite::SQLite(), 'data/arxiv_db_images_new.sqlite3')
+conn  <- dbConnect(RSQLite::SQLite(), 'data/arxiv_db_images.sqlite3')
 dbListTables(conn)
 dbListFields(conn, 'captions')
 dbListFields(conn, 'images')
@@ -233,26 +233,32 @@ mdata_tb %>% head()
 
 # to see what the categories are
 cats  <- mdata_tb %>% select(cat) %>% count(cat, sort=TRUE)
+cats %>% head()
 cats %>% filter(n < 10000, n> 5000) %>% ggplot( aes(cat, n)) + geom_col() + coord_flip()
 
 ##the images
 image_tb  <-  tbl(conn, 'images')
 image_tb %>% head()
 
+
+
 ```
 
 This chunk would get all the captions and their category. Its very slow on my laptop.
+I don't really use it. 
 
 ```{r captions-only, eval = FALSE}
 
+library(stringr)
 captions_tbl  <-  tbl(conn, 'captions')
 captions_tbl %>% head()
 captions_tbl %>% select(identifier) %>% head()
+
 df <- captions_tbl %>%
  #filter( row_number() %in% sample(n(), 30)) %>%
  inner_join(mdata_tb, by='identifier')#  %>%
- mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
 
+dfm  <-  df %>% mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
 ```
 
 This next function assumes a sample dataframe `df` ready to be converted to a corpus and its tokens. 
@@ -335,12 +341,13 @@ notmlto   <-  create_tokens_clean(notmldf)
 
 ## Sample all categories - larger sample; might be able to work with this alone
 
-samplesize = 300000
+samplesize = 1000000
 query_cat  <-  paste0('select captions.caption, metadata.cat, metadata.created  from captions  left join metadata  on captions.identifier = metadata.identifier  order by random() limit ', samplesize)
 cat_sample  <-  dbGetQuery(conn, query_cat)
 alldf  <- cat_sample %>%
  mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
 alldf %>% select(primary_category) %>% count(primary_category, sort = TRUE)
+alldf %>% dim()
 allto  <- create_tokens_clean(alldf)
 
 ```
