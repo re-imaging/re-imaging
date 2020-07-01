@@ -2,6 +2,16 @@
 
 Process for downloading, extracting, unarchiving, and organising data for usage in machine learning applications or data mining.
 
+** Contents :TOC:
+- [[#downloading-arxiv-bulk-source-data][Downloading arXiv Bulk Source Data]]
+  - [[#background][Background]]
+  - [[#step-1a-download-all-source-files-from-the-arxiv-amazon-web-services-aws-data-storage-using-requestor-pays][Step 1a: Download all source files from the arXiv Amazon Web Services (AWS) data storage using requestor pays.]]
+  - [[#step-1b-download-oai-metadata][Step 1b: Download OAI metadata]]
+  - [[#step-2-unarchive-and-decompress][Step 2: Unarchive and decompress]]
+  - [[#optional-extract-images-and-text-from-pdf-documents-nb-do-this-during-step-2][Optional: Extract images and text from PDF documents (NB: do this during Step 2)]]
+  - [[#image-totals][Image totals]]
+  - [[#step-4-organise-dataset][Step 4: Organise dataset]]
+
 ** Background
 arXiv bulk source data is made readily available, however, it requires a number of steps to download, unarchive, and decompress these files. Additionally, the source data is separate from the article metadata, requiring additional steps to link image data to article metadata such as author, category, or publication date. Here we outline the steps taken to access the bulk source data and extract the images, as well as create a SQLite database (see sqlite-method.org) that enables indexing each image together with article metadata. This enables searching across both the article metadata and image data to build custom queries, collect statistics and access subsets of this dataset.
 
@@ -33,7 +43,7 @@ s3cmd sync --requester-pays -n s3://arxiv/src/ /path/to/download/folder/
 # sync with md5 check -- !!! this takes a long time !!!
 s3cmd sync --requester-pays -v s3://arxiv/src/ /path/to/download/folder/ 2>&1 | tee ~/s3cmd_log_checkmd5.txt
 # sync without check and skipping existing
-s3cmd sync --requester-pays --skip-existing --no-check-md5 -v s3://arxiv/src/ /mnt/hd-4tb/arXiv/src/ 2>&1 | tee ~/s3cmd_log.txt
+s3cmd sync --requester-pays --skip-existing --no-check-md5 -v s3://arxiv/src/ /path/to/download/folder/ 2>&1 | tee ~/s3cmd_log.txt
 #+END_SRC
 
 Totals:
@@ -120,7 +130,7 @@ Totals:
 *** File organisation and directory structure
 Each article in the source directory has its own folder named by its arXiv identifier, in the format YYMM.XXXXX (or for articles pre-2015, 4 trailing digits in the form of YYMM.XXXX). Articles prior to March 2007 use the identifier archive.subjectclass/YYMMXXX e.g. math.GT/0309136. Image files are named according to the original filenames that were deposited to arXiv, e.g. "Fig4.eps", "office_heatmap.jpg", "figure3d.pdf" etc. (see Figure XX for example directory structure). Details on identifier convention at https://arxiv.org/help/arxiv_identifier.
 
-Directory structure example:
+*** Directory structure example:
 #+BEGIN_SRC 
 - arXiv
   - src_all
@@ -335,6 +345,3 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
   fi
 done
 #+END_SRC
-
-*** Further information
-- In progress as of [2019-10-08 Tue]

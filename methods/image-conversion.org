@@ -1,6 +1,12 @@
-
 * Image Conversion
 This document contains some tips and tricks for converting large amounts of images that might be in a wide variety of file formats, image types, dimensions etc.
+
+** Contents :TOC:
+- [[#image-conversion][Image Conversion]]
+  - [[#background][Background]]
+  - [[#getting-list-of-file-paths][Getting list of file paths]]
+  - [[#recommended-way-to-convert-lots-of-images-quickly][Recommended way to convert lots of images quickly]]
+  - [[#crontab-for-killing-long-running-processes][Crontab for killing long running processes]]
 
 ** Background
 
@@ -53,6 +59,7 @@ python parallel_convert_futures.py missing_log_20190924_162556.txt /path/to/all/
 
 #+END_SRC
 ** Crontab for killing long running processes
+When running lots of ImageMagick convert commands, some will hang or leave zombie processes. This crontab is useful for automatically killing these before all RAM is used up.
 
 #+BEGIN_SRC cron
 # run find to remove ImageMagick convert temporary files every 5 mins:
