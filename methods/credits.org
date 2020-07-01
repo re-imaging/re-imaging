@@ -1,5 +1,7 @@
-Image Credits for montage and t-SNE
-* 4x4 random montage
+Image Credits for Figures
+* about
+This document provides the credits for images used in the paper "Images of the arXiv: reconfiguring large scientific image datasets". There are a number of figures in this paper that show many images sampled from arXiv. It was not practical to credit these in the paper, the credits are provided below. For montages the credits are listed from the top left corner, left to right and top to bottom. For t-SNE images credits are not provided in order due to the images being spatially mapped.
+* montage 4x4 random
 1. Ribas, Ignasi; Jordi, Carme; Torra, Jordi: CD Tau: a detached eclipsing binary with a solar-mass companion, 1999, https://arxiv.org/abs/astro-ph/9905110
 2. Tawfik, Abdel Nasser; Diab, Abdel Magied: Generalized Uncertainty Principle and Recent Cosmic Inflation Observations, 2014, https://arxiv.org/abs/1410.7966
 3. Martin, A. D.; Roberts, R. G.; Stirling, W. J.; Thorne, R. S.: Uncertainties of predictions from parton distributions. I: experimental errors, 2002, https://arxiv.org/abs/hep-ph/0211080
@@ -17,7 +19,7 @@ Image Credits for montage and t-SNE
 15. Abolfath, M.; MacDonald, A. H.; Radzihovsky, L.: Critical Currents of Ideal Quantum Hall Superfluids, 2003, https://arxiv.org/abs/cond-mat/0305295
 16. Dudík, J.; Zuccarello, F. P.; Aulanier, G.; Schmieder, B.; Démoulin, P.: Expanding and Contracting Coronal Loops as Evidence of Vortex Flows Induced by Solar Eruptions, 2017, https://arxiv.org/abs/1706.04783
 
-* 12x12 random montage
+* montage 12x12 random
 1. Lazzati, D.; Morsony, B. J.; Margutti, R.; Begelman, M. C.: Photospheric emission as the dominant radiation mechanism in long-duration gamma-ray bursts, 2013, https://arxiv.org/abs/1301.3920
 2. Serpa, Nilo: New Lectures on Supergravity, 2011, https://arxiv.org/abs/1105.3213
 3. Burikham, Piyabut; Panpanich, Sirachak: Effects of Chameleon Scalar Field on Rotation Curves of the Galaxies, 2011, https://arxiv.org/abs/1103.1198
@@ -163,7 +165,7 @@ Image Credits for montage and t-SNE
 143. Vollmer, B.; Krichbaum, T. P.; Angelakis, E.; Kovalev, Y. Y.: Quasi-simultaneous multi-frequency observations of inverted-spectrum GPS candidate sources, 2008, https://arxiv.org/abs/0806.3694
 144. Ryskin, M. G.; Drukarev, E. G.; Sadovnikova, V. A.: Nucleon QCD sum rules in instanton medium, 2013, https://arxiv.org/abs/1312.1449
 
-* 12x12 cs.CV October 2012
+* montage 12x12 cs.CV October 2012
 1. Mondal, Arnab Kumar; Dolz, Jose; Desrosiers, Christian: Few-shot 3D Multi-modal Medical Image Segmentation using Generative Adversarial Learning, 2018, https://arxiv.org/abs/1810.12241
 2. Stamatescu, Victor; McDonnell, Mark D.: Diagnosing Convolutional Neural Networks using their Spectral Response, 2018, https://arxiv.org/abs/1810.03241
 3. Cavallari, Tommaso; Golodetz, Stuart; Lord, Nicholas A.; Valentin, Julien; Prisacariu, Victor A.; Di Stefano, Luigi; Torr, Philip H. S.: Real-Time RGB-D Camera Pose Estimation in Novel Scenes using a Relocalisation Cascade, 2018, https://arxiv.org/abs/1810.12163
@@ -309,307 +311,297 @@ Image Credits for montage and t-SNE
 143. Ghiasi, Golnaz; Lin, Tsung-Yi; Le, Quoc V.: DropBlock: A regularization method for convolutional networks, 2018, https://arxiv.org/abs/1810.12890
 144. Meng, Lili; Zhao, Bo; Chang, Bo; Huang, Gao; Tung, Frederick; Sigal, Leonid: Where and When to Look? Spatio-temporal Attention for Action Recognition in Videos, 2018, https://arxiv.org/abs/1810.04511
 
-* 12x12 stat.ML October 2012
-1. Knowles, David A.; Ghahramani, Zoubin: Pitman-Yor Diffusion Trees, 2011, https://arxiv.org/abs/1106.2494
-2. Xu, Ning; Hong, Jian; Fisher, Timothy C. G.: Finite-sample and asymptotic analysis of generalization ability with an application to penalized regression, 2016, https://arxiv.org/abs/1609.03344
-3. Gasse, Maxime; Aussem, Alex; Elghazel, Haytham: An Experimental Comparison of Hybrid Algorithms for Bayesian Network Structure Learning, 2015, https://arxiv.org/abs/1505.05004
-4. Oh, Seong Joon; Augustin, Max; Schiele, Bernt; Fritz, Mario: Towards Reverse-Engineering Black-Box Neural Networks, 2017, https://arxiv.org/abs/1711.01768
-5. Schoenholz, Samuel S.; Gilmer, Justin; Ganguli, Surya; Sohl-Dickstein, Jascha: Deep Information Propagation, 2016, https://arxiv.org/abs/1611.01232
-6. Wang, Xu; Slavakis, Konstantinos; Lerman, Gilad: Riemannian Multi-Manifold Modeling, 2014, https://arxiv.org/abs/1410.0095
-7. Gao, Wei; Chen, Jie; Richard, Cédric; Huang, Jianguo: Online dictionary learning for kernel LMS. Analysis and forward-backward splitting algorithm, 2013, https://arxiv.org/abs/1306.5310
-8. Silva, Ricardo: Observational-Interventional Priors for Dose-Response Learning, 2016, https://arxiv.org/abs/1605.01573
-9. Suzumura, Shinya; Nakagawa, Kazuya; Sugiyama, Mahito; Tsuda, Koji; Takeuchi, Ichiro: Selective Inference Approach for Statistically Sound Predictive Pattern Mining, 2016, https://arxiv.org/abs/1602.04601
-10. Jitkrittum, Wittawat; Kanagawa, Heishiro; Sangkloy, Patsorn; Hays, James; Schölkopf, Bernhard; Gretton, Arthur: Informative Features for Model Comparison, 2018, https://arxiv.org/abs/1810.11630
-11. Zarezade, Ali; Upadhyay, Utkarsh; Rabiee, Hamid; Rodriguez, Manuel Gomez: RedQueen: An Online Algorithm for Smart Broadcasting in Social Networks, 2016, https://arxiv.org/abs/1610.05773
-12. Siarohin, Aliaksandr; Sangineto, Enver; Sebe, Nicu: Whitening and Coloring batch transform for GANs, 2018, https://arxiv.org/abs/1806.00420
-13. Dorta, Garoe; Vicente, Sara; Agapito, Lourdes; Campbell, Neill D. F.; Simpson, Ivor: Structured Uncertainty Prediction Networks, 2018, https://arxiv.org/abs/1802.07079
-14. Aicher, Christopher; Ma, Yi-An; Foti, Nicholas J.; Fox, Emily B.: Stochastic Gradient MCMC for State Space Models, 2018, https://arxiv.org/abs/1810.09098
-15. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-16. Dumoulin, Vincent; Goodfellow, Ian J.; Courville, Aaron; Bengio, Yoshua: On the Challenges of Physical Implementations of RBMs, 2013, https://arxiv.org/abs/1312.5258
-17. Mohamed, Shakir; Rezende, Danilo Jimenez: Variational Information Maximisation for Intrinsically Motivated Reinforcement Learning, 2015, https://arxiv.org/abs/1509.08731
-18. Navarrete, Raymundo; Viswanath, Divakar: Prediction of Dynamical time Series Using Kernel Based Regression and Smooth Splines, 2015, https://arxiv.org/abs/1511.00158
-19. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-20. Haque, Kazi Nazmul; Yousuf, Mohammad Abu; Rana, Rajib: Image denoising and restoration with CNN-LSTM Encoder Decoder with Direct Attention, 2018, https://arxiv.org/abs/1801.05141
-21. Calandriello, Daniele; Lazaric, Alessandro; Valko, Michal; Koutis, Ioannis: Incremental Spectral Sparsification for Large-Scale Graph-Based Semi-Supervised Learning, 2016, https://arxiv.org/abs/1601.05675
-22. Qian, Junyang; Jia, Jinzhu: On pattern recovery of the fused Lasso, 2012, https://arxiv.org/abs/1211.5194
-23. Puchkin, Nikita; Spokoiny, Vladimir: Adaptive multiclass nearest neighbor classifier, 2018, https://arxiv.org/abs/1804.02756
-24. Kim, Sanggyun; Mesa, Diego; Ma, Rui; Coleman, Todd P.: Tractable Fully Bayesian Inference via Convex Optimization and Optimal Transport Theory, 2015, https://arxiv.org/abs/1509.08582
-25. Denil, Misha; Matheson, David; de Freitas, Nando: Narrowing the Gap: Random Forests In Theory and In Practice, 2013, https://arxiv.org/abs/1310.1415
-26. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-27. Lang, Hunter; Sontag, David; Vijayaraghavan, Aravindan: Block Stability for MAP Inference, 2018, https://arxiv.org/abs/1810.05305
-28. Xie, Christopher; Tank, Alex; Greaves-Tunnell, Alec; Fox, Emily: A Unified Framework for Long Range and Cold Start Forecasting of Seasonal Profiles in Time Series, 2017, https://arxiv.org/abs/1710.08473
-29. Rezende, Danilo Jimenez; Mohamed, Shakir; Danihelka, Ivo; Gregor, Karol; Wierstra, Daan: One-Shot Generalization in Deep Generative Models, 2016, https://arxiv.org/abs/1603.05106
-30. Raghu, Maithra; Gilmer, Justin; Yosinski, Jason; Sohl-Dickstein, Jascha: SVCCA: Singular Vector Canonical Correlation Analysis for Deep Learning Dynamics and Interpretability, 2017, https://arxiv.org/abs/1706.05806
-31. Sinha, Aman; Namkoong, Hongseok; Duchi, John: Certifying Some Distributional Robustness with Principled Adversarial Training, 2017, https://arxiv.org/abs/1710.10571
-32. Schaumberg, Andrew; Yu, Angela; Koshi, Tatsuhiro; Zong, Xiaochan; Rayadhurgam, Santoshkalyan: Predicting Drug Interactions and Mutagenicity with Ensemble Classifiers on Subgraphs of Molecules, 2016, https://arxiv.org/abs/1601.07233
-33. Hjelm, R Devon; Jacob, Athul Paul; Che, Tong; Trischler, Adam; Cho, Kyunghyun; Bengio, Yoshua: Boundary-Seeking Generative Adversarial Networks, 2017, https://arxiv.org/abs/1702.08431
-34. Xu, Shuang; Zhang, Chun-Xia; Wang, Pei; Zhang, Jiangshe: Variational Bayesian Complex Network Reconstruction, 2018, https://arxiv.org/abs/1812.04369
-35. Blundell, Charles; Uria, Benigno; Pritzel, Alexander; Li, Yazhe; Ruderman, Avraham; Leibo, Joel Z; Rae, Jack; Wierstra, Daan; Hassabis, Demis: Model-Free Episodic Control, 2016, https://arxiv.org/abs/1606.04460
-36. Metzler, Christopher A.; Mousavi, Ali; Baraniuk, Richard G.: Learned D-AMP: Principled Neural Network based Compressive Image Recovery, 2017, https://arxiv.org/abs/1704.06625
-37. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-38. Stewart, Lawrence; Stalzer, Mark: Bayesian Optimization for Parameter Tuning of the XOR Neural Network, 2017, https://arxiv.org/abs/1709.07842
-39. Alvarado, Pablo A.; Stowell, Dan: Gaussian Processes for Music Audio Modelling and Content Analysis, 2016, https://arxiv.org/abs/1606.01039
-40. Laparra, Valero; Jiménez, Sandra; Camps-Valls, Gustavo; Malo, Jesús: Nonlinearities and Adaptation of Color Vision from Sequential Principal Curves Analysis, 2016, https://arxiv.org/abs/1602.00236
-41. Lei, Huitian; Tewari, Ambuj; Murphy, Susan A.: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions, 2017, https://arxiv.org/abs/1706.09090
-42. Bahmani, Sohail; Raj, Bhiksha; Boufounos, Petros: Greedy Sparsity-Constrained Optimization, 2012, https://arxiv.org/abs/1203.5483
-43. Gellert, Karol; Schlögl, Erik: Parameter Learning and Change Detection Using a Particle Filter With Accelerated Adaptation, 2018, https://arxiv.org/abs/1806.05387
-44. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-45. Steeg, Greg Ver; Galstyan, Aram: The Information Sieve, 2015, https://arxiv.org/abs/1507.02284
-46. Zhang, Yuan; Levina, Elizaveta; Zhu, Ji: Community Detection in Networks with Node Features, 2015, https://arxiv.org/abs/1509.01173
-47. Gomez, Leonardo Gutierrez; Chiem, Benjamin; Delvenne, Jean-Charles: Dynamics Based Features For Graph Classification, 2017, https://arxiv.org/abs/1705.10817
-48. Zhang, Yuan; Levina, Elizaveta; Zhu, Ji: Community Detection in Networks with Node Features, 2015, https://arxiv.org/abs/1509.01173
-49. Khan, Muhammad Raza; Blumenstock, Joshua E.: Machine Learning Across Cultures: Modeling the Adoption of Financial Services for the Poor, 2016, https://arxiv.org/abs/1606.05105
-50. Yu, Jin; Vishwanathan, S. V. N.; Guenter, Simon; Schraudolph, Nicol N.: A Quasi-Newton Approach to Nonsmooth Convex Optimization Problems in Machine Learning, 2008, https://arxiv.org/abs/0804.3835
-51. Jain, Swayambhoo; Soni, Akshay; Laptev, Nikolay; Mehdad, Yashar: Rank-to-engage: New Listwise Approaches to Maximize Engagement, 2017, https://arxiv.org/abs/1702.07798
-52. Zhang, Wenwen; Loh, Wei-Yin: PLUTO: Penalized Unbiased Logistic Regression Trees, 2014, https://arxiv.org/abs/1411.6948
-53. Lei, Huitian; Tewari, Ambuj; Murphy, Susan A.: An Actor-Critic Contextual Bandit Algorithm for Personalized Mobile Health Interventions, 2017, https://arxiv.org/abs/1706.09090
-54. Jiang, Zhanhong; Balu, Aditya; Hegde, Chinmay; Sarkar, Soumik: Collaborative Deep Learning in Fixed Topology Networks, 2017, https://arxiv.org/abs/1706.07880
-55. Yao, Zhigang; Zhang, Zhenyue: Principal Boundary on Riemannian Manifolds, 2017, https://arxiv.org/abs/1711.06705
-56. Schuster, Ingmar: Gradient Importance Sampling, 2015, https://arxiv.org/abs/1507.05781
-57. Chwialkowski, Kacper; Ramdas, Aaditya; Sejdinovic, Dino; Gretton, Arthur: Fast Two-Sample Testing with Analytic Representations of Probability Measures, 2015, https://arxiv.org/abs/1506.04725
-58. Dorta, Garoe; Vicente, Sara; Agapito, Lourdes; Campbell, Neill D. F.; Simpson, Ivor: Structured Uncertainty Prediction Networks, 2018, https://arxiv.org/abs/1802.07079
-59. Tomal, Jabed H; Welch, William J; Zamar, Ruben H: Ensembles of Models and Metrics for Robust Ranking of Homologous Proteins, 2017, https://arxiv.org/abs/1706.06971
-60. Yang, Yingxiang; Etesami, Jalal; He, Niao; Kiyavash, Negar: Nonparametric Hawkes Processes: Online Estimation and Generalization Bounds, 2018, https://arxiv.org/abs/1801.08273
-61. Sun, Rémy; Lampert, Christoph H.: KS(conf ): A Light-Weight Test if a ConvNet Operates Outside of Its Specifications, 2018, https://arxiv.org/abs/1804.04171
-62. Xie, Yujia; Wang, Xiangfeng; Wang, Ruijia; Zha, Hongyuan: A Fast Proximal Point Method for Computing Wasserstein Distance, 2018, https://arxiv.org/abs/1802.04307
-63. Iwata, Tomoharu; Duvenaud, David; Ghahramani, Zoubin: Warped Mixtures for Nonparametric Cluster Shapes, 2012, https://arxiv.org/abs/1206.1846
-64. Leskovec, Jure; Chakrabarti, Deepayan; Kleinberg, Jon; Faloutsos, Christos; Ghahramani, Zoubin: Kronecker Graphs: An Approach to Modeling Networks, 2008, https://arxiv.org/abs/0812.4905
-65. Pham, Thai T.; Shen, Yuanyuan: A Deep Causal Inference Approach to Measuring the Effects of Forming Group Loans in Online Non-profit Microfinance Platform, 2017, https://arxiv.org/abs/1706.02795
-66. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-67. Holland, Matthew J.; Ikeda, Kazushi: Efficient learning with robust gradient descent, 2017, https://arxiv.org/abs/1706.00182
-68. Lee, Nam H.; Priebe, Carey; Park, Youngser; Wang, I-Jeng; Rosen, Michael: Techniques for clustering interaction data as a collection of graphs, 2014, https://arxiv.org/abs/1406.6319
-69. Marques, Alexandre N.; Lam, Remi R.; Willcox, Karen E.: Contour location via entropy reduction leveraging multiple information sources, 2018, https://arxiv.org/abs/1805.07489
-70. Yang, Eunho; Lozano, Aurelie; Aravkin, Aleksandr: A General Family of Trimmed Estimators for Robust High-dimensional Data Analysis, 2016, https://arxiv.org/abs/1605.08299
-71. Ting, Daniel; Brochu, Eric: Optimal Sub-sampling with Influence Functions, 2017, https://arxiv.org/abs/1709.01716
-72. Shang, Fanhua; Liu, Yuanyuan; Zhou, Kaiwen; Cheng, James; Ng, Kelvin K. W.; Yoshida, Yuichi: Guaranteed Sufficient Decrease for Stochastic Variance Reduced Gradient Optimization, 2018, https://arxiv.org/abs/1802.09933
-73. Chan, Antoni B.; Hsiao, Janet H.: EMHMM Simulation Study, 2018, https://arxiv.org/abs/1810.07435
-74. Teso, Stefano; Passerini, Andrea; Viappiani, Paolo: Constructive Preference Elicitation by Setwise Max-margin Learning, 2016, https://arxiv.org/abs/1604.06020
-75. Chen, Pin-Yu; Wu, Lingfei; Liu, Sijia; Rajapakse, Indika: Fast Incremental von Neumann Graph Entropy Computation: Theory, Algorithm, and Applications, 2018, https://arxiv.org/abs/1805.11769
-76. Rubenstein, Paul K.; Li, Yunpeng; Roblek, Dominik: An Empirical Study of Generative Models with Encoders, 2018, https://arxiv.org/abs/1812.07909
-77. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-78. Dimitrakakis, Christos; Rothkopf, Constantin: Bayesian multitask inverse reinforcement learning, 2011, https://arxiv.org/abs/1106.3655
-79. Waegeman, Willem; Pahikkala, Tapio; Airola, Antti; Salakoski, Tapio; Stock, Michiel; De Baets, Bernard: A kernel-based framework for learning graded relations from data, 2011, https://arxiv.org/abs/1111.6473
-80. Böttcher, Alexander; Brendel, Wieland; Englitz, Bernhard; Bethge, Matthias: Trace your sources in large-scale data: one ring to find them all, 2018, https://arxiv.org/abs/1803.08882
-81. Gultekin, San; Zhang, Aonan; Paisley, John: Stochastic Annealing for Variational Inference, 2015, https://arxiv.org/abs/1505.06723
-82. Zhao, Renbo; Haskell, William B.; Feng, Jiashi: A Unified Framework for Stochastic Matrix Factorization via Variance Reduction, 2017, https://arxiv.org/abs/1705.06884
-83. Podosinnikova, Anastasia; Setzer, Simon; Hein, Matthias: Robust PCA: Optimization of the Robust Reconstruction Error over the Stiefel Manifold, 2015, https://arxiv.org/abs/1506.00323
-84. Zhang, Jiajun; Shi, Zhiguo: Deformable Deep Convolutional Generative Adversarial Network in Microwave Based Hand Gesture Recognition System, 2017, https://arxiv.org/abs/1711.01968
-85. Liu, Kaihui; Wang, Jiayi; Xing, Zhengli; Yang, Linxiao; Fang, Jun: Low-Rank Phase Retrieval via Variational Bayesian Learning, 2018, https://arxiv.org/abs/1811.01574
-86. Huggins, Jonathan H.; Mackey, Lester: Random Feature Stein Discrepancies, 2018, https://arxiv.org/abs/1806.07788
-87. Mondelli, Marco; Montanari, Andrea: Fundamental Limits of Weak Recovery with Applications to Phase Retrieval, 2017, https://arxiv.org/abs/1708.05932
-88. Laparra, Valero; Jiménez, Sandra; Camps-Valls, Gustavo; Malo, Jesús: Nonlinearities and Adaptation of Color Vision from Sequential Principal Curves Analysis, 2016, https://arxiv.org/abs/1602.00236
-89. McCarter, Calvin; Kim, Seyoung: Large-Scale Optimization Algorithms for Sparse Conditional Gaussian Graphical Models, 2015, https://arxiv.org/abs/1509.04681
-90. Scardapane, Simone; Van Vaerenbergh, Steven; Totaro, Simone; Uncini, Aurelio: Kafnets: kernel-based non-parametric activation functions for neural networks, 2017, https://arxiv.org/abs/1707.04035
-91. Fusco, Francesco; Tirupathi, Seshu; Gormally, Robert: Power Systems Data Fusion based on Belief Propagation, 2017, https://arxiv.org/abs/1705.08815
-92. Chamroukhi, Faicel; Huynh, Bao-Tuyen: Regularized Maximum Likelihood Estimation and Feature Selection in Mixtures-of-Experts Models, 2018, https://arxiv.org/abs/1810.12161
-93. Siddharth, N.; Paige, Brooks; van de Meent, Jan-Willem; Desmaison, Alban; Goodman, Noah D.; Kohli, Pushmeet; Wood, Frank; Torr, Philip H. S.: Learning Disentangled Representations with Semi-Supervised Deep Generative Models, 2017, https://arxiv.org/abs/1706.00400
-94. Doshi-Velez, Finale; Kim, Been: Towards A Rigorous Science of Interpretable Machine Learning, 2017, https://arxiv.org/abs/1702.08608
-95. Loosli, Gaëlle; Aboubacar, Hattoibe: Using SVDD in SimpleMKL for 3D-Shapes Filtering, 2017, https://arxiv.org/abs/1712.02658
-96. Webb, Stefan Douglas: Inference, Sampling, and Learning in Copula Cumulative Distribution Networks, 2013, https://arxiv.org/abs/1310.4456
-97. Liu, Sida; Barbu, Adrian: Unsupervised Learning of Mixture Models with a Uniform Background Component, 2018, https://arxiv.org/abs/1804.02744
-98. Goix, Nicolas; Sabourin, Anne; Clémençon, Stéphan: Sparsity in Multivariate Extremes with Applications to Anomaly Detection, 2015, https://arxiv.org/abs/1507.05899
-99. Wilson, Andrew Gordon; Gilboa, Elad; Nehorai, Arye; Cunningham, John P.: GPatt: Fast Multidimensional Pattern Extrapolation with Gaussian Processes, 2013, https://arxiv.org/abs/1310.5288
-100. Kim, Seyoung; Xing, Eric P.: Tree-guided group lasso for multi-response regression with structured sparsity, with an application to eQTL mapping, 2009, https://arxiv.org/abs/0909.1373
-101. Obozinski, Guillaume; Bach, Francis: Convex Relaxation for Combinatorial Penalties, 2012, https://arxiv.org/abs/1205.1240
-102. Briol, Francois-Xavier; Oates, Chris J.; Cockayne, Jon; Chen, Wilson Ye; Girolami, Mark: On the Sampling Problem for Kernel Quadrature, 2017, https://arxiv.org/abs/1706.03369
-103. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-104. Garrido-Merchán, Eduardo C.; Hernández-Lobato, Daniel: Predictive Entropy Search for Multi-objective Bayesian Optimization with Constraints, 2016, https://arxiv.org/abs/1609.01051
-105. Husic, Brooke E.; Schlueter-Kuck, Kristy L.; Dabiri, John O.: Simultaneous Coherent Structure Coloring facilitates interpretable clustering of scientific data by amplifying dissimilarity, 2018, https://arxiv.org/abs/1807.04427
-106. Chacón, José E.: Mixture model modal clustering, 2016, https://arxiv.org/abs/1609.04721
-107. Shah, Viraj; Soltani, Mohammadreza; Hegde, Chinmay: Reconstruction from Periodic Nonlinearities, With Applications to HDR Imaging, 2017, https://arxiv.org/abs/1710.00109
-108. Puolamäki, Kai; Oikarinen, Emilia; Kang, Bo; Lijffijt, Jefrey; De Bie, Tijl: Interactive Visual Data Exploration with Subjective Feedback: An Information-Theoretic Approach, 2017, https://arxiv.org/abs/1710.08167
-109. Gandhi, Manan; Lee, Keuntaek; Pan, Yunpeng; Theodorou, Evangelos: Propagating Uncertainty through the tanh Function with Application to Reservoir Computing, 2018, https://arxiv.org/abs/1806.09431
-110. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-111. Kailkhura, Bhavya; Thiagarajan, Jayaraman J.; Rastogi, Charvi; Varshney, Pramod K.; Bremer, Peer-Timo: A Spectral Approach for the Design of Experiments: Design, Analysis and Algorithms, 2017, https://arxiv.org/abs/1712.06028
-112. Ragoza, Matthew; Hochuli, Joshua; Idrobo, Elisa; Sunseri, Jocelyn; Koes, David Ryan: Protein-Ligand Scoring with Convolutional Neural Networks, 2016, https://arxiv.org/abs/1612.02751
-113. Siarohin, Aliaksandr; Zen, Gloria; Sebe, Nicu; Ricci, Elisa: Enhancing Perceptual Attributes with Bayesian Style Generation, 2018, https://arxiv.org/abs/1812.00717
-114. Ruffini, Matteo; Rabusseau, Guillaume; Balle, Borja: Hierarchical Methods of Moments, 2018, https://arxiv.org/abs/1810.07468
-115. Heinze-Deml, Christina; Meinshausen, Nicolai: Conditional Variance Penalties and Domain Shift Robustness, 2017, https://arxiv.org/abs/1710.11469
-116. "d'Errico, Maria; Facco, Elena; Laio, Alessandro; Rodriguez, Alex;: Automatic topography of high-dimensional data sets by non-parametric Density Peak clustering, 2018, https://arxiv.org/abs/1802.10549
-117. Zou, James Y.; Chaudhuri, Kamalika; Kalai, Adam Tauman: Crowdsourcing Feature Discovery via Adaptively Chosen Comparisons, 2015, https://arxiv.org/abs/1504.00064
-118. Cardoso,  ngelo; Daolio, Fabio; Vargas, Saúl: Product Characterisation towards Personalisation: Learning Attributes from Unstructured Data to Recommend Fashion Products, 2018, https://arxiv.org/abs/1803.07679
-119. Xie, Christopher; Tank, Alex; Greaves-Tunnell, Alec; Fox, Emily: A Unified Framework for Long Range and Cold Start Forecasting of Seasonal Profiles in Time Series, 2017, https://arxiv.org/abs/1710.08473
-120. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-121. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-122. Tuia, Devis; Camps-Valls, Gustau: Kernel Manifold Alignment, 2015, https://arxiv.org/abs/1504.02338
-123. Hofert, Marius; Prasad, Avinash; Zhu, Mu: Quasi-random number generators for multivariate distributions based on generative neural networks, 2018, https://arxiv.org/abs/1811.00683
-124. Tandon, Rashish; Si, Si; Ravikumar, Pradeep; Dhillon, Inderjit: Kernel Ridge Regression via Partitioning, 2016, https://arxiv.org/abs/1608.01976
-125. Goldfarb, Donald; Qin, Zhiwei: Robust Low-rank Tensor Recovery: Models and Algorithms, 2013, https://arxiv.org/abs/1311.6182
-126. Yao, Yuling; Vehtari, Aki; Simpson, Daniel; Gelman, Andrew: Yes, but Did It Work?: Evaluating Variational Inference, 2018, https://arxiv.org/abs/1802.02538
-127. Yang, Xiu; Tartakovsky, Guzel; Tartakovsky, Alexandre: Physics-Informed Kriging: A Physics-Informed Gaussian Process Regression Method for Data-Model Convergence, 2018, https://arxiv.org/abs/1809.03461
-128. Wang, Gang; Giannakis, Georgios B.; Chen, Jie: Learning ReLU Networks on Linearly Separable Data: Algorithm, Optimality, and Generalization, 2018, https://arxiv.org/abs/1808.04685
-129. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-130. Lakshminarayanan, Balaji; Pritzel, Alexander; Blundell, Charles: Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles, 2016, https://arxiv.org/abs/1612.01474
-131. Sattigeri, Prasanna; Hoffman, Samuel C.; Chenthamarakshan, Vijil; Varshney, Kush R.: Fairness GAN, 2018, https://arxiv.org/abs/1805.09910
-132. Webb, Stefan; Golinski, Adam; Zinkov, Robert; Siddharth, N.; Rainforth, Tom; Teh, Yee Whye; Wood, Frank: Faithful Inversion of Generative Models for Effective Amortized Inference, 2017, https://arxiv.org/abs/1712.00287
-133. Roth, Kevin; Lucchi, Aurelien; Nowozin, Sebastian; Hofmann, Thomas: Adversarially Robust Training through Structured Gradient Regularization, 2018, https://arxiv.org/abs/1805.08736
-134. Remes, Sami; Heinonen, Markus; Kaski, Samuel: Non-Stationary Spectral Kernels, 2017, https://arxiv.org/abs/1705.08736
-135. Xiao, Lechao; Bahri, Yasaman; Sohl-Dickstein, Jascha; Schoenholz, Samuel S.; Pennington, Jeffrey: Dynamical Isometry and a Mean Field Theory of CNNs: How to Train 10,000-Layer Vanilla Convolutional Neural Networks, 2018, https://arxiv.org/abs/1806.05393
-136. Cheplygina, Veronika; Tax, David M. J.; Loog, Marco: Multiple Instance Learning with Bag Dissimilarities, 2013, https://arxiv.org/abs/1309.5643
-137. Lefèvre, Augustin; Bach, Francis; Févotte, Cédric: Online algorithms for Nonnegative Matrix Factorization with the Itakura-Saito divergence, 2011, https://arxiv.org/abs/1106.4198
-138. Novak, Roman; Bahri, Yasaman; Abolafia, Daniel A.; Pennington, Jeffrey; Sohl-Dickstein, Jascha: Sensitivity and Generalization in Neural Networks: an Empirical Study, 2018, https://arxiv.org/abs/1802.08760
-139. Imani, Ehsan; White, Martha: Improving Regression Performance with Distributional Losses, 2018, https://arxiv.org/abs/1806.04613
-140. Chowdhury, Agniva; Yang, Jiasen; Drineas, Petros: Structural Conditions for Projection-Cost Preservation via Randomized Matrix Multiplication, 2017, https://arxiv.org/abs/1705.10102
-141. Kim, Hyeji; Gao, Weihao; Kannan, Sreeram; Oh, Sewoong; Viswanath, Pramod: Discovering Potential Correlations via Hypercontractivity, 2017, https://arxiv.org/abs/1709.04024
-142. Kulesza, Alex; Taskar, Ben: Determinantal point processes for machine learning, 2012, https://arxiv.org/abs/1207.6083
-143. Xie, Jianwen; Zhu, Song-Chun; Wu, Ying Nian: Synthesizing Dynamic Patterns by Spatial-Temporal Generative ConvNet, 2016, https://arxiv.org/abs/1606.00972
-144. Ustun, Berk; Rudin, Cynthia: Learning Optimized Risk Scores, 2016, https://arxiv.org/abs/1610.00168
+* montage 12x12 stat.ML October 2012
+1. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+2. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+3. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+4. Balasubramanian, Krishnakumar; Yu, Kai; Lebanon, Guy: Smooth Sparse Coding via Marginal Regression for Learning Sparse Representations, 2012, https://arxiv.org/abs/1210.1121
+5. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+6. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+7. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+8. Carpentier, Alexandra; Munos, Rémi: Adaptive Stratified Sampling for Monte-Carlo integration of Differentiable functions, 2012, https://arxiv.org/abs/1210.5345
+9. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+10. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+11. Nguyen, Jennifer; Zhu, Mu: Content-boosted Matrix Factorization Techniques for Recommender Systems, 2012, https://arxiv.org/abs/1210.5631
+12. Kolchinsky, Artemy; Lourenço, Anália; Li, Lang; Rocha, Luis M.: Evaluation of linear classifiers on articles containing pharmacokinetic evidence of drug-drug interactions, 2012, https://arxiv.org/abs/1210.0734
+13. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+14. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+15. Gong, Pinghua; Ye, Jieping; Zhang, Changshui: Multi-Stage Multi-Task Feature Learning, 2012, https://arxiv.org/abs/1210.5806
+16. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+17. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+18. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+19. Grandvalet, Yves; Chiquet, Julien; Ambroise, Christophe: Sparsity by Worst-Case Penalties, 2012, https://arxiv.org/abs/1210.2077
+20. Topa, Hande; Honkela, Antti: Gaussian process modelling of multiple short time series, 2012, https://arxiv.org/abs/1210.2503
+21. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+22. Carpentier, Alexandra; Munos, Rémi: Adaptive Stratified Sampling for Monte-Carlo integration of Differentiable functions, 2012, https://arxiv.org/abs/1210.5345
+23. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+24. Häusler, Chris; Susemihl, Alex: Temporal Autoencoding Restricted Boltzmann Machine, 2012, https://arxiv.org/abs/1210.8353
+25. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+26. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+27. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+28. Kumar, Abhishek; Sindhwani, Vikas; Kambadur, Prabhanjan: Fast Conical Hull Algorithms for Near-separable Non-negative Matrix Factorization, 2012, https://arxiv.org/abs/1210.1190
+29. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+30. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+31. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+32. Hisano, Ryohei; Sornette, Didier; Mizuno, Takayuki; Ohnishi, Takaaki; Watanabe, Tsutomu: High quality topic extraction from business news explains abnormal financial market volatility, 2012, https://arxiv.org/abs/1210.6321
+33. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+34. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+35. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+36. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+37. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+38. Aksu, Yaman: Fast SVM-based Feature Elimination Utilizing Data Radius, Hard-Margin, Soft-Margin, 2012, https://arxiv.org/abs/1210.4460
+39. Jitkrittum, Wittawat; Hachiya, Hirotaka; Sugiyama, Masashi: Feature Selection via L1-Penalized Squared-Loss Mutual Information, 2012, https://arxiv.org/abs/1210.1960
+40. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+41. Gong, Pinghua; Ye, Jieping; Zhang, Changshui: Multi-Stage Multi-Task Feature Learning, 2012, https://arxiv.org/abs/1210.5806
+42. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+43. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+44. Kolchinsky, Artemy; Lourenço, Anália; Li, Lang; Rocha, Luis M.: Evaluation of linear classifiers on articles containing pharmacokinetic evidence of drug-drug interactions, 2012, https://arxiv.org/abs/1210.0734
+45. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+46. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+47. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+48. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+49. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+50. Aksu, Yaman: Fast SVM-based Feature Elimination Utilizing Data Radius, Hard-Margin, Soft-Margin, 2012, https://arxiv.org/abs/1210.4460
+51. Hisano, Ryohei; Sornette, Didier; Mizuno, Takayuki; Ohnishi, Takaaki; Watanabe, Tsutomu: High quality topic extraction from business news explains abnormal financial market volatility, 2012, https://arxiv.org/abs/1210.6321
+52. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+53. Aksu, Yaman: Fast SVM-based Feature Elimination Utilizing Data Radius, Hard-Margin, Soft-Margin, 2012, https://arxiv.org/abs/1210.4460
+54. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+55. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+56. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+57. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+58. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+59. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+60. Grandvalet, Yves; Chiquet, Julien; Ambroise, Christophe: Sparsity by Worst-Case Penalties, 2012, https://arxiv.org/abs/1210.2077
+61. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+62. Häusler, Chris; Susemihl, Alex: Temporal Autoencoding Restricted Boltzmann Machine, 2012, https://arxiv.org/abs/1210.8353
+63. Sindhwani, Vikas; Quang, Minh Ha; Lozano, Aurelie C.: Scalable Matrix-valued Kernel Learning for High-dimensional Nonlinear Multivariate Regression and Granger Causality, 2012, https://arxiv.org/abs/1210.4792
+64. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+65. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+66. Aksu, Yaman: Fast SVM-based Feature Elimination Utilizing Data Radius, Hard-Margin, Soft-Margin, 2012, https://arxiv.org/abs/1210.4460
+67. Sindhwani, Vikas; Quang, Minh Ha; Lozano, Aurelie C.: Scalable Matrix-valued Kernel Learning for High-dimensional Nonlinear Multivariate Regression and Granger Causality, 2012, https://arxiv.org/abs/1210.4792
+68. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+69. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+70. Jitkrittum, Wittawat; Hachiya, Hirotaka; Sugiyama, Masashi: Feature Selection via L1-Penalized Squared-Loss Mutual Information, 2012, https://arxiv.org/abs/1210.1960
+71. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+72. Jitkrittum, Wittawat; Hachiya, Hirotaka; Sugiyama, Masashi: Feature Selection via L1-Penalized Squared-Loss Mutual Information, 2012, https://arxiv.org/abs/1210.1960
+73. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+74. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+75. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+76. Grandvalet, Yves; Chiquet, Julien; Ambroise, Christophe: Sparsity by Worst-Case Penalties, 2012, https://arxiv.org/abs/1210.2077
+77. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+78. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+79. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+80. Sindhwani, Vikas; Quang, Minh Ha; Lozano, Aurelie C.: Scalable Matrix-valued Kernel Learning for High-dimensional Nonlinear Multivariate Regression and Granger Causality, 2012, https://arxiv.org/abs/1210.4792
+81. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+82. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+83. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+84. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+85. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+86. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+87. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+88. Sindhwani, Vikas; Quang, Minh Ha; Lozano, Aurelie C.: Scalable Matrix-valued Kernel Learning for High-dimensional Nonlinear Multivariate Regression and Granger Causality, 2012, https://arxiv.org/abs/1210.4792
+89. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+90. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+91. Topa, Hande; Honkela, Antti: Gaussian process modelling of multiple short time series, 2012, https://arxiv.org/abs/1210.2503
+92. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+93. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+94. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+95. Hisano, Ryohei; Sornette, Didier; Mizuno, Takayuki; Ohnishi, Takaaki; Watanabe, Tsutomu: High quality topic extraction from business news explains abnormal financial market volatility, 2012, https://arxiv.org/abs/1210.6321
+96. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+97. Topa, Hande; Honkela, Antti: Gaussian process modelling of multiple short time series, 2012, https://arxiv.org/abs/1210.2503
+98. Xu, Zhixiang; Kusner, Matt J.; Weinberger, Kilian Q.; Chen, Minmin: Cost-Sensitive Tree of Classifiers, 2012, https://arxiv.org/abs/1210.2771
+99. Grandvalet, Yves; Chiquet, Julien; Ambroise, Christophe: Sparsity by Worst-Case Penalties, 2012, https://arxiv.org/abs/1210.2077
+100. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+101. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+102. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+103. Grandvalet, Yves; Chiquet, Julien; Ambroise, Christophe: Sparsity by Worst-Case Penalties, 2012, https://arxiv.org/abs/1210.2077
+104. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+105. Topa, Hande; Honkela, Antti: Gaussian process modelling of multiple short time series, 2012, https://arxiv.org/abs/1210.2503
+106. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+107. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+108. Jitkrittum, Wittawat; Hachiya, Hirotaka; Sugiyama, Masashi: Feature Selection via L1-Penalized Squared-Loss Mutual Information, 2012, https://arxiv.org/abs/1210.1960
+109. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+110. Xu, Zhixiang; Kusner, Matt J.; Weinberger, Kilian Q.; Chen, Minmin: Cost-Sensitive Tree of Classifiers, 2012, https://arxiv.org/abs/1210.2771
+111. Häusler, Chris; Susemihl, Alex: Temporal Autoencoding Restricted Boltzmann Machine, 2012, https://arxiv.org/abs/1210.8353
+112. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+113. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+114. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+115. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+116. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+117. Häusler, Chris; Susemihl, Alex: Temporal Autoencoding Restricted Boltzmann Machine, 2012, https://arxiv.org/abs/1210.8353
+118. Hisano, Ryohei; Sornette, Didier; Mizuno, Takayuki; Ohnishi, Takaaki; Watanabe, Tsutomu: High quality topic extraction from business news explains abnormal financial market volatility, 2012, https://arxiv.org/abs/1210.6321
+119. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+120. Lebichot, Bertrand; Kivimäki, Ilkka; Françoisse, Kevin; Saerens, Marco: Semi-Supervised Classification Through the Bag-of-Paths Group Betweenness, 2012, https://arxiv.org/abs/1210.4276
+121. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+122. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+123. Jitkrittum, Wittawat; Hachiya, Hirotaka; Sugiyama, Masashi: Feature Selection via L1-Penalized Squared-Loss Mutual Information, 2012, https://arxiv.org/abs/1210.1960
+124. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+125. Than, Khoat; Ho, Tu Bao: Managing sparsity, time, and quality of inference in topic models, 2012, https://arxiv.org/abs/1210.7053
+126. Aksu, Yaman: Fast SVM-based Feature Elimination Utilizing Data Radius, Hard-Margin, Soft-Margin, 2012, https://arxiv.org/abs/1210.4460
+127. Desjardins, Guillaume; Courville, Aaron; Bengio, Yoshua: Disentangling Factors of Variation via Generative Entangling, 2012, https://arxiv.org/abs/1210.5474
+128. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+129. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+130. Häusler, Chris; Susemihl, Alex: Temporal Autoencoding Restricted Boltzmann Machine, 2012, https://arxiv.org/abs/1210.8353
+131. Kolchinsky, Artemy; Lourenço, Anália; Li, Lang; Rocha, Luis M.: Evaluation of linear classifiers on articles containing pharmacokinetic evidence of drug-drug interactions, 2012, https://arxiv.org/abs/1210.0734
+132. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+133. Jitkrittum, Wittawat; Hachiya, Hirotaka; Sugiyama, Masashi: Feature Selection via L1-Penalized Squared-Loss Mutual Information, 2012, https://arxiv.org/abs/1210.1960
+134. Sindhwani, Vikas; Quang, Minh Ha; Lozano, Aurelie C.: Scalable Matrix-valued Kernel Learning for High-dimensional Nonlinear Multivariate Regression and Granger Causality, 2012, https://arxiv.org/abs/1210.4792
+135. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+136. Than, Khoat; Ho, Tu Bao: Managing sparsity, time, and quality of inference in topic models, 2012, https://arxiv.org/abs/1210.7053
+137. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+138. Gong, Pinghua; Ye, Jieping; Zhang, Changshui: Multi-Stage Multi-Task Feature Learning, 2012, https://arxiv.org/abs/1210.5806
+139. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+140. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+141. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+142. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+143. Zhang, Youwei; Ghaoui, Laurent El: Large-Scale Sparse Principal Component Analysis with Application to Text Data, 2012, https://arxiv.org/abs/1210.7054
+144. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+* montage 12x12 cs.AI 2012
+1. Preen, Richard J.; Bull, Larry: Discrete Dynamical Genetic Programming in XCS, 2012, https://arxiv.org/abs/1204.4200
+2. Bouvrie, Jake; Maggioni, Mauro: Multiscale Markov Decision Problems: Compression, Solution, and Transfer Learning, 2012, https://arxiv.org/abs/1212.1143
+3. Calimeri, Francesco; Ianni, Giovambattista; Ricca, Francesco: The third open Answer Set Programming competition, 2012, https://arxiv.org/abs/1206.3111
+4. Dey, Debadeepta; Liu, Tian Yu; Hebert, Martial; Bagnell, J. Andrew: Predicting Contextual Sequences via Submodular Function Maximization, 2012, https://arxiv.org/abs/1202.2112
+5. Preen, Richard J.; Bull, Larry: Discrete Dynamical Genetic Programming in XCS, 2012, https://arxiv.org/abs/1204.4200
+6. Nguyen, Truong-Huy Dinh; Lee, Wee-Sun; Leong, Tze-Yun: Bootstrapping Monte Carlo Tree Search with an Imperfect Heuristic, 2012, https://arxiv.org/abs/1206.5940
+7. Rodler, Patrick; Shchekotykhin, Kostyantyn; Fleiss, Philipp; Friedrich, Gerhard: RIO: Minimizing User Interaction in Ontology Debugging, 2012, https://arxiv.org/abs/1209.3734
+8. Loshchilov, Ilya; Schoenauer, Marc; Sebag, Michèle: Alternative Restart Strategies for CMA-ES, 2012, https://arxiv.org/abs/1207.0206
+9. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+10. Natarajan, Prabhu; Hoang, Trong Nghia; Low, Kian Hsiang; Kankanhalli, Mohan: Decision-Theoretic Coordination and Control for Active Multi-Camera Surveillance in Uncertain, Partially Observable Environments, 2012, https://arxiv.org/abs/1209.4275
+11. Edelkamp, Stefan; Kissmann, Peter; Torralba, Álvaro: Lex-Partitioning: A New Option for BDD Search, 2012, https://arxiv.org/abs/1210.6415
+12. Zhao, Qibin; Caiafa, Cesar F.; Mandic, Danilo P.; Chao, Zenas C.; Nagasaka, Yasuo; Fujii, Naotaka; Zhang, Liqing; Cichocki, Andrzej: Higher-Order Partial Least Squares (HOPLS): A Generalized Multi-Linear Regression Method, 2012, https://arxiv.org/abs/1207.1230
+13. Blanchard, Frédéric; Herbin, Michel: Relational Data Mining Through Extraction of Representative Exemplars, 2012, https://arxiv.org/abs/1207.0833
+14. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+15. Katsirelos, George; Narodytska, Nina; Walsh, Toby: The SeqBin Constraint Revisited, 2012, https://arxiv.org/abs/1207.1811
+16. Nguyen, Truong-Huy Dinh; Hsu, David; Lee, Wee-Sun; Leong, Tze-Yun; Kaelbling, Leslie Pack; Lozano-Perez, Tomas; Grant, Andrew Haydn: CAPIR: Collaborative Action Planning with Intention Recognition, 2012, https://arxiv.org/abs/1206.5928
+17. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+18. Pintea, Camelia-M.; Chira, Camelia; Dumitrescu, D.: New results of ant algorithms for the Linear Ordering Problem, 2012, https://arxiv.org/abs/1208.5340
+19. Dufour-Lussier, Valmi; Ber, Florence Le; Lieber, Jean; Meilender, Thomas; Nauer, Emmanuel: Semi-automatic annotation process for procedural texts: An application on cooking recipes, 2012, https://arxiv.org/abs/1209.5663
+20. Khouadjia, Mostepha Redouane; Schoenauer, Marc; Vidal, Vincent; Dréo, Johann; Savéant, Pierre: Multi-Objective AI Planning: Evaluating DAE-YAHSP on a Tunable Benchmark, 2012, https://arxiv.org/abs/1212.5276
+21. Jung, Tobias; Stone, Peter: Feature Selection for Value Function Approximation Using Bayesian Model Selection, 2012, https://arxiv.org/abs/1201.6615
+22. Jung, Tobias; Polani, Daniel; Stone, Peter: Empowerment for Continuous Agent-Environment Systems, 2012, https://arxiv.org/abs/1201.6583
+23. Zhang, Pan; Ramezanpour, Abolfazl; Zdeborová, Lenka; Zecchina, Riccardo: Message passing for quantified Boolean formulas, 2012, https://arxiv.org/abs/1202.2536
+24. Preen, Richard J.; Bull, Larry: Discrete and fuzzy dynamical genetic programming in the XCSF learning classifier system, 2012, https://arxiv.org/abs/1201.5604
+25. Hutter, Frank; Xu, Lin; Hoos, Holger H.; Leyton-Brown, Kevin: Algorithm Runtime Prediction: Methods & Evaluation, 2012, https://arxiv.org/abs/1211.0906
+26. Xu, Zilong; Min, Fan; Zhu, William: Cost-sensitive C4.5 with post-pruning and competition, 2012, https://arxiv.org/abs/1211.4122
+27. Henriques, Rui; Lynce, Inês; Manquinho, Vasco: On When and How to use SAT to Mine Frequent Itemsets, 2012, https://arxiv.org/abs/1207.6253
+28. Nguyen, Truong-Huy Dinh; Hsu, David; Lee, Wee-Sun; Leong, Tze-Yun; Kaelbling, Leslie Pack; Lozano-Perez, Tomas; Grant, Andrew Haydn: CAPIR: Collaborative Action Planning with Intention Recognition, 2012, https://arxiv.org/abs/1206.5928
+29. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+30. Martins, Andre F. T.; Figueiredo, Mario A. T.; Aguiar, Pedro M. Q.; Smith, Noah A.; Xing, Eric P.: Alternating Directions Dual Decomposition, 2012, https://arxiv.org/abs/1212.6550
+31. Hutter, Frank; Xu, Lin; Hoos, Holger H.; Leyton-Brown, Kevin: Algorithm Runtime Prediction: Methods & Evaluation, 2012, https://arxiv.org/abs/1211.0906
+32. Kishimoto, Akihiro; Fukunaga, Alex; Botea, Adi: Evaluation of a Simple, Scalable, Parallel Best-First Search Strategy, 2012, https://arxiv.org/abs/1201.3204
+33. Edelkamp, Stefan; Kissmann, Peter; Torralba, Álvaro: Lex-Partitioning: A New Option for BDD Search, 2012, https://arxiv.org/abs/1210.6415
+34. Niepert, Mathias: Markov Chains on Orbits of Permutation Groups, 2012, https://arxiv.org/abs/1206.5396
+35. Murtagh, Fionn: Ultrametric Model of Mind, I: Review, 2012, https://arxiv.org/abs/1201.2711
+36. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+37. Schutt, Andreas; Feydy, Thibaut; Stuckey, Peter J.: Explaining Time-Table-Edge-Finding Propagation for the Cumulative Resource Constraint, 2012, https://arxiv.org/abs/1208.3015
+38. Koutník, Jan; Schmidhuber, Juergen; Gomez, Faustino: A Frequency-Domain Encoding for Neuroevolution, 2012, https://arxiv.org/abs/1212.6521
+39. Martins, Andre F. T.; Figueiredo, Mario A. T.; Aguiar, Pedro M. Q.; Smith, Noah A.; Xing, Eric P.: Alternating Directions Dual Decomposition, 2012, https://arxiv.org/abs/1212.6550
+40. Alviano, Mario; Faber, Wolfgang; Greco, Gianluigi; Leone, Nicola: Magic Sets for Disjunctive Datalog Programs, 2012, https://arxiv.org/abs/1204.6346
+41. Feldman, Zohar; Domshlak, Carmel: Simple Regret Optimization in Online Planning for Markov Decision Processes, 2012, https://arxiv.org/abs/1206.3382
+42. Bellemare, Marc G.; Naddaf, Yavar; Veness, Joel; Bowling, Michael: The Arcade Learning Environment: An Evaluation Platform for General Agents, 2012, https://arxiv.org/abs/1207.4708
+43. Srivastava, Rupesh Kumar; Steunebrink, Bas R.; Schmidhuber, Jürgen: First Experiments with PowerPlay, 2012, https://arxiv.org/abs/1210.8385
+44. Henriques, Rui; Lynce, Inês; Manquinho, Vasco: On When and How to use SAT to Mine Frequent Itemsets, 2012, https://arxiv.org/abs/1207.6253
+45. Skarlatidis, Anastasios; Artikis, Alexander; Filippou, Jason; Paliouras, Georgios: A Probabilistic Logic Programming Event Calculus, 2012, https://arxiv.org/abs/1204.1851
+46. Belkin, Mikhail; Que, Qichao; Wang, Yusu; Zhou, Xueyuan: Graph Laplacians on Singular Manifolds: Toward understanding complex spaces: graph Laplacians on manifolds with singularities and boundaries, 2012, https://arxiv.org/abs/1211.6727
+47. Edelkamp, Stefan; Kissmann, Peter; Torralba, Álvaro: Lex-Partitioning: A New Option for BDD Search, 2012, https://arxiv.org/abs/1210.6415
+48. De Bock, Jasper; de Cooman, Gert: An efficient algorithm for estimating state sequences in imprecise hidden Markov models, 2012, https://arxiv.org/abs/1210.1791
+49. Bowling, Michael; Zinkevich, Martin: On Local Regret, 2012, https://arxiv.org/abs/1206.3318
+50. Blanchard, Frédéric; Herbin, Michel: Relational Data Mining Through Extraction of Representative Exemplars, 2012, https://arxiv.org/abs/1207.0833
+51. Xu, Jun-Ming; Bhargava, Aniruddha; Nowak, Robert; Zhu, Xiaojin: Robust Spatio-Temporal Signal Recovery from Noisy Counts in Social Media, 2012, https://arxiv.org/abs/1204.2248
+52. Edelkamp, Stefan; Kissmann, Peter; Torralba, Álvaro: Lex-Partitioning: A New Option for BDD Search, 2012, https://arxiv.org/abs/1210.6415
+53. Hutter, Frank; Xu, Lin; Hoos, Holger H.; Leyton-Brown, Kevin: Algorithm Runtime Prediction: Methods & Evaluation, 2012, https://arxiv.org/abs/1211.0906
+54. Böhmer, Wendelin: Robot Navigation using Reinforcement Learning and Slow Feature Analysis, 2012, https://arxiv.org/abs/1205.0986
+55. Dufour-Lussier, Valmi; Ber, Florence Le; Lieber, Jean; Meilender, Thomas; Nauer, Emmanuel: Semi-automatic annotation process for procedural texts: An application on cooking recipes, 2012, https://arxiv.org/abs/1209.5663
+56. Martins, Andre F. T.; Figueiredo, Mario A. T.; Aguiar, Pedro M. Q.; Smith, Noah A.; Xing, Eric P.: Alternating Directions Dual Decomposition, 2012, https://arxiv.org/abs/1212.6550
+57. Stuhlmüller, Andreas; Goodman, Noah D.: A Dynamic Programming Algorithm for Inference in Recursive Probabilistic Programs, 2012, https://arxiv.org/abs/1206.3555
+58. Xu, Zilong; Min, Fan; Zhu, William: Cost-sensitive C4.5 with post-pruning and competition, 2012, https://arxiv.org/abs/1211.4122
+59. Boloni, Ladislau: Modeling problems of identity in Little Red Riding Hood, 2012, https://arxiv.org/abs/1211.5644
+60. Hutter, Frank; Xu, Lin; Hoos, Holger H.; Leyton-Brown, Kevin: Algorithm Runtime Prediction: Methods & Evaluation, 2012, https://arxiv.org/abs/1211.0906
+61. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+62. Zhao, Qibin; Caiafa, Cesar F.; Mandic, Danilo P.; Chao, Zenas C.; Nagasaka, Yasuo; Fujii, Naotaka; Zhang, Liqing; Cichocki, Andrzej: Higher-Order Partial Least Squares (HOPLS): A Generalized Multi-Linear Regression Method, 2012, https://arxiv.org/abs/1207.1230
+63. Grzes, Marek; Hoey, Jesse; Khan, Shehroz; Mihailidis, Alex; Czarnuch, Stephen; Jackson, Dan; Monk, Andrew: Relational Approach to Knowledge Engineering for POMDP-based Assistance Systems as a Translation of a Psychological Model, 2012, https://arxiv.org/abs/1206.5698
+64. Dufour-Lussier, Valmi; Ber, Florence Le; Lieber, Jean: Extension du formalisme des flux op\'erationnels par une alg\`ebre temporelle, 2012, https://arxiv.org/abs/1209.5664
+65. Dufour-Lussier, Valmi; Ber, Florence Le; Lieber, Jean; Meilender, Thomas; Nauer, Emmanuel: Semi-automatic annotation process for procedural texts: An application on cooking recipes, 2012, https://arxiv.org/abs/1209.5663
+66. Čáp, Michal; Novák, Peter; Vokřínek, Jiří; Pěchouček, Michal: Asynchronous Decentralized Algorithm for Space-Time Cooperative Pathfinding, 2012, https://arxiv.org/abs/1210.6855
+67. Frasconi, Paolo; Costa, Fabrizio; De Raedt, Luc; De Grave, Kurt: kLog: A Language for Logical and Relational Learning with Kernels, 2012, https://arxiv.org/abs/1205.3981
+68. Skarlatidis, Anastasios; Artikis, Alexander; Filippou, Jason; Paliouras, Georgios: A Probabilistic Logic Programming Event Calculus, 2012, https://arxiv.org/abs/1204.1851
+69. Calimeri, Francesco; Ianni, Giovambattista; Ricca, Francesco: The third open Answer Set Programming competition, 2012, https://arxiv.org/abs/1206.3111
+70. Shao, Louis Yuanlong: Linear-Nonlinear-Poisson Neuron Networks Perform Bayesian Inference On Boltzmann Machines, 2012, https://arxiv.org/abs/1210.8442
+71. Baral, Chitta; Dzifcak, Juraj; Gonzalez, Marcos A.; Gottesman, Aaron: Typed Answer Set Programming and Inverse Lambda Algorithms, 2012, https://arxiv.org/abs/1210.5670
+72. Bellemare, Marc G.; Naddaf, Yavar; Veness, Joel; Bowling, Michael: The Arcade Learning Environment: An Evaluation Platform for General Agents, 2012, https://arxiv.org/abs/1207.4708
+73. Jung, Tobias; Stone, Peter: Feature Selection for Value Function Approximation Using Bayesian Model Selection, 2012, https://arxiv.org/abs/1201.6615
+74. Martins, Andre F. T.; Figueiredo, Mario A. T.; Aguiar, Pedro M. Q.; Smith, Noah A.; Xing, Eric P.: Alternating Directions Dual Decomposition, 2012, https://arxiv.org/abs/1212.6550
+75. Dufour-Lussier, Valmi; Ber, Florence Le; Lieber, Jean; Meilender, Thomas; Nauer, Emmanuel: Semi-automatic annotation process for procedural texts: An application on cooking recipes, 2012, https://arxiv.org/abs/1209.5663
+76. Jung, Tobias; Polani, Daniel; Stone, Peter: Empowerment for Continuous Agent-Environment Systems, 2012, https://arxiv.org/abs/1201.6583
+77. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+78. Hutter, Marcus: One Decade of Universal Artificial Intelligence, 2012, https://arxiv.org/abs/1202.6153
+79. Jung, Tobias; Polani, Daniel; Stone, Peter: Empowerment for Continuous Agent-Environment Systems, 2012, https://arxiv.org/abs/1201.6583
+80. Yang, Daiqin; Zhao, Fang; Liu, Kai; Lim, Hock Beng; Frazzoli, Emilio; Rus, Daniela: A GPS Pseudorange Based Cooperative Vehicular Distance Measurement Technique, 2012, https://arxiv.org/abs/1207.2761
+81. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+82. Stowell, Dan; Plumbley, Mark D.: Segregating event streams and noise with a Markov renewal process model, 2012, https://arxiv.org/abs/1211.2972
+83. Yang, Daiqin; Zhao, Fang; Liu, Kai; Lim, Hock Beng; Frazzoli, Emilio; Rus, Daniela: A GPS Pseudorange Based Cooperative Vehicular Distance Measurement Technique, 2012, https://arxiv.org/abs/1207.2761
+84. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+85. Edelkamp, Stefan; Kissmann, Peter; Torralba, Álvaro: Lex-Partitioning: A New Option for BDD Search, 2012, https://arxiv.org/abs/1210.6415
+86. Belkin, Mikhail; Que, Qichao; Wang, Yusu; Zhou, Xueyuan: Graph Laplacians on Singular Manifolds: Toward understanding complex spaces: graph Laplacians on manifolds with singularities and boundaries, 2012, https://arxiv.org/abs/1211.6727
+87. Bailleux, Olivier: Unit contradiction versus unit propagation, 2012, https://arxiv.org/abs/1204.0731
+88. Bui, Hung Hai; Huynh, Tuyen N.; Riedel, Sebastian: Automorphism Groups of Graphical Models and Lifted Variational Inference, 2012, https://arxiv.org/abs/1207.4814
+89. Stowell, Dan; Plumbley, Mark D.: Segregating event streams and noise with a Markov renewal process model, 2012, https://arxiv.org/abs/1211.2972
+90. Feldman, Zohar; Domshlak, Carmel: Simple Regret Optimization in Online Planning for Markov Decision Processes, 2012, https://arxiv.org/abs/1206.3382
+91. Mani, A.: Dialectics of Knowledge Representation in a Granular Rough Set Theory, 2012, https://arxiv.org/abs/1212.6519
+92. Skarlatidis, Anastasios; Artikis, Alexander; Filippou, Jason; Paliouras, Georgios: A Probabilistic Logic Programming Event Calculus, 2012, https://arxiv.org/abs/1204.1851
+93. Bouvrie, Jake; Maggioni, Mauro: Multiscale Markov Decision Problems: Compression, Solution, and Transfer Learning, 2012, https://arxiv.org/abs/1212.1143
+94. Grzes, Marek; Hoey, Jesse; Khan, Shehroz; Mihailidis, Alex; Czarnuch, Stephen; Jackson, Dan; Monk, Andrew: Relational Approach to Knowledge Engineering for POMDP-based Assistance Systems as a Translation of a Psychological Model, 2012, https://arxiv.org/abs/1206.5698
+95. Schrijvers, Tom; Tack, Guido; Wuille, Pieter; Samulowitz, Horst; Stuckey, Peter J.: Search Combinators, 2012, https://arxiv.org/abs/1203.1095
+96. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+97. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+98. Shchekotykhin, Kostyantyn; Fleiss, Philipp; Rodler, Patrick; Friedrich, Gerhard: Direct computation of diagnoses for ontology debugging, 2012, https://arxiv.org/abs/1209.0997
+99. Blanchard, Frédéric; Herbin, Michel: Relational Data Mining Through Extraction of Representative Exemplars, 2012, https://arxiv.org/abs/1207.0833
+100. Hutter, Frank; Xu, Lin; Hoos, Holger H.; Leyton-Brown, Kevin: Algorithm Runtime Prediction: Methods & Evaluation, 2012, https://arxiv.org/abs/1211.0906
+101. Grzes, Marek; Hoey, Jesse; Khan, Shehroz; Mihailidis, Alex; Czarnuch, Stephen; Jackson, Dan; Monk, Andrew: Relational Approach to Knowledge Engineering for POMDP-based Assistance Systems as a Translation of a Psychological Model, 2012, https://arxiv.org/abs/1206.5698
+102. Böhmer, Wendelin: Robot Navigation using Reinforcement Learning and Slow Feature Analysis, 2012, https://arxiv.org/abs/1205.0986
+103. Belkin, Mikhail; Que, Qichao; Wang, Yusu; Zhou, Xueyuan: Graph Laplacians on Singular Manifolds: Toward understanding complex spaces: graph Laplacians on manifolds with singularities and boundaries, 2012, https://arxiv.org/abs/1211.6727
+104. Azimi, Javad; Jalali, Ali; Fern, Xiaoli: Hybrid Batch Bayesian Optimization, 2012, https://arxiv.org/abs/1202.5597
+105. Alviano, Mario; Faber, Wolfgang; Greco, Gianluigi; Leone, Nicola: Magic Sets for Disjunctive Datalog Programs, 2012, https://arxiv.org/abs/1204.6346
+106. Bellemare, Marc G.; Naddaf, Yavar; Veness, Joel; Bowling, Michael: The Arcade Learning Environment: An Evaluation Platform for General Agents, 2012, https://arxiv.org/abs/1207.4708
+107. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+108. Maes, Francis; Ernst, Damien; Wehenkel, Louis: Meta-Learning of Exploration/Exploitation Strategies: The Multi-Armed Bandit Case, 2012, https://arxiv.org/abs/1207.5208
+109. Grzes, Marek; Hoey, Jesse; Khan, Shehroz; Mihailidis, Alex; Czarnuch, Stephen; Jackson, Dan; Monk, Andrew: Relational Approach to Knowledge Engineering for POMDP-based Assistance Systems as a Translation of a Psychological Model, 2012, https://arxiv.org/abs/1206.5698
+110. Zhao, Qibin; Caiafa, Cesar F.; Mandic, Danilo P.; Chao, Zenas C.; Nagasaka, Yasuo; Fujii, Naotaka; Zhang, Liqing; Cichocki, Andrzej: Higher-Order Partial Least Squares (HOPLS): A Generalized Multi-Linear Regression Method, 2012, https://arxiv.org/abs/1207.1230
+111. Skarlatidis, Anastasios; Artikis, Alexander; Filippou, Jason; Paliouras, Georgios: A Probabilistic Logic Programming Event Calculus, 2012, https://arxiv.org/abs/1204.1851
+112. Hutter, Frank; Xu, Lin; Hoos, Holger H.; Leyton-Brown, Kevin: Algorithm Runtime Prediction: Methods & Evaluation, 2012, https://arxiv.org/abs/1211.0906
+113. Dufour-Lussier, Valmi; Ber, Florence Le; Lieber, Jean; Meilender, Thomas; Nauer, Emmanuel: Semi-automatic annotation process for procedural texts: An application on cooking recipes, 2012, https://arxiv.org/abs/1209.5663
+114. Grzes, Marek; Hoey, Jesse; Khan, Shehroz; Mihailidis, Alex; Czarnuch, Stephen; Jackson, Dan; Monk, Andrew: Relational Approach to Knowledge Engineering for POMDP-based Assistance Systems as a Translation of a Psychological Model, 2012, https://arxiv.org/abs/1206.5698
+115. De Bock, Jasper; de Cooman, Gert: An efficient algorithm for estimating state sequences in imprecise hidden Markov models, 2012, https://arxiv.org/abs/1210.1791
+116. Hoxha, Julia; Junghans, Martin; Agarwal, Sudhir: Enabling Semantic Analysis of User Browsing Patterns in the Web of Data, 2012, https://arxiv.org/abs/1204.2713
+117. Xu, Jun-Ming; Bhargava, Aniruddha; Nowak, Robert; Zhu, Xiaojin: Robust Spatio-Temporal Signal Recovery from Noisy Counts in Social Media, 2012, https://arxiv.org/abs/1204.2248
+118. Lacoste-Julien, Simon; Palla, Konstantina; Davies, Alex; Kasneci, Gjergji; Graepel, Thore; Ghahramani, Zoubin: SiGMa: Simple Greedy Matching for Aligning Large Knowledge Bases, 2012, https://arxiv.org/abs/1207.4525
+119. Boloni, Ladislau: Shadows and Headless Shadows: an Autobiographical Approach to Narrative Reasoning, 2012, https://arxiv.org/abs/1211.6097
+120. Lange, Christoph; Mossakowski, Till; Kutz, Oliver; Galinski, Christian; Grüninger, Michael; Vale, Daniel Couto: The Distributed Ontology Language (DOL): Use Cases, Syntax, and Extensibility, 2012, https://arxiv.org/abs/1208.0293
+121. Jung, Tobias; Stone, Peter: Gaussian Processes for Sample Efficient Reinforcement Learning with RMAX-like Exploration, 2012, https://arxiv.org/abs/1201.6604
+122. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+123. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+124. Hutter, Frank; Xu, Lin; Hoos, Holger H.; Leyton-Brown, Kevin: Algorithm Runtime Prediction: Methods & Evaluation, 2012, https://arxiv.org/abs/1211.0906
+125. Martins, Andre F. T.; Figueiredo, Mario A. T.; Aguiar, Pedro M. Q.; Smith, Noah A.; Xing, Eric P.: Alternating Directions Dual Decomposition, 2012, https://arxiv.org/abs/1212.6550
+126. Khouadjia, Mostepha Redouane; Schoenauer, Marc; Vidal, Vincent; Dréo, Johann; Savéant, Pierre: Multi-Objective AI Planning: Evaluating DAE-YAHSP on a Tunable Benchmark, 2012, https://arxiv.org/abs/1212.5276
+127. Borboudakis, Giorgos; Tsamardinos, Ioannis: Scoring and Searching over Bayesian Networks with Causal and Associative Priors, 2012, https://arxiv.org/abs/1209.6561
+128. Stowell, Dan; Plumbley, Mark D.: Segregating event streams and noise with a Markov renewal process model, 2012, https://arxiv.org/abs/1211.2972
+129. Koutník, Jan; Schmidhuber, Juergen; Gomez, Faustino: A Frequency-Domain Encoding for Neuroevolution, 2012, https://arxiv.org/abs/1212.6521
+130. Stuhlmüller, Andreas; Goodman, Noah D.: A Dynamic Programming Algorithm for Inference in Recursive Probabilistic Programs, 2012, https://arxiv.org/abs/1206.3555
+131. Chicano, Francisco; Daolio, Fabio; Ochoa, Gabriela; Verel, Sébastien; Tomassini, Marco; Alba, Enrique: Local Optima Networks, Landscape Autocorrelation and Heuristic Search Performance, 2012, https://arxiv.org/abs/1210.4021
+132. Bellemare, Marc G.; Naddaf, Yavar; Veness, Joel; Bowling, Michael: The Arcade Learning Environment: An Evaluation Platform for General Agents, 2012, https://arxiv.org/abs/1207.4708
+133. Dufour-Lussier, Valmi; Ber, Florence Le; Lieber, Jean: Extension du formalisme des flux op\'erationnels par une alg\`ebre temporelle, 2012, https://arxiv.org/abs/1209.5664
+134. Preen, Richard J.; Bull, Larry: Discrete and fuzzy dynamical genetic programming in the XCSF learning classifier system, 2012, https://arxiv.org/abs/1201.5604
+135. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+136. Loshchilov, Ilya; Schoenauer, Marc; Sebag, Michèle: Alternative Restart Strategies for CMA-ES, 2012, https://arxiv.org/abs/1207.0206
+137. Stowell, Dan; Plumbley, Mark D.: Segregating event streams and noise with a Markov renewal process model, 2012, https://arxiv.org/abs/1211.2972
+138. Stowell, Dan; Plumbley, Mark D.: Segregating event streams and noise with a Markov renewal process model, 2012, https://arxiv.org/abs/1211.2972
+139. Henriques, Rui; Lynce, Inês; Manquinho, Vasco: On When and How to use SAT to Mine Frequent Itemsets, 2012, https://arxiv.org/abs/1207.6253
+140. Grzes, Marek; Hoey, Jesse; Khan, Shehroz; Mihailidis, Alex; Czarnuch, Stephen; Jackson, Dan; Monk, Andrew: Relational Approach to Knowledge Engineering for POMDP-based Assistance Systems as a Translation of a Psychological Model, 2012, https://arxiv.org/abs/1206.5698
+141. Böhmer, Wendelin: Robot Navigation using Reinforcement Learning and Slow Feature Analysis, 2012, https://arxiv.org/abs/1205.0986
+142. Demoen, Bart; de la Banda, Maria Garcia: Redundant Sudoku Rules, 2012, https://arxiv.org/abs/1207.5926
+143. Jung, Tobias; Polani, Daniel; Stone, Peter: Empowerment for Continuous Agent-Environment Systems, 2012, https://arxiv.org/abs/1201.6583
+144. Zhang, Pan; Ramezanpour, Abolfazl; Zdeborová, Lenka; Zecchina, Riccardo: Message passing for quantified Boolean formulas, 2012, https://arxiv.org/abs/1202.2536
 
-* Grid t-SNE 1000 images cs.CV 2012
-1. Bagon, Shai: Discrete Energy Minimization, beyond Submodularity: Applications and Approximations, 2012, https://arxiv.org/abs/1210.7362
-2. Vondrick, Carl; Khosla, Aditya; Malisiewicz, Tomasz; Torralba, Antonio: Inverting and Visualizing Features for Object Detection, 2012, https://arxiv.org/abs/1212.2278
-3. Premachandran, Vittal; Kakarala, Ramakrishna: Perceptually Motivated Shape Context Which Uses Shape Interiors, 2012, https://arxiv.org/abs/1212.4608
-4. Chaudhury, Kunal N.; Singer, Amit: Non-Local Patch Regression: Robust Image Denoising in Patch Space, 2012, https://arxiv.org/abs/1211.4264
-5. Caraig, Lou Marvin: A New Training Algorithm for Kanerva's Sparse Distributed Memory, 2012, https://arxiv.org/abs/1207.5774
-6. Aly, Salah A.: A Missing and Found Recognition System for Hajj and Umrah, 2012, https://arxiv.org/abs/1208.5365
-7. Gonçalves, Wesley Nunes; Bruno, Odemir Martinez: Automatic system for counting cells with elliptical shape, 2012, https://arxiv.org/abs/1201.3109
-8. Eynard, Davide; Glashoff, Klaus; Bronstein, Michael M.; Bronstein, Alexander M.: Multimodal diffusion geometry by joint diagonalization of Laplacians, 2012, https://arxiv.org/abs/1209.2295
-9. Ren, Xiang; Lin, Zhouchen: Linearized Alternating Direction Method with Adaptive Penalty and Warm Starts for Fast Solving Transform Invariant Low-Rank Textures, 2012, https://arxiv.org/abs/1205.5351
-10. Tang, Zhongwei; Castrodad, Alexey; Tepper, Mariano; Sapiro, Guillermo: Are You Imitating Me? Unsupervised Sparse Modeling for Group Activity Analysis from a Single Video, 2012, https://arxiv.org/abs/1208.5451
-11. Kolmogorov, Vladimir; Schoenemann, Thomas: Generalized sequential tree-reweighted message passing, 2012, https://arxiv.org/abs/1205.6352
-12. "d'Angelo, Emmanuel; jacques, Laurent; Alahi, Alexandre; Vandergheynst, Pierre;: From Bits to Images: Inversion of Local Binary Descriptors, 2012, https://arxiv.org/abs/1211.1265
-13. Arabadjis, Dimitris; Rousopoulos, Panayiotis; Papaodysseus, Constantin; Exarhos, Michalis; Panagopoulos, Michalis; Papazoglou-Manioudaki, Lena: Optimization in Differentiable Manifolds in Order to Determine the Method of Construction of Prehistoric Wall-Paintings, 2012, https://arxiv.org/abs/1210.2629
-14. Gong, Yunchao; Ke, Qifa; Isard, Michael; Lazebnik, Svetlana: A Multi-View Embedding Space for Modeling Internet Images, Tags, and their Semantics, 2012, https://arxiv.org/abs/1212.4522
-15. Fiori, Marcelo; Musé, Pablo; Sapiro, Guillermo: A Complete System for Candidate Polyps Detection in Virtual Colonoscopy, 2012, https://arxiv.org/abs/1209.6525
-16. Zeiler, Matthew D.; Fergus, Rob: Differentiable Pooling for Hierarchical Feature Learning, 2012, https://arxiv.org/abs/1207.0151
-17. Estellers, Virginia; Thiran, Jean-Philippe; Bresson, Xavier: Enhanced Compressed Sensing Recovery with Level Set Normals, 2012, https://arxiv.org/abs/1210.3350
-18. Jayawardena, Srimal; Yang, Di; Hutter, Marcus: 3D Model Assisted Image Segmentation, 2012, https://arxiv.org/abs/1202.1943
-19. Kubota, Toshiro: Contour Completion Around a Fixation Point, 2012, https://arxiv.org/abs/1208.3512
-20. Chang, Jason; Fisher, John W.: Efficient Topology-Controlled Sampling of Implicit Shapes, 2012, https://arxiv.org/abs/1205.3766
-21. Guimarães, Silvio Jamil F.; Cousty, Jean; Kenmochi, Yukiko; Najman, Laurent: An efficient hierarchical graph based image segmentation, 2012, https://arxiv.org/abs/1206.2807
-22. Gangeh, Mehrdad J.; Duin, Robert P. W.; Romeny, Bart M. ter Haar; Kamel, Mohamed S.: A Two-Stage Combined Classifier in Scale Space Texture Classification, 2012, https://arxiv.org/abs/1207.4089
-23. Song, Shuran; Xiao, Jianxiong: Tracking Revisited using RGBD Camera: Baseline and Benchmark, 2012, https://arxiv.org/abs/1212.2823
-24. da Silva, Núbia Rosa; Bruno, Odemir Martinez: Analysis of Multi-Scale Fractal Dimension to Classify Human Motion, 2012, https://arxiv.org/abs/1207.1649
-25. Burger, Harold Christopher; Schuler, Christian J.; Harmeling, Stefan: Image denoising with multi-layer perceptrons, part 2: training trade-offs and analysis of their mechanisms, 2012, https://arxiv.org/abs/1211.1552
-26. Chaudhry, Rizwan; Hager, Gregory; Vidal, Rene: Dynamic Template Tracking and Recognition, 2012, https://arxiv.org/abs/1204.4476
-27. Narayanaswamy, Siddharth; Barbu, Andrei; Siskind, Jeffrey Mark: Seeing Unseeability to See the Unseeable, 2012, https://arxiv.org/abs/1204.2801
-28. Wang, Quan: GMM-Based Hidden Markov Random Field for Color Image and 3D Volume Segmentation, 2012, https://arxiv.org/abs/1212.4527
-29. Tabor, Jacek; Misztal, Krzysztof: Detection of elliptical shapes via cross-entropy clustering, 2012, https://arxiv.org/abs/1211.5712
-30. "Ersoy, Dalton Lunga 'and' Okan;: Nonlinear Dynamic Field Embedding: On Hyperspectral Scene Visualization, 2012, https://arxiv.org/abs/1211.6675
-31. Duarte-Carvajalino, Julio M.; Yu, Guoshen; Carin, Lawrence; Sapiro, Guillermo: Task-Driven Adaptive Statistical Compressive Sensing of Gaussian Mixture Models, 2012, https://arxiv.org/abs/1201.5404
-32. Krähenbühl, Philipp; Koltun, Vladlen: Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials, 2012, https://arxiv.org/abs/1210.5644
-33. Daneshgar, Amir; Javadi, Ramin; Razavi, Basir Shariat: Clustering Using Isoperimetric Number of Trees, 2012, https://arxiv.org/abs/1203.4204
-34. Chaudhury, Kunal N.: Acceleration of the shiftable O(1) algorithm for bilateral filtering and non-local means, 2012, https://arxiv.org/abs/1203.5128
-35. Schclar, Alon: Multi-Sensor Fusion via Reduction of Dimensionality, 2012, https://arxiv.org/abs/1211.2863
-36. Singaraju, Dheeraj; Elhamifar, Ehsan; Tron, Roberto; Yang, Allen Y.; Sastry, S. Shankar: On the Lagrangian Biduality of Sparsity Minimization Problems, 2012, https://arxiv.org/abs/1201.3674
-37. Gonçalves, Wesley Nunes; Machado, Bruno Brandoli; Bruno, Odemir Martinez: Spatiotemporal Gabor filters: a new method for dynamic texture recognition, 2012, https://arxiv.org/abs/1201.3612
-38. Barriuso, Adela; Torralba, Antonio: Notes on image annotation, 2012, https://arxiv.org/abs/1210.3448
-39. Needell, Deanna; Ward, Rachel: Stable image reconstruction using total variation minimization, 2012, https://arxiv.org/abs/1202.6429
-40. Wang, Junyan; Chan, Kap Luk: Piecewise Linear Patch Reconstruction for Segmentation and Description of Non-smooth Image Structures, 2012, https://arxiv.org/abs/1207.5113
-41. Elhamifar, Ehsan; Vidal, Rene: Sparse Subspace Clustering: Algorithm, Theory, and Applications, 2012, https://arxiv.org/abs/1203.1005
-42. Christlein, Vincent; Riess, Christian; Jordan, Johannes; Riess, Corinna; Angelopoulou, Elli: An Evaluation of Popular Copy-Move Forgery Detection Approaches, 2012, https://arxiv.org/abs/1208.3665
-43. Anand, Abhishek; Li, Sherwin: 3D Scene Grammar for Parsing RGB-D Pointclouds, 2012, https://arxiv.org/abs/1211.1752
-44. Burgi, Pierre-Yves; Yuille, Alan L.; Grzywacz, Norberto M.: Probabilistic Motion Estimation Based on Temporal Coherence, 2012, https://arxiv.org/abs/1201.1216
-45. Krahmer, Felix; Ward, Rachel: Stable and robust sampling strategies for compressive imaging, 2012, https://arxiv.org/abs/1210.2380
-46. Bekkers, Erik; Duits, Remco; Berendschot, Tos; Romeny, Bart ter Haar: A Multi-Orientation Analysis Approach to Retinal Vessel Tracking, 2012, https://arxiv.org/abs/1212.3530
-47. Darkner, Sune; Sporring, Jon: Locally Orderless Registration, 2012, https://arxiv.org/abs/1205.5425
-48. Salmon, Joseph; Willett, Rebecca; Arias-Castro, Ery: A two-stage denoising filter: the preprocessed Yaroslavsky filter, 2012, https://arxiv.org/abs/1208.6516
-49. Konukoglu, Ender; Glocker, Ben; Criminisi, Antonio; Pohl, Kilian M.: WESD - Weighted Spectral Distance for Measuring Shape Dissimilarity, 2012, https://arxiv.org/abs/1208.5016
-50. Frery, Alejandro C.; Jacobo-Berlles, Julio; Gambini, Juliana; Mejail, Marta: Polarimetric SAR Image Segmentation with B-Splines and a New Statistical Model, 2012, https://arxiv.org/abs/1207.3944
-51. Puy, Gilles; Vandergheynst, Pierre: Robust image reconstruction from multi-view measurements, 2012, https://arxiv.org/abs/1212.3268
-52. Yang, Yanchao; Sundaramoorthi, Ganesh: Shape Tracking With Occlusions via Coarse-To-Fine Region-Based Sobolev Descent, 2012, https://arxiv.org/abs/1208.4391
-53. Qiu, Qiang; Chellappa, Rama: A Unified Approach for Modeling and Recognition of Individual Actions and Group Activities, 2012, https://arxiv.org/abs/1208.4398
-54. Seer, Stefan; Brändle, Norbert; Ratti, Carlo: Kinects and Human Kinetics: A New Approach for Studying Crowd Behavior, 2012, https://arxiv.org/abs/1210.2838
-55. Tofighi, Mohammad; Kalbkhani, Hashem; Shayesteh, Mahrokh G.; Ghasemzadeh, Mehdi: Robust Head Pose Estimation Using Contourlet Transform, 2012, https://arxiv.org/abs/1204.5431
-56. Zaidenberg, Sofia; Boulay, Bernard; Bremond, François: A generic framework for video understanding applied to group behavior recognition, 2012, https://arxiv.org/abs/1206.5065
-57. Barbu, Andrei; Bridge, Alexander; Burchill, Zachary; Coroian, Dan; Dickinson, Sven; Fidler, Sanja; Michaux, Aaron; Mussman, Sam; Narayanaswamy, Siddharth; Salvi, Dhaval; Schmidt, Lara; Shangguan, Jiangnan; Siskind, Jeffrey Mark; Waggoner, Jarrell; Wang, Song; Wei, Jinlian; Yin, Yifan; Zhang, Zhiqi: Video In Sentences Out, 2012, https://arxiv.org/abs/1204.2742
-58. Rodner, Erik: Visual Transfer Learning: Informal Introduction and Literature Overview, 2012, https://arxiv.org/abs/1211.1127
-59. Kong, Shu; Wang, Donghui: A Report on Multilinear PCA Plus Multilinear LDA to Deal with Tensorial Data: Visual Classification as An Example, 2012, https://arxiv.org/abs/1203.0744
-60. Tepper, Mariano; Musé, Pablo; Almansa, Andrés: On the Role of Contrast and Regularity in Perceptual Boundary Saliency, 2012, https://arxiv.org/abs/1210.3718
-61. Bhavsar, Arnav: Analysis of Magnification in Depth from Defocus, 2012, https://arxiv.org/abs/1203.6329
-62. Li, Xi; Shen, Chunhua; Shi, Qinfeng; Dick, Anthony; Hengel, Anton van den: Non-sparse Linear Representations for Visual Tracking with Online Reservoir Metric Learning, 2012, https://arxiv.org/abs/1204.2912
-63. Mollah, Ayatullah Faruk; Basu, Subhadip; Nasipuri, Mita: Computationally Efficient Implementation of Convolution-based Locally Adaptive Binarization Techniques, 2012, https://arxiv.org/abs/1210.3165
-64. Abeles, Peter: Resolving Implementation Ambiguity and Improving SURF, 2012, https://arxiv.org/abs/1202.0492
-65. Xu, Yongchao; Géraud, Thierry; Najman, Laurent: Morphological Filtering in Shape Spaces: Applications using Tree-Based Image Representations, 2012, https://arxiv.org/abs/1204.4758
-66. Soomro, Khurram; Zamir, Amir Roshan; Shah, Mubarak: UCF101: A Dataset of 101 Human Actions Classes From Videos in The Wild, 2012, https://arxiv.org/abs/1212.0402
-67. Wang, Quan: HMRF-EM-image: Implementation of the Hidden Markov Random Field Model and its Expectation-Maximization Algorithm, 2012, https://arxiv.org/abs/1207.3510
-68. Cireşan, Dan; Meier, Ueli; Schmidhuber, Juergen: Multi-column Deep Neural Networks for Image Classification, 2012, https://arxiv.org/abs/1202.2745
-69. Sundaramoorthi, Ganesh; Yang, Yanchao: Matching Through Features and Features Through Matching, 2012, https://arxiv.org/abs/1211.4771
-70. Meyer, Fernand: Watersheds, waterfalls, on edge or node weighted graphs, 2012, https://arxiv.org/abs/1204.2837
-71. Hale, Scott A.: Unsupervised Threshold for Automatic Extraction of Dolphin Dorsal Fin Outlines from Digital Photographs in DARWIN (Digital Analysis and Recognition of Whale Images on a Network), 2012, https://arxiv.org/abs/1202.4107
-72. Tosic, Ivana; Drewes, Sarah: Learning joint intensity-depth sparse representations, 2012, https://arxiv.org/abs/1201.0566
-73. Wang, Quan: Kernel Principal Component Analysis and its Applications in Face Recognition and Active Shape Models, 2012, https://arxiv.org/abs/1207.3538
-74. Wang, Junyan; Chan, Kap Luk: Active Contour with A Tangential Component, 2012, https://arxiv.org/abs/1204.6458
-75. Liu, Risheng; Lin, Zhouchen; De la Torre, Fernando; Su, Zhixun: Fixed-Rank Representation for Unsupervised Visual Learning, 2012, https://arxiv.org/abs/1203.2210
-76. Masci, Jonathan; Bronstein, Michael M.; Bronstein, Alexander A.; Schmidhuber, Jürgen: Multimodal similarity-preserving hashing, 2012, https://arxiv.org/abs/1207.1522
-77. Yamaguchi, Koichiro; Hazan, Tamir; McAllester, David; Urtasun, Raquel: Continuous Markov Random Fields for Robust Stereo Estimation, 2012, https://arxiv.org/abs/1204.1393
-78. Perciano, Talita; Urban, Matthew; Mascarenhas, Nelson D. A.; Fatemi, Mostafa; Frery, Alejandro C.; Silva, Glauber T.: Deconvolution of vibroacoustic images using a simulation model based on a three dimensional point spread function, 2012, https://arxiv.org/abs/1207.3370
-79. Bagon, Shai; Galun, Meirav: A Unified Multiscale Framework for Discrete Energy Minimization, 2012, https://arxiv.org/abs/1204.4867
-80. Sudhakar, Prasad; Jacques, Laurent; Dubois, Xavier; Antoine, Philippe; Joannes, Luc: Compressive Schlieren Deflectometry, 2012, https://arxiv.org/abs/1212.0433
-81. Brunton, Alan; Salazar, Augusto; Bolkart, Timo; Wuhrer, Stefanie: Review of Statistical Shape Spaces for 3D Data with Comparative Analysis for Human Faces, 2012, https://arxiv.org/abs/1209.6491
-82. Arabadjis, Dimitris; Rousopoulos, Panayiotis; Papaodysseus, Constantin; Panagopoulos, Michalis; Loumou, Panayiota; Theodoropoulos, Georgios: A General Methodology for the Determination of 2D Bodies Elastic Deformation Invariants. Application to the Automatic Identification of Parasites, 2012, https://arxiv.org/abs/1210.2646
-83. Wang, Junyan; Chan, Kap Luk: The Stability of Convergence of Curve Evolutions in Vector Fields, 2012, https://arxiv.org/abs/1206.4042
-84. Kovnatsky, A.; Bronstein, M. M.; Bronstein, A. M.; Glashoff, K.; Kimmel, R.: Coupled quasi-harmonic bases, 2012, https://arxiv.org/abs/1210.0026
-85. Masmoudi, Khaled; Antonini, Marc; Kornprobst, Pierre: Streaming an image through the eye: The retina seen as a dithered scalable image coder, 2012, https://arxiv.org/abs/1202.2350
-86. Zhang, Haichao; Wipf, David; Zhang, Yanning: Image Super-Resolution via Sparse Bayesian Modeling of Natural Images, 2012, https://arxiv.org/abs/1209.4317
-87. Tang, Zhongwei; von Gioi, Rafael Grompone; Monasse, Pascal; Morel, Jean-Michel: High-precision camera distortion measurements with a "calibration harp", 2012, https://arxiv.org/abs/1212.5656
-88. Mu, Yadong; Liu, Wei; Yan, Shuicheng: Video De-fencing, 2012, https://arxiv.org/abs/1210.2388
-89. Mader, Kevin; Reese, Gil: Using Covariance Matrices as Feature Descriptors for Vehicle Detection from a Fixed Camera, 2012, https://arxiv.org/abs/1202.2528
-90. Backes, André Ricardo; Bruno, Odemir Martinez: Fractal and Multi-Scale Fractal Dimension analysis: a comparative study of Bouligand-Minkowski method, 2012, https://arxiv.org/abs/1201.3153
-91. Thakur, Gautam S.; Ali, Mohsen; Hui, Pan; Helmy, Ahmed: Comparing Background Subtraction Algorithms and Method of Car Counting, 2012, https://arxiv.org/abs/1202.0549
-92. Bruna, Joan; Mallat, Stéphane: Invariant Scattering Convolution Networks, 2012, https://arxiv.org/abs/1203.1513
-93. Kaliamoorthi, Prabhu; Kakarala, Ramakrishna: Parametric annealing: a stochastic search method for human pose tracking, 2012, https://arxiv.org/abs/1204.6563
-94. Zawbaa, Hossam; Aly, Salah A.: Hajj and Umrah Event Recognition Datasets, 2012, https://arxiv.org/abs/1205.2345
-95. Pele, Ofir; Werman, Michael: Improving Perceptual Color Difference using Basic Color Terms, 2012, https://arxiv.org/abs/1211.5556
-96. Ronda, José I.; Valdés, Antonio; Gallego, Guillermo: Autocalibration with the Minimum Number of Cameras with Known Pixel Shape, 2012, https://arxiv.org/abs/1203.0905
-97. Chakrabarti, Ayan; Zickler, Todd: Image Restoration with Signal-dependent Camera Noise, 2012, https://arxiv.org/abs/1204.2994
-98. Sun, Ju; Zhang, Yuqian; Wright, John: Efficient Point-to-Subspace Query in $\ell^1$ with Application to Robust Object Instance Recognition, 2012, https://arxiv.org/abs/1208.0432
-99. Barbu, Andrei; Michaux, Aaron; Narayanaswamy, Siddharth; Siskind, Jeffrey Mark: Simultaneous Object Detection, Tracking, and Event Recognition, 2012, https://arxiv.org/abs/1204.2741
-100. Burger, Harold Christopher; Schuler, Christian J.; Harmeling, Stefan: Image denoising with multi-layer perceptrons, part 1: comparison with existing algorithms and with bounds, 2012, https://arxiv.org/abs/1211.1544
-101. Li, Xi; Dick, Anthony; Shen, Chunhua; Hengel, Anton van den; Wang, Hanzi: Incremental Learning of 3D-DCT Compact Representations for Robust Visual Tracking, 2012, https://arxiv.org/abs/1207.3389
-102. Lu, Yao; Huang, Kaizhu; Liu, Cheng-Lin: A Fast Projected Fixed-Point Algorithm for Large Graph Matching, 2012, https://arxiv.org/abs/1207.1114
-103. Hashemi, Jordan; Spina, Thiago Vallin; Tepper, Mariano; Esler, Amy; Morellas, Vassilios; Papanikolopoulos, Nikolaos; Sapiro, Guillermo: Computer vision tools for the non-invasive assessment of autism-related behavioral markers, 2012, https://arxiv.org/abs/1210.7014
-104. Salazar, Augusto; Wuhrer, Stefanie; Shu, Chang; Prieto, Flavio: Fully Automatic Expression-Invariant Face Correspondence, 2012, https://arxiv.org/abs/1202.1444
-105. Welk, Martin; Raudaschl, Patrik; Schwarzbauer, Thomas; Erler, Martin; Läuter, Martin: Fast and Robust Linear Motion Deblurring, 2012, https://arxiv.org/abs/1212.2245
-106. Rajaei, Boshra; Maugey, Thomas; Pourreza, Hamid-Reza; Frossard, Pascal: Rate-Distortion Analysis of Multiview Coding in a DIBR Framework, 2012, https://arxiv.org/abs/1211.4499
-107. Ram, Idan; Elad, Michael; Cohen, Israel: Image Processing using Smooth Ordering of its Patches, 2012, https://arxiv.org/abs/1210.3832
-108. Peng, Xi; Yu, Zhiding; Tang, Huajin; Yi, Zhang: Constructing the L2-Graph for Robust Subspace Learning and Subspace Clustering, 2012, https://arxiv.org/abs/1209.0841
-109. Reininghaus, Jan; Günther, David; Hotz, Ingrid; Weinkauf, Tino; Seidel, Hans Peter: Combinatorial Gradient Fields for 2D Images with Empirically Convergent Separatrices, 2012, https://arxiv.org/abs/1208.6523
-110. Abdelwahab, Moataz M.; Aly, Salah A.; Yousry, Islam: Efficient Web-based Facial Recognition System Employing 2DHOG, 2012, https://arxiv.org/abs/1202.2449
-111. Jin, Qiyu; Grama, Ion; Liu, Quansheng: Optimal Weights Mixed Filter for Removing Mixture of Gaussian and Impulse Noises, 2012, https://arxiv.org/abs/1205.3999
-112. Zhou, Guoxu; Cichocki, Andrzej; Zhang, Yu; Mandic, Danilo: Group Component Analysis for Multiblock Data: Common and Individual Feature Extraction, 2012, https://arxiv.org/abs/1212.3913
-113. van der Walt, Stéfan J.; Herbst, B. M.: A polygon-based interpolation operator for super-resolution imaging, 2012, https://arxiv.org/abs/1210.3404
-114. Yang, Yingzhen; Chu, Xinqi; Ng, Tian-Tsong; Chia, Alex Yong-Sang; Yan, Shuicheng; Huang, Thomas S.: Epitome for Automatic Image Colorization, 2012, https://arxiv.org/abs/1210.4481
-115. Peng, Xi; Zhang, Lei; Yi, Zhang; Tan, Kok Kiong: Learning Locality-Constrained Collaborative Representation for Face Recognition, 2012, https://arxiv.org/abs/1210.1316
-116. Yarkony, Julian; Ihler, Alexander T.; Fowlkes, Charless C.: Fast Planar Correlation Clustering for Image Segmentation, 2012, https://arxiv.org/abs/1208.0378
-117. Divvala, Santosh K.; Efros, Alexei A.; Hebert, Martial: How important are Deformable Parts in the Deformable Parts Model?, 2012, https://arxiv.org/abs/1206.3714
-118. Katsuki, Takayuki; Inoue, Masato: Posterior Mean Super-Resolution with a Compound Gaussian Markov Random Field Prior, 2012, https://arxiv.org/abs/1203.0781
-119. Soni, Akshay; Haupt, Jarvis: Level Set Estimation from Compressive Measurements using Box Constrained Total Variation Regularization, 2012, https://arxiv.org/abs/1210.2474
-120. Meyer, Fernand: The steepest watershed: from graphs to images, 2012, https://arxiv.org/abs/1204.2134
-121. Qiu, Qiang; Patel, Vishal M.; Chellappa, Rama: Information-theoretic Dictionary Learning for Image Classification, 2012, https://arxiv.org/abs/1208.3687
-122. Machado, Bruno Brandoli; Gonçalves, Wesley Nunes; Bruno, Odemir Martinez: Image decomposition with anisotropic diffusion applied to leaf-texture analysis, 2012, https://arxiv.org/abs/1201.4139
-123. Gonzalez, Adriana; Jacques, Laurent; De Vleeschouwer, Christophe; Antoine, Philippe: Compressive Optical Deflectometric Tomography: A Constrained Total-Variation Minimization Approach, 2012, https://arxiv.org/abs/1209.0654
-124. Băzăvan, Eduard Gabriel; Li, Fuxin; Sminchisescu, Cristian: Learning Random Kernel Approximations for Object Recognition, 2012, https://arxiv.org/abs/1203.1483
-125. Wang, Zhaowen; Wang, Jinjun; Xiao, Jing; Lin, Kai-Hsiang; Huang, Thomas: Substructure and Boundary Modeling for Continuous Action Recognition, 2012, https://arxiv.org/abs/1203.1985
-126. Gabarda, Salvador; Cristobal, Gabriel: No-reference image quality assessment through the von Mises distribution, 2012, https://arxiv.org/abs/1202.3021
-127. Collard, Anne; Bonnabel, Silvère; Phillips, Christophe; Sepulchre, Rodolphe: An anisotropy preserving metric for DTI processing, 2012, https://arxiv.org/abs/1210.2826
-128. Mokhov, Serguei A.; Sun, Yankui: OCT Segmentation Survey and Summary Reviews and a Novel 3D Segmentation Algorithm and a Proof of Concept Implementation, 2012, https://arxiv.org/abs/1204.6725
-129. Bhavsar, Arnav: Resolution Enhancement of Range Images via Color-Image Segmentation, 2012, https://arxiv.org/abs/1210.7403
-130. Chang, Joshua C.; Chou, Tom: Iterative graph cuts for image segmentation with a nonlinear statistical shape prior, 2012, https://arxiv.org/abs/1208.4384
-131. Pan, Jinshan; Liu, Risheng; Su, Zhixun; Gu, Xianfeng: Kernel Estimation from Salient Structure for Robust Motion Deblurring, 2012, https://arxiv.org/abs/1212.1073
-132. Zhang, Wei; Wang, Xiaogang; Zhao, Deli; Tang, Xiaoou: Graph Degree Linkage: Agglomerative Clustering on a Directed Graph, 2012, https://arxiv.org/abs/1208.5092
-133. Akram, Saad; Beskow, Jonas; Kjellstrom, Hedvig: Visual Recognition of Isolated Swedish Sign Language Signs, 2012, https://arxiv.org/abs/1211.3901
-134. Quesada, Luis: Using Barriers to Reduce the Sensitivity to Edge Miscalculations of Casting-Based Object Projection Feature Estimation, 2012, https://arxiv.org/abs/1203.0076
-135. Guha, Tanaya; Ward, Rabab K.: Image Similarity Using Sparse Representation and Compression Distance, 2012, https://arxiv.org/abs/1206.2627
-136. Rajathilagam, B.; Rangarajan, Murali; Soman, K. P.: G-Lets: Signal Processing Using Transformation Groups, 2012, https://arxiv.org/abs/1201.2995
-137. Florindo, João Batista; de Castro, Mário; Bruno, Odemir Martinez: Enhancing Volumetric Bouligand-Minkowski Fractal Descriptors by using Functional Data Analysis, 2012, https://arxiv.org/abs/1201.3116
-138. Gonalez-Diaz, Rocio; Lamar, Javier; Umble, Ronald: Cups Products in Z2-Cohomology of 3D Polyhedral Complexes, 2012, https://arxiv.org/abs/1207.2346
-139. Barbu, Andrei; Bridge, Alexander; Coroian, Dan; Dickinson, Sven; Mussman, Sam; Narayanaswamy, Siddharth; Salvi, Dhaval; Schmidt, Lara; Shangguan, Jiangnan; Siskind, Jeffrey Mark; Waggoner, Jarrell; Wang, Song; Wei, Jinlian; Yin, Yifan; Zhang, Zhiqi: Large-Scale Automatic Labeling of Video Events with Verbs Based on Event-Participant Interaction, 2012, https://arxiv.org/abs/1204.3616
-140. Masci, Jonathan; Angulo, Jesús; Schmidhuber, Jürgen: A Learning Framework for Morphological Operators using Counter-Harmonic Mean, 2012, https://arxiv.org/abs/1212.2546
-141. Sermanet, Pierre; Kavukcuoglu, Koray; Chintala, Soumith; LeCun, Yann: Pedestrian Detection with Unsupervised Multi-Stage Feature Learning, 2012, https://arxiv.org/abs/1212.0142
-142. Dundar, Aysegul; Jin, Jonghoon; Culurciello, Eugenio: Visual Tracking with Similarity Matching Ratio, 2012, https://arxiv.org/abs/1209.2696
-143. Sermanet, Pierre; Chintala, Soumith; LeCun, Yann: Convolutional Neural Networks Applied to House Numbers Digit Classification, 2012, https://arxiv.org/abs/1204.3968
-144. Zhao, Zhizhen; Singer, Amit: Fourier-Bessel rotational invariant eigenimages, 2012, https://arxiv.org/abs/1211.1968
-145. Singh, Saurabh; Gupta, Abhinav; Efros, Alexei A.: Unsupervised Discovery of Mid-Level Discriminative Patches, 2012, https://arxiv.org/abs/1205.3137
-146. Sankaranarayanan, Aswin C; Turaga, Pavan K; Chellappa, Rama; Baraniuk, Richard G: Compressive Acquisition of Dynamic Scenes, 2012, https://arxiv.org/abs/1201.4895
-147. Sarhrouni, Elkebir; Hammouch, Ahmed; Aboutajdine, Driss: Dimensionality Reduction and Classification Feature Using Mutual Information Applied to Hyperspectral Images: A Wrapper Strategy Algorithm Based on Minimizing the Error Probability Using the Inequality of Fano, 2012, https://arxiv.org/abs/1211.0055
-148. Tofighi, Mohammad; Ayremlou, Ali; Marvasti, Farokh: Compensating Interpolation Distortion by Using New Optimized Modular Method, 2012, https://arxiv.org/abs/1204.3618
-149. Moschetti, Elsa E.; Palacio, M. Gabriela; Picco, Mery; Bustos, Oscar H.; Frery, Alejandro C.: On the Use of Lee's Protocol for Speckle-Reducing Techniques, 2012, https://arxiv.org/abs/1209.1788
-150. Chaudhury, Kunal N.; Singer, Amit: Non-Local Euclidean Medians, 2012, https://arxiv.org/abs/1207.3056
-151. Ristic, Branko; Sherrah, Jamie; García-Fernández, Ángel F.: Performance Evaluation of Random Set Based Pedestrian Tracking Algorithms, 2012, https://arxiv.org/abs/1211.0191
-152. Liu, Guangcan; Chang, Shiyu; Ma, Yi: Blind Image Deblurring by Spectral Properties of Convolution Operators, 2012, https://arxiv.org/abs/1209.2082
-153. McAuley, Julian; Leskovec, Jure: Image Labeling on a Network: Using Social-Network Metadata for Image Classification, 2012, https://arxiv.org/abs/1207.3809
-154. Ioannou, Yani; Taati, Babak; Harrap, Robin; Greenspan, Michael: Difference of Normals as a Multi-Scale Operator in Unorganized Point Clouds, 2012, https://arxiv.org/abs/1209.1759
 * t-SNE 8381 images cs.CV 2012
 1. Hashemi, Jordan; Spina, Thiago Vallin; Tepper, Mariano; Esler, Amy; Morellas, Vassilios; Papanikolopoulos, Nikolaos; Sapiro, Guillermo: Computer vision tools for the non-invasive assessment of autism-related behavioral markers, 2012, https://arxiv.org/abs/1210.7014
 2. Bagon, Shai; Galun, Meirav: A Multiscale Framework for Challenging Discrete Optimization, 2012, https://arxiv.org/abs/1210.7070
@@ -1033,3 +1025,243 @@ Image Credits for montage and t-SNE
 420. Gebreyohannes, Tina; Kim, Dong-Yoon: Adaptive Noise Reduction Scheme for Salt and Pepper, 2012, https://arxiv.org/abs/1201.2050
 421. Mayiami, Mahmoud Ramezani; Seyfe, Babak: Nonparametric Sparse Representation, 2012, https://arxiv.org/abs/1201.2843
 422. Qiyang, Zhao: NegCut: Automatic Image Segmentation based on MRF-MAP, 2012, https://arxiv.org/abs/1201.2905
+
+* t-SNE 2889 images stat.ML 2012
+1. Häusler, Chris; Susemihl, Alex: Temporal Autoencoding Restricted Boltzmann Machine, 2012, https://arxiv.org/abs/1210.8353
+2. Sun, Ju; Zhang, Yuqian; Wright, John: Efficient Point-to-Subspace Query in $\ell^1$: Theory and Applications in Computer Vision, 2012, https://arxiv.org/abs/1211.0757
+3. Montufar, Guido F.; Morton, Jason: Kernels and Submodels of Deep Belief Networks, 2012, https://arxiv.org/abs/1211.0932
+4. Khaleghi, Azadeh; Ryabko, Daniil: Multiple Change Point Estimation in Stationary Ergodic Time Series, 2012, https://arxiv.org/abs/1203.1515
+5. Lafferty, John; Liu, Han; Wasserman, Larry: Sparse Nonparametric Graphical Models, 2012, https://arxiv.org/abs/1201.0794
+6. Vats, Divyanshu: High-Dimensional Screening Using Multiple Grouping of Variables, 2012, https://arxiv.org/abs/1208.2043
+7. Hisano, Ryohei; Sornette, Didier; Mizuno, Takayuki; Ohnishi, Takaaki; Watanabe, Tsutomu: High quality topic extraction from business news explains abnormal financial market volatility, 2012, https://arxiv.org/abs/1210.6321
+8. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
+9. Dewar, Michael; Wiggins, Chris; Wood, Frank: Inference in Hidden Markov Models with Explicit State Duration Distributions, 2012, https://arxiv.org/abs/1203.0038
+10. Lee, Jason D.; Sun, Yuekai; Saunders, Michael A.: Proximal Newton-type methods for minimizing composite functions, 2012, https://arxiv.org/abs/1206.1623
+11. Morvant, Emilie; Koço, Sokol; Ralaivola, Liva: PAC-Bayesian Generalization Bound on Confusion Matrix for Multi-Class Classification, 2012, https://arxiv.org/abs/1202.6228
+12. Liu, Ji; Wright, Stephen J.: Robust Dequantized Compressive Sensing, 2012, https://arxiv.org/abs/1207.0577
+13. Zhang, Yuchen; Duchi, John C.; Wainwright, Martin: Comunication-Efficient Algorithms for Statistical Optimization, 2012, https://arxiv.org/abs/1209.4129
+14. Loh, Po-Ling; Wainwright, Martin J.: Structure estimation for discrete graphical models: Generalized covariance matrices and their inverses, 2012, https://arxiv.org/abs/1212.0478
+15. Kaufmann, Emilie; Korda, Nathaniel; Munos, Rémi: Thompson Sampling: An Asymptotically Optimal Finite Time Analysis, 2012, https://arxiv.org/abs/1205.4217
+16. Sharpnack, James; Krishnamurthy, Akshay; Singh, Aarti: Detecting Activations over Graphs using Spanning Tree Wavelet Bases, 2012, https://arxiv.org/abs/1206.0937
+17. Toole, Jameson L.; Ulm, Michael; Bauer, Dietmar; Gonzalez, Marta C.: Inferring land use from mobile phone activity, 2012, https://arxiv.org/abs/1207.1115
+18. Liu, Han; Han, Fang; Yuan, Ming; Lafferty, John; Wasserman, Larry: High Dimensional Semiparametric Gaussian Copula Graphical Models, 2012, https://arxiv.org/abs/1202.2169
+19. Anandkumar, A.; Hsu, D.; Huang, F.; Kakade, S. M.: Learning High-Dimensional Mixtures of Graphical Models, 2012, https://arxiv.org/abs/1203.0697
+20. Kekatos, Vassilis; Giannakis, Georgios B.: Distributed Robust Power System State Estimation, 2012, https://arxiv.org/abs/1204.0991
+21. Volant, Stevenn; Bérard, Caroline; Martin-Magniette, Marie-Laure; Robin, Stéphane: Hidden Markov Models with mixtures as emission distributions, 2012, https://arxiv.org/abs/1206.5102
+22. Khoshgnauz, Ehsan: Learning Markov Network Structure using Brownian Distance Covariance, 2012, https://arxiv.org/abs/1206.6361
+23. Simon, Noah; Tibshirani, Robert: A Permutation Approach to Testing Interactions in Many Dimensions, 2012, https://arxiv.org/abs/1206.6519
+24. Zhang, Youwei; Ghaoui, Laurent El: Large-Scale Sparse Principal Component Analysis with Application to Text Data, 2012, https://arxiv.org/abs/1210.7054
+25. Kövesárki, Péter: Polynomial expansion of the binary classification function, 2012, https://arxiv.org/abs/1203.5647
+26. Foster, Dean P.; Rodu, Jordan; Ungar, Lyle H.: Spectral dimensionality reduction for HMMs, 2012, https://arxiv.org/abs/1203.6130
+27. Schwartz, Yannick; Varoquaux, Gaël; Pallier, Christophe; Pinel, Philippe; Poline, Jean-Baptiste; Thirion, Bertrand: Improving accuracy and power with transfer learning using a meta-analytic database, 2012, https://arxiv.org/abs/1209.5375
+28. Jenatton, Rodolphe; Gribonval, Rémi; Bach, Francis: Local stability and robustness of sparse dictionary learning in the presence of noise, 2012, https://arxiv.org/abs/1210.0685
+29. Agarwal, Alekh; Negahban, Sahand; Wainwright, Martin J.: Stochastic optimization and sparse statistical recovery: An optimal algorithm for high dimensions, 2012, https://arxiv.org/abs/1207.4421
+30. Rezek, Iead; Beckmann, Christian: Models of Disease Spectra, 2012, https://arxiv.org/abs/1207.4674
+31. Eriksson, Brian: Hierarchical Clustering using Randomly Selected Similarities, 2012, https://arxiv.org/abs/1207.4748
+32. Shpitser, Ilya; Richardson, Thomas S.; Robins, James M.; Evans, Robin: Parameter and Structure Learning in Nested Markov Models, 2012, https://arxiv.org/abs/1207.5058
+33. Sussman, Daniel L.; Tang, Minh; Priebe, Carey E.: Universally Consistent Latent Position Estimation and Vertex Classification for Random Dot Product Graphs, 2012, https://arxiv.org/abs/1207.6745
+34. Gillis, Nicolas; Vavasis, Stephen A.: Fast and Robust Recursive Algorithms for Separable Nonnegative Matrix Factorization, 2012, https://arxiv.org/abs/1208.1237
+35. Kadri, Hachem; Rakotomamonjy, Alain; Bach, Francis; Preux, Philippe: Multiple Operator-valued Kernel Learning, 2012, https://arxiv.org/abs/1203.1596
+36. Psorakis, Ioannis; Rezek, Iead; Frankel, Zach; Roberts, Stephen J.: Bayesian one-mode projection for dynamic bipartite graphs, 2012, https://arxiv.org/abs/1212.2767
+37. Richtárik, Peter; Takáč, Martin; Ahipaşaoğlu, Selin Damla: Alternating Maximization: Unifying Framework for 8 Sparse PCA Formulations and Efficient Parallel Codes, 2012, https://arxiv.org/abs/1212.4137
+38. Scherrer, Chad; Tewari, Ambuj; Halappanavar, Mahantesh; Haglin, David: Feature Clustering for Accelerating Parallel Coordinate Descent, 2012, https://arxiv.org/abs/1212.4174
+39. Staines, Joe; Barber, David: Variational Optimization, 2012, https://arxiv.org/abs/1212.4507
+40. Chaudhuri, Kamalika; Sarwate, Anand D.; Sinha, Kaushik: Near-Optimal Algorithms for Differentially-Private Principal Components, 2012, https://arxiv.org/abs/1207.2812
+41. Song, Zhao; Dogandzic, Aleksandar: A Max-Product EM Algorithm for Reconstructing Markov-tree Sparse Signals from Compressive Samples, 2012, https://arxiv.org/abs/1209.1064
+42. Xu, Tu; Wang, Junhui: An efficient model-free estimation of multiclass conditional probability, 2012, https://arxiv.org/abs/1209.4951
+43. Grandvalet, Yves; Chiquet, Julien; Ambroise, Christophe: Sparsity by Worst-Case Penalties, 2012, https://arxiv.org/abs/1210.2077
+44. Nguyen, Jennifer; Zhu, Mu: Content-boosted Matrix Factorization Techniques for Recommender Systems, 2012, https://arxiv.org/abs/1210.5631
+45. Gillis, Nicolas: Robustness Analysis of Hottopixx, a Linear Programming Model for Factoring Nonnegative Matrices, 2012, https://arxiv.org/abs/1211.6687
+46. Sun, Wei; Wang, Junhui; Fang, Yixin: Consistent selection of tuning parameters via variable selection stability, 2012, https://arxiv.org/abs/1208.3380
+47. Janzamin, Majid; Anandkumar, Animashree: High-Dimensional Covariance Decomposition into Sparse Markov and Independence Models, 2012, https://arxiv.org/abs/1211.0919
+48. Priebe, Carey E.; Sussman, Daniel L.; Tang, Minh; Vogelstein, Joshua T.: Statistical inference on errorfully observed graphs, 2012, https://arxiv.org/abs/1211.3601
+49. Devaine, Marie; Gaillard, Pierre; Goude, Yannig; Stoltz, Gilles: Forecasting electricity consumption by aggregating specialized experts, 2012, https://arxiv.org/abs/1207.1965
+50. Entner, Doris; Hoyer, Patrik O.: Estimating a Causal Order among Groups of Variables in Linear Models, 2012, https://arxiv.org/abs/1207.1977
+51. Wipf, David; Wu, Yi: Dual-Space Analysis of the Sparse Linear Model, 2012, https://arxiv.org/abs/1207.2422
+52. Wipf, David: Non-Convex Rank Minimization via an Empirical Bayesian Approach, 2012, https://arxiv.org/abs/1207.2440
+53. Nascimento, Abraão D. C.; Cintra, Renato J.; Frery, Alejandro C.: Hypothesis Testing in Speckled Data with Stochastic Distances, 2012, https://arxiv.org/abs/1207.2959
+54. Guan, Naiyang; Tao, Dacheng; Luo, Zhigang; Shawe-Taylor, John: MahNMF: Manhattan Non-negative Matrix Factorization, 2012, https://arxiv.org/abs/1207.3438
+55. "Kar, Soummya; Moura, Jose' M. F.; Poor, H. Vincent;: $QD$-Learning: A Collaborative Distributed Strategy for Multi-Agent Reinforcement Learning Through Consensus + Innovations, 2012, https://arxiv.org/abs/1205.0047
+56. El-Arini, Khalid; Fox, Emily B.; Guestrin, Carlos: Concept Modeling with Superwords, 2012, https://arxiv.org/abs/1204.2523
+57. Conan-Guez, Brieuc; Rossi, Fabrice: Dissimilarity Clustering by Hierarchical Multi-Level Refinement, 2012, https://arxiv.org/abs/1204.6509
+58. Kanamori, Takafumi; Takeda, Akiko; Suzuki, Taiji: A Conjugate Property between Loss Functions and Uncertainty Sets in Classification Problems, 2012, https://arxiv.org/abs/1204.6583
+59. Mairal, Julien; Yu, Bin: Complexity Analysis of the Lasso Regularization Path, 2012, https://arxiv.org/abs/1205.0079
+60. Haury, Anne-Claire; Mordelet, Fantine; Vera-Licona, Paola; Vert, Jean-Philippe: TIGRESS: Trustful Inference of Gene REgulation using Stability Selection, 2012, https://arxiv.org/abs/1205.1181
+61. Obozinski, Guillaume; Bach, Francis: Convex Relaxation for Combinatorial Penalties, 2012, https://arxiv.org/abs/1205.1240
+62. Qian, Jing; Saligrama, Venkatesh; Zhao, Manqi: Graph-based Learning with Unbalanced Clusters, 2012, https://arxiv.org/abs/1205.1496
+63. Ahmed, Mohamed Osama; Bibalan, Pouyan T.; de Freitas, Nando; Fauvel, Simon: Decentralized, Adaptive, Look-Ahead Particle Filtering, 2012, https://arxiv.org/abs/1203.2394
+64. Hall, Rob; Rinaldo, Alessandro; Wasserman, Larry: Differential Privacy for Functions and Functional Data, 2012, https://arxiv.org/abs/1203.2570
+65. Hable, Robert: Asymptotic Confidence Sets for General Nonparametric Regression and Classification by Regularized Kernel Methods, 2012, https://arxiv.org/abs/1203.4354
+66. Michaeli, Tomer; Eldar, Yonina C.; Sapiro, Guillermo: Semi-Supervised Single- and Multi-Domain Regression with Multi-Domain Training, 2012, https://arxiv.org/abs/1203.4422
+67. Kadri, Hachem; Ghavamzadeh, Mohammad; Preux, Philippe: A Generalized Kernel Approach to Structured Output Learning, 2012, https://arxiv.org/abs/1205.2171
+68. Vanhatalo, Jarno; Riihimäki, Jaakko; Hartikainen, Jouni; Jylänki, Pasi; Tolvanen, Ville; Vehtari, Aki: Bayesian Modeling with Gaussian Processes using the GPstuff Toolbox, 2012, https://arxiv.org/abs/1206.5754
+69. Yamada, Makoto; Jitkrittum, Wittawat; Sigal, Leonid; Xing, Eric P.; Sugiyama, Masashi: High-Dimensional Feature Selection by Feature-Wise Kernelized Lasso, 2012, https://arxiv.org/abs/1202.0515
+70. Hara, Satoshi; Washio, Takashi: Learning a Common Substructure of Multiple Graphical Gaussian Models, 2012, https://arxiv.org/abs/1203.0117
+71. Yuan, Lin; Kirshner, Sergey; Givan, Robert: Estimating Densities with Non-Parametric Exponential Families, 2012, https://arxiv.org/abs/1206.5036
+72. Vincent, Martin; Hansen, Niels Richard: Sparse group lasso and high dimensional multinomial classification, 2012, https://arxiv.org/abs/1205.1245
+73. Schaul, Tom; Zhang, Sixin; LeCun, Yann: No More Pesky Learning Rates, 2012, https://arxiv.org/abs/1206.1106
+74. Zhou, Mingyuan; Carin, Lawrence: Augment-and-Conquer Negative Binomial Processes, 2012, https://arxiv.org/abs/1209.1119
+75. Xie, Yao; Huang, Jiaji; Willett, Rebecca: Changepoint detection for high-dimensional time series with missing data, 2012, https://arxiv.org/abs/1208.5062
+76. De Vito, Ernesto; Rosasco, Lorenzo; Toigo, Alessandro: Learning Sets with Separating Kernels, 2012, https://arxiv.org/abs/1204.3573
+77. Huszár, Ferenc; Duvenaud, David: Optimally-Weighted Herding is Bayesian Quadrature, 2012, https://arxiv.org/abs/1204.1664
+78. Zhou, Shuheng: Gemini: Graph estimation with matrix variate normal instances, 2012, https://arxiv.org/abs/1209.5075
+79. Aksu, Yaman: Fast SVM-based Feature Elimination Utilizing Data Radius, Hard-Margin, Soft-Margin, 2012, https://arxiv.org/abs/1210.4460
+80. Urry, Matthew; Sollich, Peter: Random walk kernels and learning curves for Gaussian process regression on random graphs, 2012, https://arxiv.org/abs/1211.1328
+81. Altmann, Yoann; Dobigeon, Nicolas; McLaughlin, Steve; Tourneret, Jean-Yves: Nonlinear spectral unmixing of hyperspectral images using Gaussian processes, 2012, https://arxiv.org/abs/1207.5451
+82. She, Yiyuan; Li, Huanghuang; Wang, Jiangping; Wu, Dapeng: Group Iterative Spectrum Thresholding for Super-Resolution Sparse Spectral Selection, 2012, https://arxiv.org/abs/1207.6684
+83. Lebichot, Bertrand; Kivimäki, Ilkka; Françoisse, Kevin; Saerens, Marco: Semi-Supervised Classification Through the Bag-of-Paths Group Betweenness, 2012, https://arxiv.org/abs/1210.4276
+84. Muandet, Krikamol: Hilbert Space Embedding for Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.4347
+85. Foygel, Rina; Srebro, Nathan; Salakhutdinov, Ruslan: Matrix reconstruction with the local max norm, 2012, https://arxiv.org/abs/1210.5196
+86. Carpentier, Alexandra; Munos, Rémi: Adaptive Stratified Sampling for Monte-Carlo integration of Differentiable functions, 2012, https://arxiv.org/abs/1210.5345
+87. Desjardins, Guillaume; Courville, Aaron; Bengio, Yoshua: Disentangling Factors of Variation via Generative Entangling, 2012, https://arxiv.org/abs/1210.5474
+88. Gong, Pinghua; Ye, Jieping; Zhang, Changshui: Multi-Stage Multi-Task Feature Learning, 2012, https://arxiv.org/abs/1210.5806
+89. Montavon, Grégoire; Müller, Klaus-Robert: Learning Feature Hierarchies with Centered Deep Boltzmann Machines, 2012, https://arxiv.org/abs/1203.3783
+90. Gillis, Nicolas: Sparse and Unique Nonnegative Matrix Factorization Through Data Preprocessing, 2012, https://arxiv.org/abs/1204.2436
+91. Burnetas, Apostolos; Kanavetas, Odysseas: Adaptive Policies for Sequential Sampling under Incomplete Information and a Cost Constraint, 2012, https://arxiv.org/abs/1201.4002
+92. Kondo, Yumi; Salibian-Barrera, Matias; Zamar, Ruben: A robust and sparse K-means clustering algorithm, 2012, https://arxiv.org/abs/1201.6082
+93. Zhang, Zhilin; Rao, Bhaskar D.: Extension of SBL Algorithms for the Recovery of Block Sparse Signals with Intra-Block Correlation, 2012, https://arxiv.org/abs/1201.0862
+94. Liu, Song; Yamada, Makoto; Collier, Nigel; Sugiyama, Masashi: Change-Point Detection in Time-Series Data by Relative Density-Ratio Estimation, 2012, https://arxiv.org/abs/1203.0453
+95. Yang, Kun: Least Absolute Gradient Selector: Statistical Regression via Pseudo-Hard Thresholding, 2012, https://arxiv.org/abs/1204.2353
+96. Zhang, Zhilin; Jung, Tzyy-Ping; Makeig, Scott; Rao, Bhaskar D.: Compressed Sensing for Energy-Efficient Wireless Telemonitoring of Noninvasive Fetal ECG via Block Sparse Bayesian Learning, 2012, https://arxiv.org/abs/1205.1287
+97. Akdemir, Deniz; Heslot, Nicolas: Soft Rule Ensembles for Statistical Learning, 2012, https://arxiv.org/abs/1205.4476
+98. Kalajdzievski, Damjan: Measurability Aspects of the Compactness Theorem for Sample Compression Schemes, 2012, https://arxiv.org/abs/1205.5819
+99. Petrik, Marek: Approximate Dynamic Programming By Minimizing Distributionally Robust Bounds, 2012, https://arxiv.org/abs/1205.1782
+100. Lee, Seunghak; Xing, Eric P.: Structured Input-Output Lasso, with Application to eQTL Mapping, and a Thresholding Algorithm for Fast Estimation, 2012, https://arxiv.org/abs/1205.1989
+101. Durut, Matthieu; Patra, Benoît; Rossi, Fabrice: A Discussion on Parallelization Schemes for Stochastic Vector Quantization Algorithms, 2012, https://arxiv.org/abs/1205.2282
+102. Ortega, Pedro A.; Braun, Daniel A.: Free Energy and the Generalized Optimality Equations for Sequential Decision Making, 2012, https://arxiv.org/abs/1205.3997
+103. Balasubramanian, Krishnakumar; Yu, Kai; Lebanon, Guy: Smooth Sparse Coding via Marginal Regression for Learning Sparse Representations, 2012, https://arxiv.org/abs/1210.1121
+104. Kumar, Abhishek; Sindhwani, Vikas; Kambadur, Prabhanjan: Fast Conical Hull Algorithms for Near-separable Non-negative Matrix Factorization, 2012, https://arxiv.org/abs/1210.1190
+105. Topa, Hande; Honkela, Antti: Gaussian process modelling of multiple short time series, 2012, https://arxiv.org/abs/1210.2503
+106. Neiswanger, Willie; Wood, Frank: Unsupervised Detection and Tracking of Arbitrary Objects with Dependent Dirichlet Process Mixtures, 2012, https://arxiv.org/abs/1210.3288
+107. Sabato, Sivan; Srebro, Nathan; Tishby, Naftali: Distribution-Dependent Sample Complexity of Large Margin Learning, 2012, https://arxiv.org/abs/1204.1276
+108. Mairal, Julien; Yu, Bin: Supervised Feature Selection in Graphs with Path Coding Penalties and Network Flows, 2012, https://arxiv.org/abs/1204.4539
+109. Balakrishnan, Sivaraman; Kolar, Mladen; Rinaldo, Alessandro; Singh, Aarti: Recovering Block-structured Activations Using Compressive Measurements, 2012, https://arxiv.org/abs/1209.3431
+110. Ndour, Cheikh; Diop, Aliou; Dossou-Gbété, Simplice: Classification approach based on association rules mining for unbalanced data, 2012, https://arxiv.org/abs/1202.5514
+111. Loh, Wei-Yin; Zheng, Wei: Regression trees for longitudinal and multiresponse data, 2012, https://arxiv.org/abs/1209.4690
+112. Anandkumar, Animashree; Hsu, Daniel; Javanmard, Adel; Kakade, Sham M.: Learning Topic Models and Latent Bayesian Networks Under Expansion Constraints, 2012, https://arxiv.org/abs/1209.5350
+113. Yu, Yi; Feng, Yang: APPLE: Approximate Path for Penalized Likelihood Estimators, 2012, https://arxiv.org/abs/1211.0889
+114. Gönen, Mehmet; Khan, Suleiman A.; Kaski, Samuel: Kernelized Bayesian Matrix Factorization, 2012, https://arxiv.org/abs/1211.1275
+115. Hsu, Daniel; Kakade, Sham M.; Liang, Percy: Identifiability and Unmixing of Latent Parse Trees, 2012, https://arxiv.org/abs/1206.3137
+116. Yamada, Makoto; Sigal, Leonid; Raptis, Michalis; Sugiyama, Masashi: Dependence Maximizing Temporal Alignment via Squared-Loss Mutual Information, 2012, https://arxiv.org/abs/1206.4116
+117. Fan, Yingying; Jin, Jiashun; Yao, Zhigang: Optimal classification in sparse Gaussian graphic model, 2012, https://arxiv.org/abs/1212.5332
+118. Goodfellow, Ian J.; Courville, Aaron; Bengio, Yoshua: Spike-and-Slab Sparse Coding for Unsupervised Feature Discovery, 2012, https://arxiv.org/abs/1201.3382
+119. Albanese, Davide; Filosi, Michele; Visintainer, Roberto; Riccadonna, Samantha; Jurman, Giuseppe; Furlanello, Cesare: Minerva and minepy: a C engine for the MINE suite and its R, Python and MATLAB wrappers, 2012, https://arxiv.org/abs/1208.4271
+120. Lee, Seunghak; Xing, Eric P.: Efficient Algorithm for Extremely Large Multi-task Regression with Massive Structured Sparsity, 2012, https://arxiv.org/abs/1208.3014
+121. Weiss, David; Sapp, Benjamin; Taskar, Ben: Structured Prediction Cascades, 2012, https://arxiv.org/abs/1208.3279
+122. Shimizu, Shohei: Learning LiNGAM based on data with more variables than observations, 2012, https://arxiv.org/abs/1208.4183
+123. Allen, Genevera I.: Regularized Tensor Factorizations and Higher-Order Principal Components Analysis, 2012, https://arxiv.org/abs/1202.2476
+124. Agarwal, Alekh; Bartlett, Peter L.; Duchi, John C.: Oracle inequalities for computationally adaptive model selection, 2012, https://arxiv.org/abs/1208.0129
+125. Hadjipantelis, Pantelis Z.; Jones, Nick S.; Moriarty, John; Springate, David; Knight, Christopher G.: Ancestral Inference from Functional Data: Statistical Methods and Numerical Examples, 2012, https://arxiv.org/abs/1208.0628
+126. Vovk, Vladimir: Cross-conformal predictors, 2012, https://arxiv.org/abs/1208.0806
+127. Rosasco, Lorenzo; Villa, Silvia; Mosci, Sofia; Santoro, Matteo; verri, Alessandro: Nonparametric sparsity and regularization, 2012, https://arxiv.org/abs/1208.2572
+128. Vasudevan, Shrihari; Melkumyan, Arman; Scheding, Steven: Information fusion in multi-task Gaussian processes, 2012, https://arxiv.org/abs/1210.1928
+129. Colombo, Diego; Maathuis, Marloes H.: Order-independent constraint-based causal structure learning, 2012, https://arxiv.org/abs/1211.3295
+130. Peters, Jonas; Bühlmann, Peter: Identifiability of Gaussian structural equation models with equal error variances, 2012, https://arxiv.org/abs/1205.2536
+131. Montufar, Guido F.; Rauh, Johannes: Scaling of Model Approximation Errors and Expected Entropy Distances, 2012, https://arxiv.org/abs/1207.3399
+132. Osting, Braxton; Brune, Christoph; Osher, Stanley J.: Optimal Data Collection For Informative Rankings Expose Well-Connected Graphs, 2012, https://arxiv.org/abs/1207.6430
+133. Broderick, Tamara; Kulis, Brian; Jordan, Michael I.: MAD-Bayes: MAP-based Asymptotic Derivations from Bayes, 2012, https://arxiv.org/abs/1212.2126
+134. Urry, Matthew J.; Sollich, Peter: Replica theory for learning curves for Gaussian processes on random graphs, 2012, https://arxiv.org/abs/1202.5918
+135. Chalupka, Krzysztof; Williams, Christopher K. I.; Murray, Iain: A Framework for Evaluating Approximation Methods for Gaussian Process Regression, 2012, https://arxiv.org/abs/1205.6326
+136. Ortega, Pedro A.; Grau-Moya, Jordi; Genewein, Tim; Balduzzi, David; Braun, Daniel A.: A Nonparametric Conjugate Prior Distribution for the Maximizing Argument of a Noisy Function, 2012, https://arxiv.org/abs/1206.1898
+137. Argyriou, Andreas; Foygel, Rina; Srebro, Nathan: Sparse Prediction with the $k$-Support Norm, 2012, https://arxiv.org/abs/1204.5043
+138. Shen, Wen-Jun; Wong, Hau-San; Xiao, Quan-Wu; Guo, Xin; Smale, Stephen: Towards a Mathematical Foundation of Immunology and Amino Acid Chains, 2012, https://arxiv.org/abs/1205.6031
+139. Chen, Yutian; Welling, Max: Bayesian Structure Learning for Markov Random Fields with a Spike and Slab Prior, 2012, https://arxiv.org/abs/1206.1088
+140. Jalali, Ali; Sanghavi, Sujay: A New Greedy Algorithm for Multiple Sparse Regression, 2012, https://arxiv.org/abs/1206.1402
+141. Zhang, Teng: Robust subspace recovery by Tyler's M-estimator, 2012, https://arxiv.org/abs/1206.1386
+142. Hoffman, Matt; Blei, David M.; Wang, Chong; Paisley, John: Stochastic Variational Inference, 2012, https://arxiv.org/abs/1206.7051
+143. Bian, Wei; Tao, Dacheng: Asymptotic Generalization Bound of Fisher's Linear Discriminant Analysis, 2012, https://arxiv.org/abs/1208.3030
+144. Samek, Wojciech; Meinecke, Frank C.; Müller, Klaus-Robert: Transferring Subspaces Between Subjects in Brain-Computer Interfacing, 2012, https://arxiv.org/abs/1209.4115
+145. Xu, Zhixiang; Kusner, Matt J.; Weinberger, Kilian Q.; Chen, Minmin: Cost-Sensitive Tree of Classifiers, 2012, https://arxiv.org/abs/1210.2771
+146. Than, Khoat; Ho, Tu Bao: Managing sparsity, time, and quality of inference in topic models, 2012, https://arxiv.org/abs/1210.7053
+147. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
+148. Azencott, Chloé-Agathe; Grimm, Dominik; Sugiyama, Mahito; Kawahara, Yoshinobu; Borgwardt, Karsten M.: Efficient network-guided multi-locus association mapping with graph cuts, 2012, https://arxiv.org/abs/1211.2315
+149. Anandkumar, Animashree; Valluvan, Ragupathyraj: Learning loopy graphical models with latent variables: Efficient methods and guarantees, 2012, https://arxiv.org/abs/1203.3887
+150. Lee, Nam H.; Yoder, Jordan; Tang, Minh; Priebe, Carey E: On latent position inference from doubly stochastic messaging activities, 2012, https://arxiv.org/abs/1205.5920
+151. Sheikh, Abdul-Saboor; Shelton, Jacquelyn A.; Lücke, Jörg: A Truncated EM Approach for Spike-and-Slab Sparse Coding, 2012, https://arxiv.org/abs/1211.3589
+152. Iwata, Tomoharu; Duvenaud, David; Ghahramani, Zoubin: Warped Mixtures for Nonparametric Cluster Shapes, 2012, https://arxiv.org/abs/1206.1846
+153. Riihimäki, Jaakko; Jylänki, Pasi; Vehtari, Aki: Nested Expectation Propagation for Gaussian Process Classification with a Multinomial Probit Likelihood, 2012, https://arxiv.org/abs/1207.3649
+154. Wang, Chong; Blei, David M.: Variational Inference in Nonconjugate Models, 2012, https://arxiv.org/abs/1209.4360
+155. Kolchinsky, Artemy; Lourenço, Anália; Li, Lang; Rocha, Luis M.: Evaluation of linear classifiers on articles containing pharmacokinetic evidence of drug-drug interactions, 2012, https://arxiv.org/abs/1210.0734
+156. Sindhwani, Vikas; Quang, Minh Ha; Lozano, Aurelie C.: Scalable Matrix-valued Kernel Learning for High-dimensional Nonlinear Multivariate Regression and Granger Causality, 2012, https://arxiv.org/abs/1210.4792
+157. Damianou, Andreas C.; Lawrence, Neil D.: Deep Gaussian Processes, 2012, https://arxiv.org/abs/1211.0358
+158. Daume, Hal; Phillips, Jeff M.; Saha, Avishek; Venkatasubramanian, Suresh: Protocols for Learning Classifiers on Distributed Data, 2012, https://arxiv.org/abs/1202.6078
+159. McWilliams, Brian; Montana, Giovanni: Subspace clustering of high-dimensional data: a predictive approach, 2012, https://arxiv.org/abs/1203.1065
+160. Wahlberg, Bo; Boyd, Stephen; Annergren, Mariette; Wang, Yang: An ADMM Algorithm for a Class of Total Variation Regularized Estimation Problems, 2012, https://arxiv.org/abs/1203.1828
+161. Kolar, Mladen; Sharpnack, James: Variance function estimation in high-dimensions, 2012, https://arxiv.org/abs/1205.4770
+162. Wang, Chamont; Gevertz, Jana; Chen, Chaur-Chin; Auslender, Leonardo: Finding Important Genes from High-Dimensional Data: An Appraisal of Statistical Tests and Machine-Learning Approaches, 2012, https://arxiv.org/abs/1205.6523
+163. Yamazaki, Keisuke: Asymptotic Accuracy of Distribution-Based Estimation for Latent Variables, 2012, https://arxiv.org/abs/1204.2069
+164. Wu, Rui; Srikant, R.; Ni, Jian: Learning Loosely Connected Markov Random Fields, 2012, https://arxiv.org/abs/1204.5540
+165. Abdallah, Samer A.; Plumbley, Mark D.: Predictive Information Rate in Discrete-time Gaussian Processes, 2012, https://arxiv.org/abs/1206.0304
+166. Snoek, Jasper; Larochelle, Hugo; Adams, Ryan P.: Practical Bayesian Optimization of Machine Learning Algorithms, 2012, https://arxiv.org/abs/1206.2944
+167. Williamson, Sinead A.; Dubey, Avinava; Xing, Eric P.: Exact and Efficient Parallel Inference for Nonparametric Mixture Models, 2012, https://arxiv.org/abs/1211.7120
+168. Király, Franz J.; Ziehe, Andreas: Approximate Rank-Detecting Factorization of Low-Rank Tensors, 2012, https://arxiv.org/abs/1211.7369
+169. Garcia-Cardona, Cristina; Flenner, Arjuna; Percus, Allon G.: Multiclass Diffuse Interface Models for Semi-Supervised Learning on Graphs, 2012, https://arxiv.org/abs/1212.0945
+170. Dhanjal, Charanpal; Baskiotis, Nicolas; Clémençon, Stéphan; Usunier, Nicolas: An Empirical Comparison of V-fold Penalisation and Cross Validation for Model Selection in Distribution-Free Regression, 2012, https://arxiv.org/abs/1212.1780
+171. Germain, Pascal; Habrard, Amaury; Laviolette, François; Morvant, Emilie: PAC-Bayesian Learning and Domain Adaptation, 2012, https://arxiv.org/abs/1212.2340
+172. Dubey, Avinava; Hefny, Ahmed; Williamson, Sinead; Xing, Eric P.: A non-parametric mixture model for topic modeling over time, 2012, https://arxiv.org/abs/1208.4411
+173. Mroueh, Youssef; Poggio, Tomaso; Rosasco, Lorenzo; Slotine, Jean-Jacques: Multiclass Learning with Simplex Coding, 2012, https://arxiv.org/abs/1209.1360
+174. Shalev-Shwartz, Shai; Zhang, Tong: Stochastic Dual Coordinate Ascent Methods for Regularized Loss Minimization, 2012, https://arxiv.org/abs/1209.1873
+175. Kivimäki, Ilkka; Shimbo, Masashi; Saerens, Marco: Developments in the theory of randomized shortest paths with a comparison of graph node distances, 2012, https://arxiv.org/abs/1212.1666
+176. Mahmutoglu, A. Gokcen; Erdogan, Alper T.; Demir, Alper: Random Input Sampling for Complex Models Using Markov Chain Monte Carlo, 2012, https://arxiv.org/abs/1211.4706
+177. Foti, Nicholas J.; Futoma, Joseph D.; Rockmore, Daniel N.; Williamson, Sinead: A unifying representation for a class of dependent random measures, 2012, https://arxiv.org/abs/1211.4753
+178. Qian, Junyang; Jia, Jinzhu: On pattern recovery of the fused Lasso, 2012, https://arxiv.org/abs/1211.5194
+179. Singh, Sumeetpal S.; Chopin, Nicolas; Whiteley, Nick: Bayesian learning of noisy Markov decision processes, 2012, https://arxiv.org/abs/1211.5901
+180. Rojas, Cristian R.; Katselis, Dimitrios; Hjalmarsson, Håkan: A Note on the SPICE Method, 2012, https://arxiv.org/abs/1209.4887
+181. Georgiev, Stoyan; Mukherjee, Sayan: Randomized Dimension Reduction on Massive Data, 2012, https://arxiv.org/abs/1211.1642
+182. Lu, Yichao; Foster, Dean P.: Optimal Weighting of Multi-View Data with Low Dimensional Hidden States, 2012, https://arxiv.org/abs/1209.5477
+183. Gerrish, Sean M.; Blei, David M.: The Issue-Adjusted Ideal Point Model, 2012, https://arxiv.org/abs/1209.6004
+184. Cheng, Jie; Levina, Elizaveta; Wang, Pei; Zhu, Ji: Sparse Ising Models with Covariates, 2012, https://arxiv.org/abs/1209.6342
+185. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
+186. Olteanu, Madalina; Villa-Vialaneix, Nathalie; Cottrell, Marie: On-line relational SOM for dissimilarity data, 2012, https://arxiv.org/abs/1212.6316
+187. Pelossof, Raphael; Ying, Zhiliang: Focus of Attention for Linear Predictors, 2012, https://arxiv.org/abs/1212.6659
+188. Luengo, David; Via, Javier; Monzon, Sandra; Trigano, Tom; Artes-Rodriguez, Antonio: Blind Analysis of EGM Signals: Sparsity-Aware Formulation, 2012, https://arxiv.org/abs/1212.6936
+189. Jitkrittum, Wittawat; Hachiya, Hirotaka; Sugiyama, Masashi: Feature Selection via L1-Penalized Squared-Loss Mutual Information, 2012, https://arxiv.org/abs/1210.1960
+190. Gurumoorthy, Karthik S.; Rangarajan, Anand; Corring, John: Gradient density estimation in arbitrary finite dimensions using the method of stationary phase, 2012, https://arxiv.org/abs/1211.3038
+191. Rohe, Karl; Qin, Tai; Yu, Bin: Co-clustering for directed graphs: the Stochastic co-Blockmodel and spectral algorithm Di-Sim, 2012, https://arxiv.org/abs/1204.2296
+192. Caron, François; Teh, Yee Whye; Murphy, Thomas Brendan: Bayesian nonparametric Plackett-Luce models for the analysis of preferences for college degree programmes, 2012, https://arxiv.org/abs/1211.5037
+193. Chen, Yudong; Sanghavi, Sujay; Xu, Huan: Improved Graph Clustering, 2012, https://arxiv.org/abs/1210.3335
+194. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
+195. Allen, Genevera I.; Peterson, Christine; Vannucci, Marina; Maletic-Savatic, Mirjana: Regularized Partial Least Squares with an Application to NMR Spectroscopy, 2012, https://arxiv.org/abs/1204.3942
+196. Kawakita, Masanori; Kanamori, Takafumi: Semi-Supervised learning with Density-Ratio Estimation, 2012, https://arxiv.org/abs/1204.3965
+197. Zhang, Zhihua; Wang, Shusen; Liu, Dehua; Jordan, Michael I.: EP-GIG Priors and Applications in Bayesian Sparse Learning, 2012, https://arxiv.org/abs/1204.4243
+198. Henao, Ricardo; Lucas, Joseph E.: Efficient hierarchical clustering for continuous data, 2012, https://arxiv.org/abs/1204.4708
+199. Schwartz, Yannick; Varoquaux, Gaël; Thirion, Bertrand: On spatial selectivity and prediction across conditions with fMRI, 2012, https://arxiv.org/abs/1209.1450
+200. Lorbert, Alexander; Blei, David M.; Schapire, Robert E.; Ramadge, Peter J.: A Bayesian Boosting Model, 2012, https://arxiv.org/abs/1209.1996
+201. Veeramachaneni, Sriharsha: Time-series Scenario Forecasting, 2012, https://arxiv.org/abs/1211.3010
+202. Abbey, Ralph; Diepenbrock, Jeremy; Langville, Amy; Meyer, Carl; Race, Shaina; Zhou, Dexin: Data Clustering via Principal Direction Gap Partitioning, 2012, https://arxiv.org/abs/1211.4142
+203. Caron, Francois; Teh, Yee Whye: Bayesian nonparametric models for ranked data, 2012, https://arxiv.org/abs/1211.4321
+204. Yamazaki, Keisuke: Asymptotic Accuracy of Bayes Estimation for Latent Variables with Redundancy, 2012, https://arxiv.org/abs/1205.3234
+205. He, Yangbo; Jia, Jinzhu; Yu, Bin: Reversible MCMC on Markov equivalence classes of sparse directed acyclic graphs, 2012, https://arxiv.org/abs/1209.5860
+206. Bahmani, Sohail; Raj, Bhiksha; Boufounos, Petros: Greedy Sparsity-Constrained Optimization, 2012, https://arxiv.org/abs/1203.5483
+207. Lee, Jason D.; Hastie, Trevor J.: Learning Mixed Graphical Models, 2012, https://arxiv.org/abs/1205.5012
+208. Cuturi, Marco: Positivity and Transportation, 2012, https://arxiv.org/abs/1209.2655
+209. Rao, Nikhil; Recht, Benjamin; Nowak, Robert: Signal Recovery in Unions of Subspaces with Applications to Compressive Imaging, 2012, https://arxiv.org/abs/1209.3079
+210. Richard, Emile; Gaiffas, Stephane; Vayatis, Nicolas: Link Prediction in Graphs with Autoregressive Features, 2012, https://arxiv.org/abs/1209.3230
+211. Sun, Ming; Priebe, Carey E.; Tang, Minh: Generalized Canonical Correlation Analysis for Disparate Data Fusion, 2012, https://arxiv.org/abs/1209.3761
+212. Gilboa, Elad; Saatçi, Yunus; Cunningham, John P.: Scaling Multidimensional Inference for Structured Gaussian Processes, 2012, https://arxiv.org/abs/1209.4120
+213. Yilmaz, Y. Kenan; Cemgil, A. Taylan: Alpha/Beta Divergences and Tweedie Models, 2012, https://arxiv.org/abs/1209.4280
+214. McWilliams, Brian; Montana, Giovanni: Multi-view predictive partitioning in high dimensions, 2012, https://arxiv.org/abs/1202.0825
+215. Netrapalli, Praneeth; Banerjee, Siddhartha; Sanghavi, Sujay; Shakkottai, Sanjay: Greedy Learning of Markov Network Structure, 2012, https://arxiv.org/abs/1202.1787
+216. Rossi, Ryan A.; McDowell, Luke K.; Aha, David W.; Neville, Jennifer: Transforming Graph Representations for Statistical Relational Learning, 2012, https://arxiv.org/abs/1204.0033
+217. Pedersen, Niels Lovmand; Manchón, Carles Navarro; Shutin, Dmitriy; Fleury, Bernard Henri: Application of Bayesian Hierarchical Prior Modeling to Sparse Channel Estimation, 2012, https://arxiv.org/abs/1204.0656
+218. Sra, Suvrit: Fast projections onto mixed-norm balls with applications, 2012, https://arxiv.org/abs/1204.1437
+219. Tashiro, Tatsuya; Shimizu, Shohei; Hyvarinen, Aapo; Washio, Takashi: Estimation of causal orders in a linear non-Gaussian acyclic model: a method robust against latent confounders, 2012, https://arxiv.org/abs/1204.1795
+220. Zhang, Zhihua; Dai, Guang; Jordan, Michael I.: Coherence Functions with Applications in Large-Margin Classification Methods, 2012, https://arxiv.org/abs/1204.2049
+221. Mahrsi, Mohamed Khalil El; Rossi, Fabrice: Modularity-Based Clustering for Network-Constrained Trajectories, 2012, https://arxiv.org/abs/1205.2172
+222. Sigg, Christian D.; Dikk, Tomas; Buhmann, Joachim M.: Learning Dictionaries with Bounded Self-Coherence, 2012, https://arxiv.org/abs/1205.6210
+223. Deisenroth, Marc Peter; Mohamed, Shakir: Expectation Propagation in Gaussian Process Dynamical Systems: Extended Version, 2012, https://arxiv.org/abs/1207.2940
+224. Peters, Jonas; Janzing, Dominik; Schölkopf, Bernhard: Causal Inference on Time Series using Structural Equation Models, 2012, https://arxiv.org/abs/1207.5136
+225. Fishkind, Donniell E.; Adali, Sancar; Patsolic, Heather G.; Meng, Lingyao; Singh, Digvijay; Lyzinski, Vince; Priebe, Carey E.: Seeded Graph Matching, 2012, https://arxiv.org/abs/1209.0367
+226. Lange, Tatjana; Mosler, Karl; Mozharovskyi, Pavlo: Fast nonparametric classification based on data depth, 2012, https://arxiv.org/abs/1207.4992
+227. Montufar, Guido F.; Morton, Jason: When Does a Mixture of Products Contain a Product of Mixtures?, 2012, https://arxiv.org/abs/1206.0387
+228. Goldberg, Yair; Kosorok, Michael R.: Support Vector Regression for Right Censored Data, 2012, https://arxiv.org/abs/1202.5130
+229. Muandet, Krikamol; Fukumizu, Kenji; Dinuzzo, Francesco; Schölkopf, Bernhard: Learning from Distributions via Support Measure Machines, 2012, https://arxiv.org/abs/1202.6504
+230. Kulesza, Alex; Taskar, Ben: Determinantal point processes for machine learning, 2012, https://arxiv.org/abs/1207.6083
+231. Xu, Zhixiang; Weinberger, Kilian Q.; Chapelle, Olivier: Distance Metric Learning for Kernel Machines, 2012, https://arxiv.org/abs/1208.3422
+232. Ross, Gordon J.; Adams, Niall M.; Tasoulis, Dimitris K.; Hand, David J.: Exponentially Weighted Moving Average Charts for Detecting Concept Drift, 2012, https://arxiv.org/abs/1212.6018
+233. Wang, Chunyi; Neal, Radford M.: Gaussian Process Regression with Heteroscedastic or Non-Gaussian Residuals, 2012, https://arxiv.org/abs/1212.6246
+234. Xiong, Caiming; Johnson, David; Xu, Ran; Corso, Jason J.: Random Forests for Metric Learning with Implicit Pairwise Position Dependence, 2012, https://arxiv.org/abs/1201.0610
+235. Rossi, Fabrice; Lechevallier, Yves: Constrained variable clustering and the best basis problem in functional data analysis, 2012, https://arxiv.org/abs/1201.0959
+236. Da Silva, Alzennyr; Lechevallier, Yves; Rossi, Fabrice; De Carvahlo, Francisco De A. T.: Clustering Dynamic Web Usage Data, 2012, https://arxiv.org/abs/1201.0963
+237. Wang, Chong; Blei, David M.: A Split-Merge MCMC Algorithm for the Hierarchical Dirichlet Process, 2012, https://arxiv.org/abs/1201.1657
+
