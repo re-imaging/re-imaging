@@ -9,20 +9,26 @@ https://github.com/miku/metha
 *** SQLite (command line)
 Ubuntu ships with SQLite. Simply call
 
-$ sqlite3 [path_to/database.sqlite3]
+#+BEGIN_SRC bash
+sqlite3 [path_to/database.sqlite3]
+#+END_SRC
 
 *** Python SQLite
 This is included in Python:
 
+#+BEGIN_SRC python
 import sqlite
+#+END_SRC
 
 *** DBBrowser for SQLite (optional)
 This software is handy for having a graphical way to examine the SQLite database and can also be used to run commands
 https://sqlitebrowser.org/dl/
 
+#+BEGIN_SRC bash
 sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
 sudo apt-get update
 sudo apt-get install sqlitebrowser
+#+END_SRC
 
 ** Downloading Metha OAI XML files
 
@@ -44,6 +50,7 @@ for f in *.gz; do gunzip "$f"; done
 #+END_SRC
 
 ** Example metadata
+#+BEGIN_SRC xml
 <ListRecords>
     <record>
         <header status="">
@@ -71,19 +78,18 @@ for f in *.gz; do gunzip "$f"; done
         </metadata>
     <about/>
 </record>
+#+END_SRC
 
-Figure XX. Example XML file in the “arXiv” format showing organisation of metadata according to specific tags such as “categories”, “title”, “author”, “abstract” etc. Example shown here is Callan, David: A determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata, 2007, https://arxiv.org/abs/0704.0004
+Example XML file in the “arXiv” format showing organisation of metadata according to specific tags such as “categories”, “title”, “author”, “abstract” etc. Example shown here is Callan, David: A determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata, 2007, https://arxiv.org/abs/0704.0004
 
 ** Create SQLite database
-Python script to create SQLite database
-
-Usage:
+Python script to create SQLite database:
 
 #+BEGIN_SRC bash
 python create-db/sqlite_create_db.py
 #+END_SRC
 
-Details or table creation in the script:
+Details of table creation in the script:
 
 #+BEGIN_SRC Python
 # create metadata table
@@ -169,6 +175,8 @@ GROUP BY images.identifier
 ORDER BY count(images.identifier)
 #+END_SRC
 
+For more examples see sqlite-scripts/db-queries.ipynb
+
 ** Cleaning
 The database required some cleaning after inserting rows for both metadata and images. This may be due to article revisions or the metadata harvester missing a few entries. A small number of images did not have corresponding article metadata. To fix this we used the list of articles without metadata and queried the arXiv OAI server. We then inserted these rows into the metadata table.
 
@@ -202,6 +210,50 @@ elif n.endswith(('.svg')):
 #+END_SRC
 
 Note that a fairly high proportion of images do not have this metadata.
+*** Top results for "creator" metadata
+|------------------+---------+-------|
+| "creator"        |   total |     % |
+|------------------+---------+-------|
+| none             | 1997457 | 19.87 |
+| MATLAB           |  876177 |  8.72 |
+| Mathematica      |  492318 |  4.90 |
+| matplotlib       |  491001 |  4.88 |
+| IDL              |  404852 |  4.03 |
+| gnuplot          |  396484 |  3.94 |
+| cairo            |  388108 |  3.86 |
+| fig2dev          |  349381 |  3.48 |
+| SM               |  268902 |  2.67 |
+| ROOT             |  265278 |  2.64 |
+| Illustrator      |  263934 |  2.63 |
+| Grace            |  237719 |  2.36 |
+| dvips            |  232165 |  2.31 |
+| TeX              |  209613 |  2.09 |
+| GIMP             |  207108 |  2.06 |
+| Ghostscript      |  199064 |  1.98 |
+| OriginLab        |  168350 |  1.67 |
+| HIGZ             |  144720 |  1.44 |
+| R                |  143164 |  1.42 |
+| PGPLOT           |  128704 |  1.28 |
+| ImageMagick      |  123697 |  1.23 |
+| CorelDRAW        |   91453 |  0.91 |
+| jpeg2ps          |   87546 |  0.87 |
+| PScript5         |   77136 |  0.77 |
+| Photoshop        |   76648 |  0.76 |
+| Acrobat          |   72191 |  0.72 |
+| PowerPoint       |   50187 |  0.50 |
+| XV               |   47320 |  0.47 |
+| Ipe              |   43498 |  0.43 |
+| Keynote          |   37964 |  0.38 |
+| xmgr             |   37831 |  0.38 |
+| PSCRIPT          |   36755 |  0.37 |
+| inkscape         |   32036 |  0.32 |
+| OmniGraffle      |   30788 |  0.31 |
+| LaTeX            |   30473 |  0.30 |
+| Preview          |   24770 |  0.25 |
+| GraphicConverter |   24124 |  0.24 |
+| FreeHEP          |   23621 |  0.23 |
+| GTVIRT           |   20680 |  0.21 |
+|------------------+---------+-------|
 
 ** Adding caption metadata
 The /captions/ table was created by iterating through all .tex files and parsing the tex source for figures, captions, and filenames. Our method uses a number of different regular expressions to find particular key parts of the source. This code is specific to this database and unlikely to generalise.
@@ -216,6 +268,5 @@ Use this command to read all entries from the SQLite database, build a list of f
 #+BEGIN_SRC bash
 cd sqlite-scripts
 python get_all_image_paths.py
-
 #+END_SRC
 

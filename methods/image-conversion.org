@@ -4,9 +4,9 @@ This document contains some tips and tricks for converting large amounts of imag
 
 ** Background
 
-Due to the variable formats of images within arXiv (see Figure XX), we needed to perform an image processing step prior to using them within any machine learning models or algorithms. We converted all images into a JPEG format while retaining a minimum level of image size and quality as an interim step. These images can then be used as input for ML models, visualised (as in our examples below), or processed further via techniques such as cropping, scaling, or rotation.
+Due to the variable formats of images within arXiv (see Figure XX), we needed to perform an image processing step prior to using them within any machine learning models or algorithms. We converted all images into a JPEG format while retaining a minimum level of image size and quality as an interim step. These images can then be used as input for ML models, visualised, or processed further via techniques such as cropping, scaling, or rotation.
 
-First, lists of image file paths were generated through SQLite queries, including subject specific lists and a master list that contains file paths of all images ordered by ID as they appear in the SQLite database. These lists were then fed to the Imagemagick convert command to convert the image to a JPEG format. We used ImageMagick version 6.9.7-4, called from Python or bash scripts. Due to the large number of images and the processing time required to convert these into other formats, this was done on an ad-hoc basis for the required SQL queries.
+First, lists of image file paths were generated through SQLite queries, including subject specific lists and a master list that contains file paths of all images ordered by ID as they appear in the SQLite database. These lists were then fed to the Imagemagick convert command to convert the image to a JPEG format. We used ImageMagick version 6.9.7-4, called from Python or bash scripts. Due to the large number of images and the processing time required to convert these into other formats, this was sometimes done on an ad-hoc basis for the required SQL queries.
 
 We converted images to a JPEG file with a smallest dimension of 512px (without increasing image pixel dimensions). This step also involved removing single-coloured borders, flattening the image and adjusting for colorspaces by converting CMYK to sRGB. This maintains a minimum amount of information in the image, while producing a small file size and a single image format. For this particular dataset, many images are smaller than 512 pixels in at least one dimension. This conversion command avoids upscaling images and mitigates loss of information. 512x512 is also a common size for many ML tasks, and many ML pre-processor tools will be able to handle these images efficiently. From here, the images can be processed, for example cropping or resizing as required. The following command was used to convert a given image into a jpeg file, shrinking the image if it has a dimension larger than 512 pixels:
 
@@ -35,7 +35,7 @@ cd ~/re-imaging/visualisation
 conda activate py37
 
 # get a list of filepath difference
-python util/filepaths_difference.py paths/filepaths_all_images.txt /mnt/hd2/images/all/ -v -m
+python util/filepaths_difference.py paths/filepaths_all_images.txt /path/to/all/images/ -v -m
 
 screen -r convert
 # or -S if not already open
@@ -45,17 +45,20 @@ conda activate py37
 # run reverse over images
 # make sure to update missing_log filename
 # make sure to include trailing forward slash for folder location
-python parallel_convert_futures.py missing_log_20190924_162556.txt /mnt/hd2/images/new/ --verbose -r 
+python parallel_convert_futures.py missing_log_20190924_162556.txt /path/to/all/images/ --verbose -r 
 
 # run over all images again with less processes
 # make sure to update missing_log filename
-python parallel_convert_futures.py missing_log_20190924_162556.txt /mnt/hd2/images/new/ --verbose 
+python parallel_convert_futures.py missing_log_20190924_162556.txt /path/to/all/images/ --verbose 
 
 #+END_SRC
 ** Crontab for killing long running processes
+
+#+BEGIN_SRC cron
 # run find to remove ImageMagick convert temporary files every 5 mins:
 */5 * * * * /usr/bin/find /tmp -name "*magick*" -mmin +10 -and -not -exec fuser -s {} ';' -and -exec rm -v {} ';' 2>&1 | tee /tmp/findcron.txt
 
 # find any long running (stalled) ghostscript processes ("gs") and kill them
 # set to use SIGTERM on anything over 5 minutes
 */5 * * * * kill -15 $(ps -eo comm,pid,etimes | awk '/^gs / {if ($3 > 300) { print $2}}')
+#+END_SRC
