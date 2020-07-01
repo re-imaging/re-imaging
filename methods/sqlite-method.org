@@ -9,14 +9,15 @@ https://github.com/miku/metha
 *** SQLite (command line)
 Ubuntu ships with SQLite. Simply call
 
-$ sqlite3
+$ sqlite3 [path_to/database.sqlite3]
 
 *** Python SQLite
-This is included in Python, just import into scripts:
+This is included in Python:
 
 import sqlite
 
 *** DBBrowser for SQLite (optional)
+This software is handy for having a graphical way to examine the SQLite database and can also be used to run commands
 https://sqlitebrowser.org/dl/
 
 sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
@@ -102,7 +103,7 @@ c.execute('''
 
 We used a set of Python scripts to then iterate over the XML files and insert rows into the database for each. For this step we used the Python ElementTree XML API to navigate the required XML files and extract the desired metadata. This required custom code that was tailored to the specific XML format as it is stored on arxiv.org and downloaded by metha (which groups XML documents together to reduce the number of files).
 
-In order to index the images with their associated article metadata, we created a SQLite database with two tables: metadata with rows for each article; and images with rows for each image file. SQLite was chosen as a database format because of its widespread use and the simplicity of a lightweight, single-file database in contrast to client-server database formats. SQLite performs well within the expected number of entries (tables/columns/rows). SQLite is also a reasonably common format and has command line, R, and Python interfaces, and can also be read by other common data science tools such as the Python Data Analysis Library, a.k.a. pandas.
+In order to index the images with their associated article metadata, we created a SQLite database with three tables: /metadata/ with rows for each article; /images/ with rows for each image file; and /captions/ for figure captions, labels, and associated image files. SQLite was chosen as a database format because of its widespread use and the simplicity of a lightweight, single-file database in contrast to client-server database formats. SQLite performs well within the expected number of entries (tables/columns/rows). SQLite is also a reasonably common format and has command line, R, and Python interfaces, and can also be read by other common data science tools such as the Python Data Analysis Library, a.k.a. pandas.
 
 For our purposes, we used a primary key of a unique number, and inserted the identifier, date created, categories, authors, title, abstract, and licence. 
 
@@ -201,6 +202,12 @@ elif n.endswith(('.svg')):
 #+END_SRC
 
 Note that a fairly high proportion of images do not have this metadata.
+
+** Adding caption metadata
+The /captions/ table was created by iterating through all .tex files and parsing the tex source for figures, captions, and filenames. Our method uses a number of different regular expressions to find particular key parts of the source. This code is specific to this database and unlikely to generalise.
+We grabbed the caption for each figure (if there was one), writing the following fields to the database table: unique caption identifier, arXiv identifier, tex file path, figure number, caption text, figure label, filenames of any images used to create that figure (can be more than 1), and image_ids of these images from the /images/ table.
+
+For details see create-db/get-captions.ipynb
 
 ** Building list of all filepaths from SQLite database
 

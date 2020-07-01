@@ -1,7 +1,19 @@
 
 * Computer Setup Instructions
-** Ubuntu Linux 18.04
-** Software
-** Anaconda
-Recommend using Anaconda for installing and managing Python packages
-** 
+** Computer Specs
+*** OS
+Linux: Ubuntu 18.04
+*** Hardware
+Intel i7 CPU
+500GB NVME solid state drive
+4TB 72000 rpm hard disk
+32GB DDR3 RAM
+NVidia RTX 2080 graphics card 8GB VRAM
+*** Software
+Anaconda (recommended for installing and managing Python packages)
+Python (2 and 3)
+ImageMagick (for convert and identify)
+Jupyter Notebook
+SQLite interfaces for Python and Bash
+tensorflow-gpu
+
