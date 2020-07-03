@@ -2,22 +2,25 @@
 
 Process for downloading, extracting, unarchiving, and organising data for usage in machine learning applications or data mining.
 
-** Contents :TOC:
+** Contents :TOC:QUOTE:
+#+BEGIN_QUOTE
 - [[#downloading-arxiv-bulk-source-data][Downloading arXiv Bulk Source Data]]
   - [[#background][Background]]
-  - [[#step-1a-download-all-source-files-from-the-arxiv-amazon-web-services-aws-data-storage-using-requestor-pays][Step 1a: Download all source files from the arXiv Amazon Web Services (AWS) data storage using requestor pays.]]
-  - [[#step-1b-download-oai-metadata][Step 1b: Download OAI metadata]]
-  - [[#step-2-unarchive-and-decompress][Step 2: Unarchive and decompress]]
-  - [[#optional-extract-images-and-text-from-pdf-documents-nb-do-this-during-step-2][Optional: Extract images and text from PDF documents (NB: do this during Step 2)]]
-  - [[#image-totals][Image totals]]
-  - [[#step-4-organise-dataset][Step 4: Organise dataset]]
+- [[#step-1a-download-all-source-files][Step 1a: Download all source files]]
+- [[#step-1b-download-oai-metadata][Step 1b: Download OAI metadata]]
+- [[#step-2-unarchive-and-decompress][Step 2: Unarchive and decompress]]
+- [[#optional-extract-images-and-text-from-pdf-documents][Optional: Extract images and text from PDF documents]]
+- [[#step-3-organise-dataset][Step 3: Organise dataset]]
+#+END_QUOTE
 
 ** Background
 arXiv bulk source data is made readily available, however, it requires a number of steps to download, unarchive, and decompress these files. Additionally, the source data is separate from the article metadata, requiring additional steps to link image data to article metadata such as author, category, or publication date. Here we outline the steps taken to access the bulk source data and extract the images, as well as create a SQLite database (see sqlite-method.org) that enables indexing each image together with article metadata. This enables searching across both the article metadata and image data to build custom queries, collect statistics and access subsets of this dataset.
 
 arXiv bulk data as either PDFs or source data can be downloaded via Amazon S3 buckets. The source data for each article generally comprises the TeX or LaTeX code used to generate the article, image or vector graphics files, any other associated files, and ancillary materials. A number of articles are also stored within the bulk data as single PDF files only. We downloaded the full allotment of source files as of December 31, 2018 – a total download of approximately 1 terabyte in the form of 2150 compressed tar archive files. These compressed files were decompressed, unarchived, renamed, and organised into a folder hierarchy using bash commands on an Ubuntu Linux 18.04 desktop computer. This process extracts all tar files into separate folders; moves all PDF files to appropriately named folders; optionally retrieves images and text from PDF files; extracts any remaining gzip compressed files; and then moves remaining TeX files to individual folders.
 
-** Step 1a: Download all source files from the arXiv Amazon Web Services (AWS) data storage using requestor pays.
+* Step 1a: Download all source files 
+Download all source files from the arXiv Amazon Web Services (AWS) data storage using requestor pays.
+
 - Information provided by arXiv: https://arxiv.org/help/bulk_data_s3
 - At the time of downloading in January-February 2019, this equated to approximately 1 terabyte of data in the form of 2150 compressed tar archive files
 - Downloading from UNSW in Australia, this download via AWS cost ~AU$150
@@ -49,7 +52,7 @@ s3cmd sync --requester-pays --skip-existing --no-check-md5 -v s3://arxiv/src/ /p
 Totals:
 - 2150 compressed tar archive files
 
-** Step 1b: Download OAI metadata
+* Step 1b: Download OAI metadata
 - arXiv maintains metadata for articles via the Open Access Initiative v2.0 protocol. This allows users to query the server to retrieve metadata relating to a particular time period or set (category, e.g. math)
 - As we require the entire metadata database, we used a harvesting tool to request the metadata for the entire time range, which is downloaded incrementally in blocks of approximately 10,000 items
 - Initial attempt at downloading metadata used oai-harvest (https://github.com/bloomonkey/oai-harvest). While simple to setup and use, the download only produced approximately 1.1 million records, which is much less than the expected 1.5 million records. The tool also downloaded items as individual xml files that each hold one record only, which has proven somewhat unwieldy
@@ -72,8 +75,8 @@ metha-sync -format arXiv -from 2019-01-01 http://export.arxiv.org/oai2
 Totals:
 - 1506176 OAI records across 1578 xml files
 
-** Step 2: Unarchive and decompress
-- NB: If you want to also extract images from PDF documents, run the commands in step 3 simultaneously to these commands
+* Step 2: Unarchive and decompress
+- NB: If you want to also extract images from PDF documents, run those commands in parallel with these commands
 - Steps 2 and 3 were accomplished by using a number of single line bash commands that iteratively decompressed, unarchived, renamed, and organised the data, as well as extracting images and text from PDF documents.
 - See document arxiv_extract.sh for annotated code
 - Recommended to run each step individually and inspect for errors
@@ -90,6 +93,11 @@ cd ~
 mkdir arXiv
 cd ~/arXiv/
 mkdir src_all
+
+# move all of the downloaded source files to the arXiv folder
+mv /path/to/download/folder/ .
+# rename folder
+mv folder src 
 
 # for each archive, decompress into a specific folder
 for i in src/*; do tar xvf $i -C src_all/; done
@@ -207,24 +215,7 @@ Each article in the source directory has its own folder named by its arXiv ident
 - For more information on arXiv identifiers, see https://arxiv.org/help/arxiv_identifier
 - Image files are named according to the original filenames that were deposited to arXiv, as we are using the original source
 
-** Optional: Extract images and text from PDF documents (NB: do this during Step 2)
-- Extract images and text from PDF documents
-- This originally seemed like an important process, as there is a decent portion of the arXiv that was not submitted as source code
-- 7.69% of all articles are submitted as PDF only
-- Attempted to use pdf-images to extract images, with varying success.
-- Extracted over 27 million image files from PDFs
-- Produced a very "dirty" dataset with a number of problems in the image files: A large number are "stripes" (images split into multiple horizontal bars) as well as lots of single symbols, strange transparency or inverted colours, and low resolution images
-- Many of these are unusable. Some example montages of these problematic images can be found here: https://www.dropbox.com/sh/o6juhotbn9cih7w/AADWjarbKAs13U2fj_ZSKu1wa?dl=0
-- Decision was made to ignore this part of the dataset and proceed with using only the images found in the source uploads. This will save time and effort in cleaning the data, as well as avoiding a number of pitfalls of having such a large and messy dataset, but at the cost of not having any images extracted from PDF files
-- Each image extracted from a PDF was given the filename extension .pdf_image-XXX.png, so they can be ignored or conditionally operated upon at later stages of the process
-- All PDF data was kept in case it would be required at a later stage in the project, and for posterity
-
-Totals
-- Total number of articles: 1,483,662
-- Number of these that were PDF only: 114,132 (7.69% of total number of articles)
-- 27,198,781 images extracted from PDFs
-
-** Image totals
+*** Image totals
 - Breakdown of the most common image formats. 
 - There are more images than just these file extensions, but in uncommon formats, or in formats that are a bit tricky to work with (like metapost or xfig vector graphics languages), but the numbers of these are much smaller proportions of the dataset.
 
@@ -258,7 +249,26 @@ Totals
 - Would be worthwhile to investigate and analyse proportion of images used across different categories and time
 - Also important to keep looking for other strong tendencies or trends in the dataset e.g. is there something that has been missed through this process? By excluding PDF only articles are we missing a key part of the archive, or are these distributed uniformally?
 
-** Step 4: Organise dataset
+* Optional: Extract images and text from PDF documents
+- Commented out of arXiv_src_scripts/arxiv_extract.sh, uncomment to run during Step 2
+
+- Extract images and text from PDF documents
+- This originally seemed like an important process, as there is a decent portion of the arXiv that was not submitted as source code
+- 7.69% of all articles are submitted as PDF only
+- Attempted to use pdf-images to extract images, with varying success.
+- Extracted over 27 million image files from PDFs
+- Produced a very "dirty" dataset with a number of problems in the image files: A large number are "stripes" (images split into multiple horizontal bars) as well as lots of single symbols, strange transparency or inverted colours, and low resolution images
+- Many of these are unusable. Some example montages of these problematic images can be found here: https://www.dropbox.com/sh/o6juhotbn9cih7w/AADWjarbKAs13U2fj_ZSKu1wa?dl=0
+- Decision was made to ignore this part of the dataset and proceed with using only the images found in the source uploads. This will save time and effort in cleaning the data, as well as avoiding a number of pitfalls of having such a large and messy dataset, but at the cost of not having any images extracted from PDF files
+- Each image extracted from a PDF was given the filename extension .pdf_image-XXX.png, so they can be ignored or conditionally operated upon at later stages of the process
+- All PDF data was kept in case it would be required at a later stage in the project, and for posterity
+
+Totals
+- Total number of articles: 1,483,662
+- Number of these that were PDF only: 114,132 (7.69% of total number of articles)
+- 27,198,781 images extracted from PDFs
+
+* Step 3: Organise dataset
 - Source dataset consists only of article source and image files, no metadata or data about the placement within arXiv
 - OAI files consist only of metadata
 - Place the data for both into SQLite database as an attempt to link this data and be able to analyse and label dataset

@@ -1,12 +1,14 @@
 * Image Conversion
 This document contains some tips and tricks for converting large amounts of images that might be in a wide variety of file formats, image types, dimensions etc.
 
-** Contents :TOC:
+** Contents :TOC:QUOTE:
+#+BEGIN_QUOTE
 - [[#image-conversion][Image Conversion]]
   - [[#background][Background]]
-  - [[#getting-list-of-file-paths][Getting list of file paths]]
-  - [[#recommended-way-to-convert-lots-of-images-quickly][Recommended way to convert lots of images quickly]]
-  - [[#crontab-for-killing-long-running-processes][Crontab for killing long running processes]]
+- [[#getting-list-of-file-paths][Getting list of file paths]]
+- [[#recommended-way-to-convert-lots-of-images-quickly][Recommended way to convert lots of images quickly]]
+- [[#crontab-for-killing-long-running-processes][Crontab for killing long running processes]]
+#+END_QUOTE
 
 ** Background
 
@@ -22,7 +24,7 @@ convert -density 300 colorspace CMYK path/to/input.eps -colorspace sRGB -backgro
 
 The density argument accounts for low density postscript and vector graphics files so that these are rendered at an appropriate size. The colorspace commands account for any images that are in a CMYK colorspace, converting this to sRGB for consistency.
 
-** Getting list of file paths
+* Getting list of file paths
 
 Use this command to read all entries from the SQLite database, build a list of file paths, and write this into a text file. This allows for ease of use when running other scripts and especially for running scripts that might take a very long time or fail, so that it can be restarted at a known point.
 
@@ -31,7 +33,7 @@ cd sqlite-scripts
 python get_all_image_paths.py
 
 #+END_SRC
-** Recommended way to convert lots of images quickly
+* Recommended way to convert lots of images quickly
 
 Build a file list and then convert from it
 
@@ -43,8 +45,8 @@ conda activate py37
 # get a list of filepath difference
 python util/filepaths_difference.py paths/filepaths_all_images.txt /path/to/all/images/ -v -m
 
-screen -r convert
-# or -S if not already open
+screen -S convert
+# or -r if already open
 
 conda activate py37
 
@@ -58,7 +60,7 @@ python parallel_convert_futures.py missing_log_20190924_162556.txt /path/to/all/
 python parallel_convert_futures.py missing_log_20190924_162556.txt /path/to/all/images/ --verbose 
 
 #+END_SRC
-** Crontab for killing long running processes
+* Crontab for killing long running processes
 When running lots of ImageMagick convert commands, some will hang or leave zombie processes. This crontab is useful for automatically killing these before all RAM is used up.
 
 #+BEGIN_SRC cron

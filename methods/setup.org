@@ -1,11 +1,10 @@
-
 * Computer Setup Instructions
 ** Computer Specs
 *** OS
 - Linux: Ubuntu 18.04
 *** Hardware
 - Intel i7 CPU
-- 500GB NVME solid state drive
+- 500GB NVMe solid state drive
 - 4TB 72000 rpm hard disk
 - 32GB DDR3 RAM
 - NVidia RTX 2080 graphics card 8GB VRAM
