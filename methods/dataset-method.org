@@ -1,10 +1,10 @@
-* Downloading arXiv Bulk Source Data
+* arXiv Bulk Source Data Process
 
 Process for downloading, extracting, unarchiving, and organising data for usage in machine learning applications or data mining.
 
 ** Contents :TOC:QUOTE:
 #+BEGIN_QUOTE
-- [[#downloading-arxiv-bulk-source-data][Downloading arXiv Bulk Source Data]]
+- [[#arxiv-bulk-source-data-process][arXiv Bulk Source Data Process]]
   - [[#background][Background]]
 - [[#step-1a-download-all-source-files][Step 1a: Download all source files]]
 - [[#step-1b-download-oai-metadata][Step 1b: Download OAI metadata]]
