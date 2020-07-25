@@ -9,6 +9,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 import pickle
+import json
+import gzip
+import bz2
 
 import time
 
@@ -32,11 +35,12 @@ parser.add_argument('textfile', help="path to textfile of paths")
 parser.add_argument('images_path', help="path to folder of images")
 parser.add_argument('savedir', help="path to folder to save pickles")
 parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')
-parser.add_argument('-s', '--slice_size', default=10000, type=int, help='size of each slice to process (default: 2500)')
+parser.add_argument('--end_line', default=0, type=int, help='line to read textfile to (default: 0)')
+parser.add_argument('-s', '--slice_size', default=50000, type=int, help='size of each slice to process (default: 50000)')
 # parser.add_argument('-n', '--num_threads', default=8, type=int, help='number of threads (default: 8)')
 parser.add_argument('-v', '--verbose', action='store_true', help='verbose output')
 parser.add_argument('-t', '--timing', action='store_true', help='timing output')
-# parser.add_argument('-z', '--dryrun', action='store_true', help="don't modify or create any files (default: False)")
+parser.add_argument('-z', '--dryrun', action='store_true', help="don't modify or create any files (default: False)")
 
 global args
 args = parser.parse_args()
@@ -77,53 +81,68 @@ print(filepaths[:20])
 
 # break work up into chunks so as to limit memory usage
 increment = args.slice_size
-slices = [i for i in range(args.start_line + increment, len(filepaths), increment)]
-slices.append(len(filepaths)) # add the total length at the end
+end_line = args.end_line if args.end_line > 0 else len(filepaths)
+slices = [i for i in range(args.start_line + increment,
+                            end_line,
+                            increment)]
+slices.append(end_line) # add the total length at the end
 print("slices:",slices)
 slice_start = args.start_line
 
-for slice_end in slices:
-    # current_path = d
-    # print("current path: " + current_path)
-    # category = current_path.split('/')[6]
-    # year = current_path.split('/')[7]
-    # print("category: " + category)
-    # print("year: " + str(year))
+if args.dryrun is False:
+    for slice_end in slices:
+        # current_path = d
+        # print("current path: " + current_path)
+        # category = current_path.split('/')[6]
+        # year = current_path.split('/')[7]
+        # print("category: " + category)
+        # print("year: " + str(year))
 
-    # image_extensions = ['.jpg', '.png', '.jpeg']   # case-insensitive (upper/lower doesn't matter)
+        # image_extensions = ['.jpg', '.png', '.jpeg']   # case-insensitive (upper/lower doesn't matter)
 
-    # images = [os.path.join(dp, f) for dp, dn, filenames in os.walk(current_path) for f in filenames if os.path.splitext(f)[1].lower() in image_extensions]
-    # num_x = len(images)
-    # print("keeping %d images to analyze" % num_x)
+        # images = [os.path.join(dp, f) for dp, dn, filenames in os.walk(current_path) for f in filenames if os.path.splitext(f)[1].lower() in image_extensions]
+        # num_x = len(images)
+        # print("keeping %d images to analyze" % num_x)
 
-    tic = time.clock()
+        tic = time.clock()
 
-    paths_slice = filepaths[slice_start:slice_end]
+        paths_slice = filepaths[slice_start:slice_end]
 
-    features = []
-    for i, image_path in enumerate(paths_slice):
-        if i % 500 == 0:
-            toc = time.clock()
-            elap = toc-tic;
-            print("analyzing image %d / %d. Time: %4.4f seconds." % (i, len(paths_slice),elap))
-            tic = time.clock()
-        img, x = load_image(args.images_path + image_path)
+        features = []
+        for i, image_path in enumerate(paths_slice):
+            if i % 500 == 0:
+                toc = time.clock()
+                elap = toc-tic;
+                print("analyzing image %d / %d. Time: %4.4f seconds." % (i, len(paths_slice),elap))
+                tic = time.clock()
+            img, x = load_image(args.images_path + image_path)
 
-        feat = feat_extractor.predict(x)[0]
-        features.append(feat)
+            feat = feat_extractor.predict(x)[0]
+            features.append(feat)
+            # print(image_path, feat)
 
-    print('finished extracting features for %d images' % len(paths_slice))
+        print('finished extracting features for %d images' % len(paths_slice))
 
-    # write images, features to a pickle file
+        # write images, features to a pickle file
 
-    savefilename = args.savedir + "features_" + str(slice_start) + "_" + str(slice_end) + "_vgg.pkl"
+        savefilename = args.savedir + "features_" + str(slice_start) + "_" + str(slice_end) + "_vgg.pkl.pbz2"
 
-    slice_start = slice_end
+        slice_start = slice_end
 
-    print(f)
+        print(f)
 
-    # WRITE
-    with open(savefilename, "wb") as write_file:
-        pickle.dump([paths_slice, features], write_file)
-        write_file.close()
-        print("writing pickle")
+        # WRITE COMPRESSED JSON
+        # with gzip.GzipFile(savefilename, 'w') as fout:
+        #     fout.write(json.dumps(features).encode('utf-8'))
+        #
+        # print("finished saving compressed json")
+
+        # WRITE COMPRESSED pickle
+        with bz2.BZ2File(savefilename, 'w') as write_file:
+            pickle.dump(features, write_file)
+
+        # WRITE PICKLE
+        # with open(savefilename, "wb") as write_file:
+        #     pickle.dump([paths_slice, features], write_file)
+        #     write_file.close()
+        #     print("writing pickle")
