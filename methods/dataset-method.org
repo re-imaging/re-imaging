@@ -31,17 +31,17 @@ Download all source files from the arXiv Amazon Web Services (AWS) data storage 
 # first set up s3cmd with username and password
 
 # testing - list files
-s3cmd ls --requester-pays s3://arxiv/src/ 2>&1 | tee ~/s3cmd_log.txt
+s3cmd ls --requester-pays s3://arxiv/src/ 2>&1 | tee ~/s3cmd_ls_log.txt
 
 # get manifests
 s3cmd get --requester-pays s3://arxiv/src/arXiv_src_manifest.xml
-s3cmd get --requester-pays s3://arxiv/pdf/arXiv_pdf_manifest.xml
+# s3cmd get --requester-pays s3://arxiv/pdf/arXiv_pdf_manifest.xml
 
 # NOTE: sync commands take a long time to begin due to checking md5s etc.
 # may not respond or output any text for some time
 
 # dry run
-s3cmd sync --requester-pays -n s3://arxiv/src/ /path/to/download/folder/
+s3cmd sync --requester-pays --skip-existing --no-check-md5 -v -n s3://arxiv/src/ /path/to/download/folder/ 2>&1 | tee ~/s3cmd_sync_dryrun_log.txt
 
 # sync with md5 check -- !!! this takes a long time !!!
 s3cmd sync --requester-pays -v s3://arxiv/src/ /path/to/download/folder/ 2>&1 | tee ~/s3cmd_log_checkmd5.txt
