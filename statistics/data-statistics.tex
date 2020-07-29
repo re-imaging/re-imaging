@@ -1,0 +1,98 @@
+% Created 2020-07-07 Tue 17:14
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{Re-imaging}
+\date{\today}
+\title{Primary image formats (combined, case-insensitive)}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.2.2 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+From bash find
+
+\begin{center}
+\begin{tabular}{rl}
+\hline
+total & extension\\
+\hline
+4227556 & eps\\
+3300599 & pdf\\
+1102229 & png\\
+911206 & ps\\
+485687 & jpg\\
+24190 & pstex\\
+19102 & gif\\
+15182 & epsi\\
+12404 & svg\\
+3425 & epsf\\
+\hline
+10101580 & total\\
+\hline
+\end{tabular}
+\end{center}
+
+SQLite
+
+\begin{center}
+\begin{tabular}{rl}
+\hline
+total & extension\\
+\hline
+4223083 & eps\\
+3299043 & pdf\\
+1076731 & png\\
+909314 & ps\\
+485452 & jpg\\
+23922 & pstex\\
+19054 & gif\\
+12400 & svg\\
+4060 & epsf\\
+\hline
+10053059 & total\\
+\hline
+\end{tabular}
+\end{center}
+
+With percentage
+
+\begin{center}
+\begin{tabular}{lrr}
+\hline
+extension & total & \%\\
+\hline
+eps & 4223083 & 42.007940\\
+pdf & 3299043 & 32.816310\\
+png & 1076731 & 10.710481\\
+ps & 909314 & 9.0451474\\
+jpg & 485452 & 4.8288983\\
+pstex & 23922 & 0.23795742\\
+gif & 19054 & 0.18953435\\
+svg & 12400 & 0.12334554\\
+epsf & 4060 & 0.040385717\\
+\hline
+total & 10053059 & 100\\
+\hline
+\end{tabular}
+\end{center}
+% Emacs 25.2.2 (Org mode 8.2.10)
+\end{document}
