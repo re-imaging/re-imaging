@@ -18,13 +18,13 @@ Instructions for creating, populating and querying the database for arXiv images
   - [[#create-sqlite-database][Create SQLite database]]
   - [[#inserting-article-metadata-into-database][Inserting article metadata into database]]
   - [[#image-metadata][Image metadata]]
-  - [[#adding-image-metadata][Adding image metadata]]
+  - [[#additional-image-metadata][Additional image metadata]]
   - [[#adding-caption-metadata][Adding caption metadata]]
   - [[#top-results-for-creator-metadata][Top results for "creator" metadata]]
 - [[#data-examples][Data examples]]
   - [[#metadata][Metadata]]
   - [[#images][Images]]
-- [[#cleaning][Cleaning]]
+- [[#cleaning-and-fixes][Cleaning and fixes]]
 - [[#querying][Querying]]
   - [[#building-list-of-all-filepaths-from-sqlite-database][Building list of all filepaths from SQLite database]]
 #+END_QUOTE
@@ -182,7 +182,7 @@ cd create-db
 ./image_data_to_sql_paths.sh 0 ~/data/paths/all_image_paths.txt ~/data/db/arXiv_db.sqlite
 #+END_SRC
 
-** Adding image metadata
+** Additional image metadata
 
 Additional metadata can be procured from the individual files by accessing the Exif (Exchangeable image file format). Although this could be done at the same time as inserting rows for the images into the database table, we did this at a later stage.
 
@@ -210,12 +210,26 @@ elif n.endswith(('.svg')):
 #+END_SRC
 
 Note that a fairly high proportion of images do not have this metadata.
+
 ** Adding caption metadata
 The /captions/ table was created by iterating through all .tex files and parsing the tex source for figures, captions, and filenames. Our method uses a number of different regular expressions to find particular key parts of the source. This code is specific to this database and unlikely to generalise.
 We grabbed the caption for each figure (if there was one), writing the following fields to the database table: unique caption identifier, arXiv identifier, tex file path, figure number, caption text, figure label, filenames of any images used to create that figure (can be more than 1), and image_ids of these images from the /images/ table.
 
-For details see create-db/get-captions.ipynb
+For details see create-db/get-captions.ipynb and create-db/get-captions.py
 
+Steps:
+- create list of tex files (get-captions.ipynb)
+- run "get-captions.py" script
+- iterate over each .tex file and parse out captions
+- insert captions into SQLite database
+#+BEGIN_SRC bash
+python get-captions.py ~/data/db/arxiv_db_images.sqlite3 tex_paths_src_update.json 2>&1 | tee caption_update_log.txt
+#+END_SRC
+- create an index of all image identifiers
+- find where caption filename matches the filename in the image table and update with ids
+#+BEGIN_SRC bash
+python get-captions.py ~/data/db/arxiv_db_images.sqlite3 tex_paths_src_update.json -i -n --create_index 2>&1 | tee caption_update_indexes_log.txt
+#+END_SRC
 ** Top results for "creator" metadata
 |------------------+---------+-------|
 | "creator"        |   total |     % |
@@ -271,10 +285,14 @@ For details see create-db/get-captions.ipynb
 | 2209549 |  0906.0725 | belleescan_b.eps | 842045 | ./0906/0906.0725                                                                                          | 1450 | 725 | PS  |
 | 6591348 | 1710.10269 | HAT-P-12.pdf     |  78468 | ./1710/1710.10269/figures/figures_from_umserve/chemistry/abundance_change_with_grid_parameter/metallicity |  566 | 406 | PDF |
 
-* Cleaning
-The database required some cleaning after inserting rows for both metadata and images. This may be due to article revisions or the metadata harvester missing a few entries. A small number of images did not have corresponding article metadata. To fix this we used the list of articles without metadata and queried the arXiv OAI server. We then inserted these rows into the metadata table.
+* Cleaning and fixes
+The database required some cleaning after inserting rows for both metadata and images. Please refer to sqlite-scripts/db_fixes.ipynb
 
-We also searched the SQLite database for any entries with special characters such as '/' that caused errors in the file insertion. In each arXiv category pre-2007, we removed the forward slash as this could potentially cause problems in how this data is read (this can be added back in as required). From the list of entries with special characters, many of these images were duplicated within the source upload. We checked that the images were present in the dataset and then removed the rows from the SQLite database as well as the files from the dataset. For later searches, we also filtered out any images that have an X or Y dimension of 0 or NULL, indicating that they could not be ready by the Imagemagick identify command.
+This may be due to article revisions or the metadata harvester missing a few entries, as well as accumulating duplicates if the arXiv OAI data was updated on the server (metha does not sync previous files by default). A small number of images did not have corresponding article metadata. To fix this we used the list of articles without metadata and queried the arXiv OAI server. We then inserted these rows into the metadata table. This has been automated in the notebook.
+
+We also searched the SQLite database for any entries with special characters such as '/' that caused errors in the file insertion. In each arXiv category pre-2007, we removed the forward slash as this could potentially cause problems in how this data is read (this can be added back in as required).
+
+From the list of entries with special characters, many of these images were duplicated within the source upload. We checked that the images were present in the dataset and then manually removed the rows from the SQLite database as well as the files from the dataset. For later searches, we also filtered out any images that have an X or Y dimension of 0 or NULL, indicating that they could not be ready by the Imagemagick identify command.
 * Querying
 Once both tables have been created, it is then possible to perform SQL queries with a left join to pair the associated metadata with a given image. This allows us to create queries and perform analyses  that would not have been possible with only the bulk download: accessing the image data according to different metadata such as subject categories or date, performing searches, and analysing the image content of the dataset in various ways. The SQLite database provides a convenient and flexible way to perform these queries across the ~10 million images and ~1.5 million articles.
 
