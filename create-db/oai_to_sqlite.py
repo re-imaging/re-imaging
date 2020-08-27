@@ -27,8 +27,14 @@ ARXIV = "{http://arxiv.org/OAI/arXiv/}"
 db = sqlite3.connect(db_path)
 
 # iteratively progress through all files in folder
-for filename in glob.glob(oai_path + '*.xml'):
+# for filename in glob.glob(oai_path + '*.xml'):
+files = [os.path.join(oai_path, f) for f in os.listdir(oai_path) if os.path.isfile(os.path.join(oai_path, f)) and ".xml" in f]
+# in alpha-numeric order
+files.sort()
+# print(files)
+print("number of files:",len(files))
 
+for filename in files:
     data = ET.parse(filename)
     if(args.verbose):
         print("opening file: " + filename)

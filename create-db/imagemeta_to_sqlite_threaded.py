@@ -109,6 +109,8 @@ def main():
     SELECT id, path, filename
     FROM images
     ''')
+    # if specific time ranges etc. are required, modify the above SQL, e.g.
+    #     WHERE identifier LIKE '19%' OR identifier LIKE '20%'
 
     c.execute(sql, )
 

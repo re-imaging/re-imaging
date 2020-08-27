@@ -262,6 +262,7 @@ def main():
     # texs = ["/home/rte/arXiv/src_all/1608/1608.04949/28867_am.tex"]
     # texs = ["/home/rte/arXiv/src_all/1608/1608.01138/manuscript.tex"]
     # texs = []
+    print("loading texs from json file")
     with open(args.tex_list) as f:
         texs = json.load(f)
 
@@ -284,9 +285,9 @@ def main():
 
     if args.no_captions is False:
         for ai, t in enumerate(texs[args.start_line:]):
-            if(args.verbose):
-                print("*" * 20)
-                print("paper:",ai)
+            # if(args.verbose):
+            #     print("*" * 20)
+            #     print("paper:",ai)
                 # print("-" * 20)
 
             # run function to get caption from a tex filepath
@@ -305,6 +306,7 @@ def main():
         sql = ('''
         SELECT id, identifier, tex, filenames
         FROM captions
+        WHERE identifier LIKE '19%' OR identifier LIKE '20%'
         ''')
         # for testing a single example
         # WHERE identifier == '1505.02792'
@@ -453,7 +455,8 @@ def main():
                 print("time taken for process:",end-start)
                 start = time.time()
 
-                write_db.commit()
+                if args.dryrun is False:
+                    write_db.commit()
 
                 end = time.time()
                 print("time taken for committing to SQLite:",end-start)

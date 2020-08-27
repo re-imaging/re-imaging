@@ -3,7 +3,8 @@
 # script that reads in a text file of image paths and identifiers,
 # then writes image data into a SQLite database using the identify command
 
-cd ~/arXiv/src_all
+cd ~/src_update
+# cd ~/arXiv/src_all
 echo "current working directory: "
 pwd
 
