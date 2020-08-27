@@ -4,6 +4,7 @@
 #ignore filepath text files
 *filelist*.txt
 *filenames*.txt
+*test*.txt
 
 #ignore files starting with .#
 .#*
