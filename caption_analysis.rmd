@@ -220,6 +220,8 @@ I couldn't think of a good way to visualize the differences, but the table of to
 library(RSQLite)
 library(tidyverse)
 library(quanteda)
+library(stm)
+library(stminsights)
 
 conn  <- dbConnect(RSQLite::SQLite(), 'data/arxiv_db_images.sqlite3')
 dbListTables(conn)
@@ -254,11 +256,11 @@ captions_tbl  <-  tbl(conn, 'captions')
 captions_tbl %>% head()
 captions_tbl %>% select(identifier) %>% head()
 
-df <- captions_tbl %>%
+dfc <- captions_tbl %>%
  #filter( row_number() %in% sample(n(), 30)) %>%
- inner_join(mdata_tb, by='identifier')#  %>%
+ inner_join(mdata_tb, by='identifier')
 
-dfm  <-  df %>% mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
+dfm  <-  dfc %>% mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
 ```
 
 This next function assumes a sample dataframe `df` ready to be converted to a corpus and its tokens. 
@@ -322,8 +324,9 @@ I'm sampling 100k captions. But this is mainly for exploration. How many needed?
 ```{r stat-ml}
 
 samplesize = 100000
-query_ml<-  paste0('select captions.caption, metadata.cat, metadata.created  from captions  left join metadata  on captions.identifier = metadata.identifier where metadata.cat like "stat.ml" or metadata.cat like "cs.ai" or metadata.cat like "cs.cv" order by random() limit ', samplesize)
+query_ml<-  paste0('select captions.caption, metadata.cat, metadata.created  from captions  left join metadata  on captions.identifier = metadata.identifier where metadata.cat like "stat.ml" or metadata.cat like "cs.ai" or metadata.cat like "cs.cv" and captions.caption != "" order by random() limit ', samplesize)
 ml_sample  <-  dbGetQuery(conn, query_ml)
+head(mldf)
 mldf  <- ml_sample %>%
  mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
 mldf %>% select(primary_category) %>% count(primary_category, sort = TRUE)
@@ -342,12 +345,16 @@ notmlto   <-  create_tokens_clean(notmldf)
 ## Sample all categories - larger sample; might be able to work with this alone
 
 samplesize = 1000000
-query_cat  <-  paste0('select captions.caption, metadata.cat, metadata.created  from captions  left join metadata  on captions.identifier = metadata.identifier  order by random() limit ', samplesize)
+query_cat  <-  paste0('select captions.caption, metadata.cat, metadata.created  from captions  left join metadata  on captions.identifier = metadata.identifier where (captions.caption is not null)  order by random() limit ', samplesize)
 cat_sample  <-  dbGetQuery(conn, query_cat)
+cat_sample %>% head()
 alldf  <- cat_sample %>%
- mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?'))
+ mutate(primary_category = str_extract(cat, pattern =  '[A-Za-z-]+(\\.[A-Za-z-]+)?')) %>%
+ mutate(py = as.integer(str_extract(created, pattern = '^\\d{4}'))) %>% filter(caption != '')
 alldf %>% select(primary_category) %>% count(primary_category, sort = TRUE)
 alldf %>% dim()
+
+
 allto  <- create_tokens_clean(alldf)
 
 ```
@@ -432,6 +439,36 @@ dfoverview  <-  read.csv('data/caption_keyword_summary_wide.csv')
 dfoverview %>% filter(not_ml > 0, ml>0 )
 
 ```
+
+## Topic models version
+
+```{r stm}
+library(stm)
+mldf  <- mldf %>% mutate(py = str_extract(created, pattern = '^\\d{4}')) %>% filter(caption == '')
+mldfm  <- mldf %>% corpus(text_field = 'caption') %>% dfm(remove = c('elsevier', 'ltd', 'b.v.',stopwords('en')), remove_punct = TRUE, remove_symbols = TRUE, remove_numbers = TRUE, stem = TRUE)
+docvars(mldfm) %>% head()
+mldfm %>% head()
+dim(mldf)
+
+mlstm  <-  stm(mldfm, K=20, prevalence=~s(py))
+
+alldfm  <- alldf %>% corpus(text_field = 'caption') %>% dfm(remove = c('elsevier', 'ltd', 'b.v.',stopwords('en')), remove_punct = TRUE, remove_symbols = TRUE, remove_numbers = TRUE, stem = TRUE)
+saveRDS(alldfm, 'alldfm.rds')
+alldfm  <- readRDS( 'alldfm.rds')
+
+docvars(alldfm) %>% head()
+gc()
+alldfm_trim  <-  dfm_trim(alldfm, min_termfreq = 10, min_docfreq = 5)
+alldfm_trim %>% head()
+dim(alldfm_trim)
+
+alldfm_trim  <- alldfm_trim %>% dfm_subset(!is.na(py))
+alldfm_trim[9271,]
+
+allstm  <-  stm(alldfm_trim,  K=20, prevalence=~s(py))
+
+```
+
 
 ## Conclusion
 
