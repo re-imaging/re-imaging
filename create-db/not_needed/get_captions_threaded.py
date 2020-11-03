@@ -280,10 +280,13 @@ def main():
                         print("input:",input)
                         print("output:",output)
 
-                    # c.execute(sql, (output[0], output[1], output[2], output[3], output[4], output[5]))
+                    c.execute(sql, (output[0], output[1], output[2], output[3], output[4], output[5]))
 
-                    # count += 1
-                    # if count % 1000 == 0 and count != 0:
+                    count += 1
+                    if count % 1000 == 0 and count != 0:
+                        end = time.time()
+                        print("time taken for count {}: {}".format(count, end-start))
+                        start = time.time()
 
         end = time.time()
         print("time taken for process:",end-start)

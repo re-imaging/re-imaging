@@ -5,6 +5,7 @@
 *filelist*.txt
 *filenames*.txt
 *test*.txt
+*example*.txt
 
 #ignore files starting with .#
 .#*

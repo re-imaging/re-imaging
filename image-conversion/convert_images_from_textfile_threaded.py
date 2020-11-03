@@ -16,6 +16,7 @@ from functools import partial
 parser = argparse.ArgumentParser(description='Script for converting images from a textfile using convert (threaded)')
 
 parser.add_argument('textfile', help='textfile to read from')
+# parser.add_argument('images_path', help='path to destination folder')
 parser.add_argument('convert_path', help='path to destination folder')
 parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')
 parser.add_argument('--timeout', default=30, type=int, help='timeout for convert command (default: 30)')
@@ -81,7 +82,7 @@ def convert(argin, logpath):
             pass
             print("child PID is None")
         else:
-            print("killing child process")
+            print("timeout -- killing child process")
             os.kill(child.pid, signal.SIGTERM)
 
         print("!" * 20, "timeout --- logging problem file")
@@ -108,8 +109,10 @@ def convert(argin, logpath):
             pass
             print("child PID is None")
         else:
-            print("killing child process")
+            print("Unexpected error -- killing child process")
+            print(sys.exc_info()[0])
             os.kill(child.pid, signal.SIGTERM)
+            raise
 
         print("!" * 20, "Exception --- logging problem file")
         print("output:",output)
@@ -134,7 +137,8 @@ def convert(argin, logpath):
             pass
             print("child PID is None")
         else:
-            print("killing child process")
+            print("something went wrong -- killing child process")
+            print(sys.exc_info()[0])
             os.kill(child.pid, signal.SIGTERM)
 
         print("!" * 40, "Unexpected error:")
@@ -162,6 +166,7 @@ def main():
 
     if args.verbose:
         print("textfile:",args.textfile)
+        # print("image_path:",args.images_path)
         print("convert_path:",args.convert_path)
         print("start_line:",args.start_line)
         # print("missing:",args.missing)
