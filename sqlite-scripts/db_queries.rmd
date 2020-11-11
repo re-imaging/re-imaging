@@ -45,10 +45,9 @@ topfields = c("mathematics" ,    "physics",   "physics",    "computer science", 
 levels(catsum$topcat)  <-  topfields
 #plot the general paper counts to get a sense of relative size
 catsum_filtered  <- catsum %>% filter(tcat > 1000, !is.na(primcat)) %>% group_by(topcat) %>% arrange(primcat) %>% mutate(primcat = factor(primcat)) 
-ggplot(catsum_filtered, aes(x=primcat, y=tcat, group = topcat, fill=topcat)) + geom_col() + coord_flip() +  theme(legend.position = "right",  axis.text =  element_text(size=14), title = element_text(size = 16)) + ggtitle('Relative size of arxiv categories', subtitle = 'Categories with count <1000 not shown') + labs(fill='Primary discipline', x = 'Sub-field',  y = 'Manuscripts') + scale_x_discrete(limits = rev(levels(catsum$primcat)))
+ggplot(catsum_filtered, aes(x=primcat, y=tcat, group = topcat, fill=topcat)) + geom_col() + coord_flip() +  theme( legend.text = element_text(size=15), legend.position= c(0.85, 0.95),  axis.text =  element_text(size=14), title = element_text(size = 16)) + ggtitle('Relative size of arxiv categories', subtitle = 'Categories with count <1000 articles not shown') + labs(fill='Primary discipline', x = 'Sub-field',  y = 'Articles') + scale_x_discrete(limits = rev(levels(catsum$primcat)))
 
-
-ggsave(file='../figure/arxiv-cat-relativesize.svg')
+ggsave(file='figure/arxiv-cat-relativesize.svg')
 
 #trying to get a picture of the dynamics of disciplines
 #calculate totals for each primcat
@@ -69,9 +68,10 @@ ggplot(cc, aes(x=yr, y=pcat, color = primcat)) + geom_line() + facet_wrap(~primc
 cctop<- cc %>% group_by(primcat) %>% summarize(cattotal = sum(tcat)) %>% top_n(60)
 
 ccfiltered  <- cc %>% inner_join(cctop, by = 'primcat') 
-ggplot(ccfiltered, aes(x=yr, y=pcat, color = primcat)) + geom_line() + facet_wrap(~primcat) +  theme(legend.position = "none", strip.text = element_text(size=10)) + ggtitle('All primary categories 1991-2018',  '% of publications in a given category appearing each year') + xlab('Year') + ylab('% of overall volume')
+#this is actually figure 4 in paper
+ggplot(ccfiltered, aes(x=yr, y=pcat)) + geom_line() + facet_wrap(~primcat) +  theme(legend.position = "none", strip.text = element_text(size=14)) + ggtitle('All primary categories 1991-2019',  '% of articles in a given category appearing each year') + xlab('Year') + ylab('% of overall volume')
 
-ggsave(file='../figure/arxiv-primcat-percent-volume-per-year.svg')
+ggsave(file='figure/arxiv-primcat-percent-volume-per-year.svg')
 ```
 
 ## Constructing training labels
