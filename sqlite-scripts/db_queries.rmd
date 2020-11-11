@@ -11,7 +11,7 @@ library(ggplot2)
 library(stringr)
 library(lubridate)
 
-db <- src_sqlite('/home/mackenza/arc_numbers/re-imaging/data/arxiv_db_images.sqlite3', create=FALSE)
+db <- src_sqlite('../data/arxiv_db_images.sqlite3', create=FALSE)
 md = tbl(db, "metadata")
 colnames(md)
 ```
@@ -20,7 +20,7 @@ colnames(md)
 q1 = 'select cat, created from metadata'
 cats = db %>% tbl(sql(q1)) %>% collect()
 catsum = cats %>% mutate(primcat = str_extract(cat, '[a-zA-Z-]+(\\.[a-zA-Z-]+)?'), yr = year(created)) %>%  group_by(yr, primcat) %>% 
-    filter(yr> 1991) %>%
+    filter(yr> 1991, yr < 2019) %>%
     summarize(tcat = n()) %>% arrange(yr, desc(tcat))
 
 catsum  <- catsum  %>% mutate(topcat = str_extract(primcat, '\\w+(-\\w+)?')) %>% mutate(topcat = factor(topcat))
