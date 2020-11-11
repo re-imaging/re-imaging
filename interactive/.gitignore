@@ -1,3 +1,6 @@
 *.ann
 *.joblib
 cut.ipynb
+annoy_vis/
+backup/
+*.bak

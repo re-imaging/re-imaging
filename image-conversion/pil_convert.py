@@ -24,7 +24,7 @@ def convert(filepath, outputname, logpath):
         rgb_im = im.convert('RGB')
         rgb_im.save(outputname[0])
     except:
-        print("some kind of exception")
+        print("some kind of exception:", Exception)
         with open(logpath, "a+") as f:
             f.write(filepath + "\n")
 

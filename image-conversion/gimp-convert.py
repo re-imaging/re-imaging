@@ -2,12 +2,12 @@ import os
 import shlex
 import subprocess
 
-readfile = "/home/rte/re-imaging/visualisation/missing_log_20191218_114340.txt"
+readfile = "/home/rte/arXiv/src_update/error_log_20200918_163124.txt"
 
 filepaths = []
 outputnames = []
 lines = []
-conversion_path = "/home/rte/data/images/gimp/"
+conversion_path = "/mnt/hd2/images/gimp_update/"
 
 # with open(readfile, "r") as input:
 #     lines = input.readlines()

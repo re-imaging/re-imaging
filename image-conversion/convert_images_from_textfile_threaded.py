@@ -16,7 +16,7 @@ from functools import partial
 parser = argparse.ArgumentParser(description='Script for converting images from a textfile using convert (threaded)')
 
 parser.add_argument('textfile', help='textfile to read from')
-# parser.add_argument('images_path', help='path to destination folder')
+parser.add_argument('images_path', help='path to original images folder')
 parser.add_argument('convert_path', help='path to destination folder')
 parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')
 parser.add_argument('--timeout', default=30, type=int, help='timeout for convert command (default: 30)')
@@ -26,16 +26,22 @@ parser.add_argument('-v', '--verbose', action='store_true', help='verbose output
 parser.add_argument('-n', '--num_threads', default=8, type=int, help='number of threads (default: 8)')
 parser.add_argument('-r', '--reverse', action='store_true', help='process text file from end to start (default: False)')
 parser.add_argument('-z', '--dryrun', action='store_true', help="don't modify or create any files (default: False)")
+parser.add_argument('-w', '--web', action='store_true', help="convert lower resolution images for web (default: False)")
+parser.add_argument('-e', '--check_exists', action='store_true', help="check if file already exists in target folder (default: False)")
 
 global args
 args = parser.parse_args()
 
-if args.lowdensity:
-    # prearg = shlex.split("-density 72 -colorspace CMYK")
-    prearg = shlex.split("-colorspace CMYK")
+if args.web:
+    prearg = shlex.split("")
+    arguments = shlex.split("-colorspace sRGB -resize 300x300^")
 else:
-    prearg = shlex.split("-density 300 -colorspace CMYK")
-arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
+    arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
+    if args.lowdensity:
+        # prearg = shlex.split("-density 72 -colorspace CMYK")
+        prearg = shlex.split("-colorspace CMYK")
+    else:
+        prearg = shlex.split("-density 300 -colorspace CMYK")
 
 # handle Ctrl+C - this doesn't seem to work so well?
 def signal_handler(signal, frame):
@@ -47,14 +53,20 @@ signal.signal(signal.SIGINT, signal_handler)
 def convert(argin, logpath):
 # def convert(filepath, outputname):
     # print(argin)
+
     filepath = argin[0]
     outputname = argin[1]
     print(filepath, "-->", outputname)
 
+    if args.check_exists:
+        if os.path.isfile(outputname[0]):
+            if args.verbose:
+                print(">>> already exists >>>")
+            return filepath, 0
+
     # is there an easier way to reference this?
     global prearg
     global arguments
-
     # global logpath
 
     image_id = os.path.basename(outputname[0])
@@ -180,6 +192,9 @@ def main():
     # time loading filepaths
     start = time.time()
 
+    p = args.images_path if args.images_path.endswith("/") else args.images_path + "/"
+    print("path for reading original images:", p)
+
     # read in paths from textfile
     with open(args.textfile, "r") as f:
         lines = f.readlines()
@@ -187,8 +202,11 @@ def main():
         print("first file entry:",lines[0])
     for l in lines:
         substrings = l.rsplit(",", 1)
-        filepaths.append(substrings[0].strip())
-        image_ids.append(substrings[1].strip())
+        filepaths.append(p + substrings[0].strip())
+        if args.web:
+            image_ids.append(substrings[0].split(".")[0])
+        else:
+            image_ids.append(substrings[1].strip())
 
     if args.reverse:
         filepaths.reverse()
@@ -247,22 +265,27 @@ def main():
     # print("number of missing files:",missing_count)
     '''
 
+    divisions = [x for x in range(args.start_line, len(filepaths), 50000)]
+    divisions.append(len(filepaths))
+
     # futures thread pool version
     if dryRun:
         pass
     else:
         starter = partial(convert, logpath=logpath)
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.num_threads) as tp:
-            fl = [tp.submit(starter, t) for t in zip(filepaths[args.start_line:], outputnames[args.start_line:])]
-            for fut in concurrent.futures.as_completed(fl):
-                fn, rv = fut.result()
-                if rv == 0:
-                    print('finished "{}"'.format(fn))
-                elif rv < 0:
-                    print('exit code > 0 in child process')
-                    # fut.kill()
-                else:
-                    print("converting {} failed, return code {}".format(fn, rv))
+            for div in divisions:
+                # add code here
+                fl = [tp.submit(starter, t) for t in zip(filepaths[args.start_line:], outputnames[args.start_line:])]
+                for fut in concurrent.futures.as_completed(fl):
+                    fn, rv = fut.result()
+                    if rv == 0:
+                        print('finished "{}"'.format(fn))
+                    elif rv < 0:
+                        print('exit code > 0 in child process')
+                        # fut.kill()
+                    else:
+                        print("converting {} failed, return code {}".format(fn, rv))
 
 '''
 def manageprocs(proclist):
