@@ -27,6 +27,7 @@ visualisation/logs/
 visualisation/heatmap/
 extra/
 ml-scripts/
+test/
 
 #ignore jupyter notebook checkpoints and config files
 .ipynb_checkpoints
