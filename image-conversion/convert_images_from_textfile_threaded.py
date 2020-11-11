@@ -265,7 +265,7 @@ def main():
     # print("number of missing files:",missing_count)
     '''
 
-    divisions = [x for x in range(args.start_line, len(filepaths), 50000)]
+    divisions = [x for x in range(args.start_line, len(filepaths), 5000)]
     divisions.append(len(filepaths))
 
     # futures thread pool version
@@ -274,9 +274,8 @@ def main():
     else:
         starter = partial(convert, logpath=logpath)
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.num_threads) as tp:
-            for div in divisions:
-                # add code here
-                fl = [tp.submit(starter, t) for t in zip(filepaths[args.start_line:], outputnames[args.start_line:])]
+            for i, div in enumerate(divisions[:-1]):
+                fl = [tp.submit(starter, t) for t in zip(filepaths[div:divisions[i+1]], outputnames[div:divisions[i+1]])]
                 for fut in concurrent.futures.as_completed(fl):
                     fn, rv = fut.result()
                     if rv == 0:
