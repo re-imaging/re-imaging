@@ -5,5 +5,4 @@ annoy_vis/
 backup/
 *.bak
 
-__pycache__/
 hello.py
