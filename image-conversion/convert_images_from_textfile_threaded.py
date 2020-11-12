@@ -82,7 +82,7 @@ def convert(argin, logpath):
         child = subprocess.Popen(convert_cmd, universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output,error = child.communicate(timeout=args.timeout)
         if child.returncode != 0:
-            raise Exception("exception")
+            raise Exception(f'exception - image {image_id}')
             print("returncode:",child.returncode)
             print("output:",output)
             print("error:",error)
@@ -91,8 +91,8 @@ def convert(argin, logpath):
         child.kill()
         # this added end of 20190924
         if child.pid is None:
-            pass
             print("child PID is None")
+            pass
         else:
             print("timeout -- killing child process")
             os.kill(child.pid, signal.SIGTERM)
@@ -123,7 +123,11 @@ def convert(argin, logpath):
         else:
             print("Unexpected error -- killing child process")
             print(sys.exc_info()[0])
-            os.kill(child.pid, signal.SIGTERM)
+            try:
+                os.kill(child.pid, signal.SIGTERM)
+            except:
+                print("couldn't kill for some reason")
+                pass
             raise
 
         print("!" * 20, "Exception --- logging problem file")
@@ -275,6 +279,8 @@ def main():
         starter = partial(convert, logpath=logpath)
         with concurrent.futures.ThreadPoolExecutor(max_workers=args.num_threads) as tp:
             for i, div in enumerate(divisions[:-1]):
+                if args.verbose:
+                    print(f'setting up threads for divisions {div}-{divisions[i+1]}')
                 fl = [tp.submit(starter, t) for t in zip(filepaths[div:divisions[i+1]], outputnames[div:divisions[i+1]])]
                 for fut in concurrent.futures.as_completed(fl):
                     fn, rv = fut.result()
