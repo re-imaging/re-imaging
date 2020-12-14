@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Opening HTML{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <body>
+    Showing randomly selected images from arXiv
+  </body>
+
+  <div class="grid">
+    {% for image in images %}
+      <div style="max-width: 224px" class="grid-item" image_id={{image.split(".")[0]}}>
+        <img style="max-width: 100%" class="grid-item-img" src={{url_for("static", filename="all/"+image)}}>
+      </div>
+    {% endfor %}
+  </div>
+
+  <script>
+
+    // init Packery
+    var $grid = $('.grid').packery({
+      itemSelector: '.grid-item',
+      gutter: 8
+    });
+    // layout Packery after each image loads
+    $grid.imagesLoaded().progress( function() {
+      $grid.packery();
+    });
+
+    // $grid.on( 'click', '.grid-item', function( event ) {
+    //   $()
+    // }
+
+    $(".grid-item-img").on("click", function (event) {
+  		$(this).toggleClass("active");
+  	});
+
+  	$(".grid-item").on("dblclick", function (event) {
+  		// window.open($(this).attr("meta-href"), "_blank");
+      $.ajax({
+        type: "POST",
+        url: "/core/test2",
+        data: { image_id : $(this).attr("image_id") },
+        success: function(result) {
+          console.log(result.results);
+        },
+        // handle error
+        error: function(error) {
+          console.log(error);
+        }
+      })
+  	});
+
+    function return_active(select) {
+  		$(".active").each(function () {
+  			value = $(this).attr("value");
+  			$("#" + select).append(new Option(value, value, false, true));
+  		});
+  	};
+
+    // var $grid = $('.grid').imagesLoaded( function() {
+    //   // init Packery after all images have loaded
+    //   $grid.packery({
+    //     itemSelector: '.grid-item',
+    //     gutter: 8
+    //   });
+    // });
+
+    // $('.grid').packery({
+    //   itemSelector: '.grid-item',
+    //   gutter: 50
+    // });
+
+  $('#container').imagesLoaded()
+    .always( function( instance ) {
+      console.log('all images loaded');
+    })
+    .done( function( instance ) {
+      console.log('all images successfully loaded');
+    })
+    .fail( function() {
+      console.log('all images loaded, at least one is broken');
+    })
+    .progress( function( instance, image ) {
+      var result = image.isLoaded ? 'loaded' : 'broken';
+      console.log( 'image is ' + result + ' for ' + image.img.src );
+    });
+  </script>
+
+{% endblock %}
