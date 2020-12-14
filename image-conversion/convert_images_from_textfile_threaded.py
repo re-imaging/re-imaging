@@ -34,7 +34,7 @@ args = parser.parse_args()
 
 if args.web:
     prearg = shlex.split("")
-    arguments = shlex.split("-colorspace sRGB -resize 300x300^")
+    arguments = shlex.split("-colorspace sRGB -resize 300x300^>") # note added ">" to not increase size
 else:
     arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
     if args.lowdensity:
@@ -81,11 +81,11 @@ def convert(argin, logpath):
         # child = subprocess.Popen(convert_cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         child = subprocess.Popen(convert_cmd, universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output,error = child.communicate(timeout=args.timeout)
-        if child.returncode != 0:
-            raise Exception(f'exception - image {image_id}')
-            print("returncode:",child.returncode)
-            print("output:",output)
-            print("error:",error)
+        # if child.returncode != 0:
+        #     raise Exception(f'exception - image {image_id}')
+        #     print("returncode:",child.returncode)
+        #     print("output:",output)
+        #     print("error:",error)
     except TimeoutExpired:
 
         child.kill()
