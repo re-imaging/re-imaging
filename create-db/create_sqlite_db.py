@@ -20,7 +20,7 @@ try:
     # create images table
     c.execute('''
         CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
-        filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
+        filesize INT, path TEXT, x INT, y INT, imageformat TEXT, creator TEXT)
     ''')
 
     # create captions table
