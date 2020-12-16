@@ -1,6 +1,9 @@
 #ignore log files
 *log*.txt
 
+#ignore .dat files
+*.dat
+
 #ignore filepath text files
 *filelist*.txt
 *filenames*.txt
