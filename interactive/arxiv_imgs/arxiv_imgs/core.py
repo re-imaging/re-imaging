@@ -21,7 +21,12 @@ import numpy as np
 import random
 import math
 
-NUM_INDEXES = 600000
+from guppy import hpy
+h = hpy()
+# print(h.heap())
+
+# NUM_INDEXES = 600000
+NUM_INDEXES = 1200000
 NIMAGES = 100
 
 image_list = "/home/rte/data/paths/all_images_shuf.txt"
@@ -34,6 +39,8 @@ for l in lines[:NUM_INDEXES]:
     substring = l.split(".jpg")[0]
     filepaths.append(substring)
     # image_ids.append(substrings[1].strip())
+# print("length of filepaths:", len(filepaths))
+# del lines
 
 # db = get_db()
 # c = db.cursor()
@@ -138,19 +145,28 @@ def get_random_images():
             if embedding == "VGG16":
                 ann_filepath = "/home/rte/re-imaging/interactive/600k_vgg_ipca.ann"
             elif embedding == "raw":
-                ann_filepath = "/home/rte/re-imaging/interactive/600k_raw.ann"
+                ann_filepath = "/home/rte/re-imaging/interactive/1200k_raw.ann"
+                # ann_filepath = "/home/rte/re-imaging/interactive/600k_raw.ann"
             elif embedding == "ternary":
                 ann_filepath = "/home/rte/re-imaging/interactive/600k_ternary.ann"
-            else:
-                ann_filepath = "/home/rte/re-imaging/interactive/600k_vgg_ipca.ann"
+            # else:
+                # ann_filepath = "/home/rte/re-imaging/interactive/600k_vgg_ipca.ann"
 
+            # print(h.heap())
             ann.load(ann_filepath)
+            # print(h.heap())
 
             target_index = filepaths.index(image_id)
             indexes = ann.get_nns_by_item(target_index, NIMAGES)
             print("indexes:", indexes)
+
+            # ann = None
+
+            # print(h.heap())
+
             images = np.array(filepaths)[np.array(indexes)]
-            print("target_images:",images)
+            print("target_images:", len(images))
+            print(images)
 
             result_total = None
 
@@ -211,6 +227,7 @@ def get_random_images():
             items = [str(r) for r in row]
             # print(items)
             metadata.append(items)
+    print("metadata length:", len(metadata))
     print(metadata)
 
     # print("calling return render_template, with images:", images)
@@ -220,7 +237,9 @@ def get_random_images():
         images_shown = min(NIMAGES, result_total)
     print("images_shown:", images_shown)
 
-    print("calling return render_template, with images:", images)
+    # print(h.heap())
+    print("embedding:", embedding)
+    print(f'calling return render_template, with {len(images)} images: {images}')
     return render_template('core/opening.html', images=images, metadata=metadata,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
                             images_shown=images_shown, embedding=embedding)

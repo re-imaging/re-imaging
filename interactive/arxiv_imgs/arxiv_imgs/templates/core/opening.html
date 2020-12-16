@@ -24,7 +24,7 @@
     <div class="form-group mr-2">
       <form name="search" method="post">
         <h2><small>Search via machine learning embedding:</small></h2>
-    		<select class="custom-select mt-2 mb-2 mr-2" name="embedding" id="embedding" onchange="$('#search-images').trigger('click')">
+    		<select class="custom-select mt-2 mb-2 mr-2" name="embedding" id="embedding">
           <option value="VGG16">VGG16</option>
           <option value="raw">raw</option>
           <option value="ternary">ternary</option>
@@ -204,12 +204,13 @@
         // trigger: 'click',
       });
       {% if prev_image_id %}
-      $("#image_id").val({{prev_image_id}});
+      $("#image_id").val( {{ prev_image_id }} );
       {% endif %}
 
       {% if embedding %}
-      console.log({{embedding}})
-      $("#embedding").val( {{ embedding }} );
+      console.log({{embedding|tojson}})
+      var emVal = {{embedding|tojson}}
+      $("#embedding").val(emVal);
       {% endif %}
     });
 

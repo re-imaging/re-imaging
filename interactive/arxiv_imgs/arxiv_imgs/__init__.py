@@ -3,13 +3,24 @@ import os
 from flask import Flask
 from flask import render_template
 
+import sys
+import resource
+
+def memory_limit():
+    max_mem = 4 * 1000000000 # Gigabytes
+    soft, hard = resource.getrlimit(resource.RLIMIT_AS)
+    print(f'memory limits - soft: {soft} - hard: {hard}')
+    resource.setrlimit(resource.RLIMIT_AS, (max_mem, hard))
+memory_limit()
+
 def create_app(test_config=None):
     """Create and configure the Flask app."""
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev',
         # DATABASE=os.path.join(app.instance_path, 'arxiv_interactive.sqlite'),
-        DATABASE=os.path.join("/home/rte/data/db/", "arxiv_db_images_600k.sqlite3")
+        # DATABASE=os.path.join("/home/rte/data/db/", "arxiv_db_images_600k.sqlite3")
+        DATABASE=os.path.join("/home/rte/data/db/", "arxiv_db_images.sqlite3")
     )
 
     if test_config is None:
