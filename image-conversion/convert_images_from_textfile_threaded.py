@@ -34,7 +34,9 @@ args = parser.parse_args()
 
 if args.web:
     prearg = shlex.split("")
-    arguments = shlex.split("-colorspace sRGB -resize 300x300^>") # note added ">" to not increase size
+    # arguments = shlex.split("-colorspace sRGB -resize 300x300^>") # NB: added ">" to not increase size
+    # version with more optimizations for web
+    arguments = shlex.split("-strip -resize 300x300^> -sampling-factor 4:2:0 -quality 85 -colorspace sRGB") # -interlace Plane -gaussian-blur 0.05
 else:
     arguments = shlex.split("-colorspace sRGB -background white -alpha background -trim +repage -flatten -resize 512x512^>")
     if args.lowdensity:
