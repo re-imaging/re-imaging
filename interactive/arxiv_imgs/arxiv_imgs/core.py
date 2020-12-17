@@ -21,12 +21,14 @@ import numpy as np
 import random
 import math
 
+import time
+
 from guppy import hpy
 h = hpy()
 # print(h.heap())
 
-# NUM_INDEXES = 600000
-NUM_INDEXES = 1200000
+NUM_INDEXES = 600000
+# NUM_INDEXES = 1200000
 NIMAGES = 100
 
 image_list = "/home/rte/data/paths/all_images_shuf.txt"
@@ -40,7 +42,6 @@ for l in lines[:NUM_INDEXES]:
     filepaths.append(substring)
     # image_ids.append(substrings[1].strip())
 # print("length of filepaths:", len(filepaths))
-# del lines
 
 # db = get_db()
 # c = db.cursor()
@@ -53,40 +54,6 @@ for l in lines[:NUM_INDEXES]:
 
 bp = Blueprint("core", __name__, url_prefix="/core")
 
-# def eprint(*args, **kwargs):
-#     print(*args, file=sys.stderr, **kwargs)
-
-# @bp.route("/connect")
-# def get_connecting_images(images):
-#     print(images)
-#     return render_template('core/connect.html', images=images)
-
-
-# @bp.route("/<int:id>", methods=["GET", "POST"])
-# def get_nn(image_id):
-#     """Get images using annoy and then show to user."""
-#     if request.method == "POST":
-#         image_id = request.form.get("image_id")
-#
-#         # try:
-#         print("image id:", image_id)
-#         print("get annoy indexes and pull images")
-#
-#         ann = AnnoyIndex(300, 'angular')
-#         ann.load("/home/rte/re-imaging/interactive/600k_vgg_ipca.ann")
-#
-#         target_index = filepaths.index(image_id + ".jpg")
-#         indexes = ann.get_nns_by_item(target_index, NIMAGES)
-#         print("indexes:", indexes)
-#         images = np.array(filepaths)[np.array(indexes)]
-#         print("target_images:",images)
-
-# @bp.route("/filter", methods=["GET", "POST"])
-# def get_filtered_images():
-#
-#     return render_template('core/opening.html', images=images, metadata=metadata,
-#                             enumerate=enumerate, prev_image_id=image_id)
-
 @bp.route("/interface", methods=["GET", "POST"])
 def get_random_images():
     """If the user has selected an image, grab annoy results.
@@ -94,59 +61,44 @@ def get_random_images():
     """
 
     embedding = request.form.get("embedding")
+    print("embedding:", embedding)
+    author = request.form.get("author")
+    print("author:",author)
+    category = request.form.get("category")
+    print("category:",category)
+    image_id = request.form.get("image_id")
+    print("image_id:", image_id)
 
-    if request.method == "POST":
+    # if no selected image, just get random indexes
+    # else use annoy to find indexes
+    # then filter using SQLite search
+    # then get metadata for each image
+
+    if not image_id:
+        print("image_id empty:", image_id, "getting random indexes")
+        rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
+        images = [filepaths[i] for i in rand_nums]
+        # print("random images", images)
+
+        image_id = None
+        result_total = None
+        embedding = None
+    elif request.method == "POST":
         print("name of button: ", request.form.get("btn"))
 
-        if request.form.get("btn") == "filter-images":
-            db = get_db()
-            c = db.cursor()
-
-            images = []
-
-            author = request.form.get("author")
-            print("author:",author)
-            category = request.form.get("category")
-            print("category:",category)
-
-            sql = """
-                    SELECT images.id
-                    FROM images
-                    LEFT JOIN metadata on images.identifier = metadata.identifier
-                    WHERE metadata.authors LIKE ?
-                    AND metadata.cat LIKE ?
-                    """
-            # if author or category:
-            #     sql = sql + "WHERE"
-
-            c.execute(sql, ("%"+author+"%", category+"%"))
-            rows = c.fetchall()
-            result_total = len(rows)
-
-            for row in rows[:NIMAGES]:
-                images.append(str(row[0])) # = [str(r) for r in row]
-            print(images)
-            # metadata.append(items)
-
-            image_id = None
-
-        elif request.form.get("btn") == "search-images":
-            image_id = request.form.get("image_id")
-
-            # try:
+        if request.form.get("btn") == "search-images":
             print("image id:", image_id)
             print("get annoy indexes and pull images")
 
-            ann = AnnoyIndex(300, 'angular')
+            start = time.time()
 
-            # embedding = request.form.get("embedding")
-            print("embedding:", embedding)
+            ann = AnnoyIndex(300, 'angular')
 
             if embedding == "VGG16":
                 ann_filepath = "/home/rte/re-imaging/interactive/600k_vgg_ipca.ann"
             elif embedding == "raw":
-                ann_filepath = "/home/rte/re-imaging/interactive/1200k_raw.ann"
-                # ann_filepath = "/home/rte/re-imaging/interactive/600k_raw.ann"
+                # ann_filepath = "/home/rte/re-imaging/interactive/1200k_raw.ann"
+                ann_filepath = "/home/rte/re-imaging/interactive/600k_raw.ann"
             elif embedding == "ternary":
                 ann_filepath = "/home/rte/re-imaging/interactive/600k_ternary.ann"
             # else:
@@ -156,89 +108,130 @@ def get_random_images():
             ann.load(ann_filepath)
             # print(h.heap())
 
+            print(f'loading AnnoyIndex, time taken {time.time() - start}')
+
+            start = time.time()
+
+            nindexes = NIMAGES
+            if author or category:
+                nindexes = 100000
+
             target_index = filepaths.index(image_id)
-            indexes = ann.get_nns_by_item(target_index, NIMAGES)
-            print("indexes:", indexes)
-
-            # ann = None
-
-            # print(h.heap())
+            indexes = ann.get_nns_by_item(target_index, nindexes) # NIMAGES
+            # print(f'indexes total {len(indexes)}: {indexes}')
 
             images = np.array(filepaths)[np.array(indexes)]
-            print("target_images:", len(images))
-            print(images)
+            # print("target_images:", len(images))
+            # print(images)
+
+            print(f'getting indexes, time taken {time.time() - start}')
 
             result_total = None
 
-            # return render_template('core/opening.html', images=images)
-            # return render_template('core/opening.html', images=target_images)
-            # return redirect(url_for("core.get_random_images", images=images))
-            # return redirect(url_for("core.get_connecting_images", images=target_images))
-            # print("does it get to here?")
-            # except:
-            #     # return error
-            #     print("error getting results")
+            # previous filter-images code
 
-            # db = get_db()
-            # c = db.cursor()
-            # metadata = []
-            # for i in images:
-            #     print("i:",i)
-            #     c.execute("SELECT identifier, filename, x, y, imageformat, creator FROM images WHERE id IS ?", i)
-            #     rows = c.fetchall()
-            #     metadata.append(rows)
-            # print(metadata)
-            #
-            # print("calling return render_template, with images:", images)
-            # return render_template('core/opening.html', images=images, metadata=metadata, enumerate=enumerate)
+            # if request.form.get("btn") == "filter-images":
+    if author or category:
+        start = time.time()
+
+        print("there is either an author or category, running filter")
+        db = get_db()
+        c = db.cursor()
+
+        sql = """
+                SELECT images.id
+                FROM images
+                LEFT JOIN metadata on images.identifier = metadata.identifier
+                WHERE metadata.authors LIKE ?
+                AND metadata.cat LIKE ?
+                """
+        # if author or category:
+        #     sql = sql + "WHERE"
+
+        c.execute(sql, ("%"+author+"%", category+"%"))
+        rows = c.fetchall()
+        result_total = len(rows)
+        # print(rows)
+
+        found = [row[0] for row in rows]
+        print(f'querying SQLite for search terms, time taken {time.time() - start}')
+        # print("found:", len(found), found)
+
+        start = time.time()
+
+        matches = []
+        for im in images[:]: # NIMAGES
+            # print("image:", type(im), im)
+            # if np.any(np.array(found) == im):
+
+            if len(matches) >= NIMAGES:
+                break
+
+            # for f in found:
+            if int(im) in found:
+                # print(f)
+                # if int(im) == f:
+                    # print(f'match! {im} in found!')
+                matches.append(im)
+                    # break
+                # if len(images) >= NIMAGES:
+                #     break
+                # images.append(str(row[0])) # = [str(r) for r in row]
+        print("len(matches):", len(matches))
+        images = matches[:NIMAGES]
+        # print(images)
+        print(f'filtering for matches, time taken {time.time() - start}')
+        # metadata.append(items)
+
+        # image_id = None
 
         # elif request.form.get("btn") == "search-features":
 
-    else:
-        # db = get_db()
-        # c = db.cursor()
-        #
-        # load images from db
-        # c.execute("SELECT id FROM metadata ORDER BY RANDOM() LIMIT 60")
-        # rows = c.fetchall()
-        # images = [str(x[0]) + ".jpg" for x in rows]
-        # print("number of rows:",len(rows))
-
-        # load images from text file
-        rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
-        images = [filepaths[i] for i in rand_nums]
-        print("random images", images)
-
-        image_id = None
-
-        result_total = None
+    # else:
+    #     # load images from text file
+    #     rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
+    #     images = [filepaths[i] for i in rand_nums]
+    #     print("random images", images)
+    #
+    #     image_id = None
+    #     result_total = None
+    #     embedding = None
 
     # only run the below code if we haven't already grabbed the database stuff?
-    # if not metadata:
+    start = time.time()
+
     db = get_db()
     c = db.cursor()
     metadata = []
 
+    meta_sql = """
+                SELECT images.identifier, filename, x, y, imageformat, creator,
+                metadata.created, metadata.cat, metadata.authors, metadata.title
+                FROM images
+                LEFT JOIN metadata ON images.identifier == metadata.identifier
+                WHERE images.id IS ?
+                """
+
     for i in images:
         # print("i:",i)
-        c.execute("SELECT identifier, filename, x, y, imageformat, creator FROM images WHERE id IS ?", (i,))
+        c.execute(meta_sql, (i,))
         rows = c.fetchall()
         for row in rows:
             items = [str(r) for r in row]
             # print(items)
             metadata.append(items)
     print("metadata length:", len(metadata))
-    print(metadata)
+    # print(metadata)
 
-    # print("calling return render_template, with images:", images)
-    # return render_template('core/opening.html', images=images, metadata=metadata, enumerate=enumerate)
+    print(f'querying metadata, time taken {time.time() - start}')
+
     images_shown = None
     if result_total:
         images_shown = min(NIMAGES, result_total)
     print("images_shown:", images_shown)
 
     # print(h.heap())
-    print("embedding:", embedding)
+    # print("embedding:", embedding)
     print(f'calling return render_template, with {len(images)} images: {images}')
     return render_template('core/opening.html', images=images, metadata=metadata,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
