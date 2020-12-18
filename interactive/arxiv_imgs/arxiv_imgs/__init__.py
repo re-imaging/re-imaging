@@ -7,7 +7,7 @@ import sys
 import resource
 
 def memory_limit():
-    max_mem = 4 * 1000000000 # Gigabytes
+    max_mem = 8 * 1000000000 # Gigabytes
     soft, hard = resource.getrlimit(resource.RLIMIT_AS)
     print(f'memory limits - soft: {soft} - hard: {hard}')
     resource.setrlimit(resource.RLIMIT_AS, (max_mem, hard))

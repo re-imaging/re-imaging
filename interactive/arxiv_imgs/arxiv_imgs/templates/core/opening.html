@@ -14,16 +14,16 @@
   </body>
   {% endif %}
 
-  <div id="selected-block">
-    <div id="selected_image" class="img-responsive"
+  <div id="selected-block" class="row" style="border: ">
+    <div id="selected_image" class="img-responsive col-md-6"
     style="display: block; overflow: hidden; width: 300px; height: 0px;
             margin-left: 0; margin-right: auto;
             background-color: #ffffff; margin: 12px; padding: 12px;">
     </div>
-    <div id="selected-image-meta" style="display: block;"></div>
+    <div id="selected-image-meta" class="col-md-6" style="display: block;"></div>
   </div>
 
-  {{ prev_image_id }}
+  <!-- {{ prev_image_id }} -->
 
   <!-- <h2>Selected image:</h2> -->
   <div class="form-inline">
@@ -43,6 +43,24 @@
           <label for="category">Category</label>
           <input type="text" name="category" id="category">
         </div>
+        <div class="imageformat-dropdown" style="max-width: 600px;">
+          <label for="imageformat">Image format</label>
+          <select type="text" name="imageformat" id="imageformat">
+            <option value=""></option>
+            <option value="PNG">PNG</option>
+            <option value="PDF">PDF</option>
+            <option value="JP">JPG/JPEG</option>
+            <option value="GIF">GIF</option>
+            <option value="SVG">SVG</option>
+            <option value="PS">PS</option>
+            <option value="EPS">EPS</option>
+          </select>
+        </div>
+        <div class="prediction" style="max-width: 600px;">
+          <label for="prediction">Prediction</label>
+          <input type="text" name="prediction" id="prediction">
+        </div>
+
         <!-- date goes here -->
         <label for="author">Author</label>
         <input name="author" id="author">
@@ -75,10 +93,15 @@
 
   <div class="grid">
     {% for i, image in enumerate(images) %}
+      {% if metadata[i][8]|length > 100 %}
+        {% set authors_short = metadata[i][8].split(";")[0] + " et al" %}
+      {% else %}
+        {% set authors_short = metadata[i][8] %}
+      {% endif %}
       <div style="max-width: 224px" class="grid-item" image_id={{image.split(".")[0]}}>
         <img class="grid-item-img" src={{url_for("static", filename="all/"+image+".jpg")}}
           title="metadata" data-toggle="popover" data-html="true" data-trigger="hover"
-          data-content="{{ "<b>-- Image<br>identifier:</b> {}<br><b>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>-- Paper<br>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}".format(metadata[i][0], metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], metadata[i][6], metadata[i][7], metadata[i][8], metadata[i][9])|e }}">
+          data-content="{{ "<b>-- Image<br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b> {}<br><br><b>-- Paper<br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], metadata[i][10], metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9])|e }}">
       </div>
     {%- endfor %}
   </div>
@@ -128,12 +151,12 @@
     $( document ).ready(function() {
       console.log("prev_image_id not empty: " + {{ prev_image_id }});
       var img_src = {{url_for("static", filename="all/"+prev_image_id+".jpg")|tojson}};
-      // var img_data = $(this).attr("data-content");
-      show_selected(img_src, "test");
+      var img_data = {{ "<b>-- Image<br>identifier:</b> {}<br><b>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b> {}<br><br><b>-- Paper<br>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}".format(si_meta[0], si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_meta[10], si_meta[6], si_meta[7], si_meta[8], si_meta[9])|tojson }}
+      show_selected(img_src, img_data);
     });
     {% endif %}
 
-    $('#category').selectize({
+    var $select = $('#category').selectize({
         delimiter: ',',
         persist: false,
         maxItems: 8,
@@ -166,6 +189,13 @@
             }
         }
     });
+    var selectize = $select[0].selectize;
+
+    var $ifSelect = $('#imageformat').selectize({
+        create: true,
+        sortField: 'text'
+    });
+    var ifSelectize = $ifSelect[0].selectize;
 
     // $('.input').keypress(function (e) {
     //   if (e.which == 13) {
@@ -213,9 +243,35 @@
       {% endif %}
 
       {% if embedding %}
-      console.log({{embedding|tojson}})
-      var emVal = {{embedding|tojson}}
+      console.log({{embedding|tojson}});
+      var emVal = {{embedding|tojson}};
       $("#embedding").val(emVal);
+      {% endif %}
+
+      {% if category %}
+      console.log({{category|tojson}});
+      var catVal = {{category|tojson}};
+      selectize.setValue(catVal.split(","), 1);
+      {% endif %}
+      // selectize.setValue(["cs.CV","astro-ph.GA"], 1);
+
+      {% if imageformat %}
+      console.log({{imageformat|tojson}});
+      var imVal = {{imageformat|tojson}};
+      ifSelectize.setValue(imVal, 1);
+      {% endif %}
+      // selectize.setValue(["cs.CV","astro-ph.GA"], 1);
+
+      {% if author %}
+      console.log({{author|tojson}});
+      var authorVal = {{author|tojson}};
+      $("#author").val(authorVal);
+      {% endif %}
+
+      {% if prediction %}
+      console.log({{prediction|tojson}});
+      var predVal = {{prediction|tojson}};
+      $("#prediction").val(predVal);
       {% endif %}
     });
 
@@ -240,7 +296,7 @@
     // });
 
   $('#container').imagesLoaded()
-      .always( function( instance ) {
+    .always( function( instance ) {
       console.log('all images loaded');
     })
     .done( function( instance ) {

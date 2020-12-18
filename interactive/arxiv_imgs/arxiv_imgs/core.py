@@ -10,8 +10,8 @@ from flask import render_template
 from flask import request
 from flask import session
 from flask import url_for
-from werkzeug.security import check_password_hash
-from werkzeug.security import generate_password_hash
+# from werkzeug.security import check_password_hash
+# from werkzeug.security import generate_password_hash
 
 from flaskr.db import get_db
 
@@ -66,6 +66,10 @@ def get_random_images():
     print("author:",author)
     category = request.form.get("category")
     print("category:",category)
+    imageformat = request.form.get("imageformat")
+    print("imageformat:",imageformat)
+    prediction = request.form.get("prediction")
+    print("prediction:",prediction)
     image_id = request.form.get("image_id")
     print("image_id:", image_id)
 
@@ -75,14 +79,17 @@ def get_random_images():
     # then get metadata for each image
 
     if not image_id:
-        print("image_id empty:", image_id, "getting random indexes")
-        rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
-        images = [filepaths[i] for i in rand_nums]
+        print("image_id:", image_id, "- getting random indexes")
+        # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
+        # images = [filepaths[i] for i in rand_nums]
+        images = filepaths
+        random.shuffle(images)
         # print("random images", images)
 
         image_id = None
-        result_total = None
         embedding = None
+        result_total = None
+        images_shown = None
     elif request.method == "POST":
         print("name of button: ", request.form.get("btn"))
 
@@ -127,14 +134,17 @@ def get_random_images():
             print(f'getting indexes, time taken {time.time() - start}')
 
             result_total = None
+            images_shown = NIMAGES
 
             # previous filter-images code
 
             # if request.form.get("btn") == "filter-images":
-    if author or category:
+
+    # filter
+    if author or category or imageformat or prediction:
         start = time.time()
 
-        print("there is either an author or category, running filter")
+        print("there are filter arguments, running filter")
         db = get_db()
         c = db.cursor()
 
@@ -144,11 +154,31 @@ def get_random_images():
                 LEFT JOIN metadata on images.identifier = metadata.identifier
                 WHERE metadata.authors LIKE ?
                 AND metadata.cat LIKE ?
+                AND imageformat LIKE ?
+                AND vggpred LIKE ?
                 """
-        # if author or category:
-        #     sql = sql + "WHERE"
+        # search_count = 0
+        # if author:
+        #     sql += " metadata.authors LIKE ?"
+        #     search_count += 1
+        # if category:
+        #     if search_count > 0: sql += " AND"
+        #     sql += " metadata.cat LIKE ?"
+        #     search_count += 1
+        # if imageformat:
+        #     if search_count > 0: sql += " AND"
+        #     sql += " imageformat LIKE ?"
+        #     search_count += 1
+        # if category:
+        #     if search_count > 0: sql += " AND"
+        #     sql += " vggpred LIKE ?"
+        #     search_count += 1
+        # print("printing sql")
+        # print(sql)
 
-        c.execute(sql, ("%"+author+"%", category+"%"))
+        print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
+
+        c.execute(sql, ("%"+author+"%", category+"%", imageformat+"%", prediction+"%"))
         rows = c.fetchall()
         result_total = len(rows)
         # print(rows)
@@ -179,6 +209,7 @@ def get_random_images():
                 # images.append(str(row[0])) # = [str(r) for r in row]
         print("len(matches):", len(matches))
         images = matches[:NIMAGES]
+        images_shown = len(images)
         # print(images)
         print(f'filtering for matches, time taken {time.time() - start}')
         # metadata.append(items)
@@ -187,26 +218,19 @@ def get_random_images():
 
         # elif request.form.get("btn") == "search-features":
 
-    # else:
-    #     # load images from text file
-    #     rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
-    #     images = [filepaths[i] for i in rand_nums]
-    #     print("random images", images)
-    #
-    #     image_id = None
-    #     result_total = None
-    #     embedding = None
-
-    # only run the below code if we haven't already grabbed the database stuff?
     start = time.time()
 
+    images = images[:NIMAGES]
+
+    # only run the below code if we haven't already grabbed the database stuff?
     db = get_db()
     c = db.cursor()
     metadata = []
 
     meta_sql = """
                 SELECT images.identifier, filename, x, y, imageformat, creator,
-                metadata.created, metadata.cat, metadata.authors, metadata.title
+                metadata.created, metadata.cat, metadata.authors, metadata.title,
+                images.vggpred
                 FROM images
                 LEFT JOIN metadata ON images.identifier == metadata.identifier
                 WHERE images.id IS ?
@@ -225,17 +249,27 @@ def get_random_images():
 
     print(f'querying metadata, time taken {time.time() - start}')
 
-    images_shown = None
-    if result_total:
-        images_shown = min(NIMAGES, result_total)
+    # images_shown = None
+    # if result_total:
+    #     images_shown = min(images_shown, result_total)
     print("images_shown:", images_shown)
 
+    si_meta = None
+    if image_id:
+        c.execute(meta_sql, (image_id,))
+        rows = c.fetchall()
+        # for row in rows:
+        si_meta = [str(r) for r in rows[0]]
+            # si_meta = [row[0] for row in rows]
+        print("si_meta:", si_meta)
+
     # print(h.heap())
-    # print("embedding:", embedding)
     print(f'calling return render_template, with {len(images)} images: {images}')
     return render_template('core/opening.html', images=images, metadata=metadata,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
-                            images_shown=images_shown, embedding=embedding)
+                            images_shown=images_shown, embedding=embedding, si_meta=si_meta,
+                            category=category, author=author, imageformat=imageformat,
+                            prediction=prediction)
 
 @bp.route('/test')
 def get_test_image():
