@@ -38,9 +38,9 @@
         <label for="image_id">Target image</label>
         <input for="image_id" name="image_id" id="image_id">
 
-        <!-- <h2><small>Filter results:</small></h2> -->
+        <h2><small>Include filters:</small></h2>
         <div class="category-dropdown" style="max-width: 600px;">
-          <label for="category">Category</label>
+          <label for="category">arXiv Category</label>
           <input type="text" name="category" id="category">
         </div>
         <div class="imageformat-dropdown" style="max-width: 600px;">
@@ -64,7 +64,7 @@
         <!-- date goes here -->
         <label for="author">Author</label>
         <input name="author" id="author">
-
+        <br>
         <input type="submit" class="btn btn-light mt-2 mb-2 mr-2" name="btn" value="search-images" id="search-images">
       </form>
       {% if result_total %}
