@@ -26,3 +26,437 @@
 .popover {
   max-width:600px;
 }
+
+section.content {
+  margin: 10px 20px;
+}
+
+#selected-block {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index:100;
+
+  /* background: #AAA; */
+  background: #EEE;
+  padding: 8px;
+  border: solid 1px gray;
+  margin: 2em 0 2em 0;
+}
+
+#main-form {
+  margin: 2em 0;
+}
+
+div .grid {
+  border-top: solid 1px black;
+}
+
+
+/* rounded sliders */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+
+  /* border: solid 2px black; */
+  vertical-align: baseline;
+
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* search */
+#search-images {
+  background-color: #7fc8f0;
+  border: solid 1px black;
+  font-weight: bold;
+  /* height: 4em; */
+  /* width: 12em; */
+  /* margin-top: 2em; */
+}
+#search-images:hover {
+  background-color: PowderBlue;
+  /* CornflowerBlue */
+  /* border: solid 1px DarkOrange; */
+  /* font-weight: bold; */
+  /* height: 4em; */
+  /* width: 12em; */
+}
+
+div #search-button-div {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#image_id,
+#image_id_label {
+  /* display: none; */
+}
+
+div #search-mode-form {
+  margin-bottom: 2em;
+}
+
+/* toggle */
+/* body { padding: 30px; } */
+.ic-Super-toggle__label {
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.ic-Form-group.ic-Form-group--horizontal .ic-Super-toggle__label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.ic-Super-toggle__input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ic-Super-toggle__input:checked ~ label .ic-Super-toggle-switch:after {
+  transform: translate3d(100%, 0, 0);
+}
+.ic-Super-toggle__input:checked ~ label .ic-Super-toggle__disabled-msg:before {
+  content: attr(data-checked);
+}
+.ic-Super-toggle__input[disabled] ~ label .ic-Super-toggle__disabled-msg {
+  display: block;
+}
+.ic-Super-toggle__input[disabled] ~ label .ic-Super-toggle-switch,
+.ic-Super-toggle__input[disabled] ~ label [class^=ic-Super-toggle-option-] {
+  display: none;
+}
+
+.ic-Super-toggle-switch {
+  transition: background 0.1s, border-color 0.1s;
+  display: inline-block;
+  position: relative;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  background-clip: padding-box;
+}
+.ic-Super-toggle-switch::after {
+  transition: all 0.1s ease-in-out;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate3d(0, 0, 0);
+  border-radius: 100%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+  background-image: url("https://cl.ly/320m31452k2X/handle.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 20px;
+}
+
+.ic-Super-toggle__disabled-msg {
+  display: none;
+}
+.ic-Super-toggle__disabled-msg:before {
+  content: attr(data-unchecked);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+[class^=ic-Super-toggle-option-] {
+  transition: opacity 0.2s, transform 0.2s;
+  flex: 0 0 50%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1;
+  speak: none;
+  box-sizing: border-box;
+}
+
+.ic-Super-toggle__screenreader {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+.ic-Super-toggle--on-off {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:focus ~ label .ic-Super-toggle-switch::after {
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px #333, 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-switch {
+  background: #009b16;
+  border-color: #009b16;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-LEFT {
+  color: white;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-LEFT .ic-Super-toggle__svg > * {
+  fill: white;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-RIGHT {
+  color: white;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-RIGHT .ic-Super-toggle__svg > * {
+  fill: white;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:checked:focus ~ label .ic-Super-toggle-switch::after {
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px #009b16, 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.ic-Super-toggle--on-off .ic-Super-toggle-switch {
+  width: 66px;
+  height: 33px;
+  background: #333;
+  border: 2px solid #333;
+  border-radius: 18.5px;
+}
+.ic-Form-group.ic-Form-group--horizontal .ic-Super-toggle--on-off .ic-Super-toggle-switch {
+  flex: 0 0 66px;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle-switch:after {
+  background-color: white;
+  width: 33px;
+  height: 33px;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle-option-LEFT {
+  color: white;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle-option-LEFT .ic-Super-toggle__svg > * {
+  fill: white;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle-option-RIGHT {
+  color: white;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle-option-RIGHT .ic-Super-toggle__svg > * {
+  fill: white;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__svg {
+  max-width: 16.5px;
+  max-height: 16.5px;
+}
+.ic-Super-toggle--on-off [class^=ic-Super-toggle-option-] {
+  transition-delay: 0.1s;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle-option-LEFT {
+  opacity: 0;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle-option-RIGHT {
+  opacity: 1;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-LEFT {
+  opacity: 1;
+}
+.ic-Super-toggle--on-off .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-RIGHT {
+  opacity: 0;
+}
+
+.ic-Super-toggle--ui-switch {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:focus ~ label .ic-Super-toggle-switch::after {
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px #333, 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-switch {
+  background: #333;
+  border-color: #333;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-LEFT {
+  color: #253138;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-LEFT .ic-Super-toggle__svg > * {
+  fill: #253138;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-RIGHT {
+  color: #00ac19;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-RIGHT .ic-Super-toggle__svg > * {
+  fill: #00ac19;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:checked:focus ~ label .ic-Super-toggle-switch::after {
+  box-shadow: inset 0 0 0 1px white, inset 0 0 0 3px #333, 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-switch {
+  width: 66px;
+  height: 33px;
+  background: #333;
+  border: 2px solid #333;
+  border-radius: 18.5px;
+}
+.ic-Form-group.ic-Form-group--horizontal .ic-Super-toggle--ui-switch .ic-Super-toggle-switch {
+  flex: 0 0 66px;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-switch:after {
+  background-color: white;
+  width: 33px;
+  height: 33px;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-option-LEFT {
+  color: #da062a;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-option-LEFT .ic-Super-toggle__svg > * {
+  fill: #da062a;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-option-RIGHT {
+  color: #253138;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-option-RIGHT .ic-Super-toggle__svg > * {
+  fill: #253138;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__svg {
+  max-width: 16.5px;
+  max-height: 16.5px;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__label {
+  display: inline-flex;
+  align-items: center;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-switch {
+  display: block;
+}
+.ic-Super-toggle--ui-switch [class^=ic-Super-toggle-option-] {
+  flex: none;
+  min-width: 24px;
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-option-LEFT {
+  text-align: left;
+  transform: scale(1.1);
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle-option-RIGHT {
+  text-align: right;
+  transform: scale(0.9);
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-LEFT {
+  transform: scale(0.9);
+}
+.ic-Super-toggle--ui-switch .ic-Super-toggle__input:checked ~ label .ic-Super-toggle-option-RIGHT {
+  transform: scale(1.1);
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+  color: #253138;
+}
+
+.app-header {
+  flex: 0 0 34%;
+  box-sizing: border-box;
+  padding: 24px;
+  background: #222;
+  color: white;
+}
+.app-header h1 {
+  margin: 0 0 24px;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #009b16;
+}
+.app-header li {
+  margin: 0 0 12px;
+}
+
+.app-main {
+  box-sizing: border-box;
+  flex: 1;
+  padding: 24px;
+}
+
+.app-table {
+  width: 100%;
+}
+.app-table th {
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  padding: 8px;
+}
+.app-table td {
+  padding: 18px 8px;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+.app-table tr td:first-of-type {
+  width: 34%;
+}
+
+/* form formatting */
+#random-text {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+#embedding-text {
+  display: inline-block;
+  margin-left: 0.5em;
+}
