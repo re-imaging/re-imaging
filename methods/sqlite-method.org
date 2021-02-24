@@ -1,4 +1,4 @@
-
+#+OPTIONS: ^:nil
 * Setting Up SQLite Database
 Instructions for creating, populating and querying the database for arXiv images.
 
@@ -141,7 +141,7 @@ In order to index the images with their associated article metadata, we created 
 
 For our purposes, we used a primary key of a unique number, and inserted the identifier, date created, categories, authors, title, abstract, and licence. 
 
-The oai_to_sqlite.py script accesses a folder of Metha-downloaded OAI XML files.
+The =oai_to_sqlite.py= script accesses a folder of Metha-downloaded OAI XML files.
 
 #+BEGIN_SRC bash
 usage: oai_to_sqlite.py [-h] [-v] db_path oai_path
@@ -164,7 +164,7 @@ python oai_to_sqlite.py ~/data/db/arxiv_db.sqlite ~/data/oai/metha/
 
 ** Image metadata
 
-In order to add rows of image data to the database, we searched and iterated over all of the directory structure of the arXiv bulk downloads and gathered metadata directly from each file. We found that an effective way to do this was to use the unix ```find``` command to write all image file paths to a text file, then using those paths to run an identify command (from Imagemagick) to write a number of details to the database. We collected the article identifier, filename, filesize, filepath, x dimension size, y dimension size, and imageformat. This took a number of days to complete, but could be optimised using faster storage media and/or parallel processing.
+In order to add rows of image data to the database, we searched and iterated over all of the directory structure of the arXiv bulk downloads and gathered metadata directly from each file. We found that an effective way to do this was to use the unix =find= command to write all image file paths to a text file, then using those paths to run an identify command (from Imagemagick) to write a number of details to the database. We collected the article identifier, filename, filesize, filepath, x dimension size, y dimension size, and imageformat. This took a number of days to complete, but could be optimised using faster storage media and/or parallel processing.
 
 This is done as a two step process because it will take a long time and it is helpful to be able to restart the process partway. (If you'd like to do it in one step, examples are in create-db/additional.)
 
@@ -215,11 +215,11 @@ Note that a fairly high proportion of images do not have this metadata.
 The /captions/ table was created by iterating through all .tex files and parsing the tex source for figures, captions, and filenames. Our method uses a number of different regular expressions to find particular key parts of the source. This code is specific to this database and unlikely to generalise.
 We grabbed the caption for each figure (if there was one), writing the following fields to the database table: unique caption identifier, arXiv identifier, tex file path, figure number, caption text, figure label, filenames of any images used to create that figure (can be more than 1), and image_ids of these images from the /images/ table.
 
-For details see create-db/get-captions.ipynb and create-db/get-captions.py
+For details see =create-db/get-captions.ipynb= and =create-db/get-captions.py=
 
 Steps:
 - create list of tex files (get-captions.ipynb)
-- run "get-captions.py" script
+- run =get-captions.py= script
 - iterate over each .tex file and parse out captions
 - insert captions into SQLite database
 #+BEGIN_SRC bash
@@ -283,7 +283,7 @@ python get-captions.py ~/data/db/arxiv_db_images.sqlite3 tex_paths_src_update.js
 ** Images
 | 4876126 |  cs0007002 | gouala05.eps     | 145239 | ./0007/cs0007002                                                                                          |  663 | 300 | PS  |
 | 2209549 |  0906.0725 | belleescan_b.eps | 842045 | ./0906/0906.0725                                                                                          | 1450 | 725 | PS  |
-| 6591348 | 1710.10269 | HAT-P-12.pdf     |  78468 | ./1710/1710.10269/figures/figures_from_umserve/chemistry/abundance_change_with_grid_parameter/metallicity |  566 | 406 | PDF |
+| 6591348 | 1710.10269 | HAT-P-12.pdf     |  78468 | =./1710/1710.10269/figures/figures_from_umserve/chemistry/abundance_change_with_grid_parameter/metallicity= |  566 | 406 | PDF |
 
 * Cleaning and fixes
 The database required some cleaning after inserting rows for both metadata and images. Please refer to sqlite-scripts/db_fixes.ipynb
@@ -304,11 +304,11 @@ GROUP BY images.identifier
 ORDER BY count(images.identifier)
 #+END_SRC
 
-For more examples see sqlite-scripts/db-queries.ipynb
+For more examples see =sqlite-scripts/db-queries.ipynb=
 
 ** Building list of all filepaths from SQLite database
 
-Use the ```get_all_image_paths.py``` script to read all entries from the SQLite database, build a list of file paths, and write this into a text file. This allows for ease of use when running other scripts and especially for running scripts that might take a very long time or fail, so that it can be restarted at a known point.
+Use the =get_all_image_paths.py= script to read all entries from the SQLite database, build a list of file paths, and write this into a text file. This allows for ease of use when running other scripts and especially for running scripts that might take a very long time or fail, so that it can be restarted at a known point.
 
 #+BEGIN_SRC bash
 cd sqlite-scripts
