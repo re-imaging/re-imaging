@@ -1,3 +1,6 @@
+#+OPTIONS: broken-links:t
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
 * arXiv Bulk Source Data Process
 
 Process for downloading, extracting, unarchiving, and organising data for usage in machine learning applications or data mining.
@@ -44,7 +47,7 @@ s3cmd get --requester-pays s3://arxiv/src/arXiv_src_manifest.xml
 s3cmd sync --requester-pays --skip-existing --no-check-md5 -v -n s3://arxiv/src/ /path/to/download/folder/ 2>&1 | tee ~/s3cmd_sync_dryrun_log.txt
 
 # sync with md5 check -- !!! this takes a long time !!!
-s3cmd sync --requester-pays -v s3://arxiv/src/ /path/to/download/folder/ 2>&1 | tee ~/s3cmd_log_checkmd5.txt
+# s3cmd sync --requester-pays --skip-existing -v s3://arxiv/src/ /path/to/download/folder/ 2>&1 | tee ~/s3cmd_log_checkmd5.txt
 # sync without check and skipping existing
 s3cmd sync --requester-pays --skip-existing --no-check-md5 -v s3://arxiv/src/ /path/to/download/folder/ 2>&1 | tee ~/s3cmd_log.txt
 #+END_SRC
