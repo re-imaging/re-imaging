@@ -1,23 +1,20 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
 * Image Credits for Figures
 ** About
 This document lists the credits for images used in the paper "Images of the arXiv: reconfiguring large scientific image datasets". There are a number of figures in this paper that use images sampled from arXiv. It was not practical to credit these in the paper due to the large number of images, so the credits are provided here. For montages the credits are listed in order from the top left corner, left to right and top to bottom. For t-SNE images credits unordered due to the images being spatially (re)mapped.
 
-** Contents                                                             :toc:quote:
+#+TOC: headlines 3
+
+** Contents                                                             :toc:quote:noexport:
 #+BEGIN_QUOTE
 - [[#image-credits-for-figures][Image Credits for Figures]]
   - [[#about][About]]
-- [[#credits][Credits]]
-  - [[#montage-4x4-random][montage 4x4 random]]
-  - [[#montage-12x12-random][montage 12x12 random]]
-  - [[#montage-12x12-cscv-october-2018][montage 12x12 cs.CV October 2018]]
-  - [[#montage-12x12-statml-october-2012][montage 12x12 stat.ML October 2012]]
-  - [[#montage-12x12-csai-2012][montage 12x12 cs.AI 2012]]
-  - [[#t-sne-8381-images-cscv-2012][t-SNE 8381 images cs.CV 2012]]
-  - [[#t-sne-2889-images-statml-2012][t-SNE 2889 images stat.ML 2012]]
+  - [[#credits][Credits]]
 #+END_QUOTE
 
-* Credits
-** montage 4x4 random
+** Credits
+*** montage 4x4 random
 1. Ribas, Ignasi; Jordi, Carme; Torra, Jordi: CD Tau: a detached eclipsing binary with a solar-mass companion, 1999, https://arxiv.org/abs/astro-ph/9905110
 2. Tawfik, Abdel Nasser; Diab, Abdel Magied: Generalized Uncertainty Principle and Recent Cosmic Inflation Observations, 2014, https://arxiv.org/abs/1410.7966
 3. Martin, A. D.; Roberts, R. G.; Stirling, W. J.; Thorne, R. S.: Uncertainties of predictions from parton distributions. I: experimental errors, 2002, https://arxiv.org/abs/hep-ph/0211080
@@ -35,7 +32,7 @@ This document lists the credits for images used in the paper "Images of the arXi
 15. Abolfath, M.; MacDonald, A. H.; Radzihovsky, L.: Critical Currents of Ideal Quantum Hall Superfluids, 2003, https://arxiv.org/abs/cond-mat/0305295
 16. Dudík, J.; Zuccarello, F. P.; Aulanier, G.; Schmieder, B.; Démoulin, P.: Expanding and Contracting Coronal Loops as Evidence of Vortex Flows Induced by Solar Eruptions, 2017, https://arxiv.org/abs/1706.04783
 
-** montage 12x12 random
+*** montage 12x12 random
 1. Lazzati, D.; Morsony, B. J.; Margutti, R.; Begelman, M. C.: Photospheric emission as the dominant radiation mechanism in long-duration gamma-ray bursts, 2013, https://arxiv.org/abs/1301.3920
 2. Serpa, Nilo: New Lectures on Supergravity, 2011, https://arxiv.org/abs/1105.3213
 3. Burikham, Piyabut; Panpanich, Sirachak: Effects of Chameleon Scalar Field on Rotation Curves of the Galaxies, 2011, https://arxiv.org/abs/1103.1198
@@ -181,7 +178,7 @@ This document lists the credits for images used in the paper "Images of the arXi
 143. Vollmer, B.; Krichbaum, T. P.; Angelakis, E.; Kovalev, Y. Y.: Quasi-simultaneous multi-frequency observations of inverted-spectrum GPS candidate sources, 2008, https://arxiv.org/abs/0806.3694
 144. Ryskin, M. G.; Drukarev, E. G.; Sadovnikova, V. A.: Nucleon QCD sum rules in instanton medium, 2013, https://arxiv.org/abs/1312.1449
 
-** montage 12x12 cs.CV October 2018
+*** montage 12x12 cs.CV October 2018
 1. Mondal, Arnab Kumar; Dolz, Jose; Desrosiers, Christian: Few-shot 3D Multi-modal Medical Image Segmentation using Generative Adversarial Learning, 2018, https://arxiv.org/abs/1810.12241
 2. Stamatescu, Victor; McDonnell, Mark D.: Diagnosing Convolutional Neural Networks using their Spectral Response, 2018, https://arxiv.org/abs/1810.03241
 3. Cavallari, Tommaso; Golodetz, Stuart; Lord, Nicholas A.; Valentin, Julien; Prisacariu, Victor A.; Di Stefano, Luigi; Torr, Philip H. S.: Real-Time RGB-D Camera Pose Estimation in Novel Scenes using a Relocalisation Cascade, 2018, https://arxiv.org/abs/1810.12163
@@ -327,7 +324,7 @@ This document lists the credits for images used in the paper "Images of the arXi
 143. Ghiasi, Golnaz; Lin, Tsung-Yi; Le, Quoc V.: DropBlock: A regularization method for convolutional networks, 2018, https://arxiv.org/abs/1810.12890
 144. Meng, Lili; Zhao, Bo; Chang, Bo; Huang, Gao; Tung, Frederick; Sigal, Leonid: Where and When to Look? Spatio-temporal Attention for Action Recognition in Videos, 2018, https://arxiv.org/abs/1810.04511
 
-** montage 12x12 stat.ML October 2012
+*** montage 12x12 stat.ML October 2012
 1. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
 2. Kolar, Mladen; Liu, Han; Xing, Eric P.: Graph Estimation From Multi-attribute Data, 2012, https://arxiv.org/abs/1210.7665
 3. Park, Youngser; Priebe, Carey E.; Youssef, Abdou: Anomaly Detection in Time Series of Graphs using Fusion of Graph Invariants, 2012, https://arxiv.org/abs/1210.8429
@@ -472,7 +469,7 @@ This document lists the credits for images used in the paper "Images of the arXi
 142. Hage, Clemens; Kleinsteuber, Martin: Robust PCA and subspace tracking from incomplete observations using L0-surrogates, 2012, https://arxiv.org/abs/1210.0805
 143. Zhang, Youwei; Ghaoui, Laurent El: Large-Scale Sparse Principal Component Analysis with Application to Text Data, 2012, https://arxiv.org/abs/1210.7054
 144. Paisley, John; Wang, Chong; Blei, David M.; Jordan, Michael I.: Nested Hierarchical Dirichlet Processes, 2012, https://arxiv.org/abs/1210.6738
-** montage 12x12 cs.AI 2012
+*** montage 12x12 cs.AI 2012
 1. Preen, Richard J.; Bull, Larry: Discrete Dynamical Genetic Programming in XCS, 2012, https://arxiv.org/abs/1204.4200
 2. Bouvrie, Jake; Maggioni, Mauro: Multiscale Markov Decision Problems: Compression, Solution, and Transfer Learning, 2012, https://arxiv.org/abs/1212.1143
 3. Calimeri, Francesco; Ianni, Giovambattista; Ricca, Francesco: The third open Answer Set Programming competition, 2012, https://arxiv.org/abs/1206.3111
@@ -618,7 +615,7 @@ This document lists the credits for images used in the paper "Images of the arXi
 143. Jung, Tobias; Polani, Daniel; Stone, Peter: Empowerment for Continuous Agent-Environment Systems, 2012, https://arxiv.org/abs/1201.6583
 144. Zhang, Pan; Ramezanpour, Abolfazl; Zdeborová, Lenka; Zecchina, Riccardo: Message passing for quantified Boolean formulas, 2012, https://arxiv.org/abs/1202.2536
 
-** t-SNE 8381 images cs.CV 2012
+*** t-SNE 8381 images cs.CV 2012
 1. Hashemi, Jordan; Spina, Thiago Vallin; Tepper, Mariano; Esler, Amy; Morellas, Vassilios; Papanikolopoulos, Nikolaos; Sapiro, Guillermo: Computer vision tools for the non-invasive assessment of autism-related behavioral markers, 2012, https://arxiv.org/abs/1210.7014
 2. Bagon, Shai; Galun, Meirav: A Multiscale Framework for Challenging Discrete Optimization, 2012, https://arxiv.org/abs/1210.7070
 3. Bagon, Shai: Discrete Energy Minimization, beyond Submodularity: Applications and Approximations, 2012, https://arxiv.org/abs/1210.7362
@@ -1042,7 +1039,7 @@ This document lists the credits for images used in the paper "Images of the arXi
 421. Mayiami, Mahmoud Ramezani; Seyfe, Babak: Nonparametric Sparse Representation, 2012, https://arxiv.org/abs/1201.2843
 422. Qiyang, Zhao: NegCut: Automatic Image Segmentation based on MRF-MAP, 2012, https://arxiv.org/abs/1201.2905
 
-** t-SNE 2889 images stat.ML 2012
+*** t-SNE 2889 images stat.ML 2012
 1. Häusler, Chris; Susemihl, Alex: Temporal Autoencoding Restricted Boltzmann Machine, 2012, https://arxiv.org/abs/1210.8353
 2. Sun, Ju; Zhang, Yuqian; Wright, John: Efficient Point-to-Subspace Query in $\ell^1$: Theory and Applications in Computer Vision, 2012, https://arxiv.org/abs/1211.0757
 3. Montufar, Guido F.; Morton, Jason: Kernels and Submodels of Deep Belief Networks, 2012, https://arxiv.org/abs/1211.0932

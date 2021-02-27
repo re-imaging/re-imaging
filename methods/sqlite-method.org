@@ -1,317 +1,319 @@
 #+OPTIONS: ^:nil
+#+OPTIONS: toc:nil
 * Setting Up SQLite Database
-Instructions for creating, populating and querying the database for arXiv images.
+Instructions for creating, populating, and querying an SQLite database for arXiv images.
 
-** Contents :TOC:QUOTE:
+#+TOC: headlines 3
+
+** Contents :TOC_3:QUOTE:noexport:
 #+BEGIN_QUOTE
 - [[#setting-up-sqlite-database][Setting Up SQLite Database]]
-- [[#installing-software][Installing software]]
-  - [[#metha][Metha]]
-  - [[#sqlite-command-line][SQLite (command line)]]
-  - [[#python-sqlite][Python SQLite]]
-  - [[#dbbrowser-for-sqlite-optional][DBBrowser for SQLite (optional)]]
-- [[#downloading-and-extracting-oai-xml-files][Downloading and extracting OAI XML files]]
-  - [[#downloading-metha-oai-xml-files][Downloading Metha OAI XML files]]
-  - [[#extract-metha-gz-files][Extract Metha gz files]]
-  - [[#example-metadata][Example metadata]]
-- [[#sqlite-database][SQLite database]]
-  - [[#create-sqlite-database][Create SQLite database]]
-  - [[#inserting-article-metadata-into-database][Inserting article metadata into database]]
-  - [[#image-metadata][Image metadata]]
-  - [[#additional-image-metadata][Additional image metadata]]
-  - [[#adding-caption-metadata][Adding caption metadata]]
-  - [[#top-results-for-creator-metadata][Top results for "creator" metadata]]
-- [[#data-examples][Data examples]]
-  - [[#metadata][Metadata]]
-  - [[#images][Images]]
-- [[#cleaning-and-fixes][Cleaning and fixes]]
-- [[#querying][Querying]]
-  - [[#building-list-of-all-filepaths-from-sqlite-database][Building list of all filepaths from SQLite database]]
+  - [[#sqlite-database][SQLite database]]
+    - [[#create-sqlite-database][Create SQLite database]]
+    - [[#inserting-article-metadata-into-database][Inserting article metadata into database]]
+    - [[#image-metadata][Image metadata]]
+    - [[#additional-image-metadata][Additional image metadata]]
+    - [[#caption-metadata][Caption metadata]]
+    - [[#top-results-for-creator-metadata][Top results for "creator" metadata]]
+  - [[#data-examples][Data examples]]
+    - [[#metadata][Metadata]]
+    - [[#images][Images]]
+    - [[#captions][Captions]]
+  - [[#cleaning-and-fixes][Cleaning and fixes]]
+  - [[#querying][Querying]]
+    - [[#building-list-of-all-filepaths-from-sqlite-database][Building list of all filepaths from SQLite database]]
 #+END_QUOTE
 
-* Installing software
-** Metha
-https://github.com/miku/metha
+** SQLite database
+*** Create SQLite database
+In order to index the images with their associated article metadata, we created a SQLite database with three tables: =metadata= with rows for each article; =images= with rows for each image file; and =captions= for figure captions, labels, and associated image ids. SQLite was chosen as a database format because of its widespread use and the simplicity of a lightweight, single-file database in contrast to client-server database formats. SQLite performs well within the expected number of entries (tables/columns/rows). SQLite is also a reasonably common format and has command line, R, and Python interfaces, and can also be read by other common data science tools such as the Python Data Analysis Library, a.k.a. pandas.
 
-** SQLite (command line)
-Ubuntu ships with SQLite. Simply call
-
-#+BEGIN_SRC bash
-sqlite3 /path/to/database.sqlite3
-#+END_SRC
-
-** Python SQLite
-This is included in Python:
-
-#+BEGIN_SRC python
-import sqlite
-#+END_SRC
-
-** DBBrowser for SQLite (optional)
-This software is handy for having a graphical way to examine the SQLite database and can also be used to run commands
-https://sqlitebrowser.org/dl/
-
-#+BEGIN_SRC bash
-sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
-sudo apt-get update
-sudo apt-get install sqlitebrowser
-#+END_SRC
-
-* Downloading and extracting OAI XML files
-** Downloading Metha OAI XML files
-
-arXiv participates in the Open Archives Initiative and provides up-to-date metadata for the full archive. Full bulk metadata is therefore downloadable using the OAI-PMH v2.0 protocol (Lagoze et. al., 2001). These records are stored in XML format and contain details such as the identifier, author, title, categories, licence, abstract, and date. The format specification of the metadata used for this project is arXiv, although other formats are available that provide slightly different data fields. We downloaded the metadata for all articles (records) up to the end of 2018 using the Metha OAI harvesting tool. After installing Metha, usage is as simple as calling:
-
-#+BEGIN_SRC bash
-metha-sync -format arXiv http://export.arxiv.org/oai2 
-#+END_SRC
-
-which will download all OAI records in gzipped XML format (Extensible Markup Language) using the arXiv format. In our case, this resulted in 1575 separate gzipped XML files that could then be parsed through to retrieve metadata fields.
-** Extract Metha gz files
-
-#+BEGIN_SRC bash
-# back up files first, this converts in-place
-# change to directory with metha-downloaded oai gz files
-
-for f in *.gz; do gunzip "$f"; done
-#+END_SRC
-
-** Example metadata
-#+BEGIN_SRC xml
-<ListRecords>
-    <record>
-        <header status="">
-            <identifier>oai:arXiv.org:0704.0004</identifier>
-            <datestamp>2007-05-23</datestamp>
-            <setSpec>math</setSpec>
-        </header>
-        <metadata>
-            <arXiv xsi:schemaLocation="http://arxiv.org/OAI/arXiv/                             http://arxiv.org/OAI/arXiv.xsd">
-                <id>0704.0004</id>
-                <created>2007-03-30</created>
-                <authors>
-                    <author>
-                        <keyname>Callan</keyname>
-                        <forenames>David</forenames>
-                    </author>
-                </authors>
-                <title>A determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata</title>
-                <categories>math.CO</categories>
-                <comments>11 pages</comments>
-                <msc-class>05A15</msc-class>
-                <abstract>  We show that a determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata. The proof involves a bijection from these automata to certain marked lattice paths and a sign-reversing involution to evaluate the determinant.
-                </abstract>
-            </arXiv>
-        </metadata>
-    <about/>
-</record>
-#+END_SRC
-
-Example XML file in the “arXiv” format showing organisation of metadata according to specific tags such as “categories”, “title”, “author”, “abstract” etc. Example shown here is Callan, David: A determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata, 2007, https://arxiv.org/abs/0704.0004
-
-* SQLite database
-** Create SQLite database
 Python script to create SQLite database:
 
 #+BEGIN_SRC bash
-python create-db/sqlite_create_db.py
+  python create-db/create_sqlite_db.py
 #+END_SRC
 
-Details of table creation in the script:
+Details of table creation schema in the script:
 
-#+BEGIN_SRC Python
-# create metadata table
-c.execute('''
-    CREATE TABLE metadata(id INTEGER PRIMARY KEY, identifier TEXT, created TEXT, \
-    cat TEXT, authors TEXT, title TEXT, abstract TEXT, licence TEXT)
-''')
+#+BEGIN_SRC python
+  # create metadata table
+  c.execute('''
+      CREATE TABLE metadata(id INTEGER PRIMARY KEY, identifier TEXT, created TEXT, \
+      cat TEXT, authors TEXT, title TEXT, abstract TEXT, licence TEXT)
+  ''')
 
-# create images table
-c.execute('''
-    CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
-    filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
-''')
+  # create images table
+  c.execute('''
+      CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
+      filesize INT, path TEXT, x INT, y INT, imageformat TEXT, creator TEXT)
+  ''')
+
+  # create captions table
+  c.execute('''
+      CREATE TABLE "captions" ("id" INTEGER, "identifier" TEXT, "tex" TEXT, \
+      "fignum" TEXT, "caption" TEXT, "label" TEXT, "filenames" TEXT, "image_ids" TEXT, PRIMARY KEY("id"))
+  ''')
 #+END_SRC
 
-** Inserting article metadata into database
-
-We used a set of Python scripts to then iterate over the XML files and insert rows into the database for each. For this step we used the Python ElementTree XML API to navigate the required XML files and extract the desired metadata. This required custom code that was tailored to the specific XML format as it is stored on arxiv.org and downloaded by metha (which groups XML documents together to reduce the number of files).
-
-In order to index the images with their associated article metadata, we created a SQLite database with three tables: /metadata/ with rows for each article; /images/ with rows for each image file; and /captions/ for figure captions, labels, and associated image files. SQLite was chosen as a database format because of its widespread use and the simplicity of a lightweight, single-file database in contrast to client-server database formats. SQLite performs well within the expected number of entries (tables/columns/rows). SQLite is also a reasonably common format and has command line, R, and Python interfaces, and can also be read by other common data science tools such as the Python Data Analysis Library, a.k.a. pandas.
+*** Inserting article metadata into database
+We used a set of Python scripts to then iterate over the XML files and insert rows into the database for each. For this step we used the Python ElementTree XML API to navigate the required XML files and extract the desired metadata. This required custom code that was tailored to the specific XML format as it is stored on https://arxiv.org and downloaded by metha (which groups XML documents together to reduce the number of files).
 
 For our purposes, we used a primary key of a unique number, and inserted the identifier, date created, categories, authors, title, abstract, and licence. 
 
-The =oai_to_sqlite.py= script accesses a folder of Metha-downloaded OAI XML files.
+The =oai_to_sqlite.py= script accesses a folder of metha-downloaded OAI XML files.
 
 #+BEGIN_SRC bash
-usage: oai_to_sqlite.py [-h] [-v] db_path oai_path
+  usage: oai_to_sqlite.py [-h] [-v] db_path oai_path
 
-Parse Matha OAI XML files and insert metadata into SQLite database
+  Parse metha OAI XML files and insert metadata into SQLite database
+  
+  positional arguments:
+    db_path        path to SQLite database
+    oai_path       set folder of OAI xml files
 
-positional arguments:
-  db_path        path to SQLite database
-  oai_path       set folder of OAI xml files
-
-optional arguments:
-  -h, --help     show this help message and exit
-  -v, --verbose  verbose output
+  optional arguments:
+    -h, --help     show this help message and exit
+    -v, --verbose  verbose output
 #+END_SRC
 
 Example usage
-#+BEGIN_SRC bash
-python oai_to_sqlite.py ~/data/db/arxiv_db.sqlite ~/data/oai/metha/
-#+END_SRC
-
-** Image metadata
-
-In order to add rows of image data to the database, we searched and iterated over all of the directory structure of the arXiv bulk downloads and gathered metadata directly from each file. We found that an effective way to do this was to use the unix =find= command to write all image file paths to a text file, then using those paths to run an identify command (from Imagemagick) to write a number of details to the database. We collected the article identifier, filename, filesize, filepath, x dimension size, y dimension size, and imageformat. This took a number of days to complete, but could be optimised using faster storage media and/or parallel processing.
-
-This is done as a two step process because it will take a long time and it is helpful to be able to restart the process partway. (If you'd like to do it in one step, examples are in create-db/additional.)
 
 #+BEGIN_SRC bash
-# first we need to get the paths of all the image files
-cd create-db
-
-# this will take a little while
-./image_paths_to_txt.sh SOURCE_DIR TARGET_FILE
-
-# then use this paths text file to get each image metadata and write into SQL
-# this will also take a while
-./image_data_to_sql_paths.sh START_LINE PATHS_FILE DATABASE_FILE
-# e.g
-./image_data_to_sql_paths.sh 0 ~/data/paths/all_image_paths.txt ~/data/db/arXiv_db.sqlite
+  python create-db/oai_to_sqlite.py ~/data/db/arxiv_db.sqlite ~/data/oai/metha/
 #+END_SRC
 
-** Additional image metadata
+*** Image metadata
+In order to add rows of image data to the database, we searched and iterated over all of the directory structure of the arXiv bulk downloads and gathered metadata directly from each file. We found that an effective way to do this was to use the unix ~find~ command to write all image file paths to a text file, then using those paths to run an identify command (from ImageMagick) to write a number of details to the database. We collected the article identifier, filename, filesize, filepath, x dimension size, y dimension size, and imageformat. This took a number of days to complete, but could be optimised using faster storage media and/or parallel processing.
+
+This is done as a two step process because it will take a long time and it is helpful to be able to restart the process partway.
+# If you'd like to do it in one step, examples are in create-db/additional.
+
+#+BEGIN_SRC bash
+  # first we need to get the paths of all the image files
+  arXiv-src-scripts/image_paths_to_txt.sh SOURCE_DIR TARGET_FILE
+  # this will take a little while
+
+  # then use this paths text file to get each image metadata and write into SQL
+  # this will also take a while
+  create-db/image_data_to_sql_paths.sh START_LINE PATHS_FILE DATABASE_FILE
+#+END_SRC
+
+Example usage
+
+#+BEGIN_SRC bash
+  arXiv-src-scripts/image_paths_to_txt.sh ~/arXiv/src ~/data/paths/all_image_paths.txt
+  create-db/image_data_to_sql_paths.sh 0 ~/data/paths/all_image_paths.txt ~/data/db/arXiv_db.sqlite
+#+END_SRC
+
+*** Additional image metadata
 
 Additional metadata can be procured from the individual files by accessing the Exif (Exchangeable image file format). Although this could be done at the same time as inserting rows for the images into the database table, we did this at a later stage.
 
+Example usage:
+
 #+BEGIN_SRC bash
-python create-db/imagemeta_to_sql_threads.py ~/data/db/arxiv_db_images.sqlite3 ~/arXiv/src_all/
+  python create-db/imagemeta_to_sql_threads.py ~/data/db/arxiv_db_images.sqlite3 ~/arXiv/src_all/
 #+END_SRC
 
-This uses the exiftool command to check each file for metadata relating to "software" or "creator". Depending on the file extension, different fields are accessed. These were determined through testing exiftool across a range of file formats and checking which fields might relate to the software used to create or process the images. This is stored in a single column for simplicity, although the metadata may refer to different fields. See the following Python excerpt for the relation between extension and Exif field accessed:
+This uses the ~exiftool~ command to check each file for metadata relating to "software" or "creator". Depending on the file extension, different fields are accessed. These were determined through testing ~exiftool~ across a range of file formats and checking which fields might relate to the software used to create or process the images. This is stored in a single column for simplicity, although the metadata may refer to different fields. See the following Python excerpt for the relation between extension and Exif field accessed:
 
-#+BEGIN_SRC Python
-n = filename.lower()
+#+BEGIN_SRC python
+  n = filename.lower()
 
-if n.endswith(('.eps', '.ps', 'pstex', '.epsf', '.epsi')):
-    field = "Creator"
-elif n.endswith(('.png')):
-    field = "Software"
-elif n.endswith(('.pdf')):
-    field = "Creator"
-elif n.endswith(('.jpg', 'jpeg')):
-    field = "Software"
-elif n.endswith(('.gif')):
-    field = "Comment"
-elif n.endswith(('.svg')):
-    field = "Desc"
+  if n.endswith(('.eps', '.ps', 'pstex', '.epsf', '.epsi')):
+      field = "Creator"
+  elif n.endswith(('.png')):
+      field = "Software"
+  elif n.endswith(('.pdf')):
+      field = "Creator"
+  elif n.endswith(('.jpg', 'jpeg')):
+      field = "Software"
+  elif n.endswith(('.gif')):
+      field = "Comment"
+  elif n.endswith(('.svg')):
+      field = "Desc"
 #+END_SRC
 
-Note that a fairly high proportion of images do not have this metadata.
+Note that a fairly high proportion of images do not have this metadata, which will typically write a single hyphen ("-") to the database.
 
-** Adding caption metadata
-The /captions/ table was created by iterating through all .tex files and parsing the tex source for figures, captions, and filenames. Our method uses a number of different regular expressions to find particular key parts of the source. This code is specific to this database and unlikely to generalise.
-We grabbed the caption for each figure (if there was one), writing the following fields to the database table: unique caption identifier, arXiv identifier, tex file path, figure number, caption text, figure label, filenames of any images used to create that figure (can be more than 1), and image_ids of these images from the /images/ table.
+*** Caption metadata
 
-For details see =create-db/get-captions.ipynb= and =create-db/get-captions.py=
+The =captions= table was created by iterating through all =.tex= files and parsing the tex source for figures, captions, and filenames. Our method uses a number of different regular expressions to find particular key parts of the source. This code is specific to this dataset and unlikely to generalise.
 
-Steps:
-- create list of tex files (get-captions.ipynb)
-- run =get-captions.py= script
-- iterate over each .tex file and parse out captions
-- insert captions into SQLite database
+We grabbed the caption for each figure (if there was one), writing the following fields to the database table: unique caption identifier, arXiv identifier, tex file path, figure number, caption text, figure label, filenames of any images used to create that figure (can be more than 1), and image ids of these images from the =images= table.
+
+First we iterated through the entire folder structure and found any tex files, writing these into a JSON file.
+
+#+begin_src bash
+  usage: get_tex_list.py [-h] search_path output_file
+
+  Parse metha OAI XML files and insert metadata into SQLite database
+
+  positional arguments:
+    search_path  set folder to search
+    output_file  name of output file (JSON)
+
+  optional arguments:
+    -h, --help   show this help message and exit
+#+end_src
+
+Example usage
+
+#+begin_src bash
+  python create-db/get_tex_list.py ~/arXiv/src_all/ all_texs.json
+#+end_src
+
+Then we pulled all figure captions from each of these =.tex= files, parsed the output using regular expressions, and wrote the results to the database.
+
+#+begin_src bash
+  usage: get_captions.py [-h] [--start_line START_LINE] [-v] [-t] [-z] [-r] [-n]
+                         [-i] [--create_index]
+                         db_path tex_list
+
+  Script for getting captions from .tex files
+
+  positional arguments:
+    db_path               path to SQLite database
+    tex_list              path to file that stores list of all .tex files
+
+  optional arguments:
+    -h, --help            show this help message and exit
+    --start_line START_LINE
+                          line to read textfile from (default: 0)
+    -v, --verbose         verbose output
+    -t, --timing          timing output
+    -z, --dryrun          don't modify the database, just print (default: False)
+    -r, --shuffle         shuffle the list of tex files (default: False)
+    -n, --no_captions     do not write captions into db (default: False)
+    -i, --get_images      get the image_ids for each filename (default: False)
+    --create_index        create an index to speed up queries (default: False)
+#+end_src
+
+Example usage
+
 #+BEGIN_SRC bash
-python get-captions.py ~/data/db/arxiv_db_images.sqlite3 tex_paths_src_update.json 2>&1 | tee caption_update_log.txt
+  python create-db/get-captions.py ~/data/db/arxiv_db_images.sqlite3 tex_paths_src_update.json 2>&1 | tee caption_update_log.txt
 #+END_SRC
-- create an index of all image identifiers
-- find where caption filename matches the filename in the image table and update with ids
+
+Finally, we went back over all the text files and grabbed the associated =image_ids= from the =images= table so that the figure captions can be cross-referenced with the images. This is also done using =get_captions.py= but with different arguments:
+
 #+BEGIN_SRC bash
-python get-captions.py ~/data/db/arxiv_db_images.sqlite3 tex_paths_src_update.json -i -n --create_index 2>&1 | tee caption_update_indexes_log.txt
+  python get-captions.py ~/data/db/arxiv_db_images.sqlite3 tex_paths_src_update.json -i -n --create_index 2>&1 | tee caption_update_indexes_log.txt
 #+END_SRC
-** Top results for "creator" metadata
-|------------------+---------+-------|
-| "creator"        |   total |     % |
-|------------------+---------+-------|
-| none             | 1997457 | 19.87 |
-| MATLAB           |  876177 |  8.72 |
-| Mathematica      |  492318 |  4.90 |
-| matplotlib       |  491001 |  4.88 |
-| IDL              |  404852 |  4.03 |
-| gnuplot          |  396484 |  3.94 |
-| cairo            |  388108 |  3.86 |
-| fig2dev          |  349381 |  3.48 |
-| SM               |  268902 |  2.67 |
-| ROOT             |  265278 |  2.64 |
-| Illustrator      |  263934 |  2.63 |
-| Grace            |  237719 |  2.36 |
-| dvips            |  232165 |  2.31 |
-| TeX              |  209613 |  2.09 |
-| GIMP             |  207108 |  2.06 |
-| Ghostscript      |  199064 |  1.98 |
-| OriginLab        |  168350 |  1.67 |
-| HIGZ             |  144720 |  1.44 |
-| R                |  143164 |  1.42 |
-| PGPLOT           |  128704 |  1.28 |
-| ImageMagick      |  123697 |  1.23 |
-| CorelDRAW        |   91453 |  0.91 |
-| jpeg2ps          |   87546 |  0.87 |
-| PScript5         |   77136 |  0.77 |
-| Photoshop        |   76648 |  0.76 |
-| Acrobat          |   72191 |  0.72 |
-| PowerPoint       |   50187 |  0.50 |
-| XV               |   47320 |  0.47 |
-| Ipe              |   43498 |  0.43 |
-| Keynote          |   37964 |  0.38 |
-| xmgr             |   37831 |  0.38 |
-| PSCRIPT          |   36755 |  0.37 |
-| inkscape         |   32036 |  0.32 |
-| OmniGraffle      |   30788 |  0.31 |
-| LaTeX            |   30473 |  0.30 |
-| Preview          |   24770 |  0.25 |
-| GraphicConverter |   24124 |  0.24 |
-| FreeHEP          |   23621 |  0.23 |
-| GTVIRT           |   20680 |  0.21 |
-|------------------+---------+-------|
 
-* Data examples
-** Metadata
-| 1038521 | hep-ph0107222 | 2001-07-20 | hep-ph          | ['Yang, Jian-Jun; ']                                       | Up and Down Quark Contributions...                   | We check the...                                                                 |                                                     |
-| 1235851 |     0912.5313 | 2009-12-29 | math.CV math.AG | ['Catanese, Fabrizio; Oguiso, Keiji; Peternell, Thomas; '] | On volume preserving complex structures on real tori | A basic problem in the classification theory of compact complex manifolds is... | http://arxiv.org/licenses/nonexclusive-distrib/1.0/ |
-| 1214856 |     1308.0124 | 2013-08-01 | hep-ph hep-th   | ['Rose, Luigi Delle; ']                                    | The Standard Model in a Weak Gravitational...        | The principal goal of the physics of the fundamental interactions is...         | http://arxiv.org/licenses/nonexclusive-distrib/1.   |
-** Images
-| 4876126 |  cs0007002 | gouala05.eps     | 145239 | ./0007/cs0007002                                                                                          |  663 | 300 | PS  |
-| 2209549 |  0906.0725 | belleescan_b.eps | 842045 | ./0906/0906.0725                                                                                          | 1450 | 725 | PS  |
-| 6591348 | 1710.10269 | HAT-P-12.pdf     |  78468 | =./1710/1710.10269/figures/figures_from_umserve/chemistry/abundance_change_with_grid_parameter/metallicity= |  566 | 406 | PDF |
+*** Top results for "creator" metadata
+#+begin_src org
+  |------------------+---------+-------|
+  | "creator"        |   total |     % |
+  |------------------+---------+-------|
+  | (none)           | 1997457 | 19.87 |
+  | MATLAB           |  876177 |  8.72 |
+  | Mathematica      |  492318 |  4.90 |
+  | matplotlib       |  491001 |  4.88 |
+  | IDL              |  404852 |  4.03 |
+  | gnuplot          |  396484 |  3.94 |
+  | cairo            |  388108 |  3.86 |
+  | fig2dev          |  349381 |  3.48 |
+  | SM               |  268902 |  2.67 |
+  | ROOT             |  265278 |  2.64 |
+  | Illustrator      |  263934 |  2.63 |
+  | Grace            |  237719 |  2.36 |
+  | dvips            |  232165 |  2.31 |
+  | TeX              |  209613 |  2.09 |
+  | GIMP             |  207108 |  2.06 |
+  | Ghostscript      |  199064 |  1.98 |
+  | OriginLab        |  168350 |  1.67 |
+  | HIGZ             |  144720 |  1.44 |
+  | R                |  143164 |  1.42 |
+  | PGPLOT           |  128704 |  1.28 |
+  | ImageMagick      |  123697 |  1.23 |
+  | CorelDRAW        |   91453 |  0.91 |
+  | jpeg2ps          |   87546 |  0.87 |
+  | PScript5         |   77136 |  0.77 |
+  | Photoshop        |   76648 |  0.76 |
+  | Acrobat          |   72191 |  0.72 |
+  | PowerPoint       |   50187 |  0.50 |
+  | XV               |   47320 |  0.47 |
+  | Ipe              |   43498 |  0.43 |
+  | Keynote          |   37964 |  0.38 |
+  | xmgr             |   37831 |  0.38 |
+  | PSCRIPT          |   36755 |  0.37 |
+  | inkscape         |   32036 |  0.32 |
+  | OmniGraffle      |   30788 |  0.31 |
+  | LaTeX            |   30473 |  0.30 |
+  | Preview          |   24770 |  0.25 |
+  | GraphicConverter |   24124 |  0.24 |
+  | FreeHEP          |   23621 |  0.23 |
+  | GTVIRT           |   20680 |  0.21 |
+  |------------------+---------+-------|
+#+end_src
+** Data examples
+*** Metadata
+#+begin_src org
+  |      id |    identifier |    created | cat             | authors                                                    | title                                                | abstract                                                                        | licence                                             |
+  | 1038521 | hep-ph0107222 | 2001-07-20 | hep-ph          | ['Yang, Jian-Jun; ']                                       | Up and Down Quark Contributions...                   | We check the...                                                                 |                                                     |
+  | 1235851 |     0912.5313 | 2009-12-29 | math.CV math.AG | ['Catanese, Fabrizio; Oguiso, Keiji; Peternell, Thomas; '] | On volume preserving complex structures on real tori | A basic problem in the classification theory of compact complex manifolds is... | http://arxiv.org/licenses/nonexclusive-distrib/1.0/ |
+  | 1214856 |     1308.0124 | 2013-08-01 | hep-ph hep-th   | ['Rose, Luigi Delle; ']                                    | The Standard Model in a Weak Gravitational...        | The principal goal of the physics of the fundamental interactions is...         | http://arxiv.org/licenses/nonexclusive-distrib/1.   |
+#+end_src
 
-* Cleaning and fixes
-The database required some cleaning after inserting rows for both metadata and images. Please refer to sqlite-scripts/db_fixes.ipynb
+*** Images
+#+begin_src org
+  |      id | identifier | filename         | filesize | path                                                                                                      |    x |   y | imageformat | creator |
+  | 4876126 |  cs0007002 | gouala05.eps     |   145239 | ./0007/cs0007002                                                                                          |  663 | 300 | PS          |         |
+  | 2209549 |  0906.0725 | belleescan_b.eps |   842045 | ./0906/0906.0725                                                                                          | 1450 | 725 | PS          |         |
+  | 6591348 | 1710.10269 | HAT-P-12.pdf     |    78468 | ./1710/1710.10269/figures/figures_from_umserve/chemistry/abundance_change_with_grid_parameter/metallicity |  566 | 406 | PDF         |         |
+#+end_src
+
+*** Captions
+#+begin_src org
+  |      id | identifier | tex                                                         | fignum | caption                                                                                                                                                   | label                         | filenames                       | image_ids |
+  | 7066264 | 1905.03030 | /home/rte/arXiv/src_update/1905/1905.03030/metalearning.tex |      4 | Meta-learned state machine for a predictor of coin tosses. The figure shows...                                                                            | fig:metalearned-state-machine | figures/coin_prediction_memory  |  12007157 |
+  | 3294070 | 1611.05676 | /home/rte/arXiv/src_all/1611/1611.05676/tryQFPT.tex         |      7 | $F_n$ versus $n$ for the rational  sampling time   $\gamma \tau /\pi=1/3$. Now the detection probability...                                               | fig1patha                     | inf_lattice_tau_03pi_comparison |   5413659 |
+  | 3902503 | 1810.07940 | /home/rte/arXiv/src_all/1810/1810.07940/Astrum.tex          |      1 | The dependence of CR modulation for TRAPPIST 1d for different values of stellar magnetic field and stellar wind velocity 545~km/s ($T_{\text{cor}}=2$~MK) | fig1                          | Fig1                            |   6443166 |
+#+end_src
+
+** Cleaning and fixes
+The database required some cleaning after inserting rows for both metadata and images. Please refer to the Jupyter Notebook =sqlite-scripts/db_fixes.ipynb=
 
 This may be due to article revisions or the metadata harvester missing a few entries, as well as accumulating duplicates if the arXiv OAI data was updated on the server (metha does not sync previous files by default). A small number of images did not have corresponding article metadata. To fix this we used the list of articles without metadata and queried the arXiv OAI server. We then inserted these rows into the metadata table. This has been automated in the notebook.
 
 We also searched the SQLite database for any entries with special characters such as '/' that caused errors in the file insertion. In each arXiv category pre-2007, we removed the forward slash as this could potentially cause problems in how this data is read (this can be added back in as required).
 
 From the list of entries with special characters, many of these images were duplicated within the source upload. We checked that the images were present in the dataset and then manually removed the rows from the SQLite database as well as the files from the dataset. For later searches, we also filtered out any images that have an X or Y dimension of 0 or NULL, indicating that they could not be ready by the Imagemagick identify command.
-* Querying
-Once both tables have been created, it is then possible to perform SQL queries with a left join to pair the associated metadata with a given image. This allows us to create queries and perform analyses  that would not have been possible with only the bulk download: accessing the image data according to different metadata such as subject categories or date, performing searches, and analysing the image content of the dataset in various ways. The SQLite database provides a convenient and flexible way to perform these queries across the ~10 million images and ~1.5 million articles.
 
-#+BEGIN_SRC SQLite
-SELECT images.identifier, metadata.cat,count(images.identifier)    
-FROM images
-LEFT JOIN metadata ON images.identifier = metadata.identifier
-GROUP BY images.identifier
-ORDER BY count(images.identifier)
+** Querying
+Once both tables have been created, it is then possible to perform SQL queries with a left join to pair the associated metadata with a given image. This allows us to create queries and perform analyses that would not have been possible with only the bulk download: accessing the image data according to different metadata such as subject categories or date, performing searches, and analysing the image content of the dataset in various ways. The SQLite database provides a convenient and flexible way to perform these queries across the ~10 million images and ~1.5 million articles.
+
+#+BEGIN_SRC sqlite
+  SELECT images.identifier, metadata.cat,count(images.identifier)    
+  FROM images
+  LEFT JOIN metadata ON images.identifier = metadata.identifier
+  GROUP BY images.identifier
+  ORDER BY count(images.identifier)
 #+END_SRC
 
-For more examples see =sqlite-scripts/db-queries.ipynb=
+For more examples see the Jupyter Notebook =sqlite-scripts/db_queries.ipynb=
 
-** Building list of all filepaths from SQLite database
+*** Building list of all filepaths from SQLite database
+Use the =sqlite-scripts/get_all_image_paths.py= script to read all entries from the SQLite database, build a list of file paths, and write this into a text file. Although we have already produced such a text file from the file structure, this updated version is useful as it allows us to use the SQLite database as a reference for all images from this point forward. This is for ease of use when running other scripts and especially for running scripts that might take a very long time or fail, so that it can be restarted at a known point.
 
-Use the =get_all_image_paths.py= script to read all entries from the SQLite database, build a list of file paths, and write this into a text file. This allows for ease of use when running other scripts and especially for running scripts that might take a very long time or fail, so that it can be restarted at a known point.
+#+begin_src bash
+  usage: get_all_image_paths.py [-h] database textfile
+
+  Script for writing a text file with all paths from SQLite database
+
+  positional arguments:
+    database    path to database
+    textfile    textfile to write file paths to
+
+  optional arguments:
+    -h, --help  show this help message and exit
+#+end_src
+
+Example usage
 
 #+BEGIN_SRC bash
-cd sqlite-scripts
-python get_all_image_paths.py
+  python sqlite-scripts/get_all_image_paths.py ~/data/db/arxiv_db.sqlite all_image_filepaths_sqlite.txt
 #+END_SRC
 

@@ -1,8 +1,13 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
+
 * About
 
-This document contains various data statistics relating to the text and image data of the www.arxiv.org dataset. The entire source of the arxiv dataset was downloaded at the end of 2018 and extracted into individual files. The majority of these statistics have been collected through the process of querying the dataset along with the associated metadata provided via the OAI format (see https://arxiv.org/help/oa).
+This document contains various data statistics relating to the text and image data of the https://.arxiv.org dataset. The entire source of the arxiv dataset was downloaded at the end of 2018. It was then extracted into individual files and queried. The majority of these statistics have been collected through the process of querying the dataset along with the associated metadata provided via the OAI format (see https://arxiv.org/help/oa).
 
-* Table of Contents                                             :TOC_3:QUOTE:
+#+TOC: headlines 2
+
+* Table of Contents                                             :TOC_3:QUOTE:noexport:
 #+BEGIN_QUOTE
 - [[#about][About]]
 - [[#key][Key]]
@@ -29,7 +34,6 @@ This document contains various data statistics relating to the text and image da
   - [[#list-of-all-different-image-file-extensions][List of all different image file extensions]]
   - [[#average-number-of-images-per-article][Average number of images per article]]
   - [[#average-size-of-images][Average size of images]]
-  - [[#distribution-of-size-of-images-perhaps-divisions-of-common-resolutions-480p-240p-etc][Distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)]]
   - [[#primary-image-formats][Primary image formats]]
   - [[#primary-image-formats-combined-case-insensitive][Primary image formats (combined, case-insensitive)]]
   - [[#highest-number-of-images-for-a-single-article][Highest number of images for a single article]]
@@ -41,7 +45,7 @@ This document contains various data statistics relating to the text and image da
 
 * Key
 
-list of categories: http://arxitics.com/help/categories
+List of categories: http://arxitics.com/help/categories
 
 * General
 ** Data timespan
@@ -64,8 +68,8 @@ list of categories: http://arxitics.com/help/categories
 - number of folders below the year/month folders: 1,476,538 [2019-03-05 Tue]
 
 #+BEGIN_SRC bash
-# find all directories at a particular depth below year/month
-find . -type d  -mindepth 2 -maxdepth 2 | wc -l
+  # find all directories at a particular depth below year/month
+  find . -type d  -mindepth 2 -maxdepth 2 | wc -l
 #+END_SRC
 
 ** Number of PDF-only articles
@@ -76,8 +80,8 @@ find . -type d  -mindepth 2 -maxdepth 2 | wc -l
 (114,132 / 1,476,538 = 7.72% of total articles)
 
 #+BEGIN_SRC bash
-# find all pdf files
-find . -name "*.pdf" | wc -l 
+  # find all pdf files
+  find . -name "*.pdf" | wc -l
 #+END_SRC
 
 ** Number of text files extracted from PDFs
@@ -97,9 +101,9 @@ find . -name "*.pdf" | wc -l
 (324,101 / 1,476,538 = 21.95% of total articles)
 
 #+BEGIN_SRC bash
-# command to find all .gz files
-find . -type f -name "*.gz" | wc -l
-# would now need a more complex command to check for this, gz files have been extracted
+  # command to find all .gz files
+  find . -type f -name "*.gz" | wc -l
+  # would now need a more complex command to check for this, gz files have been extracted
 #+END_SRC
 
 ** Articles with at least one image
@@ -472,7 +476,6 @@ find . -type f -name "*.gz" | wc -l
 ** Articles by year
 # [2019-05-10 Fri]
 
-|------+----------|
 | year | articles |
 |------+----------|
 | 1986 |        1 |
@@ -512,7 +515,6 @@ find . -type f -name "*.gz" | wc -l
 ** Number of articles by licence 
 # [2019-04-18 Thu]
 
-|-----------------------------------------------------+---------|
 | licence                                             |   total |
 |-----------------------------------------------------+---------|
 | http://arxiv.org/licenses/nonexclusive-distrib/1.0/ | 1017997 |
@@ -526,180 +528,181 @@ find . -type f -name "*.gz" | wc -l
 | http://creativecommons.org/licenses/by-sa/4.0/      |    1608 |
 |-----------------------------------------------------+---------|
 ** Number of articles by primary category
-|---------+--------------------|
-|      47 | acc-phys           |
-|     306 | adap-org           |
-|    1209 | alg-geom           |
-|      13 | ao-sci             |
-|   94247 | astro-ph           |
-|   28674 | astro-ph.CO        |
-|   11919 | astro-ph.EP        |
-|   25325 | astro-ph.GA        |
-|   22574 | astro-ph.HE        |
-|   10284 | astro-ph.IM        |
-|   28865 | astro-ph.SR        |
-|      68 | atom-ph            |
-|      11 | bayes-an           |
-|    1770 | chao-dyn           |
-|     129 | chem-ph            |
-|     894 | cmp-lg             |
-|     140 | comp-gas           |
-|   11357 | cond-mat           |
-|    9026 | cond-mat.dis-nn    |
-|   44643 | cond-mat.mes-hall  |
-|   37750 | cond-mat.mtrl-sci  |
-|    6224 | cond-mat.other     |
-|    9171 | cond-mat.quant-gas |
-|   18858 | cond-mat.soft      |
-|   31624 | cond-mat.stat-mech |
-|   34767 | cond-mat.str-el    |
-|   24563 | cond-mat.supr-con  |
-|    9059 | cs.AI              |
-|     868 | cs.AR              |
-|    3254 | cs.CC              |
-|    1566 | cs.CE              |
-|    2453 | cs.CG              |
-|    8691 | cs.CL              |
-|    7133 | cs.CR              |
-|   21203 | cs.CV              |
-|    3624 | cs.CY              |
-|    3003 | cs.DB              |
-|    5886 | cs.DC              |
-|    1799 | cs.DL              |
-|    3140 | cs.DM              |
-|    8230 | cs.DS              |
-|     867 | cs.ET              |
-|    1587 | cs.FL              |
-|      72 | cs.GL              |
-|     787 | cs.GR              |
-|    3515 | cs.GT              |
-|    2218 | cs.HC              |
-|    2993 | cs.IR              |
-|   22021 | cs.IT              |
-|   13984 | cs.LG              |
-|    6030 | cs.LO              |
-|     886 | cs.MA              |
-|    1004 | cs.MM              |
-|     597 | cs.MS              |
-|    1043 | cs.NA              |
-|    2783 | cs.NE              |
-|    8587 | cs.NI              |
-|    1649 | cs.OH              |
-|     266 | cs.OS              |
-|     592 | cs.PF              |
-|    2523 | cs.PL              |
-|    3956 | cs.RO              |
-|     814 | cs.SC              |
-|    1215 | cs.SD              |
-|    4402 | cs.SE              |
-|    4546 | cs.SI              |
-|    4757 | cs.SY              |
-|     562 | dg-ga              |
-|     368 | econ.EM            |
-|     157 | econ.GN            |
-|      73 | econ.TH            |
-|     365 | eess.AS            |
-|     509 | eess.IV            |
-|    2279 | eess.SP            |
-|     320 | funct-an           |
-|   44417 | gr-qc              |
-|   18424 | hep-ex             |
-|   15022 | hep-lat            |
-|  105924 | hep-ph             |
-|   84481 | hep-th             |
-|   24790 | math-ph            |
-|    5519 | math.AC            |
-|   24434 | math.AG            |
-|   26974 | math.AP            |
-|    5780 | math.AT            |
-|   10400 | math.CA            |
-|   26220 | math.CO            |
-|    2277 | math.CT            |
-|    6990 | math.CV            |
-|   19860 | math.DG            |
-|   14021 | math.DS            |
-|   12330 | math.FA            |
-|    2217 | math.GM            |
-|    2043 | math.GN            |
-|    9127 | math.GR            |
-|   10794 | math.GT            |
-|    1767 | math.HO            |
-|    1837 | math.KT            |
-|    6030 | math.LO            |
-|    3969 | math.MG            |
-|   12835 | math.NA            |
-|   19960 | math.NT            |
-|    5927 | math.OA            |
-|   13562 | math.OC            |
-|   25233 | math.PR            |
-|    7080 | math.QA            |
-|    7037 | math.RA            |
-|   10079 | math.RT            |
-|    3381 | math.SG            |
-|    3264 | math.SP            |
-|    8953 | math.ST            |
-|     165 | mtrl-th            |
-|    1745 | nlin.AO            |
-|    5575 | nlin.CD            |
-|     386 | nlin.CG            |
-|    3112 | nlin.PS            |
-|    3955 | nlin.SI            |
-|    9077 | nucl-ex            |
-|   26970 | nucl-th            |
-|     452 | patt-sol           |
-|    4223 | physics.acc-ph     |
-|    1727 | physics.ao-ph      |
-|    2264 | physics.app-ph     |
-|     954 | physics.atm-clus   |
-|    8704 | physics.atom-ph    |
-|    4132 | physics.bio-ph     |
-|    5857 | physics.chem-ph    |
-|    3395 | physics.class-ph   |
-|    4053 | physics.comp-ph    |
-|    2459 | physics.data-an    |
-|    1847 | physics.ed-ph      |
-|    9162 | physics.flu-dyn    |
-|    7418 | physics.gen-ph     |
-|    2007 | physics.geo-ph     |
-|    2026 | physics.hist-ph    |
-|    8593 | physics.ins-det    |
-|    1826 | physics.med-ph     |
-|   16181 | physics.optics     |
-|    6638 | physics.plasm-ph   |
-|     889 | physics.pop-ph     |
-|    7304 | physics.soc-ph     |
-|    1236 | physics.space-ph   |
-|      28 | plasm-ph           |
-|    1177 | q-alg              |
-|    1699 | q-bio.BM           |
-|     657 | q-bio.CB           |
-|    1123 | q-bio.GN           |
-|    1612 | q-bio.MN           |
-|    3142 | q-bio.NC           |
-|     459 | q-bio.OT           |
-|    4173 | q-bio.PE           |
-|    2432 | q-bio.QM           |
-|     529 | q-bio.SC           |
-|     640 | q-bio.TO           |
-|     597 | q-fin.CP           |
-|     395 | q-fin.EC           |
-|     998 | q-fin.GN           |
-|     668 | q-fin.MF           |
-|     623 | q-fin.PM           |
-|     900 | q-fin.PR           |
-|     669 | q-fin.RM           |
-|    1043 | q-fin.ST           |
-|     565 | q-fin.TR           |
-|   69124 | quant-ph           |
-|     844 | solv-int           |
-|    4435 | stat.AP            |
-|    2067 | stat.CO            |
-|    7864 | stat.ME            |
-|    7713 | stat.ML            |
-|     333 | stat.OT            |
-|      69 | supr-con           |
-|---------+--------------------|
-| 1506562 | total              |
+| primary category   |     total |
+|--------------------+-----------|
+| acc-phys           |        47 |
+| adap-org           |       306 |
+| alg-geom           |      1209 |
+| ao-sci             |        13 |
+| astro-ph           |     94247 |
+| astro-ph.CO        |     28674 |
+| astro-ph.EP        |     11919 |
+| astro-ph.GA        |     25325 |
+| astro-ph.HE        |     22574 |
+| astro-ph.IM        |     10284 |
+| astro-ph.SR        |     28865 |
+| atom-ph            |        68 |
+| bayes-an           |        11 |
+| chao-dyn           |      1770 |
+| chem-ph            |       129 |
+| cmp-lg             |       894 |
+| comp-gas           |       140 |
+| cond-mat           |     11357 |
+| cond-mat.dis-nn    |      9026 |
+| cond-mat.mes-hall  |     44643 |
+| cond-mat.mtrl-sci  |     37750 |
+| cond-mat.other     |      6224 |
+| cond-mat.quant-gas |      9171 |
+| cond-mat.soft      |     18858 |
+| cond-mat.stat-mech |     31624 |
+| cond-mat.str-el    |     34767 |
+| cond-mat.supr-con  |     24563 |
+| cs.AI              |      9059 |
+| cs.AR              |       868 |
+| cs.CC              |      3254 |
+| cs.CE              |      1566 |
+| cs.CG              |      2453 |
+| cs.CL              |      8691 |
+| cs.CR              |      7133 |
+| cs.CV              |     21203 |
+| cs.CY              |      3624 |
+| cs.DB              |      3003 |
+| cs.DC              |      5886 |
+| cs.DL              |      1799 |
+| cs.DM              |      3140 |
+| cs.DS              |      8230 |
+| cs.ET              |       867 |
+| cs.FL              |      1587 |
+| cs.GL              |        72 |
+| cs.GR              |       787 |
+| cs.GT              |      3515 |
+| cs.HC              |      2218 |
+| cs.IR              |      2993 |
+| cs.IT              |     22021 |
+| cs.LG              |     13984 |
+| cs.LO              |      6030 |
+| cs.MA              |       886 |
+| cs.MM              |      1004 |
+| cs.MS              |       597 |
+| cs.NA              |      1043 |
+| cs.NE              |      2783 |
+| cs.NI              |      8587 |
+| cs.OH              |      1649 |
+| cs.OS              |       266 |
+| cs.PF              |       592 |
+| cs.PL              |      2523 |
+| cs.RO              |      3956 |
+| cs.SC              |       814 |
+| cs.SD              |      1215 |
+| cs.SE              |      4402 |
+| cs.SI              |      4546 |
+| cs.SY              |      4757 |
+| dg-ga              |       562 |
+| econ.EM            |       368 |
+| econ.GN            |       157 |
+| econ.TH            |        73 |
+| eess.AS            |       365 |
+| eess.IV            |       509 |
+| eess.SP            |      2279 |
+| funct-an           |       320 |
+| gr-qc              |     44417 |
+| hep-ex             |     18424 |
+| hep-lat            |     15022 |
+| hep-ph             |    105924 |
+| hep-th             |     84481 |
+| math-ph            |     24790 |
+| math.AC            |      5519 |
+| math.AG            |     24434 |
+| math.AP            |     26974 |
+| math.AT            |      5780 |
+| math.CA            |     10400 |
+| math.CO            |     26220 |
+| math.CT            |      2277 |
+| math.CV            |      6990 |
+| math.DG            |     19860 |
+| math.DS            |     14021 |
+| math.FA            |     12330 |
+| math.GM            |      2217 |
+| math.GN            |      2043 |
+| math.GR            |      9127 |
+| math.GT            |     10794 |
+| math.HO            |      1767 |
+| math.KT            |      1837 |
+| math.LO            |      6030 |
+| math.MG            |      3969 |
+| math.NA            |     12835 |
+| math.NT            |     19960 |
+| math.OA            |      5927 |
+| math.OC            |     13562 |
+| math.PR            |     25233 |
+| math.QA            |      7080 |
+| math.RA            |      7037 |
+| math.RT            |     10079 |
+| math.SG            |      3381 |
+| math.SP            |      3264 |
+| math.ST            |      8953 |
+| mtrl-th            |       165 |
+| nlin.AO            |      1745 |
+| nlin.CD            |      5575 |
+| nlin.CG            |       386 |
+| nlin.PS            |      3112 |
+| nlin.SI            |      3955 |
+| nucl-ex            |      9077 |
+| nucl-th            |     26970 |
+| patt-sol           |       452 |
+| physics.acc-ph     |      4223 |
+| physics.ao-ph      |      1727 |
+| physics.app-ph     |      2264 |
+| physics.atm-clus   |       954 |
+| physics.atom-ph    |      8704 |
+| physics.bio-ph     |      4132 |
+| physics.chem-ph    |      5857 |
+| physics.class-ph   |      3395 |
+| physics.comp-ph    |      4053 |
+| physics.data-an    |      2459 |
+| physics.ed-ph      |      1847 |
+| physics.flu-dyn    |      9162 |
+| physics.gen-ph     |      7418 |
+| physics.geo-ph     |      2007 |
+| physics.hist-ph    |      2026 |
+| physics.ins-det    |      8593 |
+| physics.med-ph     |      1826 |
+| physics.optics     |     16181 |
+| physics.plasm-ph   |      6638 |
+| physics.pop-ph     |       889 |
+| physics.soc-ph     |      7304 |
+| physics.space-ph   |      1236 |
+| plasm-ph           |        28 |
+| q-alg              |      1177 |
+| q-bio.BM           |      1699 |
+| q-bio.CB           |       657 |
+| q-bio.GN           |      1123 |
+| q-bio.MN           |      1612 |
+| q-bio.NC           |      3142 |
+| q-bio.OT           |       459 |
+| q-bio.PE           |      4173 |
+| q-bio.QM           |      2432 |
+| q-bio.SC           |       529 |
+| q-bio.TO           |       640 |
+| q-fin.CP           |       597 |
+| q-fin.EC           |       395 |
+| q-fin.GN           |       998 |
+| q-fin.MF           |       668 |
+| q-fin.PM           |       623 |
+| q-fin.PR           |       900 |
+| q-fin.RM           |       669 |
+| q-fin.ST           |      1043 |
+| q-fin.TR           |       565 |
+| quant-ph           |     69124 |
+| solv-int           |       844 |
+| stat.AP            |      4435 |
+| stat.CO            |      2067 |
+| stat.ME            |      7864 |
+| stat.ML            |      7713 |
+| stat.OT            |       333 |
+| supr-con           |        69 |
+|--------------------+-----------|
+| *total*            | *1506562* |
 * Data
 ** Total data size
 # [2019-04-19 Fri]
@@ -708,13 +711,13 @@ find . -type f -name "*.gz" | wc -l
 
 #+BEGIN_SRC bash
 # calculate disk usage across arXiv/src_all folder
-du -h --max-depth 1
+du ~/arXiv/src_all -h --max-depth 1
 #+END_SRC
 
 ** Number of tar archive files
 # [2019-02-04 Mo]
 
-2150 
+2150
 
 ** Number of folders with ancillary files provided
 
@@ -729,27 +732,31 @@ find . -name "anc" | wc -l
 ** Number of images total
 
 10,053,059
-(total in filepaths_all_images.txt)
+
+(total in =filepaths_all_images.txt=)
 # [2019-09-12 Thu]
 
 #+BEGIN_SRC bash
-# written to a paths text file
-# command
-find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "*.ps" -o -iname "*.jpg" \
--o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" \) \
--not -name "*pdf_image-*"
-# full command in bash script image_paths_to_txt.sh
+  # written to a paths text file
+  # command
+  find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "*.ps" -o -iname "*.jpg" \
+  -o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" \) \
+  -not -name "*pdf_image-*"
+  # full command in bash script image_paths_to_txt.sh
 #+END_SRC
 
-10,061,232  
+10,061,232
+
 (this is the total number of rows in the sqlite database, written via the find command)
 # [2019-04-12 Fri]
 
 10,061,158
+
 (total number of rows in sqlite database, after cleaning)
 # [2019-09-18 Wed]
 
 10,053,059
+
 (total number of rows in sqlite database, not including null values for x, y, or imageformat)
 # number of rows with x, y, or imageformat not filled (identify command could not run)
 # 8099
@@ -760,24 +767,22 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
 
 ** List of all different image file extensions
 
-see https://github.com/re-imaging/re-imaging/blob/master/statistics/file_extension_totals.org
+For full list, see https://github.com/re-imaging/re-imaging/blob/master/statistics/file_extension_totals.org
 # from [2019-02-09 Sat] pre-gz unzip
 
 #+BEGIN_SRC bash
-# command for finding files using perl
-find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
+  # command for finding files using perl
+  find . -type f | perl -ne 'print $1 if m/\.([^.\/]+)$/' | sort -u
 
-# or all in one go, getting totals and writing to text file
-find . -type f | grep -E ".*\.[a-zA-Z0-9]*$" | sed -e 's/.*\(\.[a-zA-Z0-9]*\)$/\1/' | sort | uniq -c | sort -n > ../format_totals_final.txt
+  # or all in one go, getting totals and writing to text file
+  find . -type f | grep -E ".*\.[a-zA-Z0-9]*$" | sed -e 's/.*\(\.[a-zA-Z0-9]*\)$/\1/' | sort | uniq -c | sort -n > ../format_totals_final.txt
 #+END_SRC
 
 ** Average number of images per article
 
 6.814069127
 
-#+BEGIN_SRC 
-10061232 / 1476538 = 6.814069127
-#+END_SRC
+(10061232 / 1476538 = 6.814069127)
 
 ** Average size of images
 # [2019-04-12 Fri]
@@ -788,97 +793,87 @@ mean across the entire dataset: 614.5988512991947 x 478.21691675858534
 
 calculated using sqlite database
 
-** Distribution of size of images (perhaps divisions of common resolutions 480p, 240p etc.?)
-
 ** Primary image formats
 
 bash find
 
-|----------+-----------|
-|    total | extension |
-|----------+-----------|
-|  4202415 | eps      |
-|  3299213 | pdf      |
-|  1090973 | png      |
-|   905970 | ps       |
-|   450816 | jpg      |
-|    26164 | jpeg     |
-|    25141 | eps      |
-|    24190 | pstex    |
-|    18496 | gif      |
-|    15182 | epsi     |
-|    12404 | svg      |
-|    11256 | png      |
-|     7788 | jpg      |
-|     5236 | ps       |
-|     3425 | epsf     |
-|     1386 | pdf      |
-|      919 | jpeg     |
-|      606 | gif      |
-|----------+-----------|
-| 10101580 | total     |
-|----------+-----------|
-
-SQLite
-
-
+|      total | extension |
+|------------+-----------|
+|    4202415 | eps       |
+|    3299213 | pdf       |
+|    1090973 | png       |
+|     905970 | ps        |
+|     450816 | jpg       |
+|      26164 | jpeg      |
+|      25141 | eps       |
+|      24190 | pstex     |
+|      18496 | gif       |
+|      15182 | epsi      |
+|      12404 | svg       |
+|      11256 | png       |
+|       7788 | jpg       |
+|       5236 | ps        |
+|       3425 | epsf      |
+|       1386 | pdf       |
+|        919 | jpeg      |
+|        606 | gif       |
+|------------+-----------|
+| *10101580* | *total*   |
+|------------+-----------|
 
 ** Primary image formats (combined, case-insensitive)
 
 From bash find
 
-|----------+-----------|
-|    total | extension |
-|----------+-----------|
-|  4227556 | eps       |
-|  3300599 | pdf       |
-|  1102229 | png       |
-|   911206 | ps        |
-|   485687 | jpg       |
-|    24190 | pstex     |
-|    19102 | gif       |
-|    15182 | epsi      |
-|    12404 | svg       |
-|     3425 | epsf      |
-|----------+-----------|
-| 10101580 | total     |
-|----------+-----------|
+|      total | extension |
+|------------+-----------|
+|    4227556 | eps       |
+|    3300599 | pdf       |
+|    1102229 | png       |
+|     911206 | ps        |
+|     485687 | jpg       |
+|      24190 | pstex     |
+|      19102 | gif       |
+|      15182 | epsi      |
+|      12404 | svg       |
+|       3425 | epsf      |
+|------------+-----------|
+| *10101580* | *total*   |
+|------------+-----------|
 
 SQLite
 
-|----------+-----------|
-|    total | extension |
-|----------+-----------|
-|  4223083 | eps       |
-|  3299043 | pdf       |
-|  1076731 | png       |
-|   909314 | ps        |
-|   485452 | jpg       |
-|    23922 | pstex     |
-|    19054 | gif       |
-|    12400 | svg       |
-|     4060 | epsf      |
-|----------+-----------|
-| 10053059 | total     |
-|----------+-----------|
+|      total | extension |
+|------------+-----------|
+|    4223083 | eps       |
+|    3299043 | pdf       |
+|    1076731 | png       |
+|     909314 | ps        |
+|     485452 | jpg       |
+|      23922 | pstex     |
+|      19054 | gif       |
+|      12400 | svg       |
+|       4060 | epsf      |
+|------------+-----------|
+| *10053059* | *total*   |
+|------------+-----------|
 
-With percentage
+SQLite with percentage
 
-|-----------+----------+-------------|
-| extension |    total |           % |
-|-----------+----------+-------------|
-| eps       |  4223083 |   42.007940 |
-| pdf       |  3299043 |   32.816310 |
-| png       |  1076731 |   10.710481 |
-| ps        |   909314 |   9.0451474 |
-| jpg       |   485452 |   4.8288983 |
-| pstex     |    23922 |  0.23795742 |
-| gif       |    19054 |  0.18953435 |
-| svg       |    12400 |  0.12334554 |
-| epsf      |     4060 | 0.040385717 |
-|-----------+----------+-------------|
-| total     | 10053059 |         100 |
-|-----------+----------+-------------|
+| extension |      total |           % |
+|-----------+------------+-------------|
+| eps       |    4223083 |   42.007940 |
+| pdf       |    3299043 |   32.816310 |
+| png       |    1076731 |   10.710481 |
+| ps        |     909314 |   9.0451474 |
+| jpg       |     485452 |   4.8288983 |
+| pstex     |      23922 |  0.23795742 |
+| gif       |      19054 |  0.18953435 |
+| svg       |      12400 |  0.12334554 |
+| epsf      |       4060 | 0.040385717 |
+|-----------+------------+-------------|
+| *total*   | *10053059* |       *100* |
+|-----------+------------+-------------|
 #+TBLFM: $3=($2/10053059)*100
 
 ** Highest number of images for a single article
@@ -886,12 +881,12 @@ With percentage
 
 67
 
-article: /1804/1804.11192/
+article: =1804.11192=
 
 ** Images by primary category 
 # [2019-05-02 Thu]
 
-171 different primary categories
+171 different primary categories, i.e. first listed subject area
 
 | primary category   |  total | rank |
 |--------------------+--------+------|
@@ -1072,7 +1067,6 @@ article: /1804/1804.11192/
 ** Images by month/year
 # [2019-04-17 Wed]
 
-|---------+--------|
 |   month |  total |
 |---------+--------|
 | 11-1988 |     11 |
@@ -1418,7 +1412,6 @@ article: /1804/1804.11192/
 ** Images by year
 # [2019-05-10 Fri]
 
-|------+---------|
 | year |  images |
 |------+---------|
 | 1988 |      11 |
@@ -1458,7 +1451,6 @@ article: /1804/1804.11192/
 
 as determined by the ImageMagick identify command (blank means no output from this command)
 
-|--------+---------|
 | format |   total |
 |--------+---------|
 | PS     | 5149324 |

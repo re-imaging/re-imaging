@@ -1,19 +1,22 @@
-#+OPTIONS: broken-links:t
 #+OPTIONS: toc:nil
 #+OPTIONS: ^:nil
+#+OPTIONS: *:nil
 * arXiv Bulk Source Data Process
 
-Process for downloading, extracting, unarchiving, and organising data for usage in machine learning applications or data mining.
+Process for downloading, extracting, unarchiving, and organising the bulk arXiv source data for usage in machine learning applications or data mining. These instructions outline how to download the bulk source data using ~s3cmd~, unarchiving, decompressing, and organising the downloaded files, and downloading OAI metadata using ~metha~.
 
-** Contents :TOC:QUOTE:
+Initial download and statistics in January-February 2019. Instructions last checked June 2020.
+
+#+TOC: headlines 3
+
+** Contents :TOC:QUOTE:noexport:
 #+BEGIN_QUOTE
 - [[#arxiv-bulk-source-data-process][arXiv Bulk Source Data Process]]
   - [[#background][Background]]
-- [[#step-1a-download-all-source-files][Step 1a: Download all source files]]
-- [[#step-1b-download-oai-metadata][Step 1b: Download OAI metadata]]
-- [[#step-2-unarchive-and-decompress][Step 2: Unarchive and decompress]]
-- [[#optional-extract-images-and-text-from-pdf-documents][Optional: Extract images and text from PDF documents]]
-- [[#step-3-organise-dataset][Step 3: Organise dataset]]
+  - [[#download-all-source-files][Download all source files]]
+  - [[#unarchive-and-decompress][Unarchive and decompress]]
+  - [[#download-oai-metadata][Download OAI metadata]]
+  - [[#organise-dataset][Organise dataset]]
 #+END_QUOTE
 
 ** Background
@@ -21,7 +24,7 @@ arXiv bulk source data is made readily available, however, it requires a number 
 
 arXiv bulk data as either PDFs or source data can be downloaded via Amazon S3 buckets. The source data for each article generally comprises the TeX or LaTeX code used to generate the article, image or vector graphics files, any other associated files, and ancillary materials. A number of articles are also stored within the bulk data as single PDF files only. We downloaded the full allotment of source files as of December 31, 2018 – a total download of approximately 1 terabyte in the form of 2150 compressed tar archive files. These compressed files were decompressed, unarchived, renamed, and organised into a folder hierarchy using bash commands on an Ubuntu Linux 18.04 desktop computer. This process extracts all tar files into separate folders; moves all PDF files to appropriately named folders; optionally retrieves images and text from PDF files; extracts any remaining gzip compressed files; and then moves remaining TeX files to individual folders.
 
-* Step 1a: Download all source files 
+** Download all source files 
 Download all source files from the arXiv Amazon Web Services (AWS) data storage using requestor pays.
 
 - Information provided by arXiv: https://arxiv.org/help/bulk_data_s3
@@ -55,52 +58,26 @@ s3cmd sync --requester-pays --skip-existing --no-check-md5 -v s3://arxiv/src/ /p
 Totals:
 - 2150 compressed tar archive files
 
-* Step 1b: Download OAI metadata
-- arXiv maintains metadata for articles via the Open Access Initiative v2.0 protocol. This allows users to query the server to retrieve metadata relating to a particular time period or set (category, e.g. math)
-- As we require the entire metadata database, we used a harvesting tool to request the metadata for the entire time range, which is downloaded incrementally in blocks of approximately 10,000 items
-- Initial attempt at downloading metadata used oai-harvest (https://github.com/bloomonkey/oai-harvest). While simple to setup and use, the download only produced approximately 1.1 million records, which is much less than the expected 1.5 million records. The tool also downloaded items as individual xml files that each hold one record only, which has proven somewhat unwieldy
-- Second attempt used metha (https://github.com/miku/metha). Metha is a command line harvester that incrementally caches a particular endpoint. This attempt produced 1506176 (1.5m) unique records
+** Unarchive and decompress
+The following code is intended to be run as a number of single line bash commands that iteratively decompressed, unarchived, renamed, and organised the data, as well as extracting images and text from PDF documents. This allows for checking if the expected result has been achieved at each step. This process will take a long time.
 
-#+BEGIN_SRC bash
+NB: If you want to also extract images from PDF documents, uncomment or run those commands in the appropriate sequence of commands.
 
-# first install metha using instructions from https://github.com/miku/metha
-
-# check metha folder -- might not give output if not previously run
-metha-sync -dir http://export.arxiv.org/oai2
-
-# run harvester
-metha-sync -format arXiv http://export.arxiv.org/oai2
-
-# run harvester with date constraints
-metha-sync -format arXiv -from 2019-01-01 http://export.arxiv.org/oai2
-#+END_SRC
-
-Totals:
-- 1506176 OAI records across 1578 xml files
-
-* Step 2: Unarchive and decompress
-- NB: If you want to also extract images from PDF documents, run those commands in parallel with these commands
-- Steps 2 and 3 were accomplished by using a number of single line bash commands that iteratively decompressed, unarchived, renamed, and organised the data, as well as extracting images and text from PDF documents.
-- See document arxiv_extract.sh for annotated code
-- Recommended to run each step individually and inspect for errors
-- Extracting and unarchiving will take a long time
-- During this process, images and text are extracted from each PDF file using pdf-images and pdftotext (this can be omitted, see below)
-
-See arxiv_extract.sh - some code reproduced here:
+See =arxiv_extract.sh= - some code reproduced here:
 
 #+BEGIN_SRC bash
 # after downloading all arXiv tars and placing them in ~/arXiv/src
-
-# change into directory
 cd ~
 mkdir arXiv
-cd ~/arXiv/
+cd arXiv
 mkdir src_all
+mkdir src
+# move source tars now
 
-# move all of the downloaded source files to the arXiv folder
-mv /path/to/download/folder/ .
-# rename folder
-mv folder src 
+# it may also be helpful to place the data on a secondary drive and create a symlink
+
+# test - get list of all archives
+for i in src/*; do echo $i; done
 
 # for each archive, decompress into a specific folder
 for i in src/*; do tar xvf $i -C src_all/; done
@@ -111,7 +88,7 @@ cd ~/arXiv/src_all
 # move all pdf files to their own folder
 find . -maxdepth 2 -name "*.pdf" -print -exec sh -c 'mkdir "${1%.*}" ; mv "$1" "${1%.*}" ' _ {} \;
 
-# do the extraction here as it will operate only on the papers that were given only as pdf
+# do PDF image extraction here as it will operate only on the papers that were given only as pdf
 # extract all images from pdf files
 # find . -maxdepth 3 -name "*.pdf" -print -exec sh -c 'pdfimages -png "${1}" "${1}_image" ' _ {} \;
 
@@ -130,7 +107,6 @@ find . -name "*.gz" -exec gunzip -v -q {} \;
 # and for each individual (tex) file, make a folder and move the item to that folder
 # note this needs to do some trickery as many of these files don't have extensions and we can't make a folder of the same name
 find . -maxdepth 2 -type f -print -exec sh -c 'mkdir "${1}_dir" ; mv "$1" "${1}.srconly"  ; mv "${1}.srconly" "${1}_dir" ; mv "${1}_dir" "$1"' _ {} \;
-
 #+END_SRC
 
 Totals:
@@ -138,11 +114,23 @@ Totals:
 - 114,132 PDF-only articles (no source provided)
 - 324,101 source-only articles (single source file only, no images)
 
+*** Optional: Extract images from PDF documents
+The extraction of images is commented out of =arXiv_src_scripts/arxiv_extract.sh=. This originally seemed like an important process, as there is a decent portion of the arXiv that was not submitted as source code, however this process produced a very "dirty" dataset with a number of problems in the image files: a large number are "stripes" (images split into multiple horizontal bars) as well as lots of single symbols, strange transparency or inverted colours, and low resolution images. Only 7.69% (~113k) of all articles are submitted to arXiv as PDF only, however this process extracted over 27 million image files from PDFs, however many of these are unusable.
+
+We made the decision to ignore this part of the dataset and proceed with using only the images found in the source uploads. This will save time and effort in cleaning the data, as well as avoiding a number of pitfalls of having such a large and messy dataset, but at the cost of not having any images extracted from PDF files.
+
+If you do use this extraction code, each image extracted from a PDF will be given the filename extension =.pdf_image-XXX.png=, so they can be ignored or conditionally operated upon at later stages of the process.
+
+Totals
+- Total number of articles: 1,483,662
+- Number of these that were PDF only: 114,132 (7.69% of total number of articles)
+- 27,198,781 images extracted from PDFs
+
 *** File organisation and directory structure
-Each article in the source directory has its own folder named by its arXiv identifier, in the format YYMM.XXXXX (or for articles pre-2015, 4 trailing digits in the form of YYMM.XXXX). Articles prior to March 2007 use the identifier archive.subjectclass/YYMMXXX e.g. math.GT/0309136. Image files are named according to the original filenames that were deposited to arXiv, e.g. "Fig4.eps", "office_heatmap.jpg", "figure3d.pdf" etc. (see Figure XX for example directory structure). Details on identifier convention at https://arxiv.org/help/arxiv_identifier.
+Each article in the source directory has its own folder named by its arXiv identifier, in the format =YYMM.XXXXX= (or for articles pre-2015, 4 trailing digits in the form of =YYMM.XXXX=). Articles prior to March 2007 use the identifier =archive.subjectclass/YYMMXXX= e.g. =math.GT/0309136=. Image files are named according to the original filenames that were deposited to arXiv, e.g. =Fig4.eps=, =office_heatmap.jpg=, =figure3d.pdf= etc. Details on identifier convention at https://arxiv.org/help/arxiv_identifier.
 
 *** Directory structure example:
-#+BEGIN_SRC 
+#+BEGIN_SRC bash
 - arXiv
   - src_all
     - date in format YYMM, e.g:
@@ -213,148 +201,95 @@ Each article in the source directory has its own folder named by its arXiv ident
         ...
 #+END_SRC
 
-*** Filenames
-- Each article in the source directory has its own folder named in the format of YYMM.XXXXX (or only 4 digits in the form of YYMM.XXXX for pre-2015). Articles prior to March 2007 (9107-0703) use the identifier archive.subjectclass/YYMMXXX e.g. math.GT/0309136
-- For more information on arXiv identifiers, see https://arxiv.org/help/arxiv_identifier
-- Image files are named according to the original filenames that were deposited to arXiv, as we are using the original source
-
 *** Image totals
-- Breakdown of the most common image formats. 
-- There are more images than just these file extensions, but in uncommon formats, or in formats that are a bit tricky to work with (like metapost or xfig vector graphics languages), but the numbers of these are much smaller proportions of the dataset.
+Below is a breakdown of the most common image formats. There are more images than just these file extensions, but in uncommon formats, or in formats that are a bit tricky to work with (like metapost or xfig vector graphics languages), but the numbers of these are much smaller proportions of the dataset.
 
-|----------+--------|
-|      606 | .GIF   |
-|      919 | .JPEG  |
-|     1386 | .PDF   |
-|     3425 | .epsf  |
-|     5236 | .PS    |
-|     7788 | .JPG   |
-|    11256 | .PNG   |
-|    12404 | .svg   |
-|    15182 | .epsi  |
-|    18496 | .gif   |
-|    24190 | .pstex |
-|    25141 | .EPS   |
-|    26164 | .jpeg  |
-|   450816 | .jpg   |
-|   905970 | .ps    |
-|  1090973 | .png   |
-|  3299213 | .pdf   |
-|  4202415 | .eps   |
-|----------+--------|
-| 10101580 | total  |
-|----------+--------|
+#+begin_src org
+|-----------+----------+-------|
+| extension |    total |     % |
+|-----------+----------+-------|
+| eps       |  4223083 | 42.01 |
+| pdf       |  3299043 | 32.82 |
+| png       |  1076731 | 10.71 |
+| ps        |   909314 | 9.045 |
+| jpg       |   485452 |  4.83 |
+| pstex     |    23922 |  0.24 |
+| gif       |    19054 |  0.19 |
+| svg       |    12400 |  0.12 |
+| epsf      |     4060 |  0.04 |
+|-----------+----------+-------|
+| total     | 10053059 |   100 |
+|-----------+----------+-------|
+#+end_src
 
+The arXiv bulk source download includes a total of over 10 million images. These image formats are all relatively straightforward to work with and seem to give a good spread across different uses such as vector graphics (eps/svg), web (jpeg/gif), and print (ps).
 
-- Source uploads include a total of over 10 million images.
-- These image formats are all relatively straightforward to work with and seem to give a good spread across different uses such as vector graphics (eps/svg), web (jpeg/gif), and print (ps)
-- Mean average of 6.81 images per article
-- Would be worthwhile to investigate and analyse proportion of images used across different categories and time
-- Also important to keep looking for other strong tendencies or trends in the dataset e.g. is there something that has been missed through this process? By excluding PDF only articles are we missing a key part of the archive, or are these distributed uniformally?
+Mean average of 6.81 images per article
 
-* Optional: Extract images and text from PDF documents
-- Commented out of arXiv_src_scripts/arxiv_extract.sh, uncomment to run during Step 2
+** Download OAI metadata
+ArXiv participates in the Open Archives Initiative and provides up-to-date metadata for the full archive. Full bulk metadata is therefore downloadable using the OAI-PMH v2.0 protocol (Lagoze et. al., 2001). These records are stored in XML format and contain details such as the identifier, author, title, categories, licence, abstract, and date. The format specification of the metadata used for this project is arXiv, although other formats are available that provide slightly different data fields. As we required the entire metadata database, we used a harvesting tool to request the metadata for the entire time range, which is downloaded incrementally in blocks of approximately 10,000 items. We downloaded the metadata for all articles (records) up to the end of 2018 using the Metha OAI harvesting tool. We used [metha](https://github.com/miku/metha) for the OAI harvesting. Metha is a command line harvester that incrementally caches a particular endpoint. This produced 1506176 (1.5m) unique records.
 
-- Extract images and text from PDF documents
-- This originally seemed like an important process, as there is a decent portion of the arXiv that was not submitted as source code
-- 7.69% of all articles are submitted as PDF only
-- Attempted to use pdf-images to extract images, with varying success.
-- Extracted over 27 million image files from PDFs
-- Produced a very "dirty" dataset with a number of problems in the image files: A large number are "stripes" (images split into multiple horizontal bars) as well as lots of single symbols, strange transparency or inverted colours, and low resolution images
-- Many of these are unusable. Some example montages of these problematic images can be found here: https://www.dropbox.com/sh/o6juhotbn9cih7w/AADWjarbKAs13U2fj_ZSKu1wa?dl=0
-- Decision was made to ignore this part of the dataset and proceed with using only the images found in the source uploads. This will save time and effort in cleaning the data, as well as avoiding a number of pitfalls of having such a large and messy dataset, but at the cost of not having any images extracted from PDF files
-- Each image extracted from a PDF was given the filename extension .pdf_image-XXX.png, so they can be ignored or conditionally operated upon at later stages of the process
-- All PDF data was kept in case it would be required at a later stage in the project, and for posterity
-
-Totals
-- Total number of articles: 1,483,662
-- Number of these that were PDF only: 114,132 (7.69% of total number of articles)
-- 27,198,781 images extracted from PDFs
-
-* Step 3: Organise dataset
-- Source dataset consists only of article source and image files, no metadata or data about the placement within arXiv
-- OAI files consist only of metadata
-- Place the data for both into SQLite database as an attempt to link this data and be able to analyse and label dataset
-- Create SQLite database
-- Parse OAI xml files and write relevant data into an SQLite table
-- Create a table for individual images, iterate over all image files of relevant file extensions and insert a row into table for each
-- Be able to query database for any images for a given article or metadata query, or matching metadata for a given image
-
-Creating SQLite3 database
-#+BEGIN_SRC python
-import sqlite3
-
-db_path = "~/data/db/arxiv_db.sqlite3"
-
-try:
-    db = sqlite3.connect(db_path)
-
-    c = db.cursor()
-    c.execute('''
-        CREATE TABLE metadata(id INTEGER PRIMARY KEY, identifier TEXT, created TEXT, \
-        cat TEXT, authors TEXT, title TEXT, abstract TEXT, licence TEXT)
-    ''')
-
-    # create images table
-    c.execute('''
-        CREATE TABLE images (id INTEGER PRIMARY KEY, identifier TEXT, filename TEXT, \
-        filesize INT, path TEXT, x INT, y INT, imageformat TEXT)
-    ''')
-
-    db.commit()
-
-except Exception as e:
-    db.rollback()
-    raise e
-finally:
-    db.close()
-#+END_SRC
-
-Inserting article metdata (see oai-metadata-scripts/oai_to_sqlite.py for code for parsing OAI xml files and inserting relevant data into SQLite table)
+To harvest all OAI records in OAI format:
 
 #+BEGIN_SRC bash
-python oai-metadata-scripts/oai_to_sqlite.py
+# first install metha using instructions from https://github.com/miku/metha
+
+# check metha folder -- might not give output if not previously run
+metha-sync -dir http://export.arxiv.org/oai2
+
+# run harvester
+metha-sync -format arXiv http://export.arxiv.org/oai2
+
+# run harvester with date constraints
+# metha-sync -format arXiv -from 2019-01-01 http://export.arxiv.org/oai2
 #+END_SRC
 
-Inserting image metadata:
+Totals:
+- 1,506,176 OAI records
+- 1,578 xml files
+
+*** Extract Metha gz files
+OAI records are in gzipped XML format (Extensible Markup Language) using the arXiv format. This will first need to be unzipped:
 
 #+BEGIN_SRC bash
-# for full code, see file image_data_to_sql.sh
-# code also reproduced in python, see image_data_to_sql.py
+# !!! back up files first, this converts in-place !!!
 
-# find all relevant image files
-find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "*.ps" -o -iname "*.jpg" \
--o -iname "*.jpeg" -o -iname "*.pstex" -o -iname "*.gif" -o -iname "*.svg" -o -iname "*.epsf" \) \
--not -name "*pdf_image-*" | while read fullpath; do
-
-  article="$(cut -d'/' -f3 <<< "$fullpath")"
-  path="${fullpath%/*}"
-  name="${fullpath##*/}"
-
-  pdfext=$article
-
-  pdfarticle="${article}.pdf"
-
-  # check that the filename is not the same as the article ID, indicating a PDF of the article
-  if [[ $name != $pdfarticle ]];
-  then
-    count=$((count+1))
-    echo $count
-
-    filesize=$(stat --printf="%s" "$fullpath")
-
-    res="$(identify -ping -format "%w %h %m" "$fullpath")"
-
-    x="$(cut -d' ' -f1 <<< "$res")"
-
-    y="$(cut -d' ' -f2 <<< "$res")"
-
-    imageformat="$(cut -d' ' -f3 <<< "$res")"
-
-    # insert row into sqlite3
-    sqlite3 /home/rte/data/db/arxiv_db_test.sqlite3 "INSERT INTO images \
-    (identifier, filename, filesize, path, x, y, imageformat) \
-    VALUES (\"$article\", \"$name\", \"$filesize\", \"$path\", \"$x\", \"$y\", \"$imageformat\");"
-  fi
-done
+# change to directory with metha-downloaded oai gz files
+for f in *.gz; do gunzip "$f"; done
 #+END_SRC
+
+*** Example metadata
+Example XML file in the “arXiv” format showing organisation of metadata according to specific tags such as "categories", "title", "author", "abstract" etc. Example shown here is Callan, David: A determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata, 2007, https://arxiv.org/abs/0704.0004.
+
+#+BEGIN_SRC xml
+<ListRecords>
+    <record>
+        <header status="">
+            <identifier>oai:arXiv.org:0704.0004</identifier>
+            <datestamp>2007-05-23</datestamp>
+            <setSpec>math</setSpec>
+        </header>
+        <metadata>
+            <arXiv xsi:schemaLocation="http://arxiv.org/OAI/arXiv/                             http://arxiv.org/OAI/arXiv.xsd">
+                <id>0704.0004</id>
+                <created>2007-03-30</created>
+                <authors>
+                    <author>
+                        <keyname>Callan</keyname>
+                        <forenames>David</forenames>
+                    </author>
+                </authors>
+                <title>A determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata</title>
+                <categories>math.CO</categories>
+                <comments>11 pages</comments>
+                <msc-class>05A15</msc-class>
+                <abstract>  We show that a determinant of Stirling cycle numbers counts unlabeled acyclic single-source automata. The proof involves a bijection from these automata to certain marked lattice paths and a sign-reversing involution to evaluate the determinant.
+                </abstract>
+            </arXiv>
+        </metadata>
+    <about/>
+</record>
+#+END_SRC
+
+** Organise dataset
+The above steps should yield the bulk source data organised into a sensible folder heirarchy. However, this format is not easily queried. Our solution was to place the data for both metadata and image files into an SQLite database as an attempt to link this data and be able to query and analyse the dataset. This also allows adding figure captions to allow for searching across these different sets of data. For more information, see the =sql-method= document.
