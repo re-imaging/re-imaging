@@ -9,7 +9,6 @@ global args
 args = parser.parse_args()
 
 # Here we import the sqlite3 database and create a cursor
-# db_path = "/home/rte/data/db/arxiv_db_images.sqlite3"
 db_path = args.database
 db = sqlite3.connect(db_path)
 c = db.cursor()
@@ -34,7 +33,7 @@ image_ids = []
 for row in rows:
     path = row[1] + '/' + row[2]
 #     print(path)
-    filepaths.append(path.replace('./','/home/rte/arXiv/src_all/'))
+    filepaths.append(path.replace('./', os.path.expanduser("~/arXiv/src_all/")))
     image_ids.append(row[0])
 print("total filepaths:", len(filepaths))
 print("total ids:", len(image_ids))
@@ -42,7 +41,6 @@ print("total ids:", len(image_ids))
 # write list of image paths and IDs to file (for debugging purposes, mostly)
 print("writing text file")
 
-# fname = "filepaths_all_images_test.txt"
 fname = args.textfile
 
 # print(fname)

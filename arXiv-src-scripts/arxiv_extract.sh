@@ -7,10 +7,10 @@
 # this script processes the downloaded data:
 # - extracts the tar archives to folders
 # - moves all PDF files to individually named folders
-# - gets images from PDF files using pdfimages
+# - optionally gets images from PDF files using pdfimages
 # - gets text from PDF files using pdftotext
 # - finishes extracting all tar and gz zipped archives
-# - moves each text only article to its own individual folder
+# - moves each text-only article to its own individual folder
 
 # after downloading all arXiv tars and placing them in ~/arXiv/src
 cd ~

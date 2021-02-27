@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# script that runs a find command from a target directory and
+# script that runs a `find` command from a target directory and
 # creates a text file with all of the file paths
 # this was then used to run commands over each file in order
 
@@ -63,10 +63,6 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
     # imageformat="$(cut -d' ' -f3 <<< "$res")"
     # echo $imageformat
 
-    # sqlite3 /home/rte/data/db/arxiv_db_test.sqlite3 "INSERT INTO images \
-    # (identifier, filename, filesize, path, x, y, imageformat) \
-    # VALUES (\"$article\", \"$name\", \"$filesize\", \"$path\", \"$x\", \"$y\", \"$imageformat\");"
-    # destfile=~/data/paths/all_image_paths.txt
     echo "$fullpath" >> "$destfile"
   fi
   echo "total number of files:"

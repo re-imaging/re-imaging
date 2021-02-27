@@ -1,10 +1,19 @@
 import os
 import json
+import argparse
 
-# starting_folder = "/home/rte/arXiv/src_all/1001/"
-starting_folder = "/home/rte/arXiv/src_all/"
-# starting_folder = "/home/rte/arXiv/src_all/1506"
-dump_file = "tex_list_all.json"
+parser = argparse.ArgumentParser(description='Parse metha OAI XML files and insert metadata into SQLite database')
+
+parser.add_argument('search_path', help='set folder to search')
+parser.add_argument('output_file', help="name of output file (JSON)")
+
+global args
+args = parser.parse_args()
+
+starting_folder = args.search_path
+
+# dump_file = "tex_list_all.json"
+dump_file = args.output_file
 
 tex_counter = 0
 num_dirs = 0

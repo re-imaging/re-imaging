@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 import sys
 import os
 import re
@@ -11,21 +8,12 @@ import time
 import argparse
 import datetime
 import signal
-# import subprocess
-# import concurrent.futures
-# from functools import partial
-# import itertools
-# import math
 
 parser = argparse.ArgumentParser(description='Script for getting captions from .tex files')
 
-# db_path = "/home/rte/data/db/arxiv_db.sqlite3"
 parser.add_argument('db_path', help="path to SQLite database")
 parser.add_argument('tex_list', help="path to file that stores list of all .tex files")
 parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')
-# parser.add_argument('--end_line', default=0, type=int, help='line to read textfile from (default: 0)')
-# parser.add_argument('-s', '--slice_size', default=2500, type=int, help='size of each slice to process (default: 2500)')
-# parser.add_argument('-n', '--num_threads', default=8, type=int, help='number of threads (default: 8)')
 parser.add_argument('-v', '--verbose', action='store_true', help='verbose output')
 parser.add_argument('-t', '--timing', action='store_true', help='timing output')
 parser.add_argument('-z', '--dryrun', action='store_true', help="don't modify the database, just print (default: False)")
@@ -72,8 +60,6 @@ def parse_caption(text):
 
     end = 2000 # arbitrary
     offset = 0
-    # print("parsing caption from start:", start)
-    # print("skipping first part of string:", text[:start])
 
     for i, char in enumerate(text[start:]):
         # print(char, end=" ")
@@ -95,8 +81,6 @@ def parse_caption(text):
             # print("end loop")
             end = i
             return text[start+offset+1:start+end]
-#         else:
-#             print("continue loop")
 
     return text[start+1:]
 
@@ -145,8 +129,8 @@ def get_caption(t):
             match = re.search(id_re, t)
             if match:
                 article_id = match.group(1)
-            elif(args.verbose):
-                print("!!! no article id found!")
+            else:
+                if args.verbose: print("!!! no article id found!")
             # print(article_id)
 
             # extract figure text from (La)TeX file
@@ -258,15 +242,10 @@ def main():
     start = time.time()
     program_start = time.time()
 
-    # for testing
-    # texs = ["/home/rte/arXiv/src_all/1608/1608.04949/28867_am.tex"]
-    # texs = ["/home/rte/arXiv/src_all/1608/1608.01138/manuscript.tex"]
-    # texs = []
     print("loading texs from json file")
     with open(args.tex_list) as f:
         texs = json.load(f)
 
-    # if(args.verbose):
     print("loaded file of .tex paths")
     print("number of entries:",len(texs))
 

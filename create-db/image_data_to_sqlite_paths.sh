@@ -10,7 +10,7 @@ pwd
 
 startline=0
 count=0
-db="/home/rte/data/db/arxiv_db_images.sqlite3"
+db="~/data/db/arxiv_db_images.sqlite3"
 
 if [ "$1" != "" ]; then
   echo "reading from line "$1""

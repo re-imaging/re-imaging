@@ -1,17 +1,18 @@
-# create an SQLite database with tables for metadata and images
+# create an SQLite database with tables for metadata, images, and captions
 
 import sqlite3
+import os
 
-db_path = "/home/rte/data/db/arxiv_db.sqlite3"
+db_path = os.path.expanduser("~/data/db/arxiv_db.sqlite3")
 
 try:
-    # create a database in RAM
-    # db = sqlite3.connect(':memory:')
     # creates or opens a file database
     db = sqlite3.connect(db_path)
 
     # get cursor object and create metadata table
     c = db.cursor()
+
+    # create metadata table
     c.execute('''
         CREATE TABLE metadata(id INTEGER PRIMARY KEY, identifier TEXT, created TEXT, \
         cat TEXT, authors TEXT, title TEXT, abstract TEXT, licence TEXT)
@@ -28,18 +29,6 @@ try:
         CREATE TABLE "captions" ("id" INTEGER, "identifier" TEXT, "tex" TEXT, \
         "fignum" TEXT, "caption" TEXT, "label" TEXT, "filenames" TEXT, "image_ids" TEXT, PRIMARY KEY("id"))
     ''')
-
-    # for testing insertion
-
-    # c.execute('''
-    #     INSERT INTO metadata(identifier, name, cat)
-    #     VALUES(?,?,?)''', ('0101', 'some title', 'math'))
-    # print('first entry inserted')
-    #
-    # c.execute('''
-    #     INSERT INTO metadata(identifier, name, cat)
-    #     VALUES(?,?,?)''', ('9901', 'a different title', 'cs'))
-    # print('second entry inserted')
 
     db.commit()
 

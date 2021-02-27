@@ -6,7 +6,7 @@ import sys
 import sqlite3
 import argparse
 
-parser = argparse.ArgumentParser(description='Parse Metha OAI XML files and insert metadata into SQLite database')
+parser = argparse.ArgumentParser(description='Parse metha OAI XML files and insert metadata into SQLite database')
 
 parser.add_argument('db_path', help="path to SQLite database")
 parser.add_argument('oai_path', help='set folder of OAI xml files')
