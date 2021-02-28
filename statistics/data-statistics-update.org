@@ -1,7 +1,7 @@
 * Update - up to end of 06/2020
 * About
 
-This document contains various data statistics relating to the text and image data of the www.arxiv.org dataset. The entire source of the arxiv dataset was downloaded at the end of 2018 and extracted into individual files. The majority of these statistics have been collected through the process of querying the dataset along with the associated metadata provided via the OAI format (see https://arxiv.org/help/oa).
+This document contains various data statistics relating to the text and image data of the www.arxiv.org dataset. The entire source of the arxiv dataset was downloaded at the end of June 2020. It was then extracted into individual files and queried. The majority of these statistics have been collected through the process of querying the dataset along with the associated metadata provided via the OAI format (see https://arxiv.org/help/oa).
 
 * Table of Contents                                             :TOC_3:QUOTE:
 #+BEGIN_QUOTE

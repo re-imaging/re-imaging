@@ -2,7 +2,7 @@
 #
 # Create a classifier model using the VGG16 architecture and train it to classify between three classes. Originally used with the arXiv images dataset and the classes of diagram, sensor, and unsure.
 #
-# Draws upon code from Florian Offert: https://github.com/zentralwerkstatt/explain.ipynb/blob/master/train.ipynb
+# Draws upon code from Fabian Offert: https://github.com/zentralwerkstatt/explain.ipynb/blob/master/train.ipynb
 
 import warnings
 warnings.filterwarnings('ignore')
