@@ -1,0 +1,62 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
+* README
+#+TOC: headlines 2
+* Replication Data for Images of the arXiv: reconfiguring large scientific image datasets
+This data repository contains the replication data for the paper Images of the arXiv: reconfiguring large scientific image datasets.
+** Computer Setup Instructions
+*** Computer Specs
+**** OS
+- Linux: Ubuntu 18.04
+**** Hardware
+- Intel i7 CPU
+- 500GB NVMe solid state drive
+- 4TB 72000 rpm hard disk
+- 32GB DDR3 RAM
+- NVidia RTX 2080 graphics card 8GB VRAM
+**** Installing software
+***** Metha
+https://github.com/miku/metha
+
+***** SQLite (command line)
+Ubuntu ships with SQLite. Simply call
+
+#+BEGIN_SRC bash
+sqlite3 /path/to/database.sqlite3
+#+END_SRC
+
+***** Python SQLite
+This is included in Python:
+
+#+BEGIN_SRC python
+import sqlite
+#+END_SRC
+
+***** DBBrowser for SQLite (optional)
+This software is handy for having a graphical way to examine the SQLite database and can also be used to run commands
+https://sqlitebrowser.org/dl/
+
+#+BEGIN_SRC bash
+sudo add-apt-repository -y ppa:linuxgndu/sqlitebrowser
+sudo apt-get update
+sudo apt-get install sqlitebrowser
+#+END_SRC
+***** Other software
+- Anaconda (recommended for installing and managing Python packages)
+- Python (2 and 3)
+- ImageMagick (for convert and identify)
+- Jupyter Notebook
+- SQLite interfaces for Python and Bash
+- tensorflow-gpu
+*** Environments
+We used two different conda environments for running the required scripts. The first is ~py37~, which contains basic Python3 packages, ~matplotlib~, and other utilities. The second is ~tf_gpu~, which is configured to run TensorFlow 1.14 using GPU acceleration. This package will take longer to install so is provided separately. See the conda YAML files.
+** Instructions
+*** Downloading data
+See =dataset_method.md=
+*** Creating database
+See =sqlite_method.md=
+*** Image credits for paper
+See =image_credits.md=
+*** Plots
+Scripts for running plots found in the =sqlite-scripts= folder
+
