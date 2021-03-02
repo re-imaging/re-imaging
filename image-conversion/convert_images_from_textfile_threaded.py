@@ -1,3 +1,6 @@
+# Script to read image paths from a textfile and then convert them using ImageMagick
+# threaded for performance gains
+
 import argparse
 import itertools
 import subprocess
@@ -247,30 +250,6 @@ def main():
 
     assert len(filepaths[args.start_line:]) == len(outputnames), "!!! unmatched filepaths and outputnames !!!"
 
-    # create pool
-    # num_cpus = cpu_count()
-    # es = 'Finished conversion of {} to {}'
-    # p = Pool(processes=8)
-    # for infn, outfn in p.imap_unordered(convert, zip(filepaths, outputnames)):
-    #     if args.verbose:
-    #         print(es.format(infn, outfn))
-
-    # manage procs version
-    '''
-    procs = []
-    maxprocs = args.num_threads # could be cpu_count()
-    for n, f in enumerate(filepaths[args.start_line:]):
-        while len(procs) == maxprocs:
-            manageprocs(procs)
-        procs.append(convert(f, outputnames[n], logpath))
-
-    print("finished converting!")
-    # print("total number of items:",counter) # doesn't work with multiprocessing
-    end = time.time()
-    print("total time taken:", end - overall_start)
-    # print("number of missing files:",missing_count)
-    '''
-
     divisions = [x for x in range(args.start_line, len(filepaths), 5000)]
     divisions.append(len(filepaths))
 
@@ -293,14 +272,6 @@ def main():
                         # fut.kill()
                     else:
                         print("converting {} failed, return code {}".format(fn, rv))
-
-'''
-def manageprocs(proclist):
-    for pr in proclist:
-        if pr.poll() is not None:
-            proclist.remove(pr)
-    time.sleep(0.5)
-'''
 
 if __name__ == "__main__":
     main()

@@ -268,9 +268,9 @@ Finally, we went back over all the text files and grabbed the associated =image_
 *** Captions
 #+begin_src org
   |      id | identifier | tex                                                         | fignum | caption                                                                                                                                                   | label                         | filenames                       | image_ids |
-  | 7066264 | 1905.03030 | /home/rte/arXiv/src_update/1905/1905.03030/metalearning.tex |      4 | Meta-learned state machine for a predictor of coin tosses. The figure shows...                                                                            | fig:metalearned-state-machine | figures/coin_prediction_memory  |  12007157 |
-  | 3294070 | 1611.05676 | /home/rte/arXiv/src_all/1611/1611.05676/tryQFPT.tex         |      7 | $F_n$ versus $n$ for the rational  sampling time   $\gamma \tau /\pi=1/3$. Now the detection probability...                                               | fig1patha                     | inf_lattice_tau_03pi_comparison |   5413659 |
-  | 3902503 | 1810.07940 | /home/rte/arXiv/src_all/1810/1810.07940/Astrum.tex          |      1 | The dependence of CR modulation for TRAPPIST 1d for different values of stellar magnetic field and stellar wind velocity 545~km/s ($T_{\text{cor}}=2$~MK) | fig1                          | Fig1                            |   6443166 |
+  | 7066264 | 1905.03030 | /arXiv/src_update/1905/1905.03030/metalearning.tex |      4 | Meta-learned state machine for a predictor of coin tosses. The figure shows...                                                                            | fig:metalearned-state-machine | figures/coin_prediction_memory  |  12007157 |
+  | 3294070 | 1611.05676 | /arXiv/src_all/1611/1611.05676/tryQFPT.tex         |      7 | $F_n$ versus $n$ for the rational  sampling time   $\gamma \tau /\pi=1/3$. Now the detection probability...                                               | fig1patha                     | inf_lattice_tau_03pi_comparison |   5413659 |
+  | 3902503 | 1810.07940 | /arXiv/src_all/1810/1810.07940/Astrum.tex          |      1 | The dependence of CR modulation for TRAPPIST 1d for different values of stellar magnetic field and stellar wind velocity 545~km/s ($T_{\text{cor}}=2$~MK) | fig1                          | Fig1                            |   6443166 |
 #+end_src
 
 ** Cleaning and fixes

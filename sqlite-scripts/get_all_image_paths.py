@@ -1,3 +1,5 @@
+# saves a text file with all the image paths from the SQLite database
+
 import sqlite3
 import argparse
 

@@ -1,17 +1,12 @@
-# # Ternary Classifier Predictions
+# Ternary Classifier Predictions
 #
 # Uses a previously trained network to classify images and then saves the resulting prediction averages.
-
-import warnings
-warnings.filterwarnings('ignore')
+# This is then used to generate plots, see `ternary_classifier_predictions_plot.ipynb`
 
 import numpy as np
 
 import os
-import sys
-import glob
 import random
-from IPython.display import clear_output, display
 import PIL.Image
 import datetime
 
@@ -31,9 +26,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sqlite3
 import pickle
-import json
-import math
-import random
 
 # this seems to help with some GPU memory issues
 
@@ -43,17 +35,16 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth = True
 session = tf.Session(config=config)
 
-model = load_model('ternary_20190911_9748x/diagram-sensor-unsure_vgg16-2000.hdf5')
+# load model previously saved with `ternary_classifier.ipynb`
+model = load_model("checkpoints/ternary_20190911_9748x/diagram-sensor-unsure_vgg16-2000.hdf5")
 
 # import the sqlite3 database and create a cursor
-db_path = "/home/rte/data/db/arxiv_db_images.sqlite3"
+db_path = os.path.expanduser("~/data/db/arxiv_db_images.sqlite3")
 db = sqlite3.connect(db_path)
 c = db.cursor()
 
-# load the data saved previously
+# load the data saved previously from `../sqlite-scripts/db_plots.ipynb`
 image_pkl_filename = "../sqlite-scripts/images_cat_year_data.pkl"
-# or pick up from where we left off
-# image_pkl_filename = "ternary_classifier_predictions.pkl"
 
 # READ PKL
 with open(image_pkl_filename, "rb") as read_file:
@@ -75,13 +66,15 @@ for i, row in enumerate(image_data):
         print("first index with length < 4:",starting_index)
         break
 
-# ### Run prediction
-#
-# Code below queryies the SQLite DB for a particular category and year and returns all of the image IDs. These are then used to check if the converted jpg file exists.
-#
-# Those files are passed to the model which gives a prediction. The top class prediction totals are saved in the big ```image_data``` list.
-#
-# Later the percentage probability for each class is calculated.
+'''
+### Run prediction
+
+Code below queryies the SQLite DB for a particular category and year and returns all of the image IDs.
+These are then used to check if the converted jpg file exists.
+Those files are passed to the model which gives a prediction.
+The top class prediction totals are saved in the big ```image_data``` list.
+Later the percentage probability for each class is calculated.
+'''
 
 sql = ('''
     SELECT images.id
@@ -91,7 +84,7 @@ sql = ('''
     AND strftime("%Y", metadata.created) = ?
     ''')
 
-imagefolder = "/mnt/hd2/images/all/"
+imagefolder = os.path.expanduser("~/all/")
 classes = ["diagram", "sensor", "unsure"]
 now = datetime.datetime.now()
 now_string = "{:04d}{:02d}{:02d}_{:02d}{:02d}{:02d}".format(now.year, now.month, now.day, now.hour, now.minute, now.second)
@@ -113,8 +106,8 @@ for index, cat in enumerate(image_data[starting_index:]):
         random.shuffle(rows)
 #         print("shuffled:", rows)
 
+        # for each category
         # get a maximum of 1000 rows from the randomly sorted results
-
         for i, row in enumerate(rows[:1000]):
             print(i, row)
             imagefilepath = os.path.join(imagefolder, str(row[0]) + ".jpg")
@@ -154,5 +147,38 @@ for index, cat in enumerate(image_data[starting_index:]):
         pickle.dump(image_data, write_file)
     print("finished writing pickle file")
     print("-" * 40)
+
+    '''
+    Write pickle file. This is used in other code, e.g. ternary_classifier_predictions.py
+
+    This is a list in the format of
+
+    [['category',
+        ['year-1', 'year-2', 'year-3'],
+        [total-1, total-2, total-3],
+        [[diagram, sensor, unsure], [diagram, sensor, unsure], [diagram, sensor, unsure]]],
+    ...
+
+    e.g.
+
+    [['acc-phys',
+      ['1994', '1995', '1996'],
+      [6, 16, 97],
+      [[6, 0, 0], [16, 0, 0], [97, 0, 0]]],
+     ['adap-org',
+      ['1993', '1994', '1995', '1996', '1997', '1998', '1999'],
+      [42, 32, 91, 84, 267, 354, 437],
+      [[41, 0, 1],
+       [12, 0, 20],
+       [84, 0, 7],
+       [83, 0, 1],
+       [260, 0, 7],
+       [310, 4, 40],
+       [351, 4, 82]]],
+     ['alg-geom',
+      ['1993', '1994', '1995', '1996', '1997'],
+      [1, 10, 31, 94, 283],
+      [[1, 0, 0], [10, 0, 0], [31, 0, 0], [92, 0, 2], [258, 0, 25]]],
+    '''
 
 print("*** DONE ***")

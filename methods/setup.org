@@ -15,4 +15,6 @@
 - Jupyter Notebook
 - SQLite interfaces for Python and Bash
 - tensorflow-gpu
+** Environments
+We used two different conda environments for running the required scripts. The first is ~py37~, which contains basic Python3 packages, ~matplotlib~, and other utilities. The second is ~tf_gpu~, which is configured to run TensorFlow 1.14 using GPU acceleration. This package will take longer to install so is provided separately. See the conda YAML files.
 
