@@ -4,13 +4,14 @@ Categories for arxiv can be found at https://arxiv.org/corr/subjectclasses
 
 
 ```{r open}
+
 library(dbplyr)
 library(dplyr)
 library(ggplot2)
 library(stringr)
 library(lubridate)
 
-db <- src_sqlite('/home/mackenza/arc_numbers/re-imaging/data/arxiv_db_images.sqlite3', create=FALSE)
+db <- src_sqlite('../data/arxiv_db_images.sqlite3', create=FALSE)
 md = tbl(db, "metadata")
 colnames(md)
 ```
@@ -18,14 +19,36 @@ colnames(md)
 ```{r weightedav}
 q1 = 'select cat, created from metadata'
 cats = db %>% tbl(sql(q1)) %>% collect()
-catsum = cats %>% mutate(primcat = str_extract(cat, '[a-zA-Z-]+(\\.[a-zA-Z-]+)?'), yr = year(created)) %>%  group_by(yr, primcat) %>% 
-    filter(yr> 1991) %>%
+catsum = cats %>% mutate(primcat = str_extract(cat, '[a-zA-Z-]+(\\.[a-zA-Z-]+)?'), yr = year(created)) %>%  group_by(yr, primcat) %>%
+    filter(yr> 1991, yr < 2019) %>%
     summarize(tcat = n()) %>% arrange(yr, desc(tcat))
 
+catsum  <- catsum  %>% mutate(topcat = str_extract(primcat, '\\w+(-\\w+)?')) %>% mutate(topcat = factor(topcat))
+
+catsum$topcat %>% levels() %>% length()
+catsum$topcat %>% levels()
+#  [1] "alg-geom" "astro-ph" "cond-mat" "cs"       "funct-an" "gr-qc"   
+#  [7] "hep-lat"  "hep-ph"   "hep-th"   "math"     "nucl-th"  "adap-org"
+# [13] "chao-dyn" "comp-gas" "math-ph"  "patt-sol" "solv-int" "acc-phys"
+# [19] "chem-ph"  "cmp-lg"   "dg-ga"    "hep-ex"   "mtrl-th"  "nucl-ex"
+# [25] "q-alg"    "quant-ph" "supr-con" "ao-sci"   "atom-ph"  "bayes-an"
+# [31] "plasm-ph" "physics"  "nlin"     "q-bio"    "q-fin"    "stat"    
+# [37] "eess"     "econ"    
+
+topfields = c("mathematics" ,    "physics",   "physics",    "computer science",      "mathematics",   "physics",  
+"physics",  "physics", "physics",   "mathematics",     "physics",    "physics",
+"physics",    "computing",    "mathematics",   "mathematics",  "mathematics",   "physics",
+"physics",       "computer science",     "mathematics",     "physics", "physics",  "physics",  
+"quantitative biology",       "physics",  "physics",    "ao",      "physics",    "statistics",  
+"physics",   "physics", "physics", "quantitative biology",  "economics", "statistics",  
+"electrical engineering and systems science",    "economics"   )
+
+levels(catsum$topcat)  <-  topfields
 #plot the general paper counts to get a sense of relative size
-p1 = catsum %>% filter(tcat > 1000, !is.na(primcat))  %>%  ggplot( aes(x=primcat, y=tcat, fill=primcat)) + geom_col() + coord_flip() +  theme(legend.position = "none") + ggtitle('Relative size of arxiv categories')
-p1
-ggsave(p1, file='../figures/arxiv-cat-relativesize.svg')
+catsum_filtered  <- catsum %>% filter(tcat > 1000, !is.na(primcat)) %>% group_by(topcat) %>% arrange(primcat) %>% mutate(primcat = factor(primcat))
+ggplot(catsum_filtered, aes(x=primcat, y=tcat, group = topcat, fill=topcat)) + geom_col() + coord_flip() +  theme( legend.text = element_text(size=15), legend.position= c(0.85, 0.95),  axis.text =  element_text(size=14), title = element_text(size = 16)) + ggtitle('Relative size of arxiv categories', subtitle = 'Categories with count <1000 articles not shown') + labs(fill='Primary discipline', x = 'Category',  y = 'Articles') + scale_x_discrete(limits = rev(levels(catsum$primcat)))
+
+ggsave(file='../figure/arxiv-cat-relativesize.svg')
 
 #trying to get a picture of the dynamics of disciplines
 #calculate totals for each primcat
@@ -33,13 +56,28 @@ ggsave(p1, file='../figures/arxiv-cat-relativesize.svg')
 
 cc = catsum %>% group_by(primcat) %>% mutate(ocat = sum(tcat)) %>% mutate(pcat = tcat/ocat*100) %>%
     filter(yr < 2019)
-#test plot
-ggplot(cc[cc$primcat=='math.DG',], aes(x=yr, y=pcat, color=primcat)) + geom_line()
+#filter for the top total in terms of articles
+cctop<- cc %>% group_by(primcat) %>% summarize(cattotal = sum(tcat)) %>% top_n(60)
+ccfiltered  <- cc %>% inner_join(cctop, by = 'primcat')
 
 #all primcat cats
-p3 = ggplot(cc, aes(x=yr, y=pcat, color=primcat)) + geom_col() + facet_wrap(~primcat) +  theme(legend.position = "none") + ggtitle('All primary categories 1991-2018',  '% of publications in a given category appearing each year') + xlab('Year') + ylab('% of overall volume')
-ggsave(p3, file='../figure/arxiv-primcat-percent-volume-per-year.svg')
+ggplot(cc, aes(x=yr, y=pcat, fill =topcat)) + geom_col() + facet_wrap(~primcat) +  theme(legend.position = "none") + ggtitle('All primary categories 1991-2018',  '% of publications in a given category appearing each year') + xlab('Year') + ylab('% of overall volume')
+ggplot(cc, aes(x=yr, y=pcat, color = primcat)) + geom_line() + facet_wrap(~primcat) +  theme(legend.position = "none") + ggtitle('All primary categories 1991-2018',  '% of publications in a given category appearing each year') + xlab('Year') + ylab('% of overall volume')
+
+#this is actually figure 4 in paper
+ggplot(ccfiltered, aes(x=yr, y=pcat)) + geom_line() + facet_wrap(~primcat) +  theme(legend.position = "none", axis.title= element_text(size=14), strip.text = element_text(size=14)) + ggtitle('All primary categories 1991-2018',  '% of articles in a given category appearing each year') + xlab('Year') + ylab('% of overall volume')
+
+ggsave(file='../figure/arxiv-primcat-percent-volume-per-year.svg')
+```
+
+## Constructing training labels
+
+Would it be possible to make training labels from the categories (e.g. stat.ML?) and apply them to the images.
+
+```{r lables}
+
+cats %>% select(cat) %>% filter(grepl(x=cat, pattern='ml', ignore.case=TRUE)) %>% summarise(total_ml = n(), tot= 1.2e6, ratio = total_ml/tot*100)
 
 ```
 
-
+Thats only around 23k articles of the 1M or so,
