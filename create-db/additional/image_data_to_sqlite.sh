@@ -47,7 +47,7 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
     # echo $imageformat
 
     # insert row into sqlite3
-    sqlite3 /home/rte/data/db/arxiv_db_test.sqlite3 "INSERT INTO images \
+    sqlite3 ~/data/db/arxiv_db_test.sqlite3 "INSERT INTO images \
     (identifier, filename, filesize, path, x, y, imageformat) \
     VALUES (\"$article\", \"$name\", \"$filesize\", \"$path\", \"$x\", \"$y\", \"$imageformat\");"
   fi

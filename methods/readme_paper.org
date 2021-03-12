@@ -2,6 +2,14 @@
 #+OPTIONS: ^:nil
 * README
 #+TOC: headlines 2
+* Contents :TOC:QUOTE:noexport:
+#+BEGIN_QUOTE
+- [[#readme][README]]
+- [[#replication-data-for-images-of-the-arxiv-reconfiguring-large-scientific-image-datasets][Replication Data for Images of the arXiv: reconfiguring large scientific image datasets]]
+  - [[#computer-setup-instructions][Computer Setup Instructions]]
+  - [[#instructions][Instructions]]
+#+END_QUOTE
+
 * Replication Data for Images of the arXiv: reconfiguring large scientific image datasets
 This data repository contains the replication data for the paper Images of the arXiv: reconfiguring large scientific image datasets.
 ** Computer Setup Instructions
@@ -49,14 +57,15 @@ sudo apt-get install sqlitebrowser
 - SQLite interfaces for Python and Bash
 - tensorflow-gpu
 *** Environments
-We used two different conda environments for running the required scripts. The first is ~py37~, which contains basic Python3 packages, ~matplotlib~, and other utilities. The second is ~tf_gpu~, which is configured to run TensorFlow 1.14 using GPU acceleration. This package will take longer to install so is provided separately. See the conda YAML files.
+We used two different conda environments for running the required scripts. The first is ~py37~, which contains basic Python3 packages, ~matplotlib~, and other utilities. The second is ~tf_gpu~, which is configured to run TensorFlow 1.14 using GPU acceleration. This package will take longer to install so is provided separately. See the YAML files in the =conda= folder.
 ** Instructions
+*** Database
+Provided in SQLite format. Contains metadata regarding articles, images, and figure captions up to the end of 2018.
 *** Downloading data
-See =dataset_method.md=
+See =dataset_method.md=.
 *** Creating database
-See =sqlite_method.md=
+See =sqlite_method.md=.
 *** Image credits for paper
-See =image_credits.md=
+See =image_credits.md=.
 *** Plots
-Scripts for running plots found in the =sqlite-scripts= folder
-
+Scripts for running plots found in the =sqlite-scripts= folder.

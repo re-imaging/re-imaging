@@ -19,7 +19,6 @@ import signal
 
 parser = argparse.ArgumentParser(description='Script for getting captions from .tex files')
 
-# db_path = "/home/rte/data/db/arxiv_db.sqlite3"
 parser.add_argument('db_path', help="path to SQLite database")
 parser.add_argument('tex_list', help="path to file that stores list of all .tex files")
 parser.add_argument('--start_line', default=0, type=int, help='line to read textfile from (default: 0)')

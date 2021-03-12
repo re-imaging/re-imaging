@@ -1,3 +1,5 @@
+# gets all image data by doing a walk through the file structure
+
 import glob
 import os
 import sqlite3
@@ -9,9 +11,8 @@ import scandir
 # verbose = True
 verbose = False
 
-# src_path = "/home/rte/arXiv/src_50/"
-src_path = "/home/rte/arXiv/src_all/"
-db_path = "/home/rte/data/db/arxiv_db_test.sqlite3"
+src_path = os.path.expanduser("~/arXiv/src_all/")
+db_path = os.path.expanduser("~/data/db/arxiv_db_test.sqlite3")
 
 count = 0
 

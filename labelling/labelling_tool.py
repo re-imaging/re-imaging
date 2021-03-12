@@ -19,7 +19,6 @@ global targetpath
 if args.targetpath is not None:
     targetpath = args.targetpath
 else:
-    # targetpath = "/home/rte/data/images/random/seq/0-100k/"
     targetpath = 'data/'
 
 # create required directories

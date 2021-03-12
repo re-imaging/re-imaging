@@ -68,6 +68,7 @@ def get_images():
     image_id = request.form.get("image_id")
     print("image_id:", image_id)
 
+    # filters
     category = request.form.get("category")
     print("category:",category)
     imageformat = request.form.get("imageformat")
@@ -80,6 +81,12 @@ def get_images():
     print("title:",title)
     creator = request.form.get("creator")
     print("creator:",creator)
+    caption = request.form.get("caption")
+    print("caption:",caption)
+    date_start = request.form.get("date-start")
+    print("date_start:",date_start)
+    date_end = request.form.get("date-end")
+    print("date_end:",date_end)
 
     # filter_arguments = {
     #     "metadata.cat": category+"%" if category else None,
@@ -97,7 +104,9 @@ def get_images():
     if author: filter_arguments["metadata.authors"] = "%"+author+"%"
     if title: filter_arguments["title"] = "%"+title+"%"
     if creator: filter_arguments["creator"] = creator+"%"
-    # if category: filter_arguments["metadata.cat"] = category+"%"
+    if caption: filter_arguments["captions.caption"] = "%"+caption+"%"
+    if date_start: filter_arguments["metadata.created"] = date_start
+    if date_end: filter_arguments["metadata.created"] = date_end
     # if category: filter_arguments["metadata.cat"] = category+"%"
 
 
@@ -164,7 +173,8 @@ def get_images():
                 start = time.time()
 
                 nindexes = NIMAGES
-                if author or category or imageformat or prediction:
+                # if author or category or imageformat or prediction:
+                if len(filter_arguments) > 0:
                     nindexes = NUM_INDEXES
 
                 target_index = filepaths.index(image_id)
@@ -181,22 +191,18 @@ def get_images():
                 result_total = None
                 images_shown = NIMAGES
 
-
-    # filter
-    # if imageformat == "all":
-    #     imageformat = ""
-
-    filter_count = 0
     sql_filter = """
                 SELECT images.id
                 FROM images
-                LEFT JOIN metadata on images.identifier = metadata.identifier
+                LEFT JOIN metadata ON images.identifier = metadata.identifier
                 """
+            # LEFT JOIN captions ON captions.image_ids LIKE '%' || metadata.identifier || '%'
 
+    filter_count = 0
     for c, v in filter_arguments.items():
         # this is very hacky and a better way would be nice
         # handle the different ways that filters are saved
-        if v is not None and v is not "" and v is not "%" and v is not "%%":
+        if v is not None and v != "" and v != "%" and v != "%%":
             if filter_count == 0:
                 sql_filter += "WHERE"
                 sql_filter += f" {c} LIKE ?"
@@ -216,15 +222,15 @@ def get_images():
 
         # format the SQL string
 
-        sql = """
-                SELECT images.id
-                FROM images
-                LEFT JOIN metadata on images.identifier = metadata.identifier
-                WHERE metadata.authors LIKE ?
-                AND metadata.cat LIKE ?
-                AND imageformat LIKE ?
-                AND vggpred LIKE ?
-                """
+        # sql = """
+        #         SELECT images.id
+        #         FROM images
+        #         LEFT JOIN metadata on images.identifier = metadata.identifier
+        #         WHERE metadata.authors LIKE ?
+        #         AND metadata.cat LIKE ?
+        #         AND imageformat LIKE ?
+        #         AND vggpred LIKE ?
+        #         """
         # search_count = 0
         # if author:
         #     sql += " metadata.authors LIKE ?"
@@ -342,7 +348,7 @@ def get_images():
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta=si_meta,
                             category=category, imageformat=imageformat, prediction=prediction, author=author,
-                            title=title, creator=creator)
+                            title=title, creator=creator, caption=caption)
 
 '''
 @bp.route('/test')
