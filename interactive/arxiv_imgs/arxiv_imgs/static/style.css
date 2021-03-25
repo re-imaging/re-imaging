@@ -20,6 +20,7 @@ input {
 
 .grid-item {
   /* width: 25%; */
+  max-width: 224px;
   width: 16%;
   /* border-style: solid;
   border-width: 1px; */
@@ -54,10 +55,58 @@ section.content {
   padding: 8px;
   border: solid 1px gray;
   margin: 2em 0 2em 0;
+
+  max-width: 100%;
+  /* max-height: 348px; */
+
+  overflow: hidden;
 }
+
+#selected-block {
+  /* float: left; */
+  max-width: 100%;
+  display: none;
+}
+
+#selected-block:after {
+  clear: both;
+}
+
+#selected_image {
+  display: block;
+  overflow: hidden;
+  width: 300px;
+  height: 0px;
+  margin-left: 0;
+  margin-right: auto;
+  background-color: #ffffff;
+  margin: 12px;
+  padding: 12px;
+  float: left;
+}
+
+#selected-image-meta {
+  float: left;
+  display: block;
+  max-width: 70%;
+  padding: 8px;
+}
+
+.popover{
+    max-width: 600px !important; /* Max Width of the popover (depending on the container!) */
+}
+
+.meta-col {
+  float: left;
+  width: 32%;
+  padding: 8px;
+  word-wrap: break-word;
+}
+
 
 #main-form {
   margin: 2em 0;
+  float: none;
 }
 
 div .grid {
@@ -160,6 +209,8 @@ div #search-button-div {
 
 div #search-mode-form {
   margin-bottom: 2em;
+  display: block;
+  float: none;
 }
 
 /* toggle */
@@ -486,6 +537,10 @@ body {
   flex: 50%;
 }
 
+.filter-content {
+  margin-top: 16px;
+}
+
 /* collapsible filters */
 /* .collapsible {
   background-color: #777;
@@ -519,5 +574,5 @@ body {
   max-height: 0;
   overflow: hidden;
   background-color: #f1f1f1;
-} */
-/* transition: max-height 0.2s ease-out; */
+}
+transition: max-height 0.2s ease-out; */

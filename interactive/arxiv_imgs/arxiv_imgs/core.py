@@ -98,15 +98,21 @@ def get_images():
     # }
 
     filter_arguments = {}
-    if category: filter_arguments["metadata.cat"] = category+"%"
-    if imageformat: filter_arguments["imageformat"] = imageformat+"%"
-    if prediction: filter_arguments["vggpred"] = prediction+"%"
-    if author: filter_arguments["metadata.authors"] = "%"+author+"%"
-    if title: filter_arguments["title"] = "%"+title+"%"
-    if creator: filter_arguments["creator"] = creator+"%"
-    if caption: filter_arguments["captions.caption"] = "%"+caption+"%"
-    if date_start: filter_arguments["metadata.created"] = date_start
-    if date_end: filter_arguments["metadata.created"] = date_end
+    # if category: filter_arguments["metadata.cat"] = category+"%"
+    # if imageformat: filter_arguments["imageformat"] = imageformat+"%"
+    # if prediction: filter_arguments["vggpred"] = prediction+"%"
+    # if author: filter_arguments["metadata.authors"] = "%"+author+"%"
+    # if title: filter_arguments["title"] = "%"+title+"%"
+    # if creator: filter_arguments["creator"] = creator+"%"
+    if category: filter_arguments["metadata.cat"] = f'LIKE "{category}%"'
+    if imageformat: filter_arguments["imageformat"] = f'LIKE "{imageformat}%"'
+    if prediction: filter_arguments["vggpred"] = f'LIKE "{prediction}%"'
+    if author: filter_arguments["metadata.authors"] = f'LIKE "%{author}%"'
+    if title: filter_arguments["title"] = f'LIKE "%{title}%"'
+    if creator: filter_arguments["creator"] = f'LIKE "{creator}%"'
+    if caption: filter_arguments["captions.caption"] = f'LIKE "%{caption}%"'
+    if date_start: filter_arguments["metadata.created"] = f'BETWEEN "{date_start}" AND "{date_end}"'
+    # if date_end: filter_arguments["metadata.created"] = date_end
     # if category: filter_arguments["metadata.cat"] = category+"%"
 
 
@@ -194,7 +200,8 @@ def get_images():
     sql_filter = """
                 SELECT images.id
                 FROM images
-                LEFT JOIN metadata ON images.identifier = metadata.identifier
+                LEFT JOIN metadata ON images.identifier == metadata.identifier
+                LEFT JOIN captions ON images.caption == captions.id
                 """
             # LEFT JOIN captions ON captions.image_ids LIKE '%' || metadata.identifier || '%'
 
@@ -204,11 +211,11 @@ def get_images():
         # handle the different ways that filters are saved
         if v is not None and v != "" and v != "%" and v != "%%":
             if filter_count == 0:
-                sql_filter += "WHERE"
-                sql_filter += f" {c} LIKE ?"
+                sql_filter += f'WHERE {c} {v}'
+                # sql_filter += f' {c}'
             else:
-                sql_filter += " AND"
-                sql_filter += f" {c} LIKE ?"
+                sql_filter += f' AND {c} {v}'
+                # sql_filter += f' {c}'
             filter_count += 1
     print(f'filter_count: {filter_count}')
     print(f'sql_filter query: {sql_filter}')
@@ -256,7 +263,9 @@ def get_images():
             print("filter_arg: " + f)
 
         # c.execute(sql, ("%"+author+"%", category+"%", imageformat+"%", prediction+"%"))
-        c.execute(sql_filter, fargs)
+        # c.execute(sql_filter, fargs)
+        c.execute(sql_filter, )
+
         rows = c.fetchall()
         result_total = len(rows)
         # print(rows)
@@ -304,13 +313,15 @@ def get_images():
     db = get_db()
     c = db.cursor()
     metadata = []
+    metadict = []
 
     meta_sql = """
                 SELECT images.identifier, filename, x, y, imageformat, creator,
                 metadata.created, metadata.cat, metadata.authors, metadata.title,
-                images.vggpred
+                images.vggpred, captions.caption
                 FROM images
                 LEFT JOIN metadata ON images.identifier == metadata.identifier
+                LEFT JOIN captions ON images.caption == captions.id
                 WHERE images.id IS ?
                 """
 
@@ -322,6 +333,21 @@ def get_images():
             items = [str(r) for r in row]
             # print(items)
             metadata.append(items)
+
+            md = {}
+            md["identifier"] = str(rows[0][0])
+            md["filename"] = str(rows[0][1])
+            md["x"] = str(rows[0][2])
+            md["y"] = str(rows[0][3])
+            md["imageformat"] = str(rows[0][4])
+            md["creator"] = str(rows[0][5])
+            md["created"] = str(rows[0][6])
+            md["cat"] = str(rows[0][7])
+            md["authors"] = str(rows[0][8])
+            md["title"] = str(rows[0][9])
+            md["vggpred"] = str(rows[0][10]).replace(",", ", ")
+            md["caption"] = str(rows[0][11])
+            metadict.append(md)
     print("metadata length:", len(metadata))
     # print(metadata)
 
@@ -343,12 +369,12 @@ def get_images():
 
     # print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
-    return render_template('core/interface.html', images=images, metadata=metadata,
+    return render_template('core/interface.html', images=images, metadata=metadata, metadict=metadict,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta=si_meta,
                             category=category, imageformat=imageformat, prediction=prediction, author=author,
-                            title=title, creator=creator, caption=caption)
+                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end)
 
 '''
 @bp.route('/test')

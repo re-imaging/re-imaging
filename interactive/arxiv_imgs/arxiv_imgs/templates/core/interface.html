@@ -15,17 +15,15 @@
   {% endif %}
 
   <div id="selected-block" class="row" style="border: ">
-    <div id="selected_image" class="img-responsive col-md-6"
-    style="display: block; overflow: hidden; width: 300px; height: 0px;
-            margin-left: 0; margin-right: auto;
-            background-color: #ffffff; margin: 12px; padding: 12px;">
+    <div id="selected_image" class="selected-image">
     </div>
-    <div id="selected-image-meta" class="col-md-6" style="display: block;"></div>
+    <div id="selected-image-meta" class="selected-image-meta-box" style="display: block;"></div>
   </div>
 
   <!-- {{ prev_image_id }} -->
 
   <!-- <h2>Selected image:</h2> -->
+  <div style="clear: both;"></div>
   <div class="form-inline" id="main-form">
     <form name="search" method="post">
       <div class="form-group mr-2" id="search-mode-form">
@@ -63,11 +61,11 @@
       </div>
 
       <div id="filter-div">
-        <button type="button" class="collapsible"><h3><small>Optional filters:</small></h3></button>
+        <button id="filter-btn" type="button" class="btn btn-info collapsible" data-toggle="collapse" data-target="#filter-content"><h3><small>Optional filters:</small></h3></button>
         <!-- <span>
           <i class="bi bi-info-circle"></i>
         </span> -->
-        <div class="filter-content">
+        <div id="filter-content" class="filter-content collapse">
           <div class="row">
             <div class="column">
 
@@ -101,10 +99,10 @@
               </div>
 
               <div class="prediction" style="max-width: 600px;">
-                <label for="prediction">Prediction</label>
+                <label for="prediction">VGG Prediction</label>
                 <!-- <i class="bi bi-info-circle"></i> -->
                 <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top result.">
+                  title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top-1 prediction.">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-info-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -114,8 +112,6 @@
 
                 <input type="text" name="prediction" id="prediction" placeholder="Search by VGG16 prediction...">
               </div>
-
-              <!-- date goes here -->
 
               <div class="author-filter" style="max-width: 600px;">
                 <label for="author">Author</label>
@@ -162,10 +158,9 @@
               <div class="date-filter" style="max-width: 600px;">
                 <span><label for="date-start">Date range</label></span>
                 <div style="display: block";>
-                  <input type="date" id="date-start" name="date-start"
-                    min="1986-01" max="2020-12">
-                  <input type="date" id="date-end" name="date-end"
-                    min="1986-01-01" max="2020-12-31">
+                  <input type="date" id="date-start" name="date-start" min="1986-01-01" max="2020-06-30">
+                  -
+                  <input type="date" id="date-end" name="date-end" min="1986-01-01" max="2020-06-30">
                 </div>
               </div>
 
@@ -214,15 +209,43 @@
       {% else %}
         {% set authors_short = metadata[i][8] %}
       {% endif %}
-      <div style="max-width: 224px" class="grid-item" image_id={{image.split(".")[0]}}>
+      {% set pl = metadata[i][10].lower().replace(","," ").split() %}
+      {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
+      <div class="grid-item" image_id={{image.split(".")[0]}}>
         <img class="grid-item-img" src={{url_for("static", filename="web/"+image+".jpg")}}
           title="metadata" data-toggle="popover" data-html="true" data-trigger="hover"
-          data-content="{{ "<b>-- Image<br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b> {}<br><br><b>-- Paper<br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], metadata[i][10], metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9])|e }}">
-      </div>
+          data-content="{{ "
+          <div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b><br> {}<br><br></div>
+          <div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div>
+          <div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], prediction_formatted, metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9], metadata[i][11])|e }}"
+          >
+
+          {# data-content="{{ f'<b>-- Image<br>filename:</b> {md[i]["filename"]}<br><b>x:</b> {md[i]["x"]}<b> y:</b> {md[i]["y"]}<br><b>format:</b> {md[i]["imageformat"]}<br><b>creator:</b> {md[i]["creator"]}<br><b>prediction:</b> {md[i]["vggpred"]}<br><br><b>-- Paper<br>identifier:</b> <a href=https://arxiv.org/abs/{md[i]["identifier"]}>{md[i]["identifier"]}</a><br><b>date:</b> {md[i]["created"]}<br><b>category:</b> {md[i]["cat"]}<br><b>authors:</b> {md[i]["authors"]}<br><b>title:</b> {md[i]["title"]}<br><b>caption:</b> {md[i]["caption"]}' }}" #}
+        </div>
     {%- endfor %}
   </div>
 
   <script>
+
+    function toggleMode() {
+      let checkbox = document.getElementById('search_select');
+      console.log("checkbox:" + checkbox.checked)
+      let gray = "#cccccc"
+      let black = "#000000"
+      if(checkbox.checked == 1) {
+        document.getElementById("random-text").style.color = gray;
+        document.getElementById("embedding-text").style.color = black;
+        document.getElementById("image_id_label").style.color = black;
+        document.getElementById("embedding").disabled = false;
+        document.getElementById("image_id").disabled = false;
+      } else if (checkbox.checked == 0) {
+        document.getElementById("random-text").style.color = black;
+        document.getElementById("embedding-text").style.color = gray;
+        document.getElementById("image_id_label").style.color = gray;
+        document.getElementById("embedding").disabled = true;
+        document.getElementById("image_id").disabled = true;
+      }
+    }
 
     $(document).ready(function(){
       const checkbox = document.getElementById('search_select');
@@ -246,6 +269,7 @@
 
       function show_selected(img_src, img_data) {
         $("#selected_image").css("height", "300px");
+        $("#selected-block").css("display", "block");
         $("#selected_image").empty().append('<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%" >');
         $("#selected-image-meta").empty().append(img_data)
       }
@@ -254,25 +278,36 @@
     		$(this).toggleClass("active");
         $(".grid-item-img").not(this).removeClass("active");
         var img_src = $(this).attr("src");
-        var img_id = $(this).attr("image_id");
+        var img_id = $(this).parent().attr("image_id");
         var img_data = $(this).attr("data-content");
         // console.log("showing selected image: " + img_src);
         show_selected(img_src, img_data);
+
+        console.log("setting image_id to: " + img_id);
+        $("#image_id").val(img_id);
+        $(".results").empty().append(img_id);
     	});
 
-      $(".grid-item").on("click", function (event) {
-        console.log("setting image_id to: " + $(this).attr("image_id"));
-        $("#image_id").val($(this).attr("image_id"));
-        $(".results").empty().append($(this).attr("image_id"));
-    	});
+      // $(".grid-item").on("click", function (event) {
+      //   console.log("setting image_id to: " + $(this).attr("image_id"));
+      //   $("#image_id").val($(this).attr("image_id"));
+      //   $(".results").empty().append($(this).attr("image_id"));
+    	// });
 
       {% if prev_image_id %}
       $( document ).ready(function() {
         console.log("prev_image_id not empty: " + {{ prev_image_id }});
         var img_src = {{url_for("static", filename="all/"+prev_image_id+".jpg")|tojson}};
-        var img_data = {{ "<b>-- Image<br>identifier:</b> {}<br><b>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b> {}<br><br><b>-- Paper<br>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}".format(si_meta[0], si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_meta[10], si_meta[6], si_meta[7], si_meta[8], si_meta[9])|tojson }}
+        {% set si_authors_short = si_meta[8].split(";")[0] + " et al" %}
+        {% set pl = si_meta[10].lower().replace(","," ").split() %}
+        {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
+        var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b><br> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_prediction_formatted, si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_meta[11])|tojson }};
+        // console.log(img_data);
+
         show_selected(img_src, img_data);
       });
+      {% else %}
+        $("#selected-block").css("display", "none");
       {% endif %}
 
       var $select = $('#author').selectize({
@@ -487,7 +522,7 @@
       // });
 
       $('[data-toggle="popover"]').popover({
-        // offset: 5
+        offset: '50',
         // placement: 'top',
         // trigger: 'click',
       });
@@ -509,6 +544,14 @@
         checkbox.checked = 1;
       }
       toggleMode();
+
+
+      {% if category or imageformat %}
+      console.log("some filters active");
+      // var collapsible = document.getElementsByClassName("collapsible");
+      // collapsible.collapse("toggle");
+      $("#filter-content").collapse('toggle');
+      {% endif %}
 
       {% if category %}
       console.log({{category|tojson}});
@@ -561,6 +604,20 @@
       captionSelect.setValue(captionVal, 1);
       {% endif %}
 
+      {% if date_start %}
+      console.log({{date_start|tojson}});
+      var dsVal = {{date_start|tojson}};
+      var ds = document.getElementById("date-start");
+      ds.value = dsVal;
+      {% endif %}
+
+      {% if date_end %}
+      console.log({{date_end|tojson}});
+      var deVal = {{date_end|tojson}};
+      var de = document.getElementById("date-end");
+      de.value = deVal;
+      {% endif %}
+
       // function return_active(select) {
     	// 	$(".active").each(function () {
     	// 		value = $(this).attr("value");
@@ -596,56 +653,37 @@
       //   });
       // }
 
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
-
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function() {
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.maxHeight){
-            content.style.maxHeight = null;
-            content.style.overflow = "hidden";
-          } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-            content.style.overflow = "visible";
-          }
-        });
-      }
+      // var coll = document.getElementsByClassName("collapsible");
+      // var i;
+      //
+      // for (i = 0; i < coll.length; i++) {
+      //   coll[i].addEventListener("click", function() {
+      //     this.classList.toggle("active");
+      //     var content = this.nextElementSibling;
+      //     if (content.style.maxHeight){
+      //       content.style.maxHeight = null;
+      //       content.style.overflow = "hidden";
+      //     } else {
+      //       content.style.maxHeight = content.scrollHeight + "px";
+      //       content.style.overflow = "visible";
+      //     }
+      //   });
+      // }
 
       $('#container').imagesLoaded()
-        .always( function( instance ) {
-          console.log('all images loaded');
-        })
-        .done( function( instance ) {
-          console.log('all images successfully loaded');
-        })
-        .fail( function() {
-          console.log('all images loaded, at least one is broken');
-        })
-        .progress( function( instance, image ) {
-          var result = image.isLoaded ? 'loaded' : 'broken';
-          console.log( 'image is ' + result + ' for ' + image.img.src );
-        });
-
-      function toggleMode() {
-        console.log("checkbox:" + checkbox.checked)
-        let gray = "#cccccc"
-        let black = "#000000"
-        if(checkbox.checked == 1) {
-          document.getElementById("random-text").style.color = gray;
-          document.getElementById("embedding-text").style.color = black;
-          document.getElementById("image_id_label").style.color = black;
-          document.getElementById("embedding").disabled = false;
-          document.getElementById("image_id").disabled = false;
-        } else if (checkbox.checked == 0) {
-          document.getElementById("random-text").style.color = black;
-          document.getElementById("embedding-text").style.color = gray;
-          document.getElementById("image_id_label").style.color = gray;
-          document.getElementById("embedding").disabled = true;
-          document.getElementById("image_id").disabled = true;
-        }
-      }
+      .always( function( instance ) {
+        console.log('all images loaded');
+      })
+      .done( function( instance ) {
+        console.log('all images successfully loaded');
+      })
+      .fail( function() {
+        console.log('all images loaded, at least one is broken');
+      })
+      .progress( function( instance, image ) {
+        var result = image.isLoaded ? 'loaded' : 'broken';
+        console.log( 'image is ' + result + ' for ' + image.img.src );
+      });
     });
   </script>
 
