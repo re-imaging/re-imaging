@@ -3,6 +3,8 @@ import os
 from flask import Flask
 from flask import render_template
 
+from flaskext.markdown import Markdown
+
 import sys
 import resource
 
@@ -56,6 +58,9 @@ def create_app(test_config=None):
     from arxiv_imgs import db
 
     db.init_app(app)
+
+    # construct a Markdown using flask instance
+    Markdown(app)
 
     # apply the blueprints to the app
     from arxiv_imgs import core

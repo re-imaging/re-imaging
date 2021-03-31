@@ -87,6 +87,8 @@ def get_images():
     print("date_start:",date_start)
     date_end = request.form.get("date-end")
     print("date_end:",date_end)
+    abstract = request.form.get("abstract")
+    print("abstract:",abstract)
 
     # filter_arguments = {
     #     "metadata.cat": category+"%" if category else None,
@@ -112,9 +114,7 @@ def get_images():
     if creator: filter_arguments["creator"] = f'LIKE "{creator}%"'
     if caption: filter_arguments["captions.caption"] = f'LIKE "%{caption}%"'
     if date_start: filter_arguments["metadata.created"] = f'BETWEEN "{date_start}" AND "{date_end}"'
-    # if date_end: filter_arguments["metadata.created"] = date_end
-    # if category: filter_arguments["metadata.cat"] = category+"%"
-
+    if abstract: filter_arguments["metadata.abstract"] = f'LIKE "%{abstract}%"'
 
     # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
 
@@ -135,7 +135,7 @@ def get_images():
         image_id = None
         embedding = None
         result_total = None
-        images_shown = None
+        images_shown = NIMAGES
     elif request.method == "POST":
         print("--- POST")
         print("name of button: ", request.form.get("btn"))
@@ -152,7 +152,7 @@ def get_images():
                 image_id = None
                 embedding = None
                 result_total = None
-                images_shown = None
+                images_shown = NIMAGES
             else:
                 print("image id:", image_id)
                 print(f'get annoy indexes for {embedding} and pull images')
@@ -318,7 +318,7 @@ def get_images():
     meta_sql = """
                 SELECT images.identifier, filename, x, y, imageformat, creator,
                 metadata.created, metadata.cat, metadata.authors, metadata.title,
-                images.vggpred, captions.caption
+                images.vggpred, captions.caption, metadata.abstract
                 FROM images
                 LEFT JOIN metadata ON images.identifier == metadata.identifier
                 LEFT JOIN captions ON images.caption == captions.id
@@ -374,7 +374,11 @@ def get_images():
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta=si_meta,
                             category=category, imageformat=imageformat, prediction=prediction, author=author,
-                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end)
+                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, abstract=abstract)
+
+@bp.route('/about')
+def about():
+    return render_template('core/about.html')
 
 '''
 @bp.route('/test')

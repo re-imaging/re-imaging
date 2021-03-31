@@ -14,15 +14,16 @@
   </body>
   {% endif %}
 
-  <div id="selected-block" class="row" style="border: ">
-    <div id="selected_image" class="selected-image">
-    </div>
-    <div id="selected-image-meta" class="selected-image-meta-box" style="display: block;"></div>
+  <!-- $J(x)=\int_0^1\alpha_x(\dot x)dt$ -->
+
+  <div id="selected-block" class="row">
+
+    <div id="selected_image" class="selected-image"></div>
+    <div id="selected-image-meta" class="selected-image-meta-box"></div>
   </div>
 
   <!-- {{ prev_image_id }} -->
 
-  <!-- <h2>Selected image:</h2> -->
   <div style="clear: both;"></div>
   <div class="form-inline" id="main-form">
     <form name="search" method="post">
@@ -31,7 +32,8 @@
         <span>
 
           <div id=random-text style="display: inline-block;">
-            Random
+            <span style="font-size: 1.25em; vertical-align: top;">Random</span>
+            <!-- <button type="button" class="btn btn-light" style="vertical-align: top;">Random</button> -->
           </div>
 
           <label class="switch">
@@ -44,10 +46,10 @@
             <!-- <div class="can-toggle__label-text">.can-toggle</div> -->
           <!-- </label> -->
           <div id=embedding-text>
-            ML Embedding
+            <span style="font-size: 1.25em; vertical-align: top;">ML Embedding</span>
           </div>
 
-      		<select class="custom-select mt-2 mb-2 mr-2" name="embedding" id="embedding">
+      		<select class="custom-select mt-2 mb-2 mr-2" name="embedding" id="embedding" style="vertical-align: middle; margin: 0 0.5em 0 0.5em;">
             <!-- <option value="random">random</option> -->
             <option value="ternary">ternary</option>
             <option value="VGG16">VGG16</option>
@@ -55,13 +57,14 @@
             <option value="cats">cats</option>
           </select>
 
-          <label for="image_id" id="image_id_label">Target image</label>
-          <input for="image_id" name="image_id" id="image_id">
+          <label for="image_id" id="image_id_label" style="font-size: 1.15em; vertical-align: middle;">Target image</label>
+          <input for="image_id" name="image_id" id="image_id" placeholder="Click on an image" style="vertical-align: middle; max-width: 120px;" type="number">
         </span>
       </div>
 
       <div id="filter-div">
-        <button id="filter-btn" type="button" class="btn btn-info collapsible" data-toggle="collapse" data-target="#filter-content"><h3><small>Optional filters:</small></h3></button>
+        <button id="filter-btn" type="button" class="btn btn-light mt-2 mb-2 mr-2 collapsible" data-toggle="collapse" data-target="#filter-content">Optional Filters</button>
+        <!-- <h3><small>Optional filters:</small></h3> -->
         <!-- <span>
           <i class="bi bi-info-circle"></i>
         </span> -->
@@ -73,7 +76,7 @@
                 <label for="category">arXiv category</label>
 
                 <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Search using the article category (subject area). Categories are listed according to the arXiv taxonomy.">
+                  title="Search using the article category (subject area). Categories are listed according to the arXiv taxonomy. Searches first-listed category only.">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-info-circle" viewBox="0 0 16 16">
                     <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
@@ -151,8 +154,13 @@
               </div>
 
               <div class="caption-filter" style="max-width: 600px;">
-                <label for="caption">Caption</label>
+                <label for="caption-filter">Caption</label>
                 <input type="caption" name="caption" id="caption" placeholder="Search by caption keyword...">
+              </div>
+
+              <div class="abstract-filter" style="max-width: 600px;">
+                <label for="abstract-filter">Abstract</label>
+                <input type="abstract" name="abstract" id="abstract" placeholder="Search by abstract keyword...">
               </div>
 
               <div class="date-filter" style="max-width: 600px;">
@@ -180,7 +188,19 @@
     </form>
 
       {% if result_total %}
-      {{ "Showing the top {} results from a total of {}".format(images_shown, result_total) }}
+        {% if not embedding %}
+          {% set search_mode_text = "by random selection" %}
+        {% else %}
+          {% set search_mode_text = "nearest to selected image by {} embedding".format(embedding) %}
+        {% endif %}
+        {{ "Showing {} results {} from total {} matching images".format(images_shown, search_mode_text, result_total) }}
+      {% else %}
+        {% if not embedding %}
+          {% set search_mode_text = "by random selection" %}
+        {% else %}
+          {% set search_mode_text = "nearest to selected image by {} embedding".format(embedding) %}
+        {% endif %}
+        {{ "Showing {} results {}".format(images_shown, search_mode_text) }}
       {% endif %}
   </div>
 
@@ -211,22 +231,26 @@
       {% endif %}
       {% set pl = metadata[i][10].lower().replace(","," ").split() %}
       {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
+      {% set abstract_short = metadata[i][12] %}
+      {# [:100] + "..." #}
+      {% if metadata[i][11] != "None" %}
+        {% set caption = metadata[i][11] %}
+      {% else %}
+        {% set caption = "-" %}
+      {% endif %}
       <div class="grid-item" image_id={{image.split(".")[0]}}>
         <img class="grid-item-img" src={{url_for("static", filename="web/"+image+".jpg")}}
           title="metadata" data-toggle="popover" data-html="true" data-trigger="hover"
           data-content="{{ "
           <div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b><br> {}<br><br></div>
-          <div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div>
-          <div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], prediction_formatted, metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9], metadata[i][11])|e }}"
+          <div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><b>abstract:</b> {}</div>
+          <div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], prediction_formatted, metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9], abstract_short, caption)|e }}"
           >
-
-          {# data-content="{{ f'<b>-- Image<br>filename:</b> {md[i]["filename"]}<br><b>x:</b> {md[i]["x"]}<b> y:</b> {md[i]["y"]}<br><b>format:</b> {md[i]["imageformat"]}<br><b>creator:</b> {md[i]["creator"]}<br><b>prediction:</b> {md[i]["vggpred"]}<br><br><b>-- Paper<br>identifier:</b> <a href=https://arxiv.org/abs/{md[i]["identifier"]}>{md[i]["identifier"]}</a><br><b>date:</b> {md[i]["created"]}<br><b>category:</b> {md[i]["cat"]}<br><b>authors:</b> {md[i]["authors"]}<br><b>title:</b> {md[i]["title"]}<br><b>caption:</b> {md[i]["caption"]}' }}" #}
         </div>
     {%- endfor %}
   </div>
 
   <script>
-
     function toggleMode() {
       let checkbox = document.getElementById('search_select');
       console.log("checkbox:" + checkbox.checked)
@@ -272,6 +296,7 @@
         $("#selected-block").css("display", "block");
         $("#selected_image").empty().append('<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%" >');
         $("#selected-image-meta").empty().append(img_data)
+        MathJax.typeset()
       }
 
       $(".grid-item-img").on("click", function (event) {
@@ -295,17 +320,24 @@
     	// });
 
       {% if prev_image_id %}
-      $( document ).ready(function() {
         console.log("prev_image_id not empty: " + {{ prev_image_id }});
         var img_src = {{url_for("static", filename="all/"+prev_image_id+".jpg")|tojson}};
-        {% set si_authors_short = si_meta[8].split(";")[0] + " et al" %}
+        {% if si_meta[8]|length > 100 %}
+          {% set si_authors_short = si_meta[8].split(";")[0] + " et al" %}
+        {% else %}
+          {% set si_authors_short = si_meta[8] %}
+        {% endif %}
         {% set pl = si_meta[10].lower().replace(","," ").split() %}
+        {% if si_meta[11] != "None" %}
+          {% set si_caption = si_meta[11] %}
+        {% else %}
+          {% set si_caption = "-" %}
+        {% endif %}
         {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
-        var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b><br> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_prediction_formatted, si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_meta[11])|tojson }};
+        var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b><br> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><b>abstract:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_prediction_formatted, si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_meta[12], si_caption)|tojson }};
         // console.log(img_data);
 
         show_selected(img_src, img_data);
-      });
       {% else %}
         $("#selected-block").css("display", "none");
       {% endif %}
@@ -478,6 +510,14 @@
       });
       var captionSelect = captionSelect[0].selectize;
 
+      var abstractSelect = $('#abstract').selectize({
+          create: true,
+          // sortField: 'text'
+          maxItems: 1,
+          plugins: ['remove_button'],
+      });
+      var abstractSelect = abstractSelect[0].selectize;
+
       // $('.input').keypress(function (e) {
       //   if (e.which == 13) {
       //     console.log("key 13 pressed")
@@ -546,7 +586,7 @@
       toggleMode();
 
 
-      {% if category or imageformat %}
+      {% if category or imageformat or author or prediction or title or creator or caption or date_start or date_end or abstract %}
       console.log("some filters active");
       // var collapsible = document.getElementsByClassName("collapsible");
       // collapsible.collapse("toggle");
@@ -578,6 +618,7 @@
       console.log({{prediction|tojson}});
       var predVal = {{prediction|tojson}};
       // $("#prediction").val(predVal);
+      predictionSelect.addOption({value:predVal,text:predVal});
       predictionSelect.setValue(predVal, 1);
       {% endif %}
 
@@ -616,6 +657,14 @@
       var deVal = {{date_end|tojson}};
       var de = document.getElementById("date-end");
       de.value = deVal;
+      {% endif %}
+
+      {% if abstract %}
+      console.log({{abstract|tojson}});
+      var abstractVal = {{abstract|tojson}};
+      // $("#prediction").val(predVal);
+      abstractSelect.addOption({value:abstractVal,text:abstractVal});
+      abstractSelect.setValue(abstractVal, 1);
       {% endif %}
 
       // function return_active(select) {
@@ -669,6 +718,12 @@
       //     }
       //   });
       // }
+
+      // window.MathJax = {
+      //   tex: {
+      //     inlineMath: [['$', '$'], ['\\(', '\\)']]
+      //   }
+      // };
 
       $('#container').imagesLoaded()
       .always( function( instance ) {
