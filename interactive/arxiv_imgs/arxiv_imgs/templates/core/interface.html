@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1><a href={{ url_for("core.get_images") }}>{% block title %}arXiv images - interface{% endblock %}</a></h1>
+  <h1><a href={{ url_for("core.get_images") }}>{% block title %}arXiv Images{% endblock %}</a></h1>
 {% endblock %}
 
 {% block content %}
@@ -28,7 +28,7 @@
   <div class="form-inline" id="main-form">
     <form name="search" method="post">
       <div class="form-group mr-2" id="search-mode-form">
-        <h2><small>Search the dataset:</small></h2>
+        <h2>Search the dataset:</h2>
         <span>
 
           <div id=random-text style="display: inline-block;">
@@ -102,7 +102,7 @@
               </div>
 
               <div class="prediction" style="max-width: 600px;">
-                <label for="prediction">VGG Prediction</label>
+                <label for="prediction">VGG prediction</label>
                 <!-- <i class="bi bi-info-circle"></i> -->
                 <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
                   title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top-1 prediction.">
@@ -170,6 +170,11 @@
                   -
                   <input type="date" id="date-end" name="date-end" min="1986-01-01" max="2020-06-30">
                 </div>
+              </div>
+
+              <div class="identifier-filter" style="max-width: 600px;">
+                <label for="identifier-filter">Identifier</label>
+                <input type="identifier" name="identifier" id="identifier" placeholder="Search by paper identifier">
               </div>
 
               <!-- <div class="input-group input-daterange">
@@ -271,6 +276,28 @@
       }
     }
 
+    Selectize.define('enter_key_submit', function (options) {
+      var self = this;
+
+      this.onKeyDown = (function (e) {
+        var original = self.onKeyDown;
+
+        return function (e) {
+          // this.items.length MIGHT change after event propagation.
+          // We need the initial value as well. See next comment.
+          var initialSelection = this.items.length;
+          original.apply(this, arguments);
+
+          if (e.keyCode === 13
+              // Necessary because we don't want this to be triggered when an option is selected with Enter after pressing DOWN key to trigger the dropdown options
+              && initialSelection && initialSelection === this.items.length
+              && this.$control_input.val() === '') {
+            self.trigger('submit');
+          }
+        };
+      })();
+    });
+
     $(document).ready(function(){
       const checkbox = document.getElementById('search_select');
 
@@ -346,7 +373,12 @@
         delimiter: ',',
         persist: false,
         maxItems: 1,
-        plugins: ['remove_button'],
+        plugins: ['remove_button', 'enter_key_submit'],
+        onInitialize: function () {
+          this.on('submit', function () {
+            this.$input.closest('form').submit();
+          }, this);
+        },
         valueField: 'cat',
         labelField: 'label',
         searchField: ['cat', 'label'],
@@ -382,7 +414,12 @@
         delimiter: ',',
         persist: false,
         maxItems: 1,
-        plugins: ['remove_button'],
+        plugins: ['remove_button', 'enter_key_submit'],
+        onInitialize: function () {
+          this.on('submit', function () {
+            this.$input.closest('form').submit();
+          }, this);
+        },
         valueField: 'cat',
         labelField: 'label',
         searchField: ['cat', 'label'],
@@ -418,7 +455,12 @@
           delimiter: ',',
           persist: false,
           maxItems: 1,
-          plugins: ['remove_button'],
+          plugins: ['remove_button', 'enter_key_submit'],
+          onInitialize: function () {
+            this.on('submit', function () {
+              this.$input.closest('form').submit();
+            }, this);
+          },
           valueField: 'cat',
           labelField: 'label',
           searchField: ['cat', 'label'],
@@ -454,7 +496,12 @@
           delimiter: ',',
           persist: false,
           maxItems: 1,
-          plugins: ['remove_button'],
+          plugins: ['remove_button', 'enter_key_submit'],
+          onInitialize: function () {
+            this.on('submit', function () {
+              this.$input.closest('form').submit();
+            }, this);
+          },
           valueField: 'cat',
           labelField: 'label',
           searchField: ['cat', 'label'],
@@ -489,7 +536,12 @@
       var $ifSelect = $('#imageformat').selectize({
           create: false,
           // sortField: 'text'
-          plugins: ['remove_button'],
+          plugins: ['remove_button', 'enter_key_submit'],
+          onInitialize: function () {
+            this.on('submit', function () {
+              this.$input.closest('form').submit();
+            }, this);
+          },
       });
       var ifSelect = $ifSelect[0].selectize;
 
@@ -497,7 +549,12 @@
           create: true,
           // sortField: 'text'
           maxItems: 1,
-          plugins: ['remove_button'],
+          plugins: ['remove_button', 'enter_key_submit'],
+          onInitialize: function () {
+            this.on('submit', function () {
+              this.$input.closest('form').submit();
+            }, this);
+          },
           persist: true,
       });
       var titleSelect = titleSelect[0].selectize;
@@ -506,7 +563,12 @@
           create: true,
           // sortField: 'text'
           maxItems: 1,
-          plugins: ['remove_button'],
+          plugins: ['remove_button', 'enter_key_submit'],
+          onInitialize: function () {
+            this.on('submit', function () {
+              this.$input.closest('form').submit();
+            }, this);
+          },
       });
       var captionSelect = captionSelect[0].selectize;
 
@@ -514,9 +576,27 @@
           create: true,
           // sortField: 'text'
           maxItems: 1,
-          plugins: ['remove_button'],
+          plugins: ['remove_button', 'enter_key_submit'],
+          onInitialize: function () {
+            this.on('submit', function () {
+              this.$input.closest('form').submit();
+            }, this);
+          },
       });
       var abstractSelect = abstractSelect[0].selectize;
+
+      var identifierSelect = $('#identifier').selectize({
+          create: true,
+          // sortField: 'text'
+          maxItems: 1,
+          plugins: ['remove_button', 'enter_key_submit'],
+          onInitialize: function () {
+            this.on('submit', function () {
+              this.$input.closest('form').submit();
+            }, this);
+          },
+      });
+      var identifierSelect = identifierSelect[0].selectize;
 
       // $('.input').keypress(function (e) {
       //   if (e.which == 13) {
@@ -586,7 +666,7 @@
       toggleMode();
 
 
-      {% if category or imageformat or author or prediction or title or creator or caption or date_start or date_end or abstract %}
+      {% if category or imageformat or author or prediction or title or creator or caption or date_start or date_end or abstract or identifier %}
       console.log("some filters active");
       // var collapsible = document.getElementsByClassName("collapsible");
       // collapsible.collapse("toggle");
@@ -665,6 +745,14 @@
       // $("#prediction").val(predVal);
       abstractSelect.addOption({value:abstractVal,text:abstractVal});
       abstractSelect.setValue(abstractVal, 1);
+      {% endif %}
+
+      {% if identifier %}
+      console.log({{identifier|tojson}});
+      var identifierVal = {{identifier|tojson}};
+      // $("#prediction").val(predVal);
+      identifierSelect.addOption({value:identifierVal,text:identifierVal});
+      identifierSelect.setValue(identifierVal, 1);
       {% endif %}
 
       // function return_active(select) {

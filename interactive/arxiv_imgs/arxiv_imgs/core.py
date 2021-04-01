@@ -89,6 +89,8 @@ def get_images():
     print("date_end:",date_end)
     abstract = request.form.get("abstract")
     print("abstract:",abstract)
+    identifier = request.form.get("identifier")
+    print("identifier:",identifier)
 
     # filter_arguments = {
     #     "metadata.cat": category+"%" if category else None,
@@ -115,7 +117,7 @@ def get_images():
     if caption: filter_arguments["captions.caption"] = f'LIKE "%{caption}%"'
     if date_start: filter_arguments["metadata.created"] = f'BETWEEN "{date_start}" AND "{date_end}"'
     if abstract: filter_arguments["metadata.abstract"] = f'LIKE "%{abstract}%"'
-
+    if identifier: filter_arguments["metadata.identifier"] = f'LIKE "{identifier}%"'
     # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
 
 
@@ -136,11 +138,11 @@ def get_images():
         embedding = None
         result_total = None
         images_shown = NIMAGES
-    elif request.method == "POST":
+    else: # request.method == "POST":
         print("--- POST")
         print("name of button: ", request.form.get("btn"))
 
-        if request.form.get("btn") == "Search images":
+        if search_select != None: # request.form.get("btn") == "Search images":
             if embedding == "random":
                 print("image_id:", image_id, "- getting random indexes")
                 # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
@@ -374,7 +376,7 @@ def get_images():
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta=si_meta,
                             category=category, imageformat=imageformat, prediction=prediction, author=author,
-                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, abstract=abstract)
+                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, abstract=abstract, identifier=identifier)
 
 @bp.route('/about')
 def about():
