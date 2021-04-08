@@ -351,6 +351,7 @@ def get_images():
             md["caption"] = str(rows[0][11])
             metadict.append(md)
     print("metadata length:", len(metadata))
+    print("metadict length:", len(metadict))
     # print(metadata)
 
     print(f'querying metadata, time taken {time.time() - start}')

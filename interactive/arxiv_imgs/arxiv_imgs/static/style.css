@@ -569,13 +569,13 @@ body {
   width: 50%;
 } */
 
-.row {
+/* .row {
   display: flex;
-}
+} */
 
-.column {
+/* .column {
   flex: 50%;
-}
+} */
 
 .filter-content {
   margin-top: 16px;

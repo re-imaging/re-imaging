@@ -27,7 +27,7 @@
   <div style="clear: both;"></div>
   <div class="form-inline" id="main-form">
     <form name="search" method="post">
-      <div class="form-group mr-2" id="search-mode-form">
+      <div class="form-group form-inline" id="search-mode-form">
         <h2>Search the dataset:</h2>
         <span>
 
@@ -58,36 +58,111 @@
           </select>
 
           <label for="image_id" id="image_id_label" style="font-size: 1.15em; vertical-align: middle;">Target image</label>
-          <input for="image_id" name="image_id" id="image_id" placeholder="Click on an image" style="vertical-align: middle; max-width: 120px;" type="number">
+          <input for="image_id" name="image_id" id="image_id" placeholder="Click on an image" style="vertical-align: middle; max-width: 160px;" type="number">
         </span>
       </div>
 
       <div id="filter-div">
         <button id="filter-btn" type="button" class="btn btn-light mt-2 mb-2 mr-2 collapsible" data-toggle="collapse" data-target="#filter-content">Optional Filters</button>
-        <!-- <h3><small>Optional filters:</small></h3> -->
-        <!-- <span>
-          <i class="bi bi-info-circle"></i>
-        </span> -->
-        <div id="filter-content" class="filter-content collapse">
+
+        <div id="filter-content" class="filter-content collapse form-group">
+          <!-- row 1 -->
           <div class="row">
-            <div class="column">
 
-              <div class="category-dropdown" style="max-width: 600px;">
+            <div class="col-md-4">
+              <div class="category-dropdown">
                 <label for="category">arXiv category</label>
-
                 <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
                   title="Search using the article category (subject area). Categories are listed according to the arXiv taxonomy. Searches first-listed category only.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-info-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                  </svg>
+                  <i class="bi bi-info-circle"></i>
                 </div>
-
                 <input type="text" name="category" id="category" placeholder="Select an arXiv Category...">
               </div>
+            </div>
 
-              <div class="imageformat-dropdown" style="max-width: 600px;">
+            <div class="col-md-4">
+              <div class="author-filter">
+                <label for="author">Author</label>
+                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                  title="Search the authors field of the arXiv article metadata. Searches all authors. The number indicates total number of matching images in this data subset.">
+                  <i class="bi bi-info-circle"></i>
+                </div>
+                <input type="text" name="author" id="author" placeholder="Search by author...">
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="caption-filter">
+                <label for="caption-filter">Caption</label>
+                <input type="caption" name="caption" id="caption" placeholder="Search by caption keyword...">
+              </div>
+            </div>
+          </div>
+
+          <!-- row 2 -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="date-filter">
+                <span><label for="date-start">Date range</label></span>
+                <div style="display: block";>
+                  <input type="date" id="date-start" name="date-start" min="1986-01-01" max="2020-06-30">
+                  -
+                  <input type="date" id="date-end" name="date-end" min="1986-01-01" max="2020-06-30">
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="title-filter">
+                <label for="title">Paper title</label>
+                <input type="text" name="title" id="title" placeholder="Search by title keyword...">
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="identifier-filter">
+                <label for="identifier-filter">Paper identifier</label>
+                <input type="identifier" name="identifier" id="identifier" placeholder="Search by paper identifier, e.g. '1409.1556'">
+              </div>
+            </div>
+          </div>
+
+          <!-- row 3 -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="prediction">
+                <label for="prediction">VGG prediction</label>
+                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                  title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top-1 prediction.">
+                  <i class="bi bi-info-circle"></i>
+                </div>
+                <input type="text" name="prediction" id="prediction" placeholder="Search by VGG16 prediction...">
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="creator-filter">
+                <label for="creator">Creator/Software</label>
+                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                  title="Filter by the 'creator' or 'software' field in the image metadata. The number indicates total number of matching images in this data subset.">
+                  <i class="bi bi-info-circle"></i>
+                </div>
+                <input type="text" name="creator" id="creator" placeholder="Search by software creator field...">
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="abstract-filter">
+                <label for="abstract-filter">Abstract</label>
+                <input type="abstract" name="abstract" id="abstract" placeholder="Search by abstract keyword...">
+              </div>
+            </div>
+          </div>
+
+          <!-- row 4 -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="imageformat-dropdown">
                 <label for="imageformat">Image format</label>
                 <select type="text" name="imageformat" id="imageformat" placeholder="Select an imageformat...">
                   <option value="">Select an imageformat...</option>
@@ -100,88 +175,6 @@
                   <option value="EPS">EPS</option>
                 </select>
               </div>
-
-              <div class="prediction" style="max-width: 600px;">
-                <label for="prediction">VGG prediction</label>
-                <!-- <i class="bi bi-info-circle"></i> -->
-                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top-1 prediction.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-info-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                  </svg>
-                </div>
-
-                <input type="text" name="prediction" id="prediction" placeholder="Search by VGG16 prediction...">
-              </div>
-
-              <div class="author-filter" style="max-width: 600px;">
-                <label for="author">Author</label>
-
-                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Search the authors field of the arXiv article metadata. Searches all authors. The number indicates total number of matching images in this data subset.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-info-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                  </svg>
-                </div>
-
-                <input type="text" name="author" id="author" placeholder="Search by author...">
-              </div>
-
-            </div>
-
-            <div class="column">
-
-              <div class="title-filter" style="max-width: 600px;">
-                <label for="title">Title</label>
-                <input type="text" name="title" id="title" placeholder="Search by title keyword...">
-              </div>
-
-              <div class="creator-filter" style="max-width: 600px;">
-                <label for="creator">Creator</label>
-                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Filter by the 'creator' or 'software' field in the image metadata. The number indicates total number of matching images in this data subset.">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                    class="bi bi-info-circle" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="M8.93 6.588l-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-                  </svg>
-                </div>
-                <input type="text" name="creator" id="creator" placeholder="Search by software creator field...">
-              </div>
-
-              <div class="caption-filter" style="max-width: 600px;">
-                <label for="caption-filter">Caption</label>
-                <input type="caption" name="caption" id="caption" placeholder="Search by caption keyword...">
-              </div>
-
-              <div class="abstract-filter" style="max-width: 600px;">
-                <label for="abstract-filter">Abstract</label>
-                <input type="abstract" name="abstract" id="abstract" placeholder="Search by abstract keyword...">
-              </div>
-
-              <div class="date-filter" style="max-width: 600px;">
-                <span><label for="date-start">Date range</label></span>
-                <div style="display: block";>
-                  <input type="date" id="date-start" name="date-start" min="1986-01-01" max="2020-06-30">
-                  -
-                  <input type="date" id="date-end" name="date-end" min="1986-01-01" max="2020-06-30">
-                </div>
-              </div>
-
-              <div class="identifier-filter" style="max-width: 600px;">
-                <label for="identifier-filter">Identifier</label>
-                <input type="identifier" name="identifier" id="identifier" placeholder="Search by paper identifier">
-              </div>
-
-              <!-- <div class="input-group input-daterange">
-                  <input type="text" class="form-control" value="2012-04-05">
-                  <div class="input-group-addon">to</div>
-                  <input type="text" class="form-control" value="2012-04-19">
-              </div> -->
             </div>
           </div>
         </div>
