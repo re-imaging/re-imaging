@@ -10,196 +10,210 @@
 
   {% else %}
   <body>
-    Showing randomly selected images from arXiv. Click on an image to select. This can be then used to search using Machine Learning embeddings.
+    Showing sample of images from arXiv. Click on an image to select. This can be then used to search using Machine Learning embeddings.
   </body>
   {% endif %}
 
   <!-- $J(x)=\int_0^1\alpha_x(\dot x)dt$ -->
 
-  <div id="selected-block" class="row">
-
-    <div id="selected_image" class="selected-image"></div>
-    <div id="selected-image-meta" class="selected-image-meta-box"></div>
-  </div>
-
-  <!-- {{ prev_image_id }} -->
-
-  <div style="clear: both;"></div>
-  <div class="form-inline" id="main-form">
-    <form name="search" method="post">
-      <div class="form-group form-inline" id="search-mode-form">
-        <h2>Search the dataset:</h2>
-        <span>
-
-          <div id=random-text style="display: inline-block;">
-            <span style="font-size: 1.25em; vertical-align: top;">Random</span>
-            <!-- <button type="button" class="btn btn-light" style="vertical-align: top;">Random</button> -->
-          </div>
-
-          <label class="switch">
-            <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();">
-            <span class="slider round"></span>
-          </label>
-          <!-- <input id="a" type="checkbox"> -->
-          <!-- <label for="a"> -->
-            <!-- <div class="can-toggle__switch" data-checked="Random" data-unchecked="ML"></div> -->
-            <!-- <div class="can-toggle__label-text">.can-toggle</div> -->
-          <!-- </label> -->
-          <div id=embedding-text>
-            <span style="font-size: 1.25em; vertical-align: top;">ML Embedding</span>
-          </div>
-
-      		<select class="custom-select mt-2 mb-2 mr-2" name="embedding" id="embedding" style="vertical-align: middle; margin: 0 0.5em 0 0.5em;">
-            <!-- <option value="random">random</option> -->
-            <option value="ternary">ternary</option>
-            <option value="VGG16">VGG16</option>
-            <option value="raw">raw</option>
-            <option value="cats">cats</option>
-          </select>
-
-          <label for="image_id" id="image_id_label" style="font-size: 1.15em; vertical-align: middle;">Target image</label>
-          <input for="image_id" name="image_id" id="image_id" placeholder="Click on an image" style="vertical-align: middle; max-width: 160px;" type="number">
-        </span>
-      </div>
-
-      <div id="filter-div">
-        <button id="filter-btn" type="button" class="btn btn-light mt-2 mb-2 mr-2 collapsible" data-toggle="collapse" data-target="#filter-content">Optional Filters</button>
-
-        <div id="filter-content" class="filter-content collapse form-group">
-          <!-- row 1 -->
-          <div class="row">
-
-            <div class="col-md-4">
-              <div class="category-dropdown">
-                <label for="category">arXiv category</label>
-                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Search using the article category (subject area). Categories are listed according to the arXiv taxonomy. Searches first-listed category only.">
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" name="category" id="category" placeholder="Select an arXiv Category...">
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="author-filter">
-                <label for="author">Author</label>
-                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Search the authors field of the arXiv article metadata. Searches all authors. The number indicates total number of matching images in this data subset.">
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" name="author" id="author" placeholder="Search by author...">
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="caption-filter">
-                <label for="caption-filter">Caption</label>
-                <input type="caption" name="caption" id="caption" placeholder="Search by caption keyword...">
-              </div>
-            </div>
-          </div>
-
-          <!-- row 2 -->
-          <div class="row">
-            <div class="col-md-4">
-              <div class="date-filter">
-                <span><label for="date-start">Date range</label></span>
-                <div style="display: block";>
-                  <input type="date" id="date-start" name="date-start" min="1986-01-01" max="2020-06-30">
-                  -
-                  <input type="date" id="date-end" name="date-end" min="1986-01-01" max="2020-06-30">
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="title-filter">
-                <label for="title">Paper title</label>
-                <input type="text" name="title" id="title" placeholder="Search by title keyword...">
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="identifier-filter">
-                <label for="identifier-filter">Paper identifier</label>
-                <input type="identifier" name="identifier" id="identifier" placeholder="Search by paper identifier, e.g. '1409.1556'">
-              </div>
-            </div>
-          </div>
-
-          <!-- row 3 -->
-          <div class="row">
-            <div class="col-md-4">
-              <div class="prediction">
-                <label for="prediction">VGG prediction</label>
-                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top-1 prediction.">
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" name="prediction" id="prediction" placeholder="Search by VGG16 prediction...">
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="creator-filter">
-                <label for="creator">Creator/Software</label>
-                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Filter by the 'creator' or 'software' field in the image metadata. The number indicates total number of matching images in this data subset.">
-                  <i class="bi bi-info-circle"></i>
-                </div>
-                <input type="text" name="creator" id="creator" placeholder="Search by software creator field...">
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="abstract-filter">
-                <label for="abstract-filter">Abstract</label>
-                <input type="abstract" name="abstract" id="abstract" placeholder="Search by abstract keyword...">
-              </div>
-            </div>
-          </div>
-
-          <!-- row 4 -->
-          <div class="row">
-            <div class="col-md-4">
-              <div class="imageformat-dropdown">
-                <label for="imageformat">Image format</label>
-                <select type="text" name="imageformat" id="imageformat" placeholder="Select an imageformat...">
-                  <option value="">Select an imageformat...</option>
-                  <option value="PNG">PNG</option>
-                  <option value="PDF">PDF</option>
-                  <option value="JPEG">JPEG</option>
-                  <option value="GIF">GIF</option>
-                  <option value="SVG">SVG</option>
-                  <option value="PS">PS</option>
-                  <option value="EPS">EPS</option>
-                </select>
-              </div>
-            </div>
-          </div>
+  <!-- class="container-fluid" -->
+  <div id="sbar">
+    <!-- class="col-md-3 bg-light sidebar" -->
+    <!-- d-none d-md-block-->
+    <!-- <div> -->
+      <ul>
+    <!-- <div id="selected-block" class="row"> -->
+        <div class="row">
+          <div id="selected_image" class="selected-image"></div>
         </div>
 
-        <div id="search-button-div" style="display: block;">
-          <input type="submit" class="btn btn-light mt-2 mb-2 mr-2" name="btn" value="Search images" id="search-images">
+        <div class="row">
+          <div id="selected-image-meta" class="selected-image-meta-box"></div>
         </div>
-      </div>
-    </form>
 
-      {% if result_total %}
-        {% if not embedding %}
-          {% set search_mode_text = "by random selection" %}
-        {% else %}
-          {% set search_mode_text = "nearest to selected image by {} embedding".format(embedding) %}
-        {% endif %}
-        {{ "Showing {} results {} from total {} matching images".format(images_shown, search_mode_text, result_total) }}
-      {% else %}
-        {% if not embedding %}
-          {% set search_mode_text = "by random selection" %}
-        {% else %}
-          {% set search_mode_text = "nearest to selected image by {} embedding".format(embedding) %}
-        {% endif %}
-        {{ "Showing {} results {}".format(images_shown, search_mode_text) }}
-      {% endif %}
+    <!-- {{ prev_image_id }} -->
+
+        <div class="row">
+          <div style="clear: both;"></div>
+          <div id="main-form" class="form-inline">
+            <form name="search" method="post">
+              <div class="form-group form-inline" id="search-mode-form">
+                <h2>Search the dataset:</h2>
+                <span>
+
+                  <div id=random-text style="display: inline-block;">
+                    <span style="font-size: 1.25em; vertical-align: top;">Sample dataset</span>
+                    <!-- <button type="button" class="btn btn-light" style="vertical-align: top;">Random</button> -->
+                  </div>
+
+                  <label class="switch">
+                    <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();">
+                    <span class="slider round"></span>
+                  </label>
+                  <!-- <input id="a" type="checkbox"> -->
+                  <!-- <label for="a"> -->
+                    <!-- <div class="can-toggle__switch" data-checked="Random" data-unchecked="ML"></div> -->
+                    <!-- <div class="can-toggle__label-text">.can-toggle</div> -->
+                  <!-- </label> -->
+                  <div id=embedding-text>
+                    <span style="font-size: 1.25em; vertical-align: top;">ML Embedding</span>
+                  </div>
+
+              		<select class="custom-select mt-2 mb-2 mr-2" name="embedding" id="embedding" style="vertical-align: middle; margin: 0 0.5em 0 0.5em;">
+                    <!-- <option value="random">random</option> -->
+                    <option value="ternary">ternary</option>
+                    <option value="VGG16">VGG16</option>
+                    <option value="raw">raw</option>
+                    <option value="cats">cats</option>
+                  </select>
+
+                  <label for="image_id" id="image_id_label" style="font-size: 1.15em; vertical-align: middle;">Target image</label>
+                  <input for="image_id" name="image_id" id="image_id" placeholder="Click on an image" style="vertical-align: middle; max-width: 160px;" type="number">
+                </span>
+              </div>
+
+              <div id="filter-div">
+                <button id="filter-btn" type="button" class="btn btn-light mt-2 mb-2 mr-2 collapsible" data-toggle="collapse" data-target="#filter-content">Optional Filters</button>
+
+                <div id="filter-content" class="filter-content collapse form-group">
+                  <!-- row 1 -->
+                  <div class="row">
+
+                    <div class="col-md-4">
+                      <div class="category-dropdown">
+                        <label for="category">arXiv category</label>
+                        <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                          title="Search using the article category (subject area). Categories are listed according to the arXiv taxonomy. Searches first-listed category only.">
+                          <i class="bi bi-info-circle"></i>
+                        </div>
+                        <input type="text" name="category" id="category" placeholder="Select an arXiv Category...">
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="author-filter">
+                        <label for="author">Author</label>
+                        <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                          title="Search the authors field of the arXiv article metadata. Searches all authors. The number indicates total number of matching images in this data subset.">
+                          <i class="bi bi-info-circle"></i>
+                        </div>
+                        <input type="text" name="author" id="author" placeholder="Search by author...">
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="caption-filter">
+                        <label for="caption-filter">Caption</label>
+                        <input type="caption" name="caption" id="caption" placeholder="Search by caption keyword...">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- row 2 -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="date-filter">
+                        <span><label for="date-start">Date range</label></span>
+                        <div style="display: block";>
+                          <input type="date" id="date-start" name="date-start" min="1986-01-01" max="2020-06-30">
+                          -
+                          <input type="date" id="date-end" name="date-end" min="1986-01-01" max="2020-06-30">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <div class="title-filter">
+                        <label for="title">Paper title</label>
+                        <input type="text" name="title" id="title" placeholder="Search by title keyword...">
+                      </div>
+                    </div>
+
+                    <!-- <div class="col-md-4">
+                      <div class="identifier-filter">
+                        <label for="identifier-filter">Paper identifier</label>
+                        <input type="identifier" name="identifier" id="identifier" placeholder="Search by paper identifier, e.g. '1409.1556'">
+                      </div>
+                    </div> -->
+                    <div class="col-md-4">
+                      <div class="prediction">
+                        <label for="prediction">VGG prediction</label>
+                        <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                          title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top-1 prediction.">
+                          <i class="bi bi-info-circle"></i>
+                        </div>
+                        <input type="text" name="prediction" id="prediction" placeholder="Search by VGG16 prediction...">
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- row 3 -->
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="creator-filter">
+                        <label for="creator">Creator/Software</label>
+                        <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                          title="Filter by the 'creator' or 'software' field in the image metadata. The number indicates total number of matching images in this data subset.">
+                          <i class="bi bi-info-circle"></i>
+                        </div>
+                        <input type="text" name="creator" id="creator" placeholder="Search by software creator field...">
+                      </div>
+                    </div>
+
+                    <!-- <div class="col-md-4">
+                      <div class="abstract-filter">
+                        <label for="abstract-filter">Abstract</label>
+                        <input type="abstract" name="abstract" id="abstract" placeholder="Search by abstract keyword...">
+                      </div>
+                    </div> -->
+
+                    <div class="col-md-4">
+                      <div class="imageformat-dropdown">
+                        <label for="imageformat">Image format</label>
+                        <select type="text" name="imageformat" id="imageformat" placeholder="Select an imageformat...">
+                          <option value="">Select an imageformat...</option>
+                          <option value="PNG">PNG</option>
+                          <option value="PDF">PDF</option>
+                          <option value="JPEG">JPEG</option>
+                          <option value="GIF">GIF</option>
+                          <option value="SVG">SVG</option>
+                          <option value="PS">PS</option>
+                          <option value="EPS">EPS</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- row 4 -->
+                  <!-- <div class="row">
+                  </div> -->
+                </div>
+
+                <div id="search-button-div" style="display: block;">
+                  <input type="submit" class="btn btn-light mt-2 mb-2 mr-2" name="btn" value="Search images" id="search-images">
+                </div>
+              </div>
+            </form>
+
+              {% if result_total %}
+                {% if not embedding %}
+                  {% set search_mode_text = "results by sampling dataset from {} total matching images".format(result_total) %}
+                {% else %}
+                  {% set search_mode_text = "nearest results to the selected image from {} total matching images using {} embedding".format(result_total, embedding) %}
+                {% endif %}
+                {{ "Showing {} {}".format(images_shown, search_mode_text) }}
+              {% else %}
+                {% if not embedding %}
+                  {% set search_mode_text = "results by sampling dataset" %}
+                {% else %}
+                  {% set search_mode_text = "nearest results to the selected image by {} embedding".format(embedding) %}
+                {% endif %}
+                {{ "Showing {} {}".format(images_shown, search_mode_text) }}
+              {% endif %}
+          </div>
+        </div>
+      </ul>
+    <!-- </div> -->
   </div>
 
   <!-- <div class="form-inline">
@@ -220,7 +234,7 @@
     </div>
   </div> -->
 
-  <div class="grid">
+  <div class="image-grid">
     {% for i, image in enumerate(images) %}
       {% if metadata[i][8]|length > 100 %}
         {% set authors_short = metadata[i][8].split(";")[0] + " et al" %}
@@ -229,7 +243,7 @@
       {% endif %}
       {% set pl = metadata[i][10].lower().replace(","," ").split() %}
       {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
-      {% set abstract_short = metadata[i][12] %}
+      {# {% set abstract_short = metadata[i][12] %} #}
       {# [:100] + "..." #}
       {% if metadata[i][11] != "None" %}
         {% set caption = metadata[i][11] %}
@@ -238,11 +252,10 @@
       {% endif %}
       <div class="grid-item" image_id={{image.split(".")[0]}}>
         <img class="grid-item-img" src={{url_for("static", filename="web/"+image+".jpg")}}
-          title="metadata" data-toggle="popover" data-html="true" data-trigger="hover"
-          data-content="{{ "
-          <div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b><br> {}<br><br></div>
-          <div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><b>abstract:</b> {}</div>
-          <div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], prediction_formatted, metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9], abstract_short, caption)|e }}"
+          title="metadata" data-toggle="popover" data-html="true" data-trigger="hover" prediction="{{ prediction_formatted }}" data-content="{{ "
+            <div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div>
+            <div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div>
+            <div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9], caption)|e }}"
           >
         </div>
     {%- endfor %}
@@ -251,7 +264,7 @@
   <script>
     function toggleMode() {
       let checkbox = document.getElementById('search_select');
-      console.log("checkbox:" + checkbox.checked)
+      console.log("checkbox: " + checkbox.checked)
       let gray = "#cccccc"
       let black = "#000000"
       if(checkbox.checked == 1) {
@@ -295,7 +308,7 @@
       const checkbox = document.getElementById('search_select');
 
       // init Packery
-      var $grid = $('.grid').packery({
+      var $grid = $('.image-grid').packery({
         itemSelector: '.grid-item',
         gutter: 8,
         transitionDuration: 0,
@@ -311,12 +324,35 @@
 
       // console.log("prev_image_id" + {{prev_image_id}})
 
-      function show_selected(img_src, img_data) {
+      function show_selected(img_src, img_data, img_prediction) {
         $("#selected_image").css("height", "300px");
         $("#selected-block").css("display", "block");
-        $("#selected_image").empty().append('<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%" >');
-        $("#selected-image-meta").empty().append(img_data)
-        MathJax.typeset()
+        // let img_src_html
+        let img_src_html = '<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%;">';
+        // let img_src_html = '<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%;" data-toggle="popover" data-trigger="hover" title="prediction" data-html="true" data-content="' + img_prediction + '">';
+        console.log(img_src_html);
+        $("#selected_image").empty().append(img_src_html);
+        // $("#selected_image").empty().append('<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%; title="prediction" data-toggle="popover" data-html="true" data-trigger="hover" data-content={{ si_prediction_formatted }};>');
+        // $("#selected_image").popover('hide');
+        console.log("prediction: " + img_prediction);
+        $('#selected_image').popover('dispose');
+        $("#selected_image").popover({
+          content: img_prediction,
+          title: 'VGG16 prediction',
+          html: true,
+          trigger: 'hover',
+        });
+        // data-toggle="popover" data-trigger="hover" title="prediction" data-html="true" data-content="' + 'test' + '"
+        // function toggleMode() {
+        let checkbox = document.getElementById('search_select');
+        if( checkbox.checked == 0) {
+          console.log('toggle unchecked, calling toggleMode');
+          checkbox.checked = 1;
+          toggleMode();
+        }
+
+        $("#selected-image-meta").empty().append(img_data);
+        MathJax.typeset();
       }
 
       $(".grid-item-img").on("click", function (event) {
@@ -325,10 +361,12 @@
         var img_src = $(this).attr("src");
         var img_id = $(this).parent().attr("image_id");
         var img_data = $(this).attr("data-content");
+        var img_pred = $(this).attr("prediction");
         // console.log("showing selected image: " + img_src);
-        show_selected(img_src, img_data);
+        show_selected(img_src, img_data, img_pred);
 
         console.log("setting image_id to: " + img_id);
+        console.log("prediction: " + img_pred);
         $("#image_id").val(img_id);
         $(".results").empty().append(img_id);
     	});
@@ -347,17 +385,18 @@
         {% else %}
           {% set si_authors_short = si_meta[8] %}
         {% endif %}
-        {% set pl = si_meta[10].lower().replace(","," ").split() %}
         {% if si_meta[11] != "None" %}
           {% set si_caption = si_meta[11] %}
         {% else %}
           {% set si_caption = "-" %}
         {% endif %}
+        {% set pl = si_meta[10].lower().replace(","," ").split() %}
         {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
-        var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><b>prediction:</b><br> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><b>abstract:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_prediction_formatted, si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_meta[12], si_caption)|tojson }};
+        var img_pred = '{% autoescape false %} {{ si_prediction_formatted }} {% endautoescape %}';
+        var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_caption)|tojson }};
         // console.log(img_data);
 
-        show_selected(img_src, img_data);
+        show_selected(img_src, img_data, img_pred);
       {% else %}
         $("#selected-block").css("display", "none");
       {% endif %}
@@ -565,31 +604,31 @@
       });
       var captionSelect = captionSelect[0].selectize;
 
-      var abstractSelect = $('#abstract').selectize({
-          create: true,
-          // sortField: 'text'
-          maxItems: 1,
-          plugins: ['remove_button', 'enter_key_submit'],
-          onInitialize: function () {
-            this.on('submit', function () {
-              this.$input.closest('form').submit();
-            }, this);
-          },
-      });
-      var abstractSelect = abstractSelect[0].selectize;
+      // var abstractSelect = $('#abstract').selectize({
+      //     create: true,
+      //     // sortField: 'text'
+      //     maxItems: 1,
+      //     plugins: ['remove_button', 'enter_key_submit'],
+      //     onInitialize: function () {
+      //       this.on('submit', function () {
+      //         this.$input.closest('form').submit();
+      //       }, this);
+      //     },
+      // });
+      // var abstractSelect = abstractSelect[0].selectize;
 
-      var identifierSelect = $('#identifier').selectize({
-          create: true,
-          // sortField: 'text'
-          maxItems: 1,
-          plugins: ['remove_button', 'enter_key_submit'],
-          onInitialize: function () {
-            this.on('submit', function () {
-              this.$input.closest('form').submit();
-            }, this);
-          },
-      });
-      var identifierSelect = identifierSelect[0].selectize;
+      // var identifierSelect = $('#identifier').selectize({
+      //     create: true,
+      //     // sortField: 'text'
+      //     maxItems: 1,
+      //     plugins: ['remove_button', 'enter_key_submit'],
+      //     onInitialize: function () {
+      //       this.on('submit', function () {
+      //         this.$input.closest('form').submit();
+      //       }, this);
+      //     },
+      // });
+      // var identifierSelect = identifierSelect[0].selectize;
 
       // $('.input').keypress(function (e) {
       //   if (e.which == 13) {
@@ -659,7 +698,7 @@
       toggleMode();
 
 
-      {% if category or imageformat or author or prediction or title or creator or caption or date_start or date_end or abstract or identifier %}
+      {% if category or imageformat or author or prediction or title or creator or caption or date_start or date_end %}
       console.log("some filters active");
       // var collapsible = document.getElementsByClassName("collapsible");
       // collapsible.collapse("toggle");
@@ -732,21 +771,21 @@
       de.value = deVal;
       {% endif %}
 
-      {% if abstract %}
-      console.log({{abstract|tojson}});
-      var abstractVal = {{abstract|tojson}};
-      // $("#prediction").val(predVal);
-      abstractSelect.addOption({value:abstractVal,text:abstractVal});
-      abstractSelect.setValue(abstractVal, 1);
-      {% endif %}
+      // {% if abstract %}
+      // console.log({{abstract|tojson}});
+      // var abstractVal = {{abstract|tojson}};
+      // // $("#prediction").val(predVal);
+      // abstractSelect.addOption({value:abstractVal,text:abstractVal});
+      // abstractSelect.setValue(abstractVal, 1);
+      // {% endif %}
 
-      {% if identifier %}
-      console.log({{identifier|tojson}});
-      var identifierVal = {{identifier|tojson}};
-      // $("#prediction").val(predVal);
-      identifierSelect.addOption({value:identifierVal,text:identifierVal});
-      identifierSelect.setValue(identifierVal, 1);
-      {% endif %}
+      // {% if identifier %}
+      // console.log({{identifier|tojson}});
+      // var identifierVal = {{identifier|tojson}};
+      // // $("#prediction").val(predVal);
+      // identifierSelect.addOption({value:identifierVal,text:identifierVal});
+      // identifierSelect.setValue(identifierVal, 1);
+      // {% endif %}
 
       // function return_active(select) {
     	// 	$(".active").each(function () {
