@@ -1,30 +1,41 @@
 {% extends 'base.html' %}
 
-{% block header %}
-  <h1><a href={{ url_for("core.get_images") }}>{% block title %}arXiv Images{% endblock %}</a></h1>
-{% endblock %}
-
 {% block content %}
-
-  {% if prev_image_id %}
-
-  {% else %}
-  <body>
-    Showing sample of images from arXiv. Click on an image to select. This can be then used to search using Machine Learning embeddings.
-  </body>
-  {% endif %}
 
   <!-- $J(x)=\int_0^1\alpha_x(\dot x)dt$ -->
 
   <!-- class="container-fluid" -->
   <div id="sbar">
+
     <!-- class="col-md-3 bg-light sidebar" -->
     <!-- d-none d-md-block-->
     <!-- <div> -->
       <ul>
+
+        {% block header %}
+          <h1><a href={{ url_for("core.get_images") }}>{% block title %}arXiv Images{% endblock %}</a></h1>
+        {% endblock %}
+
     <!-- <div id="selected-block" class="row"> -->
         <div class="row">
           <div id="selected_image" class="selected-image"></div>
+        </div>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#id-tab" role="tab" aria-controls="home" aria-selected="true">Home</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#format-tab" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#caption-tab" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="id-tab" role="tabpanel" aria-labelledby="home-tab">identifier: XXXX.XXXXX</div>
+          <div class="tab-pane fade" id="format-tab" role="tabpanel" aria-labelledby="profile-tab">Format metadata</div>
+          <div class="tab-pane fade" id="caption-tab" role="tabpanel" aria-labelledby="contact-tab">Some text for caption</div>
         </div>
 
         <div class="row">
@@ -212,6 +223,14 @@
               {% endif %}
           </div>
         </div>
+
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="{{ url_for('core.about') }}">About</a>
+            <li><a href="{{ url_for('core.get_images') }}">Interface</a>
+          </ul>
+        </nav>
+
       </ul>
     <!-- </div> -->
   </div>
@@ -234,6 +253,15 @@
     </div>
   </div> -->
 
+  {% if prev_image_id %}
+  {% else %}
+  <div id="description-text" style="display: block; position: relative; left: 360px; top: 0px; margin-bottom: 1em;">
+    <body>
+      Showing sample of images from arXiv. Click on an image to select. This can be then used to search using Machine Learning embeddings.
+    </body>
+  </div>
+  {% endif %}
+
   <div class="image-grid">
     {% for i, image in enumerate(images) %}
       {% if metadata[i][8]|length > 100 %}
@@ -250,9 +278,10 @@
       {% else %}
         {% set caption = "-" %}
       {% endif %}
+
       <div class="grid-item" image_id={{image.split(".")[0]}}>
         <img class="grid-item-img" src={{url_for("static", filename="web/"+image+".jpg")}}
-          title="metadata" data-toggle="popover" data-html="true" data-trigger="hover" prediction="{{ prediction_formatted }}" data-content="{{ "
+          title="metadata" data-toggle="popover" data-html="true" data-trigger="focus" tabindex="0" prediction="{{ prediction_formatted }}" data-content="{{ "
             <div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div>
             <div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div>
             <div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9], caption)|e }}"
@@ -325,7 +354,7 @@
       // console.log("prev_image_id" + {{prev_image_id}})
 
       function show_selected(img_src, img_data, img_prediction) {
-        $("#selected_image").css("height", "300px");
+        $("#selected_image").css("height", "324px");
         $("#selected-block").css("display", "block");
         // let img_src_html
         let img_src_html = '<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%;">';
@@ -355,7 +384,7 @@
         MathJax.typeset();
       }
 
-      $(".grid-item-img").on("click", function (event) {
+      $(".grid-item-img").on("dblclick", function (event) {
     		$(this).toggleClass("active");
         $(".grid-item-img").not(this).removeClass("active");
         var img_src = $(this).attr("src");
@@ -678,6 +707,10 @@
         // placement: 'top',
         // trigger: 'click',
       });
+      $('.popover-dismiss').popover({
+        trigger: 'focus'
+      })
+
       {% if prev_image_id %}
       $("#image_id").val( {{ prev_image_id }} );
       {% endif %}

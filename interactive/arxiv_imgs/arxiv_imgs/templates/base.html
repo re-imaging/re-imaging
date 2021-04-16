@@ -1,6 +1,6 @@
 <!doctype html>
 <body>
-<title>{% block title %}{% endblock %} - arxiv_imgs</title>
+<title>{% block title %}{% endblock %}</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
@@ -43,14 +43,7 @@ MathJax = {
 <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<nav>
-  <ul>
-    <li><a href="{{ url_for('core.about') }}">About</a>
-    <li><a href="{{ url_for('core.get_images') }}">Interface</a>
-  </ul>
-</nav>
-
-<section class="content">
+<!-- <section class="content">
   <header>
     {% block header %}{% endblock %}
   </header>
@@ -58,5 +51,5 @@ MathJax = {
     <div class="flash">{{ message }}</div>
   {% endfor %}
   {% block content %}{% endblock %}
-</section>
+</section> -->
 </body>
