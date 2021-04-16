@@ -23,19 +23,19 @@
 
         <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#id-tab" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#id-tab" role="tab" aria-controls="id" aria-selected="true">ID</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#format-tab" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#format-tab" role="tab" aria-controls="format" aria-selected="false">Format</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#caption-tab" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#caption-tab" role="tab" aria-controls="caption" aria-selected="false">Caption</a>
           </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-          <div class="tab-pane fade show active" id="id-tab" role="tabpanel" aria-labelledby="home-tab">identifier: XXXX.XXXXX</div>
-          <div class="tab-pane fade" id="format-tab" role="tabpanel" aria-labelledby="profile-tab">Format metadata</div>
-          <div class="tab-pane fade" id="caption-tab" role="tabpanel" aria-labelledby="contact-tab">Some text for caption</div>
+          <div class="tab-pane fade show active" id="id-tab" role="tabpanel" aria-labelledby="id-tab">identifier: XXXX.XXXXX</div>
+          <div class="tab-pane fade" id="format-tab" role="tabpanel" aria-labelledby="format-tab">Format metadata</div>
+          <div class="tab-pane fade" id="caption-tab" role="tabpanel" aria-labelledby="caption-tab">Some text for caption</div>
         </div>
 
         <div class="row">
@@ -281,12 +281,32 @@
 
       <div class="grid-item" image_id={{image.split(".")[0]}}>
         <img class="grid-item-img" src={{url_for("static", filename="web/"+image+".jpg")}}
-          title="metadata" data-toggle="popover" data-html="true" data-trigger="focus" tabindex="0" prediction="{{ prediction_formatted }}" data-content="{{ "
-            <div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div>
-            <div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div>
-            <div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9], caption)|e }}"
-          >
-        </div>
+          prediction="{{ prediction_formatted }}" tab-data="{{ "
+          <ul class='nav nav-tabs' id='{}-tab' role='tablist'>
+            <li class='nav-item' role='presentation'>
+              <a class='nav-link tab-link active' id='id-tab' data-toggle='pill' href='#{}-id' role='tab' aria-controls='id' aria-selected='true'>ID</a>
+            </li>
+            <li class='nav-item' role='presentation'>
+              <a class='nav-link tab-link' id='format-tab' data-toggle='pill' href='#{}-format' role='tab' aria-controls='format' aria-selected='false'>Format</a>
+            </li>
+            <li class='nav-item' role='presentation'>
+              <a class='nav-link tab-link' id='caption-tab' data-toggle='pill' href='#{}-caption' role='tab' aria-controls='caption' aria-selected='false'>Caption</a>
+            </li>
+          </ul>
+
+          <div class='tab-content' id='tab-content-{}'>
+            <div class='tab-pane fade show active' id='{}-id' role='tabpanel' aria-labelledby='id-tab'>
+              <b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br>
+            </div>
+            <div class='tab-pane fade' id='{}-format' role='tabpanel' aria-labelledby='format-tab'>
+              <b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br>
+            </div>
+            <div class='tab-pane fade' id='{}-caption' role='tabpanel' aria-labelledby='caption-tab'>
+              <b><em>Figure</em><br>caption:</b> {}
+            </div>
+          </div>".format(image, image, image, image, image, image, metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], image, metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, image, metadata[i][9], caption)|e }}"
+        >
+      </div>
     {%- endfor %}
   </div>
 
@@ -389,7 +409,8 @@
         $(".grid-item-img").not(this).removeClass("active");
         var img_src = $(this).attr("src");
         var img_id = $(this).parent().attr("image_id");
-        var img_data = $(this).attr("data-content");
+        // var img_data = $(this).attr("data-content");
+        // var img_data = $(this).attr("tab-data");
         var img_pred = $(this).attr("prediction");
         // console.log("showing selected image: " + img_src);
         show_selected(img_src, img_data, img_pred);
@@ -399,6 +420,28 @@
         $("#image_id").val(img_id);
         $(".results").empty().append(img_id);
     	});
+
+      $(".grid-item-img").on("click", function (event) {
+        console.log('creating popover');
+        console.log(this);
+        $(this).popover({
+          html: true,
+          trigger: 'manual',
+          title: "Title",
+          placement: "bottom",
+          content: $(this).attr('tab-data')
+        });
+        $(this).popover('show');
+        $(".grid-item-img").not(this).popover('hide');
+      })
+
+      // this doesn't work
+      $('.tab-link').on('click', function (event) {
+        console.log('trying to show tab');
+        event.preventDefault()
+        $(this).tab('show')
+      })
+
 
       // $(".grid-item").on("click", function (event) {
       //   console.log("setting image_id to: " + $(this).attr("image_id"));
