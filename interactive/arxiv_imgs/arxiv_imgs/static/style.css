@@ -79,14 +79,16 @@ input {
   box-shadow: 0px 0px 10px 0px black;
 }
 
+
 .popover {
   max-width: 324px !important;
   /* max-width: 600px !important; */
   /* max-height: 460px; */
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  background-color: rgba(220, 220, 220, 0.8);
+  /* overflow: hidden; */
+  /* white-space: nowrap; */
+  /* text-overflow: ellipsis; */
+  background-color: rgba(240, 240, 240, 0.95) !important;
+  /* background: tomato !important; */
 }
 
 /* section.content {
@@ -665,4 +667,52 @@ input[type=number] {
   background: #f2f2f2;
   /* color: #fff; */
   transition: all 0.3s;
+}
+
+/* tabs */
+/* Style the tab */
+.newtabs {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.newtabs button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.newtabs button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.newtabs button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.popover-image {
+  max-width: 300px;
+  max-height: 500px;
+  margin-bottom: 12px;
+}
+
+.tab-pane {
+  margin-top: 1em;
 }

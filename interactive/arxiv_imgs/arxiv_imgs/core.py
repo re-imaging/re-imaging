@@ -383,6 +383,10 @@ def get_images():
 def about():
     return render_template('core/about.html')
 
+@bp.route('/testpage')
+def testpage():
+    return render_template('core/testpage.html')
+
 '''
 @bp.route('/test')
 def get_test_image():

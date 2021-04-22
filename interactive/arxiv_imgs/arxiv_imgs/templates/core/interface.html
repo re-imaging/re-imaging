@@ -21,7 +21,7 @@
           <div id="selected_image" class="selected-image"></div>
         </div>
 
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
             <a class="nav-link active" id="home-tab" data-toggle="tab" href="#id-tab" role="tab" aria-controls="id" aria-selected="true">ID</a>
           </li>
@@ -36,7 +36,7 @@
           <div class="tab-pane fade show active" id="id-tab" role="tabpanel" aria-labelledby="id-tab">identifier: XXXX.XXXXX</div>
           <div class="tab-pane fade" id="format-tab" role="tabpanel" aria-labelledby="format-tab">Format metadata</div>
           <div class="tab-pane fade" id="caption-tab" role="tabpanel" aria-labelledby="caption-tab">Some text for caption</div>
-        </div>
+        </div> -->
 
         <div class="row">
           <div id="selected-image-meta" class="selected-image-meta-box"></div>
@@ -232,8 +232,24 @@
         </nav>
 
       </ul>
+
     <!-- </div> -->
+
+    <!-- <div class="tabbable hide" id="popoverContent">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
+        <li class="tab"><a href="#tab2" data-toggle="tab">Tab 2</a></li>
+        <li class="tab"><a href="#tab3" data-toggle="tab">Tab 3</a></li>
+      </ul>
+      <div class="tab-content" style="padding-top: 15px">
+        <div class="tab-pane active" id="tab1">Tab Content 1</div>
+        <div class="tab-pane" id="tab2">Tab Content 2</div>
+        <div class="tab-pane" id="tab3">Tab Content 3</div>
+      </div>
+    </div>
+    <a class="btn" id="btnPopover" href="#">Launch Popover</a> -->
   </div>
+
 
   <!-- <div class="form-inline">
     <div class="form-group mr-2">
@@ -279,38 +295,62 @@
         {% set caption = "-" %}
       {% endif %}
 
+      <!-- title="Metadata" data-sanitize="false" data-toggle="popover" data-html="true" -->
       <div class="grid-item" image_id={{image.split(".")[0]}}>
         <img class="grid-item-img" src={{url_for("static", filename="web/"+image+".jpg")}}
-          prediction="{{ prediction_formatted }}" tab-data="{{ "
-          <ul class='nav nav-tabs' id='{}-tab' role='tablist'>
+          prediction="{{ prediction_formatted }}" tab-data=" {{"
+          <ul class='nav nav-tabs' id='tab-{}' role='tablist' rel='selector'>
             <li class='nav-item' role='presentation'>
-              <a class='nav-link tab-link active' id='id-tab' data-toggle='pill' href='#{}-id' role='tab' aria-controls='id' aria-selected='true'>ID</a>
+              <a class='nav-link tab-link active' id='tab-id' image-id='{}' data-toggle='tab' href='#{}-id' role='tab' aria-controls='id' aria-selected='true'>ID</a>
             </li>
             <li class='nav-item' role='presentation'>
-              <a class='nav-link tab-link' id='format-tab' data-toggle='pill' href='#{}-format' role='tab' aria-controls='format' aria-selected='false'>Format</a>
+              <a class='nav-link tab-link' id='tab-fm' image-id='{}' data-toggle='tab' href='#{}-format' role='tab' aria-controls='format' aria-selected='false'>Format</a>
             </li>
             <li class='nav-item' role='presentation'>
-              <a class='nav-link tab-link' id='caption-tab' data-toggle='pill' href='#{}-caption' role='tab' aria-controls='caption' aria-selected='false'>Caption</a>
+              <a class='nav-link tab-link' id='tab-cp' image-id='{}' data-toggle='tab' href='#{}-caption' role='tab' aria-controls='caption' aria-selected='false'>Caption</a>
             </li>
           </ul>
 
           <div class='tab-content' id='tab-content-{}'>
-            <div class='tab-pane fade show active' id='{}-id' role='tabpanel' aria-labelledby='id-tab'>
+            <div class='tab-pane fade show active' id='tab-{}-id' role='tabpanel' aria-labelledby='id-tab'>
               <b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br>
             </div>
-            <div class='tab-pane fade' id='{}-format' role='tabpanel' aria-labelledby='format-tab'>
+            <div class='tab-pane fade' id='tab-{}-fm' role='tabpanel' aria-labelledby='format-tab'>
               <b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br>
             </div>
-            <div class='tab-pane fade' id='{}-caption' role='tabpanel' aria-labelledby='caption-tab'>
+            <div class='tab-pane fade' id='tab-{}-cp' role='tabpanel' aria-labelledby='caption-tab'>
               <b><em>Figure</em><br>caption:</b> {}
             </div>
-          </div>".format(image, image, image, image, image, image, metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], image, metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, image, metadata[i][9], caption)|e }}"
+          </div>".format(image, image, image, image, image, image, image, image, image, metadata[i][1], metadata[i][2], metadata[i][3], metadata[i][4], metadata[i][5], image, metadata[i][0], metadata[i][0], metadata[i][6], metadata[i][7], authors_short, metadata[i][9], image, caption)|e }}"
         >
       </div>
     {%- endfor %}
   </div>
 
   <script>
+    // $("#btnPopover").popover({
+    //   html: true,
+    //   trigger: 'click',
+    //   title: "New Title",
+    //   placement: "right",
+    //   content: $('#popoverContent').remove().html(),
+    //   sanitize: true,
+    // });
+
+    function openTab(evt, tabName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
     function toggleMode() {
       let checkbox = document.getElementById('search_select');
       console.log("checkbox: " + checkbox.checked)
@@ -376,13 +416,9 @@
       function show_selected(img_src, img_data, img_prediction) {
         $("#selected_image").css("height", "324px");
         $("#selected-block").css("display", "block");
-        // let img_src_html
         let img_src_html = '<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%;">';
-        // let img_src_html = '<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%;" data-toggle="popover" data-trigger="hover" title="prediction" data-html="true" data-content="' + img_prediction + '">';
         console.log(img_src_html);
         $("#selected_image").empty().append(img_src_html);
-        // $("#selected_image").empty().append('<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%; title="prediction" data-toggle="popover" data-html="true" data-trigger="hover" data-content={{ si_prediction_formatted }};>');
-        // $("#selected_image").popover('hide');
         console.log("prediction: " + img_prediction);
         $('#selected_image').popover('dispose');
         $("#selected_image").popover({
@@ -391,8 +427,7 @@
           html: true,
           trigger: 'hover',
         });
-        // data-toggle="popover" data-trigger="hover" title="prediction" data-html="true" data-content="' + 'test' + '"
-        // function toggleMode() {
+
         let checkbox = document.getElementById('search_select');
         if( checkbox.checked == 0) {
           console.log('toggle unchecked, calling toggleMode');
@@ -401,6 +436,23 @@
         }
 
         $("#selected-image-meta").empty().append(img_data);
+
+        $('.si-tab-link').on("click", function (event) {
+          console.log("si-tab link clicked");
+          let imageID = $(this).attr('image-id');
+          let tabID = $(this).attr('id');
+          console.log("imageID: " + imageID);
+          console.log("tabID: " + tabID);
+          let tabSelector = tabID.substring(7, 9);
+          console.log("tabSelector: " + tabSelector);
+          let targetTabID = "#si-tab-content-" + imageID;
+          console.log(targetTabID);
+          $( targetTabID ).children().removeClass( "show active" );
+          let targetTabContent = '#si-tab-' + imageID + '-' + tabSelector;
+          console.log("targetTabContent: " + targetTabContent);
+          $( targetTabContent ).addClass( "show active" );
+        });
+
         MathJax.typeset();
       }
 
@@ -410,7 +462,11 @@
         var img_src = $(this).attr("src");
         var img_id = $(this).parent().attr("image_id");
         // var img_data = $(this).attr("data-content");
-        // var img_data = $(this).attr("tab-data");
+        var img_data = $(this).attr("tab-data");
+        img_data = img_data.replace(/id='tab-/g, "id='si-tab-");
+        img_data = img_data.replace(/tab-link/g, "si-tab-link");
+
+        console.log("img_data: " + img_data);
         var img_pred = $(this).attr("prediction");
         // console.log("showing selected image: " + img_src);
         show_selected(img_src, img_data, img_pred);
@@ -422,26 +478,50 @@
     	});
 
       $(".grid-item-img").on("click", function (event) {
+        console.log('disposing popovers');
+        $(".grid-item-img").not(this).popover('dispose');
         console.log('creating popover');
         console.log(this);
+        let imgDiv = '<img class="popover-image" src="' + $(this).attr('src') + '">';
+        let tabData = $(this).attr('tab-data');
+        let popoverData = imgDiv + tabData;
+        console.log("popoverData: " + popoverData);
         $(this).popover({
           html: true,
           trigger: 'manual',
-          title: "Title",
-          placement: "bottom",
-          content: $(this).attr('tab-data')
+          title: "Image Metadata",
+          sanitize: false,
+          // selector: '[rel=selector]',
+          // placement: "bottom",
+          content: popoverData,
         });
-        $(this).popover('show');
+
         $(".grid-item-img").not(this).popover('hide');
+        $(this).popover('show');
+
+        $('.tab-link').on("click", function (event) {
+          console.log("link clicked");
+          let imageID = $(this).attr('image-id');
+          let tabID = $(this).attr('id');
+          console.log("imageID: " + imageID);
+          console.log("tabID: " + tabID);
+          let tabSelector = tabID.substring(4, 6);
+          console.log("tabSelector: " + tabSelector);
+          let targetTabID = "#tab-content-" + imageID;
+          console.log(targetTabID);
+          $( targetTabID ).children().removeClass( "show active" );
+          let targetTabContent = '#tab-' + imageID + '-' + tabSelector;
+          console.log("targetTabContent: " + targetTabContent);
+          $( targetTabContent ).addClass( "show active" );
+        });
       })
 
       // this doesn't work
-      $('.tab-link').on('click', function (event) {
-        console.log('trying to show tab');
-        event.preventDefault()
-        $(this).tab('show')
-      })
-
+      // $('.tab-link').on('click', function (event) {
+      //   console.log('trying to show tab');
+      //   event.preventDefault()
+      //   $(this).tab('show')
+      // })
 
       // $(".grid-item").on("click", function (event) {
       //   console.log("setting image_id to: " + $(this).attr("image_id"));
