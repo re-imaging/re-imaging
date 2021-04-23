@@ -173,6 +173,30 @@ $(document).ready(function(){
     });
   })
 
+  {% if prev_image_id %}
+    console.log("prev_image_id not empty: " + {{ prev_image_id }});
+    var img_src = {{url_for("static", filename="all/"+prev_image_id+".jpg")|tojson}};
+    {% if si_meta[8]|length > 100 %}
+      {% set si_authors_short = si_meta[8].split(";")[0] + " et al" %}
+    {% else %}
+      {% set si_authors_short = si_meta[8] %}
+    {% endif %}
+    {% if si_meta[11] != "None" %}
+      {% set si_caption = si_meta[11] %}
+    {% else %}
+      {% set si_caption = "-" %}
+    {% endif %}
+    {% set pl = si_meta[10].lower().replace(","," ").split() %}
+    {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
+    var img_pred = '{% autoescape false %} {{ si_prediction_formatted }} {% endautoescape %}';
+    var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_caption)|tojson }};
+    // console.log(img_data);
+
+    show_selected(img_src, img_data, img_pred);
+  {% else %}
+    $("#selected-block").css("display", "none");
+  {% endif %}
+
   var $select = $('#author').selectize({
     delimiter: ',',
     persist: false,

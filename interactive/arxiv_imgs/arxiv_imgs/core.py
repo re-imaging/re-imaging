@@ -320,7 +320,7 @@ def get_images():
     meta_sql = """
                 SELECT images.identifier, filename, x, y, imageformat, creator,
                 metadata.created, metadata.cat, metadata.authors, metadata.title,
-                images.vggpred, captions.caption
+                images.vggpred, captions.caption, images.id
                 FROM images
                 LEFT JOIN metadata ON images.identifier == metadata.identifier
                 LEFT JOIN captions ON images.caption == captions.id
@@ -349,7 +349,8 @@ def get_images():
             md["title"] = str(rows[0][9])
             md["vggpred"] = str(rows[0][10]).replace(",", ", ")
             md["caption"] = str(rows[0][11])
-            metadict.append(md)
+            meta_image_id = str(rows[0][12])
+            metadict.append({meta_image_id: md})
     print("metadata length:", len(metadata))
     print("metadict length:", len(metadict))
     # print(metadata)
@@ -372,7 +373,7 @@ def get_images():
 
     # print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
-    return render_template('core/interface.html', images=images, metadata=metadata, metadict=metadict,
+    return render_template('core/interface.html.j2', images=images, metadata=metadata, metadict=metadict,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta=si_meta,
