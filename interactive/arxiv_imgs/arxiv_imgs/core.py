@@ -71,6 +71,8 @@ def get_images():
     # filters
     category = request.form.get("category")
     print("category:",category)
+    category_name = request.form.get("category-name")
+    print("category_name:",category_name)
     imageformat = request.form.get("imageformat")
     print("imageformat:",imageformat)
     prediction = request.form.get("prediction")
@@ -108,7 +110,10 @@ def get_images():
     # if author: filter_arguments["metadata.authors"] = "%"+author+"%"
     # if title: filter_arguments["title"] = "%"+title+"%"
     # if creator: filter_arguments["creator"] = creator+"%"
-    if category: filter_arguments["metadata.cat"] = f'LIKE "{category}%"'
+    if category_name:
+        filter_arguments["metadata.cat"] = f'LIKE "{category_name}%"'
+    elif category:
+        filter_arguments["metadata.cat"] = f'LIKE "{category}%"'
     if imageformat: filter_arguments["imageformat"] = f'LIKE "{imageformat}%"'
     if prediction: filter_arguments["vggpred"] = f'LIKE "{prediction}%"'
     if author: filter_arguments["metadata.authors"] = f'LIKE "%{author}%"'
@@ -377,7 +382,7 @@ def get_images():
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta=si_meta,
-                            category=category, imageformat=imageformat, prediction=prediction, author=author,
+                            category=category, category_name=category_name, imageformat=imageformat, prediction=prediction, author=author,
                             title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end)
 
 @bp.route('/about')

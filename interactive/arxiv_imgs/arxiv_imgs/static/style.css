@@ -1,3 +1,10 @@
+/* #main-title {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+} */
+/* float: right; */
+
 .about {
   max-width: 660px;
   margin-left: auto;
@@ -9,10 +16,6 @@
   /* float: right; */
   /* margin: 10px; */
   padding-right: 10px;
-}
-
-ul {
-  padding-left: 1rem !important;
 }
 
 h1 a {
@@ -87,7 +90,7 @@ input {
   /* overflow: hidden; */
   /* white-space: nowrap; */
   /* text-overflow: ellipsis; */
-  background-color: rgba(240, 240, 240, 0.95) !important;
+  background-color: rgba(240, 240, 240, 0.98) !important;
   /* background: tomato !important; */
 }
 
@@ -133,7 +136,7 @@ input {
   float: left;
 
   /* border: solid 1px black; */
-  box-shadow: 0px 0px 10px 10px grey;
+  /* box-shadow: 0px 0px 10px 10px grey; */
 
   position: -webkit-sticky;
   position: sticky;
@@ -144,9 +147,13 @@ input {
 #selected-image-meta {
   float: left;
   display: block;
-  /* max-width: calc(100% - 360px); */
-  padding: 8px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* max-height: 400px; */
+  /* overflow: scroll; */
 }
+/* max-width: calc(100% - 360px); */
+
 
 #filter-btn {
   border: solid 1px black;
@@ -577,8 +584,8 @@ body {
 }
 
 #embedding-text {
-  display: inline-block;
-  margin-left: 0.5em;
+  display: block;
+  /* margin-left: 0.5em; */
 }
 
 /* .column {
@@ -654,6 +661,13 @@ input[type=number] {
     width: 100%;
 } */
 
+#sbar ul {
+  padding-left: 1rem !important;
+  /* margin-right: 1rem !important; */
+  /* margin: 0 1rem 0 1rem; */
+  width: calc(360px - 1rem);
+}
+
 #sbar {
   display: block;
   width: 360px;
@@ -667,6 +681,7 @@ input[type=number] {
   background: #f2f2f2;
   /* color: #fff; */
   transition: all 0.3s;
+  overflow: scroll;
 }
 
 /* tabs */
@@ -715,4 +730,9 @@ input[type=number] {
 
 .tab-pane {
   margin-top: 1em;
+}
+
+hr {
+  margin-top: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
 }
