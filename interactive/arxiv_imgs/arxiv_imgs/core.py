@@ -320,7 +320,7 @@ def get_images():
     db = get_db()
     c = db.cursor()
     metadata = []
-    metadict = []
+    metadict = {}
 
     meta_sql = """
                 SELECT images.identifier, filename, x, y, imageformat, creator,
@@ -355,7 +355,7 @@ def get_images():
             md["vggpred"] = str(rows[0][10]).replace(",", ", ")
             md["caption"] = str(rows[0][11])
             meta_image_id = str(rows[0][12])
-            metadict.append({meta_image_id: md})
+            metadict[meta_image_id] = md
     print("metadata length:", len(metadata))
     print("metadict length:", len(metadict))
     # print(metadata)
@@ -368,6 +368,8 @@ def get_images():
     print("images_shown:", images_shown)
 
     si_meta = None
+    si_meta_dict = {}
+
     if image_id:
         c.execute(meta_sql, (image_id,))
         rows = c.fetchall()
