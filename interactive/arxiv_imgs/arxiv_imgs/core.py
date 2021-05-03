@@ -131,7 +131,7 @@ def get_images():
     # then filter using SQLite search
     # then get metadata for each image
 
-    if search_select == None: # not image_id and
+    if search_select == None or search_select == "": # not image_id and
         print("image_id:", image_id, "- getting random indexes")
         # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
         # images = [filepaths[i] for i in rand_nums]
@@ -148,7 +148,7 @@ def get_images():
         print("name of button: ", request.form.get("btn"))
 
         if search_select != None: # request.form.get("btn") == "Search images":
-            if embedding == "random":
+            if embedding == "random": # or image_id == ""
                 print("image_id:", image_id, "- getting random indexes")
                 # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
                 # images = [filepaths[i] for i in rand_nums]
@@ -351,9 +351,9 @@ def get_images():
             md["created"] = str(rows[0][6])
             md["cat"] = str(rows[0][7])
             md["authors"] = str(rows[0][8])
-            md["title"] = str(rows[0][9])
+            md["title"] = str(rows[0][9]).replace('\n', ' ')
             md["vggpred"] = str(rows[0][10]).replace(",", ", ")
-            md["caption"] = str(rows[0][11])
+            md["caption"] = str(rows[0][11]).replace('\n', ' ')
             meta_image_id = str(rows[0][12])
             metadict[meta_image_id] = md
     print("metadata length:", len(metadata))
@@ -368,7 +368,7 @@ def get_images():
     print("images_shown:", images_shown)
 
     si_meta = None
-    si_meta_dict = {}
+    si_meta_d = {}
 
     if image_id:
         c.execute(meta_sql, (image_id,))
@@ -376,14 +376,29 @@ def get_images():
         # for row in rows:
         si_meta = [str(r) for r in rows[0]]
             # si_meta = [row[0] for row in rows]
-        print("si_meta:", si_meta)
 
+        print("si_meta:", si_meta)
+        md = {}
+        md["identifier"] = str(rows[0][0])
+        md["filename"] = str(rows[0][1])
+        md["x"] = str(rows[0][2])
+        md["y"] = str(rows[0][3])
+        md["imageformat"] = str(rows[0][4])
+        md["creator"] = str(rows[0][5])
+        md["created"] = str(rows[0][6])
+        md["cat"] = str(rows[0][7])
+        md["authors"] = str(rows[0][8])
+        md["title"] = str(rows[0][9]).replace('\n', ' ')
+        md["vggpred"] = str(rows[0][10]).replace(",", ", ")
+        md["caption"] = str(rows[0][11]).replace('\n', ' ')
+        meta_image_id = str(rows[0][12])
+        si_meta_d[image_id] = md
     # print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
     return render_template('core/interface.html.j2', images=images, metadata=metadata, metadict=metadict,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
-                            si_meta=si_meta,
+                            si_meta=si_meta, si_meta_d=si_meta_d,
                             category=category, category_name=category_name, imageformat=imageformat, prediction=prediction, author=author,
                             title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end)
 

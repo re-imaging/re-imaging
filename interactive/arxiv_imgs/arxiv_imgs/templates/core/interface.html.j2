@@ -29,24 +29,25 @@
               <h2 class="fs-4">Search the dataset:</h2>
 
               <div class="btn-group col-12" role="group" aria-label="Button to toggle searching by sampling or nearest neighbours">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="btnradio1">Sample dataset</label>
+                <input type="radio" class="btn-check" name="btnradio" id="sample-btn" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="sample-btn">Sample dataset</label>
 
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio2">Nearest neighbours</label>
+                <input type="radio" class="btn-check" name="btnradio" id="nn-btn" autocomplete="off">
+                <label class="btn btn-outline-primary" for="nn-btn">Nearest neighbours</label>
               </div>
 
-              <span>
+              <div id="toggle-div" class="mt-2">
                 <div id=random-text style="display: inline-block;">
-                  <p style="font-size: 1.25em; vertical-align: top;">Sample dataset</p>
+                  <p class="d-none">Sample dataset</p>
+                  <!-- <p style="font-size: 1.25em; vertical-align: top;">Sample dataset</p> -->
                 </div>
 
-                <label class="switch">
-                  <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();">
-                  <span class="slider round"></span>
+                <label class="switch d-none"> <!-- d-none -->
+                  <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();" class="d-none">
+                  <span class="slider round d-none"></span>
                 </label>
                 <div id=embedding-text class="row mb-2 d-flex">
-                  <div class="col">ML embedding</div>
+                  <div class="col" style="vertical-align: middle;">ML embedding</div>
                   <div class="col">
                     <select class="form-select" name="embedding" id="embedding" style="vertical-align: middle; margin: 0;">
                       <option value="ternary">ternary</option>
@@ -64,10 +65,16 @@
                     </select>
                   </span> -->
                 </div>
-
-                <label for="image_id" id="image_id_label" style="font-size: 1.15em; vertical-align: middle;">Target image</label>
-                <input for="image_id" name="image_id" id="image_id" placeholder="Click on an image" style="vertical-align: middle; max-width: 160px;" type="number">
-              </span>
+                <div class="row">
+                  <div class="col">
+                    <label for="image_id" id="image_id_label" style="vertical-align: middle;">Target image</label>
+                  </div>
+                  <div class="col">
+                    <input class="col" style="float: right;"for="image_id" name="image_id" id="image_id" placeholder="Click on an image" type="number">
+                  </div>
+                </div>
+                <!-- style="vertical-align: middle; max-width: 160px;" -->
+              </div>
             </div>
 
             <div class="category-dropdown">
@@ -235,7 +242,8 @@
   {% else %}
   <div id="description-text" class="mt-2" style="display: block; position: relative; left: 360px; top: 0px; margin-bottom: 1em; width: calc(100% - 360px)">
     <body>
-      Showing sample of images from arXiv. Click on an image to see metadata. Double click to select to use for nearest neighbour search using machine learning embeddings.
+      Showing sample of images from arXiv.<br>
+      Click on an image to see metadata. Double click to select to use for nearest neighbour search using machine learning embeddings.
     </body>
   </div>
   {% endif %}
@@ -277,13 +285,13 @@
 
           <div class='tab-content' id='tab-content-{{image}}'>
             <div class='tab-pane fade show active' id='tab-{{image}}-id' role='tabpanel' aria-labelledby='id-tab'>
-              <b>identifier:</b> <a href=https://arxiv.org/abs/{{metadict[image]['identifier']}}>{{metadict[image]['identifier']}}</a><br><b>date:</b> {{metadict[image]['created']}}<br><b>category:</b> {{metadict[image]['cat']}}<br><b>authors:</b> {{authors_short}}<br><b>title:</b> {{metadict[image]['title']}}<br>
+              <b>identifier:</b> <a href=https://arxiv.org/abs/{{metadict[image]['identifier']|e}}>{{metadict[image]['identifier']|e}}</a><br><b>date:</b> {{metadict[image]['created']|e}}<br><b>category:</b> {{metadict[image]['cat']|e}}<br><b>authors:</b> {{authors_short|e}}<br><b>title:</b> {{metadict[image]['title']|e}}<br>
               </div>
             <div class='tab-pane fade' id='tab-{{image}}-fm' role='tabpanel' aria-labelledby='format-tab'>
-              <b>filename:</b> {{metadict[image]['filename']}}<br><b>x:</b> {{metadict[image]['x']}}<b> y:</b> {{metadict[image]['y']}}<br><b>format:</b> {{metadict[image]['imageformat']}}<br><b>creator:</b> {{metadict[image]['creator']}}<br>
+              <b>filename:</b> {{metadict[image]['filename']|e}}<br><b>x:</b> {{metadict[image]['x']|e}}<b> y:</b> {{metadict[image]['y']|e}}<br><b>format:</b> {{metadict[image]['imageformat']|e}}<br><b>creator:</b> {{metadict[image]['creator']|e}}<br>
             </div>
             <div class='tab-pane fade' id='tab-{{image}}-cp' role='tabpanel' aria-labelledby='caption-tab'>
-              <b><br>caption:</b> {{caption}}<br>
+              <b>caption:</b> {{caption|e}}<br>
             </div>
           </div>"
         >
@@ -310,6 +318,8 @@
   function toggleMode() {
     let checkbox = document.getElementById('search_select');
     console.log("checkbox: " + checkbox.checked)
+    // let sampleButton = $('#sample-btn');
+    // let nnButton = $('#nn-btn');
     let gray = "#cccccc"
     let black = "#000000"
     if(checkbox.checked == 1) {
@@ -318,12 +328,18 @@
       document.getElementById("image_id_label").style.color = black;
       document.getElementById("embedding").disabled = false;
       document.getElementById("image_id").disabled = false;
+      // $('#sample-btn').removeClass('active');
+      // $('#nn-btn').addClass('active');
+      $('#nn-btn').click();
     } else if (checkbox.checked == 0) {
       document.getElementById("random-text").style.color = black;
       document.getElementById("embedding-text").style.color = gray;
       document.getElementById("image_id_label").style.color = gray;
       document.getElementById("embedding").disabled = true;
       document.getElementById("image_id").disabled = true;
+      // $('#nn-btn').removeClass('active');
+      // $('#sample-btn').addClass('active');
+      $('#sample-btn').click();
     }
   }
 
@@ -351,6 +367,30 @@
 
   $(document).ready(function(){
     const checkbox = document.getElementById('search_select');
+
+    $('#sample-btn').on('click', function(event) {
+      console.log("sample-btn pressed");
+      let checkbox = document.getElementById('search_select');
+      if(checkbox.checked == 1) {
+        checkbox.checked = 0;
+        toggleMode();
+      }
+      else {
+        return;
+      }
+    });
+
+    $('#nn-btn').on('click', function(event) {
+      console.log("nn-btn pressed");
+      let checkbox = document.getElementById('search_select');
+      if(checkbox.checked == 0) {
+        checkbox.checked = 1;
+        toggleMode();
+      }
+      else {
+        return;
+      }
+    });
 
     // init Packery
     var $grid = $('.image-grid').packery({
@@ -486,7 +526,7 @@
         {% set si_authors_short = si_meta[8] %}
       {% endif %}
       {% if si_meta[11] != "None" %}
-        {% set si_caption = si_meta[11] %}
+        {% set si_caption = si_meta_d[prev_image_id]['caption']|e %}
       {% else %}
         {% set si_caption = "-" %}
       {% endif %}
@@ -494,30 +534,30 @@
       {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
       var img_pred = '{% autoescape false %} {{ si_prediction_formatted }} {% endautoescape %}';
       // var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_caption)|tojson }};
-      var img_data = {{"
-            <ul class='nav nav-tabs' id='tab-{}' role='tablist'>
-              <li class='nav-item' role='presentation'>
-                <a class='nav-link tab-link active' id='tab-id' image-id='{}' data-toggle='tab' href='#{}-id' role='tab' aria-controls='id' aria-selected='true'>ID</a>
-              </li>
-              <li class='nav-item' role='presentation'>
-                <a class='nav-link tab-link' id='tab-fm' image-id='{}' data-toggle='tab' href='#{}-format' role='tab' aria-controls='format' aria-selected='false'>Format</a>
-              </li>
-              <li class='nav-item' role='presentation'>
-                <a class='nav-link tab-link' id='tab-cp' image-id='{}' data-toggle='tab' href='#{}-caption' role='tab' aria-controls='caption' aria-selected='false'>Caption</a>
-              </li>
-            </ul>
+      var img_data =
+        "<ul class='nav nav-tabs' id='tab-{{prev_image_id}}' role='tablist'>" +
+          "<li class='nav-item' role='presentation'>" +
+            "<a class='nav-link tab-link active' id='tab-id' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-id' role='tab' aria-controls='id' aria-selected='true'>ID</a>" +
+          "</li>" +
+          "<li class='nav-item' role='presentation'>" +
+            "<a class='nav-link tab-link' id='tab-fm' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-format' role='tab' aria-controls='format' aria-selected='false'>Format</a>" +
+          "</li>" +
+          "<li class='nav-item' role='presentation'>" +
+            "<a class='nav-link tab-link' id='tab-cp' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-caption' role='tab' aria-controls='caption' aria-selected='false'>Caption</a>" +
+          "</li>" +
+        "</ul>" +
 
-            <div class='tab-content' id='tab-content-{}'>
-              <div class='tab-pane fade show active' id='tab-{}-id' role='tabpanel' aria-labelledby='id-tab'>
-                <b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br>
-              </div>
-              <div class='tab-pane fade' id='tab-{}-fm' role='tabpanel' aria-labelledby='format-tab'>
-                <b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br>
-              </div>
-              <div class='tab-pane fade' id='tab-{}-cp' role='tabpanel' aria-labelledby='caption-tab'>
-                <b><em>Figure</em><br>caption:</b> {}<br><br>
-              </div>
-            </div>".format(prev_image_id, prev_image_id, prev_image_id, prev_image_id, prev_image_id, prev_image_id, prev_image_id, prev_image_id, prev_image_id, si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], prev_image_id, si_meta[0], si_meta[0], si_meta[6], si_meta[7], authors_short, si_meta[9], prev_image_id, si_caption) | tojson }};
+        "<div class='tab-content' id='tab-content-{{prev_image_id}}'>" +
+          "<div class='tab-pane fade show active' id='tab-{{prev_image_id}}-id' role='tabpanel' aria-labelledby='id-tab'>" +
+            "<b>identifier:</b> <a href=https://arxiv.org/abs/{{si_meta_d[prev_image_id]['identifier']|e}}>{{si_meta_d[prev_image_id]['identifier']|e}}</a><br><b>date:</b> {{si_meta_d[prev_image_id]['created']|e}}<br><b>category:</b> {{si_meta_d[prev_image_id]['cat']|e}}<br><b>authors:</b> {{si_authors_short|e}}<br><b>title:</b> {{si_meta_d[prev_image_id]['title']|e}}<br>" +
+            "</div>" +
+          "<div class='tab-pane fade' id='tab-{{prev_image_id}}-fm' role='tabpanel' aria-labelledby='format-tab'>" +
+           "<b>filename:</b> {{si_meta_d[prev_image_id]['filename']|e}}<br><b>x:</b>" + "{{si_meta_d[prev_image_id]['x']|e}}<b> y:</b> {{si_meta_d[prev_image_id]['y']|e}}<br><b>format:</b> {{si_meta_d[prev_image_id]['imageformat']|e}}<br><b>creator:</b> {{si_meta_d[prev_image_id]['creator']|e}}<br>" +
+          "</div>" +
+          "<div class='tab-pane fade' id='tab-{{prev_image_id}}-cp' role='tabpanel' aria-labelledby='caption-tab'>" +
+            "<b>caption:</b> {{si_caption|e}}<br>" +
+          "</div>" +
+        "</div>";
       // console.log(img_data);
 
       img_data = img_data.replace(/id='tab-/g, "id='si-tab-");
@@ -558,9 +598,6 @@
       valueField: 'cat',
       labelField: 'label',
       searchField: ['cat', 'label'],
-      options: [
-        {'cat': 'Wang', 'label': '3778'}, {'cat': 'Li', 'label': '3408'}, {'cat': 'Zhang', 'label': '3248'}, {'cat': 'Chen', 'label': '2819'}, {'cat': 'Liu', 'label': '2580'}, {'cat': 'Yang', 'label': '1456'}, {'cat': 'Lee', 'label': '1370'}, {'cat': 'Kim', 'label': '1203'}, {'cat': 'Wu', 'label': '1165'}, {'cat': 'Xu', 'label': '1125'}, {'cat': 'Huang', 'label': '1105'}, {'cat': 'Zhao', 'label': '859'}, {'cat': 'Zhou', 'label': '858'}, {'cat': 'Lin', 'label': '758'}, {'cat': 'Zhu', 'label': '731'}, {'cat': 'Yu', 'label': '730'}, {'cat': 'Sun', 'label': '701'}, {'cat': 'Hu', 'label': '638'}, {'cat': 'Guo', 'label': '626'}, {'cat': 'Jiang', 'label': '607'}, {'cat': 'Ma', 'label': '601'}, {'cat': 'Lu', 'label': '581'}, {'cat': 'He', 'label': '580'}, {'cat': 'Kumar', 'label': '542'}, {'cat': 'ATLAS Collaboration', 'label': '527'}, {'cat': 'CMS Collaboration', 'label': '525'}, {'cat': 'Singh', 'label': '515'}, {'cat': 'Gao', 'label': '508'}, {'cat': 'Park', 'label': '459'}, {'cat': 'Chang', 'label': '438'}, {'cat': 'Das', 'label': '435'}, {'cat': 'Song', 'label': '429'}, {'cat': 'Feng', 'label': '428'}, {'cat': 'Nguyen', 'label': '420'}, {'cat': 'Cheng', 'label': '409'}, {'cat': 'Han', 'label': '409'}, {'cat': 'Cao', 'label': '408'}, {'cat': 'Shi', 'label': '404'}, {'cat': 'Gupta', 'label': '397'}, {'cat': 'Tang', 'label': '395'}, {'cat': 'Zheng', 'label': '392'}, {'cat': 'Yan', 'label': '384'}, {'cat': 'Luo', 'label': '381'}, {'cat': 'Ghosh', 'label': '379'}, {'cat': 'Smith', 'label': '375'}, {'cat': 'Shen', 'label': '373'}, {'cat': 'Cai', 'label': '365'}, {'cat': 'Choi', 'label': '352'}, {'cat': 'Jin', 'label': '331'}, {'cat': 'Xie', 'label': '330'}, {'cat': 'Yuan', 'label': '316'}, {'cat': 'Ding', 'label': '310'}, {'cat': 'Dong', 'label': '310'}, {'cat': 'Fan', 'label': '307'}, {'cat': 'Martin', 'label': '290'}, {'cat': 'Sharma', 'label': '287'}, {'cat': 'Xiao', 'label': '282'}, {'cat': 'Roy', 'label': '278'}, {'cat': 'Liang', 'label': '274'}, {'cat': 'Wei', 'label': '273'}, {'cat': 'Fu', 'label': '268'}, {'cat': 'Pan', 'label': '266'}, {'cat': 'Banerjee', 'label': '264'}, {'cat': 'Cohen', 'label': '253'}, {'cat': 'Brown', 'label': '252'}, {'cat': 'Collaboration', 'label': '249'}, {'cat': 'Kang', 'label': '249'}, {'cat': 'Dai', 'label': '246'}, {'cat': 'Fang', 'label': '244'}, {'cat': 'Peng', 'label': '244'}, {'cat': 'Miller', 'label': '241'}, {'cat': 'Yao', 'label': '237'}, {'cat': 'Deng', 'label': '236'}, {'cat': 'Johnson', 'label': '234'}, {'cat': 'Schmidt', 'label': '228'}, {'cat': 'Du', 'label': '227'}, {'cat': 'Anderson', 'label': '226'}, {'cat': 'Cho', 'label': '226'}, {'cat': 'Cui', 'label': '222'}, {'cat': 'LHCb collaboration', 'label': '217'}, {'cat': 'Hong', 'label': '215'}, {'cat': 'Jones', 'label': '214'}, {'cat': 'Williams', 'label': '214'}, {'cat': 'Tan', 'label': '213'}, {'cat': 'Ye', 'label': '213'}, {'cat': 'Ellis', 'label': '212'}, {'cat': 'Gu', 'label': '211'}, {'cat': 'Gong', 'label': '207'}, {'cat': 'Jain', 'label': '204'}, {'cat': 'Hou', 'label': '203'}, {'cat': 'Santos', 'label': '203'}, {'cat': 'Bhattacharya', 'label': '200'}, {'cat': 'Ren', 'label': '199'}, {'cat': 'Jia', 'label': '198'}, {'cat': 'Chakraborty', 'label': '194'}, {'cat': 'Zeng', 'label': '192'}, {'cat': 'Liao', 'label': '191'}, {'cat': 'Mukherjee', 'label': '190'}, {'cat': 'Su', 'label': '190'}, {'cat': 'Dutta', 'label': '189'}, {'cat': 'Evans', 'label': '188'}, {'cat': 'Yin', 'label': '188'}, {'cat': 'Tanaka', 'label': '178'}, {'cat': 'Ivanov', 'label': '176'}, {'cat': 'Khan', 'label': '176'}, {'cat': 'Chan', 'label': '172'}, {'cat': 'Qin', 'label': '172'}, {'cat': 'Tran', 'label': '172'}, {'cat': 'Wen', 'label': '172'}, {'cat': 'Thomas', 'label': '171'}, {'cat': 'Tian', 'label': '169'}, {'cat': 'The BABAR Collaboration', 'label': '168'}, {'cat': 'Bauer', 'label': '164'}, {'cat': 'Costa', 'label': '163'}, {'cat': 'ALICE Collaboration', 'label': '162'}, {'cat': 'Ali', 'label': '162'}, {'cat': 'Aoki', 'label': '162'}, {'cat': 'Bai', 'label': '162'}, {'cat': 'Chatterjee', 'label': '162'}, {'cat': 'Ji', 'label': '161'}, {'cat': 'Mishra', 'label': '161'}, {'cat': 'Schneider', 'label': '161'}, {'cat': 'Ahmed', 'label': '160'}, {'cat': 'Biswas', 'label': '160'}, {'cat': 'Müller', 'label': '159'}, {'cat': 'Jung', 'label': '156'}, {'cat': 'Zhong', 'label': '155'}, {'cat': 'Berger', 'label': '154'}, {'cat': 'Ho', 'label': '153'}, {'cat': 'Taylor', 'label': '152'}, {'cat': 'Chung', 'label': '151'}, {'cat': 'Fischer', 'label': '151'}, {'cat': 'Sarkar', 'label': '150'}, {'cat': 'Lim', 'label': '149'}, {'cat': 'Takahashi', 'label': '149'}, {'cat': 'Kobayashi', 'label': '148'}, {'cat': 'Qian', 'label': '148'}, {'cat': 'Saha', 'label': '148'}, {'cat': 'Suzuki', 'label': '148'}, {'cat': 'Agarwal', 'label': '147'}, {'cat': 'Meng', 'label': '147'}, {'cat': 'Wong', 'label': '147'}, {'cat': 'Nakamura', 'label': '146'}, {'cat': 'Lai', 'label': '145'}, {'cat': 'Abe', 'label': '142'}, {'cat': 'Xue', 'label': '142'}, {'cat': 'Zou', 'label': '142'}, {'cat': 'Silva', 'label': '141'}, {'cat': 'White', 'label': '141'}, {'cat': 'Meyer', 'label': '140'}, {'cat': 'Shao', 'label': '139'}, {'cat': 'Xia', 'label': '139'}, {'cat': 'Xiong', 'label': '139'}, {'cat': 'Mao', 'label': '138'}, {'cat': 'Qi', 'label': '137'}, {'cat': 'Pal', 'label': '136'}, {'cat': 'Qiu', 'label': '136'}, {'cat': 'Dey', 'label': '135'}, {'cat': 'Sato', 'label': '135'}, {'cat': 'Gonzalez', 'label': '134'}, {'cat': 'Joshi', 'label': '132'}, {'cat': 'Wilson', 'label': '129'}, {'cat': 'Braun', 'label': '128'}, {'cat': 'Ge', 'label': '128'}, {'cat': 'Yoshida', 'label': '128'}, {'cat': 'Clark', 'label': '127'}, {'cat': 'Garcia', 'label': '127'}, {'cat': 'Davis', 'label': '126'}, {'cat': 'Becker', 'label': '124'}, {'cat': 'Klein', 'label': '124'}, {'cat': 'Kato', 'label': '123'}, {'cat': 'Pandey', 'label': '123'}, {'cat': 'Ferreira', 'label': '122'}, {'cat': 'Le', 'label': '122'}, {'cat': 'Andersen', 'label': '121'}, {'cat': 'Choudhury', 'label': '121'}, {'cat': 'Bao', 'label': '119'}, {'cat': 'Hansen', 'label': '118'}, {'cat': 'Hoang', 'label': '118'}, {'cat': 'Watanabe', 'label': '118'}, {'cat': 'Chu', 'label': '117'}, {'cat': 'Hwang', 'label': '117'}, {'cat': 'Yamamoto', 'label': '117'}, {'cat': 'D0 Collaboration', 'label': '116'}, {'cat': 'Lei', 'label': '116'}, {'cat': 'Paul', 'label': '116'}, {'cat': 'Harris', 'label': '115'}, {'cat': 'Kong', 'label': '115'}, {'cat': 'Torres', 'label': '115'}, {'cat': 'Wan', 'label': '115'}, {'cat': 'Simon', 'label': '114'}, {'cat': 'Basu', 'label': '113'}, {'cat': 'King', 'label': '112'}, {'cat': 'Adams', 'label': '111'}, {'cat': 'Oh', 'label': '111'}, {'cat': 'Planck Collaboration', 'label': '111'}, {'cat': 'Rahman', 'label': '111'}, {'cat': 'Rao', 'label': '111'}, {'cat': 'You', 'label': '111'}, {'cat': 'Cheung', 'label': '110'}, {'cat': 'Yi', 'label': '110'}, {'cat': 'Chowdhury', 'label': '109'}, {'cat': 'Green', 'label': '108'}, {'cat': 'Roberts', 'label': '108'}, {'cat': 'Shah', 'label': '108'}, {'cat': 'Shin', 'label': '108'}, {'cat': 'Inoue', 'label': '107'}, {'cat': 'Srivastava', 'label': '107'}, {'cat': 'An', 'label': '106'}, {'cat': 'Mueller', 'label': '106'}, {'cat': 'Davies', 'label': '105'}, {'cat': 'Rodriguez', 'label': '105'}, {'cat': 'Bhattacharyya', 'label': '104'}, {'cat': 'Perez', 'label': '104'}, {'cat': 'Brandt', 'label': '103'}, {'cat': 'Hao', 'label': '103'}, {'cat': 'Hashimoto', 'label': '103'}, {'cat': 'Weber', 'label': '103'}, {'cat': 'Almeida', 'label': '102'}, {'cat': 'Baker', 'label': '102'}, {'cat': 'Barnes', 'label': '102'}, {'cat': 'Islam', 'label': '102'}, {'cat': 'Ahn', 'label': '101'}, {'cat': 'Beck', 'label': '101'}, {'cat': 'Hall', 'label': '101'}, {'cat': 'Hsu', 'label': '101'}, {'cat': 'Oliveira', 'label': '101'}, {'cat': 'Werner', 'label': '101'}, {'cat': 'da Silva', 'label': '101'}, {'cat': 'Chakrabarti', 'label': '100'}, {'cat': 'Huber', 'label': '100'}, {'cat': 'Long', 'label': '100'}, {'cat': 'Young', 'label': '100'}, {'cat': 'Bianchi', 'label': '99'}, {'cat': 'Rodrigues', 'label': '98'}, {'cat': 'ZEUS Collaboration', 'label': '98'}, {'cat': 'Arnold', 'label': '97'}, {'cat': 'Campbell', 'label': '97'}, {'cat': 'Sinha', 'label': '97'}, {'cat': 'Bell', 'label': '96'}, {'cat': 'Xiang', 'label': '96'}, {'cat': 'Duan', 'label': '95'}, {'cat': 'Ribeiro', 'label': '95'}, {'cat': 'Rossi', 'label': '95'}, {'cat': 'Wright', 'label': '95'}, {'cat': 'Yoon', 'label': '95'}, {'cat': 'CDF Collaboration', 'label': '93'}, {'cat': 'Datta', 'label': '93'}, {'cat': 'Mandal', 'label': '93'}, {'cat': 'Saito', 'label': '93'}
-      ],
       render: {
         item: function(item, escape) {
             return '<div>' +
@@ -982,6 +1019,7 @@
     {% endif %}
 
     console.log( {{ metadict|tojson }} );
+    console.log( {{ si_meta_d|tojson }} );
 
     // window.MathJax = {
     //   tex: {
