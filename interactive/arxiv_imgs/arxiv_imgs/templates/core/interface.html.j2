@@ -6,9 +6,11 @@
   <!-- $J(x)=\int_0^1\alpha_x(\dot x)dt$ -->
 
   <div id="sbar">
+  <!-- class="d-flex flex-column p-3 bg-light" -->
 
     <ul>
-      <h1 class="fs-3 mt-2"><a id="main-title" href={{ url_for("core.get_images") }}>Reconfiguring ML</a></h1>
+      <!-- class="flex-column mb-auto ml-0" -->
+      <h1 class="fs-3 mt-3"><a id="main-title" href={{ url_for("core.get_images") }}>ImageMesh</a></h1>
       <!-- <h1><a href={{ url_for("core.get_images") }}>{% block title %}arXiv Images{% endblock %}</a></h1> -->
 
       <div class="row">
@@ -25,10 +27,10 @@
         <div style="clear: both;"></div>
         <div id="main-form" class="form-inline" onsubmit="$('#loading-spinner').removeClass('d-none');">
           <form name="search" method="post">
-            <div class="form-group form-inline ml-2" id="search-mode-form">
+            <div class="form-group" id="search-mode-form">
               <h2 class="fs-4">Search the dataset:</h2>
 
-              <div class="btn-group col-12" role="group" aria-label="Button to toggle searching by sampling or nearest neighbours">
+              <div class="btn-group col-12 d-none" role="group" aria-label="Button to toggle searching by sampling or nearest neighbours">
                 <input type="radio" class="btn-check" name="btnradio" id="sample-btn" autocomplete="off" checked>
                 <label class="btn btn-outline-primary" for="sample-btn">Sample dataset</label>
 
@@ -36,8 +38,24 @@
                 <label class="btn btn-outline-primary" for="nn-btn">Nearest neighbours</label>
               </div>
 
-              <div id="toggle-div" class="mt-2">
-                <div id=random-text style="display: inline-block;">
+              <div>
+                <label for="search-mode">Search mode</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <label class="form-check-label" for="flexRadioDefault1">
+                    Random sample
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                  <label class="form-check-label" for="flexRadioDefault2">
+                    Nearest Neighbours
+                  </label>
+                </div>
+              </div>
+
+              <!-- <div id="toggle-div" class="mt-2"> -->
+                <div id=random-text class="d-none" style="display: inline-block;">
                   <p class="d-none">Sample dataset</p>
                   <!-- <p style="font-size: 1.25em; vertical-align: top;">Sample dataset</p> -->
                 </div>
@@ -46,36 +64,43 @@
                   <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();" class="d-none">
                   <span class="slider round d-none"></span>
                 </label>
-                <div id=embedding-text class="row mb-2 d-flex">
-                  <div class="col" style="vertical-align: middle;">ML embedding</div>
-                  <div class="col">
-                    <select class="form-select" name="embedding" id="embedding" style="vertical-align: middle; margin: 0;">
-                      <option value="ternary">ternary</option>
-                      <option value="VGG16">VGG16</option>
-                      <option value="raw">raw</option>
-                      <option value="cats">cats</option>
-                    </select>
+
+                <!-- <div class="input-form"> -->
+                  <div id=embedding-text class="input-group mt-3 mb-2">
+                    <!-- <div class="col align-bottom"> -->
+                    <label for="embedding">ML embedding</label>
+                    <!-- class="input-group-text" -->
+                    <!-- </div> -->
+                    <div class="col">
+                      <select class="form-select" name="embedding" id="embedding">
+                        <option value="ternary">ternary</option>
+                        <option value="VGG16">VGG16</option>
+                        <option value="raw">raw</option>
+                        <option value="cats">cats</option>
+                      </select>
+                    </div>
+                    <!-- <span style="font-size: 1.25em; vertical-align: top;">ML Embedding
+                  		<select class="form-select" name="embedding" id="embedding" style="vertical-align: middle; margin: 0;">
+                        <option value="ternary">ternary</option>
+                        <option value="VGG16">VGG16</option>
+                        <option value="raw">raw</option>
+                        <option value="cats">cats</option>
+                      </select>
+                    </span> -->
                   </div>
-                  <!-- <span style="font-size: 1.25em; vertical-align: top;">ML Embedding
-                		<select class="form-select" name="embedding" id="embedding" style="vertical-align: middle; margin: 0;">
-                      <option value="ternary">ternary</option>
-                      <option value="VGG16">VGG16</option>
-                      <option value="raw">raw</option>
-                      <option value="cats">cats</option>
-                    </select>
-                  </span> -->
-                </div>
+                <!-- </div> -->
+
                 <div class="row">
-                  <div class="col">
-                    <label for="image_id" id="image_id_label" style="vertical-align: middle;">Target image</label>
+                  <div class="col d-none">
+                    <label for="image_id" id="image_id_label" class="align-bottom">Target image</label>
                   </div>
-                  <div class="col">
+                  <div class="col d-none">
                     <input class="col" style="float: right;"for="image_id" name="image_id" id="image_id" placeholder="Click on an image" type="number">
                   </div>
                 </div>
                 <!-- style="vertical-align: middle; max-width: 160px;" -->
               </div>
-            </div>
+            <!-- </div> -->
 
             <div class="category-dropdown">
               <label for="category">Archive and category</label>
@@ -96,7 +121,7 @@
             </div>
 
             <div id="filter-div">
-              <button id="filter-btn" type="button" class="btn btn-light mt-4 mb-1 collapsible" data-toggle="collapse" data-target="#filter-content">Optional Filters <i id="filter-icon" class="bi bi-caret-down"></i></button>
+              <button id="filter-btn" type="button" class="btn btn-light mt-4 mb-1 collapsible" data-toggle="collapse" data-target="#filter-content">Optional filters <i id="filter-icon" class="bi bi-caret-down"></i></button>
 
               <div id="filter-content" class="filter-content collapse form-group">
                 <!-- row 1 -->
@@ -126,7 +151,7 @@
                   <div class="col">
                     <div class="date-filter">
                       <span><label for="date-start">Date range</label></span>
-                      <div style="display: block";>
+                      <div style="display: block; margin-bottom: 0.5rem;">
                         <input type="date" id="date-start" name="date-start" min="1986-01-01" max="2020-06-30">
                         -
                         <input type="date" id="date-end" name="date-end" min="1986-01-01" max="2020-06-30">
@@ -199,7 +224,7 @@
               </div> -->
 
               <div id="search-button-div" class="d-flex justify-content-between">
-                <input type="submit" class="btn btn-light mt-2 mb-2 mr-2" name="btn" value="Search images" id="search-images">
+                <input type="submit" class="btn btn-light mt-2 mb-2 mr-2 btn-outline-primary" name="btn" value="Search images" id="search-images">
                 <div id="loading-spinner" class="spinner-border d-none" role="status" style="margin-top: auto; margin-bottom: auto;">
                   <span class="visually-hidden">Loading...</span>
                 </div>
@@ -210,47 +235,69 @@
             </div>
           </form>
 
-            {% if result_total %}
-              {% if not embedding %}
-                {% set search_mode_text = "results by sampling dataset from {} total matching images".format(result_total) %}
-              {% else %}
-                {% set search_mode_text = "nearest results to the selected image from {} total matching images using {} embedding".format(result_total, embedding) %}
-              {% endif %}
-              {{ "Showing {} {}".format(images_shown, search_mode_text) }}
-            {% else %}
-              {% if not embedding %}
-                {% set search_mode_text = "results by sampling dataset" %}
-              {% else %}
-                {% set search_mode_text = "nearest results to the selected image by {} embedding".format(embedding) %}
-              {% endif %}
-              {{ "Showing {} {}".format(images_shown, search_mode_text) }}
-            {% endif %}
+
         </div>
       </div>
-
-      <nav class="nav-menu">
-        <ul>
-          <li><a href="{{ url_for('core.about') }}">About</a>
-          <li><a href="{{ url_for('core.get_images') }}">Interface</a>
-        </ul>
-      </nav>
 
     </ul>
   </div>
 
-  {% if prev_image_id %}
-  {% else %}
-  <div id="description-text" class="mt-2" style="display: block; position: relative; left: 360px; top: 0px; margin-bottom: 1em; width: calc(100% - 360px)">
-    <body>
-      Showing sample of images from arXiv.<br>
-      Click on an image to see metadata. Double click to select to use for nearest neighbour search using machine learning embeddings.
-    </body>
-  </div>
-  {% endif %}
+  <div id="description-text" class="mt-2" style="display: block; position: relative; left: 360px; top: 0px; margin-bottom: 1em; width: calc(100% - 360px);">
 
-	<div style="display:block; top:50%; right:50%; position:fixed; z-index: 999" class="spinner-border text-primary mx-auto" role="status" id="loading"></div>
 
-  <div class="image-grid">
+    <div class="row mx-2">
+      {% if prev_image_id %}
+        {% if result_total %}
+          <div class="alert alert-secondary col-11" role="alert">
+          {% if not embedding %}
+            {% set search_mode_text = "results by sampling dataset from {} total matching images".format(result_total) %}
+          {% else %}
+            {% set search_mode_text = "nearest results to the selected image from {} total matching images using {} embedding".format(result_total, embedding) %}
+          {% endif %}
+          {{ "Showing {} {}".format(images_shown, search_mode_text) }}
+          </div>
+        {% else %}
+          <div class="alert alert-secondary col-11" role="alert">
+          {% if not embedding %}
+            {% set search_mode_text = "results by sampling dataset" %}
+          {% else %}
+            {% set search_mode_text = "nearest results to the selected image by {} embedding".format(embedding) %}
+          {% endif %}
+          {{ "Showing {} {}".format(images_shown, search_mode_text) }}
+          </div>
+        {% endif %}
+      {% else %}
+        <div class="alert alert-secondary col-11" role="alert">
+          Showing sample of images from arXiv - a preprint repository for the sciences.
+        </div>
+      {% endif %}
+
+      <!-- navigation menu   -->
+      <nav id="nav-menu" class="nav col-1 mr-2" style="z-index: 999;">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Reconfiguring</a> -->
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('core.about') }}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{{ url_for('core.get_images') }}">Interface</a>
+          </li>
+        </div>
+      </nav>
+
+      {% if not prev_image_id %}
+        <div class="alert alert-primary col-12" role="alert">
+          Click on an image to see metadata. Double click to select to use for nearest neighbour search using machine learning embeddings.
+        </div>
+      {% endif %}
+
+      </div>
+      <hr class="mx-2">
+    </div>
+
+	<div style="display:block; top:50%; right: 50%; position:fixed; z-index: 999" class="spinner-border text-primary mx-auto" role="status" id="loading"></div>
+
+  <div id="image-grid" class="image-grid">
     {% for i, image in enumerate(images) %}
       {% if metadata[i][8]|length > 100 %}
         {% set authors_short = metadata[i][8].split(";")[0] + " et al" %}
@@ -299,21 +346,25 @@
     {%- endfor %}
   </div>
 
+  <!-- <li class='nav-item' role='presentation'>
+    <a class='nav-link tab-link' id='tab-hide' image-id='{{image}}' data-toggle='tab' href='#{{image}}-hide' role='tab' aria-controls='hide' aria-selected='false'>x</a>
+  </li> -->
+
   <script>
 
-  function openTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-  }
+  // function openTab(evt, tabName) {
+  //   var i, tabcontent, tablinks;
+  //   tabcontent = document.getElementsByClassName("tabcontent");
+  //   for (i = 0; i < tabcontent.length; i++) {
+  //     tabcontent[i].style.display = "none";
+  //   }
+  //   tablinks = document.getElementsByClassName("tablinks");
+  //   for (i = 0; i < tablinks.length; i++) {
+  //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+  //   }
+  //   document.getElementById(cityName).style.display = "block";
+  //   evt.currentTarget.className += " active";
+  // }
 
   function toggleMode() {
     let checkbox = document.getElementById('search_select');
@@ -642,16 +693,16 @@
       render: {
         item: function(item, escape) {
             return '<div>' +
-                (item.cat ? '<span class="cat">' + escape(item.cat) + ' - </span>' : '') +
-                (item.label ? '<span class="label">' + escape(item.label) + '</span>' : '') +
+                (item.cat ? '<span class="cat">' + escape(item.cat) + ' </span>' : '') +
+                (item.label ? '<span class="label small">(' + escape(item.label) + ' in total)</span>' : '') +
             '</div>';
         },
         option: function(item, escape) {
             var label = item.cat || item.label;
             var caption = item.cat ? item.label : null;
             return '<div>' +
-                '<span class="label">' + escape(label) + ' - </span>' +
-                (caption ? '<span class="caption">' + escape(caption) + '</span>' : '') +
+                '<span class="label">' + escape(label) + ' </span>' +
+                (caption ? '<span class="caption small">(' + escape(caption) + ' in total)</span>' : '') +
             '</div>';
         }
       },
@@ -841,16 +892,16 @@
         render: {
           item: function(item, escape) {
               return '<div>' +
-                  (item.cat ? '<span class="cat">' + escape(item.cat) + ' - </span>' : '') +
-                  (item.label ? '<span class="label">' + escape(item.label) + '</span>' : '') +
+                  (item.cat ? '<span class="cat">' + escape(item.cat) + ' </span>' : '') +
+                  (item.label ? '<span class="label small">(' + escape(item.label) + ' in total)</span>' : '') +
               '</div>';
           },
           option: function(item, escape) {
               var label = item.cat || item.label;
               var caption = item.cat ? item.label : null;
               return '<div>' +
-                  '<span class="label">' + escape(label) + ' - </span>' +
-                  (caption ? '<span class="caption">' + escape(caption) + '</span>' : '') +
+                  '<span class="label">' + escape(label) + ' </span>' +
+                  (caption ? '<span class="caption small">(' + escape(caption) + ' in total)</span>' : '') +
               '</div>';
           }
         },
@@ -920,6 +971,8 @@
 
     {% if prev_image_id %}
       $("#image_id").val( {{ prev_image_id }} );
+
+      // $('#image-grid').removeClass('image-grid');
     {% endif %}
 
     {% if embedding %}

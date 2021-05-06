@@ -18,6 +18,10 @@
   padding-right: 10px;
 }
 
+#nav-menu .nav-link {
+  padding: 0 !important;
+}
+
 h1 a {
   /* font-style: normal; */
   text-decoration: none;
@@ -45,17 +49,18 @@ input {
 .image-grid {
   background-color: #f5f5f5;
 
+  width: calc(100% - 360px);
+
   /* margin: 6px; */
-  /* margin: auto; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   /* padding: 6px; */
 
   /* max-width: 1200px; */
   /* max-width: 98%; */
 
   /* position: relative; */
-  width: calc(100% - 360px);
   left: 360px;
-
 }
 
 .grid-item {
@@ -157,6 +162,7 @@ input {
 
 #filter-btn {
   border: solid 1px black;
+  width: 100%;
 }
 
 /* .meta-col {
@@ -245,15 +251,16 @@ input:checked + .slider:before {
 
 /* search */
 #search-images {
-  background-color: #7fc8f0;
-  border: solid 1px black;
-  font-weight: bold;
+  /* background-color: #7fc8f0; */
+  /* border: solid 1px black; */
+  /* font-weight: bold; */
+  width: 100%;
   /* height: 4em; */
   /* width: 12em; */
   /* margin-top: 2em; */
 }
 #search-images:hover {
-  background-color: PowderBlue;
+  /* background-color: PowderBlue; */
   /* CornflowerBlue */
   /* border: solid 1px DarkOrange; */
   /* font-weight: bold; */
@@ -271,11 +278,11 @@ div #search-button-div {
   /* display: none; */
 }
 
-div #search-mode-form {
+/* div #search-mode-form {
   margin-bottom: 2em;
   display: block;
   float: none;
-}
+} */
 
 /* toggle */
 /* body { padding: 30px; } */
@@ -654,7 +661,6 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
-
 /* sidebar v2 */
 /* .wrapper {
     display: flex;
@@ -663,26 +669,30 @@ input[type=number] {
 
 #sbar ul {
   padding-left: 1rem !important;
-  /* margin-right: 1rem !important; */
-  /* margin: 0 1rem 0 1rem; */
   width: calc(360px - 1rem);
 }
+/* margin-right: 1rem !important; */
+/* margin: 0 1rem 0 1rem; */
 
 #sbar {
-  display: block;
+  /* display: block; */
   width: 360px;
   position: fixed;
-  /* float: left; */
   top: 0;
   left: 0;
   height: 100vh;
   z-index: 999;
-  /* background: #7386D5; */
   background: #f2f2f2;
-  /* color: #fff; */
   transition: all 0.3s;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  /* padding-left: 0 !important;
+  margin-left: 0 !important; */
 }
+/* float: left; */
+/* background: #7386D5; */
+/* color: #fff; */
+
 
 /* tabs */
 /* Style the tab */
