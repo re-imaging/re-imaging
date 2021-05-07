@@ -121,7 +121,7 @@
             </div>
 
             <div id="filter-div">
-              <button id="filter-btn" type="button" class="btn btn-light mt-4 mb-1 collapsible" data-toggle="collapse" data-target="#filter-content">Optional filters <i id="filter-icon" class="bi bi-caret-down"></i></button>
+              <button id="filter-btn" type="button" class="btn btn-light mt-4 mb-1 collapsible" data-toggle="collapse" data-target="#filter-content">Additional filters <i id="filter-icon" class="bi bi-caret-down"></i></button>
 
               <div id="filter-content" class="filter-content collapse form-group">
                 <!-- row 1 -->
@@ -134,7 +134,7 @@
                         title="Search the authors field of the arXiv article metadata. Searches all authors. The number indicates total number of matching images in this data subset.">
                         <i class="bi bi-info-circle"></i>
                       </div>
-                      <input type="text" name="author" id="author" placeholder="Search by author...">
+                      <input type="text" name="author" id="author" {% if author %}value="{{author|e}}"{% endif %} placeholder="Search by author...">
                     </div>
                   </div>
 
@@ -206,7 +206,10 @@
                       </select>
                     </div>
                   </div>
-                <!-- </div> -->
+
+                <div class="col">
+                  <button type="button" class="btn btn-warning" id="clear-filters">Clear filters</button>
+                </div>
 
               </div>
 
@@ -244,26 +247,25 @@
 
   <div id="description-text" class="mt-2" style="display: block; position: relative; left: 360px; top: 0px; margin-bottom: 1em; width: calc(100% - 360px);">
 
-
     <div class="row mx-2">
-      {% if prev_image_id %}
+      {% if prev_image_id or bFilters%}
         {% if result_total %}
           <div class="alert alert-secondary col-11" role="alert">
           {% if not embedding %}
-            {% set search_mode_text = "results by sampling dataset from {} total matching images".format(result_total) %}
+            {% set search_mode_text = "results by sampling dataset from <u>{}</u> total matching images".format(result_total) %}
           {% else %}
-            {% set search_mode_text = "nearest results to the selected image from {} total matching images using {} embedding".format(result_total, embedding) %}
+            {% set search_mode_text = "nearest results to the selected image from <u>{:,}</u> total matching images using <u>{}</u> embedding".format(result_total, embedding) %}
           {% endif %}
-          {{ "Showing {} {}".format(images_shown, search_mode_text) }}
+          {{ "Showing <u>{}</u> {}".format(images_shown, search_mode_text) }}
           </div>
         {% else %}
           <div class="alert alert-secondary col-11" role="alert">
           {% if not embedding %}
             {% set search_mode_text = "results by sampling dataset" %}
           {% else %}
-            {% set search_mode_text = "nearest results to the selected image by {} embedding".format(embedding) %}
+            {% set search_mode_text = "nearest results to the selected image from <u>600,000</u> total images using <u>{}</u> embedding".format(embedding) %}
           {% endif %}
-          {{ "Showing {} {}".format(images_shown, search_mode_text) }}
+          {{ "Showing <u>{}</u> {}".format(images_shown, search_mode_text) }}
           </div>
         {% endif %}
       {% else %}
@@ -273,7 +275,7 @@
       {% endif %}
 
       <!-- navigation menu   -->
-      <nav id="nav-menu" class="nav col-1 mr-2" style="z-index: 999;">
+      <nav id="nav-menu" class="nav col-1 mr-3 mt-1" style="z-index: 999;">
         <div class="container-fluid">
           <!-- <a class="navbar-brand" href="#">Reconfiguring</a> -->
           <li class="nav-item">
@@ -285,7 +287,7 @@
         </div>
       </nav>
 
-      {% if not prev_image_id %}
+      {% if not prev_image_id and not bFilters %}
         <div class="alert alert-primary col-12" role="alert">
           Click on an image to see metadata. Double click to select to use for nearest neighbour search using machine learning embeddings.
         </div>
@@ -295,7 +297,7 @@
       <hr class="mx-2">
     </div>
 
-	<div style="display:block; top:50%; right: 50%; position:fixed; z-index: 999" class="spinner-border text-primary mx-auto" role="status" id="loading"></div>
+	<div style="display:block; top:50%; right: calc(50% - 180px); position:fixed; z-index: 999" class="spinner-border text-primary mx-auto" role="status" id="loading"></div>
 
   <div id="image-grid" class="image-grid">
     {% for i, image in enumerate(images) %}
@@ -419,6 +421,26 @@
   $(document).ready(function(){
     const checkbox = document.getElementById('search_select');
 
+    $('#clear-filters').on('click', function (event) {
+      console.log("clearFilters called");
+      // categoryNameSelect.clear();
+      // categoryNameSelect.clearOptions();
+      predictionSelect.clear();
+      authorSelect.clear();
+      categoryNameSelect.clear();
+      categorySelect.clear();
+      creatorSelect.clear();
+      ifSelect.clear();
+      titleSelect.clear();
+      captionSelect.clear();
+
+      var ds = document.getElementById("date-start");
+      ds.value = '';
+
+      var de = document.getElementById("date-end");
+      de.value = '';
+    });
+
     $('#sample-btn').on('click', function(event) {
       console.log("sample-btn pressed");
       let checkbox = document.getElementById('search_select');
@@ -453,6 +475,12 @@
     $grid.imagesLoaded().progress( function() {
       $grid.packery();
     });
+
+    // copied
+    // var $grid_res = $(".grid.res").imagesLoaded(function () {
+    // 	$(".container").css("visibility", "visible");
+    // 	$grid_res.packery({columnWidth: 128, itemSelector: ".grid-item.res", gutter: 3});
+    // });
 
     // $('main-form').on('submit', function ( event, form, response ) {
     //   console.log("form submitted");
@@ -652,16 +680,16 @@
       render: {
         item: function(item, escape) {
             return '<div>' +
-                (item.cat ? '<span class="cat">' + escape(item.cat) + ' - </span>' : '') +
-                (item.label ? '<span class="label">' + escape(item.label) + '</span>' : '') +
+                (item.cat ? '<span class="cat">' + escape(item.cat) + '</span>' : '')
+                // (item.label ? '<span class="label">' + escape(item.label) + '</span>' : '') +
             '</div>';
         },
         option: function(item, escape) {
             var label = item.cat || item.label;
             var caption = item.cat ? item.label : null;
             return '<div>' +
-                '<span class="label">' + escape(label) + ' - </span>' +
-                (caption ? '<span class="caption">' + escape(caption) + '</span>' : '') +
+                '<span class="label">' + escape(label) + ' - </span>'
+                // (author ? '<span class="caption">' + escape(author) + '</span>' : '') +
             '</div>';
         }
       },
@@ -805,50 +833,6 @@
     var categorySelect = $select[0].selectize;
 
     function loadCategoryName(archive) {
-/*
-      var categoryNameOptions = {
-        'cs': [
-          {'cat': 'cs.AI', 'label': 'Artificial Intelligence'}, {'cat': 'cs.CL', 'label': 'Computation and Language'}, {'cat': 'cs.CC', 'label': 'Computational Complexity'}, {'cat': 'cs.CE', 'label': 'Computational Engineering, Finance, and Science'}, {'cat': 'cs.CG', 'label': 'Computational Geometry'}, {'cat': 'cs.GT', 'label': 'Computer Science and Game Theory'}, {'cat': 'cs.CV', 'label': 'Computer Vision and Pattern Recognition'}, {'cat': 'cs.CY', 'label': 'Computers and Society'}, {'cat': 'cs.CR', 'label': 'Cryptography and Security'}, {'cat': 'cs.DS', 'label': 'Data Structures and Algorithms'}, {'cat': 'cs.DB', 'label': 'Databases'}, {'cat': 'cs.DL', 'label': 'Digital Libraries'}, {'cat': 'cs.DM', 'label': 'Discrete Mathematics'}, {'cat': 'cs.DC', 'label': 'Distributed, Parallel, and Cluster Computing'}, {'cat': 'cs.ET', 'label': 'Emerging Technologies'}, {'cat': 'cs.FL', 'label': 'Formal Languages and Automata Theory'}, {'cat': 'cs.GL', 'label': 'General Literature'}, {'cat': 'cs.GR', 'label': 'Graphics'}, {'cat': 'cs.AR', 'label': 'Hardware Architecture'}, {'cat': 'cs.HC', 'label': 'Human-Computer Interaction'}, {'cat': 'cs.IR', 'label': 'Information Retrieval'}, {'cat': 'cs.IT', 'label': 'Information Theory'}, {'cat': 'cs.LG', 'label': 'Learning'}, {'cat': 'cs.LO', 'label': 'Logic in Computer Science'}, {'cat': 'cs.MS', 'label': 'Mathematical Software'}, {'cat': 'cs.MA', 'label': 'Multiagent Systems'}, {'cat': 'cs.MM', 'label': 'Multimedia'}, {'cat': 'cs.NI', 'label': 'Networking and Internet Architecture'}, {'cat': 'cs.NE', 'label': 'Neural and Evolutionary Computing'}, {'cat': 'cs.NA', 'label': 'Numerical Analysis'}, {'cat': 'cs.OS', 'label': 'Operating Systems'}, {'cat': 'cs.OH', 'label': 'Other Computer Science'}, {'cat': 'cs.PF', 'label': 'Performance'}, {'cat': 'cs.PL', 'label': 'Programming Languages'}, {'cat': 'cs.RO', 'label': 'Robotics'}, {'cat': 'cs.SI', 'label': 'Social and Information Networks'}, {'cat': 'cs.SE', 'label': 'Software Engineering'}, {'cat': 'cs.SD', 'label': 'Sound'}, {'cat': 'cs.SC', 'label': 'Symbolic Computation'}, {'cat': 'cs.SY', 'label': 'Systems and Control'}
-        ],
-        'astro-ph': [
-          {'cat': 'astro-ph.GA', 'label': 'Astrophysics of Galaxies'}, {'cat': 'astro-ph.CO', 'label': 'Cosmology and Nongalactic Astrophysics'}, {'cat': 'astro-ph.EP', 'label': 'Earth and Planetary Astrophysics'}, {'cat': 'astro-ph.HE', 'label': 'High Energy Astrophysical Phenomena'}, {'cat': 'astro-ph.IM', 'label': 'Instrumentation and Methods for Astrophysics'}, {'cat': 'astro-ph.SR', 'label': 'Solar and Stellar Astrophysics'}
-        ],
-        'cond-mat': [
-          {'cat': 'cond-mat.dis-nn', 'label': 'Disordered Systems and Neural Networks'}, {'cat': 'cond-mat.mtrl-sci', 'label': 'Materials Science'}, {'cat': 'cond-mat.mes-hall', 'label': 'Mesoscale and Nanoscale Physics'}, {'cat': 'cond-mat.other', 'label': 'Other Condensed Matter'}, {'cat': 'cond-mat.quant-gas', 'label': 'Quantum Gases'}, {'cat': 'cond-mat.soft', 'label': 'Soft Condensed Matter'}, {'cat': 'cond-mat.stat-mech', 'label': 'Statistical Mechanics'}, {'cat': 'cond-mat.str-el', 'label': 'Strongly Correlated Electrons'}, {'cat': 'cond-mat.supr-con', 'label': 'Superconductivity'}
-        ],
-        'gr-qc': [
-          {'cat': 'gr-qc', 'label': 'General Relativity and Quantum Cosmology'}
-        ],
-        'hep-ex': [
-          {'cat': 'hep-ex', 'label': 'High Energy Physics - Experiment'}
-        ],
-        'hep-lat': [
-          {'cat': 'hep-lat', 'label': 'High Energy Physics - Lattice'}
-        ],
-        'hep-ph': [
-          {'cat': 'hep-ph', 'label': 'High Energy Physics - Phenomenology'}
-        ],
-        'hep-th': [
-          {'cat': 'hep-th', 'label': 'High Energy Physics - Theory'}
-        ],
-        'math-ph': [
-           {'cat': 'math-ph', 'label': 'Mathematical Physics'}
-         ],
-         'nlin.AO': [
-           {'cat': 'nlin.AO', 'label': 'Adaptation and Self-Organizing Systems'}
-         ],
-         'nlin.CG': [
-           {'cat': 'nlin.CG', 'label': 'Cellular Automata and Lattice Gases'}
-         ],
-         'nlin.CD': [
-           {'cat': 'nlin.CD', 'label': 'Chaotic Dynamics'}
-         ],
-         'nlin.SI': [
-           {'cat': 'nlin.SI', 'label': 'Exactly Solvable and Integrable Systems'}
-         ],
-         {'cat': 'nlin.PS', 'label': 'Pattern Formation and Solitons'}, {'cat': 'nucl-ex', 'label': 'Nuclear Experiment'}, {'cat': 'nucl-th', 'label': 'Nuclear Theory'}, {'cat': 'physics.acc-ph', 'label': 'Accelerator Physics'}, {'cat': 'physics.app-ph', 'label': 'Applied Physics'}, {'cat': 'physics.ao-ph', 'label': 'Atmospheric and Oceanic Physics'}, {'cat': 'physics.atom-ph', 'label': 'Atomic Physics'}, {'cat': 'physics.atm-clus', 'label': 'Atomic and Molecular Clusters'}, {'cat': 'physics.bio-ph', 'label': 'Biological Physics'}, {'cat': 'physics.chem-ph', 'label': 'Chemical Physics'}, {'cat': 'physics.class-ph', 'label': 'Classical Physics'}, {'cat': 'physics.comp-ph', 'label': 'Computational Physics'}, {'cat': 'physics.data-an', 'label': 'Data Analysis, Statistics and Probability'}, {'cat': 'physics.flu-dyn', 'label': 'Fluid Dynamics'}, {'cat': 'physics.gen-ph', 'label': 'General Physics'}, {'cat': 'physics.geo-ph', 'label': 'Geophysics'}, {'cat': 'physics.hist-ph', 'label': 'History and Philosophy of Physics'}, {'cat': 'physics.ins-det', 'label': 'Instrumentation and Detectors'}, {'cat': 'physics.med-ph', 'label': 'Medical Physics'}, {'cat': 'physics.optics', 'label': 'Optics'}, {'cat': 'physics.ed-ph', 'label': 'Physics Education'}, {'cat': 'physics.soc-ph', 'label': 'Physics and Society'}, {'cat': 'physics.plasm-ph', 'label': 'Plasma Physics'}, {'cat': 'physics.pop-ph', 'label': 'Popular Physics'}, {'cat': 'physics.space-ph', 'label': 'Space Physics'}, {'cat': 'quant-ph', 'label': 'Quantum Physics'}, {'cat': 'math.AG', 'label': 'Algebraic Geometry'}, {'cat': 'math.AT', 'label': 'Algebraic Topology'}, {'cat': 'math.AP', 'label': 'Analysis of PDEs'}, {'cat': 'math.CT', 'label': 'Category Theory'}, {'cat': 'math.CA', 'label': 'Classical Analysis and ODEs'}, {'cat': 'math.CO', 'label': 'Combinatorics'}, {'cat': 'math.AC', 'label': 'Commutative Algebra'}, {'cat': 'math.CV', 'label': 'Complex Variables'}, {'cat': 'math.DG', 'label': 'Differential Geometry'}, {'cat': 'math.DS', 'label': 'Dynamical Systems'}, {'cat': 'math.FA', 'label': 'Functional Analysis'}, {'cat': 'math.GM', 'label': 'General Mathematics'}, {'cat': 'math.GN', 'label': 'General Topology'}, {'cat': 'math.GT', 'label': 'Geometric Topology'}, {'cat': 'math.GR', 'label': 'Group Theory'}, {'cat': 'math.HO', 'label': 'History and Overview'}, {'cat': 'math.IT', 'label': 'Information Theory'}, {'cat': 'math.KT', 'label': 'K-Theory and Homology'}, {'cat': 'math.LO', 'label': 'Logic'}, {'cat': 'math.MP', 'label': 'Mathematical Physics'}, {'cat': 'math.MG', 'label': 'Metric Geometry'}, {'cat': 'math.NT', 'label': 'Number Theory'}, {'cat': 'math.NA', 'label': 'Numerical Analysis'}, {'cat': 'math.OA', 'label': 'Operator Algebras'}, {'cat': 'math.OC', 'label': 'Optimization and Control'}, {'cat': 'math.PR', 'label': 'Probability'}, {'cat': 'math.QA', 'label': 'Quantum Algebra'}, {'cat': 'math.RT', 'label': 'Representation Theory'}, {'cat': 'math.RA', 'label': 'Rings and Algebras'}, {'cat': 'math.SP', 'label': 'Spectral Theory'}, {'cat': 'math.ST', 'label': 'Statistics Theory'}, {'cat': 'math.SG', 'label': 'Symplectic Geometry'}, {'cat': 'cs.AI', 'label': 'Artificial Intelligence'}, {'cat': 'cs.CL', 'label': 'Computation and Language'}, {'cat': 'cs.CC', 'label': 'Computational Complexity'}, {'cat': 'cs.CE', 'label': 'Computational Engineering, Finance, and Science'}, {'cat': 'cs.CG', 'label': 'Computational Geometry'}, {'cat': 'cs.GT', 'label': 'Computer Science and Game Theory'}, {'cat': 'cs.CV', 'label': 'Computer Vision and Pattern Recognition'}, {'cat': 'cs.CY', 'label': 'Computers and Society'}, {'cat': 'cs.CR', 'label': 'Cryptography and Security'}, {'cat': 'cs.DS', 'label': 'Data Structures and Algorithms'}, {'cat': 'cs.DB', 'label': 'Databases'}, {'cat': 'cs.DL', 'label': 'Digital Libraries'}, {'cat': 'cs.DM', 'label': 'Discrete Mathematics'}, {'cat': 'cs.DC', 'label': 'Distributed, Parallel, and Cluster Computing'}, {'cat': 'cs.ET', 'label': 'Emerging Technologies'}, {'cat': 'cs.FL', 'label': 'Formal Languages and Automata Theory'}, {'cat': 'cs.GL', 'label': 'General Literature'}, {'cat': 'cs.GR', 'label': 'Graphics'}, {'cat': 'cs.AR', 'label': 'Hardware Architecture'}, {'cat': 'cs.HC', 'label': 'Human-Computer Interaction'}, {'cat': 'cs.IR', 'label': 'Information Retrieval'}, {'cat': 'cs.IT', 'label': 'Information Theory'}, {'cat': 'cs.LG', 'label': 'Learning'}, {'cat': 'cs.LO', 'label': 'Logic in Computer Science'}, {'cat': 'cs.MS', 'label': 'Mathematical Software'}, {'cat': 'cs.MA', 'label': 'Multiagent Systems'}, {'cat': 'cs.MM', 'label': 'Multimedia'}, {'cat': 'cs.NI', 'label': 'Networking and Internet Architecture'}, {'cat': 'cs.NE', 'label': 'Neural and Evolutionary Computing'}, {'cat': 'cs.NA', 'label': 'Numerical Analysis'}, {'cat': 'cs.OS', 'label': 'Operating Systems'}, {'cat': 'cs.OH', 'label': 'Other Computer Science'}, {'cat': 'cs.PF', 'label': 'Performance'}, {'cat': 'cs.PL', 'label': 'Programming Languages'}, {'cat': 'cs.RO', 'label': 'Robotics'}, {'cat': 'cs.SI', 'label': 'Social and Information Networks'}, {'cat': 'cs.SE', 'label': 'Software Engineering'}, {'cat': 'cs.SD', 'label': 'Sound'}, {'cat': 'cs.SC', 'label': 'Symbolic Computation'}, {'cat': 'cs.SY', 'label': 'Systems and Control'}, {'cat': 'q-bio.BM', 'label': 'Biomolecules'}, {'cat': 'q-bio.GN', 'label': 'Genomics'}, {'cat': 'q-bio.MN', 'label': 'Molecular Networks'}, {'cat': 'q-bio.SC', 'label': 'Subcellular Processes'}, {'cat': 'q-bio.CB', 'label': 'Cell Behavior'}, {'cat': 'q-bio.NC', 'label': 'Neurons and Cognition'}, {'cat': 'q-bio.TO', 'label': 'Tissues and Organs'}, {'cat': 'q-bio.PE', 'label': 'Populations and Evolution'}, {'cat': 'q-bio.QM', 'label': 'Quantitative Methods'}, {'cat': 'q-bio.OT', 'label': 'Other'}, {'cat': 'q-fin.PR', 'label': 'Pricing of Securities'}, {'cat': 'q-fin.RM', 'label': 'Risk Management'}, {'cat': 'q-fin.PM', 'label': 'Portfolio Management'}, {'cat': 'q-fin.TR', 'label': 'Trading and Microstructure'}, {'cat': 'q-fin.MF', 'label': 'Mathematical Finance'}, {'cat': 'q-fin.CP', 'label': 'Computational Finance'}, {'cat': 'q-fin.ST', 'label': 'Statistical Finance'}, {'cat': 'q-fin.GN', 'label': 'General Finance'}, {'cat': 'q-fin.EC', 'label': 'Economics'}, {'cat': 'stat.AP', 'label': 'Applications'}, {'cat': 'stat.CO', 'label': 'Computation'}, {'cat': 'stat.ML', 'label': 'Machine Learning'}, {'cat': 'stat.ME', 'label': 'Methodology'}, {'cat': 'stat.OT', 'label': 'Other Statistics'}, {'cat': 'stat.TH', 'label': 'Theory'}
-      };
-*/
 
       var categoryNameOptions = {'cs': [{'cat': 'cs.AI', 'label': 'Artificial Intelligence'}, {'cat': 'cs.CL', 'label': 'Computation and Language'}, {'cat': 'cs.CC', 'label': 'Computational Complexity'}, {'cat': 'cs.CE', 'label': 'Computational Engineering, Finance, and Science'}, {'cat': 'cs.CG', 'label': 'Computational Geometry'}, {'cat': 'cs.GT', 'label': 'Computer Science and Game Theory'}, {'cat': 'cs.CV', 'label': 'Computer Vision and Pattern Recognition'}, {'cat': 'cs.CY', 'label': 'Computers and Society'}, {'cat': 'cs.CR', 'label': 'Cryptography and Security'}, {'cat': 'cs.DS', 'label': 'Data Structures and Algorithms'}, {'cat': 'cs.DB', 'label': 'Databases'}, {'cat': 'cs.DL', 'label': 'Digital Libraries'}, {'cat': 'cs.DM', 'label': 'Discrete Mathematics'}, {'cat': 'cs.DC', 'label': 'Distributed, Parallel, and Cluster Computing'}, {'cat': 'cs.ET', 'label': 'Emerging Technologies'}, {'cat': 'cs.FL', 'label': 'Formal Languages and Automata Theory'}, {'cat': 'cs.GL', 'label': 'General Literature'}, {'cat': 'cs.GR', 'label': 'Graphics'}, {'cat': 'cs.AR', 'label': 'Hardware Architecture'}, {'cat': 'cs.HC', 'label': 'Human-Computer Interaction'}, {'cat': 'cs.IR', 'label': 'Information Retrieval'}, {'cat': 'cs.IT', 'label': 'Information Theory'}, {'cat': 'cs.LG', 'label': 'Learning'}, {'cat': 'cs.LO', 'label': 'Logic in Computer Science'}, {'cat': 'cs.MS', 'label': 'Mathematical Software'}, {'cat': 'cs.MA', 'label': 'Multiagent Systems'}, {'cat': 'cs.MM', 'label': 'Multimedia'}, {'cat': 'cs.NI', 'label': 'Networking and Internet Architecture'}, {'cat': 'cs.NE', 'label': 'Neural and Evolutionary Computing'}, {'cat': 'cs.NA', 'label': 'Numerical Analysis'}, {'cat': 'cs.OS', 'label': 'Operating Systems'}, {'cat': 'cs.OH', 'label': 'Other Computer Science'}, {'cat': 'cs.PF', 'label': 'Performance'}, {'cat': 'cs.PL', 'label': 'Programming Languages'}, {'cat': 'cs.RO', 'label': 'Robotics'}, {'cat': 'cs.SI', 'label': 'Social and Information Networks'}, {'cat': 'cs.SE', 'label': 'Software Engineering'}, {'cat': 'cs.SD', 'label': 'Sound'}, {'cat': 'cs.SC', 'label': 'Symbolic Computation'}, {'cat': 'cs.SY', 'label': 'Systems and Control'}], 'econ': [{'cat': 'econ.EM', 'label': 'Econometrics'}, {'cat': 'econ.GN', 'label': 'General Economics'}, {'cat': 'econ.TH', 'label': 'Theoretical Economics'}], 'eess': [{'cat': 'eess.AS', 'label': 'Audio and Speech Processing'}, {'cat': 'eess.IV', 'label': 'Image and Video Processing'}, {'cat': 'eess.SP', 'label': 'Signal Processing'}, {'cat': 'eess.SY', 'label': 'Systems and Control'}], 'math': [{'cat': 'math.AG', 'label': 'Algebraic Geometry'}, {'cat': 'math.AT', 'label': 'Algebraic Topology'}, {'cat': 'math.AP', 'label': 'Analysis of PDEs'}, {'cat': 'math.CT', 'label': 'Category Theory'}, {'cat': 'math.CA', 'label': 'Classical Analysis and ODEs'}, {'cat': 'math.CO', 'label': 'Combinatorics'}, {'cat': 'math.AC', 'label': 'Commutative Algebra'}, {'cat': 'math.CV', 'label': 'Complex Variables'}, {'cat': 'math.DG', 'label': 'Differential Geometry'}, {'cat': 'math.DS', 'label': 'Dynamical Systems'}, {'cat': 'math.FA', 'label': 'Functional Analysis'}, {'cat': 'math.GM', 'label': 'General Mathematics'}, {'cat': 'math.GN', 'label': 'General Topology'}, {'cat': 'math.GT', 'label': 'Geometric Topology'}, {'cat': 'math.GR', 'label': 'Group Theory'}, {'cat': 'math.HO', 'label': 'History and Overview'}, {'cat': 'math.IT', 'label': 'Information Theory'}, {'cat': 'math.KT', 'label': 'K-Theory and Homology'}, {'cat': 'math.LO', 'label': 'Logic'}, {'cat': 'math.MP', 'label': 'Mathematical Physics'}, {'cat': 'math.MG', 'label': 'Metric Geometry'}, {'cat': 'math.NT', 'label': 'Number Theory'}, {'cat': 'math.NA', 'label': 'Numerical Analysis'}, {'cat': 'math.OA', 'label': 'Operator Algebras'}, {'cat': 'math.OC', 'label': 'Optimization and Control'}, {'cat': 'math.PR', 'label': 'Probability'}, {'cat': 'math.QA', 'label': 'Quantum Algebra'}, {'cat': 'math.RT', 'label': 'Representation Theory'}, {'cat': 'math.RA', 'label': 'Rings and Algebras'}, {'cat': 'math.SP', 'label': 'Spectral Theory'}, {'cat': 'math.ST', 'label': 'Statistics Theory'}, {'cat': 'math.SG', 'label': 'Symplectic Geometry'}], 'astro-ph': [{'cat': 'astro-ph.GA', 'label': 'Astrophysics of Galaxies'}, {'cat': 'astro-ph.CO', 'label': 'Cosmology and Nongalactic Astrophysics'}, {'cat': 'astro-ph.EP', 'label': 'Earth and Planetary Astrophysics'}, {'cat': 'astro-ph.HE', 'label': 'High Energy Astrophysical Phenomena'}, {'cat': 'astro-ph.IM', 'label': 'Instrumentation and Methods for Astrophysics'}, {'cat': 'astro-ph.SR', 'label': 'Solar and Stellar Astrophysics'}], 'cond-mat': [{'cat': 'cond-mat.dis-nn', 'label': 'Disordered Systems and Neural Networks'}, {'cat': 'cond-mat.mtrl-sci', 'label': 'Materials Science'}, {'cat': 'cond-mat.mes-hall', 'label': 'Mesoscale and Nanoscale Physics'}, {'cat': 'cond-mat.other', 'label': 'Other Condensed Matter'}, {'cat': 'cond-mat.quant-gas', 'label': 'Quantum Gases'}, {'cat': 'cond-mat.soft', 'label': 'Soft Condensed Matter'}, {'cat': 'cond-mat.stat-mech', 'label': 'Statistical Mechanics'}, {'cat': 'cond-mat.str-el', 'label': 'Strongly Correlated Electrons'}, {'cat': 'cond-mat.supr-con', 'label': 'Superconductivity'}], 'gr-qc': [{'cat': 'gr-qc', 'label': 'General Relativity and Quantum Cosmology'}], 'hep-ex': [{'cat': 'hep-ex', 'label': 'High Energy Physics - Experiment'}], 'hep-lat': [{'cat': 'hep-lat', 'label': 'High Energy Physics - Lattice'}], 'hep-ph': [{'cat': 'hep-ph', 'label': 'High Energy Physics - Phenomenology'}], 'hep-th': [{'cat': 'hep-th', 'label': 'High Energy Physics - Theory'}], 'math-ph': [{'cat': 'math-ph', 'label': 'Mathematical Physics'}], 'nlin': [{'cat': 'nlin.AO', 'label': 'Adaptation and Self-Organizing Systems'}, {'cat': 'nlin.CG', 'label': 'Cellular Automata and Lattice Gases'}, {'cat': 'nlin.CD', 'label': 'Chaotic Dynamics'}, {'cat': 'nlin.SI', 'label': 'Exactly Solvable and Integrable Systems'}, {'cat': 'nlin.PS', 'label': 'Pattern Formation and Solitons'}], 'nucl-ex': [{'cat': 'nucl-ex', 'label': 'Nuclear Experiment'}], 'nucl-th': [{'cat': 'nucl-th', 'label': 'Nuclear Theory'}], 'physics': [{'cat': 'physics.acc-ph', 'label': 'Accelerator Physics'}, {'cat': 'physics.app-ph', 'label': 'Applied Physics'}, {'cat': 'physics.ao-ph', 'label': 'Atmospheric and Oceanic Physics'}, {'cat': 'physics.atom-ph', 'label': 'Atomic Physics'}, {'cat': 'physics.atm-clus', 'label': 'Atomic and Molecular Clusters'}, {'cat': 'physics.bio-ph', 'label': 'Biological Physics'}, {'cat': 'physics.chem-ph', 'label': 'Chemical Physics'}, {'cat': 'physics.class-ph', 'label': 'Classical Physics'}, {'cat': 'physics.comp-ph', 'label': 'Computational Physics'}, {'cat': 'physics.data-an', 'label': 'Data Analysis, Statistics and Probability'}, {'cat': 'physics.flu-dyn', 'label': 'Fluid Dynamics'}, {'cat': 'physics.gen-ph', 'label': 'General Physics'}, {'cat': 'physics.geo-ph', 'label': 'Geophysics'}, {'cat': 'physics.hist-ph', 'label': 'History and Philosophy of Physics'}, {'cat': 'physics.ins-det', 'label': 'Instrumentation and Detectors'}, {'cat': 'physics.med-ph', 'label': 'Medical Physics'}, {'cat': 'physics.optics', 'label': 'Optics'}, {'cat': 'physics.ed-ph', 'label': 'Physics Education'}, {'cat': 'physics.soc-ph', 'label': 'Physics and Society'}, {'cat': 'physics.plasm-ph', 'label': 'Plasma Physics'}, {'cat': 'physics.pop-ph', 'label': 'Popular Physics'}, {'cat': 'physics.space-ph', 'label': 'Space Physics'}], 'quant-ph': [{'cat': 'quant-ph', 'label': 'Quantum Physics'}], 'q-bio': [{'cat': 'q-bio.BM', 'label': 'Biomolecules'}, {'cat': 'q-bio.GN', 'label': 'Genomics'}, {'cat': 'q-bio.MN', 'label': 'Molecular Networks'}, {'cat': 'q-bio.SC', 'label': 'Subcellular Processes'}, {'cat': 'q-bio.CB', 'label': 'Cell Behavior'}, {'cat': 'q-bio.NC', 'label': 'Neurons and Cognition'}, {'cat': 'q-bio.TO', 'label': 'Tissues and Organs'}, {'cat': 'q-bio.PE', 'label': 'Populations and Evolution'}, {'cat': 'q-bio.QM', 'label': 'Quantitative Methods'}, {'cat': 'q-bio.OT', 'label': 'Other'}], 'q-fin': [{'cat': 'q-fin.PR', 'label': 'Pricing of Securities'}, {'cat': 'q-fin.RM', 'label': 'Risk Management'}, {'cat': 'q-fin.PM', 'label': 'Portfolio Management'}, {'cat': 'q-fin.TR', 'label': 'Trading and Microstructure'}, {'cat': 'q-fin.MF', 'label': 'Mathematical Finance'}, {'cat': 'q-fin.CP', 'label': 'Computational Finance'}, {'cat': 'q-fin.ST', 'label': 'Statistical Finance'}, {'cat': 'q-fin.GN', 'label': 'General Finance'}, {'cat': 'q-fin.EC', 'label': 'Economics'}], 'stat': [{'cat': 'stat.AP', 'label': 'Applications'}, {'cat': 'stat.CO', 'label': 'Computation'}, {'cat': 'stat.ML', 'label': 'Machine Learning'}, {'cat': 'stat.ME', 'label': 'Methodology'}, {'cat': 'stat.OT', 'label': 'Other Statistics'}, {'cat': 'stat.TH', 'label': 'Theory'}]};
 
@@ -991,7 +975,8 @@
     toggleMode();
 
 
-    {% if imageformat or author or prediction or title or creator or caption or date_start or date_end %}
+    // {# if imageformat or author or prediction or title or creator or caption or date_start or date_end #}
+    {% if bFilters %}
       console.log("some filters active");
       // var collapsible = document.getElementsByClassName("collapsible");
       // collapsible.collapse("toggle");
@@ -1019,12 +1004,14 @@
     {% endif %}
     // selectize.setValue(["cs.CV","astro-ph.GA"], 1);
 
+    {#
     {% if author %}
       console.log({{author|tojson}});
       var authorVal = {{author|tojson}};
       // $("#author").val(authorVal);
       authorSelect.setValue(authorVal, 1);
     {% endif %}
+    #}
 
     {% if prediction %}
       console.log({{prediction|tojson}});

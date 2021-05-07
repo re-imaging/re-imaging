@@ -61,7 +61,22 @@ def get_images():
     Otherwise grab random images from the database and display.
     """
 
-    search_select = request.form.get("search_select")
+    # if request.form.get('category'):
+    #     print("redirect here")
+    #     return redirect(request.path)
+
+    def set_param(form, argument):
+        print(f'form: {form}')
+        print(f'argument: {argument}')
+        value = ''
+        if form:
+            value = form
+        elif argument:
+            value = argument
+        return value
+
+    # search_select = request.form.get("search_select")
+    search_select = set_param(request.form.get("search_select"), request.args.get('search-mode'))
     print(f'search_select: {search_select}')
     embedding = request.form.get("embedding")
     print("embedding:", embedding)
@@ -69,9 +84,9 @@ def get_images():
     print("image_id:", image_id)
 
     # filters
-    category = request.form.get("category")
+    category = set_param(request.form.get("category"), request.args.get('category'))
     print("category:",category)
-    category_name = request.form.get("category-name")
+    category_name = set_param(request.form.get("category-name"), request.args.get('category_name'))
     print("category_name:",category_name)
     imageformat = request.form.get("imageformat")
     print("imageformat:",imageformat)
@@ -393,6 +408,11 @@ def get_images():
         md["caption"] = str(rows[0][11]).replace('\n', ' ')
         meta_image_id = str(rows[0][12])
         si_meta_d[image_id] = md
+
+    bFilters = False
+    if len(filter_arguments) > 0:
+        bFilters = True
+
     # print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
     return render_template('core/interface.html.j2', images=images, metadata=metadata, metadict=metadict,
@@ -400,7 +420,7 @@ def get_images():
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta=si_meta, si_meta_d=si_meta_d,
                             category=category, category_name=category_name, imageformat=imageformat, prediction=prediction, author=author,
-                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end)
+                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, bFilters=bFilters)
 
 @bp.route('/about')
 def about():
