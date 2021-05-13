@@ -15,6 +15,16 @@ def get_db():
 
     return g.db
 
+def get_db2():
+    if 'db2' not in g:
+        g.db2 = sqlite3.connect(
+            current_app.config['DATABASE_FTS'],
+            detect_types=sqlite3.PARSE_DECLTYPES
+        )
+        g.db2.row_factory = sqlite3.Row
+
+    return g.db2
+
 
 def close_db(e=None):
     db = g.pop('db', None)

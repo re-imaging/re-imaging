@@ -41,14 +41,14 @@
               <div>
                 <label for="search-mode">Search mode</label>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                  <label class="form-check-label" for="flexRadioDefault1">
+                  <input class="form-check-input" type="radio" name="search-mode" id="search-mode-random" value="random" checked>
+                  <label class="form-check-label" for="search-mode-1">
                     Random sample
                   </label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <input class="form-check-input" type="radio" name="search-mode" id="search-mode-nn" value="nn">
+                  <label class="form-check-label" for="search-mode-2">
                     Nearest Neighbours
                   </label>
                 </div>
@@ -60,7 +60,7 @@
                   <!-- <p style="font-size: 1.25em; vertical-align: top;">Sample dataset</p> -->
                 </div>
 
-                <label class="switch d-none"> <!-- d-none -->
+                <label class="switch d-none">
                   <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();" class="d-none">
                   <span class="slider round d-none"></span>
                 </label>
@@ -101,6 +101,17 @@
                 <!-- style="vertical-align: middle; max-width: 160px;" -->
               </div>
             <!-- </div> -->
+
+            <div class="col">
+              <div class="full-text-search">
+                <label for="fts">Search the database</label>
+                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                  title="Searches for matches across a number of metadata fields.">
+                  <i class="bi bi-info-circle"></i>
+                </div>
+                <input type="text" name="fts" id="fts" {% if fts %}value="{{fts|e}}"{% endif %} placeholder="Type text to search...">
+              </div>
+            </div>
 
             <div class="category-dropdown">
               <label for="category">Archive and category</label>
@@ -245,12 +256,12 @@
     </ul>
   </div>
 
-  <div id="description-text" class="mt-2" style="display: block; position: relative; left: 360px; top: 0px; margin-bottom: 1em; width: calc(100% - 360px);">
+  <div id="description-text" class="mt-2" class="container-fluid" style="display: block; position: relative; left: 360px; top: 0px; margin-bottom: 1em; width: calc(100% - 360px);">
 
     <div class="row mx-2">
-      {% if prev_image_id or bFilters%}
+      {% if prev_image_id or bFilters or fts %}
         {% if result_total %}
-          <div class="alert alert-secondary col-11" role="alert">
+          <div class="alert alert-secondary col-10" role="alert">
           {% if not embedding %}
             {% set search_mode_text = "results by sampling dataset from <u>{}</u> total matching images".format(result_total) %}
           {% else %}
@@ -259,7 +270,7 @@
           {{ "Showing <u>{}</u> {}".format(images_shown, search_mode_text) }}
           </div>
         {% else %}
-          <div class="alert alert-secondary col-11" role="alert">
+          <div class="alert alert-secondary col-10" role="alert">
           {% if not embedding %}
             {% set search_mode_text = "results by sampling dataset" %}
           {% else %}
@@ -269,28 +280,36 @@
           </div>
         {% endif %}
       {% else %}
-        <div class="alert alert-secondary col-11" role="alert">
+        <div class="alert alert-secondary col-10" role="alert">
           Showing sample of images from arXiv - a preprint repository for the sciences.
         </div>
       {% endif %}
 
       <!-- navigation menu   -->
-      <nav id="nav-menu" class="nav col-1 mr-3 mt-1" style="z-index: 999;">
-        <div class="container-fluid">
+      <nav id="nav-menu" class="nav col-2 mr-1 pr-1 mt-1 d-flex justify-content-end" style="z-index: 999;">
+        <div class="d-flex flex-column">
           <!-- <a class="navbar-brand" href="#">Reconfiguring</a> -->
-          <li class="nav-item">
+          <li class="nav-item d-flex justify-content-end">
             <a class="nav-link" href="{{ url_for('core.about') }}">About</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item d-flex justify-content-end">
             <a class="nav-link active" href="{{ url_for('core.get_images') }}">Interface</a>
           </li>
         </div>
       </nav>
 
-      {% if not prev_image_id and not bFilters %}
+      {% if not prev_image_id and not bFilters and not fts %}
         <div class="alert alert-primary col-12" role="alert">
           Click on an image to see metadata. Double click to select to use for nearest neighbour search using machine learning embeddings.
         </div>
+      {% endif %}
+
+      {% if messages %}
+      <div class="alert alert-danger col-12" role="alert">
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </div>
       {% endif %}
 
       </div>
@@ -369,7 +388,7 @@
   // }
 
   function toggleMode() {
-    let checkbox = document.getElementById('search_select');
+    let checkbox = document.getElementById('search-mode-nn');
     console.log("checkbox: " + checkbox.checked)
     // let sampleButton = $('#sample-btn');
     // let nnButton = $('#nn-btn');
@@ -383,7 +402,9 @@
       document.getElementById("image_id").disabled = false;
       // $('#sample-btn').removeClass('active');
       // $('#nn-btn').addClass('active');
-      $('#nn-btn').click();
+      // $('#nn-btn').click();
+      // btn = document.getElementById("search-mode-nn");
+      // btn.checked = true;
     } else if (checkbox.checked == 0) {
       document.getElementById("random-text").style.color = black;
       document.getElementById("embedding-text").style.color = gray;
@@ -392,7 +413,9 @@
       document.getElementById("image_id").disabled = true;
       // $('#nn-btn').removeClass('active');
       // $('#sample-btn').addClass('active');
-      $('#sample-btn').click();
+      // $('#sample-btn').click();
+      // btn = document.getElementById("search-mode-random");
+      // btn.checked = true;
     }
   }
 
@@ -425,22 +448,53 @@
       console.log("clearFilters called");
       // categoryNameSelect.clear();
       // categoryNameSelect.clearOptions();
-      predictionSelect.clear();
-      authorSelect.clear();
-      categoryNameSelect.clear();
       categorySelect.clear();
-      creatorSelect.clear();
-      ifSelect.clear();
-      titleSelect.clear();
+      categoryNameSelect.clear();
+
+      authorSelect.clear();
       captionSelect.clear();
 
       var ds = document.getElementById("date-start");
       ds.value = '';
-
       var de = document.getElementById("date-end");
       de.value = '';
+
+      titleSelect.clear();
+      predictionSelect.clear();
+      creatorSelect.clear();
+      ifSelect.clear();
     });
 
+    $('#search-mode-random').on('click', function(event) {
+      console.log("search-mode-random pressed");
+      toggleMode();
+
+      // let btn = document.getElementById('search-mode-random');
+      // if(btn.checked == true) {
+      //   btn.checked = false;
+      //   toggleMode();
+      // }
+      // else {
+      //   return;
+      // }
+    });
+
+    $('#search-mode-nn').on('click', function(event) {
+      console.log("search-mode-nn pressed");
+      toggleMode();
+
+      // let checkbox = document.getElementById('search-mode-nn');
+      // if(btn.checked == false) {
+      //   // btn.checked = true;
+      //   toggleMode();
+      // }
+      // else {
+      //   return;
+      // }
+    });
+
+    /* old version */
+    /*
     $('#sample-btn').on('click', function(event) {
       console.log("sample-btn pressed");
       let checkbox = document.getElementById('search_select');
@@ -464,7 +518,7 @@
         return;
       }
     });
-
+    */
     // init Packery
     var $grid = $('.image-grid').packery({
       itemSelector: '.grid-item',
@@ -505,12 +559,17 @@
         placement: 'right',
       });
 
-      let checkbox = document.getElementById('search_select');
-      if( checkbox.checked == 0) {
-        console.log('toggle unchecked, calling toggleMode');
-        checkbox.checked = 1;
+      let btn = document.getElementById('search-mode-nn');
+      if( btn.checked == false ) {
+        btn.checked = true;
         toggleMode();
       }
+      // let checkbox = document.getElementById('search_select');
+      // if( checkbox.checked == 0) {
+      //   console.log('toggle unchecked, calling toggleMode');
+      //   checkbox.checked = 1;
+      //   toggleMode();
+      // }
 
       $("#selected-image-meta").empty().append(img_data);
 
@@ -664,6 +723,44 @@
       $("#selected-block").css("display", "none");
     {% endif %}
 
+    var $select = $('#fts').selectize({
+      delimiter: ',',
+      persist: false,
+      maxItems: 1,
+      plugins: ['remove_button', 'enter_key_submit'],
+      onInitialize: function () {
+        this.on('submit', function () {
+          this.$input.closest('form').submit();
+        }, this);
+      },
+      valueField: 'cat',
+      labelField: 'label',
+      searchField: ['cat', 'label'],
+      render: {
+        item: function(item, escape) {
+            return '<div>' +
+                (item.cat ? '<span class="cat">' + escape(item.cat) + '</span>' : '')
+                // (item.label ? '<span class="label">' + escape(item.label) + '</span>' : '') +
+            '</div>';
+        },
+        option: function(item, escape) {
+            var label = item.cat || item.label;
+            var caption = item.cat ? item.label : null;
+            return '<div>' +
+                '<span class="label">' + escape(label) + '</span>'
+                // (author ? '<span class="caption">' + escape(author) + '</span>' : '') +
+            '</div>';
+        }
+      },
+      create: function(input) {
+          return {
+              cat: input,
+              label: input
+          }
+      }
+    });
+    var ftsSelect = $select[0].selectize;
+
     var $select = $('#author').selectize({
       delimiter: ',',
       persist: false,
@@ -688,7 +785,7 @@
             var label = item.cat || item.label;
             var caption = item.cat ? item.label : null;
             return '<div>' +
-                '<span class="label">' + escape(label) + ' - </span>'
+                '<span class="label">' + escape(label) + '</span>'
                 // (author ? '<span class="caption">' + escape(author) + '</span>' : '') +
             '</div>';
         }
@@ -777,7 +874,7 @@
       create: function(input) {
           return {
               cat: input,
-              label: input
+              label: ''
           }
       }
     };

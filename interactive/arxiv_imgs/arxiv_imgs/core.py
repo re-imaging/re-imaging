@@ -14,7 +14,11 @@ from flask import url_for
 # from werkzeug.security import check_password_hash
 # from werkzeug.security import generate_password_hash
 
-from flaskr.db import get_db
+
+# from flaskr.db import get_db
+# from db import get_db
+from arxiv_imgs.db import get_db, get_db2
+# from flaskr.db import get_db2
 
 from annoy import AnnoyIndex
 
@@ -76,18 +80,37 @@ def get_images():
         return value
 
     # search_select = request.form.get("search_select")
-    search_select = set_param(request.form.get("search_select"), request.args.get('search-mode'))
+    # search_select = set_param(request.form.get("search_select"), request.args.get('search-mode'))
+    # print(f'search_select: {search_select}')
+    # embedding = request.form.get("embedding")
+    # print("embedding:", embedding)
+    # image_id = request.form.get("image_id")
+    # print("image_id:", image_id)
+
+    search_mode = request.form.get("search-mode")
+    print(f'search_mode: {search_mode}')
+
+    search_select = request.form.get("search_select")
     print(f'search_select: {search_select}')
     embedding = request.form.get("embedding")
     print("embedding:", embedding)
     image_id = request.form.get("image_id")
     print("image_id:", image_id)
 
+    fts = request.form.get("fts")
+    if fts == "":
+        fts = None
+    print(f'fts: {fts}')
+
     # filters
-    category = set_param(request.form.get("category"), request.args.get('category'))
+    category = request.form.get("category")
     print("category:",category)
-    category_name = set_param(request.form.get("category-name"), request.args.get('category_name'))
+    category_name = request.form.get("category-name")
     print("category_name:",category_name)
+    # category = set_param(request.form.get("category"), request.args.get('category'))
+    # print("category:",category)
+    # category_name = set_param(request.form.get("category-name"), request.args.get('category_name'))
+    # print("category_name:",category_name)
     imageformat = request.form.get("imageformat")
     print("imageformat:",imageformat)
     prediction = request.form.get("prediction")
@@ -140,13 +163,15 @@ def get_images():
     # if identifier: filter_arguments["metadata.identifier"] = f'LIKE "{identifier}%"'
     # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
 
+    messages = []
 
     # if no selected image, just get random indexes
     # else use annoy to find indexes
     # then filter using SQLite search
     # then get metadata for each image
 
-    if search_select == None or search_select == "": # not image_id and
+    # if search_select == None or search_select == "": # not image_id and
+    if search_mode == None or search_mode == "random" or image_id == None or image_id == "":
         print("image_id:", image_id, "- getting random indexes")
         # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
         # images = [filepaths[i] for i in rand_nums]
@@ -158,66 +183,74 @@ def get_images():
         embedding = None
         result_total = None
         images_shown = NIMAGES
+
+        if search_mode == "nn":
+            if image_id == None or image_id == "":
+                messages.append("Error: no image selected for nearest neighbour search - showing random images")
+
     else: # request.method == "POST":
-        print("--- POST")
-        print("name of button: ", request.form.get("btn"))
+        print("--- nearest neighbours search ---")
+        # print("--- POST")
+        # print("name of button: ", request.form.get("btn"))
 
-        if search_select != None: # request.form.get("btn") == "Search images":
-            if embedding == "random": # or image_id == ""
-                print("image_id:", image_id, "- getting random indexes")
-                # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
-                # images = [filepaths[i] for i in rand_nums]
-                images = copy.deepcopy(filepaths)
-                random.shuffle(images)
-                # print("random images", images)
+        # if search_select != None: # request.form.get("btn") == "Search images":
+        '''
+        if embedding == "random": # or image_id == ""
+            print("image_id:", image_id, "- getting random indexes")
+            # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
+            # images = [filepaths[i] for i in rand_nums]
+            images = copy.deepcopy(filepaths)
+            random.shuffle(images)
+            # print("random images", images)
 
-                image_id = None
-                embedding = None
-                result_total = None
-                images_shown = NIMAGES
-            else:
-                print("image id:", image_id)
-                print(f'get annoy indexes for {embedding} and pull images')
+            image_id = None
+            embedding = None
+            result_total = None
+            images_shown = NIMAGES
+        else:
+        '''
+        print("image id:", image_id)
+        print(f'get annoy indexes for {embedding} and pull images')
 
-                start = time.time()
+        start = time.time()
 
-                ann = AnnoyIndex(300, 'angular')
+        ann = AnnoyIndex(300, 'angular')
 
-                if embedding == "VGG16":
-                    ann_filepath = "/home/rte/re-imaging/interactive/600k_vgg_ipca.ann"
-                elif embedding == "raw":
-                    ann_filepath = "/home/rte/re-imaging/interactive/600k_raw.ann"
-                elif embedding == "ternary":
-                    ann_filepath = "/home/rte/re-imaging/interactive/600k_ternary.ann"
-                elif embedding == "cats":
-                    ann_filepath = "/home/rte/re-imaging/interactive/600k_cats.ann"
+        if embedding == "VGG16":
+            ann_filepath = "/home/rte/re-imaging/interactive/600k_vgg_ipca.ann"
+        elif embedding == "raw":
+            ann_filepath = "/home/rte/re-imaging/interactive/600k_raw.ann"
+        elif embedding == "ternary":
+            ann_filepath = "/home/rte/re-imaging/interactive/600k_ternary.ann"
+        elif embedding == "cats":
+            ann_filepath = "/home/rte/re-imaging/interactive/600k_cats.ann"
 
-                # print(h.heap())
-                ann.load(ann_filepath)
-                # print(h.heap())
+        # print(h.heap())
+        ann.load(ann_filepath)
+        # print(h.heap())
 
-                print(f'loading AnnoyIndex, time taken {time.time() - start}')
+        print(f'loading AnnoyIndex, time taken {time.time() - start}')
 
-                start = time.time()
+        start = time.time()
 
-                nindexes = NIMAGES
-                # if author or category or imageformat or prediction:
-                if len(filter_arguments) > 0:
-                    nindexes = NUM_INDEXES
+        nindexes = NIMAGES
+        # if author or category or imageformat or prediction:
+        if len(filter_arguments) > 0:
+            nindexes = NUM_INDEXES
 
-                target_index = filepaths.index(image_id)
-                print(f'getting indexes for image id: {image_id} + target_index: {target_index}')
-                indexes = ann.get_nns_by_item(target_index, nindexes) # NIMAGES
-                # print(f'indexes total {len(indexes)}: {indexes}')
+        target_index = filepaths.index(image_id)
+        print(f'getting indexes for image id: {image_id} + target_index: {target_index}')
+        indexes = ann.get_nns_by_item(target_index, nindexes) # NIMAGES
+        # print(f'indexes total {len(indexes)}: {indexes}')
 
-                images = np.array(filepaths)[np.array(indexes)]
-                # print("target_images:", len(images))
-                # print(images)
+        images = np.array(filepaths)[np.array(indexes)]
+        # print("target_images:", len(images))
+        # print(images)
 
-                print(f'getting indexes, time taken {time.time() - start}')
+        print(f'getting indexes, time taken {time.time() - start}')
 
-                result_total = None
-                images_shown = NIMAGES
+        result_total = None
+        images_shown = NIMAGES
 
     sql_filter = """
                 SELECT images.id
@@ -242,83 +275,80 @@ def get_images():
     print(f'filter_count: {filter_count}')
     print(f'sql_filter query: {sql_filter}')
 
-    if filter_count != 0:
-        start = time.time()
+    filter_results = []
+    fts_results = []
 
-        print("--- there are filter arguments, running filter")
-        db = get_db()
-        c = db.cursor()
+    if filter_count != 0 or fts != None:
+        if filter_count != 0:
+            start = time.time()
 
-        # format the SQL string
+            print("--- there are filter arguments, running filter")
+            db = get_db()
+            c = db.cursor()
 
-        # sql = """
-        #         SELECT images.id
-        #         FROM images
-        #         LEFT JOIN metadata on images.identifier = metadata.identifier
-        #         WHERE metadata.authors LIKE ?
-        #         AND metadata.cat LIKE ?
-        #         AND imageformat LIKE ?
-        #         AND vggpred LIKE ?
-        #         """
-        # search_count = 0
-        # if author:
-        #     sql += " metadata.authors LIKE ?"
-        #     search_count += 1
-        # if category:
-        #     if search_count > 0: sql += " AND"
-        #     sql += " metadata.cat LIKE ?"
-        #     search_count += 1
-        # if imageformat:
-        #     if search_count > 0: sql += " AND"
-        #     sql += " imageformat LIKE ?"
-        #     search_count += 1
-        # if category:
-        #     if search_count > 0: sql += " AND"
-        #     sql += " vggpred LIKE ?"
-        #     search_count += 1
-        # print("printing sql")
-        # print(sql)
+            # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
+            fargs = tuple((str(v) for c, v in filter_arguments.items()))
+            for f in fargs:
+                print("filter_arg: " + f)
 
-        # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
-        fargs = tuple((str(v) for c, v in filter_arguments.items()))
-        for f in fargs:
-            print("filter_arg: " + f)
+            # c.execute(sql_filter, fargs)
+            c.execute(sql_filter, )
 
-        # c.execute(sql, ("%"+author+"%", category+"%", imageformat+"%", prediction+"%"))
-        # c.execute(sql_filter, fargs)
-        c.execute(sql_filter, )
+            rows = c.fetchall()
+            # result_total = len(rows)
+            # print(rows)
 
-        rows = c.fetchall()
-        result_total = len(rows)
-        # print(rows)
+            filter_results = [row[0] for row in rows]
+            print(f'querying SQLite for search terms, time taken {time.time() - start}')
+            # print("filter_results:", len(filter_results), filter_results)
 
-        found = [row[0] for row in rows]
-        print(f'querying SQLite for search terms, time taken {time.time() - start}')
-        # print("found:", len(found), found)
+        if fts != None:
+            start = time.time()
+
+            print("--- running full text search")
+            db2 = get_db2()
+            c2 = db2.cursor()
+
+            vsearch_sql = "SELECT id FROM vsingle WHERE vsingle MATCH ?"
+            c2.execute(vsearch_sql, (fts, ))
+            rows = c2.fetchall()
+
+            fts_results = [row[0] for row in rows]
+
+            print(f'fts results: {len(fts_results)}')
+
+            print(f'running full text search, time taken {time.time() - start}')
+
+        all_results = filter_results + fts_results
+        all_results = list(dict.fromkeys(all_results))
+
+        result_total = len(all_results)
+
+        # for fts in fts_results:
+        #     for filter in filter_results:
+        #         if fts != filter:
+        #             all_results.append(fts)
+        print(f'all_results: {all_results}')
 
         start = time.time()
 
         matches = []
         for im in images[:]: # NIMAGES
             # print("image:", type(im), im)
-            # if np.any(np.array(found) == im):
-
+            # if np.any(np.array(filter_results) == im):
             if len(matches) >= NIMAGES:
                 break
 
-            # for f in found:
-            if int(im) in found:
-                # print(f)
-                # if int(im) == f:
-                    # print(f'match! {im} in found!')
+            if int(im) in all_results:
                 matches.append(im)
-                    # break
-                # if len(images) >= NIMAGES:
-                #     break
-                # images.append(str(row[0])) # = [str(r) for r in row]
+
         print("len(matches):", len(matches))
         images = matches[:NIMAGES]
         images_shown = len(images)
+
+        if images_shown == 0:
+            messages.append("No images found that match the requested filters")
+
         # print(images)
         print(f'filtering for matches, time taken {time.time() - start}')
         # metadata.append(items)
@@ -420,7 +450,7 @@ def get_images():
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta=si_meta, si_meta_d=si_meta_d,
                             category=category, category_name=category_name, imageformat=imageformat, prediction=prediction, author=author,
-                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, bFilters=bFilters)
+                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, bFilters=bFilters, messages=messages, fts=fts)
 
 @bp.route('/about')
 def about():
