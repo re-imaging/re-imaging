@@ -160,9 +160,14 @@ input {
 /* max-width: calc(100% - 360px); */
 
 
-#filter-btn {
+#filter-btn,
+#selected-image-meta-btn {
   border: solid 1px black;
   width: 100%;
+}
+
+#selected-image-meta-tabs {
+  transition: height .35s ease;
 }
 
 /* .meta-col {

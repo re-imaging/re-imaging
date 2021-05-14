@@ -21,7 +21,7 @@
         <div id="selected-image-meta" class="selected-image-meta-box"></div>
       </div>
 
-      <hr/>
+      <!-- <hr/> -->
 
       <div class="row">
         <div style="clear: both;"></div>
@@ -219,7 +219,7 @@
                   </div>
 
                 <div class="col">
-                  <button type="button" class="btn btn-warning" id="clear-filters">Clear filters</button>
+                  <button type="button" class="btn btn-light col-12" id="clear-filters">Clear filters</button>
                 </div>
 
               </div>
@@ -602,10 +602,26 @@
       img_data = img_data.replace(/id='tab-/g, "id='si-tab-");
       img_data = img_data.replace(/tab-link/g, "si-tab-link");
 
+      img_data =
+        "<button id='selected-image-meta-btn' type='button' class='btn btn-light col-12 mb-2 collapsible' data-toggle='collapse' data-target='#selected-image-meta-tabs'>Selected image metadata <i id='filter-icon' class='bi bi-caret-down'></i></button>" +
+        "<div id='selected-image-meta-tabs' class='content collapse'>" +
+        img_data +
+        "</div>";
+
       console.log("img_data: " + img_data);
       var img_pred = $(this).attr("prediction");
       // console.log("showing selected image: " + img_src);
       show_selected(img_src, img_data, img_pred);
+
+      // document.getElementById('selected-image-meta-btn').addEventListener('click', function() {
+      //   this.classList.toggle("active");
+      //   var content = this.nextElementSibling;
+      //   if (content.style.display === "block") {
+      //     content.style.display = "none";
+      //   } else {
+      //     content.style.display = "block";
+      //   }
+      // });
 
       console.log("setting image_id to: " + img_id);
       console.log("prediction: " + img_pred);
@@ -673,27 +689,30 @@
       var img_pred = '{% autoescape false %} {{ si_prediction_formatted }} {% endautoescape %}';
       // var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_caption)|tojson }};
       var img_data =
-        "<ul class='nav nav-tabs' id='tab-{{prev_image_id}}' role='tablist'>" +
-          "<li class='nav-item' role='presentation'>" +
-            "<a class='nav-link tab-link active' id='tab-id' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-id' role='tab' aria-controls='id' aria-selected='true'>ID</a>" +
-          "</li>" +
-          "<li class='nav-item' role='presentation'>" +
-            "<a class='nav-link tab-link' id='tab-fm' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-format' role='tab' aria-controls='format' aria-selected='false'>Format</a>" +
-          "</li>" +
-          "<li class='nav-item' role='presentation'>" +
-            "<a class='nav-link tab-link' id='tab-cp' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-caption' role='tab' aria-controls='caption' aria-selected='false'>Caption</a>" +
-          "</li>" +
-        "</ul>" +
+        "<button id='selected-image-meta-btn' type='button' class='btn btn-light col-12 collapsible' data-toggle='collapse' data-target='#selected-image-meta-tabs'>Selected image metadata <i id='filter-icon' class='bi bi-caret-down'></i></button>" +
+        "<div id='selected-image-meta-tabs' class='content collapse'>" +
+          "<ul class='nav nav-tabs' id='tab-{{prev_image_id}}' role='tablist'>" +
+            "<li class='nav-item' role='presentation'>" +
+              "<a class='nav-link tab-link active' id='tab-id' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-id' role='tab' aria-controls='id' aria-selected='true'>ID</a>" +
+            "</li>" +
+            "<li class='nav-item' role='presentation'>" +
+              "<a class='nav-link tab-link' id='tab-fm' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-format' role='tab' aria-controls='format' aria-selected='false'>Format</a>" +
+            "</li>" +
+            "<li class='nav-item' role='presentation'>" +
+              "<a class='nav-link tab-link' id='tab-cp' image-id='{{prev_image_id}}' data-toggle='tab' href='#{{prev_image_id}}-caption' role='tab' aria-controls='caption' aria-selected='false'>Caption</a>" +
+            "</li>" +
+          "</ul>" +
 
-        "<div class='tab-content' id='tab-content-{{prev_image_id}}'>" +
-          "<div class='tab-pane fade show active' id='tab-{{prev_image_id}}-id' role='tabpanel' aria-labelledby='id-tab'>" +
-            "<b>identifier:</b> <a href=https://arxiv.org/abs/{{si_meta_d[prev_image_id]['identifier']|e}}>{{si_meta_d[prev_image_id]['identifier']|e}}</a><br><b>date:</b> {{si_meta_d[prev_image_id]['created']|e}}<br><b>category:</b> {{si_meta_d[prev_image_id]['cat']|e}}<br><b>authors:</b> {{si_authors_short|e}}<br><b>title:</b> {{si_meta_d[prev_image_id]['title']|e}}<br>" +
+          "<div class='tab-content' id='tab-content-{{prev_image_id}}'>" +
+            "<div class='tab-pane fade show active' id='tab-{{prev_image_id}}-id' role='tabpanel' aria-labelledby='id-tab'>" +
+              "<b>identifier:</b> <a href=https://arxiv.org/abs/{{si_meta_d[prev_image_id]['identifier']|e}}>{{si_meta_d[prev_image_id]['identifier']|e}}</a><br><b>date:</b> {{si_meta_d[prev_image_id]['created']|e}}<br><b>category:</b> {{si_meta_d[prev_image_id]['cat']|e}}<br><b>authors:</b> {{si_authors_short|e}}<br><b>title:</b> {{si_meta_d[prev_image_id]['title']|e}}<br>" +
+              "</div>" +
+            "<div class='tab-pane fade' id='tab-{{prev_image_id}}-fm' role='tabpanel' aria-labelledby='format-tab'>" +
+             "<b>filename:</b> {{si_meta_d[prev_image_id]['filename']|e}}<br><b>x:</b>" + "{{si_meta_d[prev_image_id]['x']|e}}<b> y:</b> {{si_meta_d[prev_image_id]['y']|e}}<br><b>format:</b> {{si_meta_d[prev_image_id]['imageformat']|e}}<br><b>creator:</b> {{si_meta_d[prev_image_id]['creator']|e}}<br>" +
             "</div>" +
-          "<div class='tab-pane fade' id='tab-{{prev_image_id}}-fm' role='tabpanel' aria-labelledby='format-tab'>" +
-           "<b>filename:</b> {{si_meta_d[prev_image_id]['filename']|e}}<br><b>x:</b>" + "{{si_meta_d[prev_image_id]['x']|e}}<b> y:</b> {{si_meta_d[prev_image_id]['y']|e}}<br><b>format:</b> {{si_meta_d[prev_image_id]['imageformat']|e}}<br><b>creator:</b> {{si_meta_d[prev_image_id]['creator']|e}}<br>" +
-          "</div>" +
-          "<div class='tab-pane fade' id='tab-{{prev_image_id}}-cp' role='tabpanel' aria-labelledby='caption-tab'>" +
-            "<b>caption:</b> {{si_caption|e}}<br>" +
+            "<div class='tab-pane fade' id='tab-{{prev_image_id}}-cp' role='tabpanel' aria-labelledby='caption-tab'>" +
+              "<b>caption:</b> {{si_caption|e}}<br>" +
+            "</div>" +
           "</div>" +
         "</div>";
       // console.log(img_data);
@@ -702,6 +721,16 @@
       img_data = img_data.replace(/tab-link/g, "si-tab-link");
 
       show_selected(img_src, img_data, img_pred);
+
+      document.getElementById('selected-image-meta-btn').addEventListener('click', function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
 
       // $('.si-tab-link').on("click", function (event) {
       //   console.log("si-tab link clicked");
