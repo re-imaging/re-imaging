@@ -106,7 +106,7 @@
               <div class="full-text-search">
                 <label for="fts">Search the database</label>
                 <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
-                  title="Searches for matches across a number of metadata fields.">
+                  title="Searches for keyword matches across a number of metadata fields.">
                   <i class="bi bi-info-circle"></i>
                 </div>
                 <input type="text" name="fts" id="fts" {% if fts %}value="{{fts|e}}"{% endif %} placeholder="Type text to search...">
@@ -265,7 +265,7 @@
           {% if not embedding %}
             {% set search_mode_text = "results by sampling dataset from <u>{}</u> total matching images".format(result_total) %}
           {% else %}
-            {% set search_mode_text = "nearest results to the selected image from <u>{:,}</u> total matching images using <u>{}</u> embedding".format(result_total, embedding) %}
+            {% set search_mode_text = "nearest results to the selected image from <u>{:,}</u> total matching images using <u>{}</u> embedding.".format(result_total, embedding) %}
           {% endif %}
           {{ "Showing <u>{}</u> {}".format(images_shown, search_mode_text) }}
           </div>
@@ -274,7 +274,7 @@
           {% if not embedding %}
             {% set search_mode_text = "results by sampling dataset" %}
           {% else %}
-            {% set search_mode_text = "nearest results to the selected image from <u>600,000</u> total images using <u>{}</u> embedding".format(embedding) %}
+            {% set search_mode_text = "nearest results to the selected image from <u>600,000</u> total images using <u>{}</u> embedding.".format(embedding) %}
           {% endif %}
           {{ "Showing <u>{}</u> {}".format(images_shown, search_mode_text) }}
           </div>
@@ -300,12 +300,12 @@
 
       {% if not prev_image_id and not bFilters and not fts %}
         <div class="alert alert-primary col-12" role="alert">
-          Click on an image to see metadata. Double click to select to use for nearest neighbour search using machine learning embeddings.
+          Click on an image to see metadata. Double click to select image for nearest neighbour search using machine learning embeddings.
         </div>
       {% endif %}
 
       {% if messages %}
-      <div class="alert alert-danger col-12" role="alert">
+      <div class="alert alert-danger col-12 ml-1" role="alert">
         {% for message in messages %}
           <li>{{ message }}</li>
         {% endfor %}
@@ -1073,7 +1073,7 @@
 
 
     // {# if imageformat or author or prediction or title or creator or caption or date_start or date_end #}
-    {% if bFilters %}
+    {% if (bFilters == 1 and not category) or (bFilters > 1) %}
       console.log("some filters active");
       // var collapsible = document.getElementsByClassName("collapsible");
       // collapsible.collapse("toggle");

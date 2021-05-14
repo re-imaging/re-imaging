@@ -14,11 +14,8 @@ from flask import url_for
 # from werkzeug.security import check_password_hash
 # from werkzeug.security import generate_password_hash
 
-
 # from flaskr.db import get_db
-# from db import get_db
 from arxiv_imgs.db import get_db, get_db2
-# from flaskr.db import get_db2
 
 from annoy import AnnoyIndex
 
@@ -34,7 +31,7 @@ h = hpy()
 
 NUM_INDEXES = 600000
 # NUM_INDEXES = 1200000
-NIMAGES = 100
+NIMAGES = 50 # 100
 
 image_list = "/home/rte/data/paths/600k_from_all_images_shuf.txt"
 filepaths = []
@@ -65,10 +62,7 @@ def get_images():
     Otherwise grab random images from the database and display.
     """
 
-    # if request.form.get('category'):
-    #     print("redirect here")
-    #     return redirect(request.path)
-
+    '''
     def set_param(form, argument):
         print(f'form: {form}')
         print(f'argument: {argument}')
@@ -78,6 +72,7 @@ def get_images():
         elif argument:
             value = argument
         return value
+    '''
 
     # search_select = request.form.get("search_select")
     # search_select = set_param(request.form.get("search_select"), request.args.get('search-mode'))
@@ -171,6 +166,8 @@ def get_images():
     # then get metadata for each image
 
     # if search_select == None or search_select == "": # not image_id and
+
+    # use random search mode
     if search_mode == None or search_mode == "random" or image_id == None or image_id == "":
         print("image_id:", image_id, "- getting random indexes")
         # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
@@ -186,8 +183,9 @@ def get_images():
 
         if search_mode == "nn":
             if image_id == None or image_id == "":
-                messages.append("Error: no image selected for nearest neighbour search - showing random images")
+                messages.append("Error: no image selected for nearest neighbour search - showing randomly sampled images")
 
+    # use nn search mode
     else: # request.method == "POST":
         print("--- nearest neighbours search ---")
         # print("--- POST")
@@ -235,7 +233,7 @@ def get_images():
 
         nindexes = NIMAGES
         # if author or category or imageformat or prediction:
-        if len(filter_arguments) > 0:
+        if len(filter_arguments) > 0 or fts:
             nindexes = NUM_INDEXES
 
         target_index = filepaths.index(image_id)
@@ -244,7 +242,7 @@ def get_images():
         # print(f'indexes total {len(indexes)}: {indexes}')
 
         images = np.array(filepaths)[np.array(indexes)]
-        # print("target_images:", len(images))
+        print("target_images:", len(images))
         # print(images)
 
         print(f'getting indexes, time taken {time.time() - start}')
@@ -279,7 +277,9 @@ def get_images():
     fts_results = []
 
     if filter_count != 0 or fts != None:
+
         if filter_count != 0:
+            print("--- filtering results ---")
             start = time.time()
 
             print("--- there are filter arguments, running filter")
@@ -300,9 +300,10 @@ def get_images():
 
             filter_results = [row[0] for row in rows]
             print(f'querying SQLite for search terms, time taken {time.time() - start}')
-            # print("filter_results:", len(filter_results), filter_results)
+            print("filter_results:", len(filter_results))
 
         if fts != None:
+            print("--- full text search ---")
             start = time.time()
 
             print("--- running full text search")
@@ -316,11 +317,16 @@ def get_images():
             fts_results = [row[0] for row in rows]
 
             print(f'fts results: {len(fts_results)}')
-
             print(f'running full text search, time taken {time.time() - start}')
 
         all_results = filter_results + fts_results
-        all_results = list(dict.fromkeys(all_results))
+        all_results = list(dict.fromkeys(all_results)) # remove duplicates
+
+        # attempt at making it additive - doesn't make sense
+        # all_results = []
+        # for flt in filter_results:
+        #     if flt in fts_results:
+        #         all_results.append(flt)
 
         result_total = len(all_results)
 
@@ -347,7 +353,7 @@ def get_images():
         images_shown = len(images)
 
         if images_shown == 0:
-            messages.append("No images found that match the requested filters")
+            messages.append("Error: no images found that match the requested filters")
 
         # print(images)
         print(f'filtering for matches, time taken {time.time() - start}')
@@ -439,7 +445,10 @@ def get_images():
         meta_image_id = str(rows[0][12])
         si_meta_d[image_id] = md
 
+    # check if we have filters, category doesn't count
     bFilters = False
+    # min_filters = 1 if "metadata.cat" in filter_arguments else 0
+    # print("min filters", min_filters)
     if len(filter_arguments) > 0:
         bFilters = True
 
