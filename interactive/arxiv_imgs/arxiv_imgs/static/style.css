@@ -257,7 +257,7 @@ input:checked + .slider:before {
 /* search */
 #search-images {
   /* background-color: #7fc8f0; */
-  /* border: solid 1px black; */
+  border: solid 2px black;
   /* font-weight: bold; */
   width: 100%;
   /* height: 4em; */
@@ -265,18 +265,33 @@ input:checked + .slider:before {
   /* margin-top: 2em; */
 }
 #search-images:hover {
-  /* background-color: PowderBlue; */
+  background-color: #b0fffc;
+  /* PowderBlue */
   /* CornflowerBlue */
   /* border: solid 1px DarkOrange; */
+  border: solid 2px black;
+  color: black;
   /* font-weight: bold; */
   /* height: 4em; */
   /* width: 12em; */
 }
 
+#clear-filters {
+  border: solid 1px black;
+  background-color: #fff0c4;
+}
+#clear-filters:hover {
+  border: solid 1px black;
+  background-color: #ffc107;
+}
+
+
 div #search-button-div {
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+
 
 #image_id,
 #image_id_label {
@@ -687,7 +702,8 @@ input[type=number] {
   left: 0;
   height: 100vh;
   z-index: 999;
-  background: #f2f2f2;
+  /* background: #f2f2f2; */
+  background: #e2e3e5;
   transition: all 0.3s;
   overflow-y: scroll;
   overflow-x: hidden;

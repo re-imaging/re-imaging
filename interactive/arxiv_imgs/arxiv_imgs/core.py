@@ -177,7 +177,7 @@ def get_images():
     if prediction: filter_arguments["vggpred"] = f'LIKE "{prediction}%"'
     if author: filter_arguments["authors"] = f'LIKE "%{author}%"'
     if title: filter_arguments["title"] = f'LIKE "%{title}%"'
-    if creator: filter_arguments["creator"] = f'LIKE "{creator}%"'
+    if creator: filter_arguments["creator"] = f'LIKE "%{creator}%"'
     if caption: filter_arguments["caption"] = f'LIKE "%{caption}%"'
     if date_start: filter_arguments["created"] = f'BETWEEN "{date_start}" AND "{date_end}"'
 
