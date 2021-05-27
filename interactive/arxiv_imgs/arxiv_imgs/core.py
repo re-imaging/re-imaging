@@ -319,14 +319,19 @@ def get_images():
             print(f'fts results: {len(fts_results)}')
             print(f'running full text search, time taken {time.time() - start}')
 
-        all_results = filter_results + fts_results
-        all_results = list(dict.fromkeys(all_results)) # remove duplicates
+        # all_results = filter_results + fts_results
+        # all_results = list(dict.fromkeys(all_results)) # remove duplicates
 
-        # attempt at making it additive - doesn't make sense
-        # all_results = []
-        # for flt in filter_results:
-        #     if flt in fts_results:
-        #         all_results.append(flt)
+        # attempt at making it union only
+        all_results = []
+        if not filter_results:
+            all_results = fts_results
+        elif not fts_results:
+            all_results = filter_results
+        else:
+            for flt in filter_results:
+                if flt in fts_results:
+                    all_results.append(flt)
 
         result_total = len(all_results)
 

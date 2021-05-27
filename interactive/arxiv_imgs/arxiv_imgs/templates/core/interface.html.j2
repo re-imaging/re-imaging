@@ -239,8 +239,10 @@
 
               <div id="search-button-div" class="d-flex justify-content-between">
                 <input type="submit" class="btn btn-light mt-2 mb-2 mr-2 btn-outline-primary" name="btn" value="Search images" id="search-images">
-                <div id="loading-spinner" class="spinner-border d-none" role="status" style="margin-top: auto; margin-bottom: auto;">
-                  <span class="visually-hidden">Loading...</span>
+                <div style="margin-top: auto; margin-bottom: auto;">
+                  <div id="loading-spinner" class="spinner-border d-none" role="status" style="margin-top: auto; margin-bottom: auto; margin-left: 1em;">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
                 </div>
               </div>
               <!-- justify-content-between -->
@@ -400,6 +402,9 @@
       document.getElementById("image_id_label").style.color = black;
       document.getElementById("embedding").disabled = false;
       document.getElementById("image_id").disabled = false;
+
+      document.getElementById("selected_image").style.filter = "none";
+
       // $('#sample-btn').removeClass('active');
       // $('#nn-btn').addClass('active');
       // $('#nn-btn').click();
@@ -411,6 +416,11 @@
       document.getElementById("image_id_label").style.color = gray;
       document.getElementById("embedding").disabled = true;
       document.getElementById("image_id").disabled = true;
+
+      $('#selected_image').css("filter", "grayscale(100%) brightness(90%)");
+      // document.getElementById("selected_image").style.filter = "grayscale(100%)";
+      // document.getElementById("selected_image").style.filter = "brightness(50%)";
+
       // $('#nn-btn').removeClass('active');
       // $('#sample-btn').addClass('active');
       // $('#sample-btn').click();
