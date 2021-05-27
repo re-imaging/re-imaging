@@ -42,8 +42,21 @@ with open(image_list, "r") as f:
 for l in lines[:NUM_INDEXES]:
     substring = l.split(".jpg")[0]
     filepaths.append(substring)
+
     # image_ids.append(substrings[1].strip())
 # print("length of filepaths:", len(filepaths))
+
+# with app.app_context():
+#     db2 = get_db2()
+#     c2 = db2.cursor()
+#
+#     filepaths_sql = "SELECT id FROM single"
+#     c2.execute(filepaths_sql, )
+#     for row in rows:
+#         filepaths.append(row)
+#     print("length of filepaths:",len(filepaths))
+#     print(filepaths[0])
+
 
 # db = get_db()
 # c = db.cursor()
@@ -143,17 +156,31 @@ def get_images():
     # if author: filter_arguments["metadata.authors"] = "%"+author+"%"
     # if title: filter_arguments["title"] = "%"+title+"%"
     # if creator: filter_arguments["creator"] = creator+"%"
+
+    # if category_name:
+    #     filter_arguments["metadata.cat"] = f'LIKE "{category_name}%"'
+    # elif category:
+    #     filter_arguments["metadata.cat"] = f'LIKE "{category}%"'
+    # if imageformat: filter_arguments["imageformat"] = f'LIKE "{imageformat}%"'
+    # if prediction: filter_arguments["vggpred"] = f'LIKE "{prediction}%"'
+    # if author: filter_arguments["metadata.authors"] = f'LIKE "%{author}%"'
+    # if title: filter_arguments["title"] = f'LIKE "%{title}%"'
+    # if creator: filter_arguments["creator"] = f'LIKE "{creator}%"'
+    # if caption: filter_arguments["captions.caption"] = f'LIKE "%{caption}%"'
+    # if date_start: filter_arguments["metadata.created"] = f'BETWEEN "{date_start}" AND "{date_end}"'
+
     if category_name:
-        filter_arguments["metadata.cat"] = f'LIKE "{category_name}%"'
+        filter_arguments["cat"] = f'LIKE "{category_name}%"'
     elif category:
-        filter_arguments["metadata.cat"] = f'LIKE "{category}%"'
+        filter_arguments["cat"] = f'LIKE "{category}%"'
     if imageformat: filter_arguments["imageformat"] = f'LIKE "{imageformat}%"'
     if prediction: filter_arguments["vggpred"] = f'LIKE "{prediction}%"'
-    if author: filter_arguments["metadata.authors"] = f'LIKE "%{author}%"'
+    if author: filter_arguments["authors"] = f'LIKE "%{author}%"'
     if title: filter_arguments["title"] = f'LIKE "%{title}%"'
     if creator: filter_arguments["creator"] = f'LIKE "{creator}%"'
-    if caption: filter_arguments["captions.caption"] = f'LIKE "%{caption}%"'
-    if date_start: filter_arguments["metadata.created"] = f'BETWEEN "{date_start}" AND "{date_end}"'
+    if caption: filter_arguments["caption"] = f'LIKE "%{caption}%"'
+    if date_start: filter_arguments["created"] = f'BETWEEN "{date_start}" AND "{date_end}"'
+
     # if abstract: filter_arguments["metadata.abstract"] = f'LIKE "%{abstract}%"'
     # if identifier: filter_arguments["metadata.identifier"] = f'LIKE "{identifier}%"'
     # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
@@ -250,13 +277,16 @@ def get_images():
         result_total = None
         images_shown = NIMAGES
 
+    # sql_filter = """
+    #             SELECT images.id
+    #             FROM images
+    #             LEFT JOIN metadata ON images.identifier == metadata.identifier
+    #             LEFT JOIN captions ON images.caption == captions.id
+    #             """
     sql_filter = """
-                SELECT images.id
-                FROM images
-                LEFT JOIN metadata ON images.identifier == metadata.identifier
-                LEFT JOIN captions ON images.caption == captions.id
+                SELECT id
+                FROM single
                 """
-            # LEFT JOIN captions ON captions.image_ids LIKE '%' || metadata.identifier || '%'
 
     filter_count = 0
     for c, v in filter_arguments.items():
@@ -283,8 +313,8 @@ def get_images():
             start = time.time()
 
             print("--- there are filter arguments, running filter")
-            db = get_db()
-            c = db.cursor()
+            db2 = get_db2()
+            c = db2.cursor()
 
             # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
             fargs = tuple((str(v) for c, v in filter_arguments.items()))
@@ -373,19 +403,27 @@ def get_images():
     images = images[:NIMAGES]
 
     # only run the below code if we haven't already grabbed the database stuff?
-    db = get_db()
-    c = db.cursor()
+    db2 = get_db2()
+    c = db2.cursor()
     metadata = []
     metadict = {}
 
+    # meta_sql = """
+    #             SELECT images.identifier, filename, x, y, imageformat, creator,
+    #             metadata.created, metadata.cat, metadata.authors, metadata.title,
+    #             images.vggpred, captions.caption, images.id
+    #             FROM images
+    #             LEFT JOIN metadata ON images.identifier == metadata.identifier
+    #             LEFT JOIN captions ON images.caption == captions.id
+    #             WHERE images.id IS ?
+    #             """
+
     meta_sql = """
-                SELECT images.identifier, filename, x, y, imageformat, creator,
-                metadata.created, metadata.cat, metadata.authors, metadata.title,
-                images.vggpred, captions.caption, images.id
-                FROM images
-                LEFT JOIN metadata ON images.identifier == metadata.identifier
-                LEFT JOIN captions ON images.caption == captions.id
-                WHERE images.id IS ?
+                SELECT identifier, filename, x, y, imageformat, creator,
+                created, cat, authors, title,
+                vggpred, caption, id
+                FROM single
+                WHERE id IS ?
                 """
 
     for i in images:

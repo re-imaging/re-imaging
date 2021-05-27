@@ -30,26 +30,26 @@
             <div class="form-group" id="search-mode-form">
               <h2 class="fs-4">Search the dataset:</h2>
 
-              <div class="btn-group col-12 d-none" role="group" aria-label="Button to toggle searching by sampling or nearest neighbours">
+              <!-- <div class="btn-group col-12 d-none" role="group" aria-label="Button to toggle searching by sampling or nearest neighbours">
                 <input type="radio" class="btn-check" name="btnradio" id="sample-btn" autocomplete="off" checked>
                 <label class="btn btn-outline-primary" for="sample-btn">Sample dataset</label>
 
                 <input type="radio" class="btn-check" name="btnradio" id="nn-btn" autocomplete="off">
                 <label class="btn btn-outline-primary" for="nn-btn">Nearest neighbours</label>
-              </div>
+              </div> -->
 
               <div>
                 <label for="search-mode">Search mode</label>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="search-mode" id="search-mode-random" value="random" checked>
-                  <label class="form-check-label" for="search-mode-1">
+                  <label class="form-check-label" for="search-mode-random">
                     Random sample
                   </label>
                 </div>
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="search-mode" id="search-mode-nn" value="nn">
-                  <label class="form-check-label" for="search-mode-2">
-                    Nearest Neighbours
+                  <label class="form-check-label" for="search-mode-nn">
+                    Nearest neighbours
                   </label>
                 </div>
               </div>
@@ -60,10 +60,10 @@
                   <!-- <p style="font-size: 1.25em; vertical-align: top;">Sample dataset</p> -->
                 </div>
 
-                <label class="switch d-none">
+                <!-- <label class="switch d-none">
                   <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();" class="d-none">
                   <span class="slider round d-none"></span>
-                </label>
+                </label> -->
 
                 <!-- <div class="input-form"> -->
                   <div id=embedding-text class="input-group mt-3 mb-2">
@@ -184,7 +184,7 @@
                         title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top-1 prediction.">
                         <i class="bi bi-info-circle"></i>
                       </div>
-                      <input type="text" name="prediction" id="prediction" placeholder="Search by VGG16 prediction...">
+                      <input type="text" name="prediction" id="prediction" {% if prediction %}value="{{prediction|e}}"{% endif %} placeholder="Search by VGG16 prediction...">
                     </div>
                   </div>
                 <!-- </div> -->
@@ -452,14 +452,18 @@
   });
 
   $(document).ready(function(){
-    const checkbox = document.getElementById('search_select');
+    // const checkbox = document.getElementById('search_select');
+    let checkbox = document.getElementById('search-mode-nn');
 
     $('#clear-filters').on('click', function (event) {
       console.log("clearFilters called");
       // categoryNameSelect.clear();
       // categoryNameSelect.clearOptions();
-      categorySelect.clear();
-      categoryNameSelect.clear();
+
+      // ftsSelect.clear();
+      //
+      // categorySelect.clear();
+      // categoryNameSelect.clear();
 
       authorSelect.clear();
       captionSelect.clear();
@@ -566,7 +570,7 @@
         title: 'VGG16 prediction',
         html: true,
         trigger: 'click',
-        placement: 'right',
+        // placement: 'right',
       });
 
       let btn = document.getElementById('search-mode-nn');
@@ -602,6 +606,7 @@
       MathJax.typeset();
     }
 
+    /*
     $(".grid-item-img").on("dblclick", function (event) {
       $(this).toggleClass("active");
       $(".grid-item-img").not(this).removeClass("active");
@@ -623,20 +628,47 @@
       // console.log("showing selected image: " + img_src);
       show_selected(img_src, img_data, img_pred);
 
-      // document.getElementById('selected-image-meta-btn').addEventListener('click', function() {
-      //   this.classList.toggle("active");
-      //   var content = this.nextElementSibling;
-      //   if (content.style.display === "block") {
-      //     content.style.display = "none";
-      //   } else {
-      //     content.style.display = "block";
-      //   }
-      // });
+      console.log("setting image_id to: " + img_id);
+      console.log("prediction: " + img_pred);
+      $("#image_id").val(img_id);
+      $(".results").empty().append(img_id);
+    });
+    */
+
+    function loadSelectedImage(item, itemID, itemSrc, itemTabData, itemPred) {
+      $(item).toggleClass("active");
+      $(".grid-item-img").not(item).removeClass("active");
+      // var img_src = $(item).attr("src");
+      var img_src = itemSrc;
+      // var img_id = $(item).parent().attr("image_id");
+      var img_id = itemID;
+      // var img_data = $(this).attr("data-content");
+      // var img_data = $(item).attr("tab-data");
+      var img_data = itemTabData;
+      console.log(img_data);
+      img_data = img_data.replace(/id='tab-/g, "id='si-tab-");
+      img_data = img_data.replace(/tab-link/g, "si-tab-link");
+
+      img_data =
+        "<button id='selected-image-meta-btn' type='button' class='btn btn-light col-12 mb-2 collapsible' data-toggle='collapse' data-target='#selected-image-meta-tabs'>Selected image metadata <i id='filter-icon' class='bi bi-caret-down'></i></button>" +
+        "<div id='selected-image-meta-tabs' class='content collapse'>" +
+        img_data +
+        "</div>";
+
+      console.log("img_data: " + img_data);
+      // var img_pred = $(item).attr("prediction");
+      var img_pred = itemPred;
+      // console.log("showing selected image: " + img_src);
+      show_selected(img_src, img_data, img_pred);
 
       console.log("setting image_id to: " + img_id);
       console.log("prediction: " + img_pred);
       $("#image_id").val(img_id);
       $(".results").empty().append(img_id);
+    }
+
+    $(".grid-item-img").on("dblclick", function (event) {
+      loadSelectedImage(this, $(this).parent().attr("image_id"), $(this).attr("src"), $(this).attr("tab-data"), $(this).attr("prediction"));
     });
 
     $(".grid-item-img").on("click", function (event) {
@@ -644,9 +676,13 @@
       $(".grid-item-img").not(this).popover('dispose');
       console.log('creating popover');
       console.log(this);
-      let imgDiv = '<img class="popover-image" src="' + $(this).attr('src') + '">';
+      let imgDiv = "<img class='popover-image' src='" + $(this).attr('src') + "'>";
+      // + "' tab-data=" + $(this).attr('tab-data') +
       let tabData = $(this).attr('tab-data');
       let popoverData = imgDiv + tabData;
+
+      let pred = $(this).attr('prediction');
+      let imageId = $(this).parent().attr("image_id");
       console.log("popoverData: " + popoverData);
       $(this).popover({
         html: true,
@@ -659,6 +695,10 @@
       });
       $(document).on("click", ".popover .btn-close" , function(){
           $(this).parents(".popover").popover('hide');
+      });
+      $(document).on("click", ".popover-image" , function(){
+        console.log("click on .popover-image");
+        loadSelectedImage(this, imageId, $(this).attr("src"), tabData, pred);
       });
 
       $(".grid-item-img").not(this).popover('hide');
@@ -778,7 +818,7 @@
       render: {
         item: function(item, escape) {
             return '<div>' +
-                (item.cat ? '<span class="cat">' + escape(item.cat) + '</span>' : '')
+                (item.cat ? '<span class="cat">' + escape(item.cat) + '</span>' : '') +
                 // (item.label ? '<span class="label">' + escape(item.label) + '</span>' : '') +
             '</div>';
         },
@@ -786,7 +826,7 @@
             var label = item.cat || item.label;
             var caption = item.cat ? item.label : null;
             return '<div>' +
-                '<span class="label">' + escape(label) + '</span>'
+                '<span class="label">' + escape(label) + '</span>' +
                 // (author ? '<span class="caption">' + escape(author) + '</span>' : '') +
             '</div>';
         }
@@ -816,7 +856,7 @@
       render: {
         item: function(item, escape) {
             return '<div>' +
-                (item.cat ? '<span class="cat">' + escape(item.cat) + '</span>' : '')
+                (item.cat ? '<span class="cat">' + escape(item.cat) + '</span>' : '') +
                 // (item.label ? '<span class="label">' + escape(item.label) + '</span>' : '') +
             '</div>';
         },
@@ -824,7 +864,7 @@
             var label = item.cat || item.label;
             var caption = item.cat ? item.label : null;
             return '<div>' +
-                '<span class="label">' + escape(label) + '</span>'
+                '<span class="label">' + escape(label) + '</span>' +
                 // (author ? '<span class="caption">' + escape(author) + '</span>' : '') +
             '</div>';
         }
@@ -873,7 +913,7 @@
       create: function(input) {
           return {
               cat: input,
-              label: input
+              // label: input
           }
       }
     });
@@ -1028,7 +1068,7 @@
         create: function(input) {
             return {
                 cat: input,
-                label: input
+                // label: input
             }
         }
     });
@@ -1144,23 +1184,20 @@
     {% if author %}
       console.log({{author|tojson}});
       var authorVal = {{author|tojson}};
-      // $("#author").val(authorVal);
       authorSelect.setValue(authorVal, 1);
     {% endif %}
     #}
 
     {% if prediction %}
-      console.log({{prediction|tojson}});
       var predVal = {{prediction|tojson}};
-      // $("#prediction").val(predVal);
+      console.log("prediction: " + predVal);
       predictionSelect.addOption({value:predVal,text:predVal});
-      predictionSelect.setValue(predVal, 1);
+      predictionSelect.setValue(predVal, false);
     {% endif %}
 
     {% if title %}
       console.log({{title|tojson}});
       var titleVal = {{title|tojson}};
-      // $("#prediction").val(predVal);
       titleSelect.addOption({value:titleVal,text:titleVal});
       titleSelect.setValue(titleVal, 1);
     {% endif %}
@@ -1168,14 +1205,12 @@
     {% if creator %}
       console.log({{creator|tojson}});
       var creatorVal = {{creator|tojson}};
-      // $("#prediction").val(predVal);
       creatorSelect.setValue(creatorVal, 1);
     {% endif %}
 
     {% if caption %}
       console.log({{caption|tojson}});
       var captionVal = {{caption|tojson}};
-      // $("#prediction").val(predVal);
       captionSelect.addOption({value:captionVal,text:captionVal});
       captionSelect.setValue(captionVal, 1);
     {% endif %}
