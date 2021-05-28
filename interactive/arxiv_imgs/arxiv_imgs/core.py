@@ -15,7 +15,7 @@ from flask import url_for
 # from werkzeug.security import generate_password_hash
 
 # from flaskr.db import get_db
-from arxiv_imgs.db import get_db, get_db2
+from arxiv_imgs.db import get_db # get_db2
 
 from annoy import AnnoyIndex
 
@@ -313,8 +313,8 @@ def get_images():
             start = time.time()
 
             print("--- there are filter arguments, running filter")
-            db2 = get_db2()
-            c = db2.cursor()
+            db = get_db()
+            c = db.cursor()
 
             # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
             fargs = tuple((str(v) for c, v in filter_arguments.items()))
@@ -337,12 +337,12 @@ def get_images():
             start = time.time()
 
             print("--- running full text search")
-            db2 = get_db2()
-            c2 = db2.cursor()
+            db = get_db()
+            c = db.cursor()
 
             vsearch_sql = "SELECT id FROM vsingle WHERE vsingle MATCH ?"
-            c2.execute(vsearch_sql, (fts, ))
-            rows = c2.fetchall()
+            c.execute(vsearch_sql, (fts, ))
+            rows = c.fetchall()
 
             fts_results = [row[0] for row in rows]
 
@@ -403,8 +403,8 @@ def get_images():
     images = images[:NIMAGES]
 
     # only run the below code if we haven't already grabbed the database stuff?
-    db2 = get_db2()
-    c = db2.cursor()
+    db = get_db()
+    c = db.cursor()
     metadata = []
     metadict = {}
 
