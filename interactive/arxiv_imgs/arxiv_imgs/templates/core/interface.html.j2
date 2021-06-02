@@ -104,7 +104,7 @@
 
             <div class="col">
               <div class="full-text-search">
-                <label for="fts">Search the database</label>
+                <label for="fts">Full text search</label> <!-- Search the database -->
                 <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
                   title="Searches for keyword matches across a number of metadata fields.">
                   <i class="bi bi-info-circle"></i>
@@ -270,9 +270,9 @@
         {% if result_total %}
           <div class="alert alert-secondary col-10" role="alert">
           {% if not embedding %}
-            {% set search_mode_text = "results by sampling dataset from <u>{}</u> total matching images".format(result_total) %}
+            {% set search_mode_text = "results by sampling dataset from <u>{:,}</u> total matching images".format(result_total) %}
           {% else %}
-            {% set search_mode_text = "nearest results to the selected image from <u>{:,}</u> total matching images using <u>{}</u> embedding.".format(result_total, embedding) %}
+            {% set search_mode_text = "nearest results to the selected image from <u>{:,}</u> total matching images using <u>{}</u> embedding".format(result_total, embedding) %}
           {% endif %}
           {{ "Showing <u>{}</u> {}".format(images_shown, search_mode_text) }}
           </div>
@@ -281,7 +281,7 @@
           {% if not embedding %}
             {% set search_mode_text = "results by sampling dataset" %}
           {% else %}
-            {% set search_mode_text = "nearest results to the selected image from <u>600,000</u> total images using <u>{}</u> embedding.".format(embedding) %}
+            {% set search_mode_text = "nearest results to the selected image from <u>600,000</u> total images using <u>{}</u> embedding".format(embedding) %}
           {% endif %}
           {{ "Showing <u>{}</u> {}".format(images_shown, search_mode_text) }}
           </div>

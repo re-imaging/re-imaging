@@ -67,9 +67,9 @@ for l in lines[:NUM_INDEXES]:
 # filepaths = [str(x[0]) for x in rows]
 # print("number of image paths loaded:", len(filepaths))
 
-bp = Blueprint("core", __name__, url_prefix="/core")
+bp = Blueprint("core", __name__) # url_prefix="/core"
 
-@bp.route("/interface", methods=["GET", "POST"])
+@bp.route("/", methods=["GET", "POST"])
 def get_images():
     """If the user has selected an image, grab annoy results.
     Otherwise grab random images from the database and display.
@@ -340,8 +340,8 @@ def get_images():
             db = get_db()
             c = db.cursor()
 
-            vsearch_sql = "SELECT id FROM vsingle WHERE vsingle MATCH ?"
-            c.execute(vsearch_sql, (fts, ))
+            # vsearch_sql = "SELECT id FROM vsingle WHERE vsingle MATCH ?"
+            c.execute("SELECT id FROM vsingle WHERE vsingle MATCH ?", (f'"{fts}"', ))
             rows = c.fetchall()
 
             fts_results = [row[0] for row in rows]
@@ -349,19 +349,26 @@ def get_images():
             print(f'fts results: {len(fts_results)}')
             print(f'running full text search, time taken {time.time() - start}')
 
+        start = time.time()
+
         # all_results = filter_results + fts_results
         # all_results = list(dict.fromkeys(all_results)) # remove duplicates
 
-        # attempt at making it union only
+        # attempt at making it intersect only
         all_results = []
-        if not filter_results:
+        if not filter_results and fts_results:
             all_results = fts_results
-        elif not fts_results:
+            if category:
+                messages.append("No images found to match filters, showing full text search results")
+        elif not fts_results and filter_results:
             all_results = filter_results
+            if fts:
+                messages.append("No images found to match full text search, showing filter results")
         else:
-            for flt in filter_results:
-                if flt in fts_results:
-                    all_results.append(flt)
+            # for flt in filter_results:
+            #     if flt in fts_results:
+            #         all_results.append(flt)
+            all_results = np.intersect1d(fts_results, filter_results)
 
         result_total = len(all_results)
 
@@ -369,7 +376,10 @@ def get_images():
         #     for filter in filter_results:
         #         if fts != filter:
         #             all_results.append(fts)
-        print(f'all_results: {all_results}')
+
+        # print(f'all_results: {all_results}')
+
+        print(f'cross matching results, time taken {time.time() - start}')
 
         start = time.time()
 

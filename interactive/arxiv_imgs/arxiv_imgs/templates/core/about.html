@@ -5,6 +5,21 @@
 {% endblock %}
 
 {% block content %}
+
+<div>
+  <nav id="nav-menu" class="nav col-2 mr-1 pr-1 mt-1 d-flex justify-content-end" style="z-index: 999;">
+    <div class="d-flex flex-column">
+      <!-- <a class="navbar-brand" href="#">Reconfiguring</a> -->
+      <li class="nav-item d-flex justify-content-end">
+        <a class="nav-link" href="{{ url_for('core.about') }}">About</a>
+      </li>
+      <li class="nav-item d-flex justify-content-end">
+        <a class="nav-link active" href="{{ url_for('core.get_images') }}">Interface</a>
+      </li>
+    </div>
+  </nav>
+</div>
+
 <div class="about">
 {% filter markdown %}
 
@@ -53,7 +68,7 @@ A classifier trained on images of cats vs dogs. We used keras to train this netw
 The full title of this project is: ‘Re­imaging the Empirical: statistical visualisation in art and science’ (2017–2021). Professor Anna Munster (University of New South Wales) is lead investigator and collaborating with Professor Adrian Mackenzie (Australian Na­tional University) and Dr Kynan Tan, Postdoctoral Fellow (University of New South Wales). This is a Discovery Project funded by the Australian Research Council.
 
 {% endfilter %}
-</div>
+<!-- </div>
 
 <div>
   <nav class="nav-menu">
@@ -62,5 +77,6 @@ The full title of this project is: ‘Re­imaging the Empirical: statistical vis
       <li><a href="{{ url_for('core.get_images') }}">Interface</a>
     </ul>
   </nav>
-</div>
+</div> -->
+
 {% endblock %}
