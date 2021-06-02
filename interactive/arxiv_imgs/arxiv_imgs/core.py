@@ -131,10 +131,13 @@ def get_images():
     print("creator:",creator)
     caption = request.form.get("caption")
     print("caption:",caption)
+
     date_start = request.form.get("date-start")
     print("date_start:",date_start)
     date_end = request.form.get("date-end")
     print("date_end:",date_end)
+
+    
     # abstract = request.form.get("abstract")
     # print("abstract:",abstract)
     # identifier = request.form.get("identifier")

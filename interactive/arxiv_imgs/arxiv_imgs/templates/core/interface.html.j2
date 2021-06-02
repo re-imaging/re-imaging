@@ -614,7 +614,7 @@
         $( targetTabContent ).addClass( "show active" );
       });
 
-      MathJax.typeset();
+      // MathJax.typeset();
     }
 
     /*
@@ -1064,7 +1064,7 @@
           item: function(item, escape) {
               return '<div>' +
                   (item.cat ? '<span class="cat">' + escape(item.cat) + ' </span>' : '') +
-                  (item.label ? '<span class="label small">(' + escape(item.label) + ' in total)</span>' : '') +
+                  (item.label ? '<span class="label small">(~' + escape(item.label) + ' in total)</span>' : '') +
               '</div>';
           },
           option: function(item, escape) {
@@ -1072,7 +1072,7 @@
               var caption = item.cat ? item.label : null;
               return '<div>' +
                   '<span class="label">' + escape(label) + ' </span>' +
-                  (caption ? '<span class="caption small">(' + escape(caption) + ' in total)</span>' : '') +
+                  (caption ? '<span class="caption small">(~' + escape(caption) + ' in total)</span>' : '') +
               '</div>';
           }
         },
