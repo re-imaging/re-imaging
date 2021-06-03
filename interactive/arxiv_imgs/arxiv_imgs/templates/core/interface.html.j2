@@ -91,10 +91,10 @@
                 <!-- </div> -->
 
                 <div class="row">
-                  <div class="col d-none">
+                  <div class="col">
                     <label for="image_id" id="image_id_label" class="align-bottom">Target image</label>
                   </div>
-                  <div class="col d-none">
+                  <div class="col">
                     <input class="col" style="float: right;"for="image_id" name="image_id" id="image_id" placeholder="Click on an image" type="number">
                   </div>
                 </div>
@@ -734,14 +734,15 @@
 
     {% if prev_image_id %}
       console.log("prev_image_id not empty: " + {{ prev_image_id }});
-      var img_src = {{url_for("static", filename="all/"+prev_image_id+".jpg")|tojson}};
+      var img_src = {{url_for("static", filename="web/"+prev_image_id+".jpg")|tojson}};
       {% if si_meta[8]|length > 100 %}
         {% set si_authors_short = si_meta[8].split(";")[0] + " et al" %}
       {% else %}
         {% set si_authors_short = si_meta[8] %}
       {% endif %}
       {% if si_meta[11] != "None" %}
-        {% set si_caption = si_meta_d[prev_image_id]['caption']|e %}
+        {% set si_caption = si_meta_d[prev_image_id]['caption']|tojson %}
+        // console.log({{si_caption}});
       {% else %}
         {% set si_caption = "-" %}
       {% endif %}
@@ -772,7 +773,7 @@
              "<b>filename:</b> {{si_meta_d[prev_image_id]['filename']|e}}<br><b>x:</b>" + "{{si_meta_d[prev_image_id]['x']|e}}<b> y:</b> {{si_meta_d[prev_image_id]['y']|e}}<br><b>format:</b> {{si_meta_d[prev_image_id]['imageformat']|e}}<br><b>creator:</b> {{si_meta_d[prev_image_id]['creator']|e}}<br>" +
             "</div>" +
             "<div class='tab-pane fade' id='tab-{{prev_image_id}}-cp' role='tabpanel' aria-labelledby='caption-tab'>" +
-              "<b>caption:</b> {{si_caption|e}}<br>" +
+              "<b>caption:</b> " + {{si_caption|e}} + "<br>" +
             "</div>" +
           "</div>" +
         "</div>";

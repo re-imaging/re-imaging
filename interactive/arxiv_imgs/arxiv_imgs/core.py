@@ -137,7 +137,7 @@ def get_images():
     date_end = request.form.get("date-end")
     print("date_end:",date_end)
 
-    
+
     # abstract = request.form.get("abstract")
     # print("abstract:",abstract)
     # identifier = request.form.get("identifier")
