@@ -562,12 +562,14 @@ def get_images():
 
     # print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
-    return render_template('core/interface.html.j2', images=images, metadata=metadata, metadict=metadict,
+    return render_template('core/interface.html.j2', images=images, metadict=metadict,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
-                            si_meta=si_meta, si_meta_d=si_meta_d,
+                            si_meta_d=si_meta_d,
                             category=category, category_name=category_name, imageformat=imageformat, prediction=prediction, author=author,
                             title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, bFilters=bFilters, messages=messages, fts=fts)
+                            # metadata=metadata,
+                            # si_meta=si_meta, 
 
 @bp.route('/about')
 def about():
