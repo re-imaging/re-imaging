@@ -496,7 +496,14 @@ def get_images():
             md["authors"] = str(rows[0][8])
             md["title"] = str(rows[0][9]).replace('\n', ' ')
             md["vggpred"] = str(rows[0][10]).replace(",", ", ")
-            md["caption"] = str(rows[0][11]).replace('\n', ' ')
+
+            cap = rows[0][11]
+            if cap is None:
+                md["caption"] = "-"
+            else:
+                md["caption"] = str(cap).replace('\n', ' ')
+            # md["caption"] = str(rows[0][11]).replace('\n', ' ')
+
             meta_image_id = str(rows[0][12])
             metadict[meta_image_id] = md
     print("metadata length:", len(metadata))
@@ -534,9 +541,14 @@ def get_images():
         md["title"] = str(rows[0][9]).replace('\n', ' ')
         md["vggpred"] = str(rows[0][10]).replace(",", ", ")
         # print("earlier caption:", rows[0][11])
-        md["caption"] = str(rows[0][11]).replace('\n', ' ')
-        if md["caption"] == "None":
+        cap = rows[0][11]
+        if cap is None:
             md["caption"] = "-"
+        else:
+            md["caption"] = str(cap).replace('\n', ' ')
+        # md["caption"] = str(rows[0][11]).replace('\n', ' ')
+        # if md["caption"] == "None":
+            # md["caption"] = "-"
         # print("md caption:", md["caption"])
         meta_image_id = str(rows[0][12])
         si_meta_d[image_id] = md

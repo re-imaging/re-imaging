@@ -328,22 +328,15 @@
 
   <div id="image-grid" class="image-grid">
     {% for i, image in enumerate(images) %}
-      {% if metadata[i][8]|length > 100 %}
-        {% set authors_short = metadata[i][8].split(";")[0] + " et al"|e %}
+      {% if metadict[image]["authors"]|length > 100 %}
+        {% set authors_short = metadict[image]["authors"].split(";")[0] + " et al"|e %}
       {% else %}
-        {% set authors_short = metadata[i][8]|e %}
+        {% set authors_short = metadict[image]["authors"]|e %}
       {% endif %}
-      {% set pl = metadata[i][10].lower().replace(","," ").split() %}
-      {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1]|e, pl[0]|e, pl[3]|e, pl[2]|e, pl[5]|e, pl[4]|e, pl[7]|e, pl[6]|e, pl[9]|e, pl[8]|e) %}
-      {# {% set abstract_short = metadata[i][12] %} #}
-      {# [:100] + "..." #}
-      {% if metadata[i][11] != "None" %}
-        {% set caption = metadata[i][11]|e %}
-      {% else %}
-        {% set caption = "-" %}
-      {% endif %}
+      {% set pl = metadict[image]["vggpred"].lower().replace(","," ").split() %}
+      {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1]|e, pl[0]|e, pl[3]|e, pl[2]|e, pl[5]|e, pl[4]|e, pl[7]|e, pl[6]|e, pl[9]|e, pl[8]|tojson) %}
+      {% set caption = metadict[image]["caption"]|e %}
 
-      <!-- title="Metadata" data-sanitize="false" data-toggle="popover" data-html="true" -->
       <div class="grid-item" image_id={{image.split(".")[0]}}>
         <img class="grid-item-img" src={{url_for("static", filename="web/"+image+".jpg")}}
           prediction="{{ prediction_formatted }}" tab-data="
@@ -367,7 +360,7 @@
               <b>filename:</b> {{metadict[image]['filename']|e}}<br><b>x:</b> {{metadict[image]['x']|e}}<b> y:</b> {{metadict[image]['y']|e}}<br><b>format:</b> {{metadict[image]['imageformat']|e}}<br><b>creator:</b> {{metadict[image]['creator']|e}}<br>
             </div>
             <div class='tab-pane fade' id='tab-{{image}}-cp' role='tabpanel' aria-labelledby='caption-tab'>
-              <b>caption:</b> {{caption|e}}<br>
+              <b>caption:</b> {{caption}}<br>
             </div>
           </div>"
         >
@@ -641,37 +634,9 @@
         $( targetTabContent ).addClass( "show active" );
       });
 
+      // no longer using MathJax
       // MathJax.typeset();
     }
-
-    /*
-    $(".grid-item-img").on("dblclick", function (event) {
-      $(this).toggleClass("active");
-      $(".grid-item-img").not(this).removeClass("active");
-      var img_src = $(this).attr("src");
-      var img_id = $(this).parent().attr("image_id");
-      // var img_data = $(this).attr("data-content");
-      var img_data = $(this).attr("tab-data");
-      img_data = img_data.replace(/id='tab-/g, "id='si-tab-");
-      img_data = img_data.replace(/tab-link/g, "si-tab-link");
-
-      img_data =
-        "<button id='selected-image-meta-btn' type='button' class='btn btn-light col-12 mb-2 collapsible' data-toggle='collapse' data-target='#selected-image-meta-tabs'>Selected image metadata <i id='filter-icon' class='bi bi-caret-down'></i></button>" +
-        "<div id='selected-image-meta-tabs' class='content collapse'>" +
-        img_data +
-        "</div>";
-
-      console.log("img_data: " + img_data);
-      var img_pred = $(this).attr("prediction");
-      // console.log("showing selected image: " + img_src);
-      show_selected(img_src, img_data, img_pred);
-
-      console.log("setting image_id to: " + img_id);
-      console.log("prediction: " + img_pred);
-      $("#image_id").val(img_id);
-      $(".results").empty().append(img_id);
-    });
-    */
 
     function loadSelectedImage(item, itemID, itemSrc, itemTabData, itemPred) {
       $(item).toggleClass("active");
@@ -1269,8 +1234,8 @@
       de.value = deVal;
     {% endif %}
 
-    // console.log( {{ metadict|tojson }} );
-    // console.log( {{ si_meta_d|tojson }} );
+    console.log( {{ metadict|tojson }} );
+    console.log( {{ si_meta_d|tojson }} );
 
     // window.MathJax = {
     //   tex: {
