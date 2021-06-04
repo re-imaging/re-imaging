@@ -15,7 +15,7 @@ from flask import url_for
 # from werkzeug.security import generate_password_hash
 
 # from flaskr.db import get_db
-from arxiv_imgs.db import get_db # get_db2
+from imagemesh.db import get_db # get_db2
 
 from annoy import AnnoyIndex
 
@@ -533,7 +533,11 @@ def get_images():
         md["authors"] = str(rows[0][8])
         md["title"] = str(rows[0][9]).replace('\n', ' ')
         md["vggpred"] = str(rows[0][10]).replace(",", ", ")
+        # print("earlier caption:", rows[0][11])
         md["caption"] = str(rows[0][11]).replace('\n', ' ')
+        if md["caption"] == "None":
+            md["caption"] = "-"
+        # print("md caption:", md["caption"])
         meta_image_id = str(rows[0][12])
         si_meta_d[image_id] = md
 

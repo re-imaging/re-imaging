@@ -762,17 +762,21 @@
     {% if prev_image_id %}
       console.log("prev_image_id not empty: " + {{ prev_image_id }});
       var img_src = {{url_for("static", filename="web/"+prev_image_id+".jpg")|tojson}};
-      {% if si_meta[8]|length > 100 %}
+      {% if si_meta_d[8]|length > 100 %}
         {% set si_authors_short = si_meta[8].split(";")[0] + " et al" %}
       {% else %}
         {% set si_authors_short = si_meta[8] %}
       {% endif %}
-      {% if si_meta[11] != "None" %}
-        {% set si_caption = si_meta_d[prev_image_id]['caption']|tojson %}
+      // {% if si_meta[11] != "None" %}
+        // console.log("caught None");
+        // {% set si_caption = si_meta_d[prev_image_id]['caption']|tojson %}
         // console.log({{si_caption}});
-      {% else %}
-        {% set si_caption = "-" %}
-      {% endif %}
+      // {% else %}
+        // {% set si_caption = "-" %}
+      // {% endif %}
+
+      {% set si_caption = si_meta_d[prev_image_id]['caption']|tojson %}
+
       {% set pl = si_meta[10].lower().replace(","," ").split() %}
       {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1]|e, pl[0]|e, pl[3]|e, pl[2]|e, pl[5]|e, pl[4]|e, pl[7]|e, pl[6]|e, pl[9]|e, pl[8]|e) %}
       var img_pred = '{% autoescape false %} {{ si_prediction_formatted }} {% endautoescape %}';
@@ -1272,8 +1276,8 @@
       de.value = deVal;
     {% endif %}
 
-    console.log( {{ metadict|tojson }} );
-    console.log( {{ si_meta_d|tojson }} );
+    // console.log( {{ metadict|tojson }} );
+    // console.log( {{ si_meta_d|tojson }} );
 
     // window.MathJax = {
     //   tex: {

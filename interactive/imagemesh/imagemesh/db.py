@@ -7,6 +7,7 @@ from flask.cli import with_appcontext
 
 def get_db():
     if 'db' not in g:
+        # print(current_app.config['DATABASE'])
         g.db = sqlite3.connect(
             current_app.config['DATABASE'],
             detect_types=sqlite3.PARSE_DECLTYPES
