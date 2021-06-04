@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %}ImageMesh{% endblock %}
+
 {% block content %}
 
   <!-- test mathjax -->
@@ -11,7 +13,6 @@
     <ul>
       <!-- class="flex-column mb-auto ml-0" -->
       <h1 class="fs-3 mt-3"><a id="main-title" href={{ url_for("core.get_images") }}>ImageMesh</a></h1>
-      <!-- <h1><a href={{ url_for("core.get_images") }}>{% block title %}arXiv Images{% endblock %}</a></h1> -->
 
       <div class="row">
         <div id="selected_image" class="selected-image shadow"></div>
@@ -91,10 +92,10 @@
                 <!-- </div> -->
 
                 <div class="row">
-                  <div class="col">
+                  <div class="col d-none">
                     <label for="image_id" id="image_id_label" class="align-bottom">Target image</label>
                   </div>
-                  <div class="col">
+                  <div class="col  d-none">
                     <input class="col" style="float: right;"for="image_id" name="image_id" id="image_id" placeholder="Click on an image" type="number">
                   </div>
                 </div>
@@ -314,7 +315,7 @@
       {% if messages %}
       <div class="alert alert-danger col-12 ml-1" role="alert">
         {% for message in messages %}
-          <li>{{ message }}</li>
+          <li>{{ message|e }}</li>
         {% endfor %}
       </div>
       {% endif %}
@@ -328,16 +329,16 @@
   <div id="image-grid" class="image-grid">
     {% for i, image in enumerate(images) %}
       {% if metadata[i][8]|length > 100 %}
-        {% set authors_short = metadata[i][8].split(";")[0] + " et al" %}
+        {% set authors_short = metadata[i][8].split(";")[0] + " et al"|e %}
       {% else %}
-        {% set authors_short = metadata[i][8] %}
+        {% set authors_short = metadata[i][8]|e %}
       {% endif %}
       {% set pl = metadata[i][10].lower().replace(","," ").split() %}
-      {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
+      {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1]|e, pl[0]|e, pl[3]|e, pl[2]|e, pl[5]|e, pl[4]|e, pl[7]|e, pl[6]|e, pl[9]|e, pl[8]|e) %}
       {# {% set abstract_short = metadata[i][12] %} #}
       {# [:100] + "..." #}
       {% if metadata[i][11] != "None" %}
-        {% set caption = metadata[i][11] %}
+        {% set caption = metadata[i][11]|e %}
       {% else %}
         {% set caption = "-" %}
       {% endif %}
@@ -571,7 +572,7 @@
     function show_selected(img_src, img_data, img_prediction) {
       $("#selected_image").css("height", "324px");
       $("#selected-block").css("display", "block");
-      let img_src_html = '<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%;">';
+      let img_src_html = '<img src=' + img_src + ' style="object-fit: contain; max-width: 100%; max-height: 100%; margin-top: auto; margin-bottom: auto;" class="col d-block my-auto;">';
       console.log(img_src_html);
       $("#selected_image").empty().append(img_src_html);
       console.log("prediction: " + img_prediction);
@@ -580,9 +581,35 @@
         content: img_prediction,
         title: 'VGG16 prediction',
         html: true,
-        trigger: 'click',
-        // placement: 'right',
+        // trigger: 'click',
+        placement: 'left',
+        offset: "80,0",
       });
+
+      var $popele = $('#selected_image');
+      $popele.data('state', 'hover');
+      var enterShow = function () {
+        if ($popele.data('state') === 'hover') {
+            $popele.popover('show');
+        }
+      };
+      var exitHide = function () {
+        if ($popele.data('state') === 'hover') {
+            $popele.popover('hide');
+        }
+      };
+      var clickToggle = function () {
+        if ($popele.data('state') === 'hover') {
+            $popele.data('state', 'pinned');
+        } else {
+            $popele.data('state', 'hover')
+            // $popele.popover('hover');
+        }
+      };
+      $popele.popover({trigger: 'manual'})
+        .on('mouseenter', enterShow)
+        .on('mouseleave', exitHide)
+        .on('click', clickToggle);
 
       let btn = document.getElementById('search-mode-nn');
       if( btn.checked == false ) {
@@ -661,7 +688,7 @@
       img_data = img_data.replace(/tab-link/g, "si-tab-link");
 
       img_data =
-        "<button id='selected-image-meta-btn' type='button' class='btn btn-outline-dark col-12 mb-2 collapsible' data-toggle='collapse' data-target='#selected-image-meta-tabs'>Selected image metadata <i id='filter-icon' class='bi bi-caret-down'></i></button>" +
+        "<button id='selected-image-meta-btn' type='button' class='btn btn-outline-dark col-12 collapsible' data-toggle='collapse' data-target='#selected-image-meta-tabs'>Selected image metadata <i id='filter-icon' class='bi bi-caret-down'></i></button>" +
         "<div id='selected-image-meta-tabs' class='content collapse'>" +
         img_data +
         "</div>";
@@ -747,7 +774,7 @@
         {% set si_caption = "-" %}
       {% endif %}
       {% set pl = si_meta[10].lower().replace(","," ").split() %}
-      {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1], pl[0], pl[3], pl[2], pl[5], pl[4], pl[7], pl[6], pl[9], pl[8]) %}
+      {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1]|e, pl[0]|e, pl[3]|e, pl[2]|e, pl[5]|e, pl[4]|e, pl[7]|e, pl[6]|e, pl[9]|e, pl[8]|e) %}
       var img_pred = '{% autoescape false %} {{ si_prediction_formatted }} {% endautoescape %}';
       // var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_caption)|tojson }};
       var img_data =
@@ -1276,6 +1303,17 @@
 		});
 		$('#loading').hide()
 	})
+
+  // var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+  // var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+  //   return new bootstrap.Popover(popoverTriggerEl)
+  // })
+
+  // $('img').mousedown(function (e) {
+  //   if(e.button == 2) { // right click
+  //     return false; // do nothing!
+  //   }
+  // });
 
   </script>
 

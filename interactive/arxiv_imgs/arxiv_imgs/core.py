@@ -22,7 +22,7 @@ from annoy import AnnoyIndex
 import numpy as np
 import random
 import math
-
+from datetime import date
 import time
 
 from guppy import hpy
@@ -33,7 +33,10 @@ NUM_INDEXES = 600000
 # NUM_INDEXES = 1200000
 NIMAGES = 50 # 100
 
+start = time.time()
+
 image_list = "/home/rte/data/paths/600k_from_all_images_shuf.txt"
+# image_list = url_for("static/600k_from_all_images_shuf.txt")
 filepaths = []
 
 with open(image_list, "r") as f:
@@ -42,6 +45,8 @@ with open(image_list, "r") as f:
 for l in lines[:NUM_INDEXES]:
     substring = l.split(".jpg")[0]
     filepaths.append(substring)
+
+print(f'getting filepaths from text file, time taken {time.time() - start}')
 
     # image_ids.append(substrings[1].strip())
 # print("length of filepaths:", len(filepaths))
@@ -87,6 +92,20 @@ def get_images():
         return value
     '''
 
+    filepaths = []
+
+    start = time.time()
+
+    db = get_db()
+    c = db.cursor()
+
+    c.execute("SELECT id FROM single")
+    rows = c.fetchall()
+    filepaths = [str(x[0]) for x in rows]
+    print("number of image paths loaded:", len(filepaths))
+
+    print(f'getting filepaths from db, time taken {time.time() - start}')
+
     # search_select = request.form.get("search_select")
     # search_select = set_param(request.form.get("search_select"), request.args.get('search-mode'))
     # print(f'search_select: {search_select}')
@@ -94,6 +113,8 @@ def get_images():
     # print("embedding:", embedding)
     # image_id = request.form.get("image_id")
     # print("image_id:", image_id)
+
+    messages = []
 
     search_mode = request.form.get("search-mode")
     print(f'search_mode: {search_mode}')
@@ -136,6 +157,23 @@ def get_images():
     print("date_start:",date_start)
     date_end = request.form.get("date-end")
     print("date_end:",date_end)
+
+    # compare start and end and swap (or give error) if one before the other
+    if date_start and date_end:
+        ds = date.fromisoformat(date_start)
+        de = date.fromisoformat(date_end)
+        if ds > de:
+            print("start date earlier than end date! swapping dates")
+            tmp = date_start
+            date_start = date_end
+            date_end = tmp
+            messages.append("Start date after end date - selection has been swapped")
+
+    # if there is either a start or end, extend range to max
+    if date_start and not date_end:
+        date_end = "2020-06-30"
+    if date_end and not date_start:
+        date_start = "1990-01-17"
 
 
     # abstract = request.form.get("abstract")
@@ -187,8 +225,6 @@ def get_images():
     # if abstract: filter_arguments["metadata.abstract"] = f'LIKE "%{abstract}%"'
     # if identifier: filter_arguments["metadata.identifier"] = f'LIKE "{identifier}%"'
     # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
-
-    messages = []
 
     # if no selected image, just get random indexes
     # else use annoy to find indexes
@@ -506,7 +542,7 @@ def get_images():
     # min_filters = 1 if "metadata.cat" in filter_arguments else 0
     # print("min filters", min_filters)
     if len(filter_arguments) > 0:
-        bFilters = True
+        bFilters = len(filter_arguments) # True
 
     # print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
@@ -521,9 +557,9 @@ def get_images():
 def about():
     return render_template('core/about.html')
 
-@bp.route('/testpage')
-def testpage():
-    return render_template('core/testpage.html')
+# @bp.route('/testpage')
+# def testpage():
+#     return render_template('core/testpage.html')
 
 '''
 @bp.route('/test')

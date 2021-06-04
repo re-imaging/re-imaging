@@ -18,13 +18,15 @@ memory_limit()
 def create_app(test_config=None):
     """Create and configure the Flask app."""
     app = Flask(__name__, instance_relative_config=True)
-    app.config.from_mapping(
-        SECRET_KEY='dev',
+    # app.config.from_mapping(
+        # SECRET_KEY=b'`+\xf7\xfdq\x18\x08L<\xfaKfb}\xed\x11',
         # DATABASE=os.path.join(app.instance_path, 'arxiv_interactive.sqlite'),
         # DATABASE=os.path.join("/home/rte/data/db/", "arxiv_db_images_600k.sqlite3"),
         # DATABASE_FTS=os.path.join("/home/rte/data/db/", "arxiv_db_images_600k_single.sqlite3")
-        DATABASE=os.path.join("/home/rte/data/db/", "arxiv_db_images_600k_single.sqlite3")
-    )
+    #     DATABASE=os.path.join("/home/rte/data/db/", "arxiv_db_images_600k_single.sqlite3")
+    # )
+
+    app.config.from_pyfile("config.py")
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
