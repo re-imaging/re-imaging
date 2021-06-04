@@ -762,25 +762,18 @@
     {% if prev_image_id %}
       console.log("prev_image_id not empty: " + {{ prev_image_id }});
       var img_src = {{url_for("static", filename="web/"+prev_image_id+".jpg")|tojson}};
-      {% if si_meta_d[8]|length > 100 %}
-        {% set si_authors_short = si_meta[8].split(";")[0] + " et al" %}
+      {% if si_meta_d[prev_image_id]["authors"]|length > 100 %}
+        {% set si_authors_short = si_meta_d[prev_image_id]["authors"].split(";")[0] + " et al" %}
       {% else %}
-        {% set si_authors_short = si_meta[8] %}
+        {% set si_authors_short = si_meta_d[prev_image_id]["authors"] %}
       {% endif %}
-      // {% if si_meta[11] != "None" %}
-        // console.log("caught None");
-        // {% set si_caption = si_meta_d[prev_image_id]['caption']|tojson %}
-        // console.log({{si_caption}});
-      // {% else %}
-        // {% set si_caption = "-" %}
-      // {% endif %}
 
       {% set si_caption = si_meta_d[prev_image_id]['caption']|tojson %}
 
-      {% set pl = si_meta[10].lower().replace(","," ").split() %}
+      {% set pl = si_meta_d[prev_image_id]["vggpred"].lower().replace(","," ").split() %}
       {% set si_prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1]|e, pl[0]|e, pl[3]|e, pl[2]|e, pl[5]|e, pl[4]|e, pl[7]|e, pl[6]|e, pl[9]|e, pl[8]|e) %}
       var img_pred = '{% autoescape false %} {{ si_prediction_formatted }} {% endautoescape %}';
-      // var img_data = {{"<div class='meta-col'><b><em>Image</em><br>filename:</b> {}<br><b>x:</b> {}<b> y:</b> {}<br><b>format:</b> {}<br><b>creator:</b> {}<br><br></div><div class='meta-col'><b><em>Paper</em><br>identifier:</b> <a href=https://arxiv.org/abs/{}>{}</a><br><b>date:</b> {}<br><b>category:</b> {}<br><b>authors:</b> {}<br><b>title:</b> {}<br><br></div><div class='meta-col'><b><em>Figure</em><br>caption:</b> {}".format(si_meta[1], si_meta[2], si_meta[3], si_meta[4], si_meta[5], si_meta[0], si_meta[0], si_meta[6], si_meta[7], si_authors_short, si_meta[9], si_caption)|tojson }};
+
       var img_data =
         "<button id='selected-image-meta-btn' type='button' class='btn btn-outline-dark col-12 collapsible' data-toggle='collapse' data-target='#selected-image-meta-tabs'>Selected image metadata <i id='filter-icon' class='bi bi-caret-down'></i></button>" +
         "<div id='selected-image-meta-tabs' class='content collapse'>" +
