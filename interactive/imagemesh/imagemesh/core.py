@@ -426,7 +426,7 @@ def get_images():
 
     print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
-    return render_template('core/interface.html.j2', images=images, metadict=metadict,
+    return render_template('interface.html.j2', images=images, metadict=metadict,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta_d=si_meta_d,
@@ -435,4 +435,4 @@ def get_images():
 
 @bp.route('/about')
 def about():
-    return render_template('core/about.html')
+    return render_template('about.html')

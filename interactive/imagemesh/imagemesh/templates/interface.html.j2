@@ -4,11 +4,7 @@
 
 {% block content %}
 
-  <!-- test mathjax -->
-  <!-- $J(x)=\int_0^1\alpha_x(\dot x)dt$ -->
-
   <div id="sbar">
-  <!-- class="d-flex flex-column p-3 bg-light" -->
 
     <ul>
       <!-- class="flex-column mb-auto ml-0" -->
@@ -55,53 +51,41 @@
                 </div>
               </div>
 
-              <!-- <div id="toggle-div" class="mt-2"> -->
-                <div id=random-text class="d-none" style="display: inline-block;">
-                  <p class="d-none">Sample dataset</p>
-                  <!-- <p style="font-size: 1.25em; vertical-align: top;">Sample dataset</p> -->
-                </div>
-
-                <!-- <label class="switch d-none">
-                  <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();" class="d-none">
-                  <span class="slider round d-none"></span>
-                </label> -->
-
-                <!-- <div class="input-form"> -->
-                  <div id=embedding-text class="input-group mt-3 mb-2">
-                    <!-- <div class="col align-bottom"> -->
-                    <label for="embedding">ML embedding</label>
-                    <!-- class="input-group-text" -->
-                    <!-- </div> -->
-                    <div class="col">
-                      <select class="form-select" name="embedding" id="embedding">
-                        <option value="ternary">ternary</option>
-                        <option value="VGG16">VGG16</option>
-                        <option value="raw">raw</option>
-                        <option value="cats">cats</option>
-                      </select>
-                    </div>
-                    <!-- <span style="font-size: 1.25em; vertical-align: top;">ML Embedding
-                  		<select class="form-select" name="embedding" id="embedding" style="vertical-align: middle; margin: 0;">
-                        <option value="ternary">ternary</option>
-                        <option value="VGG16">VGG16</option>
-                        <option value="raw">raw</option>
-                        <option value="cats">cats</option>
-                      </select>
-                    </span> -->
-                  </div>
-                <!-- </div> -->
-
-                <div class="row">
-                  <div class="col d-none">
-                    <label for="image_id" id="image_id_label" class="align-bottom">Target image</label>
-                  </div>
-                  <div class="col  d-none">
-                    <input class="col" style="float: right;"for="image_id" name="image_id" id="image_id" placeholder="Click on an image" type="number">
-                  </div>
-                </div>
-                <!-- style="vertical-align: middle; max-width: 160px;" -->
+              <div id=random-text class="d-none" style="display: inline-block;">
+                <p class="d-none">Sample dataset</p>
+                <!-- <p style="font-size: 1.25em; vertical-align: top;">Sample dataset</p> -->
               </div>
-            <!-- </div> -->
+
+              <!-- <label class="switch d-none">
+                <input type="checkbox" name="search_select" id="search_select" value='on' onclick="toggleMode();" class="d-none">
+                <span class="slider round d-none"></span>
+              </label> -->
+
+              <div id=embedding-text class="input-group mt-3 mb-2">
+                <!-- <div class="col align-bottom"> -->
+                <label for="embedding">ML embedding</label>
+                <!-- class="input-group-text" -->
+                <!-- </div> -->
+                <div class="col">
+                  <select class="form-select" name="embedding" id="embedding">
+                    <option value="ternary">ternary</option>
+                    <option value="VGG16">VGG16</option>
+                    <option value="raw">raw</option>
+                    <option value="cats">cats</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col d-none">
+                  <label for="image_id" id="image_id_label" class="align-bottom">Target image</label>
+                </div>
+                <div class="col  d-none">
+                  <input class="col" style="float: right;"for="image_id" name="image_id" id="image_id" placeholder="Click on an image" type="number">
+                </div>
+              </div>
+              <!-- style="vertical-align: middle; max-width: 160px;" -->
+            </div>
 
             <div class="col">
               <div class="full-text-search">
@@ -224,19 +208,6 @@
                 </div>
 
               </div>
-
-              <!-- <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                <label class="form-check-label" for="flexRadioDefault1">
-                  Default radio
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
-                  Default checked radio
-                </label>
-              </div> -->
 
               <div class="col">
                 <div id="search-button-div" class="d-flex justify-content-between">
@@ -368,25 +339,7 @@
     {%- endfor %}
   </div>
 
-  <!-- <li class='nav-item' role='presentation'>
-    <a class='nav-link tab-link' id='tab-hide' image-id='{{image}}' data-toggle='tab' href='#{{image}}-hide' role='tab' aria-controls='hide' aria-selected='false'>x</a>
-  </li> -->
-
   <script>
-
-  // function openTab(evt, tabName) {
-  //   var i, tabcontent, tablinks;
-  //   tabcontent = document.getElementsByClassName("tabcontent");
-  //   for (i = 0; i < tabcontent.length; i++) {
-  //     tabcontent[i].style.display = "none";
-  //   }
-  //   tablinks = document.getElementsByClassName("tablinks");
-  //   for (i = 0; i < tablinks.length; i++) {
-  //     tablinks[i].className = tablinks[i].className.replace(" active", "");
-  //   }
-  //   document.getElementById(cityName).style.display = "block";
-  //   evt.currentTarget.className += " active";
-  // }
 
   function toggleMode() {
     let checkbox = document.getElementById('search-mode-nn');
@@ -454,21 +407,8 @@
     // const checkbox = document.getElementById('search_select');
     let checkbox = document.getElementById('search-mode-nn');
 
-    // var filterButton = document.getElementById('filter-btn');
-    // filterButton.addEventListener('show.bs.collapse', function () {
-    //   console.log('additional filter collapse');
-    //   filterButton.value = 'Changed';
-    // });
-
     $('#clear-filters').on('click', function (event) {
       console.log("clearFilters called");
-      // categoryNameSelect.clear();
-      // categoryNameSelect.clearOptions();
-
-      // ftsSelect.clear();
-      //
-      // categorySelect.clear();
-      // categoryNameSelect.clear();
 
       authorSelect.clear();
       captionSelect.clear();
@@ -487,57 +427,13 @@
     $('#search-mode-random').on('click', function(event) {
       console.log("search-mode-random pressed");
       toggleMode();
-
-      // let btn = document.getElementById('search-mode-random');
-      // if(btn.checked == true) {
-      //   btn.checked = false;
-      //   toggleMode();
-      // }
-      // else {
-      //   return;
-      // }
     });
 
     $('#search-mode-nn').on('click', function(event) {
       console.log("search-mode-nn pressed");
       toggleMode();
-
-      // let checkbox = document.getElementById('search-mode-nn');
-      // if(btn.checked == false) {
-      //   // btn.checked = true;
-      //   toggleMode();
-      // }
-      // else {
-      //   return;
-      // }
     });
 
-    /* old version */
-    /*
-    $('#sample-btn').on('click', function(event) {
-      console.log("sample-btn pressed");
-      let checkbox = document.getElementById('search_select');
-      if(checkbox.checked == 1) {
-        checkbox.checked = 0;
-        toggleMode();
-      }
-      else {
-        return;
-      }
-    });
-
-    $('#nn-btn').on('click', function(event) {
-      console.log("nn-btn pressed");
-      let checkbox = document.getElementById('search_select');
-      if(checkbox.checked == 0) {
-        checkbox.checked = 1;
-        toggleMode();
-      }
-      else {
-        return;
-      }
-    });
-    */
     // init Packery
     var $grid = $('.image-grid').packery({
       itemSelector: '.grid-item',
@@ -548,19 +444,6 @@
     $grid.imagesLoaded().progress( function() {
       $grid.packery();
     });
-
-    // copied
-    // var $grid_res = $(".grid.res").imagesLoaded(function () {
-    // 	$(".container").css("visibility", "visible");
-    // 	$grid_res.packery({columnWidth: 128, itemSelector: ".grid-item.res", gutter: 3});
-    // });
-
-    // $('main-form').on('submit', function ( event, form, response ) {
-    //   console.log("form submitted");
-    //   var $load = $('#loading-spinner');
-    //   $load.removeClass('d-none');
-      // $load.addClass('d-block');
-    // });
 
     function show_selected(img_src, img_data, img_prediction) {
       $("#selected_image").css("height", "324px");
@@ -609,12 +492,6 @@
         btn.checked = true;
         toggleMode();
       }
-      // let checkbox = document.getElementById('search_select');
-      // if( checkbox.checked == 0) {
-      //   console.log('toggle unchecked, calling toggleMode');
-      //   checkbox.checked = 1;
-      //   toggleMode();
-      // }
 
       $("#selected-image-meta").empty().append(img_data);
 
@@ -783,22 +660,6 @@
         }
       });
 
-      // $('.si-tab-link').on("click", function (event) {
-      //   console.log("si-tab link clicked");
-      //   let imageID = $(this).attr('image-id');
-      //   let tabID = $(this).attr('id');
-      //   console.log("imageID: " + imageID);
-      //   console.log("tabID: " + tabID);
-      //   let tabSelector = tabID.substring(7, 9);
-      //   console.log("tabSelector: " + tabSelector);
-      //   let targetTabID = "#si-tab-content-" + imageID;
-      //   console.log(targetTabID);
-      //   $( targetTabID ).children().removeClass( "show active" );
-      //   let targetTabContent = '#si-tab-' + imageID + '-' + tabSelector;
-      //   console.log("targetTabContent: " + targetTabContent);
-      //   $( targetTabContent ).addClass( "show active" );
-      // });
-
     {% else %}
       $("#selected-block").css("display", "none");
     {% endif %}
@@ -934,7 +795,6 @@
       labelField: 'label',
       searchField: ['cat', 'label'],
       options: [],
-        // {'cat': 'astro-ph.GA', 'label': 'Astrophysics of Galaxies'}, {'cat': 'astro-ph.CO', 'label': 'Cosmology and Nongalactic Astrophysics'}, {'cat': 'astro-ph.EP', 'label': 'Earth and Planetary Astrophysics'}, {'cat': 'astro-ph.HE', 'label': 'High Energy Astrophysical Phenomena'}, {'cat': 'astro-ph.IM', 'label': 'Instrumentation and Methods for Astrophysics'}, {'cat': 'astro-ph.SR', 'label': 'Solar and Stellar Astrophysics'}
       render: {
         item: function(item, escape) {
             return '<div>' +
@@ -961,8 +821,6 @@
 
     var $select = $('#category-name').selectize(categoryNameSettings);
     var categoryNameSelect = $select[0].selectize;
-
-    // {'cat': 'astro-ph.GA', 'label': 'Astrophysics of Galaxies'}, {'cat': 'astro-ph.CO', 'label': 'Cosmology and Nongalactic Astrophysics'}, {'cat': 'astro-ph.EP', 'label': 'Earth and Planetary Astrophysics'}, {'cat': 'astro-ph.HE', 'label': 'High Energy Astrophysical Phenomena'}, {'cat': 'astro-ph.IM', 'label': 'Instrumentation and Methods for Astrophysics'}, {'cat': 'astro-ph.SR', 'label': 'Solar and Stellar Astrophysics'}
 
     var $select = $('#category').selectize({
         delimiter: ',',
@@ -1018,7 +876,6 @@
         categoryNameSelect.clearOptions();
         return;
       } else {
-      // if (archive === "cs") {
         categoryNameSelect.disable();
         console.log("selectize archive: " + archive);
         categoryNameSelect.clear();
@@ -1027,10 +884,6 @@
           callback(categoryNameOptions[archive]);
         });
         categoryNameSelect.enable();
-      // } else {
-      //   categoryNameSelect.clear();
-      //   categoryNameSelect.clearOptions();
-      //   return;
       }
     }
 
@@ -1119,21 +972,8 @@
       $('[data-toggle="tooltip"]').tooltip()
     })
 
-    // $('.input-daterange input').each(function() {
-    //   $(this).datepicker('clearDates');
-    // });
-
-    // $('[data-toggle="popover"]').popover({
-    //   offset: '50',
-    //   // placement: 'top',
-    //   // trigger: 'click',
-    // });
-
-
     {% if prev_image_id %}
       $("#image_id").val( {{ prev_image_id }} );
-
-      // $('#image-grid').removeClass('image-grid');
     {% endif %}
 
     {% if embedding %}
@@ -1151,12 +991,8 @@
     }
     toggleMode();
 
-
-    // {# if imageformat or author or prediction or title or creator or caption or date_start or date_end #}
     {% if (nFilters == 1 and not category) or (nFilters > 1) %}
       console.log("some filters active");
-      // var collapsible = document.getElementsByClassName("collapsible");
-      // collapsible.collapse("toggle");
       $("#filter-content").collapse('toggle');
     {% endif %}
 
@@ -1166,7 +1002,6 @@
       categorySelect.setValue(catVal.split(","), 1);
       loadCategoryName({{category|tojson}});
     {% endif %}
-    // selectize.setValue(["cs.CV","astro-ph.GA"], 1);
 
     {% if category_name %}
       console.log({{category_name|tojson}});
@@ -1179,7 +1014,6 @@
       var imVal = {{imageformat|tojson}};
       ifSelect.setValue(imVal, 1);
     {% endif %}
-    // selectize.setValue(["cs.CV","astro-ph.GA"], 1);
 
     {#
     {% if author %}
@@ -1192,10 +1026,7 @@
     {% if prediction %}
       var predVal = {{prediction|tojson}};
       console.log("prediction: " + predVal);
-      // predictionSelect.addOption({value:predVal,text:predVal});
-      // predictionSelect.setValue(predVal, false);
       predictionSelect.createItem(predVal, false);
-      // $('#prediction').data('selectize').setValue(predVal);
       console.log("finished loading prediction");
     {% endif %}
 
@@ -1210,7 +1041,6 @@
       console.log({{creator|tojson}});
       var creatorVal = {{creator|tojson}};
       creatorSelect.createItem(creatorVal, false);
-      // creatorSelect.setValue(creatorVal, 1);
     {% endif %}
 
     {% if caption %}
@@ -1237,12 +1067,6 @@
     console.log( {{ metadict|tojson }} );
     console.log( {{ si_meta_d|tojson }} );
 
-    // window.MathJax = {
-    //   tex: {
-    //     inlineMath: [['$', '$'], ['\\(', '\\)']]
-    //   }
-    // };
-
     $('#container').imagesLoaded()
     .always( function( instance ) {
       console.log('all images loaded');
@@ -1265,17 +1089,6 @@
 		});
 		$('#loading').hide()
 	})
-
-  // var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-  // var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-  //   return new bootstrap.Popover(popoverTriggerEl)
-  // })
-
-  // $('img').mousedown(function (e) {
-  //   if(e.button == 2) { // right click
-  //     return false; // do nothing!
-  //   }
-  // });
 
   </script>
 
