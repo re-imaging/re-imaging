@@ -105,7 +105,7 @@
 
             <div class="col">
               <div class="full-text-search">
-                <label for="fts">Full text search</label> <!-- Search the database -->
+                <label for="fts">Keyword search</label> <!-- Search the database -->
                 <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
                   title="Searches for keyword matches across a number of metadata fields.">
                   <i class="bi bi-info-circle"></i>
@@ -267,7 +267,7 @@
   <div id="description-text" class="mt-2" class="container-fluid" style="display: block; position: relative; left: 360px; top: 0px; margin-bottom: 1em; width: calc(100% - 360px);">
 
     <div class="row mx-2">
-      {% if prev_image_id or bFilters or fts %}
+      {% if prev_image_id or nFilters or fts %}
         {% if result_total %}
           <div class="alert alert-secondary col-10" role="alert">
           {% if not embedding %}
@@ -306,7 +306,7 @@
         </div>
       </nav>
 
-      {% if not prev_image_id and not bFilters and not fts %}
+      {% if not prev_image_id and not nFilters and not fts %}
         <div class="alert alert-primary col-12" role="alert">
           Click on an image to see metadata. Double click to select image for nearest neighbour search using machine learning embeddings.
         </div>
@@ -1153,7 +1153,7 @@
 
 
     // {# if imageformat or author or prediction or title or creator or caption or date_start or date_end #}
-    {% if (bFilters == 1 and not category) or (bFilters > 1) %}
+    {% if (nFilters == 1 and not category) or (nFilters > 1) %}
       console.log("some filters active");
       // var collapsible = document.getElementsByClassName("collapsible");
       // collapsible.collapse("toggle");

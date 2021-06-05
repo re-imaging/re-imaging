@@ -11,6 +11,7 @@ from flask import render_template
 from flask import request
 from flask import session
 from flask import url_for
+from flask import current_app
 # from werkzeug.security import check_password_hash
 # from werkzeug.security import generate_password_hash
 
@@ -33,45 +34,6 @@ NUM_INDEXES = 600000
 # NUM_INDEXES = 1200000
 NIMAGES = 50 # 100
 
-start = time.time()
-
-image_list = "/home/rte/data/paths/600k_from_all_images_shuf.txt"
-# image_list = url_for("static/600k_from_all_images_shuf.txt")
-filepaths = []
-
-with open(image_list, "r") as f:
-    lines = f.readlines()
-    print("length of image text file:",len(lines))
-for l in lines[:NUM_INDEXES]:
-    substring = l.split(".jpg")[0]
-    filepaths.append(substring)
-
-print(f'getting filepaths from text file, time taken {time.time() - start}')
-
-    # image_ids.append(substrings[1].strip())
-# print("length of filepaths:", len(filepaths))
-
-# with app.app_context():
-#     db2 = get_db2()
-#     c2 = db2.cursor()
-#
-#     filepaths_sql = "SELECT id FROM single"
-#     c2.execute(filepaths_sql, )
-#     for row in rows:
-#         filepaths.append(row)
-#     print("length of filepaths:",len(filepaths))
-#     print(filepaths[0])
-
-
-# db = get_db()
-# c = db.cursor()
-#
-# # load images from db
-# c.execute("SELECT id FROM images")
-# rows = c.fetchall()
-# filepaths = [str(x[0]) for x in rows]
-# print("number of image paths loaded:", len(filepaths))
-
 bp = Blueprint("core", __name__) # url_prefix="/core"
 
 @bp.route("/", methods=["GET", "POST"])
@@ -80,31 +42,35 @@ def get_images():
     Otherwise grab random images from the database and display.
     """
 
-    '''
-    def set_param(form, argument):
-        print(f'form: {form}')
-        print(f'argument: {argument}')
-        value = ''
-        if form:
-            value = form
-        elif argument:
-            value = argument
-        return value
-    '''
-
     filepaths = []
 
     start = time.time()
 
-    db = get_db()
-    c = db.cursor()
+    # image_list = "/home/rte/data/paths/600k_from_all_images_shuf.txt"
+    image_list = current_app.config['IMAGE_LIST']
+    # image_list = url_for("static/600k_from_all_images_shuf.txt")
+    filepaths = []
 
-    c.execute("SELECT id FROM single")
-    rows = c.fetchall()
-    filepaths = [str(x[0]) for x in rows]
-    print("number of image paths loaded:", len(filepaths))
+    with open(image_list, "r") as f:
+        lines = f.readlines()
+        print("length of image text file:",len(lines))
+    for l in lines[:NUM_INDEXES]:
+        substring = l.split(".jpg")[0]
+        filepaths.append(substring)
 
-    print(f'getting filepaths from db, time taken {time.time() - start}')
+    print(f'getting filepaths from text file, time taken {time.time() - start}')
+
+    # start = time.time()
+    #
+    # db = get_db()
+    # c = db.cursor()
+    #
+    # c.execute("SELECT id FROM single")
+    # rows = c.fetchall()
+    # filepaths = [str(x[0]) for x in rows]
+    # print("number of image paths loaded:", len(filepaths))
+    #
+    # print(f'getting filepaths from db, time taken {time.time() - start}')
 
     # search_select = request.form.get("search_select")
     # search_select = set_param(request.form.get("search_select"), request.args.get('search-mode'))
@@ -281,13 +247,13 @@ def get_images():
         ann = AnnoyIndex(300, 'angular')
 
         if embedding == "VGG16":
-            ann_filepath = "/home/rte/re-imaging/interactive/600k_vgg_ipca.ann"
+            ann_filepath = current_app.config['ANNOY_VGG']
         elif embedding == "raw":
-            ann_filepath = "/home/rte/re-imaging/interactive/600k_raw.ann"
+            ann_filepath = current_app.config['ANNOY_RAW']
         elif embedding == "ternary":
-            ann_filepath = "/home/rte/re-imaging/interactive/600k_ternary.ann"
+            ann_filepath = current_app.config['ANNOY_TERNARY']
         elif embedding == "cats":
-            ann_filepath = "/home/rte/re-imaging/interactive/600k_cats.ann"
+            ann_filepath = current_app.config['ANNOY_CATS']
 
         # print(h.heap())
         ann.load(ann_filepath)
@@ -554,11 +520,11 @@ def get_images():
         si_meta_d[image_id] = md
 
     # check if we have filters, category doesn't count
-    bFilters = False
+    nFilters = 0
     # min_filters = 1 if "metadata.cat" in filter_arguments else 0
     # print("min filters", min_filters)
     if len(filter_arguments) > 0:
-        bFilters = len(filter_arguments) # True
+        nFilters = len(filter_arguments) # True
 
     # print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
@@ -567,25 +533,10 @@ def get_images():
                             images_shown=images_shown, embedding=embedding, search_select=search_select,
                             si_meta_d=si_meta_d,
                             category=category, category_name=category_name, imageformat=imageformat, prediction=prediction, author=author,
-                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, bFilters=bFilters, messages=messages, fts=fts)
+                            title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, nFilters=nFilters, messages=messages, fts=fts)
                             # metadata=metadata,
-                            # si_meta=si_meta, 
+                            # si_meta=si_meta,
 
 @bp.route('/about')
 def about():
     return render_template('core/about.html')
-
-# @bp.route('/testpage')
-# def testpage():
-#     return render_template('core/testpage.html')
-
-'''
-@bp.route('/test')
-def get_test_image():
-    """Just show one image as a test."""
-
-    # filename = "/home/rte/data/images/web/120k/5478268.jpg"
-    # images = [url_for("static", filename="/all/7732085.jpg")]
-    images = ["7732085"]
-    return render_template("core/opening.html", images=images, enumerate=enumerate)
-'''
