@@ -8,13 +8,6 @@ from flaskext.markdown import Markdown
 import sys
 import resource
 
-def memory_limit():
-    max_mem = 8 * 1000000000 # Gigabytes
-    soft, hard = resource.getrlimit(resource.RLIMIT_AS)
-    print(f'memory limits - soft: {soft} - hard: {hard}')
-    resource.setrlimit(resource.RLIMIT_AS, (max_mem, hard))
-memory_limit()
-
 def create_app(test_config=None):
     """Create and configure the Flask app."""
     app = Flask(__name__, instance_relative_config=True)
@@ -42,6 +35,15 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
+
+    if app.config["TESTING"]:
+        def memory_limit():
+            max_mem = 2 * 1000000000 # Gigabytes
+            soft, hard = resource.getrlimit(resource.RLIMIT_AS)
+            print(f'memory limits - soft: {soft} - hard: {hard}')
+            resource.setrlimit(resource.RLIMIT_AS, (max_mem, hard))
+        memory_limit()
+
 
     # register the database commands
     from imagemesh import db
