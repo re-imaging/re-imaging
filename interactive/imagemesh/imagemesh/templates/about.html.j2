@@ -3,19 +3,19 @@
 {% block title %}ImageMesh{% endblock %}
 
 {% block header %}
-  <h1>About</h1>
+  <h1 class="mt-2 mx-2">About</h1>
 {% endblock %}
 
 {% block content %}
 
 <div>
-  <nav id="nav-menu" class="nav col-2 mr-1 pr-1 mt-1 d-flex justify-content-end" style="z-index: 999;">
+  <nav id="nav-menu" class="nav col-2 mx-2 mr-1 pr-1 mt-1 d-flex" style="z-index: 999;">
     <div class="d-flex flex-column">
       <!-- <a class="navbar-brand" href="#">Reconfiguring</a> -->
-      <li class="nav-item d-flex justify-content-end">
+      <!-- <li class="nav-item d-flex">
         <a class="nav-link" href="{{ url_for('core.about') }}">About</a>
-      </li>
-      <li class="nav-item d-flex justify-content-end">
+      </li> -->
+      <li class="nav-item d-flex">
         <a class="nav-link active" href="{{ url_for('core.get_images') }}">Interface</a>
       </li>
     </div>
@@ -31,7 +31,7 @@ ImageMesh is a visual explorer application that allows interactive visualisation
 
 [ArXiv](https://arxiv.org/) is a repository that maintains over 1.5 million preprint articles across a diverse range of scientific fields. It provides access to metadata and bulk source data downloads. While this data has been widely examined, it has not been used, to our knowledge, to investigate the images that contribute to the fields of scientific research represented such as astrophysics, computer vision, and high energy physics, to name only a few.
 
-ImageMesh draws inspiration from [imgs.ai](https://imgs.ai/), developed by Fabian Offert, with contributions by Peter Bell and Oleg Harlamov. It has been developed as a mode of encountering the practical and conceptual research conducted by [Anna Munster](https://research.unsw.edu.au/people/professor-anna-marie-munster), Professor of Media Arts and Theory, University of New South Wales, [Adrian MacKenzie](https://researchers.anu.edu.au/researchers/mackenzie-a), Professor of Sociology, Australian National University and Dr. [Kynan Tan](https://kynantan.com/), postdoctoral fellow on this project. The project underpinning its development, ‘Re-imaging the empirical: statistical visualisation in art and science’ was supported by funding from the Australian Research Council, Discovery Project scheme.
+ImageMesh draws inspiration from [imgs.ai](https://imgs.ai/), developed by Fabian Offert, with contributions by Peter Bell and Oleg Harlamov. It has been developed as a mode of encountering the practical and conceptual research conducted by [Anna Munster](https://research.unsw.edu.au/people/professor-anna-marie-munster), Professor of Media Arts and Theory, University of New South Wales, [Adrian MacKenzie](https://researchers.anu.edu.au/researchers/mackenzie-a), Professor of Sociology, Australian National University and Dr. [Kynan Tan](https://kynantan.com/), postdoctoral fellow on this project. The project underpinning its development, ‘Re-imaging the empirical: statistical visualisation in art and science’ was supported by funding from the Australian Research Council, Discovery Project scheme. More information about this project can be found [here](https://github.com/re-imaging/re-imaging).
 
 ## Screencast
 
@@ -67,8 +67,12 @@ The raw pixels of each image. Generally produces associations based on overall c
 
 A classifier trained on images of cats and dogs. We used keras to train this network, following [this example](https://keras.io/examples/vision/image_classification_from_scratch/). Produces some unlikely associations between images.
 
-
 {% endfilter %}
+
+<a class="nav-link active" href="{{ url_for('core.get_images') }}">Interface</a>
+
+<hr>
+
 <!-- </div>
 
 <div>

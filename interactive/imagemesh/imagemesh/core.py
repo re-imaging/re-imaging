@@ -41,6 +41,8 @@ def get_images():
     Otherwise grab random images from the database and display.
     """
 
+    debug = current_app.config['DEBUG']
+
     filepaths = []
 
     start = time.time()
@@ -435,4 +437,4 @@ def get_images():
 
 @bp.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about.html.j2')
