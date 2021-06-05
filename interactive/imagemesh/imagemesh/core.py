@@ -15,8 +15,7 @@ from flask import current_app
 # from werkzeug.security import check_password_hash
 # from werkzeug.security import generate_password_hash
 
-# from flaskr.db import get_db
-from imagemesh.db import get_db # get_db2
+from imagemesh.db import get_db
 
 from annoy import AnnoyIndex
 
@@ -30,9 +29,9 @@ from guppy import hpy
 h = hpy()
 # print(h.heap())
 
-NUM_INDEXES = 600000
-# NUM_INDEXES = 1200000
-NIMAGES = 50 # 100
+# now set in config
+# NUM_INDEXES = 600000
+# NIMAGES = 50 # 100
 
 bp = Blueprint("core", __name__) # url_prefix="/core"
 
@@ -54,7 +53,7 @@ def get_images():
     with open(image_list, "r") as f:
         lines = f.readlines()
         print("length of image text file:",len(lines))
-    for l in lines[:NUM_INDEXES]:
+    for l in lines[:current_app.config["NUM_INDEXES"]]:
         substring = l.split(".jpg")[0]
         filepaths.append(substring)
 
@@ -211,7 +210,7 @@ def get_images():
         image_id = None
         embedding = None
         result_total = None
-        images_shown = NIMAGES
+        images_shown = current_app.config["NIMAGES"]
 
         if search_mode == "nn":
             if image_id == None or image_id == "":
@@ -263,14 +262,14 @@ def get_images():
 
         start = time.time()
 
-        nindexes = NIMAGES
+        nindexes = current_app.config["NIMAGES"]
         # if author or category or imageformat or prediction:
         if len(filter_arguments) > 0 or fts:
-            nindexes = NUM_INDEXES
+            nindexes = current_app.config["NUM_INDEXES"]
 
         target_index = filepaths.index(image_id)
         print(f'getting indexes for image id: {image_id} + target_index: {target_index}')
-        indexes = ann.get_nns_by_item(target_index, nindexes) # NIMAGES
+        indexes = ann.get_nns_by_item(target_index, nindexes)
         # print(f'indexes total {len(indexes)}: {indexes}')
 
         images = np.array(filepaths)[np.array(indexes)]
@@ -280,7 +279,7 @@ def get_images():
         print(f'getting indexes, time taken {time.time() - start}')
 
         result_total = None
-        images_shown = NIMAGES
+        images_shown = current_app.config["NIMAGES"]
 
     # sql_filter = """
     #             SELECT images.id
@@ -392,14 +391,14 @@ def get_images():
         for im in images[:]: # NIMAGES
             # print("image:", type(im), im)
             # if np.any(np.array(filter_results) == im):
-            if len(matches) >= NIMAGES:
+            if len(matches) >= current_app.config["NIMAGES"]:
                 break
 
             if int(im) in all_results:
                 matches.append(im)
 
         print("len(matches):", len(matches))
-        images = matches[:NIMAGES]
+        images = matches[:current_app.config["NIMAGES"]]
         images_shown = len(images)
 
         if images_shown == 0:
@@ -415,7 +414,7 @@ def get_images():
 
     start = time.time()
 
-    images = images[:NIMAGES]
+    images = images[:current_app.config["NIMAGES"]]
 
     # only run the below code if we haven't already grabbed the database stuff?
     db = get_db()
