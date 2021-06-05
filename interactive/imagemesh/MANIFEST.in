@@ -1,0 +1,3 @@
+graft imagemesh/static
+graft imagemesh/templates
+global-exclude *.pyc
