@@ -27,7 +27,7 @@ import time
 
 from guppy import hpy
 h = hpy()
-# print(h.heap())
+print(h.heap())
 
 # now set in config
 # NUM_INDEXES = 600000
@@ -59,6 +59,7 @@ def get_images():
 
     print(f'getting filepaths from text file, time taken {time.time() - start}')
 
+    ##### get filepaths from DB (slower than text file)
     # start = time.time()
     #
     # db = get_db()
@@ -70,14 +71,6 @@ def get_images():
     # print("number of image paths loaded:", len(filepaths))
     #
     # print(f'getting filepaths from db, time taken {time.time() - start}')
-
-    # search_select = request.form.get("search_select")
-    # search_select = set_param(request.form.get("search_select"), request.args.get('search-mode'))
-    # print(f'search_select: {search_select}')
-    # embedding = request.form.get("embedding")
-    # print("embedding:", embedding)
-    # image_id = request.form.get("image_id")
-    # print("image_id:", image_id)
 
     messages = []
 
@@ -140,40 +133,13 @@ def get_images():
     if date_end and not date_start:
         date_start = "1990-01-17"
 
-
     # abstract = request.form.get("abstract")
     # print("abstract:",abstract)
     # identifier = request.form.get("identifier")
     # print("identifier:",identifier)
 
-    # filter_arguments = {
-    #     "metadata.cat": category+"%" if category else None,
-    #     "imageformat": imageformat+"%" if imageformat else None,
-    #     "prediction": prediction+"%" if prediction else None,
-    #     "metadata.authors": "%"+author+"%" if author else None,
-    #     "creator": creator+"%" if creator else None,
-    #     "title": "%"+title+"%" if title else None
-    # }
 
     filter_arguments = {}
-    # if category: filter_arguments["metadata.cat"] = category+"%"
-    # if imageformat: filter_arguments["imageformat"] = imageformat+"%"
-    # if prediction: filter_arguments["vggpred"] = prediction+"%"
-    # if author: filter_arguments["metadata.authors"] = "%"+author+"%"
-    # if title: filter_arguments["title"] = "%"+title+"%"
-    # if creator: filter_arguments["creator"] = creator+"%"
-
-    # if category_name:
-    #     filter_arguments["metadata.cat"] = f'LIKE "{category_name}%"'
-    # elif category:
-    #     filter_arguments["metadata.cat"] = f'LIKE "{category}%"'
-    # if imageformat: filter_arguments["imageformat"] = f'LIKE "{imageformat}%"'
-    # if prediction: filter_arguments["vggpred"] = f'LIKE "{prediction}%"'
-    # if author: filter_arguments["metadata.authors"] = f'LIKE "%{author}%"'
-    # if title: filter_arguments["title"] = f'LIKE "%{title}%"'
-    # if creator: filter_arguments["creator"] = f'LIKE "{creator}%"'
-    # if caption: filter_arguments["captions.caption"] = f'LIKE "%{caption}%"'
-    # if date_start: filter_arguments["metadata.created"] = f'BETWEEN "{date_start}" AND "{date_end}"'
 
     if category_name:
         filter_arguments["cat"] = f'LIKE "{category_name}%"'
@@ -189,23 +155,17 @@ def get_images():
 
     # if abstract: filter_arguments["metadata.abstract"] = f'LIKE "%{abstract}%"'
     # if identifier: filter_arguments["metadata.identifier"] = f'LIKE "{identifier}%"'
-    # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
 
     # if no selected image, just get random indexes
     # else use annoy to find indexes
     # then filter using SQLite search
     # then get metadata for each image
 
-    # if search_select == None or search_select == "": # not image_id and
-
     # use random search mode
     if search_mode == None or search_mode == "random" or image_id == None or image_id == "":
         print("image_id:", image_id, "- getting random indexes")
-        # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
-        # images = [filepaths[i] for i in rand_nums]
         images = copy.deepcopy(filepaths) # only shuffle the copy
         random.shuffle(images)
-        # print("random images", images)
 
         image_id = None
         embedding = None
@@ -219,25 +179,6 @@ def get_images():
     # use nn search mode
     else: # request.method == "POST":
         print("--- nearest neighbours search ---")
-        # print("--- POST")
-        # print("name of button: ", request.form.get("btn"))
-
-        # if search_select != None: # request.form.get("btn") == "Search images":
-        '''
-        if embedding == "random": # or image_id == ""
-            print("image_id:", image_id, "- getting random indexes")
-            # rand_nums = random.sample(range(NUM_INDEXES), NIMAGES)
-            # images = [filepaths[i] for i in rand_nums]
-            images = copy.deepcopy(filepaths)
-            random.shuffle(images)
-            # print("random images", images)
-
-            image_id = None
-            embedding = None
-            result_total = None
-            images_shown = NIMAGES
-        else:
-        '''
         print("image id:", image_id)
         print(f'get annoy indexes for {embedding} and pull images')
 
@@ -254,9 +195,9 @@ def get_images():
         elif embedding == "cats":
             ann_filepath = current_app.config['ANNOY_CATS']
 
-        # print(h.heap())
+        print(h.heap())
         ann.load(ann_filepath)
-        # print(h.heap())
+        print(h.heap())
 
         print(f'loading AnnoyIndex, time taken {time.time() - start}')
 
@@ -281,12 +222,6 @@ def get_images():
         result_total = None
         images_shown = current_app.config["NIMAGES"]
 
-    # sql_filter = """
-    #             SELECT images.id
-    #             FROM images
-    #             LEFT JOIN metadata ON images.identifier == metadata.identifier
-    #             LEFT JOIN captions ON images.caption == captions.id
-    #             """
     sql_filter = """
                 SELECT id
                 FROM single
@@ -320,31 +255,20 @@ def get_images():
             db = get_db()
             c = db.cursor()
 
-            # print("sql arguments:", "%"+author+"%", category+"%", imageformat+"%", prediction+"%")
-            fargs = tuple((str(v) for c, v in filter_arguments.items()))
-            for f in fargs:
-                print("filter_arg: " + f)
-
-            # c.execute(sql_filter, fargs)
             c.execute(sql_filter, )
-
             rows = c.fetchall()
-            # result_total = len(rows)
-            # print(rows)
 
             filter_results = [row[0] for row in rows]
             print(f'querying SQLite for search terms, time taken {time.time() - start}')
             print("filter_results:", len(filter_results))
 
         if fts != None:
-            print("--- full text search ---")
+            print("--- running full text search ---")
             start = time.time()
 
-            print("--- running full text search")
             db = get_db()
             c = db.cursor()
 
-            # vsearch_sql = "SELECT id FROM vsingle WHERE vsingle MATCH ?"
             c.execute("SELECT id FROM vsingle WHERE vsingle MATCH ?", (f'"{fts}"', ))
             rows = c.fetchall()
 
@@ -359,6 +283,7 @@ def get_images():
         # all_results = list(dict.fromkeys(all_results)) # remove duplicates
 
         # attempt at making it intersect only
+        # check if only one of the filters being used and set
         all_results = []
         if not filter_results and fts_results:
             all_results = fts_results
@@ -369,22 +294,14 @@ def get_images():
             if fts:
                 messages.append("No images found to match full text search, showing filter results")
         else:
-            # for flt in filter_results:
-            #     if flt in fts_results:
-            #         all_results.append(flt)
+            # if both, get the intersection
             all_results = np.intersect1d(fts_results, filter_results)
 
         result_total = len(all_results)
 
-        # for fts in fts_results:
-        #     for filter in filter_results:
-        #         if fts != filter:
-        #             all_results.append(fts)
-
-        # print(f'all_results: {all_results}')
-
         print(f'cross matching results, time taken {time.time() - start}')
 
+        print("filtering for matches")
         start = time.time()
 
         matches = []
@@ -404,14 +321,9 @@ def get_images():
         if images_shown == 0:
             messages.append("Error: no images found that match the requested filters")
 
-        # print(images)
         print(f'filtering for matches, time taken {time.time() - start}')
-        # metadata.append(items)
 
-        # image_id = None
-
-        # elif request.form.get("btn") == "search-features":
-
+    print("getting metadata for displayed images")
     start = time.time()
 
     images = images[:current_app.config["NIMAGES"]]
@@ -419,7 +331,6 @@ def get_images():
     # only run the below code if we haven't already grabbed the database stuff?
     db = get_db()
     c = db.cursor()
-    metadata = []
     metadict = {}
 
     # meta_sql = """
@@ -447,7 +358,6 @@ def get_images():
         for row in rows:
             items = [str(r) for r in row]
             # print(items)
-            metadata.append(items)
 
             md = {}
             md["identifier"] = str(rows[0][0])
@@ -471,9 +381,7 @@ def get_images():
 
             meta_image_id = str(rows[0][12])
             metadict[meta_image_id] = md
-    print("metadata length:", len(metadata))
     print("metadict length:", len(metadict))
-    # print(metadata)
 
     print(f'querying metadata, time taken {time.time() - start}')
 
@@ -482,17 +390,12 @@ def get_images():
     #     images_shown = min(images_shown, result_total)
     print("images_shown:", images_shown)
 
-    si_meta = None
     si_meta_d = {}
 
     if image_id:
         c.execute(meta_sql, (image_id,))
         rows = c.fetchall()
-        # for row in rows:
-        si_meta = [str(r) for r in rows[0]]
-            # si_meta = [row[0] for row in rows]
 
-        print("si_meta:", si_meta)
         md = {}
         md["identifier"] = str(rows[0][0])
         md["filename"] = str(rows[0][1])
@@ -512,20 +415,16 @@ def get_images():
         else:
             md["caption"] = str(cap).replace('\n', ' ')
         # md["caption"] = str(rows[0][11]).replace('\n', ' ')
-        # if md["caption"] == "None":
-            # md["caption"] = "-"
-        # print("md caption:", md["caption"])
+
         meta_image_id = str(rows[0][12])
         si_meta_d[image_id] = md
 
-    # check if we have filters, category doesn't count
+    # check if we have filters, pass number to template
     nFilters = 0
-    # min_filters = 1 if "metadata.cat" in filter_arguments else 0
-    # print("min filters", min_filters)
     if len(filter_arguments) > 0:
         nFilters = len(filter_arguments) # True
 
-    # print(h.heap())
+    print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
     return render_template('core/interface.html.j2', images=images, metadict=metadict,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,
@@ -533,8 +432,6 @@ def get_images():
                             si_meta_d=si_meta_d,
                             category=category, category_name=category_name, imageformat=imageformat, prediction=prediction, author=author,
                             title=title, creator=creator, caption=caption, date_start=date_start, date_end=date_end, nFilters=nFilters, messages=messages, fts=fts)
-                            # metadata=metadata,
-                            # si_meta=si_meta,
 
 @bp.route('/about')
 def about():
