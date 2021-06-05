@@ -43,22 +43,6 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
-    # @app.route('/hello')
-    # def hello():
-    #     return 'Hello, World!'
-
-    # @app.route('/test')
-    # def get_test_image():
-    #     """Just show one image as a test
-    #     """
-    #
-    #     # filename = "/home/rte/data/images/web/120k/5478268.jpg"
-    #     # filename = os.path.join("static/all", "5478268.jpg")
-    #     filename = os.path.join("static/all", "7732085.jpg")
-    #     # return f'<img src={filename}>'
-    #     return render_template("opening.html", image = filename)
-
     # register the database commands
     from imagemesh import db
 
@@ -71,12 +55,5 @@ def create_app(test_config=None):
     from imagemesh import core
 
     app.register_blueprint(core.bp)
-    # app.register_blueprint(blog.bp)
-
-    # make url_for('index') == url_for('blog.index')
-    # in another app, you might define a separate main index here with
-    # app.route, while giving the blog blueprint a url_prefix, but for
-    # the tutorial the blog will be the main index
-    # app.add_url_rule("/", endpoint="index")
 
     return app
