@@ -25,9 +25,9 @@ import math
 from datetime import date
 import time
 
-from guppy import hpy
-h = hpy()
-print(h.heap())
+# from guppy import hpy
+# h = hpy()
+# print(h.heap())
 
 # now set in config
 # NUM_INDEXES = 600000
@@ -197,9 +197,9 @@ def get_images():
         elif embedding == "cats":
             ann_filepath = current_app.config['ANNOY_CATS']
 
-        print(h.heap())
+        # print(h.heap())
         ann.load(ann_filepath)
-        print(h.heap())
+        # print(h.heap())
 
         print(f'loading AnnoyIndex, time taken {time.time() - start}')
 
@@ -426,7 +426,7 @@ def get_images():
     if len(filter_arguments) > 0:
         nFilters = len(filter_arguments) # True
 
-    print(h.heap())
+    # print(h.heap())
     print(f'calling return render_template, with {len(images)} images: {images}')
     return render_template('interface.html.j2', images=images, metadict=metadict,
                             enumerate=enumerate, prev_image_id=image_id, result_total=result_total,

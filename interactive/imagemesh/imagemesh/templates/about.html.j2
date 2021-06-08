@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}ImageMesh{% endblock %}
+{% block title %}ImageMesh - About{% endblock %}
 
 {% block header %}
   <h1 class="mt-2 mx-2">About</h1>
@@ -51,27 +51,34 @@ In addition to the search mode, the results can be filtered according to the met
 
 There are four embeddings currently available. Each embedding is created by using a particular neural network to process each image in the dataset and then saving the resulting data. This data was further reduced using Principal Component Analysis, we used the [scikit-learn IncrementalPCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.IncrementalPCA.html). The reduced data was then used to construct a nearest neighbours map using the [Annoy library](https://github.com/spotify/annoy), which allows for fast approximate k-nearest neighbours over large sets of data. The machine learning embeddings are pre-computed, meaning that the nearest neighbour search is fast and computationally cheap. This enables exploration of the dataset using the images themselves to bring up different ‘slices’ of the dataset according the way different neural networks interpret the image data.
 
-### ternary
+### - ternary
 
 This classifier was trained using manually labelled images. The researchers labelled 9748 randomly sampled images from arXiv as either diagram, sensor, or mixed. Sensor refers to images that appear to have been captured using photography or other capture devices. This classifier was then trained on these images and achieved accuracy of 92.07% on the cross-validation dataset. While the classifier has learned features of the images, due to the small number of training samples there are a number of strange results produced when run over the larger subset of data.
 
-### VGG16
+### - VGG16
 
 The VGG16 architecture, pre-trained on ImageNet. We used the [Keras](https://keras.io/) implementation. This classifier achieves high accuracy on ImageNet. Using this embedding is more likely to produce associations based on image classification, such as detecting a particular object in the image, due to the large quantities of data used in pre-training. Note also that the top-5 predictions using VGG16 have been saved in the metadata and can be accessed via hovering over the selected image.
 
-### raw
+### - raw
 
 The raw pixels of each image. Generally produces associations based on overall colour content.
 
-### cats
+### - cats
 
 A classifier trained on images of cats and dogs. We used keras to train this network, following [this example](https://keras.io/examples/vision/image_classification_from_scratch/). Produces some unlikely associations between images.
+
+## Data Policy
+
+We do not record or store any data from users.
+
 
 {% endfilter %}
 
 <a class="nav-link active" href="{{ url_for('core.get_images') }}">Interface</a>
 
+<br>
 <hr>
+<br>
 
 <!-- </div>
 

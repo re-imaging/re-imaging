@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}ImageMesh{% endblock %}
+{% block title %}ImageMesh - Interface{% endblock %}
 
 {% block content %}
 
@@ -305,7 +305,7 @@
         {% set authors_short = metadict[image]["authors"]|e %}
       {% endif %}
       {% set pl = metadict[image]["vggpred"].lower().replace(","," ").split() %}
-      {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1]|e, pl[0]|e, pl[3]|e, pl[2]|e, pl[5]|e, pl[4]|e, pl[7]|e, pl[6]|e, pl[9]|e, pl[8]|tojson) %}
+      {% set prediction_formatted = "{} {}<br>{} {}<br>{} {}<br>{} {}<br>{} {}".format(pl[1]|e, pl[0]|e, pl[3]|e, pl[2]|e, pl[5]|e, pl[4]|e, pl[7]|e, pl[6]|e, pl[9]|e, pl[8]|e) %}
       {% set caption = metadict[image]["caption"]|e %}
 
       <div class="grid-item" image_id={{image.split(".")[0]}}>
