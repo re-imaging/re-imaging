@@ -44,10 +44,8 @@ def create_app(test_config=None):
             resource.setrlimit(resource.RLIMIT_AS, (max_mem, hard))
         memory_limit()
 
-
     # register the database commands
     from imagemesh import db
-
     db.init_app(app)
 
     # construct a Markdown using flask instance
@@ -55,7 +53,9 @@ def create_app(test_config=None):
 
     # apply the blueprints to the app
     from imagemesh import core
-
     app.register_blueprint(core.bp)
 
     return app
+
+# if __name__ = "__main__":
+app = create_app()
