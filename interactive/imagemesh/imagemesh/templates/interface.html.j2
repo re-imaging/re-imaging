@@ -325,7 +325,7 @@
 
           <div class='tab-content' id='tab-content-{{image}}'>
             <div class='tab-pane fade show active' id='tab-{{image}}-id' role='tabpanel' aria-labelledby='id-tab'>
-              <b>identifier:</b> <a href=https://arxiv.org/abs/{{metadict[image]['identifier']|e}}>{{metadict[image]['identifier']|e}}</a><br><b>date:</b> {{metadict[image]['created']|e}}<br><b>category:</b> {{metadict[image]['cat']|e}}<br><b>authors:</b> {{authors_short|e}}<br><b>title:</b> {{metadict[image]['title']|e}}<br>
+              <b>identifier:</b> <a href='https://arxiv.org/abs/{{metadict[image]['identifier']|e}}' target='_blank' rel='noopener noreferrer'>{{metadict[image]['identifier']|e}}</a><br><b>date:</b> {{metadict[image]['created']|e}}<br><b>category:</b> {{metadict[image]['cat']|e}}<br><b>authors:</b> {{authors_short|e}}<br><b>title:</b> {{metadict[image]['title']|e}}<br>
               </div>
             <div class='tab-pane fade' id='tab-{{image}}-fm' role='tabpanel' aria-labelledby='format-tab'>
               <b>filename:</b> {{metadict[image]['filename']|e}}<br><b>x:</b> {{metadict[image]['x']|e}}<b> y:</b> {{metadict[image]['y']|e}}<br><b>format:</b> {{metadict[image]['imageformat']|e}}<br><b>creator:</b> {{metadict[image]['creator']|e}}<br>
@@ -633,7 +633,7 @@
 
           "<div class='tab-content' id='tab-content-{{prev_image_id}}'>" +
             "<div class='tab-pane fade show active' id='tab-{{prev_image_id}}-id' role='tabpanel' aria-labelledby='id-tab'>" +
-              "<b>identifier:</b> <a href=https://arxiv.org/abs/{{si_meta_d[prev_image_id]['identifier']|e}}>{{si_meta_d[prev_image_id]['identifier']|e}}</a><br><b>date:</b> {{si_meta_d[prev_image_id]['created']|e}}<br><b>category:</b> {{si_meta_d[prev_image_id]['cat']|e}}<br><b>authors:</b> {{si_authors_short|e}}<br><b>title:</b> {{si_meta_d[prev_image_id]['title']|e}}<br>" +
+              "<b>identifier:</b> <a href='https://arxiv.org/abs/{{si_meta_d[prev_image_id]['identifier']|e}}' target='_blank' rel='noopener noreferrer'>{{si_meta_d[prev_image_id]['identifier']|e}}</a><br><b>date:</b> {{si_meta_d[prev_image_id]['created']|e}}<br><b>category:</b> {{si_meta_d[prev_image_id]['cat']|e}}<br><b>authors:</b> {{si_authors_short|e}}<br><b>title:</b> {{si_meta_d[prev_image_id]['title']|e}}<br>" +
               "</div>" +
             "<div class='tab-pane fade' id='tab-{{prev_image_id}}-fm' role='tabpanel' aria-labelledby='format-tab'>" +
              "<b>filename:</b> {{si_meta_d[prev_image_id]['filename']|e}}<br><b>x:</b>" + "{{si_meta_d[prev_image_id]['x']|e}}<b> y:</b> {{si_meta_d[prev_image_id]['y']|e}}<br><b>format:</b> {{si_meta_d[prev_image_id]['imageformat']|e}}<br><b>creator:</b> {{si_meta_d[prev_image_id]['creator']|e}}<br>" +
