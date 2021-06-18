@@ -66,6 +66,10 @@
                 <label for="embedding">ML embedding</label>
                 <!-- class="input-group-text" -->
                 <!-- </div> -->
+                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="top"
+                  title='Select which neural network embedding to use for nearest neighbours. More info on the "About" page.'>
+                  <i class="bi bi-info-circle"></i>
+                </div>
                 <div class="col">
                   <select class="form-select" name="embedding" id="embedding">
                     <option value="ternary">ternary</option>
@@ -80,8 +84,8 @@
                 <div class="col d-none">
                   <label for="image_id" id="image_id_label" class="align-bottom">Target image</label>
                 </div>
-                <div class="col  d-none">
-                  <input class="col" style="float: right;"for="image_id" name="image_id" id="image_id" placeholder="Click on an image" type="number">
+                <div class="col d-none">
+                  <input class="col" style="float: right;"for="image_id" name="image_id" id="image_id" placeholder="Click on an image" type="number" value="{{ prev_image_id }}">
                 </div>
               </div>
               <!-- style="vertical-align: middle; max-width: 160px;" -->
@@ -90,7 +94,7 @@
             <div class="col">
               <div class="full-text-search">
                 <label for="fts">Keyword search</label> <!-- Search the database -->
-                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="top"
                   title="Searches for keyword matches across a number of metadata fields.">
                   <i class="bi bi-info-circle"></i>
                 </div>
@@ -100,7 +104,7 @@
 
             <div class="category-dropdown">
               <label for="category">Archive and category</label>
-              <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+              <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="top"
                 title="Search by archive and category (subject area). Listed according to the arXiv category taxonomy. Searches first-listed category only.">
                 <i class="bi bi-info-circle"></i>
               </div>
@@ -109,7 +113,7 @@
 
             <div class="category-name-dropdown">
               <label for="category" class="d-none">Category</label>
-              <!-- <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+              <!-- <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="top"
                 title="Search using the article category (specific subject area). Categories are listed according to the arXiv category taxonomy. Searches first-listed category only.">
                 <i class="bi bi-info-circle"></i>
               </div> -->
@@ -165,7 +169,7 @@
                   <div class="col">
                     <div class="prediction">
                       <label for="prediction">VGG prediction</label>
-                      <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                      <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="top"
                         title="Search the predictions made by a VGG16 classifier that was trained on ImageNet. Searches only the top-1 prediction.">
                         <i class="bi bi-info-circle"></i>
                       </div>
@@ -179,7 +183,7 @@
                   <div class="col">
                     <div class="creator-filter">
                       <label for="creator">Creator/Software</label>
-                      <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="right"
+                      <div style="display: inline-block; vertical-align: text-bottom;" data-toggle="tooltip" data-placement="top"
                         title="Filter by the 'creator' or 'software' field in the image metadata. The number indicates total number of matching images in this data subset.">
                         <i class="bi bi-info-circle"></i>
                       </div>
@@ -348,6 +352,10 @@
     // let nnButton = $('#nn-btn');
     let gray = "#cccccc"
     let black = "#000000"
+
+    imageID = $("#image_id").val()
+    console.log("imageID: " + imageID);
+
     if(checkbox.checked == 1) {
       document.getElementById("random-text").style.color = gray;
       document.getElementById("embedding-text").style.color = black;
@@ -362,6 +370,14 @@
       // $('#nn-btn').click();
       // btn = document.getElementById("search-mode-nn");
       // btn.checked = true;
+
+      if(imageID) {
+        console.log("yes there is an image selected when nn chosen");
+      } else {
+        console.log("no image selected when nn chosen");
+        document.getElementById("selected_image").innerHTML = "<em>Please double click on an image to select for nearest neighbour search</em>";
+      }
+
     } else if (checkbox.checked == 0) {
       document.getElementById("random-text").style.color = black;
       document.getElementById("embedding-text").style.color = gray;
@@ -378,6 +394,11 @@
       // $('#sample-btn').click();
       // btn = document.getElementById("search-mode-random");
       // btn.checked = true;
+
+      // remove text set by clicking on nn radio button
+      if( $("#selected_image").is(':contains("Please double click")')) {
+        document.getElementById("selected_image").innerHTML = "";
+      }
     }
   }
 
@@ -539,11 +560,13 @@
       // var img_pred = $(item).attr("prediction");
       var img_pred = itemPred;
       // console.log("showing selected image: " + img_src);
+
+      $("#image_id").val(img_id);
+
       show_selected(img_src, img_data, img_pred);
 
       console.log("setting image_id to: " + img_id);
       console.log("prediction: " + img_pred);
-      $("#image_id").val(img_id);
       $(".results").empty().append(img_id);
     }
 
@@ -972,9 +995,11 @@
       $('[data-toggle="tooltip"]').tooltip()
     })
 
+    {#
     {% if prev_image_id %}
       $("#image_id").val( {{ prev_image_id }} );
     {% endif %}
+    #}
 
     {% if embedding %}
       console.log({{embedding|tojson}});

@@ -176,7 +176,7 @@ def get_images():
 
         if search_mode == "nn":
             if image_id == None or image_id == "":
-                messages.append("Error: no image selected for nearest neighbour search - showing randomly sampled images")
+                messages.append("Error: no image selected for nearest neighbour search - showing randomly sampled images. Please double click on an image to select")
 
     # use nn search mode
     else: # request.method == "POST":
