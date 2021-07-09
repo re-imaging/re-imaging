@@ -4,13 +4,18 @@
 ** About
 This document lists the credits for images used in the paper "Images of the arXiv: reconfiguring large scientific image datasets". There are a number of figures in this paper that use images sampled from arXiv. It was not practical to credit these in the paper due to the large number of images, so the credits are provided here. For montages the credits are listed in order from the top left corner, left to right and top to bottom. For t-SNE images credits unordered due to the images being spatially (re)mapped.
 
-#+TOC: headlines 3
-
-** Contents                                                             :toc:quote:noexport:
+** Contents                                           :toc_3:quote:noexport:
 #+BEGIN_QUOTE
 - [[#image-credits-for-figures][Image Credits for Figures]]
   - [[#about][About]]
   - [[#credits][Credits]]
+    - [[#montage-4x4-random][montage 4x4 random]]
+    - [[#montage-12x12-random][montage 12x12 random]]
+    - [[#montage-12x12-cscv-october-2018][montage 12x12 cs.CV October 2018]]
+    - [[#montage-12x12-statml-october-2012][montage 12x12 stat.ML October 2012]]
+    - [[#montage-12x12-csai-2012][montage 12x12 cs.AI 2012]]
+    - [[#t-sne-8381-images-cscv-2012][t-SNE 8381 images cs.CV 2012]]
+    - [[#t-sne-2889-images-statml-2012][t-SNE 2889 images stat.ML 2012]]
 #+END_QUOTE
 
 ** Credits
