@@ -1,0 +1,14 @@
+name: py37
+channels:
+  - defaults
+dependencies:
+  - python=3.7
+  - matplotlib
+  - jupyter
+  - pexpect
+  - pandas
+  - seaborn
+  - beautifulsoup4
+  - xlrd
+  - xlsxwriter
+prefix: /home/rte/code/anaconda3/envs/py37

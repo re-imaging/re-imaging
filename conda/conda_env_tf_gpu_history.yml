@@ -1,0 +1,14 @@
+name: tf_gpu
+channels:
+  - defaults
+dependencies:
+  - tensorflow-gpu
+  - jupyter
+  - matplotlib
+  - pillow
+  - pandas
+  - pip
+  - tqdm
+  - cudatoolkit=10.0
+  - pydot
+prefix: /home/rte/code/anaconda3/envs/tf_gpu
