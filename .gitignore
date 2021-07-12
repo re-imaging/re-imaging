@@ -38,6 +38,7 @@ interactive/memory_tests
 #ignore a few specific files
 create-db/fts_test.ipynb
 create-db/get_captions_test.ipynb
+jupyter_config.ipynb
 
 #ignore jupyter notebook checkpoints and config files
 .ipynb_checkpoints
