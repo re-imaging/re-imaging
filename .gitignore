@@ -34,6 +34,7 @@ test/
 cats/
 create-db/not_needed
 interactive/memory_tests
+labelling/reports
 
 #ignore a few specific files
 create-db/fts_test.ipynb
