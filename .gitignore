@@ -33,6 +33,11 @@ ml-scripts/
 test/
 cats/
 create-db/not_needed
+interactive/memory_tests
+
+#ignore a few specific files
+create-db/fts_test.ipynb
+create-db/get_captions_test.ipynb
 
 #ignore jupyter notebook checkpoints and config files
 .ipynb_checkpoints
