@@ -1,0 +1,10 @@
+| http://arxiv.org/licenses/nonexclusive-distrib/1.0/ | 1238435 |
+|                                                     |  453001 |
+| http://creativecommons.org/licenses/by/4.0/         |   20347 |
+| http://creativecommons.org/licenses/by-nc-sa/4.0/   |    8542 |
+| http://creativecommons.org/licenses/by/3.0/         |    7930 |
+| http://creativecommons.org/licenses/by-nc-sa/3.0/   |    5895 |
+| http://creativecommons.org/publicdomain/zero/1.0/   |    3223 |
+| http://creativecommons.org/licenses/by-sa/4.0/      |    2864 |
+| http://creativecommons.org/licenses/publicdomain/   |    2482 |
+|                                                     |         |
