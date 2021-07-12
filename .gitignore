@@ -32,6 +32,7 @@ extra/
 ml-scripts/
 test/
 cats/
+create-db/not_needed
 
 #ignore jupyter notebook checkpoints and config files
 .ipynb_checkpoints
