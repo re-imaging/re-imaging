@@ -1,0 +1,4 @@
+|       id | identifier | filename              | filesize | path                     |    x |   y | imageformat | creator   |
+|  8482063 | 1705.07329 | horse2_img_scale3.png |   155251 | ./1705/1705.07329/images | 1181 | 986 | PNG         | -         |
+| 11325892 | 1901.09950 | TOI172_Porb.pdf       |    27443 | ./1901/1901.09950        |  461 | 345 | PDF         | -         |
+| 12368447 | 1902.07160 | unit-rectangle.pdf    |    86654 | ./1902/1902.07160        |  612 | 792 | PDF         | rdonnelly |
