@@ -1,11 +1,14 @@
-* Update - up to end of 06/2020
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
+
+* Update - up to end of 06/2020 (note this document is incomplete)
 * About
 
 This document contains various data statistics relating to the text and image data of the www.arxiv.org dataset. The entire source of the arxiv dataset was downloaded at the end of June 2020. It was then extracted into individual files and queried. The majority of these statistics have been collected through the process of querying the dataset along with the associated metadata provided via the OAI format (see https://arxiv.org/help/oa).
 
 * Table of Contents                                             :TOC_3:QUOTE:
 #+BEGIN_QUOTE
-- [[#update---up-to-end-of-062020][Update - up to end of 06/2020]]
+- [[#update---up-to-end-of-062020-note-this-document-is-incomplete][Update - up to end of 06/2020 (note this document is incomplete)]]
 - [[#about][About]]
 - [[#key][Key]]
 - [[#general][General]]
@@ -103,7 +106,6 @@ find . -type f -name "*.gz" | wc -l
 
 # needs to be recalculated
 
-1,476,538 - 324,101 - 114,132 = 1038305
 
 (1038305 / 1,476,538 = 70.32% of total articles)
 
@@ -709,8 +711,6 @@ du -h --max-depth 1
 #+END_SRC
 
 ** Number of tar archive files
-
-
 ** Number of folders with ancillary files provided
 
 #+BEGIN_SRC bash
@@ -746,8 +746,6 @@ find . -type f \( -iname "*.png" -o -iname "*.eps" -o -iname "*.pdf" -o -iname "
 # result: 9017
 
 ** Number of images extracted from PDFs
-
-
 ** List of all different image file extensions
 
 
