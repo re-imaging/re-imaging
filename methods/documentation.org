@@ -27,12 +27,13 @@ You can view montages showing 256 images for all 100 clusters here: https://www.
 Examples:
 
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/36_montage.jpg" /></p>
-
+---
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/2_montage.jpg" /></p>
-
+---
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/3_montage.jpg" /></p>
-
+---
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/3_montage.jpg" /></p>
+---
 
 ** Ternary Classifier
 "To estimate the ratios of these different types of images, we trained a neural network classifier that would predict whether an image most closely resembled a ‘diagram,’ ‘sensor’ or ‘mixed’ (this work was performed by the three researchers on this project and assigned independently to each as a human intelligence task or HIT. Our decisions are of necessity biased according to our individual and collective approaches to labelling these categories). To build a training dataset, we manually labelled 9748 randomly sampled images. The decision to create a ternary classifier with a ‘mixed’ category was intended to capture and highlight the varied operations being performed by images across different kinds of knowledge domains. For example, in our initial querying of image distribution in the dataset, we noticed clusters of images that appeared to be somehow sensor-generated yet re-organised through graphic overlays that seemed to suggest they were being set within a diagrammatic schema. For our purposes, then, a ternary labelling and classification of the images allowed us to view the shifting ratios of image types across arXiv. Our training set produced: 8649 (88.7%) images as ‘diagram,’ 477 (4.89%) as ‘sensor’ and 622 (6.38%) images as ‘mixed.’"
@@ -44,13 +45,13 @@ More documentation:
 
 Examples of prediction confidence on a number of test images:
 
-#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/ternary_prediction_diagram_68pc_5229196.jpg" /></p
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/ternary/ternary_prediction_diagram_68pc_5229196.jpg" /></p
 >
-#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/ternary_prediction_diagram_97pc_3845003.jpg" /></p>
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/ternary/ternary_prediction_diagram_97pc_3845003.jpg" /></p>
 
-#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/ternary_prediction_mixed_99pc_1018846.jpg" /></p>
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/ternary/ternary_prediction_mixed_99pc_1018846.jpg" /></p>
 
-#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/ternary_prediction_sensor_99pc_5408067.jpg" /></p>
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/ternary/ternary_prediction_sensor_99pc_5408067.jpg" /></p>
 
 ** Feature Visualisation
 ** t-SNE
