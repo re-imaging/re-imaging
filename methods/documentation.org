@@ -64,7 +64,32 @@ More examples: https://www.dropbox.com/sh/qcv424p32xjmwqf/AADi_Hp20uW7BF8OojVOxK
 
 https://www.dropbox.com/sh/p27ifjfdcpfdx28/AAATXzIwB-1lDEZ0tarf8tnba?dl=0
 ** t-SNE
+Another ML method for looking at spatial distribution of similarity and differences via clustering of data is the t-SNE algorithm. t-SNE does this by performing dimensionality reduction and placing all images in a 2-dimensional spatial mapping, which can then be analysed visually by human eyes.
+
+We ran a t-SNE algorithm across various subsets of images in order to look for patterns of similarity, without any explicit reference to disciplinary boundaries (Laurens van der Maaten and Geoffrey E. Hinton, “Visualizing Data Using T­SNE,” Journal of Machine Learn­
+ing Research 9 (Nov 2008): 2579–605 We used the CUDA accelerated implementation tsne-cuda, see David M.
+Chan et al., “GPU Accelerated T­Distributed Stochastic Neighbor Embedding,” Journal of Parallel and Distributed
+Computing 131 (2019): 1–13). We took a VGG-16 CNN model, pre-trained on ImageNet and used the second last fully connected layer to obtain image features (we used the implementation provided by the [[https://keras.io/api/applications/vgg/#vgg16-function][Keras library]]. This provides a 4096-dimension feature vector for each image – much smaller than the original pixel data but embedded with specific features of the classifier network. Principle component analysis, a standard process in ML dimensionality reduction, is then applied to this feature vector to reduce the size of the vector and remove redundancy. This allows us to convert the 4096-dimension vector to 300 dimensions, while retaining almost all of the variance. t-SNE is then used to find two-dimensional coordinates for each of these image vectors, which can then be used to plot the original images in 2-dimensional space. It does this by iteratively calculating the nearest neighbours for each data point (each image) and reorganising the two dimensional output until the data is placed optimally.
+
+Thanks to Machine Learning for Artists (ML4A) for code examples for this process of feature extraction. See “image-tsne.ipynb” in https://github.com/ml4a/ml4a­guides. The results of this process create vectorised observations drawn from the features of the images such as textures, colours, and contours.
+
+All t-SNE mappings for a given year, by arXiv categories cs.CV, math.AC, math.CT, physics.med-ph, stat.ML: https://www.dropbox.com/sh/4mjo5no8ldjyljt/AAAJwcvHLXLSZwRTlaXvgAuIa?dl=0
+
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/t-SNE/example-tSNE-grid-arxiv1001_1000.jpg" /></p>
+t-SNE map of 1000 images from arXiv, organised by features extracted from VGG classifier
+
+---
+
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/t-SNE/tSNE_cuda_cs.CV_2012_n2000_p50_2019-06-18_16-35-11.png" /></P>
+
+t-SNE map of images with the primary category of cs.CV (computer science, computer vision) from 2012 from arXiv, organised by features extracted from VGG classifier
 ** UMAP
+Similar to t-SNE, we experimented with using [[https://umap-learn.readthedocs.io/en/latest/][UMAP]] to reduce the dimensionality of image data and create a mapping. More exploration of this area would be worthwhile, particularly using a feature extractor that is more tailored to the dataset, such as DeepCluster run on arXiv images.
+
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/UMAP/umap_random_grid_x300_20201008-124637.png" /></p>
+
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/UMAP/umap_random_x5000_20200910-181600.png" /></p>
+
 ** StyleGAN
 StyleGAN: https://github.com/NVlabs/stylegan
 running with TensorFlow
