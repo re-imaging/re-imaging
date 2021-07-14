@@ -6,6 +6,7 @@
 #+BEGIN_QUOTE
 - [[#re-imaging-the-empirical---documentation][Re-imaging the empirical - Documentation]]
   - [[#about][About]]
+  - [[#imagemesh][ImageMesh]]
   - [[#deepcluster][DeepCluster]]
   - [[#ternary-classifier][Ternary Classifier]]
   - [[#feature-visualisation][Feature Visualisation]]
@@ -17,6 +18,13 @@
 
 ** About
 This page describes and gives examples of some of the processes undertaken in the project Re-imaging the empirical: statistical visualisation in art and science. For more info about the project see https://github.com/re-imaging/re-imaging
+** ImageMesh
+[[https://imagemesh.ai/][ImageMesh]] is a visual explorer application that allows interactive visualisation of a dataset of images drawn from the [[https://arxiv.org/][arXiv]] repository. This version uses 600,000 images from a total of over 12 million in the arXiv bulk dataset up to July 2020. ImageMesh draws inspiration from [[https://imgs.ai/][imgs.ai]], developed by Fabian Offert, with contributions by Peter Bell and Oleg Harlamov.
+
+ImageMesh is a major outcome of this project and uses all of the below experiments to create a visual explorer that allows the user to explore the arXiv images dataset via ML ways of looking.
+
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/ImageMesh/ImageMesh_Screenshot_NN_2021-07-14.png" /></p>
+
 ** DeepCluster
 We used the method of unsupervised learning outlined in the arXiv paper [[https://arxiv.org/abs/1807.05520][Deep Clustering for Unsupervised Learning of Visual Features]] to train a classifier that predicts whether images belong to 100 different clusters. This produces strong similarity among particular image trends, e.g. logos, schematics, photographs, graphs showing small multiples. This provides the highest degree of learning based on the arXiv images dataset. For more details on the code used, see the [[https://github.com/facebookresearch/deepcluster][DeepCluster GitHub]].
 
