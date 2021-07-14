@@ -3,18 +3,32 @@
 *** OS
 - Linux: Ubuntu 18.04
 *** Hardware
-- Intel i7 CPU
+- Intel i7 8700 CPU
+- MSI Z390 AC LGA 1151 ATX Motherboard
 - 500GB NVMe solid state drive
-- 4TB 72000 rpm hard disk
+- 2x 4TB 72000 rpm hard disk
 - 32GB DDR3 RAM
 - NVidia RTX 2080 graphics card 8GB VRAM
 *** Software
 - Anaconda (recommended for installing and managing Python packages)
 - Python (2 and 3)
+- multiprocessing
 - ImageMagick (for convert and identify)
+- PIL (pillow)
 - Jupyter Notebook
 - SQLite interfaces for Python and Bash
 - tensorflow-gpu
+- Matplotlib
+- Seaborn
+- Pandas
+- Numpy
+- scikit-learn
+- Keras
+- t-SNE
+- UMAP
+- Machine Learning for Artists [[https://ml4a.github.io][- ML4A]]
+- Mario Klingemann's [[https://github.com/Quasimondo/RasterFairy][RasterFairy]]
+- [[https://github.com/CannyLab/tsne-cuda][tsne-cuda]]
 ** Environments
-We used two different conda environments for running the required scripts. The first is ~py37~, which contains basic Python3 packages, ~matplotlib~, and other utilities. The second is ~tf_gpu~, which is configured to run TensorFlow 1.14 using GPU acceleration. This package will take longer to install so is provided separately. See the conda YAML files.
+We used two primary conda environments for running the required scripts. The first is ~py37~, which contains basic Python3 packages, ~matplotlib~, and other utilities. The second is ~tf_gpu~, which is configured to run TensorFlow 1.14 using GPU acceleration. This package will take longer to install so is provided separately. See the conda YAML files. Also provided are environments for Python 2 and PyTorch.
 
