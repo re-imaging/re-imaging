@@ -17,13 +17,26 @@ The project has three threads:
 
 This GitHub repository contains the code used for the various parts of this project. This includes downloading and extracting the bulk source data from arXiv, cleaning and organising metadata, converting images, visualising slices of the dataset, running classification algorithms, encoding nearest neighbours maps, and generating images using GANs. As such, it is quite a varied and large repository, but it is hoped that some of the scripts and notebooks will be useful for projects accessing arXiv or using ML techniques on large image datasets.
 
-### Steps for downloading, extracting, and converting arXiv images dataset: 
+## Code
+This repository contains code, statistics, and images produced throughout the project. These materials are mostly concerned with looking at the dataset of all the images, text, and metadata contained within the [arXiv](https://arxiv.org) source files.
+
+For detailed instructions on running the code, please look in the [methods folder](https://github.com/re-imaging/re-imaging/blob/master/methods/):
+- detailed instructions on downloading and extracting the arXiv bulk data and OAI metadata in [dataset-methods](https://github.com/re-imaging/re-imaging/blob/master/methods/dataset-method.org)
+- step-by-step methods for organising metadata into an SQLite database in [sqlite-method](https://github.com/re-imaging/re-imaging/blob/master/methods/sqlite-method.org)
+- process of converting varied image formats to consistent size jpg images in [image-conversion](https://github.com/re-imaging/re-imaging/blob/master/methods/image-conversion.org) (additional examples in the [image-conversion](https://github.com/re-imaging/re-imaging/tree/master/image-conversion) folder)
+- basic information about our [computer setup](https://github.com/re-imaging/re-imaging/blob/master/methods/setup.org)
+- examples and explanation of project [documentation](https://github.com/re-imaging/re-imaging/blob/master/methods/documentation.org)
+- tool for quick human [labelling of images](https://github.com/re-imaging/re-imaging/blob/master/labelling)
+
+Code is written using bash, Python, SQLite, jupyter notebooks, and anaconda. Tested on Ubuntu 18.04 with an Intel CPU and NVidia graphics card.
+
+## Steps for downloading, extracting, and converting arXiv images dataset: 
 - Downloading and extracting the arXiv source dataset - see [arxiv_extract.sh](https://github.com/re-imaging/re-imaging/blob/master/arxiv-src-scripts/arxiv_extract.sh)
 - Creating an SQLite database to index each image and link to metadata - [sqlite-scripts](https://github.com/re-imaging/re-imaging/blob/master/sqlite-scripts)
 - Querying dataset for various statistics regarding image formats, dimensions, category distributions etc. - see [statistics](https://github.com/re-imaging/re-imaging/blob/master/statistics), e.g. [general data statistics](https://github.com/re-imaging/re-imaging/blob/master/statistics/data-statistics.org)
 - Preparing data by converting all images to uniform sizes using ImageMagick `convert` - see the [image-conversion](https://github.com/re-imaging/re-imaging/tree/master/image-conversion) folder and in particular [convert_images_from_textfile_threaded.py](https://github.com/re-imaging/re-imaging/blob/master/image-conversion/convert_images_from_textfile_threaded.py)
 
-### Additional processes:
+## Additional processes:
 - Running machine learning techniques such as image classification and dimensionality reduction across data
 - Producing t-SNE maps of the distribution of different image features within subsets of the data
 - Generating images using the image dataset using generative adversarial networks
@@ -83,19 +96,6 @@ t-SNE map of 1000 images from arXiv, organised by features extracted from VGG cl
 t-SNE map of images with the primary category of cs.CV (computer science, computer vision) from 2012 from arXiv, organised by features extracted from VGG classifier
 
 ---
-
-## Code
-This repository contains code, statistics, and images produced throughout the project. These materials are mostly concerned with looking at the dataset of all the images, text, and metadata contained within the [arXiv](https://arxiv.org) source files.
-
-For detailed instructions on running the code, please look in the [methods folder](https://github.com/re-imaging/re-imaging/blob/master/methods/):
-- detailed instructions on downloading and extracting the arXiv bulk data and OAI metadata in [dataset-methods](https://github.com/re-imaging/re-imaging/blob/master/methods/dataset-method.org)
-- step-by-step methods for organising metadata into an SQLite database in [sqlite-method](https://github.com/re-imaging/re-imaging/blob/master/methods/sqlite-method.org)
-- process of converting varied image formats to consistent size jpg images in [image-conversion](https://github.com/re-imaging/re-imaging/blob/master/methods/image-conversion.org) (additional examples in the [image-conversion](https://github.com/re-imaging/re-imaging/tree/master/image-conversion) folder)
-- basic information about our [computer setup](https://github.com/re-imaging/re-imaging/blob/master/methods/setup.org)
-- examples and explanation of project [documentation](https://github.com/re-imaging/re-imaging/blob/master/methods/documentation.org)
-- tool for quick human [labelling of images](https://github.com/re-imaging/re-imaging/blob/master/labelling)
-
-Code is written using bash, Python, SQLite, jupyter notebooks, and anaconda. Tested on Ubuntu 18.04 with an Intel CPU and NVidia graphics card.
 
 ## People
 - [Professor Anna Munster](https://research.unsw.edu.au/people/professor-anna-marie-munster), UNSW Art & Design
