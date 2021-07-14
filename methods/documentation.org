@@ -54,8 +54,51 @@ Examples of prediction confidence on a number of test images:
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/ternary/ternary_prediction_sensor_99pc_5408067.jpg" /></p>
 
 ** Feature Visualisation
+Using [[https://github.com/zentralwerkstatt/explain.ipynb][explain.ipynb]] by Fabian Offert, we used gradient ascent to visualise the features of the Ternary Classifier. This creates an image that most strongly activates the given prediction class.
+
+More examples: https://www.dropbox.com/sh/qcv424p32xjmwqf/AADi_Hp20uW7BF8OojVOxKoOa?dl=0
+
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/diagram_vis_x2500_e500.jpg" /></p>
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/sensor_vis_x2500_e500.jpg" /></p>
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/unsure_vis_x2500_e500.jpg" /></p>
+
+https://www.dropbox.com/sh/p27ifjfdcpfdx28/AAATXzIwB-1lDEZ0tarf8tnba?dl=0
 ** t-SNE
 ** UMAP
 ** StyleGAN
-** MSG-GAN
+StyleGAN: https://github.com/NVlabs/stylegan
+running with TensorFlow
+trained for ~3 days on GTX 2080
+training dataset: 10k or 100k random images from arXiv dataset
+images downsampled and cropped to 256x256
+resolution limited to 256x256
 
+videos:
+- training process
+- random interpolations
+- finer-grain interpolation (latent space changes affecting finer-grain details)
+- circular interpolation (moving through latent space in a way that approximates a sphere and minimises changes in mean square error)
+
+images:
+- fakes*****.png: these show the same points in latent space (z) over the course of training
+- truncation trick values (ex-1.2, ex-0.7, ex-0.0): truncates the range of values in the randomly generated latent variable z. Truncation of 0.0 means there is very little variation and approximates a "mean" or "average" image for the learned distribution. Truncation of 1.2 means high levels of variation. Truncation is usually limited to ~0.7 in order to produce "better" images that are more likely to be part of the distribution and reduce large spikes in the z variables
+- examples: shows different examples from the original Karras et al paper but using the current trained model
+
+Video of training process: https://www.dropbox.com/s/k97p1rr2p9xloxr/stylegan-test-training-fullsize.mp4?dl=0
+  
+Documentation of 100k image dataset trained for 233 epochs: https://www.dropbox.com/sh/u4g4llofgg3mz1l/AABBAh9re-0IHejytDJXoszMa?dl=0
+
+Examples montages at varying values of truncation:
+
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/stylegan/montage512_example-0.0.jpeg" /></p>
+0.0
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/stylegan/montage512_example-0.7.jpeg" /></p>
+0.7
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/stylegan/montage512_example-1.5.jpeg" /></p>
+1.5
+** MSG-GAN
+Using code from [[https://github.com/akanimax/msg-gan-v1][Multi-Scale Gradients GAN]]. Trained for 100 epochs on a small subset of arXiv images.
+
+Video of training process: https://www.dropbox.com/s/xjk71q80yt1bsj0/msggan_training_256x256x36_100epochs_vid.mp4?dl=0
+
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/MSG-GAN/gen_0099_1632.png" /></p>
