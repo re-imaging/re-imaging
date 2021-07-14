@@ -9,6 +9,9 @@ The project has three threads:
 - Developing a new theoretical framework for thinking changes in seeing, images, and perception in a culture(s) of ML - see [_Platform Seeing: Images and their Invisualities_](https://journals.sagepub.com/doi/10.1177/0263276419847508) published in Theory, Culture & Society
 - Building a visual explorer web application that foregrounds new ways of seeing and perceiving shaped by ML computation - see [ImageMesh](https://imagemesh.ai/), a practical outcome of this project and an ongoing research tool for exploring a large sample of images published in arXiv articles. We encourage you to follow the errant paths these images generate as they compose and are plied by new modes and practices of machinic observation.
 
+![ImageMesh Visual Explorer screenshot](https://github.com/re-imaging/re-imaging/blob/master/figures/ImageMesh/ImageMesh_Screenshot_NN_2021-07-14.png)
+[ImageMesh Visual Explorer](https://imagemesh.ai/)
+
 ## Project Outline
 ### This repository
 
@@ -82,13 +85,16 @@ t-SNE map of images with the primary category of cs.CV (computer science, comput
 ---
 
 ## Code
-Work in progress.
-
 This repository contains code, statistics, and images produced throughout the project. These materials are mostly concerned with looking at the dataset of all the images, text, and metadata contained within the [arXiv](https://arxiv.org) source files.
 
-For detailed instructions on running the code, please look in the [methods folder](https://github.com/re-imaging/re-imaging/blob/master/methods/).
+For detailed instructions on running the code, please look in the [methods folder](https://github.com/re-imaging/re-imaging/blob/master/methods/):
+- detailed instructions on downloading and extracting the arXiv bulk data and OAI metadata in [dataset-methods](https://github.com/re-imaging/re-imaging/blob/master/methods/dataset-method.org)
+- step-by-step methods for organising metadata into an SQLite database in [sqlite-method](https://github.com/re-imaging/re-imaging/blob/master/methods/sqlite-method.org)
+- process of converting varied image formats to consistent size jpg images in [image-conversion](https://github.com/re-imaging/re-imaging/blob/master/methods/image-conversion.org) (additional examples in the [image-conversion](https://github.com/re-imaging/re-imaging/tree/master/image-conversion) folder)
+- basic information about our [computer setup](https://github.com/re-imaging/re-imaging/blob/master/methods/setup.org)
+- examples and explanation of project documentation
 
-Code is written using bash, python, SQLite, jupyter, and anaconda. Tested on Ubuntu 18.04 with an NVidia graphics card.
+Code is written using bash, Python, SQLite, jupyter notebooks, and anaconda. Tested on Ubuntu 18.04 with an Intel CPU and NVidia graphics card.
 
 ## People
 - [Professor Anna Munster](https://research.unsw.edu.au/people/professor-anna-marie-munster), UNSW Art & Design
@@ -99,4 +105,5 @@ Code uses examples from
 - Machine Learning for Artists [ML4A](https://ml4a.github.io)
 - Mario Klingemann's [RasterFairy](https://github.com/Quasimondo/RasterFairy)
 ## Acknowledgements
-This project has been supported by an Australian Research Council Discovery Grant
+This project has been supported by an Australian Research Council Discovery Grant.
+Thank you to arXiv for use of its open access interoperability.
