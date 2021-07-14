@@ -1,0 +1,30 @@
+#+OPTIONS: toc:nil
+#+OPTIONS: ^:nil
+#+OPTIONS: *:nil
+* Re-imaging the empirical - Documentation
+** Contents :TOC:QUOTE:noexport:
+#+BEGIN_QUOTE
+- [[#re-imaging-the-empirical---documentation][Re-imaging the empirical - Documentation]]
+  - [[#about][About]]
+  - [[#deepcluster][DeepCluster]]
+  - [[#ternary-classifier][Ternary Classifier]]
+  - [[#feature-visualisation][Feature Visualisation]]
+#+END_QUOTE
+
+** About
+This page describes and gives examples of some of the processes undertaken in the project Re-imaging the empirical: statistical visualisation in art and science. For more info about the project see https://github.com/re-imaging/re-imaging
+** DeepCluster
+We used the method of unsupervised learning outlined in the arXiv paper [[https://arxiv.org/abs/1807.05520][Deep Clustering for Unsupervised Learning of Visual Features]] to train a classifier that predicts whether images belong to 100 different clusters. This produces strong similarity among particular image trends, e.g. logos, schematics, photographs, graphs showing small multiples. This provides the highest degree of learning based on the arXiv images dataset. For more details on the code used, see the [[https://github.com/facebookresearch/deepcluster][DeepCluster GitHub]].
+
+We trained the model on 100,000 randomly selected images from the arXiv dataset, using 100 clusters (learned during training). This was trained for just over 1000 epochs. The clustering produced by this model shows a high likelyhood to group what humans might perceive are similar image types together, e.g. text or logos, photographs of people or richly coloured images, graphs that have been rotated 90 degrees.
+
+You can view montages showing 256 images for all 100 clusters here: https://www.dropbox.com/sh/2a16em11h5kiw5c/AADILqH17EaPWLxeaxIqCNpka?dl=0
+
+Examples:
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/36_montage.jpg" /></p>
+
+** Ternary Classifier
+To estimate the ratios of these different types of images, we trained a neural network classifier that would predict whether an image most closely resembled a ‘diagram,’ ‘sensor’ or ‘mixed’ (this work was performed by the three researchers on this project and assigned independently to each as a human intelligence task or HIT. Our decisions are of necessity biased according to our individual and collective approaches to labelling these categories.) To build a training dataset, we manually labelled 9748 randomly sampled images. The decision to create a ternary classifier with a ‘mixed’ category was intended to capture and highlight the varied operations being performed by images across different kinds of knowledge domains. For example, in our initial querying of image distribution in the dataset, we noticed clusters of images that appeared to be somehow sensor-generated yet re-organised through graphic overlays that seemed to suggest they were being set within a diagrammatic schema. For our purposes, then, a ternary labelling and classification of the images allowed us to view the shifting ratios of image types across arXiv. Our training set produced: 8649 (88.7%) images as ‘diagram,’ 477 (4.89%) as ‘sensor’ and 622 (6.38%) images as ‘mixed.’
+
+** Feature Visualisation
+
