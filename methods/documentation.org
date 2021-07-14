@@ -28,11 +28,11 @@ Examples:
 
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/36_montage.jpg" /></p>
 ---
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/3_montage.jpg" /></p>
+---
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/2_montage.jpg" /></p>
 ---
-#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/3_montage.jpg" /></p>
----
-#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/3_montage.jpg" /></p>
+#+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/DeepCluster/6_montage.jpg" /></p>
 ---
 
 ** Ternary Classifier
@@ -58,11 +58,15 @@ Using [[https://github.com/zentralwerkstatt/explain.ipynb][explain.ipynb]] by Fa
 
 More examples: https://www.dropbox.com/sh/qcv424p32xjmwqf/AADi_Hp20uW7BF8OojVOxKoOa?dl=0
 
+- Diagram
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/diagram_vis_x2500_e500.jpg" /></p>
+- Sensor
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/sensor_vis_x2500_e500.jpg" /></p>
+- Mixed
 #+html: <p align="center"><img src="https://github.com/re-imaging/re-imaging/blob/master/figures/feature-visualisation/unsure_vis_x2500_e500.jpg" /></p>
 
 https://www.dropbox.com/sh/p27ifjfdcpfdx28/AAATXzIwB-1lDEZ0tarf8tnba?dl=0
+
 ** t-SNE
 Another ML method for looking at spatial distribution of similarity and differences via clustering of data is the t-SNE algorithm. t-SNE does this by performing dimensionality reduction and placing all images in a 2-dimensional spatial mapping, which can then be analysed visually by human eyes.
 
