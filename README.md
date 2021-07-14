@@ -92,7 +92,8 @@ For detailed instructions on running the code, please look in the [methods folde
 - step-by-step methods for organising metadata into an SQLite database in [sqlite-method](https://github.com/re-imaging/re-imaging/blob/master/methods/sqlite-method.org)
 - process of converting varied image formats to consistent size jpg images in [image-conversion](https://github.com/re-imaging/re-imaging/blob/master/methods/image-conversion.org) (additional examples in the [image-conversion](https://github.com/re-imaging/re-imaging/tree/master/image-conversion) folder)
 - basic information about our [computer setup](https://github.com/re-imaging/re-imaging/blob/master/methods/setup.org)
-- examples and explanation of project documentation
+- examples and explanation of project [documentation](https://github.com/re-imaging/re-imaging/blob/master/methods/documentation.org)
+- tool for quick human [labelling of images](https://github.com/re-imaging/re-imaging/blob/master/labelling)
 
 Code is written using bash, Python, SQLite, jupyter notebooks, and anaconda. Tested on Ubuntu 18.04 with an Intel CPU and NVidia graphics card.
 
@@ -106,4 +107,5 @@ Code uses examples from
 - Mario Klingemann's [RasterFairy](https://github.com/Quasimondo/RasterFairy)
 ## Acknowledgements
 This project has been supported by an Australian Research Council Discovery Grant.
+
 Thank you to arXiv for use of its open access interoperability.
