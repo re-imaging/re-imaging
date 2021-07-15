@@ -104,10 +104,7 @@ t-SNE map of images with the primary category of cs.CV (computer science, comput
 - [Professor Anna Munster](https://research.unsw.edu.au/people/professor-anna-marie-munster), UNSW Art & Design
 - [Professor Adrian Mackenzie](https://researchers.anu.edu.au/researchers/mackenzie-a), Australian National University
 - [Kynan Tan](https://kynantan.com/), Postdoctoral Fellow, UNSW Art & Design
-## Credits
-Code uses examples from
-- Machine Learning for Artists [ML4A](https://ml4a.github.io)
-- Mario Klingemann's [RasterFairy](https://github.com/Quasimondo/RasterFairy)
+
 ## Acknowledgements
 This project has been supported by an Australian Research Council Discovery Grant.
 
