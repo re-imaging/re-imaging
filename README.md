@@ -1,5 +1,7 @@
 # Re-imaging the empirical: statistical visualisation in art and science
 
+[![DOI](https://zenodo.org/badge/157329486.svg)](https://zenodo.org/badge/latestdoi/157329486)
+
 ![UMAP grid image](https://github.com/re-imaging/re-imaging/blob/master/figures/UMAP/umap_random_grid_x300_20201008-124637.png)
 
 ## Project Description
