@@ -109,3 +109,9 @@ t-SNE map of images with the primary category of cs.CV (computer science, comput
 This project has been supported by an Australian Research Council Discovery Grant.
 
 Thank you to arXiv for use of its open access interoperability.
+
+---
+
+## Licence
+
+[GPL-3.0-or-later](https://choosealicense.com/licenses/gpl-3.0/)
