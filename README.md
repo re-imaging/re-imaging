@@ -114,4 +114,4 @@ Thank you to arXiv for use of its open access interoperability.
 
 ## Licence
 
-[GPL-3.0-or-later](https://choosealicense.com/licenses/gpl-3.0/)
+This project is licensed under the terms of the GPL licence. See [GPL-3.0-or-later](https://choosealicense.com/licenses/gpl-3.0/)
